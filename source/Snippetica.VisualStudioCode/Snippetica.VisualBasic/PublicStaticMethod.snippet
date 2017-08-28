@@ -1,7 +1,7 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>a Public Shared method</Title>
+    <Title>Public Shared method</Title>
     <Shortcut>sm</Shortcut>
     <Description>Public Shared method declaration</Description>
     <Author>Josef Pihrt</Author>
@@ -11,11 +11,6 @@
   </Header>
   <Snippet>
     <Declarations>
-      <Literal Editable="false">
-        <ID>_as</ID>
-        <ToolTip>As keyword</ToolTip>
-        <Default>As</Default>
-      </Literal>
       <Literal Editable="false">
         <ID>_parameterList</ID>
         <Default>()</Default>
@@ -31,7 +26,7 @@
         <Default>MethodName</Default>
       </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[Public Shared Function $name$$_parameterList$ $_as$ $_type$
+    <Code Language="VB"><![CDATA[Public Shared Function $name$$_parameterList$ As $_type$
     $end$
 End Function]]></Code>
   </Snippet>

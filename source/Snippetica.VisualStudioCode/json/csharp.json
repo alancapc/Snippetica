@@ -1,68 +1,68 @@
 ﻿{
-  "a array variable": {
+  "array variable": {
     "prefix": "va",
     "body": [
       "var ${1:items} = new ${2:T}[${3:0}];${0}"
     ],
     "description": "array variable declaration"
   },
-  "a array variable (with initializer)": {
+  "array variable (with initializer)": {
     "prefix": "va_",
     "body": [
       "var ${1:items} = new ${2:T}[] { ${3:null} };${0}"
     ],
     "description": "array variable declaration (with initializer)"
   },
-  "a public auto property": {
+  "public auto property": {
     "prefix": "p",
     "body": [
       "public ${1:T} ${2:PropertyName} { get; set; }${0}"
     ],
     "description": "public auto-implemented property declaration"
   },
-  "a internal auto property": {
+  "internal auto property": {
     "prefix": "ip",
     "body": [
       "internal ${1:T} ${2:PropertyName} { get; set; }${0}"
     ],
     "description": "internal auto-implemented property declaration"
   },
-  "a private auto property": {
+  "private auto property": {
     "prefix": "pp",
     "body": [
       "private ${1:T} ${2:PropertyName} { get; set; }${0}"
     ],
     "description": "private auto-implemented property declaration"
   },
-  "a public virtual auto property": {
+  "public virtual auto property": {
     "prefix": "vp",
     "body": [
       "public virtual ${1:T} ${2:PropertyName} { get; set; }${0}"
     ],
     "description": "public virtual auto-implemented property declaration"
   },
-  "a internal virtual auto property": {
+  "internal virtual auto property": {
     "prefix": "ivp",
     "body": [
       "internal virtual ${1:T} ${2:PropertyName} { get; set; }${0}"
     ],
     "description": "internal virtual auto-implemented property declaration"
   },
-  "a public auto property with private setter": {
+  "public auto property with private setter": {
     "prefix": "pps",
     "body": [
       "public ${1:T} ${2:PropertyName} { get; private set; }${0}"
     ],
     "description": "public auto-implemented property declaration with private setter"
   },
-  "a internal auto property with private setter": {
+  "internal auto property with private setter": {
     "prefix": "ipps",
     "body": [
       "internal ${1:T} ${2:PropertyName} { get; private set; }${0}"
     ],
     "description": "internal auto-implemented property declaration with private setter"
   },
-  "a private auto property with private setter": {
+  "private auto property with private setter": {
     "prefix": "ppps",
     "body": [
       "private ${1:T} ${2:PropertyName} { get; private set; }${0}"
@@ -129,31 +129,31 @@
     ],
     "description": "private static class declaration"
   },
-  "a public const": {
+  "public const": {
     "prefix": "k",
     "body": [
-      "public const ${1:T} ${2:ConstantName} = ${3:\"\"};${0}"
+      "public const ${1:T} ${2:ConstantName} = ${3:default(T)};${0}"
     ],
     "description": "public const declaration"
   },
-  "a internal const": {
+  "internal const": {
     "prefix": "ik",
     "body": [
-      "internal const ${1:T} ${2:ConstantName} = ${3:\"\"};${0}"
+      "internal const ${1:T} ${2:ConstantName} = ${3:default(T)};${0}"
     ],
     "description": "internal const declaration"
   },
-  "a private const": {
+  "private const": {
     "prefix": "pk",
     "body": [
-      "private const ${1:T} ${2:ConstantName} = ${3:\"\"};${0}"
+      "private const ${1:T} ${2:ConstantName} = ${3:default(T)};${0}"
     ],
     "description": "private const declaration"
   },
   "public constructor": {
     "prefix": "cr",
     "body": [
-      "public ${1:ThisName}${2:()}",
+      "public ${1:ThisName}()",
       "{",
       "    ${0}",
       "}"
@@ -163,7 +163,7 @@
   "internal constructor": {
     "prefix": "icr",
     "body": [
-      "internal ${1:ThisName}${2:()}",
+      "internal ${1:ThisName}()",
       "{",
       "    ${0}",
       "}"
@@ -173,7 +173,7 @@
   "private constructor": {
     "prefix": "pcr",
     "body": [
-      "private ${1:ThisName}${2:()}",
+      "private ${1:ThisName}()",
       "{",
       "    ${0}",
       "}"
@@ -210,42 +210,42 @@
     ],
     "description": "private constructor declaration (with parameters)"
   },
-  "a public delegate": {
+  "public delegate": {
     "prefix": "de",
     "body": [
-      "public delegate ${1:void} ${2:DelegateName}${3:()};${0}"
+      "public delegate ${1:void} ${2:DelegateName}();${0}"
     ],
     "description": "public delegate declaration"
   },
-  "a internal delegate": {
+  "internal delegate": {
     "prefix": "ide",
     "body": [
-      "internal delegate ${1:void} ${2:DelegateName}${3:()};${0}"
+      "internal delegate ${1:void} ${2:DelegateName}();${0}"
     ],
     "description": "internal delegate declaration"
   },
-  "a private delegate": {
+  "private delegate": {
     "prefix": "pde",
     "body": [
-      "private delegate ${1:void} ${2:DelegateName}${3:()};${0}"
+      "private delegate ${1:void} ${2:DelegateName}();${0}"
     ],
     "description": "private delegate declaration"
   },
-  "a public delegate (with parameters)": {
+  "public delegate (with parameters)": {
     "prefix": "de_",
     "body": [
       "public delegate ${1:void} ${2:DelegateName}(${3:object parameter});${0}"
     ],
     "description": "public delegate declaration (with parameters)"
   },
-  "a internal delegate (with parameters)": {
+  "internal delegate (with parameters)": {
     "prefix": "ide_",
     "body": [
       "internal delegate ${1:void} ${2:DelegateName}(${3:object parameter});${0}"
     ],
     "description": "internal delegate declaration (with parameters)"
   },
-  "a private delegate (with parameters)": {
+  "private delegate (with parameters)": {
     "prefix": "pde_",
     "body": [
       "private delegate ${1:void} ${2:DelegateName}(${3:object parameter});${0}"
@@ -324,42 +324,42 @@
     ],
     "description": "private event declaration with EventHandler<T>"
   },
-  "a public field": {
+  "public field": {
     "prefix": "f",
     "body": [
       "public ${1:T} ${2:FieldName};${0}"
     ],
     "description": "public field declaration"
   },
-  "a private field": {
+  "private field": {
     "prefix": "pf",
     "body": [
       "private ${1:T} ${2:FieldName};${0}"
     ],
     "description": "private field declaration"
   },
-  "a public static field": {
+  "public static field": {
     "prefix": "sf",
     "body": [
       "public static ${1:T} ${2:FieldName};${0}"
     ],
     "description": "public static field declaration"
   },
-  "a private static field": {
+  "private static field": {
     "prefix": "psf",
     "body": [
       "private static ${1:T} ${2:FieldName};${0}"
     ],
     "description": "private static field declaration"
   },
-  "a IEnumerable<T> type": {
+  "IEnumerable<T> type": {
     "prefix": "ge",
     "body": [
       "IEnumerable<${1:T}>${0}"
     ],
     "description": "IEnumerable<T> type declaration"
   },
-  "a if not TryParse": {
+  "if not TryParse": {
     "prefix": "ifftp",
     "body": [
       "${1:T} ${2:x};",
@@ -370,7 +370,7 @@
     ],
     "description": "if statement with condition whether TryParse method returns false."
   },
-  "a if TryParse": {
+  "if TryParse": {
     "prefix": "iftp",
     "body": [
       "${1:T} ${2:x};",
@@ -381,7 +381,7 @@
     ],
     "description": "if statement with condition whether TryParse method returns true."
   },
-  "a public indexer": {
+  "public indexer": {
     "prefix": "ir",
     "body": [
       "public ${1:T} this[${2:int index}]",
@@ -392,7 +392,7 @@
     ],
     "description": "public indexer declaration"
   },
-  "a internal indexer": {
+  "internal indexer": {
     "prefix": "iir",
     "body": [
       "internal ${1:T} this[${2:int index}]",
@@ -403,7 +403,7 @@
     ],
     "description": "internal indexer declaration"
   },
-  "a private indexer": {
+  "private indexer": {
     "prefix": "pir",
     "body": [
       "private ${1:T} this[${2:int index}]",
@@ -434,87 +434,87 @@
     ],
     "description": "internal interface declaration"
   },
-  "a public method": {
+  "public method": {
     "prefix": "m",
     "body": [
-      "public ${1:void} ${2:MethodName}${3:()}",
+      "public ${1:void} ${2:MethodName}()",
       "{",
       "    ${0}",
       "}"
     ],
     "description": "public method declaration"
   },
-  "a internal method": {
+  "internal method": {
     "prefix": "im",
     "body": [
-      "internal ${1:void} ${2:MethodName}${3:()}",
+      "internal ${1:void} ${2:MethodName}()",
       "{",
       "    ${0}",
       "}"
     ],
     "description": "internal method declaration"
   },
-  "a private method": {
+  "private method": {
     "prefix": "pm",
     "body": [
-      "private ${1:void} ${2:MethodName}${3:()}",
+      "private ${1:void} ${2:MethodName}()",
       "{",
       "    ${0}",
       "}"
     ],
     "description": "private method declaration"
   },
-  "a public static method": {
+  "public static method": {
     "prefix": "sm",
     "body": [
-      "public static ${1:void} ${2:MethodName}${3:()}",
+      "public static ${1:void} ${2:MethodName}()",
       "{",
       "    ${0}",
       "}"
     ],
     "description": "public static method declaration"
   },
-  "a internal static method": {
+  "internal static method": {
     "prefix": "ism",
     "body": [
-      "internal static ${1:void} ${2:MethodName}${3:()}",
+      "internal static ${1:void} ${2:MethodName}()",
       "{",
       "    ${0}",
       "}"
     ],
     "description": "internal static method declaration"
   },
-  "a private static method": {
+  "private static method": {
     "prefix": "psm",
     "body": [
-      "private static ${1:void} ${2:MethodName}${3:()}",
+      "private static ${1:void} ${2:MethodName}()",
       "{",
       "    ${0}",
       "}"
     ],
     "description": "private static method declaration"
   },
-  "a public virtual method": {
+  "public virtual method": {
     "prefix": "vm",
     "body": [
-      "public virtual ${1:void} ${2:MethodName}${3:()}",
+      "public virtual ${1:void} ${2:MethodName}()",
       "{",
       "    ${0}",
       "}"
     ],
     "description": "public virtual method declaration"
   },
-  "a internal virtual method": {
+  "internal virtual method": {
     "prefix": "ivm",
     "body": [
-      "internal virtual ${1:void} ${2:MethodName}${3:()}",
+      "internal virtual ${1:void} ${2:MethodName}()",
       "{",
       "    ${0}",
       "}"
     ],
     "description": "internal virtual method declaration"
   },
-  "a public method (with parameters)": {
+  "public method (with parameters)": {
     "prefix": "m_",
     "body": [
       "public ${1:void} ${2:MethodName}(${3:object parameter})",
@@ -524,7 +524,7 @@
     ],
     "description": "public method declaration (with parameters)"
   },
-  "a internal method (with parameters)": {
+  "internal method (with parameters)": {
     "prefix": "im_",
     "body": [
       "internal ${1:void} ${2:MethodName}(${3:object parameter})",
@@ -534,7 +534,7 @@
     ],
     "description": "internal method declaration (with parameters)"
   },
-  "a private method (with parameters)": {
+  "private method (with parameters)": {
     "prefix": "pm_",
     "body": [
       "private ${1:void} ${2:MethodName}(${3:object parameter})",
@@ -544,7 +544,7 @@
     ],
     "description": "private method declaration (with parameters)"
   },
-  "a public static method (with parameters)": {
+  "public static method (with parameters)": {
     "prefix": "sm_",
     "body": [
       "public static ${1:void} ${2:MethodName}(${3:object parameter})",
@@ -554,7 +554,7 @@
     ],
     "description": "public static method declaration (with parameters)"
   },
-  "a internal static method (with parameters)": {
+  "internal static method (with parameters)": {
     "prefix": "ism_",
     "body": [
       "internal static ${1:void} ${2:MethodName}(${3:object parameter})",
@@ -564,7 +564,7 @@
     ],
     "description": "internal static method declaration (with parameters)"
   },
-  "a private static method (with parameters)": {
+  "private static method (with parameters)": {
     "prefix": "psm_",
     "body": [
       "private static ${1:void} ${2:MethodName}(${3:object parameter})",
@@ -574,7 +574,7 @@
     ],
     "description": "private static method declaration (with parameters)"
   },
-  "a public virtual method (with parameters)": {
+  "public virtual method (with parameters)": {
     "prefix": "vm_",
     "body": [
       "public virtual ${1:void} ${2:MethodName}(${3:object parameter})",
@@ -584,7 +584,7 @@
     ],
     "description": "public virtual method declaration (with parameters)"
   },
-  "a internal virtual method (with parameters)": {
+  "internal virtual method (with parameters)": {
     "prefix": "ivm_",
     "body": [
       "internal virtual ${1:void} ${2:MethodName}(${3:object parameter})",
@@ -604,116 +604,116 @@
   "new variable": {
     "prefix": "vn",
     "body": [
-      "var ${1:x} = new ${2:object}${3:()};${0}"
+      "var ${1:x} = new ${2:object}();${0}"
     ],
     "description": "variable declaration with new object creation"
   },
-  "a parameter array ": {
+  "parameter array ": {
     "prefix": "pa",
     "body": [
       "params ${1:T}[]${0}"
     ],
     "description": "parameter array "
   },
-  "a public read-only auto property": {
+  "public read-only auto property": {
     "prefix": "rp",
     "body": [
       "public ${1:T} ${2:PropertyName} { get; }${0}"
     ],
     "description": "public read-only auto-implemented property declaration"
   },
-  "a internal read-only auto property": {
+  "internal read-only auto property": {
     "prefix": "irp",
     "body": [
       "internal ${1:T} ${2:PropertyName} { get; }${0}"
     ],
     "description": "internal read-only auto-implemented property declaration"
   },
-  "a private read-only auto property": {
+  "private read-only auto property": {
     "prefix": "prp",
     "body": [
       "private ${1:T} ${2:PropertyName} { get; }${0}"
     ],
     "description": "private read-only auto-implemented property declaration"
   },
-  "a public static read-only auto property": {
+  "public static read-only auto property": {
     "prefix": "srp",
     "body": [
       "public static ${1:T} ${2:PropertyName} { get; }${0}"
     ],
     "description": "public static read-only auto-implemented property declaration"
   },
-  "a internal static read-only auto property": {
+  "internal static read-only auto property": {
     "prefix": "isrp",
     "body": [
       "internal static ${1:T} ${2:PropertyName} { get; }${0}"
     ],
     "description": "internal static read-only auto-implemented property declaration"
   },
-  "a private static read-only auto property": {
+  "private static read-only auto property": {
     "prefix": "psrp",
     "body": [
       "private static ${1:T} ${2:PropertyName} { get; }${0}"
     ],
     "description": "private static read-only auto-implemented property declaration"
   },
-  "a public virtual read-only auto property": {
+  "public virtual read-only auto property": {
     "prefix": "vrp",
     "body": [
       "public virtual ${1:T} ${2:PropertyName} { get; }${0}"
     ],
     "description": "public virtual read-only auto-implemented property declaration"
   },
-  "a internal virtual read-only auto property": {
+  "internal virtual read-only auto property": {
     "prefix": "ivrp",
     "body": [
       "internal virtual ${1:T} ${2:PropertyName} { get; }${0}"
     ],
     "description": "internal virtual read-only auto-implemented property declaration"
   },
-  "a public read-only field": {
+  "public read-only field": {
     "prefix": "rf",
     "body": [
       "public readonly ${1:T} ${2:FieldName};${0}"
     ],
     "description": "public read-only field declaration"
   },
-  "a internal read-only field": {
+  "internal read-only field": {
     "prefix": "irf",
     "body": [
       "internal readonly ${1:T} ${2:FieldName};${0}"
     ],
     "description": "internal read-only field declaration"
   },
-  "a private read-only field": {
+  "private read-only field": {
     "prefix": "prf",
     "body": [
       "private readonly ${1:T} ${2:FieldName};${0}"
     ],
     "description": "private read-only field declaration"
   },
-  "a public static read-only field": {
+  "public static read-only field": {
     "prefix": "srf",
     "body": [
       "public static readonly ${1:T} ${2:FieldName};${0}"
     ],
     "description": "public static read-only field declaration"
   },
-  "a internal static read-only field": {
+  "internal static read-only field": {
     "prefix": "isrf",
     "body": [
       "internal static readonly ${1:T} ${2:FieldName};${0}"
     ],
     "description": "internal static read-only field declaration"
   },
-  "a private static read-only field": {
+  "private static read-only field": {
     "prefix": "psrf",
     "body": [
       "private static readonly ${1:T} ${2:FieldName};${0}"
     ],
     "description": "private static read-only field declaration"
   },
-  "a public read-only property": {
+  "public read-only property": {
     "prefix": "rpp",
     "body": [
       "public ${1:T} ${2:PropertyName}",
@@ -723,7 +723,7 @@
     ],
     "description": "public read-only property declaration"
   },
-  "a internal read-only property": {
+  "internal read-only property": {
     "prefix": "irpp",
     "body": [
       "internal ${1:T} ${2:PropertyName}",
@@ -733,7 +733,7 @@
     ],
     "description": "internal read-only property declaration"
   },
-  "a private read-only property": {
+  "private read-only property": {
     "prefix": "prpp",
     "body": [
       "private ${1:T} ${2:PropertyName}",
@@ -743,7 +743,7 @@
     ],
     "description": "private read-only property declaration"
   },
-  "a public static read-only property": {
+  "public static read-only property": {
     "prefix": "srpp",
     "body": [
       "public static ${1:T} ${2:PropertyName}",
@@ -753,7 +753,7 @@
     ],
     "description": "public static read-only property declaration"
   },
-  "a internal static read-only property": {
+  "internal static read-only property": {
     "prefix": "isrpp",
     "body": [
       "internal static ${1:T} ${2:PropertyName}",
@@ -763,7 +763,7 @@
     ],
     "description": "internal static read-only property declaration"
   },
-  "a private static read-only property": {
+  "private static read-only property": {
     "prefix": "psrpp",
     "body": [
       "private static ${1:T} ${2:PropertyName}",
@@ -773,7 +773,7 @@
     ],
     "description": "private static read-only property declaration"
   },
-  "a public virtual read-only property": {
+  "public virtual read-only property": {
     "prefix": "vrpp",
     "body": [
       "public virtual ${1:T} ${2:PropertyName}",
@@ -783,7 +783,7 @@
     ],
     "description": "public virtual read-only property declaration"
   },
-  "a internal virtual read-only property": {
+  "internal virtual read-only property": {
     "prefix": "ivrpp",
     "body": [
       "internal virtual ${1:T} ${2:PropertyName}",
@@ -823,144 +823,46 @@
     ],
     "description": "private struct declaration"
   },
-  "a type parameter": {
+  "type parameter": {
     "prefix": "g",
     "body": [
       "<${1:T}>${0}"
     ],
     "description": " type parameter"
   },
-  "a interface indexer": {
+  "interface indexer": {
     "prefix": "_ir",
     "body": [
       "${1:T} this[${2:int index}] { get; set; }${0}"
     ],
     "description": "interface indexer declaration"
   },
-  "a interface method": {
+  "interface method": {
     "prefix": "_m",
     "body": [
-      "${1:void} ${2:MethodName}${3:()};${0}"
+      "${1:void} ${2:MethodName}();${0}"
     ],
     "description": "interface method declaration"
   },
-  "a interface method (with parameters)": {
+  "interface method (with parameters)": {
     "prefix": "_m_",
     "body": [
       "${1:void} ${2:MethodName}(${3:object parameter});${0}"
     ],
     "description": "interface method declaration (with parameters)"
   },
-  "a interface property": {
+  "interface property": {
     "prefix": "_p",
     "body": [
       "${1:T} ${2:PropertyName} { get; set; }${0}"
     ],
     "description": "interface property declaration"
   },
-  "a interface read-only property": {
+  "interface read-only property": {
     "prefix": "_rp",
     "body": [
       "${1:T} ${2:PropertyName} { get; }${0}"
     ],
     "description": "interface read-only property declaration"
-  },
-  "a array type": {
-    "prefix": "a",
-    "body": [
-      "${1:T}[]${0}"
-    ],
-    "description": "array type declaration"
-  },
-  "Dictionary<TKey, TValue> variable (with initializer)": {
-    "prefix": "vd_",
-    "body": [
-      "var ${1:dic} = new Dictionary<${2:object}, ${3:object}>() { [0] = ${4:null} };${0}"
-    ],
-    "description": "Dictionary<TKey, TValue> variable declaration (with initializer)"
-  },
-  "Dictionary<TKey, TValue> variable": {
-    "prefix": "vd",
-    "body": [
-      "var ${1:dic} = new Dictionary<${2:object}, ${3:object}>();${0}"
-    ],
-    "description": "Dictionary<TKey, TValue> variable declaration"
-  },
-  "a HashSet<T> type": {
-    "prefix": "ghs",
-    "body": [
-      "HashSet<${1:T}>${0}"
-    ],
-    "description": "HashSet<T> type declaration"
-  },
-  "a HashSet<T> variable": {
-    "prefix": "vhs",
-    "body": [
-      "var ${1:items} = new HashSet<${2:T}>();${0}"
-    ],
-    "description": "HashSet<T> variable declaration"
-  },
-  "a HashSet<T> variable (with initializer)": {
-    "prefix": "vhs_",
-    "body": [
-      "var ${1:items} = new HashSet<${2:T}>() { ${3:null} };${0}"
-    ],
-    "description": "HashSet<T> variable declaration (with initializer)"
-  },
-  "a List<T> type": {
-    "prefix": "gl",
-    "body": [
-      "List<${1:T}>${0}"
-    ],
-    "description": "List<T> type declaration"
-  },
-  "a List<T> variable": {
-    "prefix": "vl",
-    "body": [
-      "var ${1:items} = new List<${2:T}>();${0}"
-    ],
-    "description": "List<T> variable declaration"
-  },
-  "a List<T> variable (with initializer)": {
-    "prefix": "vl_",
-    "body": [
-      "var ${1:items} = new List<${2:T}>() { ${3:null} };${0}"
-    ],
-    "description": "List<T> variable declaration (with initializer)"
-  },
-  "a new array ": {
-    "prefix": "na",
-    "body": [
-      "new ${1:T}[${2:0}]${0}"
-    ],
-    "description": "new array "
-  },
-  "a new array (with initializer)": {
-    "prefix": "na_",
-    "body": [
-      "new ${1:T}[] { ${2:null} }${0}"
-    ],
-    "description": "new array (with initializer)"
-  },
-  "a ObservableCollection<T> type": {
-    "prefix": "goc",
-    "body": [
-      "ObservableCollection<${1:T}>${0}"
-    ],
-    "description": "ObservableCollection<T> type declaration"
-  },
-  "a ObservableCollection<T> variable": {
-    "prefix": "voc",
-    "body": [
-      "var ${1:items} = new ObservableCollection<${2:T}>();${0}"
-    ],
-    "description": "ObservableCollection<T> variable declaration"
-  },
-  "a ObservableCollection<T> variable (with initializer)": {
-    "prefix": "voc_",
-    "body": [
-      "var ${1:items} = new ObservableCollection<${2:T}>() { ${3:null} };${0}"
-    ],
-    "description": "ObservableCollection<T> variable declaration (with initializer)"
   }
 }

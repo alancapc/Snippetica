@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -16,9 +17,9 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
         public LanguageDefinition LanguageDefinition { get; }
 
-        public static IEnumerable<SnippetGeneratorResult> GetResults(SnippetDirectory[] snippetDirectories, SnippetGenerator[] snippetGenerators)
+        public static IEnumerable<SnippetGeneratorResult> GetResults(SnippetDirectory[] snippetDirectories, SnippetGenerator[] snippetGenerators, Func<SnippetDirectory, bool> predicate)
         {
-            foreach (SnippetGeneratorInfo info in SnippetGeneratorInfo.CreateMany(snippetDirectories, snippetGenerators))
+            foreach (SnippetGeneratorInfo info in SnippetGeneratorInfo.CreateMany(snippetDirectories, snippetGenerators, predicate))
             {
                 IEnumerable<Snippet> snippets = SnippetSerializer.Deserialize(info.SourcePath, SearchOption.AllDirectories)
                     .SelectMany(info.Generator.GenerateSnippets);

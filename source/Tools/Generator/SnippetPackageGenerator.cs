@@ -55,7 +55,10 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
                 Directory.CreateDirectory(directoryPath);
 
-                Snippet[] snippets = snippetDirectory.EnumerateSnippets().ToArray();
+                Snippet[] snippets = snippetDirectory
+                    .EnumerateSnippets()
+                    .Select(f => f.RemoveTag(KnownTags.ExcludeFromVisualStudioCode))
+                    .ToArray();
 
                 foreach (IGrouping<string, Snippet> grouping in snippets
                     .GroupBy(f => Path.GetFileNameWithoutExtension(f.FilePath))

@@ -21,16 +21,18 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
             CharacterSequence.SerializeToXml(Path.Combine(settings.ExtensionProjectPath, "CharacterSequences.xml"), characterSequences);
 
-            foreach (SnippetGeneratorResult result in SnippetGenerator.GetResults(snippetDirectories, languageDefinitions.Select(f => new VisualStudioSnippetGenerator(f)).ToArray()))
+            foreach (SnippetGeneratorResult result in SnippetGenerator.GetResults(snippetDirectories, languageDefinitions.Select(f => new VisualStudioSnippetGenerator(f)).ToArray(), f => f.HasTag(KnownTags.Dev)))
                 result.Save();
 
-            //TODO: RemoveTag ExcludeFromVisualStudioCode
-            HtmlSnippetGenerator.GetResult(snippetDirectories).Save();
+            foreach (SnippetGeneratorResult result in SnippetGenerator.GetResults(snippetDirectories, languageDefinitions.Select(f => new VisualStudioSnippetGenerator(f)).ToArray(), f => !f.HasTag(KnownTags.Dev)))
+                result.Save();
 
+            HtmlSnippetGenerator.GetResult(snippetDirectories).Save();
             XamlSnippetGenerator.GetResult(snippetDirectories).Save();
             XmlSnippetGenerator.GetResult(snippetDirectories).Save();
 
-            VisualStudioCodePackageGenerator.GenerateSnippets(snippetDirectories, languageDefinitions, settings);
+            VisualStudioCodePackageGenerator.GenerateSnippets(snippetDirectories, languageDefinitions, settings.VisualStudioCodeProjectPath, f => !f.HasTag(KnownTags.Dev));
+            VisualStudioCodePackageGenerator.GenerateSnippets(snippetDirectories, languageDefinitions, settings.VisualStudioCodeProjectPath + ".Dev", f => f.HasTag(KnownTags.Dev));
 
             SnippetDirectory[] releaseDirectories = snippetDirectories
                 .Where(f => f.HasTag(KnownTags.Release) && !f.HasTag(KnownTags.Dev))

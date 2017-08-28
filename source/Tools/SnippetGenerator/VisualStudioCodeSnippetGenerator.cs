@@ -14,7 +14,9 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
         protected override void PostProcess(Snippet snippet)
         {
-            Literal typeLiteral = snippet.Literals[LiteralIdentifiers.Type];
+            LiteralCollection literals = snippet.Literals;
+
+            Literal typeLiteral = literals[LiteralIdentifiers.Type];
 
             if (typeLiteral != null)
             {
@@ -29,6 +31,17 @@ namespace Pihrtsoft.Snippets.CodeGeneration
             }
 
             base.PostProcess(snippet);
+
+            for (int i = 0; i < literals.Count; i++)
+            {
+                Literal literal = literals[i];
+
+                if (!literal.IsEditable
+                    && string.IsNullOrEmpty(literal.Function))
+                {
+                    snippet.RemoveLiteralAndReplacePlaceholders(literal.Identifier, literal.DefaultValue);
+                }
+            }
         }
 
         protected override IEnumerable<Command> GetTypeCommands(Snippet snippet)

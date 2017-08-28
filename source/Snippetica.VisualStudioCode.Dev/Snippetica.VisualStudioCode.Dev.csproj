@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8CC5EF61-036C-4A07-85F0-E30C05738EC1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Snippetica.VisualStudioCode.Dev</RootNamespace>
+    <AssemblyName>Snippetica.VisualStudioCode.Dev</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="json\csharp.json" />
+    <None Include="json\html.json" />
+    <None Include="json\vb.json" />
+    <None Include="json\xml.json" />
+    <None Include="Snippetica.CSharp\ArrayOfTType.snippet" />
+    <None Include="Snippetica.CSharp\DictionaryOfTKeyTValueVariable.snippet" />
+    <None Include="Snippetica.CSharp\DictionaryOfTKeyTValueVariableWithInitializer.snippet" />
+    <None Include="Snippetica.CSharp\HashSetOfTType.snippet" />
+    <None Include="Snippetica.CSharp\HashSetOfTVariable.snippet" />
+    <None Include="Snippetica.CSharp\HashSetOfTVariableWithInitializer.snippet" />
+    <None Include="Snippetica.CSharp\ListOfTType.snippet" />
+    <None Include="Snippetica.CSharp\ListOfTVariable.snippet" />
+    <None Include="Snippetica.CSharp\ListOfTVariableWithInitializer.snippet" />
+    <None Include="Snippetica.CSharp\NewArrayOfT.snippet" />
+    <None Include="Snippetica.CSharp\NewArrayOfTWithInitializer.snippet" />
+    <None Include="Snippetica.CSharp\ObservableCollectionOfTType.snippet" />
+    <None Include="Snippetica.CSharp\ObservableCollectionOfTVariable.snippet" />
+    <None Include="Snippetica.CSharp\ObservableCollectionOfTVariableWithInitializer.snippet" />
+    <None Include="Snippetica.Html\a.snippet" />
+    <None Include="Snippetica.Html\abbr.snippet" />
+    <None Include="Snippetica.Html\abbr_with_content.snippet" />
+    <None Include="Snippetica.Html\acronym.snippet" />
+    <None Include="Snippetica.Html\acronym_with_content.snippet" />
+    <None Include="Snippetica.Html\address.snippet" />
+    <None Include="Snippetica.Html\address_with_content.snippet" />
+    <None Include="Snippetica.Html\applet.snippet" />
+    <None Include="Snippetica.Html\applet_with_content.snippet" />
+    <None Include="Snippetica.Html\area.snippet" />
+    <None Include="Snippetica.Html\article.snippet" />
+    <None Include="Snippetica.Html\article_with_content.snippet" />
+    <None Include="Snippetica.Html\aside.snippet" />
+    <None Include="Snippetica.Html\aside_with_content.snippet" />
+    <None Include="Snippetica.Html\audio.snippet" />
+    <None Include="Snippetica.Html\a_with_content.snippet" />
+    <None Include="Snippetica.Html\b.snippet" />
+    <None Include="Snippetica.Html\base.snippet" />
+    <None Include="Snippetica.Html\basefont.snippet" />
+    <None Include="Snippetica.Html\bdi.snippet" />
+    <None Include="Snippetica.Html\bdi_with_content.snippet" />
+    <None Include="Snippetica.Html\bdo.snippet" />
+    <None Include="Snippetica.Html\bdo_with_content.snippet" />
+    <None Include="Snippetica.Html\big.snippet" />
+    <None Include="Snippetica.Html\big_with_content.snippet" />
+    <None Include="Snippetica.Html\blockquote.snippet" />
+    <None Include="Snippetica.Html\blockquote_with_content.snippet" />
+    <None Include="Snippetica.Html\body.snippet" />
+    <None Include="Snippetica.Html\body_with_content.snippet" />
+    <None Include="Snippetica.Html\br.snippet" />
+    <None Include="Snippetica.Html\button.snippet" />
+    <None Include="Snippetica.Html\button_with_content.snippet" />
+    <None Include="Snippetica.Html\b_with_content.snippet" />
+    <None Include="Snippetica.Html\canvas.snippet" />
+    <None Include="Snippetica.Html\canvas_with_content.snippet" />
+    <None Include="Snippetica.Html\caption.snippet" />
+    <None Include="Snippetica.Html\caption_with_content.snippet" />
+    <None Include="Snippetica.Html\center.snippet" />
+    <None Include="Snippetica.Html\center_with_content.snippet" />
+    <None Include="Snippetica.Html\cite.snippet" />
+    <None Include="Snippetica.Html\cite_with_content.snippet" />
+    <None Include="Snippetica.Html\code.snippet" />
+    <None Include="Snippetica.Html\col.snippet" />
+    <None Include="Snippetica.Html\colgroup.snippet" />
+    <None Include="Snippetica.Html\Comment.snippet" />
+    <None Include="Snippetica.Html\datalist.snippet" />
+    <None Include="Snippetica.Html\dd.snippet" />
+    <None Include="Snippetica.Html\dd_with_content.snippet" />
+    <None Include="Snippetica.Html\del.snippet" />
+    <None Include="Snippetica.Html\del_with_content.snippet" />
+    <None Include="Snippetica.Html\details.snippet" />
+    <None Include="Snippetica.Html\dfn.snippet" />
+    <None Include="Snippetica.Html\dfn_with_content.snippet" />
+    <None Include="Snippetica.Html\dialog.snippet" />
+    <None Include="Snippetica.Html\dialog_with_content.snippet" />
+    <None Include="Snippetica.Html\dir.snippet" />
+    <None Include="Snippetica.Html\dir_with_content.snippet" />
+    <None Include="Snippetica.Html\div.snippet" />
+    <None Include="Snippetica.Html\div_with_content.snippet" />
+    <None Include="Snippetica.Html\dl.snippet" />
+    <None Include="Snippetica.Html\dt.snippet" />
+    <None Include="Snippetica.Html\dt_with_content.snippet" />
+    <None Include="Snippetica.Html\Element.snippet" />
+    <None Include="Snippetica.Html\ElementWithAttribute.snippet" />
+    <None Include="Snippetica.Html\ElementWithAttributeWithContent.snippet" />
+    <None Include="Snippetica.Html\ElementWithContent.snippet" />
+    <None Include="Snippetica.Html\em.snippet" />
+    <None Include="Snippetica.Html\embed.snippet" />
+    <None Include="Snippetica.Html\em_with_content.snippet" />
+    <None Include="Snippetica.Html\fieldset.snippet" />
+    <None Include="Snippetica.Html\fieldset_with_content.snippet" />
+    <None Include="Snippetica.Html\figure.snippet" />
+    <None Include="Snippetica.Html\font.snippet" />
+    <None Include="Snippetica.Html\font_with_content.snippet" />
+    <None Include="Snippetica.Html\footer.snippet" />
+    <None Include="Snippetica.Html\footer_with_content.snippet" />
+    <None Include="Snippetica.Html\form.snippet" />
+    <None Include="Snippetica.Html\form_with_content.snippet" />
+    <None Include="Snippetica.Html\frame.snippet" />
+    <None Include="Snippetica.Html\frameset.snippet" />
+    <None Include="Snippetica.Html\frameset_with_content.snippet" />
+    <None Include="Snippetica.Html\h1.snippet" />
+    <None Include="Snippetica.Html\h1_with_content.snippet" />
+    <None Include="Snippetica.Html\h2.snippet" />
+    <None Include="Snippetica.Html\h2_with_content.snippet" />
+    <None Include="Snippetica.Html\h3.snippet" />
+    <None Include="Snippetica.Html\h3_with_content.snippet" />
+    <None Include="Snippetica.Html\h4.snippet" />
+    <None Include="Snippetica.Html\h4_with_content.snippet" />
+    <None Include="Snippetica.Html\h5.snippet" />
+    <None Include="Snippetica.Html\h5_with_content.snippet" />
+    <None Include="Snippetica.Html\h6.snippet" />
+    <None Include="Snippetica.Html\h6_with_content.snippet" />
+    <None Include="Snippetica.Html\head.snippet" />
+    <None Include="Snippetica.Html\header.snippet" />
+    <None Include="Snippetica.Html\header_with_content.snippet" />
+    <None Include="Snippetica.Html\head_with_content.snippet" />
+    <None Include="Snippetica.Html\hr.snippet" />
+    <None Include="Snippetica.Html\html.snippet" />
+    <None Include="Snippetica.Html\i.snippet" />
+    <None Include="Snippetica.Html\iframe.snippet" />
+    <None Include="Snippetica.Html\iframe_with_content.snippet" />
+    <None Include="Snippetica.Html\img.snippet" />
+    <None Include="Snippetica.Html\input.snippet" />
+    <None Include="Snippetica.Html\ins.snippet" />
+    <None Include="Snippetica.Html\ins_with_content.snippet" />
+    <None Include="Snippetica.Html\i_with_content.snippet" />
+    <None Include="Snippetica.Html\kbd.snippet" />
+    <None Include="Snippetica.Html\kbd_with_content.snippet" />
+    <None Include="Snippetica.Html\keygen.snippet" />
+    <None Include="Snippetica.Html\label.snippet" />
+    <None Include="Snippetica.Html\label_with_content.snippet" />
+    <None Include="Snippetica.Html\legend.snippet" />
+    <None Include="Snippetica.Html\legend_with_content.snippet" />
+    <None Include="Snippetica.Html\li.snippet" />
+    <None Include="Snippetica.Html\link.snippet" />
+    <None Include="Snippetica.Html\li_with_content.snippet" />
+    <None Include="Snippetica.Html\main.snippet" />
+    <None Include="Snippetica.Html\main_with_content.snippet" />
+    <None Include="Snippetica.Html\map.snippet" />
+    <None Include="Snippetica.Html\mark.snippet" />
+    <None Include="Snippetica.Html\mark_with_content.snippet" />
+    <None Include="Snippetica.Html\menu.snippet" />
+    <None Include="Snippetica.Html\menuitem.snippet" />
+    <None Include="Snippetica.Html\menu_with_content.snippet" />
+    <None Include="Snippetica.Html\meta.snippet" />
+    <None Include="Snippetica.Html\meter.snippet" />
+    <None Include="Snippetica.Html\meter_with_content.snippet" />
+    <None Include="Snippetica.Html\nav.snippet" />
+    <None Include="Snippetica.Html\nav_with_content.snippet" />
+    <None Include="Snippetica.Html\noframes.snippet" />
+    <None Include="Snippetica.Html\noframes_with_content.snippet" />
+    <None Include="Snippetica.Html\noscript.snippet" />
+    <None Include="Snippetica.Html\noscript_with_content.snippet" />
+    <None Include="Snippetica.Html\object.snippet" />
+    <None Include="Snippetica.Html\object_with_content.snippet" />
+    <None Include="Snippetica.Html\ol.snippet" />
+    <None Include="Snippetica.Html\ol_with_content.snippet" />
+    <None Include="Snippetica.Html\optgroup.snippet" />
+    <None Include="Snippetica.Html\optgroup_with_content.snippet" />
+    <None Include="Snippetica.Html\option.snippet" />
+    <None Include="Snippetica.Html\option_with_content.snippet" />
+    <None Include="Snippetica.Html\output.snippet" />
+    <None Include="Snippetica.Html\p.snippet" />
+    <None Include="Snippetica.Html\param.snippet" />
+    <None Include="Snippetica.Html\pre.snippet" />
+    <None Include="Snippetica.Html\pre_with_content.snippet" />
+    <None Include="Snippetica.Html\progress.snippet" />
+    <None Include="Snippetica.Html\progress_with_content.snippet" />
+    <None Include="Snippetica.Html\p_with_content.snippet" />
+    <None Include="Snippetica.Html\q.snippet" />
+    <None Include="Snippetica.Html\q_with_content.snippet" />
+    <None Include="Snippetica.Html\region.snippet" />
+    <None Include="Snippetica.Html\rp.snippet" />
+    <None Include="Snippetica.Html\rp_with_content.snippet" />
+    <None Include="Snippetica.Html\rt.snippet" />
+    <None Include="Snippetica.Html\rt_with_content.snippet" />
+    <None Include="Snippetica.Html\ruby.snippet" />
+    <None Include="Snippetica.Html\ruby_with_content.snippet" />
+    <None Include="Snippetica.Html\s.snippet" />
+    <None Include="Snippetica.Html\samp.snippet" />
+    <None Include="Snippetica.Html\samp_with_content.snippet" />
+    <None Include="Snippetica.Html\script.snippet" />
+    <None Include="Snippetica.Html\script_with_content.snippet" />
+    <None Include="Snippetica.Html\section.snippet" />
+    <None Include="Snippetica.Html\section_with_content.snippet" />
+    <None Include="Snippetica.Html\select.snippet" />
+    <None Include="Snippetica.Html\select_with_content.snippet" />
+    <None Include="Snippetica.Html\SelfClosingElement.snippet" />
+    <None Include="Snippetica.Html\SelfClosingElementWithAttribute.snippet" />
+    <None Include="Snippetica.Html\small.snippet" />
+    <None Include="Snippetica.Html\small_with_content.snippet" />
+    <None Include="Snippetica.Html\source.snippet" />
+    <None Include="Snippetica.Html\span.snippet" />
+    <None Include="Snippetica.Html\span_with_content.snippet" />
+    <None Include="Snippetica.Html\strike.snippet" />
+    <None Include="Snippetica.Html\strike_with_content.snippet" />
+    <None Include="Snippetica.Html\strong.snippet" />
+    <None Include="Snippetica.Html\strong_with_content.snippet" />
+    <None Include="Snippetica.Html\style.snippet" />
+    <None Include="Snippetica.Html\style_with_content.snippet" />
+    <None Include="Snippetica.Html\sub.snippet" />
+    <None Include="Snippetica.Html\sub_with_content.snippet" />
+    <None Include="Snippetica.Html\summary.snippet" />
+    <None Include="Snippetica.Html\summary_with_content.snippet" />
+    <None Include="Snippetica.Html\sup.snippet" />
+    <None Include="Snippetica.Html\sup_with_content.snippet" />
+    <None Include="Snippetica.Html\s_with_content.snippet" />
+    <None Include="Snippetica.Html\table.snippet" />
+    <None Include="Snippetica.Html\tbody.snippet" />
+    <None Include="Snippetica.Html\tbody_with_content.snippet" />
+    <None Include="Snippetica.Html\td.snippet" />
+    <None Include="Snippetica.Html\td_with_content.snippet" />
+    <None Include="Snippetica.Html\textarea.snippet" />
+    <None Include="Snippetica.Html\textarea_with_content.snippet" />
+    <None Include="Snippetica.Html\tfoot.snippet" />
+    <None Include="Snippetica.Html\tfoot_with_content.snippet" />
+    <None Include="Snippetica.Html\th.snippet" />
+    <None Include="Snippetica.Html\thead.snippet" />
+    <None Include="Snippetica.Html\thead_with_content.snippet" />
+    <None Include="Snippetica.Html\th_with_content.snippet" />
+    <None Include="Snippetica.Html\time.snippet" />
+    <None Include="Snippetica.Html\time_with_content.snippet" />
+    <None Include="Snippetica.Html\title.snippet" />
+    <None Include="Snippetica.Html\title_with_content.snippet" />
+    <None Include="Snippetica.Html\tr.snippet" />
+    <None Include="Snippetica.Html\track.snippet" />
+    <None Include="Snippetica.Html\tr_with_content.snippet" />
+    <None Include="Snippetica.Html\tt.snippet" />
+    <None Include="Snippetica.Html\tt_with_content.snippet" />
+    <None Include="Snippetica.Html\u.snippet" />
+    <None Include="Snippetica.Html\ul.snippet" />
+    <None Include="Snippetica.Html\ul_with_content.snippet" />
+    <None Include="Snippetica.Html\u_with_content.snippet" />
+    <None Include="Snippetica.Html\var.snippet" />
+    <None Include="Snippetica.Html\var_with_content.snippet" />
+    <None Include="Snippetica.Html\video.snippet" />
+    <None Include="Snippetica.Html\wbr.snippet" />
+    <None Include="Snippetica.VisualBasic\ArrayOfTType.snippet" />
+    <None Include="Snippetica.VisualBasic\HashSetOfTType.snippet" />
+    <None Include="Snippetica.VisualBasic\HashSetOfTVariable.snippet" />
+    <None Include="Snippetica.VisualBasic\HashSetOfTVariableWithInitializer.snippet" />
+    <None Include="Snippetica.VisualBasic\ListOfTType.snippet" />
+    <None Include="Snippetica.VisualBasic\ListOfTVariable.snippet" />
+    <None Include="Snippetica.VisualBasic\ListOfTVariableWithInitializer.snippet" />
+    <None Include="Snippetica.VisualBasic\NewArrayOfT.snippet" />
+    <None Include="Snippetica.VisualBasic\ObservableCollectionOfTType.snippet" />
+    <None Include="Snippetica.VisualBasic\ObservableCollectionOfTVariable.snippet" />
+    <None Include="Snippetica.VisualBasic\ObservableCollectionOfTVariableWithInitializer.snippet" />
+    <None Include="Snippetica.Xml\Comment.snippet" />
+    <None Include="Snippetica.Xml\Element.snippet" />
+    <None Include="Snippetica.Xml\ElementWithAttribute.snippet" />
+    <None Include="Snippetica.Xml\ElementWithAttributeWithContent.snippet" />
+    <None Include="Snippetica.Xml\ElementWithContent.snippet" />
+    <None Include="Snippetica.Xml\SelfClosingElement.snippet" />
+    <None Include="Snippetica.Xml\SelfClosingElementWithAttribute.snippet" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

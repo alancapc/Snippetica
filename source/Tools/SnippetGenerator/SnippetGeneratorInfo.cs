@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -20,28 +21,19 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
         public string DestinationPath { get; }
 
-        public static IEnumerable<SnippetGeneratorInfo> CreateMany(SnippetDirectory[] snippetDirectories, SnippetGenerator[] snippetGenerators)
+        public static IEnumerable<SnippetGeneratorInfo> CreateMany(SnippetDirectory[] snippetDirectories, SnippetGenerator[] snippetGenerators, Func<SnippetDirectory, bool> predicate)
         {
             foreach (SnippetGenerator snippetGenerator in snippetGenerators)
             {
-                foreach (SnippetGeneratorInfo info in CreateMany(snippetDirectories.Where(f => f.Language == snippetGenerator.LanguageDefinition.Language), snippetGenerator))
-                {
+                SnippetGeneratorInfo info = Create(
+                    snippetDirectories
+                        .Where(f => f.Language == snippetGenerator.LanguageDefinition.Language && predicate(f))
+                        .ToArray(),
+                    snippetGenerator);
+
+                if (info != null)
                     yield return info;
-                }
             }
-        }
-
-        private static IEnumerable<SnippetGeneratorInfo> CreateMany(IEnumerable<SnippetDirectory> snippetDirectories, SnippetGenerator snippetGenerator)
-        {
-            SnippetGeneratorInfo info = Create(snippetDirectories.Where(f => !f.HasTag(KnownTags.Dev)).ToArray(), snippetGenerator);
-
-            if (info != null)
-                yield return info;
-
-            info = Create(snippetDirectories.Where(f => f.HasTag(KnownTags.Dev)).ToArray(), snippetGenerator);
-
-            if (info != null)
-                yield return info;
         }
 
         private static SnippetGeneratorInfo Create(SnippetDirectory[] snippetDirectories, SnippetGenerator snippetGenerator)

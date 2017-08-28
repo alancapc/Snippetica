@@ -1,47 +1,47 @@
 ﻿{
-  "a array variable": {
+  "array variable": {
     "prefix": "va",
     "body": [
-      "Dim ${1:items} = New ${2:T}(${3:0})${4:{}}${0}"
+      "Dim ${1:items} = New ${2:T}(${3:0}){}${0}"
     ],
     "description": "array variable declaration"
   },
-  "a array variable (with initializer)": {
+  "array variable (with initializer)": {
     "prefix": "va_",
     "body": [
       "Dim ${1:items} = New ${2:T}() {${3:Nothing}}${0}"
     ],
     "description": "array variable declaration (with initializer)"
   },
-  "a Public auto property": {
+  "Public auto property": {
     "prefix": "p",
     "body": [
       "Public Property ${1:PropertyName} As ${2:T}${0}"
     ],
     "description": "Public auto-implemented property declaration"
   },
-  "a Friend auto property": {
+  "Friend auto property": {
     "prefix": "ip",
     "body": [
       "Friend Property ${1:PropertyName} As ${2:T}${0}"
     ],
     "description": "Friend auto-implemented property declaration"
   },
-  "a Private auto property": {
+  "Private auto property": {
     "prefix": "pp",
     "body": [
       "Private Property ${1:PropertyName} As ${2:T}${0}"
     ],
     "description": "Private auto-implemented property declaration"
   },
-  "a Public Overridable auto property": {
+  "Public Overridable auto property": {
     "prefix": "vp",
     "body": [
       "Public Overridable Property ${1:PropertyName} As ${2:T}${0}"
     ],
     "description": "Public Overridable auto-implemented property declaration"
   },
-  "a Friend Overridable auto property": {
+  "Friend Overridable auto property": {
     "prefix": "ivp",
     "body": [
       "Friend Overridable Property ${1:PropertyName} As ${2:T}${0}"
@@ -75,31 +75,31 @@
     ],
     "description": "Private class declaration"
   },
-  "a Public constant": {
+  "Public constant": {
     "prefix": "k",
     "body": [
-      "Public Const ${1:ConstantName} As ${2:T} = ${3:\"\"}${0}"
+      "Public Const ${1:ConstantName} As ${2:T} = ${3:Nothing}${0}"
     ],
     "description": "Public constant declaration"
   },
-  "a Friend constant": {
+  "Friend constant": {
     "prefix": "ik",
     "body": [
-      "Friend Const ${1:ConstantName} As ${2:T} = ${3:\"\"}${0}"
+      "Friend Const ${1:ConstantName} As ${2:T} = ${3:Nothing}${0}"
     ],
     "description": "Friend constant declaration"
   },
-  "a Private constant": {
+  "Private constant": {
     "prefix": "pk",
     "body": [
-      "Private Const ${1:ConstantName} As ${2:T} = ${3:\"\"}${0}"
+      "Private Const ${1:ConstantName} As ${2:T} = ${3:Nothing}${0}"
     ],
     "description": "Private constant declaration"
   },
   "Public constructor": {
     "prefix": "cr",
     "body": [
-      "Public Sub New${1:()}",
+      "Public Sub New()",
       "    ${0}",
       "End Sub"
     ],
@@ -108,7 +108,7 @@
   "Friend constructor": {
     "prefix": "icr",
     "body": [
-      "Friend Sub New${1:()}",
+      "Friend Sub New()",
       "    ${0}",
       "End Sub"
     ],
@@ -117,7 +117,7 @@
   "Private constructor": {
     "prefix": "pcr",
     "body": [
-      "Private Sub New${1:()}",
+      "Private Sub New()",
       "    ${0}",
       "End Sub"
     ],
@@ -150,45 +150,45 @@
     ],
     "description": "Private constructor declaration (with parameters)"
   },
-  "a Public delegate": {
+  "Public delegate": {
     "prefix": "de",
     "body": [
-      "Public Delegate Function ${1:DelegateName}${2:()} ${3:As} ${4:void}${0}"
+      "Public Delegate Function ${1:DelegateName}${2:()} As ${3:void}${0}"
     ],
     "description": "Public delegate declaration"
   },
-  "a Friend delegate": {
+  "Friend delegate": {
     "prefix": "ide",
     "body": [
-      "Friend Delegate Function ${1:DelegateName}${2:()} ${3:As} ${4:void}${0}"
+      "Friend Delegate Function ${1:DelegateName}${2:()} As ${3:void}${0}"
     ],
     "description": "Friend delegate declaration"
   },
-  "a Private delegate": {
+  "Private delegate": {
     "prefix": "pde",
     "body": [
-      "Private Delegate Function ${1:DelegateName}${2:()} ${3:As} ${4:void}${0}"
+      "Private Delegate Function ${1:DelegateName}${2:()} As ${3:void}${0}"
     ],
     "description": "Private delegate declaration"
   },
-  "a Public delegate (with parameters)": {
+  "Public delegate (with parameters)": {
     "prefix": "de_",
     "body": [
-      "Public Delegate Function ${1:DelegateName}(${2:parameter As Object}) ${3:As} ${4:void}${0}"
+      "Public Delegate Function ${1:DelegateName}(${2:parameter As Object}) As ${3:void}${0}"
     ],
     "description": "Public delegate declaration (with parameters)"
   },
-  "a Friend delegate (with parameters)": {
+  "Friend delegate (with parameters)": {
     "prefix": "ide_",
     "body": [
-      "Friend Delegate Function ${1:DelegateName}(${2:parameter As Object}) ${3:As} ${4:void}${0}"
+      "Friend Delegate Function ${1:DelegateName}(${2:parameter As Object}) As ${3:void}${0}"
     ],
     "description": "Friend delegate declaration (with parameters)"
   },
-  "a Private delegate (with parameters)": {
+  "Private delegate (with parameters)": {
     "prefix": "pde_",
     "body": [
-      "Private Delegate Function ${1:DelegateName}(${2:parameter As Object}) ${3:As} ${4:void}${0}"
+      "Private Delegate Function ${1:DelegateName}(${2:parameter As Object}) As ${3:void}${0}"
     ],
     "description": "Private delegate declaration (with parameters)"
   },
@@ -266,42 +266,42 @@
     ],
     "description": "Private event declaration with EventHandler<T>"
   },
-  "a Public field": {
+  "Public field": {
     "prefix": "f",
     "body": [
       "Public ${1:FieldName} As ${2:T}${0}"
     ],
     "description": "Public field declaration"
   },
-  "a Private field": {
+  "Private field": {
     "prefix": "pf",
     "body": [
       "Private ${1:FieldName} As ${2:T}${0}"
     ],
     "description": "Private field declaration"
   },
-  "a Public Shared field": {
+  "Public Shared field": {
     "prefix": "sf",
     "body": [
       "Public Shared ${1:FieldName} As ${2:T}${0}"
     ],
     "description": "Public Shared field declaration"
   },
-  "a Private Shared field": {
+  "Private Shared field": {
     "prefix": "psf",
     "body": [
       "Private Shared ${1:FieldName} As ${2:T}${0}"
     ],
     "description": "Private Shared field declaration"
   },
-  "a IEnumerable(Of T) type": {
+  "IEnumerable(Of T) type": {
     "prefix": "ge",
     "body": [
       "IEnumerable(Of ${1:T})${0}"
     ],
     "description": "IEnumerable(Of T) type declaration"
   },
-  "a if not TryParse": {
+  "if not TryParse": {
     "prefix": "ifftp",
     "body": [
       "Dim ${1:x} As ${2:T}",
@@ -311,7 +311,7 @@
     ],
     "description": "if statement with condition whether TryParse method returns false."
   },
-  "a if TryParse": {
+  "if TryParse": {
     "prefix": "iftp",
     "body": [
       "Dim ${1:x} As ${2:T}",
@@ -321,7 +321,7 @@
     ],
     "description": "if statement with condition whether TryParse method returns true."
   },
-  "a Public indexer": {
+  "Public indexer": {
     "prefix": "ir",
     "body": [
       "Default Public Property Item(${1:ByVal index As Integer}) As ${2:T}",
@@ -334,7 +334,7 @@
     ],
     "description": "Public indexer declaration"
   },
-  "a Friend indexer": {
+  "Friend indexer": {
     "prefix": "iir",
     "body": [
       "Default Friend Property Item(${1:ByVal index As Integer}) As ${2:T}",
@@ -347,7 +347,7 @@
     ],
     "description": "Friend indexer declaration"
   },
-  "a Private indexer": {
+  "Private indexer": {
     "prefix": "pir",
     "body": [
       "Default Private Property Item(${1:ByVal index As Integer}) As ${2:T}",
@@ -378,145 +378,145 @@
     ],
     "description": "Friend interface declaration"
   },
-  "a Public method": {
+  "Public method": {
     "prefix": "m",
     "body": [
-      "Public Function ${1:MethodName}${2:()} ${3:As} ${4:void}",
+      "Public Function ${1:MethodName}${2:()} As ${3:void}",
       "    ${0}",
       "End Function"
     ],
     "description": "Public method declaration"
   },
-  "a Friend method": {
+  "Friend method": {
     "prefix": "im",
     "body": [
-      "Friend Function ${1:MethodName}${2:()} ${3:As} ${4:void}",
+      "Friend Function ${1:MethodName}${2:()} As ${3:void}",
       "    ${0}",
       "End Function"
     ],
     "description": "Friend method declaration"
   },
-  "a Private method": {
+  "Private method": {
     "prefix": "pm",
     "body": [
-      "Private Function ${1:MethodName}${2:()} ${3:As} ${4:void}",
+      "Private Function ${1:MethodName}${2:()} As ${3:void}",
       "    ${0}",
       "End Function"
     ],
     "description": "Private method declaration"
   },
-  "a Public Shared method": {
+  "Public Shared method": {
     "prefix": "sm",
     "body": [
-      "Public Shared Function ${1:MethodName}${2:()} ${3:As} ${4:void}",
+      "Public Shared Function ${1:MethodName}${2:()} As ${3:void}",
       "    ${0}",
       "End Function"
     ],
     "description": "Public Shared method declaration"
   },
-  "a Friend Shared method": {
+  "Friend Shared method": {
     "prefix": "ism",
     "body": [
-      "Friend Shared Function ${1:MethodName}${2:()} ${3:As} ${4:void}",
+      "Friend Shared Function ${1:MethodName}${2:()} As ${3:void}",
       "    ${0}",
       "End Function"
     ],
     "description": "Friend Shared method declaration"
   },
-  "a Private Shared method": {
+  "Private Shared method": {
     "prefix": "psm",
     "body": [
-      "Private Shared Function ${1:MethodName}${2:()} ${3:As} ${4:void}",
+      "Private Shared Function ${1:MethodName}${2:()} As ${3:void}",
       "    ${0}",
       "End Function"
     ],
     "description": "Private Shared method declaration"
   },
-  "a Public Overridable method": {
+  "Public Overridable method": {
     "prefix": "vm",
     "body": [
-      "Public Overridable Function ${1:MethodName}${2:()} ${3:As} ${4:void}",
+      "Public Overridable Function ${1:MethodName}${2:()} As ${3:void}",
       "    ${0}",
       "End Function"
     ],
     "description": "Public Overridable method declaration"
   },
-  "a Friend Overridable method": {
+  "Friend Overridable method": {
     "prefix": "ivm",
     "body": [
-      "Friend Overridable Function ${1:MethodName}${2:()} ${3:As} ${4:void}",
+      "Friend Overridable Function ${1:MethodName}${2:()} As ${3:void}",
       "    ${0}",
       "End Function"
     ],
     "description": "Friend Overridable method declaration"
   },
-  "a Public method (with parameters)": {
+  "Public method (with parameters)": {
     "prefix": "m_",
     "body": [
-      "Public Function ${1:MethodName}(${2:parameter As Object}) ${3:As} ${4:void}",
+      "Public Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
       "    ${0}",
       "End Function"
     ],
     "description": "Public method declaration (with parameters)"
   },
-  "a Friend method (with parameters)": {
+  "Friend method (with parameters)": {
     "prefix": "im_",
     "body": [
-      "Friend Function ${1:MethodName}(${2:parameter As Object}) ${3:As} ${4:void}",
+      "Friend Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
       "    ${0}",
       "End Function"
     ],
     "description": "Friend method declaration (with parameters)"
   },
-  "a Private method (with parameters)": {
+  "Private method (with parameters)": {
     "prefix": "pm_",
     "body": [
-      "Private Function ${1:MethodName}(${2:parameter As Object}) ${3:As} ${4:void}",
+      "Private Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
       "    ${0}",
       "End Function"
     ],
     "description": "Private method declaration (with parameters)"
   },
-  "a Public Shared method (with parameters)": {
+  "Public Shared method (with parameters)": {
     "prefix": "sm_",
     "body": [
-      "Public Shared Function ${1:MethodName}(${2:parameter As Object}) ${3:As} ${4:void}",
+      "Public Shared Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
       "    ${0}",
       "End Function"
     ],
     "description": "Public Shared method declaration (with parameters)"
   },
-  "a Friend Shared method (with parameters)": {
+  "Friend Shared method (with parameters)": {
     "prefix": "ism_",
     "body": [
-      "Friend Shared Function ${1:MethodName}(${2:parameter As Object}) ${3:As} ${4:void}",
+      "Friend Shared Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
       "    ${0}",
       "End Function"
     ],
     "description": "Friend Shared method declaration (with parameters)"
   },
-  "a Private Shared method (with parameters)": {
+  "Private Shared method (with parameters)": {
     "prefix": "psm_",
     "body": [
-      "Private Shared Function ${1:MethodName}(${2:parameter As Object}) ${3:As} ${4:void}",
+      "Private Shared Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
       "    ${0}",
       "End Function"
     ],
     "description": "Private Shared method declaration (with parameters)"
   },
-  "a Public Overridable method (with parameters)": {
+  "Public Overridable method (with parameters)": {
     "prefix": "vm_",
     "body": [
-      "Public Overridable Function ${1:MethodName}(${2:parameter As Object}) ${3:As} ${4:void}",
+      "Public Overridable Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
       "    ${0}",
       "End Function"
     ],
     "description": "Public Overridable method declaration (with parameters)"
   },
-  "a Friend Overridable method (with parameters)": {
+  "Friend Overridable method (with parameters)": {
     "prefix": "ivm_",
     "body": [
-      "Friend Overridable Function ${1:MethodName}(${2:parameter As Object}) ${3:As} ${4:void}",
+      "Friend Overridable Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
       "    ${0}",
       "End Function"
     ],
@@ -550,116 +550,116 @@
   "new variable": {
     "prefix": "vn",
     "body": [
-      "Dim ${1:x} = New ${2:Object}${3:()}${0}"
+      "Dim ${1:x} = New ${2:Object}()${0}"
     ],
     "description": "variable declaration with new object creation"
   },
-  "a parameter array ": {
+  "parameter array ": {
     "prefix": "pa",
     "body": [
       "ParamArray ${1:values} As ${2:T}()${0}"
     ],
     "description": "parameter array "
   },
-  "a Public read-only auto property": {
+  "Public read-only auto property": {
     "prefix": "rp",
     "body": [
       "Public ReadOnly Property ${1:PropertyName} As ${2:T}${0}"
     ],
     "description": "Public read-only auto-implemented property declaration"
   },
-  "a Friend read-only auto property": {
+  "Friend read-only auto property": {
     "prefix": "irp",
     "body": [
       "Friend ReadOnly Property ${1:PropertyName} As ${2:T}${0}"
     ],
     "description": "Friend read-only auto-implemented property declaration"
   },
-  "a Private read-only auto property": {
+  "Private read-only auto property": {
     "prefix": "prp",
     "body": [
       "Private ReadOnly Property ${1:PropertyName} As ${2:T}${0}"
     ],
     "description": "Private read-only auto-implemented property declaration"
   },
-  "a Public Shared read-only auto property": {
+  "Public Shared read-only auto property": {
     "prefix": "srp",
     "body": [
       "Public Shared ReadOnly Property ${1:PropertyName} As ${2:T}${0}"
     ],
     "description": "Public Shared read-only auto-implemented property declaration"
   },
-  "a Friend Shared read-only auto property": {
+  "Friend Shared read-only auto property": {
     "prefix": "isrp",
     "body": [
       "Friend Shared ReadOnly Property ${1:PropertyName} As ${2:T}${0}"
     ],
     "description": "Friend Shared read-only auto-implemented property declaration"
   },
-  "a Private Shared read-only auto property": {
+  "Private Shared read-only auto property": {
     "prefix": "psrp",
     "body": [
       "Private Shared ReadOnly Property ${1:PropertyName} As ${2:T}${0}"
     ],
     "description": "Private Shared read-only auto-implemented property declaration"
   },
-  "a Public Overridable read-only auto property": {
+  "Public Overridable read-only auto property": {
     "prefix": "vrp",
     "body": [
       "Public Overridable ReadOnly Property ${1:PropertyName} As ${2:T}${0}"
     ],
     "description": "Public Overridable read-only auto-implemented property declaration"
   },
-  "a Friend Overridable read-only auto property": {
+  "Friend Overridable read-only auto property": {
     "prefix": "ivrp",
     "body": [
       "Friend Overridable ReadOnly Property ${1:PropertyName} As ${2:T}${0}"
     ],
     "description": "Friend Overridable read-only auto-implemented property declaration"
   },
-  "a Public read-only field": {
+  "Public read-only field": {
     "prefix": "rf",
     "body": [
       "Public ReadOnly ${1:FieldName} As ${2:T}${0}"
     ],
     "description": "Public read-only field declaration"
   },
-  "a Friend read-only field": {
+  "Friend read-only field": {
     "prefix": "irf",
     "body": [
       "Friend ReadOnly ${1:FieldName} As ${2:T}${0}"
     ],
     "description": "Friend read-only field declaration"
   },
-  "a Private read-only field": {
+  "Private read-only field": {
     "prefix": "prf",
     "body": [
       "Private ReadOnly ${1:FieldName} As ${2:T}${0}"
     ],
     "description": "Private read-only field declaration"
   },
-  "a Public Shared read-only field": {
+  "Public Shared read-only field": {
     "prefix": "srf",
     "body": [
       "Public Shared ReadOnly ${1:FieldName} As ${2:T}${0}"
     ],
     "description": "Public Shared read-only field declaration"
   },
-  "a Friend Shared read-only field": {
+  "Friend Shared read-only field": {
     "prefix": "isrf",
     "body": [
       "Friend Shared ReadOnly ${1:FieldName} As ${2:T}${0}"
     ],
     "description": "Friend Shared read-only field declaration"
   },
-  "a Private Shared read-only field": {
+  "Private Shared read-only field": {
     "prefix": "psrf",
     "body": [
       "Private Shared ReadOnly ${1:FieldName} As ${2:T}${0}"
     ],
     "description": "Private Shared read-only field declaration"
   },
-  "a Public read-only Property": {
+  "Public read-only Property": {
     "prefix": "rpp",
     "body": [
       "Public ReadOnly Property ${1:PropertyName} As ${2:T}",
@@ -670,7 +670,7 @@
     ],
     "description": "Public read-only property declaration"
   },
-  "a Friend read-only Property": {
+  "Friend read-only Property": {
     "prefix": "irpp",
     "body": [
       "Friend ReadOnly Property ${1:PropertyName} As ${2:T}",
@@ -681,7 +681,7 @@
     ],
     "description": "Friend read-only property declaration"
   },
-  "a Private read-only Property": {
+  "Private read-only Property": {
     "prefix": "prpp",
     "body": [
       "Private ReadOnly Property ${1:PropertyName} As ${2:T}",
@@ -692,7 +692,7 @@
     ],
     "description": "Private read-only property declaration"
   },
-  "a Public Shared read-only Property": {
+  "Public Shared read-only Property": {
     "prefix": "srpp",
     "body": [
       "Public Shared ReadOnly Property ${1:PropertyName} As ${2:T}",
@@ -703,7 +703,7 @@
     ],
     "description": "Public Shared read-only property declaration"
   },
-  "a Friend Shared read-only Property": {
+  "Friend Shared read-only Property": {
     "prefix": "isrpp",
     "body": [
       "Friend Shared ReadOnly Property ${1:PropertyName} As ${2:T}",
@@ -714,7 +714,7 @@
     ],
     "description": "Friend Shared read-only property declaration"
   },
-  "a Private Shared read-only Property": {
+  "Private Shared read-only Property": {
     "prefix": "psrpp",
     "body": [
       "Private Shared ReadOnly Property ${1:PropertyName} As ${2:T}",
@@ -725,7 +725,7 @@
     ],
     "description": "Private Shared read-only property declaration"
   },
-  "a Public Overridable read-only Property": {
+  "Public Overridable read-only Property": {
     "prefix": "vrpp",
     "body": [
       "Public Overridable ReadOnly Property ${1:PropertyName} As ${2:T}",
@@ -736,7 +736,7 @@
     ],
     "description": "Public Overridable read-only property declaration"
   },
-  "a Friend Overridable read-only Property": {
+  "Friend Overridable read-only Property": {
     "prefix": "ivrpp",
     "body": [
       "Friend Overridable ReadOnly Property ${1:PropertyName} As ${2:T}",
@@ -774,123 +774,46 @@
     ],
     "description": "Private structure declaration"
   },
-  "a type parameter": {
+  "type parameter": {
     "prefix": "g",
     "body": [
       "(Of ${1:T})${0}"
     ],
     "description": " type parameter"
   },
-  "a interface indexer": {
+  "interface indexer": {
     "prefix": "_ir",
     "body": [
       "Default Property Item(${1:int index}) As ${2:T}${0}"
     ],
     "description": "interface indexer"
   },
-  "a interface method": {
+  "interface method": {
     "prefix": "_m",
     "body": [
-      "Function ${1:MethodName}${2:()} ${3:As} ${4:void};${0}"
+      "Function ${1:MethodName}${2:()} As ${3:void};${0}"
     ],
     "description": "interface method"
   },
-  "a interface method (with parameters)": {
+  "interface method (with parameters)": {
     "prefix": "_m_",
     "body": [
-      "Function ${1:MethodName}(${2:parameter As Object}) ${3:As} ${4:void};${0}"
+      "Function ${1:MethodName}(${2:parameter As Object}) As ${3:void};${0}"
     ],
     "description": "interface method (with parameters)"
   },
-  "a interface property": {
+  "interface property": {
     "prefix": "_p",
     "body": [
       "Property ${1:PropertyName} As ${2:T}${0}"
     ],
     "description": "interface property"
   },
-  "a interface read-only property": {
+  "interface read-only property": {
     "prefix": "_rp",
     "body": [
       "ReadOnly Property ${1:PropertyName} As ${2:T}${0}"
     ],
     "description": "interface read-only property"
-  },
-  "a array type": {
-    "prefix": "a",
-    "body": [
-      "${1:T}()${0}"
-    ],
-    "description": "array type declaration"
-  },
-  "a HashSet(Of T) type": {
-    "prefix": "ghs",
-    "body": [
-      "HashSet(Of ${1:T})${0}"
-    ],
-    "description": "HashSet(Of T) type declaration"
-  },
-  "a HashSet(Of T) variable": {
-    "prefix": "vhs",
-    "body": [
-      "Dim ${1:items} = new HashSet(Of ${2:T})()${0}"
-    ],
-    "description": "HashSet(Of T) variable declaration"
-  },
-  "a HashSet(Of T) variable (with initializer)": {
-    "prefix": "vhs_",
-    "body": [
-      "Dim ${1:items} = new HashSet(Of ${2:T})() From {${3:Nothing}}${0}"
-    ],
-    "description": "HashSet(Of T) variable declaration (with initializer)"
-  },
-  "a List(Of T) type": {
-    "prefix": "gl",
-    "body": [
-      "List(Of ${1:T})${0}"
-    ],
-    "description": "List(Of T) type declaration"
-  },
-  "a List(Of T) variable": {
-    "prefix": "vl",
-    "body": [
-      "Dim ${1:items} = new List(Of ${2:T})()${0}"
-    ],
-    "description": "List(Of T) variable declaration"
-  },
-  "a List(Of T) variable (with initializer)": {
-    "prefix": "vl_",
-    "body": [
-      "Dim ${1:items} = new List(Of ${2:T})() From {${3:Nothing}}${0}"
-    ],
-    "description": "List(Of T) variable declaration (with initializer)"
-  },
-  "a new array ": {
-    "prefix": "na",
-    "body": [
-      "New ${1:T}(${2:0})${3:{}}${0}"
-    ],
-    "description": "new array "
-  },
-  "a ObservableCollection(Of T) type": {
-    "prefix": "goc",
-    "body": [
-      "ObservableCollection(Of ${1:T})${0}"
-    ],
-    "description": "ObservableCollection(Of T) type declaration"
-  },
-  "a ObservableCollection(Of T) variable": {
-    "prefix": "voc",
-    "body": [
-      "Dim ${1:items} = new ObservableCollection(Of ${2:T})()${0}"
-    ],
-    "description": "ObservableCollection(Of T) variable declaration"
-  },
-  "a ObservableCollection(Of T) variable (with initializer)": {
-    "prefix": "voc_",
-    "body": [
-      "Dim ${1:items} = new ObservableCollection(Of ${2:T})() From {${3:Nothing}}${0}"
-    ],
-    "description": "ObservableCollection(Of T) variable declaration (with initializer)"
   }
 }

@@ -1,7 +1,7 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>a private static method</Title>
+    <Title>private static method</Title>
     <Shortcut>psm</Shortcut>
     <Description>private static method declaration</Description>
     <Author>Josef Pihrt</Author>
@@ -11,10 +11,6 @@
   </Header>
   <Snippet>
     <Declarations>
-      <Literal Editable="false">
-        <ID>_parameterList</ID>
-        <Default>()</Default>
-      </Literal>
       <Literal>
         <ID>_type</ID>
         <ToolTip>Return type</ToolTip>
@@ -26,7 +22,7 @@
         <Default>MethodName</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[private static $_type$ $name$$_parameterList$
+    <Code Language="CSharp"><![CDATA[private static $_type$ $name$()
 {
     $end$
 }]]></Code>

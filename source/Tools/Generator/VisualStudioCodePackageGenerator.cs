@@ -15,19 +15,23 @@ namespace Pihrtsoft.Snippets.CodeGeneration
         internal static void GenerateSnippets(
             SnippetDirectory[] snippetDirectories,
             LanguageDefinition[] languageDefinitions,
-            GeneralSettings settings)
+            string projectPath,
+            Func<SnippetDirectory, bool> predicate)
         {
             var snippets = new List<Snippet>();
 
             VisualStudioCodeSnippetGenerator[] generators = languageDefinitions.Select(f => new VisualStudioCodeSnippetGenerator(f)).ToArray();
 
-            foreach (SnippetGeneratorResult result in SnippetGenerator.GetResults(snippetDirectories, generators))
+            foreach (SnippetGeneratorResult result in SnippetGenerator.GetResults(snippetDirectories, generators, predicate))
                 snippets.AddRange(result.Snippets);
 
             snippets.AddRange(HtmlSnippetGenerator.GetResult(snippetDirectories).Snippets);
             snippets.AddRange(XmlSnippetGenerator.GetResult(snippetDirectories).Snippets);
 
-            snippets.RemoveAll(f => f.HasTag(KnownTags.ExcludeFromVisualStudioCode));
+            snippets = snippets
+                .Where(f => !f.HasTag(KnownTags.ExcludeFromVisualStudioCode))
+                .Select(f => f.RemoveShortcutFromTitle())
+                .ToList();
 
             foreach (Snippet snippet in snippets)
                 snippet.RemoveMetaKeywords();
@@ -40,9 +44,9 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
                 string fileName = Path.ChangeExtension(GetLanguageIdentifier(grouping.Key), "json");
 
-                string filePath = Path.Combine(settings.VisualStudioCodeProjectPath, "json", fileName);
+                string filePath = Path.Combine(projectPath, "json", fileName);
 
-                IOUtility.SaveSnippets(grouping.ToArray(), Path.Combine(settings.VisualStudioCodeProjectPath, $"Snippetica.{grouping.Key}"));
+                IOUtility.SaveSnippets(grouping.ToArray(), Path.Combine(projectPath, $"Snippetica.{grouping.Key}"));
 
                 IOUtility.WriteAllText(filePath, json.ToString(Formatting.Indented));
             }

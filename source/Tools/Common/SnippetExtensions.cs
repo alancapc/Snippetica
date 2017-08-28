@@ -30,9 +30,11 @@ namespace Pihrtsoft.Snippets
             return null;
         }
 
-        public static void RemoveShortcutFromTitle(this Snippet snippet)
+        public static Snippet RemoveShortcutFromTitle(this Snippet snippet)
         {
             snippet.Title = snippet.GetTitleWithoutShortcut();
+
+            return snippet;
         }
 
         public static string GetTitleWithoutShortcut(this Snippet snippet)
@@ -106,39 +108,35 @@ namespace Pihrtsoft.Snippets
                 AddTag(snippet, tag);
         }
 
-        public static bool RemoveTag(this Snippet snippet, string tag)
+        public static Snippet RemoveTag(this Snippet snippet, string tag)
         {
             string tagWithPrefix = KnownTags.MetaTagPrefix + tag;
 
-            if (RemoveKeyword(snippet, tagWithPrefix))
-            {
-                return true;
-            }
-            else
+            if (!RemoveKeyword(snippet, tagWithPrefix))
             {
                 string keyword = snippet.Keywords.FirstOrDefault(f => f.StartsWith(tagWithPrefix + " ", StringComparison.Ordinal));
 
                 if (keyword != null)
-                {
-                    return snippet.RemoveKeyword(keyword);
-                }
-                else
-                {
-                    return false;
-                }
+                    snippet.RemoveKeyword(keyword);
             }
+
+            return snippet;
         }
 
-        public static void RemoveTags(this Snippet snippet, IEnumerable<string> tags)
+        public static Snippet RemoveTags(this Snippet snippet, IEnumerable<string> tags)
         {
             foreach (string tag in tags)
                 RemoveTag(snippet, tag);
+
+            return snippet;
         }
 
-        public static void RemoveTags(this Snippet snippet, params string[] tags)
+        public static Snippet RemoveTags(this Snippet snippet, params string[] tags)
         {
             foreach (string tag in tags)
                 RemoveTag(snippet, tag);
+
+            return snippet;
         }
 
         public static bool HasTag(this Snippet snippet, string tag)
