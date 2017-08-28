@@ -14,127 +14,47 @@ namespace Pihrtsoft.Snippets.CodeGeneration
             LanguageDefinition = languageDefinition;
         }
 
-        private LanguageDefinition LanguageDefinition { get; }
+        public LanguageDefinition LanguageDefinition { get; }
 
-        private static Command StaticCommand { get; } = new StaticCommand();
-        private static Command VirtualCommand { get; } = new VirtualCommand();
-        private static Command InitializerCommand { get; } = new InitializerCommand();
-        private static Command ParametersCommand { get; } = new ParametersCommand();
-        private static Command ArgumentsCommand { get; } = new ArgumentsCommand();
-
-        public static void GenerateSnippets(SnippetDirectory[] snippetDirectories, LanguageDefinition[] languageDefinitions)
+        public static IEnumerable<SnippetGeneratorResult> GetResults(SnippetDirectory[] snippetDirectories, SnippetGenerator[] snippetGenerators)
         {
-            foreach (LanguageDefinition languageDefinition in languageDefinitions)
-                GenerateSnippets(snippetDirectories.Where(f => f.Language == languageDefinition.Language), languageDefinition);
-        }
-
-        private static void GenerateSnippets(IEnumerable<SnippetDirectory> snippetDirectories, LanguageDefinition languageDefinition)
-        {
-            GenerateSnippets2(snippetDirectories.Where(f => !f.HasTag(KnownTags.Dev)).ToArray(), languageDefinition);
-            GenerateSnippets2(snippetDirectories.Where(f => f.HasTag(KnownTags.Dev)).ToArray(), languageDefinition);
-        }
-
-        private static void GenerateSnippets2(SnippetDirectory[] snippetDirectories, LanguageDefinition languageDefinition)
-        {
-            if (snippetDirectories.Length > 0)
+            foreach (SnippetGeneratorInfo info in SnippetGeneratorInfo.CreateMany(snippetDirectories, snippetGenerators))
             {
-                string source = snippetDirectories
-                    .Where(f => f.HasTag(KnownTags.AutoGenerationSource))
-                    .Select(f => f.Path)
-                    .FirstOrDefault();
+                IEnumerable<Snippet> snippets = SnippetSerializer.Deserialize(info.SourcePath, SearchOption.AllDirectories)
+                    .SelectMany(info.Generator.GenerateSnippets);
 
-                if (source != null)
-                {
-                    string destination = snippetDirectories
-                        .Where(f => f.HasTag(KnownTags.AutoGenerationDestination))
-                        .Select(f => f.Path)
-                        .FirstOrDefault();
-
-                    if (destination != null)
-                    {
-                        var generator = new SnippetGenerator(languageDefinition);
-                        generator.GenerateSnippets(source, destination);
-                    }
-                }
+                yield return new SnippetGeneratorResult(snippets, info.DestinationPath);
             }
         }
 
-        public static void GenerateXamlSnippets(SnippetDirectory[] snippetDirectories)
-        {
-            IEnumerable<SnippetDirectory> directories = snippetDirectories
-                .Where(f => f.Language == Language.Xaml);
-
-            string sourceDirPath = directories.First(f => f.HasTag(KnownTags.AutoGenerationSource)).Path;
-            string destinationDirPath = directories.First(f => f.HasTag(KnownTags.AutoGenerationDestination)).Path;
-
-            var snippets = new List<Snippet>();
-
-            snippets.AddRange(XmlSnippetGenerator.GenerateSnippets(destinationDirPath, Language.Xaml));
-
-            var generator = new XamlSnippetGenerator();
-            snippets.AddRange(generator.GenerateSnippets(sourceDirPath));
-
-            IOUtility.SaveSnippets(snippets.ToArray(), destinationDirPath);
-        }
-
-        public static void GenerateXmlSnippets(SnippetDirectory[] snippetDirectories)
-        {
-            string destinationDirPath = snippetDirectories.First(f => f.Language == Language.Xml && f.HasTag(KnownTags.AutoGenerationDestination)).Path;
-
-            Snippet[] snippets = XmlSnippetGenerator.GenerateSnippets(destinationDirPath, Language.Xml).ToArray();
-
-            IOUtility.SaveSnippets(snippets, destinationDirPath);
-        }
-
-        public static void GenerateHtmlSnippets(SnippetDirectory[] snippetDirectories)
-        {
-            string sourceDirPath = snippetDirectories.First(f => f.Language == Language.Html && f.HasTag(KnownTags.AutoGenerationSource)).Path;
-            string destinationDirPath = snippetDirectories.First(f => f.Language == Language.Html && f.HasTag(KnownTags.AutoGenerationDestination)).Path;
-
-            var snippets = new List<Snippet>();
-            snippets.AddRange(XmlSnippetGenerator.GenerateSnippets(destinationDirPath, Language.Html));
-            snippets.AddRange(HtmlSnippetGenerator.GenerateSnippets(sourceDirPath));
-
-            IOUtility.SaveSnippets(snippets.ToArray(), destinationDirPath);
-        }
-
-        public void GenerateSnippets(string sourceDirectoryPath, string destinationDirectoryPath)
-        {
-            Snippet[] snippets = SnippetSerializer.Deserialize(sourceDirectoryPath, SearchOption.AllDirectories)
-                .SelectMany(snippet => GenerateSnippets(snippet))
-                .ToArray();
-
-            IOUtility.SaveSnippets(snippets, destinationDirectoryPath);
-        }
-
-        private IEnumerable<Snippet> GenerateSnippets(Snippet snippet)
+        public IEnumerable<Snippet> GenerateSnippets(Snippet snippet)
         {
             var jobs = new JobCollection();
 
             jobs.AddCommands(GetTypeCommands(snippet));
 
             if (snippet.HasTag(KnownTags.GenerateCollection))
-                jobs.AddCommands(GetNonImmutableCollectionCommands());
+                jobs.AddCommands(GetNonImmutableCollectionCommands(snippet));
 
             if (snippet.HasTag(KnownTags.GenerateImmutableCollection))
-                jobs.AddCommands(GetImmutableCollectionCommands());
+                jobs.AddCommands(GetImmutableCollectionCommands(snippet));
 
             jobs.AddCommands(GetAccessModifierCommands(snippet));
 
             if (snippet.HasTag(KnownTags.GenerateStaticModifier))
-                jobs.AddCommand(StaticCommand);
+                jobs.AddCommand(CommandUtility.StaticCommand);
 
             if (snippet.HasTag(KnownTags.GenerateVirtualModifier))
-                jobs.AddCommand(VirtualCommand);
+                jobs.AddCommand(CommandUtility.VirtualCommand);
 
             if (snippet.HasTag(KnownTags.GenerateInitializer))
-                jobs.AddCommand(InitializerCommand);
+                jobs.AddCommand(CommandUtility.InitializerCommand);
 
             if (snippet.HasTag(KnownTags.GenerateParameters))
-                jobs.AddCommand(ParametersCommand);
+                jobs.AddCommand(CommandUtility.ParametersCommand);
 
             if (snippet.HasTag(KnownTags.GenerateArguments))
-                jobs.AddCommand(ArgumentsCommand);
+                jobs.AddCommand(CommandUtility.ArgumentsCommand);
 
             if (snippet.HasTag(KnownTags.GenerateUnchanged))
                 jobs.Add(new Job());
@@ -156,59 +76,32 @@ namespace Pihrtsoft.Snippets.CodeGeneration
             }
         }
 
-        private IEnumerable<Command> GetTypeCommands(Snippet snippet)
+        protected virtual IEnumerable<Command> GetTypeCommands(Snippet snippet)
         {
-            bool flg = false;
-
-            foreach (TypeDefinition type in LanguageDefinition
-                .Types
-                .Where(f => !f.HasTag(KnownTags.Collection) && snippet.RequiresTypeGeneration(f.Name)))
-            {
-                yield return new TypeCommand(type);
-
-                if (!flg)
-                {
-                    yield return new TypeCommand(null);
-                    flg = true;
-                }
-            }
+            return CommandUtility.GetTypeCommands(snippet, LanguageDefinition);
         }
 
-        private IEnumerable<Command> GetNonImmutableCollectionCommands()
+        protected virtual IEnumerable<Command> GetNonImmutableCollectionCommands(Snippet snippet)
         {
-            return LanguageDefinition
-                .Types
-                .Where(f => f.HasTag(KnownTags.Collection) && !f.HasTag(KnownTags.Immutable))
-                .Select(f => new CollectionTypeCommand(f));
+            return CommandUtility.GetNonImmutableCollectionCommands(LanguageDefinition);
         }
 
-        private IEnumerable<Command> GetImmutableCollectionCommands()
+        protected virtual IEnumerable<Command> GetImmutableCollectionCommands(Snippet snippet)
         {
-            return LanguageDefinition
-                .Types
-                .Where(f => f.HasTag(KnownTags.Collection) && f.HasTag(KnownTags.Immutable))
-                .Select(f => new ImmutableCollectionTypeCommand(f));
+            return CommandUtility.GetImmutableCollectionCommands(LanguageDefinition);
         }
 
-        private IEnumerable<Command> GetAccessModifierCommands(Snippet snippet)
+        protected virtual IEnumerable<Command> GetAccessModifierCommands(Snippet snippet)
         {
-            return LanguageDefinition
-                .Modifiers
-                .Where(modifier => modifier.Tags.Contains(KnownTags.AccessModifier) && snippet.RequiresModifierGeneration(modifier.Name))
-                .Select(modifier => new AccessModifierCommand(modifier));
+            return CommandUtility.GetAccessModifierCommands(snippet, LanguageDefinition);
         }
 
-        private void PostProcess(Snippet snippet)
+        protected virtual void PostProcess(Snippet snippet)
         {
             ReplacePlaceholders(snippet);
 
             if (snippet.Language == Language.VisualBasic)
                 snippet.ReplaceSubOrFunctionLiteral("Function");
-
-            Literal typeLiteral = snippet.Literals[LiteralIdentifiers.Type];
-
-            if (typeLiteral != null)
-                typeLiteral.DefaultValue = "T";
 
             RemoveUnusedLiterals(snippet);
 

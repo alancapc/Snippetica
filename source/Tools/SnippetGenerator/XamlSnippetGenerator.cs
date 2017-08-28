@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Pihrtsoft.Snippets.CodeGeneration.Commands;
@@ -10,6 +9,24 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 {
     public class XamlSnippetGenerator
     {
+        public static SnippetGeneratorResult GetResult(SnippetDirectory[] snippetDirectories)
+        {
+            IEnumerable<SnippetDirectory> directories = snippetDirectories
+                .Where(f => f.Language == Language.Xaml);
+
+            string sourceDirPath = directories.First(f => f.HasTag(KnownTags.AutoGenerationSource)).Path;
+            string destinationDirPath = directories.First(f => f.HasTag(KnownTags.AutoGenerationDestination)).Path;
+
+            var snippets = new List<Snippet>();
+
+            snippets.AddRange(XmlSnippetGenerator.GenerateSnippets(destinationDirPath, Language.Xaml));
+
+            var generator = new XamlSnippetGenerator();
+            snippets.AddRange(generator.GenerateSnippets(sourceDirPath));
+
+            return new SnippetGeneratorResult(snippets, destinationDirPath);
+        }
+
         public IEnumerable<Snippet> GenerateSnippets(string sourceDirectoryPath)
         {
             return SnippetSerializer.Deserialize(sourceDirectoryPath, SearchOption.AllDirectories)

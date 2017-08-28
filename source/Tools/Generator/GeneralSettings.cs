@@ -17,6 +17,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
             GitHubSourcePath = $"{GitHubMasterPath}/{SourceDirectoryName}";
             ProjectName = ProjectTitle;
             ExtensionProjectName = $"{ProjectTitle}.VisualStudio";
+            VisualStudioCodeProjectName = $"{ProjectTitle}.VisualStudioCode";
             ChangeLogFileName = "ChangeLog.md";
             GalleryDescriptionFileName = "GalleryDescription.txt";
             PkgDefFileName = "regedit.pkgdef";
@@ -32,6 +33,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
         public string GitHubSourcePath { get; }
         public string ProjectName { get; }
         public string ExtensionProjectName { get; set; }
+        public string VisualStudioCodeProjectName { get; set; }
         public string ChangeLogFileName { get; }
         public string GalleryDescriptionFileName { get; }
         public string SourceDirectoryName { get; }
@@ -56,6 +58,11 @@ namespace Pihrtsoft.Snippets.CodeGeneration
         public string GitHubExtensionProjectPath
         {
             get { return $"{GitHubSourcePath}/{ExtensionProjectName}"; }
+        }
+
+        public string VisualStudioCodeProjectPath
+        {
+            get { return Path.Combine(SolutionDirectoryPath, SourceDirectoryName, VisualStudioCodeProjectName); }
         }
 
         public string GetProjectSubtitle(SnippetDirectory[] snippetDirectories)

@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\CommandUtility.cs" />
     <Compile Include="HtmlSnippetGenerator.cs" />
     <Compile Include="ModifierKind.cs" />
     <Compile Include="Commands\AlternativeShortcutCommand.cs" />
@@ -78,11 +79,15 @@
     <Compile Include="ShortcutChars.cs" />
     <Compile Include="ExecutionContext.cs" />
     <Compile Include="SnippetGenerator.cs" />
+    <Compile Include="SnippetGeneratorInfo.cs" />
+    <Compile Include="SnippetGeneratorResult.cs" />
     <Compile Include="StringExtensions.cs" />
     <Compile Include="TypeDefinition.cs" />
     <Compile Include="Commands\TypeCommand.cs" />
     <Compile Include="TypeDefinitionCollection.cs" />
     <Compile Include="VisualBasicDefinition.cs" />
+    <Compile Include="VisualStudioCodeSnippetGenerator.cs" />
+    <Compile Include="VisualStudioSnippetGenerator.cs" />
     <Compile Include="XamlSnippetGenerator.cs" />
     <Compile Include="XmlSnippetGenerator.cs" />
   </ItemGroup>

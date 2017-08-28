@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{98D4AD11-9461-4806-9EB3-B3D5A93DB7AF}"
 EndProject
@@ -35,6 +35,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.VisualStudio.Dev", "source\Snippetica.VisualStudio.Dev\Snippetica.VisualStudio.Dev.csproj", "{1D137DD7-218D-4DAC-AB1A-E4F3CE95D788}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.VisualStudioCode", "source\Snippetica.VisualStudioCode\Snippetica.VisualStudioCode.csproj", "{C5905263-795A-4B53-8645-4FC6D25D9E50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +93,12 @@ Global
 		{1D137DD7-218D-4DAC-AB1A-E4F3CE95D788}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1D137DD7-218D-4DAC-AB1A-E4F3CE95D788}.ReleaseVisualStudio|Any CPU.ActiveCfg = Release|Any CPU
 		{1D137DD7-218D-4DAC-AB1A-E4F3CE95D788}.ReleaseVisualStudio|Any CPU.Build.0 = Release|Any CPU
+		{C5905263-795A-4B53-8645-4FC6D25D9E50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5905263-795A-4B53-8645-4FC6D25D9E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5905263-795A-4B53-8645-4FC6D25D9E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5905263-795A-4B53-8645-4FC6D25D9E50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5905263-795A-4B53-8645-4FC6D25D9E50}.ReleaseVisualStudio|Any CPU.ActiveCfg = Release|Any CPU
+		{C5905263-795A-4B53-8645-4FC6D25D9E50}.ReleaseVisualStudio|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -103,5 +111,8 @@ Global
 		{5F21280B-2029-4D27-AEE6-C6E3E8C09C29} = {B408FEAA-24E9-488C-B384-6602BAE8DB38}
 		{CE18A42C-A7FD-4B6B-90FE-2F4510B7CB0E} = {B408FEAA-24E9-488C-B384-6602BAE8DB38}
 		{A8ED9945-2D2B-493C-ABB6-E860315EAFFF} = {BA91112D-6AEE-48D3-8C2B-C59AF29C5BF3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F615C44-B8F8-4E88-A201-667DE41F776F}
 	EndGlobalSection
 EndGlobal

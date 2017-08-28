@@ -2,6 +2,7 @@
 
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace Pihrtsoft.Snippets.CodeGeneration
 {
@@ -12,6 +13,18 @@ namespace Pihrtsoft.Snippets.CodeGeneration
         private const string ContentIdentifier = "content";
         private const string NameIdentifier = "name";
         private const string EndIdentifier = "end";
+
+        public static SnippetGeneratorResult GetResult(SnippetDirectory[] snippetDirectories)
+        {
+            string sourceDirPath = snippetDirectories.First(f => f.Language == Language.Html && f.HasTag(KnownTags.AutoGenerationSource)).Path;
+            string destinationDirPath = snippetDirectories.First(f => f.Language == Language.Html && f.HasTag(KnownTags.AutoGenerationDestination)).Path;
+
+            var snippets = new List<Snippet>();
+            snippets.AddRange(XmlSnippetGenerator.GenerateSnippets(destinationDirPath, Language.Html));
+            snippets.AddRange(GenerateSnippets(sourceDirPath));
+
+            return new SnippetGeneratorResult(snippets, destinationDirPath);
+        }
 
         public static IEnumerable<Snippet> GenerateSnippets(string sourceDirectoryPath)
         {

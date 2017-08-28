@@ -74,12 +74,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                 for (int j = i + 1; j < commands.Count; j++)
                 {
                     if (IsMutuallyExclusive(commands[i], commands[j]))
-                    {
-                        Debug.WriteLine(commands[i]);
-                        Debug.WriteLine(commands[j]);
-
                         return true;
-                    }
                 }
             }
 

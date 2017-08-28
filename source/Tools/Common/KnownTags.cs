@@ -28,6 +28,7 @@ namespace Pihrtsoft.Snippets
         public const string TitleStartsWithShortcut = nameof(TitleStartsWithShortcut);
         public const string WithAttribute = nameof(WithAttribute);
         public const string WithContent = nameof(WithContent);
+        public const string ExcludeFromVisualStudioCode = nameof(ExcludeFromVisualStudioCode);
 
         public const string MetaPrefix = "Meta-";
         public const string MetaTagPrefix = MetaPrefix + "Tag ";
