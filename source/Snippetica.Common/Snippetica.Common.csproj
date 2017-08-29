@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F28D28EC-37E4-4857-B072-91A2D1FF8F60}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{EA986E08-DD26-43EA-94F0-8D2F70D4A17F}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Snippetica.CodeGeneration.Generator</RootNamespace>
-    <AssemblyName>Snippetica.CodeGeneration.Generator</AssemblyName>
+    <RootNamespace>Snippetica.Common</RootNamespace>
+    <AssemblyName>Snippetica.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -21,17 +20,16 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>..\..\global.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\global.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>..\..\global.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\global.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Pihrtsoft.Snippets, Version=1.3.0.0, Culture=neutral, PublicKeyToken=47d18de6ae9b6208, processorArchitecture=MSIL">
@@ -47,61 +45,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="CharacterSequence.cs" />
+    <Compile Include="IO\IOUtility.cs" />
+    <Compile Include="LanguageHelper.cs" />
+    <Compile Include="LiteralIdentifiers.cs" />
+    <Compile Include="SnippetDirectoryMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SnippetExtensions.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="SnippetDirectory.cs" />
+    <Compile Include="KnownTags.cs" />
+    <Compile Include="IO\Utf8StringWriter.cs" />
+    <Compile Include="Xml\XAttributeExtensions.cs" />
+    <Compile Include="Xml\XElementExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Records\Pihrtsoft.Records\Pihrtsoft.Records.csproj">
+    <ProjectReference Include="..\Records\Pihrtsoft.Records\Pihrtsoft.Records.csproj">
       <Project>{5f21280b-2029-4d27-aee6-c6e3e8c09c29}</Project>
       <Name>Pihrtsoft.Records</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Snippetica.CodeGeneration.Markdown\Snippetica.CodeGeneration.Markdown.csproj">
-      <Project>{3011fad5-89c1-4db8-ba47-239023af4cf3}</Project>
-      <Name>Snippetica.CodeGeneration.Markdown</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Snippetica.VisualStudio.CodeGeneration\Snippetica.CodeGeneration.VisualStudio.csproj">
-      <Project>{8dcb0266-01bc-4f2f-b99f-b0000a4d8149}</Project>
-      <Name>Snippetica.CodeGeneration.VisualStudio</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Snippetica.VisualStudioCode.CodeGeneration\Snippetica.CodeGeneration.VisualStudioCode.csproj">
-      <Project>{28f57403-5d16-4a70-b4b5-a750d35466a4}</Project>
-      <Name>Snippetica.CodeGeneration.VisualStudioCode</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Snippetica.Common\Snippetica.Common.csproj">
-      <Project>{ea986e08-dd26-43ea-94f0-8d2f70d4a17f}</Project>
-      <Name>Snippetica.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Snippetica.Validations\Snippetica.Validations.csproj">
-      <Project>{fbcd876b-5cde-4c75-834c-685d33fb1725}</Project>
-      <Name>Snippetica.Validations</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Snippetica.CodeGeneration\Snippetica.CodeGeneration.csproj">
-      <Project>{b53b29d0-8bb3-478d-ad94-863f913e56ce}</Project>
-      <Name>Snippetica.CodeGeneration</Name>
-    </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="HtmlElements.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="CharacterSequences.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="LanguageDefinitions.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="ChangeLog.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="SnippetDirectories.xml">
-      <SubType>Designer</SubType>
-    </Content>
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

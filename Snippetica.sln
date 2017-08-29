@@ -11,13 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{BA91112D-6
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica", "source\Snippetica\Snippetica.csproj", "{D26EA838-9073-407E-A15A-112731027059}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "source\Tools\Common\Common.csproj", "{EA986E08-DD26-43EA-94F0-8D2F70D4A17F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.Common", "source\Snippetica.Common\Snippetica.Common.csproj", "{EA986E08-DD26-43EA-94F0-8D2F70D4A17F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generator", "source\Tools\Generator\Generator.csproj", "{F28D28EC-37E4-4857-B072-91A2D1FF8F60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnippetGenerator", "source\Tools\SnippetGenerator\SnippetGenerator.csproj", "{B53B29D0-8BB3-478D-AD94-863F913E56CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.CodeGeneration", "source\Snippetica.CodeGeneration\Snippetica.CodeGeneration.csproj", "{B53B29D0-8BB3-478D-AD94-863F913E56CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnippetChecker", "source\Tools\SnippetChecker\SnippetChecker.csproj", "{FBCD876B-5CDE-4C75-834C-685D33FB1725}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.Validations", "source\Tools\Snippetica.Validations\Snippetica.Validations.csproj", "{FBCD876B-5CDE-4C75-834C-685D33FB1725}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.VisualStudio", "source\Snippetica.VisualStudio\Snippetica.VisualStudio.csproj", "{C6E1B9F3-6AFA-4849-9CE1-E224EBB08AA4}"
 EndProject
@@ -36,11 +36,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.VisualStudio.Dev", "source\Snippetica.VisualStudio.Dev\Snippetica.VisualStudio.Dev.csproj", "{1D137DD7-218D-4DAC-AB1A-E4F3CE95D788}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.VisualStudioCode", "source\Snippetica.VisualStudioCode\Snippetica.VisualStudioCode.csproj", "{C5905263-795A-4B53-8645-4FC6D25D9E50}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Snippetica.VisualStudioCode", "source\Snippetica.VisualStudioCode\Snippetica.VisualStudioCode.shproj", "{849BCA71-BCB0-4CC5-A46C-F27C846AD843}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.VisualStudioCode.Dev", "source\Snippetica.VisualStudioCode.Dev\Snippetica.VisualStudioCode.Dev.csproj", "{8CC5EF61-036C-4A07-85F0-E30C05738EC1}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Snippetica.VisualStudioCode.Dev", "source\Snippetica.VisualStudioCode.Dev\Snippetica.VisualStudioCode.Dev.shproj", "{DDDAE79D-39A1-4D6E-83E9-E9758C632645}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.CodeGeneration.VisualStudioCode", "source\Snippetica.VisualStudioCode.CodeGeneration\Snippetica.CodeGeneration.VisualStudioCode.csproj", "{28F57403-5D16-4A70-B4B5-A750D35466A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.CodeGeneration.Markdown", "source\Snippetica.CodeGeneration.Markdown\Snippetica.CodeGeneration.Markdown.csproj", "{3011FAD5-89C1-4DB8-BA47-239023AF4CF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.CodeGeneration.VisualStudio", "source\Snippetica.VisualStudio.CodeGeneration\Snippetica.CodeGeneration.VisualStudio.csproj", "{8DCB0266-01BC-4F2F-B99F-B0000A4D8149}"
 EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		source\Snippetica.VisualStudioCode\Snippetica.VisualStudioCode.projitems*{849bca71-bcb0-4cc5-a46c-f27c846ad843}*SharedItemsImports = 13
+		source\Snippetica.VisualStudioCode.Dev\Snippetica.VisualStudioCode.Dev.projitems*{dddae79d-39a1-4d6e-83e9-e9758c632645}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -95,26 +105,30 @@ Global
 		{1D137DD7-218D-4DAC-AB1A-E4F3CE95D788}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1D137DD7-218D-4DAC-AB1A-E4F3CE95D788}.ReleaseVisualStudio|Any CPU.ActiveCfg = Release|Any CPU
 		{1D137DD7-218D-4DAC-AB1A-E4F3CE95D788}.ReleaseVisualStudio|Any CPU.Build.0 = Release|Any CPU
-		{C5905263-795A-4B53-8645-4FC6D25D9E50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C5905263-795A-4B53-8645-4FC6D25D9E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C5905263-795A-4B53-8645-4FC6D25D9E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C5905263-795A-4B53-8645-4FC6D25D9E50}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C5905263-795A-4B53-8645-4FC6D25D9E50}.ReleaseVisualStudio|Any CPU.ActiveCfg = Release|Any CPU
-		{C5905263-795A-4B53-8645-4FC6D25D9E50}.ReleaseVisualStudio|Any CPU.Build.0 = Release|Any CPU
-		{8CC5EF61-036C-4A07-85F0-E30C05738EC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8CC5EF61-036C-4A07-85F0-E30C05738EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8CC5EF61-036C-4A07-85F0-E30C05738EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8CC5EF61-036C-4A07-85F0-E30C05738EC1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8CC5EF61-036C-4A07-85F0-E30C05738EC1}.ReleaseVisualStudio|Any CPU.ActiveCfg = Release|Any CPU
-		{8CC5EF61-036C-4A07-85F0-E30C05738EC1}.ReleaseVisualStudio|Any CPU.Build.0 = Release|Any CPU
+		{28F57403-5D16-4A70-B4B5-A750D35466A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28F57403-5D16-4A70-B4B5-A750D35466A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28F57403-5D16-4A70-B4B5-A750D35466A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28F57403-5D16-4A70-B4B5-A750D35466A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28F57403-5D16-4A70-B4B5-A750D35466A4}.ReleaseVisualStudio|Any CPU.ActiveCfg = Release|Any CPU
+		{28F57403-5D16-4A70-B4B5-A750D35466A4}.ReleaseVisualStudio|Any CPU.Build.0 = Release|Any CPU
+		{3011FAD5-89C1-4DB8-BA47-239023AF4CF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3011FAD5-89C1-4DB8-BA47-239023AF4CF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3011FAD5-89C1-4DB8-BA47-239023AF4CF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3011FAD5-89C1-4DB8-BA47-239023AF4CF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3011FAD5-89C1-4DB8-BA47-239023AF4CF3}.ReleaseVisualStudio|Any CPU.ActiveCfg = Release|Any CPU
+		{3011FAD5-89C1-4DB8-BA47-239023AF4CF3}.ReleaseVisualStudio|Any CPU.Build.0 = Release|Any CPU
+		{8DCB0266-01BC-4F2F-B99F-B0000A4D8149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DCB0266-01BC-4F2F-B99F-B0000A4D8149}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DCB0266-01BC-4F2F-B99F-B0000A4D8149}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DCB0266-01BC-4F2F-B99F-B0000A4D8149}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DCB0266-01BC-4F2F-B99F-B0000A4D8149}.ReleaseVisualStudio|Any CPU.ActiveCfg = Release|Any CPU
+		{8DCB0266-01BC-4F2F-B99F-B0000A4D8149}.ReleaseVisualStudio|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{EA986E08-DD26-43EA-94F0-8D2F70D4A17F} = {98D4AD11-9461-4806-9EB3-B3D5A93DB7AF}
 		{F28D28EC-37E4-4857-B072-91A2D1FF8F60} = {98D4AD11-9461-4806-9EB3-B3D5A93DB7AF}
-		{B53B29D0-8BB3-478D-AD94-863F913E56CE} = {98D4AD11-9461-4806-9EB3-B3D5A93DB7AF}
 		{FBCD876B-5CDE-4C75-834C-685D33FB1725} = {98D4AD11-9461-4806-9EB3-B3D5A93DB7AF}
 		{5F21280B-2029-4D27-AEE6-C6E3E8C09C29} = {B408FEAA-24E9-488C-B384-6602BAE8DB38}
 		{CE18A42C-A7FD-4B6B-90FE-2F4510B7CB0E} = {B408FEAA-24E9-488C-B384-6602BAE8DB38}

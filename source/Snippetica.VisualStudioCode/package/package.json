@@ -1,0 +1,64 @@
+{
+  "name": "snippetica",
+  "publisher": "josefpihrt",
+  "displayName": "Snippetica",
+  "description": "A collection of snippets for C#, VB, C++, HTML and XML.",
+  "icon": "images/icon.png",
+  "version": "0.5.2",
+  "author": "Josef Pihrt",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "homepage": "https://github.com/JosefPihrt/Snippetica",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JosefPihrt/Snippetica.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JosefPihrt/Snippetica/issues"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "Snippet",
+    "Snippets",
+    "C#",
+    "CSharp",
+    "VB",
+    "VisualBasic",
+    "HTML",
+    "XML"
+  ],
+  "contributors": [
+    {
+      "name": "Josef Pihrt",
+      "url": "http://pihrt.net"
+    }
+  ],
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "csharp",
+        "path": "./snippets/csharp.json"
+      },
+      {
+        "language": "vb",
+        "path": "./snippets/vb.json"
+      },
+      {
+        "language": "cpp",
+        "path": "./snippets/cpp.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/html.json"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/xml.json"
+      }
+    ]
+  }
+}

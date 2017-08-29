@@ -3,9 +3,12 @@
 using System;
 using System.IO;
 using System.Linq;
-using Pihrtsoft.Snippets.CodeGeneration.Markdown;
+using Snippetica.CodeGeneration.Markdown;
+using Snippetica.CodeGeneration.VisualStudio;
+using Snippetica.CodeGeneration.VisualStudioCode;
+using Snippetica.Validations;
 
-namespace Pihrtsoft.Snippets.CodeGeneration
+namespace Snippetica.CodeGeneration
 {
     internal static class Program
     {
@@ -31,33 +34,33 @@ namespace Pihrtsoft.Snippets.CodeGeneration
             XamlSnippetGenerator.GetResult(snippetDirectories).Save();
             XmlSnippetGenerator.GetResult(snippetDirectories).Save();
 
-            VisualStudioCodePackageGenerator.GenerateSnippets(snippetDirectories, languageDefinitions, settings.VisualStudioCodeProjectPath, f => !f.HasTag(KnownTags.Dev));
-            VisualStudioCodePackageGenerator.GenerateSnippets(snippetDirectories, languageDefinitions, settings.VisualStudioCodeProjectPath + ".Dev", f => f.HasTag(KnownTags.Dev));
+            VisualStudioCodeSnippetGenerator.GenerateSnippets(snippetDirectories, languageDefinitions, settings.VisualStudioCodeProjectPath, f => !f.HasTag(KnownTags.Dev));
+            VisualStudioCodeSnippetGenerator.GenerateSnippets(snippetDirectories, languageDefinitions, settings.VisualStudioCodeProjectPath + ".Dev", f => f.HasTag(KnownTags.Dev));
 
             SnippetDirectory[] releaseDirectories = snippetDirectories
                 .Where(f => f.HasTag(KnownTags.Release) && !f.HasTag(KnownTags.Dev))
                 .ToArray();
 
-            MarkdownGenerator.WriteSolutionReadMe(releaseDirectories, settings);
+            MarkdownWriter.WriteSolutionReadMe(releaseDirectories, settings);
 
-            MarkdownGenerator.WriteProjectReadMe(releaseDirectories, Path.GetFullPath(settings.ProjectPath));
+            MarkdownWriter.WriteProjectReadMe(releaseDirectories, Path.GetFullPath(settings.ProjectPath));
 
-            MarkdownGenerator.WriteDirectoryReadMe(
+            MarkdownWriter.WriteDirectoryReadMe(
                 snippetDirectories
                     .Where(f => f.HasAnyTag(KnownTags.Release, KnownTags.Dev) && !f.HasAnyTag(KnownTags.AutoGenerationSource, KnownTags.AutoGenerationDestination))
                     .ToArray(),
                 characterSequences,
                 settings);
 
-            SnippetPackageGenerator.GenerateVisualStudioPackageFiles(
-                releaseDirectories: releaseDirectories,
+            VisualStudioPackageGenerator.GenerateVisualStudioPackageFiles(
+                directories: releaseDirectories,
                 characterSequences: characterSequences,
                 settings: settings);
 
             settings.ExtensionProjectName += ".Dev";
 
-            SnippetPackageGenerator.GenerateVisualStudioPackageFiles(
-                releaseDirectories: snippetDirectories
+            VisualStudioPackageGenerator.GenerateVisualStudioPackageFiles(
+                directories: snippetDirectories
                     .Where(f => f.HasTags(KnownTags.Release, KnownTags.Dev))
                     .ToArray(),
                 characterSequences: null,

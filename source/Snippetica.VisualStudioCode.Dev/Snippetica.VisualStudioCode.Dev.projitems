@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>dddae79d-39a1-4d6e-83e9-e9758c632645</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Snippetica.VisualStudioCode.Dev</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)package\snippets\csharp.json" />
+    <Content Include="$(MSBuildThisFileDirectory)package\snippets\html.json" />
+    <Content Include="$(MSBuildThisFileDirectory)package\snippets\vb.json" />
+    <Content Include="$(MSBuildThisFileDirectory)package\snippets\xml.json" />
+  </ItemGroup>
+</Project>
