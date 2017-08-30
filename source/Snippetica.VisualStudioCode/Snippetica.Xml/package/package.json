@@ -1,0 +1,37 @@
+﻿{
+  "name": "snippetica-xml",
+  "publisher": "josefpihrt",
+  "displayName": "Snippetica for XML",
+  "description": "A collection of snippets for XML.",
+  "icon": "images/icon.png",
+  "version": "0.5.2",
+  "author": "Josef Pihrt",
+  "license": "SEE LICENSE IN LICENSE.TXT",
+  "homepage": "https://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudioCode/Snippetica.Xml/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JosefPihrt/Snippetica.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JosefPihrt/Snippetica/issues"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "Snippet",
+    "Snippets",
+    "XML"
+  ],
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "xml",
+        "path": "./snippets/xml.json"
+      }
+    ]
+  }
+}

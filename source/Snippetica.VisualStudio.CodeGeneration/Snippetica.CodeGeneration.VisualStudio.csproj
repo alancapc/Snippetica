@@ -64,6 +64,10 @@
       <Project>{EA986E08-DD26-43EA-94F0-8D2F70D4A17F}</Project>
       <Name>Snippetica.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Snippetica.Validations\Snippetica.Validations.csproj">
+      <Project>{FBCD876B-5CDE-4C75-834C-685D33FB1725}</Project>
+      <Name>Snippetica.Validations</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

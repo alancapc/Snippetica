@@ -3,6 +3,7 @@
 using System;
 using System.Diagnostics;
 using Pihrtsoft.Snippets;
+using System.Collections.Generic;
 
 namespace Snippetica
 {
@@ -89,6 +90,67 @@ namespace Snippetica
                     return "CSS";
                 default:
                     throw new ArgumentException(language.ToString(), nameof(language));
+            }
+        }
+
+        public static IEnumerable<string> GetKeywords(Language language)
+        {
+            switch (language)
+            {
+                case Language.VisualBasic:
+                    {
+                        yield return "VisualBasic";
+                        yield return "VB";
+                        break;
+                    }
+                case Language.CSharp:
+                    {
+                        yield return "C#";
+                        yield return "CSharp";
+                        break;
+                    }
+                case Language.CPlusPlus:
+                    {
+                        yield return "C++";
+                        yield return "Cpp";
+                        yield return "CPlusPlus";
+                        break;
+                    }
+                case Language.Xml:
+                    {
+                        yield return "XML";
+                        break;
+                    }
+                case Language.Xaml:
+                    {
+                        yield return "XAML";
+                        break;
+                    }
+                case Language.JavaScript:
+                    {
+                        yield return "JavaScript";
+                        yield return "JS";
+                        break;
+                    }
+                case Language.Sql:
+                    {
+                        yield return "SQL";
+                        break;
+                    }
+                case Language.Html:
+                    {
+                        yield return "HTML";
+                        break;
+                    }
+                case Language.Css:
+                    {
+                        yield return "CSS";
+                        break;
+                    }
+                default:
+                    {
+                        throw new ArgumentException(language.ToString(), nameof(language));
+                    }
             }
         }
     }

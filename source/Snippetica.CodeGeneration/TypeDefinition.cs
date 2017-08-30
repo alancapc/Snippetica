@@ -8,6 +8,8 @@ namespace Snippetica.CodeGeneration
     [DebuggerDisplay("{Name,nq}")]
     public  class TypeDefinition
     {
+        public static TypeDefinition Default { get; } = new TypeDefinition(null, null, null, "a", null, null, null, new string[0]);
+
         public TypeDefinition(
             string name,
             string title,
@@ -29,12 +31,19 @@ namespace Snippetica.CodeGeneration
         }
 
         public string Name { get; }
+
         public string Title { get; }
+
         public string Keyword { get; }
+
         public string Shortcut { get; }
+
         public string DefaultValue { get; }
+
         public string DefaultIdentifier { get; }
+
         public string Namespace { get; }
+
         public ReadOnlyCollection<string> Tags { get; }
 
         public bool HasTag(string tag)

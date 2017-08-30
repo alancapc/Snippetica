@@ -8,6 +8,7 @@ using System.Xml.Linq;
 using Pihrtsoft.Snippets;
 using Snippetica.CodeGeneration.Markdown;
 using Snippetica.IO;
+using Snippetica.Validations;
 
 namespace Snippetica.CodeGeneration.VisualStudio
 {
@@ -26,7 +27,7 @@ namespace Snippetica.CodeGeneration.VisualStudio
 
             MarkdownWriter.WriteProjectReadMe(directories, settings.ExtensionProjectPath);
 
-            MarkdownWriter.WriteDirectoryReadMe(directories, characterSequences, settings);
+            MarkdownWriter.WriteDirectoryReadMe(directories, characterSequences);
 
             IOUtility.WriteAllText(
                 Path.Combine(settings.ExtensionProjectPath, settings.GalleryDescriptionFileName),
@@ -59,17 +60,21 @@ namespace Snippetica.CodeGeneration.VisualStudio
 
                 Directory.CreateDirectory(directoryPath);
 
-                Snippet[] snippets = snippetDirectory
-                    .EnumerateSnippets()
-                    .Select(f => f.RemoveTag(KnownTags.ExcludeFromVisualStudioCode))
-                    .ToArray();
+                var snippets = new List<Snippet>();
 
-                foreach (IGrouping<string, Snippet> grouping in snippets
-                    .GroupBy(f => Path.GetFileNameWithoutExtension(f.FilePath))
-                    .Where(f => f.Count() > 1))
+                foreach (Snippet snippet in snippetDirectory.EnumerateSnippets())
                 {
-                    throw new Exception($"multiple files with same name '{grouping.Key}'");
+                    snippet.RemoveTag(KnownTags.ExcludeFromVisualStudioCode);
+
+                    string keyword = snippet.Keywords.FirstOrDefault(f => f.StartsWith(KnownTags.MetaShortcut));
+
+                    if (keyword != null)
+                        snippet.Keywords.Remove(keyword);
+
+                    snippets.Add(snippet);
                 }
+
+                SnippetChecker.ThrowOnDuplicateFileName(snippets);
 
                 IOUtility.SaveSnippets(snippets, directoryPath);
 

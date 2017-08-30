@@ -1,6 +1,5 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -21,13 +20,13 @@ namespace Snippetica.CodeGeneration
 
         public string DestinationPath { get; }
 
-        public static IEnumerable<SnippetGeneratorInfo> CreateMany(SnippetDirectory[] snippetDirectories, SnippetGenerator[] snippetGenerators, Func<SnippetDirectory, bool> predicate)
+        public static IEnumerable<SnippetGeneratorInfo> CreateMany(SnippetDirectory[] snippetDirectories, SnippetGenerator[] snippetGenerators)
         {
             foreach (SnippetGenerator snippetGenerator in snippetGenerators)
             {
                 SnippetGeneratorInfo info = Create(
                     snippetDirectories
-                        .Where(f => f.Language == snippetGenerator.LanguageDefinition.Language && predicate(f))
+                        .Where(f => f.Language == snippetGenerator.LanguageDefinition.Language)
                         .ToArray(),
                     snippetGenerator);
 
@@ -42,7 +41,7 @@ namespace Snippetica.CodeGeneration
                 return null;
 
             string source = snippetDirectories
-                .Where(f => f.HasTag(KnownTags.AutoGenerationSource))
+                .Where(f => f.IsAutoGenerationSource)
                 .Select(f => f.Path)
                 .FirstOrDefault();
 
@@ -50,7 +49,7 @@ namespace Snippetica.CodeGeneration
                 return null;
 
             string destination = snippetDirectories
-                .Where(f => f.HasTag(KnownTags.AutoGenerationDestination))
+                .Where(f => f.IsAutoGenerationDestination)
                 .Select(f => f.Path)
                 .FirstOrDefault();
 

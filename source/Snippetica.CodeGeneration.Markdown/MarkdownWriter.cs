@@ -21,14 +21,17 @@ namespace Snippetica.CodeGeneration.Markdown
                 MarkdownGenerator.GenerateProjectReadMe(snippetDirectories));
         }
 
-        public static void WriteDirectoryReadMe(SnippetDirectory[] snippetDirectories, CharacterSequence[] characterSequences, GeneralSettings settings)
+        public static void WriteDirectoryReadMe(SnippetDirectory[] snippetDirectories, CharacterSequence[] characterSequences)
         {
             foreach (SnippetDirectory snippetDirectory in snippetDirectories)
-            {
-                IOUtility.WriteAllText(
-                    Path.Combine(snippetDirectory.Path, "README.md"),
-                    MarkdownGenerator.GenerateDirectoryReadme(snippetDirectory, characterSequences, settings));
-            }
+                WriteDirectoryReadMe(snippetDirectory, characterSequences);
+        }
+
+        public static void WriteDirectoryReadMe(SnippetDirectory snippetDirectory, CharacterSequence[] characterSequences)
+        {
+            IOUtility.WriteAllText(
+                Path.Combine(snippetDirectory.Path, "README.md"),
+                MarkdownGenerator.GenerateDirectoryReadme(snippetDirectory, characterSequences));
         }
     }
 }

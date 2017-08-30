@@ -13,7 +13,7 @@ namespace Snippetica.IO
     {
         private static readonly StringComparer _stringComparer = StringComparer.OrdinalIgnoreCase;
 
-        public static void SaveSnippets(Snippet[] snippets, string directoryPath)
+        public static void SaveSnippets(ICollection<Snippet> snippets, string directoryPath)
         {
             foreach (Snippet snippet in snippets)
                 snippet.FilePath = Path.Combine(directoryPath, Path.GetFileName(snippet.FilePath));

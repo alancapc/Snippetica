@@ -2,11 +2,17 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Pihrtsoft.Snippets;
 using Snippetica.CodeGeneration.Commands;
+using Snippetica.CodeGeneration.Json;
+using Snippetica.CodeGeneration.Json.Package;
+using Snippetica.CodeGeneration.Markdown;
 using Snippetica.IO;
+using Snippetica.Validations;
 
 namespace Snippetica.CodeGeneration.VisualStudioCode
 {
@@ -20,40 +26,133 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
         public static void GenerateSnippets(
             SnippetDirectory[] snippetDirectories,
             LanguageDefinition[] languageDefinitions,
-            string projectPath,
-            Func<SnippetDirectory, bool> predicate)
+            CharacterSequence[] characterSequences,
+            string projectPath)
         {
             var snippets = new List<Snippet>();
 
             VisualStudioCodeSnippetGenerator[] generators = languageDefinitions.Select(f => new VisualStudioCodeSnippetGenerator(f)).ToArray();
 
-            foreach (SnippetGeneratorResult result in SnippetGenerator.GetResults(snippetDirectories, generators, predicate))
+            foreach (SnippetGeneratorResult result in GetResults(snippetDirectories, generators))
                 snippets.AddRange(result.Snippets);
 
             snippets.AddRange(HtmlSnippetGenerator.GetResult(snippetDirectories).Snippets);
             snippets.AddRange(XmlSnippetGenerator.GetResult(snippetDirectories).Snippets);
 
-            snippets = snippets
-                .Where(f => !f.HasTag(KnownTags.ExcludeFromVisualStudioCode))
-                .Select(f => f.RemoveShortcutFromTitle())
-                .ToList();
+            foreach (SnippetDirectory snippetDirectory in snippetDirectories
+                .Where(f => f.IsRelease && !f.IsAutoGeneration && f.Language != Language.Xaml))
+            {
+                snippets.AddRange(snippetDirectory.EnumerateSnippets(SearchOption.TopDirectoryOnly));
+            }
 
-            foreach (Snippet snippet in snippets)
-                snippet.RemoveMetaKeywords();
+            snippets = ProcessSnippets(snippets).ToList();
 
             foreach (IGrouping<Language, Snippet> grouping in snippets.GroupBy(f => f.Language))
             {
-                Console.WriteLine($"{grouping.Key}: {grouping.Count()}");
+                SnippetChecker.ThrowOnDuplicateFileName(grouping);
+                SnippetChecker.ThrowOnDuplicateShortcut(grouping);
 
-                string fileName = Path.ChangeExtension(LanguageHelper.GetVisualStudioCodeLanguageIdentifier(grouping.Key), "json");
+                Language language = grouping.Key;
 
-                string filePath = Path.Combine(projectPath, @"package\snippets", fileName);
+                Console.WriteLine($"{language}: {grouping.Count()}");
 
-                string content = JsonUtility.ToJson(grouping);
+                string languageId = LanguageHelper.GetVisualStudioCodeLanguageIdentifier(language);
 
-                IOUtility.WriteAllText(filePath, content);
+                string fileName = Path.ChangeExtension(languageId, "json");
 
-                IOUtility.SaveSnippets(grouping.ToArray(), Path.Combine(projectPath, $"Snippetica.{grouping.Key}"));
+                string directoryName = $"Snippetica.{language}";
+                string directoryPath = Path.Combine(projectPath, directoryName);
+
+                IOUtility.WriteAllText(
+                    Path.Combine(directoryPath, @"package\snippets", fileName),
+                    JsonUtility.ToJsonText(grouping));
+
+                IOUtility.SaveSnippets(grouping.ToArray(), directoryPath);
+
+                var info = GetDefaultPackageInfo();
+                info.Name += "-" + languageId;
+                info.DisplayName += " for " + LanguageHelper.GetLanguageTitle(language);
+                info.Description += LanguageHelper.GetLanguageTitle(language) + ".";
+                info.Homepage += $"/{directoryName}/README.md";
+                info.Keywords.AddRange(LanguageHelper.GetKeywords(language));
+                info.Snippets.Add(new SnippetInfo() { Language = languageId, Path = $"./snippets/{languageId}.json" });
+
+                IOUtility.WriteAllText(Path.Combine(directoryPath, "package", "package.json"), info.ToString());
+
+                var snippetDirectory = new SnippetDirectory(directoryPath, language);
+
+                MarkdownWriter.WriteDirectoryReadMe(snippetDirectory, characterSequences);
+            }
+        }
+
+        private static PackageInfo GetDefaultPackageInfo()
+        {
+            var info = new PackageInfo()
+            {
+                Name = "snippetica",
+                Publisher = "josefpihrt",
+                DisplayName = "Snippetica",
+                Description = "A collection of snippets for ",
+                Icon = "images/icon.png",
+                Version = "0.5.2",
+                Author = "Josef Pihrt",
+                License = "SEE LICENSE IN LICENSE.TXT",
+                Homepage = "https://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudioCode",
+                Repository = new RepositoryInfo()
+                {
+                    Type = "git",
+                    Url = "https://github.com/JosefPihrt/Snippetica.git"
+                },
+                Bugs = new BugInfo() { Url = "https://github.com/JosefPihrt/Snippetica/issues" },
+                EngineVersion = "^1.0.0"
+            };
+
+            info.Categories.Add("Snippets");
+            info.Keywords.Add("Snippet");
+            info.Keywords.Add("Snippets");
+
+            return info;
+        }
+
+        private static IEnumerable<Snippet> ProcessSnippets(IEnumerable<Snippet> snippets)
+        {
+            foreach (Snippet snippet in snippets)
+            {
+                if (snippet.HasTag(KnownTags.ExcludeFromVisualStudioCode))
+                    continue;
+
+                if (snippet.HasTag(KnownTags.TitleStartsWithShortcut))
+                {
+                    Debug.WriteLine(snippet.Title);
+
+                    var shortcut = Regex.Match(snippet.Title, @"^\S+\s+").Value;
+
+                    snippet.Title = snippet.Title.Substring(shortcut.Length);
+                    snippet.Shortcut += "_" + shortcut.TrimEnd();
+
+                    snippet.RemoveTag(KnownTags.TitleStartsWithShortcut);
+                }
+
+                if (snippet.HasTag(KnownTags.NonUniqueShortcut))
+                {
+                    var keyword = snippet.Keywords.FirstOrDefault(f => f.StartsWith(KnownTags.MetaShortcut));
+
+                    if (keyword != null)
+                    {
+                        var shortcutSuffix = keyword.Substring(KnownTags.MetaShortcut.Length);
+
+                        if (snippet.Shortcut.Last() != '_')
+                            snippet.Shortcut += "_";
+
+                        snippet.Shortcut += shortcutSuffix;
+
+                        snippet.RemoveTag(KnownTags.NonUniqueShortcut);
+
+                        snippet.Keywords.Remove(keyword);
+                    }
+                }
+
+                yield return snippet;
             }
         }
 

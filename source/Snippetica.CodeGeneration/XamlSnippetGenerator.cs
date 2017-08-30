@@ -15,8 +15,8 @@ namespace Snippetica.CodeGeneration
             IEnumerable<SnippetDirectory> directories = snippetDirectories
                 .Where(f => f.Language == Language.Xaml);
 
-            string sourceDirPath = directories.First(f => f.HasTag(KnownTags.AutoGenerationSource)).Path;
-            string destinationDirPath = directories.First(f => f.HasTag(KnownTags.AutoGenerationDestination)).Path;
+            string sourceDirPath = directories.First(f => f.IsAutoGenerationSource).Path;
+            string destinationDirPath = directories.First(f => f.IsAutoGenerationDestination).Path;
 
             var snippets = new List<Snippet>();
 

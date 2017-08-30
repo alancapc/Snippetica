@@ -20,9 +20,11 @@ namespace Snippetica.CodeGeneration.Commands
 
         protected override void Execute(ExecutionContext context, Snippet snippet)
         {
-            string prefix = (Type != null) ? Type.Shortcut : "a";
+            if (Type == null)
+                return;
 
-            snippet.PrefixTitle($"{prefix} ");
+            snippet.PrefixTitle($"{Type.Shortcut} ");
+            snippet.AddTag(KnownTags.TitleStartsWithShortcut);
         }
     }
 }

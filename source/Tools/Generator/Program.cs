@@ -24,22 +24,24 @@ namespace Snippetica.CodeGeneration
 
             CharacterSequence.SerializeToXml(Path.Combine(settings.ExtensionProjectPath, "CharacterSequences.xml"), characterSequences);
 
-            foreach (SnippetGeneratorResult result in SnippetGenerator.GetResults(snippetDirectories, languageDefinitions.Select(f => new VisualStudioSnippetGenerator(f)).ToArray(), f => f.HasTag(KnownTags.Dev)))
+            SnippetDirectory[] nonDevDirectories = snippetDirectories.Where(f => !f.IsDev).ToArray();
+            SnippetDirectory[] devDirectories = snippetDirectories.Where(f => f.IsDev).ToArray();
+
+            foreach (SnippetGeneratorResult result in SnippetGenerator.GetResults(devDirectories, languageDefinitions.Select(f => new VisualStudioSnippetGenerator(f)).ToArray()))
                 result.Save();
 
-            foreach (SnippetGeneratorResult result in SnippetGenerator.GetResults(snippetDirectories, languageDefinitions.Select(f => new VisualStudioSnippetGenerator(f)).ToArray(), f => !f.HasTag(KnownTags.Dev)))
+            foreach (SnippetGeneratorResult result in SnippetGenerator.GetResults(nonDevDirectories, languageDefinitions.Select(f => new VisualStudioSnippetGenerator(f)).ToArray()))
                 result.Save();
 
             HtmlSnippetGenerator.GetResult(snippetDirectories).Save();
             XamlSnippetGenerator.GetResult(snippetDirectories).Save();
             XmlSnippetGenerator.GetResult(snippetDirectories).Save();
 
-            VisualStudioCodeSnippetGenerator.GenerateSnippets(snippetDirectories, languageDefinitions, settings.VisualStudioCodeProjectPath, f => !f.HasTag(KnownTags.Dev));
-            VisualStudioCodeSnippetGenerator.GenerateSnippets(snippetDirectories, languageDefinitions, settings.VisualStudioCodeProjectPath + ".Dev", f => f.HasTag(KnownTags.Dev));
 
-            SnippetDirectory[] releaseDirectories = snippetDirectories
-                .Where(f => f.HasTag(KnownTags.Release) && !f.HasTag(KnownTags.Dev))
-                .ToArray();
+            VisualStudioCodeSnippetGenerator.GenerateSnippets(nonDevDirectories, languageDefinitions, characterSequences, settings.VisualStudioCodeProjectPath);
+            VisualStudioCodeSnippetGenerator.GenerateSnippets(devDirectories, languageDefinitions, null, settings.VisualStudioCodeProjectPath + ".Dev");
+
+            SnippetDirectory[] releaseDirectories = snippetDirectories.Where(f => f.IsRelease && !f.IsDev).ToArray();
 
             MarkdownWriter.WriteSolutionReadMe(releaseDirectories, settings);
 
@@ -47,10 +49,9 @@ namespace Snippetica.CodeGeneration
 
             MarkdownWriter.WriteDirectoryReadMe(
                 snippetDirectories
-                    .Where(f => f.HasAnyTag(KnownTags.Release, KnownTags.Dev) && !f.HasAnyTag(KnownTags.AutoGenerationSource, KnownTags.AutoGenerationDestination))
+                    .Where(f => f.HasAnyTag(KnownTags.Release, KnownTags.Dev) && !f.IsAutoGeneration)
                     .ToArray(),
-                characterSequences,
-                settings);
+                characterSequences);
 
             VisualStudioPackageGenerator.GenerateVisualStudioPackageFiles(
                 directories: releaseDirectories,

@@ -7,6 +7,8 @@ namespace Snippetica.CodeGeneration
 {
     public class GeneralSettings
     {
+        public static GeneralSettings Default { get; } = new GeneralSettings() { SolutionDirectoryPath = @"..\..\..\..\.." };
+
         public GeneralSettings()
         {
             ProjectTitle = "Snippetica";

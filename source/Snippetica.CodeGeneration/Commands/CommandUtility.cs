@@ -26,7 +26,7 @@ namespace Snippetica.CodeGeneration.Commands
 
                 if (!flg)
                 {
-                    yield return new TypeCommand(null);
+                    yield return new TypeCommand(TypeDefinition.Default);
                     flg = true;
                 }
             }

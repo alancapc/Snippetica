@@ -31,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Pihrtsoft.Snippets, Version=1.3.0.0, Culture=neutral, PublicKeyToken=47d18de6ae9b6208, processorArchitecture=MSIL">
       <HintPath>..\..\packages\SnippetManager.1.3.0\lib\net40\Pihrtsoft.Snippets.dll</HintPath>
     </Reference>
@@ -47,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="JsonUtility.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VisualStudioCodeSnippetGenerator.cs" />
   </ItemGroup>
@@ -55,6 +51,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Snippetica.CodeGeneration.Json\Snippetica.CodeGeneration.Json.csproj">
+      <Project>{BCF0125E-EFF9-4D3A-9C64-AB630BDA2F29}</Project>
+      <Name>Snippetica.CodeGeneration.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Snippetica.CodeGeneration.Markdown\Snippetica.CodeGeneration.Markdown.csproj">
+      <Project>{3011FAD5-89C1-4DB8-BA47-239023AF4CF3}</Project>
+      <Name>Snippetica.CodeGeneration.Markdown</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Snippetica.Common\Snippetica.Common.csproj">
       <Project>{EA986E08-DD26-43EA-94F0-8D2F70D4A17F}</Project>
       <Name>Snippetica.Common</Name>
@@ -62,6 +66,10 @@
     <ProjectReference Include="..\Snippetica.CodeGeneration\Snippetica.CodeGeneration.csproj">
       <Project>{b53b29d0-8bb3-478d-ad94-863f913e56ce}</Project>
       <Name>Snippetica.CodeGeneration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Snippetica.Validations\Snippetica.Validations.csproj">
+      <Project>{FBCD876B-5CDE-4C75-834C-685D33FB1725}</Project>
+      <Name>Snippetica.Validations</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -88,17 +88,37 @@ namespace Snippetica
         {
             return Document.ReadRecords(url)
                 .Where(f => !f.HasTag(KnownTags.Disabled))
-                .Select(record => SnippetDirectoryMapper.MapFromRecord(record));
+                .Select(SnippetDirectoryMapper.MapFromRecord);
         }
 
-        public IEnumerable<Snippet> EnumerateSnippets()
+        public IEnumerable<Snippet> EnumerateSnippets(SearchOption searchOption = SearchOption.AllDirectories)
         {
-            return SnippetSerializer.Deserialize(Path, SearchOption.AllDirectories);
+            return SnippetSerializer.Deserialize(Path, searchOption);
         }
 
-        public int SnippetCount
+        public bool IsRelease
         {
-            get { return EnumerateSnippets().Count(); }
+            get { return HasTag(KnownTags.Release); }
+        }
+
+        public bool IsDev
+        {
+            get { return HasTag(KnownTags.Dev); }
+        }
+
+        public bool IsAutoGeneration
+        {
+            get { return HasAnyTag(KnownTags.AutoGenerationSource, KnownTags.AutoGenerationDestination); }
+        }
+
+        public bool IsAutoGenerationSource
+        {
+            get { return HasTag(KnownTags.AutoGenerationSource); }
+        }
+
+        public bool IsAutoGenerationDestination
+        {
+            get { return HasTag(KnownTags.AutoGenerationDestination); }
         }
     }
 }

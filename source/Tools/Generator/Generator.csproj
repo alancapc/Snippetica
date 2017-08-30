@@ -75,7 +75,7 @@
       <Project>{ea986e08-dd26-43ea-94f0-8d2f70d4a17f}</Project>
       <Name>Snippetica.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Snippetica.Validations\Snippetica.Validations.csproj">
+    <ProjectReference Include="..\..\Snippetica.Validations\Snippetica.Validations.csproj">
       <Project>{fbcd876b-5cde-4c75-834c-685d33fb1725}</Project>
       <Name>Snippetica.Validations</Name>
     </ProjectReference>

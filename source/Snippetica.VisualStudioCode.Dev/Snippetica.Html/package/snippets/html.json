@@ -1,0 +1,61 @@
+﻿{
+  "div with class attribute": {
+    "prefix": "divcs",
+    "body": [
+      "<div class=\"${1:class}\">${0}</div>"
+    ],
+    "description": "div with class attribute"
+  },
+  "div with id attribute": {
+    "prefix": "divid",
+    "body": [
+      "<div id=\"${1:id}\">${0}</div>"
+    ],
+    "description": "div with id attribute"
+  },
+  "meta viewport": {
+    "prefix": "metavp",
+    "body": [
+      "<meta name=\"viewport\" content=\"width=device-width\" />${0}"
+    ],
+    "description": "meta viewport"
+  },
+  "span with class attribute": {
+    "prefix": "spancs",
+    "body": [
+      "<span class=\"${1:class}\">${0}</span>"
+    ],
+    "description": "span with class attribute"
+  },
+  "span with id attribute": {
+    "prefix": "spanid",
+    "body": [
+      "<span id=\"${1:id}\">${0}</span>"
+    ],
+    "description": "span with id attribute"
+  },
+  "table with sections": {
+    "prefix": "table2",
+    "body": [
+      "<table>",
+      "    <caption>${0}</caption>",
+      "    <thead>",
+      "        <tr>",
+      "            <th></th>",
+      "        </tr>",
+      "    </thead>",
+      "    <tfoot>",
+      "        <tr>",
+      "            <td></td>",
+      "        </tr>",
+      "    </tfoot>",
+      "    <tbody>",
+      "        <tr>",
+      "            <td></td>",
+      "        </tr>",
+      "    </tbody>",
+      "</table>"
+    ],
+    "description": "table with sections"
+  }
+}

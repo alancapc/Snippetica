@@ -37,10 +37,12 @@ namespace Snippetica.CodeGeneration.Commands
             LanguageDefinition language = ((LanguageExecutionContext)context).Language;
 
             snippet.AddTag(KnownTags.NonUniqueShortcut);
-            snippet.AddTag(KnownTags.TitleStartsWithShortcut);
 
-            if (Type == null)
+            if (Type == null
+                || ReferenceEquals(Type, TypeDefinition.Default))
+            {
                 return;
+            }
 
             if (snippet.HasTag(KnownTags.TryParse) && !Tags.Contains(KnownTags.TryParse))
             {

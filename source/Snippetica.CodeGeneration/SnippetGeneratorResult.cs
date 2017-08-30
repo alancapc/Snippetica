@@ -9,7 +9,9 @@ namespace Snippetica.CodeGeneration
 {
     public class SnippetGeneratorResult
     {
-        public SnippetGeneratorResult(IEnumerable<Snippet> snippets, string destinationDirectoryPath)
+        public static SnippetGeneratorResult Empty { get; } = new SnippetGeneratorResult(new Snippet[0], "");
+
+    public SnippetGeneratorResult(IEnumerable<Snippet> snippets, string destinationDirectoryPath)
         {
             Snippets = snippets;
             DestinationDirectoryPath = destinationDirectoryPath;
@@ -21,7 +23,8 @@ namespace Snippetica.CodeGeneration
 
         public void Save()
         {
-            IOUtility.SaveSnippets(Snippets.ToArray(), DestinationDirectoryPath);
+            if (!string.IsNullOrEmpty(DestinationDirectoryPath))
+                IOUtility.SaveSnippets(Snippets.ToArray(), DestinationDirectoryPath);
         }
     }
 }

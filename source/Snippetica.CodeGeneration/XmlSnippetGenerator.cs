@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -24,7 +25,10 @@ namespace Snippetica.CodeGeneration
 
         public static SnippetGeneratorResult GetResult(SnippetDirectory[] snippetDirectories)
         {
-            string destinationDirPath = snippetDirectories.First(f => f.Language == Language.Xml && f.HasTag(KnownTags.AutoGenerationDestination)).Path;
+            string destinationDirPath = Array.Find(snippetDirectories, f => f.Language == Language.Xml && f.IsAutoGenerationDestination)?.Path;
+
+            if (destinationDirPath == null)
+                return SnippetGeneratorResult.Empty;
 
             Snippet[] snippets = GenerateSnippets(destinationDirPath, Language.Xml).ToArray();
 

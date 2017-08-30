@@ -50,14 +50,14 @@ namespace Snippetica.CodeGeneration.Markdown
 
                 foreach (SnippetDirectory snippetDirectory in snippetDirectories)
                 {
-                    sw.WriteLine($"* [{snippetDirectory.DirectoryName}]({snippetDirectory.DirectoryName}/README.md) ({snippetDirectory.SnippetCount} snippets)");
+                    sw.WriteLine($"* [{snippetDirectory.DirectoryName}]({snippetDirectory.DirectoryName}/README.md) ({snippetDirectory.EnumerateSnippets().Count()} snippets)");
                 }
 
                 return sw.ToString();
             }
         }
 
-        public static string GenerateDirectoryReadme(SnippetDirectory snippetDirectory, CharacterSequence[] characterSequences, GeneralSettings settings   )
+        public static string GenerateDirectoryReadme(SnippetDirectory snippetDirectory, CharacterSequence[] characterSequences)
         {
             using (var sw = new StringWriter())
             {
@@ -67,7 +67,7 @@ namespace Snippetica.CodeGeneration.Markdown
                 sw.WriteLine();
 
                 characterSequences = characterSequences?
-                        .Where(f => f.Languages.Select(language => settings.DirectoryNamePrefix + language.ToString())
+                        .Where(f => f.Languages.Select(language => GeneralSettings.Default.DirectoryNamePrefix + language.ToString())
                         .Contains(snippetDirectory.DirectoryName)).ToArray();
 
                 if (characterSequences?.Length > 0)
@@ -92,7 +92,7 @@ namespace Snippetica.CodeGeneration.Markdown
                     sw.WriteLine();
                 }
 
-                if (!snippetDirectory.HasTag(KnownTags.Dev))
+                if (!snippetDirectory.IsDev)
                 {
                     sw.WriteLine($"* [full list of snippets](http://pihrt.net/Snippetica/Snippets?Language={snippetDirectory.Language})");
                     sw.WriteLine();

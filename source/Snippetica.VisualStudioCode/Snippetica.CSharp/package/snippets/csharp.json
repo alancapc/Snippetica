@@ -1,0 +1,2092 @@
+﻿{
+  "array variable": {
+    "prefix": "va",
+    "body": [
+      "var ${1:items} = new ${2:T}[${3:0}];${0}"
+    ],
+    "description": "array variable declaration"
+  },
+  "array variable (with initializer)": {
+    "prefix": "va_",
+    "body": [
+      "var ${1:items} = new ${2:T}[] { ${3:null} };${0}"
+    ],
+    "description": "array variable declaration (with initializer)"
+  },
+  "public auto property": {
+    "prefix": "p",
+    "body": [
+      "public ${1:T} ${2:PropertyName} { get; set; }${0}"
+    ],
+    "description": "public auto-implemented property declaration"
+  },
+  "internal auto property": {
+    "prefix": "ip",
+    "body": [
+      "internal ${1:T} ${2:PropertyName} { get; set; }${0}"
+    ],
+    "description": "internal auto-implemented property declaration"
+  },
+  "private auto property": {
+    "prefix": "pp",
+    "body": [
+      "private ${1:T} ${2:PropertyName} { get; set; }${0}"
+    ],
+    "description": "private auto-implemented property declaration"
+  },
+  "public virtual auto property": {
+    "prefix": "vp",
+    "body": [
+      "public virtual ${1:T} ${2:PropertyName} { get; set; }${0}"
+    ],
+    "description": "public virtual auto-implemented property declaration"
+  },
+  "internal virtual auto property": {
+    "prefix": "ivp",
+    "body": [
+      "internal virtual ${1:T} ${2:PropertyName} { get; set; }${0}"
+    ],
+    "description": "internal virtual auto-implemented property declaration"
+  },
+  "public auto property with private setter": {
+    "prefix": "pps",
+    "body": [
+      "public ${1:T} ${2:PropertyName} { get; private set; }${0}"
+    ],
+    "description": "public auto-implemented property declaration with private setter"
+  },
+  "internal auto property with private setter": {
+    "prefix": "ipps",
+    "body": [
+      "internal ${1:T} ${2:PropertyName} { get; private set; }${0}"
+    ],
+    "description": "internal auto-implemented property declaration with private setter"
+  },
+  "private auto property with private setter": {
+    "prefix": "ppps",
+    "body": [
+      "private ${1:T} ${2:PropertyName} { get; private set; }${0}"
+    ],
+    "description": "private auto-implemented property declaration with private setter"
+  },
+  "public class": {
+    "prefix": "c",
+    "body": [
+      "public class ${1:ClassName}",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "public class declaration"
+  },
+  "internal class": {
+    "prefix": "ic",
+    "body": [
+      "internal class ${1:ClassName}",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "internal class declaration"
+  },
+  "private class": {
+    "prefix": "pc",
+    "body": [
+      "private class ${1:ClassName}",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "private class declaration"
+  },
+  "public static class": {
+    "prefix": "sc",
+    "body": [
+      "public static class ${1:ClassName}",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "public static class declaration"
+  },
+  "internal static class": {
+    "prefix": "isc",
+    "body": [
+      "internal static class ${1:ClassName}",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "internal static class declaration"
+  },
+  "private static class": {
+    "prefix": "psc",
+    "body": [
+      "private static class ${1:ClassName}",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "private static class declaration"
+  },
+  "public const": {
+    "prefix": "k",
+    "body": [
+      "public const ${1:T} ${2:ConstantName} = ${3:default(T)};${0}"
+    ],
+    "description": "public const declaration"
+  },
+  "internal const": {
+    "prefix": "ik",
+    "body": [
+      "internal const ${1:T} ${2:ConstantName} = ${3:default(T)};${0}"
+    ],
+    "description": "internal const declaration"
+  },
+  "private const": {
+    "prefix": "pk",
+    "body": [
+      "private const ${1:T} ${2:ConstantName} = ${3:default(T)};${0}"
+    ],
+    "description": "private const declaration"
+  },
+  "public constructor": {
+    "prefix": "cr",
+    "body": [
+      "public ${1:ThisName}()",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "public constructor declaration"
+  },
+  "internal constructor": {
+    "prefix": "icr",
+    "body": [
+      "internal ${1:ThisName}()",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "internal constructor declaration"
+  },
+  "private constructor": {
+    "prefix": "pcr",
+    "body": [
+      "private ${1:ThisName}()",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "private constructor declaration"
+  },
+  "public constructor (with parameters)": {
+    "prefix": "cr_",
+    "body": [
+      "public ${1:ThisName}(${2:object parameter})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "public constructor declaration (with parameters)"
+  },
+  "internal constructor (with parameters)": {
+    "prefix": "icr_",
+    "body": [
+      "internal ${1:ThisName}(${2:object parameter})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "internal constructor declaration (with parameters)"
+  },
+  "private constructor (with parameters)": {
+    "prefix": "pcr_",
+    "body": [
+      "private ${1:ThisName}(${2:object parameter})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "private constructor declaration (with parameters)"
+  },
+  "public delegate": {
+    "prefix": "de",
+    "body": [
+      "public delegate ${1:void} ${2:DelegateName}();${0}"
+    ],
+    "description": "public delegate declaration"
+  },
+  "internal delegate": {
+    "prefix": "ide",
+    "body": [
+      "internal delegate ${1:void} ${2:DelegateName}();${0}"
+    ],
+    "description": "internal delegate declaration"
+  },
+  "private delegate": {
+    "prefix": "pde",
+    "body": [
+      "private delegate ${1:void} ${2:DelegateName}();${0}"
+    ],
+    "description": "private delegate declaration"
+  },
+  "public delegate (with parameters)": {
+    "prefix": "de_",
+    "body": [
+      "public delegate ${1:void} ${2:DelegateName}(${3:object parameter});${0}"
+    ],
+    "description": "public delegate declaration (with parameters)"
+  },
+  "internal delegate (with parameters)": {
+    "prefix": "ide_",
+    "body": [
+      "internal delegate ${1:void} ${2:DelegateName}(${3:object parameter});${0}"
+    ],
+    "description": "internal delegate declaration (with parameters)"
+  },
+  "private delegate (with parameters)": {
+    "prefix": "pde_",
+    "body": [
+      "private delegate ${1:void} ${2:DelegateName}(${3:object parameter});${0}"
+    ],
+    "description": "private delegate declaration (with parameters)"
+  },
+  "public enum": {
+    "prefix": "em",
+    "body": [
+      "public enum ${1:EnumName}",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "public enum declaration"
+  },
+  "internal enum": {
+    "prefix": "iem",
+    "body": [
+      "internal enum ${1:EnumName}",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "internal enum declaration"
+  },
+  "private enum": {
+    "prefix": "pem",
+    "body": [
+      "private enum ${1:EnumName}",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "private enum declaration"
+  },
+  "public event with EventHandler<T>": {
+    "prefix": "et",
+    "body": [
+      "public event EventHandler<${1:EventArgs}> ${2:EventName};",
+      "",
+      "protected virtual void On${2}(${1} e)",
+      "{",
+      "    EventHandler<${1}> handler = ${2};",
+      "    if (handler != null)",
+      "        handler(this, e);",
+      "}${0}"
+    ],
+    "description": "public event declaration with EventHandler<T>"
+  },
+  "internal event with EventHandler<T>": {
+    "prefix": "iet",
+    "body": [
+      "internal event EventHandler<${1:EventArgs}> ${2:EventName};",
+      "",
+      "protected virtual void On${2}(${1} e)",
+      "{",
+      "    EventHandler<${1}> handler = ${2};",
+      "    if (handler != null)",
+      "        handler(this, e);",
+      "}${0}"
+    ],
+    "description": "internal event declaration with EventHandler<T>"
+  },
+  "private event with EventHandler<T>": {
+    "prefix": "pet",
+    "body": [
+      "private event EventHandler<${1:EventArgs}> ${2:EventName};",
+      "",
+      "protected virtual void On${2}(${1} e)",
+      "{",
+      "    EventHandler<${1}> handler = ${2};",
+      "    if (handler != null)",
+      "        handler(this, e);",
+      "}${0}"
+    ],
+    "description": "private event declaration with EventHandler<T>"
+  },
+  "public field": {
+    "prefix": "f",
+    "body": [
+      "public ${1:T} ${2:FieldName};${0}"
+    ],
+    "description": "public field declaration"
+  },
+  "private field": {
+    "prefix": "pf",
+    "body": [
+      "private ${1:T} ${2:FieldName};${0}"
+    ],
+    "description": "private field declaration"
+  },
+  "public static field": {
+    "prefix": "sf",
+    "body": [
+      "public static ${1:T} ${2:FieldName};${0}"
+    ],
+    "description": "public static field declaration"
+  },
+  "private static field": {
+    "prefix": "psf",
+    "body": [
+      "private static ${1:T} ${2:FieldName};${0}"
+    ],
+    "description": "private static field declaration"
+  },
+  "IEnumerable<T> type": {
+    "prefix": "ge",
+    "body": [
+      "IEnumerable<${1:T}>${0}"
+    ],
+    "description": "IEnumerable<T> type declaration"
+  },
+  "if not TryParse": {
+    "prefix": "ifftp",
+    "body": [
+      "${1:T} ${2:x};",
+      "if (!${1}.TryParse(${3:value}, out ${2}))",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "if statement with condition whether TryParse method returns false."
+  },
+  "if TryParse": {
+    "prefix": "iftp",
+    "body": [
+      "${1:T} ${2:x};",
+      "if (${1}.TryParse(${3:value}, out ${2}))",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "if statement with condition whether TryParse method returns true."
+  },
+  "public indexer": {
+    "prefix": "ir",
+    "body": [
+      "public ${1:T} this[${2:int index}]",
+      "{",
+      "    get { ${0}}",
+      "    set { }",
+      "}"
+    ],
+    "description": "public indexer declaration"
+  },
+  "internal indexer": {
+    "prefix": "iir",
+    "body": [
+      "internal ${1:T} this[${2:int index}]",
+      "{",
+      "    get { ${0}}",
+      "    set { }",
+      "}"
+    ],
+    "description": "internal indexer declaration"
+  },
+  "private indexer": {
+    "prefix": "pir",
+    "body": [
+      "private ${1:T} this[${2:int index}]",
+      "{",
+      "    get { ${0}}",
+      "    set { }",
+      "}"
+    ],
+    "description": "private indexer declaration"
+  },
+  "public interface": {
+    "prefix": "ie",
+    "body": [
+      "public interface ${1:InterfaceName}",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "public interface declaration"
+  },
+  "internal interface": {
+    "prefix": "iie",
+    "body": [
+      "internal interface ${1:InterfaceName}",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "internal interface declaration"
+  },
+  "public method": {
+    "prefix": "m",
+    "body": [
+      "public ${1:void} ${2:MethodName}()",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "public method declaration"
+  },
+  "internal method": {
+    "prefix": "im",
+    "body": [
+      "internal ${1:void} ${2:MethodName}()",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "internal method declaration"
+  },
+  "private method": {
+    "prefix": "pm",
+    "body": [
+      "private ${1:void} ${2:MethodName}()",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "private method declaration"
+  },
+  "public static method": {
+    "prefix": "sm",
+    "body": [
+      "public static ${1:void} ${2:MethodName}()",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "public static method declaration"
+  },
+  "internal static method": {
+    "prefix": "ism",
+    "body": [
+      "internal static ${1:void} ${2:MethodName}()",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "internal static method declaration"
+  },
+  "private static method": {
+    "prefix": "psm",
+    "body": [
+      "private static ${1:void} ${2:MethodName}()",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "private static method declaration"
+  },
+  "public virtual method": {
+    "prefix": "vm",
+    "body": [
+      "public virtual ${1:void} ${2:MethodName}()",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "public virtual method declaration"
+  },
+  "internal virtual method": {
+    "prefix": "ivm",
+    "body": [
+      "internal virtual ${1:void} ${2:MethodName}()",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "internal virtual method declaration"
+  },
+  "public method (with parameters)": {
+    "prefix": "m_",
+    "body": [
+      "public ${1:void} ${2:MethodName}(${3:object parameter})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "public method declaration (with parameters)"
+  },
+  "internal method (with parameters)": {
+    "prefix": "im_",
+    "body": [
+      "internal ${1:void} ${2:MethodName}(${3:object parameter})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "internal method declaration (with parameters)"
+  },
+  "private method (with parameters)": {
+    "prefix": "pm_",
+    "body": [
+      "private ${1:void} ${2:MethodName}(${3:object parameter})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "private method declaration (with parameters)"
+  },
+  "public static method (with parameters)": {
+    "prefix": "sm_",
+    "body": [
+      "public static ${1:void} ${2:MethodName}(${3:object parameter})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "public static method declaration (with parameters)"
+  },
+  "internal static method (with parameters)": {
+    "prefix": "ism_",
+    "body": [
+      "internal static ${1:void} ${2:MethodName}(${3:object parameter})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "internal static method declaration (with parameters)"
+  },
+  "private static method (with parameters)": {
+    "prefix": "psm_",
+    "body": [
+      "private static ${1:void} ${2:MethodName}(${3:object parameter})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "private static method declaration (with parameters)"
+  },
+  "public virtual method (with parameters)": {
+    "prefix": "vm_",
+    "body": [
+      "public virtual ${1:void} ${2:MethodName}(${3:object parameter})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "public virtual method declaration (with parameters)"
+  },
+  "internal virtual method (with parameters)": {
+    "prefix": "ivm_",
+    "body": [
+      "internal virtual ${1:void} ${2:MethodName}(${3:object parameter})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "internal virtual method declaration (with parameters)"
+  },
+  "new variable (with arguments)": {
+    "prefix": "vn_",
+    "body": [
+      "var ${1:x} = new ${2:object}(${3:arguments});${0}"
+    ],
+    "description": "variable declaration with new object creation (with arguments)"
+  },
+  "new variable": {
+    "prefix": "vn",
+    "body": [
+      "var ${1:x} = new ${2:object}();${0}"
+    ],
+    "description": "variable declaration with new object creation"
+  },
+  "parameter array ": {
+    "prefix": "pa",
+    "body": [
+      "params ${1:T}[]${0}"
+    ],
+    "description": "parameter array "
+  },
+  "public read-only auto property": {
+    "prefix": "rp",
+    "body": [
+      "public ${1:T} ${2:PropertyName} { get; }${0}"
+    ],
+    "description": "public read-only auto-implemented property declaration"
+  },
+  "internal read-only auto property": {
+    "prefix": "irp",
+    "body": [
+      "internal ${1:T} ${2:PropertyName} { get; }${0}"
+    ],
+    "description": "internal read-only auto-implemented property declaration"
+  },
+  "private read-only auto property": {
+    "prefix": "prp",
+    "body": [
+      "private ${1:T} ${2:PropertyName} { get; }${0}"
+    ],
+    "description": "private read-only auto-implemented property declaration"
+  },
+  "public static read-only auto property": {
+    "prefix": "srp",
+    "body": [
+      "public static ${1:T} ${2:PropertyName} { get; }${0}"
+    ],
+    "description": "public static read-only auto-implemented property declaration"
+  },
+  "internal static read-only auto property": {
+    "prefix": "isrp",
+    "body": [
+      "internal static ${1:T} ${2:PropertyName} { get; }${0}"
+    ],
+    "description": "internal static read-only auto-implemented property declaration"
+  },
+  "private static read-only auto property": {
+    "prefix": "psrp",
+    "body": [
+      "private static ${1:T} ${2:PropertyName} { get; }${0}"
+    ],
+    "description": "private static read-only auto-implemented property declaration"
+  },
+  "public virtual read-only auto property": {
+    "prefix": "vrp",
+    "body": [
+      "public virtual ${1:T} ${2:PropertyName} { get; }${0}"
+    ],
+    "description": "public virtual read-only auto-implemented property declaration"
+  },
+  "internal virtual read-only auto property": {
+    "prefix": "ivrp",
+    "body": [
+      "internal virtual ${1:T} ${2:PropertyName} { get; }${0}"
+    ],
+    "description": "internal virtual read-only auto-implemented property declaration"
+  },
+  "public read-only field": {
+    "prefix": "rf",
+    "body": [
+      "public readonly ${1:T} ${2:FieldName};${0}"
+    ],
+    "description": "public read-only field declaration"
+  },
+  "internal read-only field": {
+    "prefix": "irf",
+    "body": [
+      "internal readonly ${1:T} ${2:FieldName};${0}"
+    ],
+    "description": "internal read-only field declaration"
+  },
+  "private read-only field": {
+    "prefix": "prf",
+    "body": [
+      "private readonly ${1:T} ${2:FieldName};${0}"
+    ],
+    "description": "private read-only field declaration"
+  },
+  "public static read-only field": {
+    "prefix": "srf",
+    "body": [
+      "public static readonly ${1:T} ${2:FieldName};${0}"
+    ],
+    "description": "public static read-only field declaration"
+  },
+  "internal static read-only field": {
+    "prefix": "isrf",
+    "body": [
+      "internal static readonly ${1:T} ${2:FieldName};${0}"
+    ],
+    "description": "internal static read-only field declaration"
+  },
+  "private static read-only field": {
+    "prefix": "psrf",
+    "body": [
+      "private static readonly ${1:T} ${2:FieldName};${0}"
+    ],
+    "description": "private static read-only field declaration"
+  },
+  "public read-only property": {
+    "prefix": "rpp",
+    "body": [
+      "public ${1:T} ${2:PropertyName}",
+      "{",
+      "    get { return ${3:value}; }",
+      "}${0}"
+    ],
+    "description": "public read-only property declaration"
+  },
+  "internal read-only property": {
+    "prefix": "irpp",
+    "body": [
+      "internal ${1:T} ${2:PropertyName}",
+      "{",
+      "    get { return ${3:value}; }",
+      "}${0}"
+    ],
+    "description": "internal read-only property declaration"
+  },
+  "private read-only property": {
+    "prefix": "prpp",
+    "body": [
+      "private ${1:T} ${2:PropertyName}",
+      "{",
+      "    get { return ${3:value}; }",
+      "}${0}"
+    ],
+    "description": "private read-only property declaration"
+  },
+  "public static read-only property": {
+    "prefix": "srpp",
+    "body": [
+      "public static ${1:T} ${2:PropertyName}",
+      "{",
+      "    get { return ${3:value}; }",
+      "}${0}"
+    ],
+    "description": "public static read-only property declaration"
+  },
+  "internal static read-only property": {
+    "prefix": "isrpp",
+    "body": [
+      "internal static ${1:T} ${2:PropertyName}",
+      "{",
+      "    get { return ${3:value}; }",
+      "}${0}"
+    ],
+    "description": "internal static read-only property declaration"
+  },
+  "private static read-only property": {
+    "prefix": "psrpp",
+    "body": [
+      "private static ${1:T} ${2:PropertyName}",
+      "{",
+      "    get { return ${3:value}; }",
+      "}${0}"
+    ],
+    "description": "private static read-only property declaration"
+  },
+  "public virtual read-only property": {
+    "prefix": "vrpp",
+    "body": [
+      "public virtual ${1:T} ${2:PropertyName}",
+      "{",
+      "    get { return ${3:value}; }",
+      "}${0}"
+    ],
+    "description": "public virtual read-only property declaration"
+  },
+  "internal virtual read-only property": {
+    "prefix": "ivrpp",
+    "body": [
+      "internal virtual ${1:T} ${2:PropertyName}",
+      "{",
+      "    get { return ${3:value}; }",
+      "}${0}"
+    ],
+    "description": "internal virtual read-only property declaration"
+  },
+  "public struct": {
+    "prefix": "st",
+    "body": [
+      "public struct ${1:StructName}",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "public struct declaration"
+  },
+  "internal struct": {
+    "prefix": "ist",
+    "body": [
+      "internal struct ${1:StructName}",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "internal struct declaration"
+  },
+  "private struct": {
+    "prefix": "pst",
+    "body": [
+      "private struct ${1:StructName}",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "private struct declaration"
+  },
+  " type parameter": {
+    "prefix": "g",
+    "body": [
+      "<${1:T}>${0}"
+    ],
+    "description": " type parameter"
+  },
+  "interface indexer": {
+    "prefix": "_ir",
+    "body": [
+      "${1:T} this[${2:int index}] { get; set; }${0}"
+    ],
+    "description": "interface indexer declaration"
+  },
+  "interface method": {
+    "prefix": "_m",
+    "body": [
+      "${1:void} ${2:MethodName}();${0}"
+    ],
+    "description": "interface method declaration"
+  },
+  "interface method (with parameters)": {
+    "prefix": "_m_",
+    "body": [
+      "${1:void} ${2:MethodName}(${3:object parameter});${0}"
+    ],
+    "description": "interface method declaration (with parameters)"
+  },
+  "interface property": {
+    "prefix": "_p",
+    "body": [
+      "${1:T} ${2:PropertyName} { get; set; }${0}"
+    ],
+    "description": "interface property declaration"
+  },
+  "interface read-only property": {
+    "prefix": "_rp",
+    "body": [
+      "${1:T} ${2:PropertyName} { get; }${0}"
+    ],
+    "description": "interface read-only property declaration"
+  },
+  "Attribute class": {
+    "prefix": "c_Attribute",
+    "body": [
+      "[AttributeUsage(AttributeTargets${1:.All}, AllowMultiple = ${2:false})]",
+      "${3:public sealed} class ${4:My}Attribute : ${5:Attribute}",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "class derived from Attribute class"
+  },
+  "Boolean variable": {
+    "prefix": "vb",
+    "body": [
+      "bool ${1:f} = ${2:false};${0}"
+    ],
+    "description": "Boolean variable declaration"
+  },
+  "braces": {
+    "prefix": "b",
+    "body": [
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "braces"
+  },
+  "catch": {
+    "prefix": "catch",
+    "body": [
+      "catch (${1:Exception} ${2:ex})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "catch clause"
+  },
+  "Collection<T> class": {
+    "prefix": "c_CollectionOfT",
+    "body": [
+      "${1:public} class ${2:Collection} : Collection<${3:object}>",
+      "{",
+      "    public ${2}()",
+      "    {",
+      "    }",
+      "",
+      "    public ${2}(IList<${3}> list)",
+      "        : base(list)",
+      "    {",
+      "    }",
+      "",
+      "    ${0}",
+      "}"
+    ],
+    "description": "class derived from Collection<T>"
+  },
+  "?: operator": {
+    "prefix": "co",
+    "body": [
+      "(${1:expression}) ? ${2:null} : ${3:null}${0}"
+    ],
+    "description": "?: (conditional) operator"
+  },
+  "containing type name": {
+    "prefix": "this",
+    "body": [
+      "${1:ThisName}${0}"
+    ],
+    "description": "containing type name"
+  },
+  "DateTime type": {
+    "prefix": "dt",
+    "body": [
+      "DateTime${0}"
+    ],
+    "description": "DateTime type declaration"
+  },
+  "Debug.Assert": {
+    "prefix": "da",
+    "body": [
+      "Debug.Assert(${1:false}, ${2:\"\"});${0}"
+    ],
+    "description": "Debug.Assert method"
+  },
+  "Debug.WriteLine": {
+    "prefix": "dw",
+    "body": [
+      "Debug.WriteLine(${1:\"\"});${0}"
+    ],
+    "description": "Debug.WriteLine method"
+  },
+  "default keyword": {
+    "prefix": "d",
+    "body": [
+      "default${0}"
+    ],
+    "description": "default keyword"
+  },
+  "Dictionary<TKey, TValue> class": {
+    "prefix": "c_DictionaryOfTKeyTValue",
+    "body": [
+      "${1:public} class ${2:Dictionary} : Dictionary<${3:object}, ${4:object}>",
+      "{",
+      "    public ${2}() : base()",
+      "    {",
+      "    }",
+      "",
+      "    public ${2}(int capacity) : base(capacity)",
+      "    {",
+      "    }",
+      "",
+      "    public ${2}(IEqualityComparer<${3}> comparer) : base(comparer)",
+      "    {",
+      "    }",
+      "",
+      "    public ${2}(IDictionary<${3}, ${4}> dictionary) : base(dictionary)",
+      "    {",
+      "    }",
+      "",
+      "    public ${2}(int capacity, IEqualityComparer<${3}> comparer) : base(capacity, comparer)",
+      "    {",
+      "    }",
+      "",
+      "    public ${2}(SerializationInfo info, StreamingContext context) : base(info, context)",
+      "    {",
+      "    }",
+      "",
+      "    public ${2}(IDictionary<${3}, ${4}> dictionary, IEqualityComparer<${3}> comparer) : base(dictionary, comparer)",
+      "    {",
+      "    }",
+      "",
+      "    ${0}",
+      "}"
+    ],
+    "description": "class derived from Dictionary<TKey, TValue>"
+  },
+  "Disposable class": {
+    "prefix": "c_Disposable",
+    "body": [
+      "${1:public} class ${2:ClassName} : IDisposable",
+      "{",
+      "    private bool _disposed;",
+      "",
+      "    public void Dispose()",
+      "    {",
+      "        Dispose(true);",
+      "        GC.SuppressFinalize(this);",
+      "    }",
+      "",
+      "    protected virtual void Dispose(bool disposing)",
+      "    {",
+      "        if (!_disposed)",
+      "        {",
+      "            if (disposing)",
+      "            {",
+      "                throw new NotImplementedException();",
+      "            }",
+      "",
+      "            _disposed = true;",
+      "        }",
+      "    }",
+      "}${0}"
+    ],
+    "description": "class that implements IDisposable interface"
+  },
+  "dispose pattern": {
+    "prefix": "dispose",
+    "body": [
+      "private bool _disposed;",
+      "",
+      "public void Dispose()",
+      "{",
+      "    Dispose(true);",
+      "    GC.SuppressFinalize(this);",
+      "}",
+      "",
+      "protected virtual void Dispose(bool disposing)",
+      "{",
+      "    if (!_disposed)",
+      "    {",
+      "        if (disposing)",
+      "        {",
+      "            throw new NotImplementedException();",
+      "        }",
+      "",
+      "        _disposed = true;",
+      "    }",
+      "}${0}"
+    ],
+    "description": "dispose pattern"
+  },
+  "else": {
+    "prefix": "e",
+    "body": [
+      "else",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "else clause"
+  },
+  "else-if": {
+    "prefix": "eif",
+    "body": [
+      "else if (${1:true})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "else-if statement"
+  },
+  "Equals and GetHashCode": {
+    "prefix": "equals",
+    "body": [
+      "public override bool Equals(object obj)",
+      "{",
+      "    var other = obj as ${1:ThisName};",
+      "    if (other == null)",
+      "    {",
+      "        return false;",
+      "    }",
+      "",
+      "    ${0}",
+      "    throw new NotImplementedException();",
+      "}",
+      "",
+      "public override int GetHashCode()",
+      "{",
+      "    throw new NotImplementedException();",
+      "}"
+    ],
+    "description": "overriding Equals and GetHashCode methods"
+  },
+  "Equals and GetHashCode for value type": {
+    "prefix": "equals_ValueType",
+    "body": [
+      "public override bool Equals(object obj)",
+      "{",
+      "    if(!(obj is ${1:ThisName}))",
+      "    {",
+      "        return false;",
+      "    }",
+      "",
+      "    var other = (${1})obj;",
+      "",
+      "    ${0}",
+      "    throw new NotImplementedException();",
+      "}",
+      "",
+      "public override int GetHashCode()",
+      "{",
+      "    throw new NotImplementedException();",
+      "}"
+    ],
+    "description": "overriding Equals and GetHashCode methods for value type"
+  },
+  "equal to null": {
+    "prefix": "n",
+    "body": [
+      "${1:x} == null${0}"
+    ],
+    "description": "equal to null"
+  },
+  "Exception class": {
+    "prefix": "c_Exception",
+    "body": [
+      "[Serializable]",
+      "${1:public} class ${2:My}Exception : ${3:Exception}",
+      "{",
+      "    public ${2}Exception()",
+      "    {",
+      "    }",
+      "",
+      "    public ${2}Exception(string message)",
+      "        : base(message)",
+      "    {",
+      "    }",
+      "",
+      "    public ${2}Exception(string message, Exception inner)",
+      "        : base(message, inner)",
+      "    {",
+      "    }",
+      "",
+      "    protected ${2}Exception(SerializationInfo info, StreamingContext context)",
+      "        : base(info, context)",
+      "    {",
+      "    }${0}",
+      "}"
+    ],
+    "description": "class derived from Exception class"
+  },
+  "explicit cast operator": {
+    "prefix": "t",
+    "body": [
+      "((${1:object})${2:expression})${0}"
+    ],
+    "description": "explicit cast operator"
+  },
+  "finally": {
+    "prefix": "finally",
+    "body": [
+      "finally",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "finally clause"
+  },
+  "for": {
+    "prefix": "fr",
+    "body": [
+      "for (int ${1:i} = 0; ${1} < ${2:length}; ${1}++)",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "for statement"
+  },
+  "foreach statement": {
+    "prefix": "fe",
+    "body": [
+      "foreach (var ${1:item} in ${2:items})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "foreach statement"
+  },
+  "for (reversed)": {
+    "prefix": "frr",
+    "body": [
+      "for (int ${1:i} = ${2:length} - 1; ${1} >= 0; ${1}--)",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "for statement (reversed)"
+  },
+  "generic type constraint": {
+    "prefix": "where",
+    "body": [
+      "where ${1:T} : ${2:class}${0}"
+    ],
+    "description": "generic type constraint"
+  },
+  "IComparer class": {
+    "prefix": "c_IComparer",
+    "body": [
+      "${1:public} class ${2:Comparer} : IComparer",
+      "{",
+      "    public int Compare(object x, object y)",
+      "    {",
+      "        if (object.ReferenceEquals(x, y))",
+      "        {",
+      "            return 0;",
+      "        }",
+      "",
+      "        if (x == null)",
+      "        {",
+      "            return (y == null) ? 0 : -1;",
+      "        }",
+      "",
+      "        if (y == null)",
+      "        {",
+      "            return 1;",
+      "        }",
+      "",
+      "        var a = (${3:object})x;",
+      "        var b = (${3})y;",
+      "",
+      "        ${0}",
+      "        throw new NotImplementedException();",
+      "    }",
+      "}"
+    ],
+    "description": "class that implements IComparer"
+  },
+  "IComparer<T> class": {
+    "prefix": "c_IComparerOfT",
+    "body": [
+      "${1:public} class ${2:Comparer} : IComparer<${3:object}>",
+      "{",
+      "    public int Compare(${3} x, ${3} y)",
+      "    {",
+      "        if (object.ReferenceEquals(x, y))",
+      "        {",
+      "            return 0;",
+      "        }",
+      "",
+      "        if (x == null)",
+      "        {",
+      "            return -1;",
+      "        }",
+      "",
+      "        if (y == null)",
+      "        {",
+      "            return 1;",
+      "        }",
+      "",
+      "        ${0}",
+      "        throw new NotImplementedException();",
+      "    }",
+      "}"
+    ],
+    "description": "class that implements IComparer<T>"
+  },
+  "IEnumerator<T> variable": {
+    "prefix": "u_er",
+    "body": [
+      "using (var ${1:en} = ${2:items}.GetEnumerator())",
+      "{",
+      "    while (${1}.MoveNext())",
+      "    {",
+      "        ${0}",
+      "    }",
+      "}"
+    ],
+    "description": "IEnumerator<T> variable declaration."
+  },
+  "IEqualityComparer class": {
+    "prefix": "c_IEqualityComparer",
+    "body": [
+      "${1:public} class ${2:EqualityComparer} : IEqualityComparer",
+      "{",
+      "    new public bool Equals(object x, object y)",
+      "    {",
+      "        if (object.ReferenceEquals(x, y))",
+      "        {",
+      "            return true;",
+      "        }",
+      "",
+      "        if (x == null || y == null)",
+      "        {",
+      "            return false;",
+      "        }",
+      "",
+      "        var a = (${3:object})x;",
+      "        var b = (${3})y;",
+      "",
+      "        ${0}",
+      "        throw new NotImplementedException();",
+      "    }",
+      "",
+      "    public int GetHashCode(object obj)",
+      "    {",
+      "        if (obj == null)",
+      "        {",
+      "            return 0;",
+      "        }",
+      "",
+      "        throw new NotImplementedException();",
+      "    }",
+      "}"
+    ],
+    "description": "class that implements IEqualityComparer"
+  },
+  "IEqualityComparer<T> class": {
+    "prefix": "c_IEqualityComparerOfT",
+    "body": [
+      "${1:public} class ${2:EqualityComparer} : EqualityComparer<${3:object}>",
+      "{",
+      "    public override bool Equals(${3} x, ${3} y)",
+      "    {",
+      "        if (object.ReferenceEquals(x, y))",
+      "        {",
+      "            return true;",
+      "        }",
+      "",
+      "        if (x == null || y == null)",
+      "        {",
+      "            return false;",
+      "        }",
+      "",
+      "        ${0}",
+      "        throw new NotImplementedException();",
+      "    }",
+      "",
+      "    public override int GetHashCode(${3} obj)",
+      "    {",
+      "        if (obj == null)",
+      "        {",
+      "            return 0;",
+      "        }",
+      "",
+      "        throw new NotImplementedException();",
+      "    }",
+      "}"
+    ],
+    "description": "class that implements IEqualityComparer<T>"
+  },
+  "if equal to null": {
+    "prefix": "ifn",
+    "body": [
+      "if (${1:x} == null)",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "if equal to null"
+  },
+  "if not": {
+    "prefix": "iff",
+    "body": [
+      "if (!${1:x})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "if with condition whether the expression is equal to false"
+  },
+  "if not equal to null": {
+    "prefix": "ifnn",
+    "body": [
+      "if (${1:x} != null)",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "if not equal to null"
+  },
+  "Int32 variable": {
+    "prefix": "vi",
+    "body": [
+      "int ${1:i} = ${2:0};${0}"
+    ],
+    "description": "Int32 variable declaration"
+  },
+  "lambda expression": {
+    "prefix": "l",
+    "body": [
+      "${1:f} => ${0}"
+    ],
+    "description": "lambda expression"
+  },
+  "nameof operator": {
+    "prefix": "no",
+    "body": [
+      "nameof(${1:x})${0}"
+    ],
+    "description": "nameof operator"
+  },
+  "not equal to null": {
+    "prefix": "nn",
+    "body": [
+      "${1:x} != null${0}"
+    ],
+    "description": "not equal to null"
+  },
+  "object keyword": {
+    "prefix": "o",
+    "body": [
+      "object${0}"
+    ],
+    "description": "object keyword"
+  },
+  "ObservableCollection<T> class": {
+    "prefix": "c_ObservableCollectionOfT",
+    "body": [
+      "${1:public} class ${2:Collection} : ObservableCollection<${3:object}>",
+      "{",
+      "    public ${2}()",
+      "    {",
+      "    }",
+      "",
+      "    public ${2}(IEnumerable<${3}> collection)",
+      "        : base(collection)",
+      "    {",
+      "    }",
+      "",
+      "    public ${2}(IList<${3}> list)",
+      "        : base(list)",
+      "    {",
+      "    }",
+      "",
+      "    ${0}",
+      "}"
+    ],
+    "description": "class derived from ObservableCollection<T>"
+  },
+  "& operator overload": {
+    "prefix": "oo_Ampersand",
+    "body": [
+      "public static ${1:ThisName} operator &(${1} ${2:left}, ${1} ${3:right})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "& operator overload"
+  },
+  "* operator overload": {
+    "prefix": "oo_Asterisk",
+    "body": [
+      "public static ${1:ThisName} operator *(${1} ${2:left}, ${1} ${3:right})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "* operator overload"
+  },
+  "^ operator overload": {
+    "prefix": "oo_Caret",
+    "body": [
+      "public static ${1:ThisName} operator ^(${1} ${2:left}, ${1} ${3:right})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "^ operator overload"
+  },
+  "== operator overload": {
+    "prefix": "oo_EqualsEquals",
+    "body": [
+      "public static bool operator ==(${1:ThisName} ${2:left}, ${1} ${3:right})",
+      "{",
+      "    ${0}",
+      "}",
+      "",
+      "public static bool operator !=(${1} ${2}, ${1} ${3})",
+      "{",
+      "    return !(${2} == ${3});",
+      "}"
+    ],
+    "description": "== operator overload"
+  },
+  "! operator overload": {
+    "prefix": "oo_ExclamationMark",
+    "body": [
+      "public static ${1:ThisName} operator !(${1} ${2:value})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "! operator overload"
+  },
+  "explicit operator overload": {
+    "prefix": "oo_Explicit",
+    "body": [
+      "public static explicit operator ${1:ThisName}(${2:object} ${3:value})",
+      "{",
+      "    ${0}",
+      "}",
+      "",
+      "public static explicit operator ${2}(${1} ${3})",
+      "{",
+      "}"
+    ],
+    "description": "explicit operator overload"
+  },
+  "> operator overload": {
+    "prefix": "oo_GreaterThan",
+    "body": [
+      "public static bool operator <(${1:ThisName} ${2:left}, ${1} ${3:right})",
+      "{",
+      "}",
+      "",
+      "public static bool operator >(${1} ${2}, ${1} ${3})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "> operator overload"
+  },
+  ">> operator overload": {
+    "prefix": "oo_GreaterThanGreaterThan",
+    "body": [
+      "public static ${1:ThisName} operator >>(${1} ${2:left}, int ${3:count})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": ">> operator overload"
+  },
+  ">= operator overload": {
+    "prefix": "oo_GreaterThanEquals",
+    "body": [
+      "public static bool operator <=(${1:ThisName} ${2:left}, ${1} ${3:right})",
+      "{",
+      "}",
+      "",
+      "public static bool operator >=(${1} ${2}, ${1} ${3})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": ">= operator overload"
+  },
+  "implicit operator overload": {
+    "prefix": "oo_Implicit",
+    "body": [
+      "public static implicit operator ${1:ThisName}(${2:object} ${3:value})",
+      "{",
+      "    ${0}",
+      "}",
+      "",
+      "public static implicit operator ${2}(${1} ${3})",
+      "{",
+      "}"
+    ],
+    "description": "implicit operator overload"
+  },
+  "< operator overload": {
+    "prefix": "oo_LessThan",
+    "body": [
+      "public static bool operator <(${1:ThisName} ${2:left}, ${1} ${3:right})",
+      "{",
+      "    ${0}",
+      "}",
+      "",
+      "public static bool operator >(${1} ${2}, ${1} ${3})",
+      "{",
+      "}"
+    ],
+    "description": "< operator overload"
+  },
+  "<< operator overload": {
+    "prefix": "oo_LessThanLessThan",
+    "body": [
+      "public static ${1:ThisName} operator <<(${1} ${2:left}, int ${3:count})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "<< operator overload"
+  },
+  "<= operator overload": {
+    "prefix": "oo_LessThanEquals",
+    "body": [
+      "public static bool operator <=(${1:ThisName} ${2:left}, ${1} ${3:right})",
+      "{",
+      "    ${0}",
+      "}",
+      "",
+      "public static bool operator >=(${1} ${2}, ${1} ${3})",
+      "{",
+      "}"
+    ],
+    "description": "<= operator overload"
+  },
+  "- operator overload": {
+    "prefix": "oo_Minus",
+    "body": [
+      "public static ${1:ThisName} operator -(${1} ${2:left}, ${1} ${3:right})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "- operator overload"
+  },
+  "-- operator overload": {
+    "prefix": "oo_MinusMinus",
+    "body": [
+      "public static ${1:ThisName} operator --(${1} ${2:value})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "-- operator overload"
+  },
+  "% operator overload": {
+    "prefix": "oo_Percent",
+    "body": [
+      "public static ${1:ThisName} operator %(${1} ${2:left}, ${1} ${3:right})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "% operator overload"
+  },
+  "+ operator overload": {
+    "prefix": "oo_Plus",
+    "body": [
+      "public static ${1:ThisName} operator +(${1} ${2:left}, ${1} ${3:right})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "+ operator overload"
+  },
+  "++ operator overload": {
+    "prefix": "oo_PlusPlus",
+    "body": [
+      "public static ${1:ThisName} operator ++(${1} ${2:value})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "++ operator overload"
+  },
+  "/ operator overload": {
+    "prefix": "oo_Slash",
+    "body": [
+      "public static ${1:ThisName} operator /(${1} ${2:left}, ${1} ${3:right})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "/ operator overload"
+  },
+  "~ operator overload": {
+    "prefix": "oo_Tilde",
+    "body": [
+      "public static ${1:ThisName} operator ~(${1} ${2:value})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "~ operator overload"
+  },
+  "true-false operator overload": {
+    "prefix": "oo_TrueFalse",
+    "body": [
+      "public static bool operator true(${1:ThisName} ${2:value})",
+      "{",
+      "    ${0}",
+      "}",
+      "",
+      "public static bool operator false(${1} ${2})",
+      "{",
+      "}"
+    ],
+    "description": "true-false operator overload"
+  },
+  "| operator overload": {
+    "prefix": "oo_VerticalBar",
+    "body": [
+      "public static ${1:ThisName} operator |(${1} ${2:left}, ${1} ${3:right})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "| operator overload"
+  },
+  "#if preprocessor directive": {
+    "prefix": "ppif",
+    "body": [
+      "#if ${1:DEBUG}",
+      "    ${0}",
+      "#endif"
+    ],
+    "description": "#if preprocessor directive"
+  },
+  "#if-#else preprocessor directive": {
+    "prefix": "ppife",
+    "body": [
+      "#if ${1:DEBUG}",
+      "    ${0}",
+      "#else",
+      "",
+      "#endif"
+    ],
+    "description": "#if-#else preprocessor directives"
+  },
+  "#region preprocessor directive": {
+    "prefix": "ppr",
+    "body": [
+      "#region ${1:RegionName}",
+      "    ${0}",
+      "#endregion"
+    ],
+    "description": "#region preprocessor directive"
+  },
+  "ReadOnlyCollection<T> class": {
+    "prefix": "c_ReadOnlyCollectionOfT",
+    "body": [
+      "${1:public} class ${2:Collection} : ReadOnlyCollection<${3:object}>",
+      "{",
+      "    public ${2}(IList<${3}> list)",
+      "        : base(list)",
+      "    {",
+      "    }",
+      "",
+      "    ${0}",
+      "}"
+    ],
+    "description": "class derived from ReadOnlyCollection<T>"
+  },
+  "return false": {
+    "prefix": "ref",
+    "body": [
+      "return false;${0}"
+    ],
+    "description": "return false statement"
+  },
+  "return keyword": {
+    "prefix": "r",
+    "body": [
+      "return${0}"
+    ],
+    "description": "return keyword"
+  },
+  "return null": {
+    "prefix": "ren",
+    "body": [
+      "return null;${0}"
+    ],
+    "description": "return null statement"
+  },
+  "return true": {
+    "prefix": "ret",
+    "body": [
+      "return true;${0}"
+    ],
+    "description": "return true statement"
+  },
+  "Singleton class": {
+    "prefix": "c_Singleton",
+    "body": [
+      "${1:public sealed} class ${2:ClassName}",
+      "{",
+      "    private static readonly ${2} _instance = ${3:value};",
+      "",
+      "    private ${2}()",
+      "    {",
+      "    }",
+      "",
+      "    public static ${2} Instance",
+      "    {",
+      "        get { return _instance; }",
+      "    }",
+      "}${0}"
+    ],
+    "description": "class that implements singleton pattern"
+  },
+  "static constructor": {
+    "prefix": "scr",
+    "body": [
+      "static ${1:ThisName}()",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "static constructor declaration"
+  },
+  "StreamReader Variable": {
+    "prefix": "u_smrr",
+    "body": [
+      "using (var ${1:sr} = new StreamReader(${2:stream}))",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "StreamReader variable declaration."
+  },
+  "StreamWriter Variable": {
+    "prefix": "u_smwr",
+    "body": [
+      "using (var ${1:sw} = new StreamWriter(${2:path}, ${3:Encoding.UTF8}))",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "StreamWriter variable declaration."
+  },
+  "!string.IsNullOrEmpty": {
+    "prefix": "snne",
+    "body": [
+      "!string.IsNullOrEmpty(${1:s})${0}"
+    ],
+    "description": "!string.IsNullOrEmpty method"
+  },
+  "!string.IsNullOrWhiteSpace": {
+    "prefix": "snnw",
+    "body": [
+      "!string.IsNullOrWhiteSpace(${1:s})${0}"
+    ],
+    "description": "!string.IsNullOrWhiteSpace method"
+  },
+  "string.IsNullOrEmpty": {
+    "prefix": "sne",
+    "body": [
+      "string.IsNullOrEmpty(${1:s})${0}"
+    ],
+    "description": "string.IsNullOrEmpty method"
+  },
+  "string.IsNullOrWhiteSpace": {
+    "prefix": "snw",
+    "body": [
+      "string.IsNullOrWhiteSpace(${1:s})${0}"
+    ],
+    "description": "string.IsNullOrWhiteSpace method"
+  },
+  "string keyword": {
+    "prefix": "s",
+    "body": [
+      "string${0}"
+    ],
+    "description": "string keyword"
+  },
+  "StringReader Variable": {
+    "prefix": "u_srr",
+    "body": [
+      "using (var ${1:sr} = new StringReader(${2:s}))",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "StringReader variable declaration."
+  },
+  "String variable": {
+    "prefix": "vs",
+    "body": [
+      "string ${1:s} = ${2:null};${0}"
+    ],
+    "description": "String variable declaration"
+  },
+  "StringWriter Variable": {
+    "prefix": "u_swr",
+    "body": [
+      "using (var ${1:sw} = new StringWriter())",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "StringWriter variable declaration."
+  },
+  "switch": {
+    "prefix": "sh",
+    "body": [
+      "switch (${1:SwitchOn})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "switch statement"
+  },
+  "throw new": {
+    "prefix": "twn_-",
+    "body": [
+      "throw new${0}"
+    ],
+    "description": "throw new"
+  },
+  "throw new ArgumentException": {
+    "prefix": "twn_ae",
+    "body": [
+      "throw new ArgumentException(${1:\"\"}, nameof(${2:parameter}));${0}"
+    ],
+    "description": "throw new ArgumentException"
+  },
+  "throw new ArgumentNullException": {
+    "prefix": "twn_ane",
+    "body": [
+      "throw new ArgumentNullException(nameof(${1:parameter}));${0}"
+    ],
+    "description": "throw new ArgumentNullException"
+  },
+  "throw new ArgumentOutOfRangeException": {
+    "prefix": "twn_aoore",
+    "body": [
+      "throw new ArgumentOutOfRangeException(nameof(${1:parameter}), ${1}, ${2:\"\"});${0}"
+    ],
+    "description": "throw new ArgumentOutOfRangeException"
+  },
+  "throw new InvalidCastException": {
+    "prefix": "twn_ice",
+    "body": [
+      "throw new InvalidCastException(${1:\"\"});${0}"
+    ],
+    "description": "throw new InvalidCastException"
+  },
+  "throw new InvalidOperationException": {
+    "prefix": "twn_ioe",
+    "body": [
+      "throw new InvalidOperationException(${1:message});${0}"
+    ],
+    "description": "throw new InvalidOperationException"
+  },
+  "throw new NotImplementedException": {
+    "prefix": "twn_nie",
+    "body": [
+      "throw new NotImplementedException(${1:message});${0}"
+    ],
+    "description": "throw new NotImplementedException"
+  },
+  "throw new NotSupportedException": {
+    "prefix": "twn_nse",
+    "body": [
+      "throw new NotSupportedException(${1:message});${0}"
+    ],
+    "description": "throw new NotSupportedException"
+  },
+  "TODO comment": {
+    "prefix": "td",
+    "body": [
+      "//TODO: ${0}"
+    ],
+    "description": "TODO comment"
+  },
+  "try-catch": {
+    "prefix": "tc",
+    "body": [
+      "try",
+      "{",
+      "    ${0}",
+      "}",
+      "catch (${1:Exception} ${2:ex})",
+      "{",
+      "    throw;",
+      "}"
+    ],
+    "description": "try-catch statement"
+  },
+  "try-catch-finally": {
+    "prefix": "tcf",
+    "body": [
+      "try",
+      "{",
+      "    ${0}",
+      "}",
+      "catch (${1:Exception} ${2:ex})",
+      "{",
+      "    throw;",
+      "}",
+      "finally",
+      "{",
+      "}"
+    ],
+    "description": "try-catch-finally statement"
+  },
+  "try-finally": {
+    "prefix": "tf",
+    "body": [
+      "try",
+      "{",
+      "    ${0}",
+      "}",
+      "finally",
+      "{",
+      "}"
+    ],
+    "description": "try-finally statement with"
+  },
+  "typeof operator": {
+    "prefix": "to",
+    "body": [
+      "typeof(${1:object})${0}"
+    ],
+    "description": "typeof operator"
+  },
+  "using statement": {
+    "prefix": "u_-",
+    "body": [
+      "using (${1:disposable})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "using statement"
+  },
+  "using static": {
+    "prefix": "us",
+    "body": [
+      "using static${0}"
+    ],
+    "description": "using static directive"
+  },
+  "using variable": {
+    "prefix": "u_v",
+    "body": [
+      "using (${1:var} ${2:x} = ${3:expression})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "using variable"
+  },
+  "variable declaration": {
+    "prefix": "v",
+    "body": [
+      "${1:var} ${2:x} = ${3:expression};${0}"
+    ],
+    "description": "variable declaration"
+  },
+  "variable declaration with explicit cast operator": {
+    "prefix": "vt",
+    "body": [
+      "var ${1:x} = (${2:T})${3:expression};${0}"
+    ],
+    "description": "variable declaration with explicit cast operator"
+  },
+  "while": {
+    "prefix": "we",
+    "body": [
+      "while (${1:true})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "while statement"
+  },
+  "XmlReader Variable": {
+    "prefix": "u_xmlrr",
+    "body": [
+      "using (var ${1:reader} = XmlReader.Create(${2:argument}))",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "XmlReader variable declaration."
+  },
+  "XmlWriter Variable": {
+    "prefix": "u_xmlwr",
+    "body": [
+      "using (var ${1:writer} = XmlWriter.Create(${2:argument}))",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "XmlWriter variable declaration."
+  },
+  "yield break": {
+    "prefix": "yb",
+    "body": [
+      "yield break;${0}"
+    ],
+    "description": "yield break statement"
+  },
+  "yield return": {
+    "prefix": "yr",
+    "body": [
+      "yield return${0}"
+    ],
+    "description": "yield return statement"
+  }
+}

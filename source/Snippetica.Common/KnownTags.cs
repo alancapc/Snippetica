@@ -26,8 +26,6 @@ namespace Snippetica
         public const string NonUniqueShortcut = nameof(NonUniqueShortcut);
         public const string ExcludeFromReadme = nameof(ExcludeFromReadme);
         public const string TitleStartsWithShortcut = nameof(TitleStartsWithShortcut);
-        public const string WithAttribute = nameof(WithAttribute);
-        public const string WithContent = nameof(WithContent);
         public const string ExcludeFromVisualStudioCode = nameof(ExcludeFromVisualStudioCode);
 
         public const string MetaPrefix = "Meta-";
@@ -61,6 +59,8 @@ namespace Snippetica
         public const string GenerateObjectType = GeneratePrefix + "ObjectType";
         public const string GenerateStringType = GeneratePrefix + "StringType";
         public const string GenerateSingleType = GeneratePrefix + "SingleType";
+
+        public const string MetaShortcut = MetaPrefix + "Shortcut ";
 
         public static string GenerateTypeTag(string typeName)
         {

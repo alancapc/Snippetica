@@ -1,0 +1,1889 @@
+﻿{
+  "array variable": {
+    "prefix": "va",
+    "body": [
+      "Dim ${1:items} = New ${2:T}(${3:0}){}${0}"
+    ],
+    "description": "array variable declaration"
+  },
+  "array variable (with initializer)": {
+    "prefix": "va_",
+    "body": [
+      "Dim ${1:items} = New ${2:T}() {${3:Nothing}}${0}"
+    ],
+    "description": "array variable declaration (with initializer)"
+  },
+  "Public auto property": {
+    "prefix": "p",
+    "body": [
+      "Public Property ${1:PropertyName} As ${2:T}${0}"
+    ],
+    "description": "Public auto-implemented property declaration"
+  },
+  "Friend auto property": {
+    "prefix": "ip",
+    "body": [
+      "Friend Property ${1:PropertyName} As ${2:T}${0}"
+    ],
+    "description": "Friend auto-implemented property declaration"
+  },
+  "Private auto property": {
+    "prefix": "pp",
+    "body": [
+      "Private Property ${1:PropertyName} As ${2:T}${0}"
+    ],
+    "description": "Private auto-implemented property declaration"
+  },
+  "Public Overridable auto property": {
+    "prefix": "vp",
+    "body": [
+      "Public Overridable Property ${1:PropertyName} As ${2:T}${0}"
+    ],
+    "description": "Public Overridable auto-implemented property declaration"
+  },
+  "Friend Overridable auto property": {
+    "prefix": "ivp",
+    "body": [
+      "Friend Overridable Property ${1:PropertyName} As ${2:T}${0}"
+    ],
+    "description": "Friend Overridable auto-implemented property declaration"
+  },
+  "Public class": {
+    "prefix": "c",
+    "body": [
+      "Public Class ${1:ClassName}",
+      "    ${0}",
+      "End Class"
+    ],
+    "description": "Public class declaration"
+  },
+  "Friend class": {
+    "prefix": "ic",
+    "body": [
+      "Friend Class ${1:ClassName}",
+      "    ${0}",
+      "End Class"
+    ],
+    "description": "Friend class declaration"
+  },
+  "Private class": {
+    "prefix": "pc",
+    "body": [
+      "Private Class ${1:ClassName}",
+      "    ${0}",
+      "End Class"
+    ],
+    "description": "Private class declaration"
+  },
+  "Public constant": {
+    "prefix": "k",
+    "body": [
+      "Public Const ${1:ConstantName} As ${2:T} = ${3:Nothing}${0}"
+    ],
+    "description": "Public constant declaration"
+  },
+  "Friend constant": {
+    "prefix": "ik",
+    "body": [
+      "Friend Const ${1:ConstantName} As ${2:T} = ${3:Nothing}${0}"
+    ],
+    "description": "Friend constant declaration"
+  },
+  "Private constant": {
+    "prefix": "pk",
+    "body": [
+      "Private Const ${1:ConstantName} As ${2:T} = ${3:Nothing}${0}"
+    ],
+    "description": "Private constant declaration"
+  },
+  "Public constructor": {
+    "prefix": "cr",
+    "body": [
+      "Public Sub New()",
+      "    ${0}",
+      "End Sub"
+    ],
+    "description": "Public constructor declaration"
+  },
+  "Friend constructor": {
+    "prefix": "icr",
+    "body": [
+      "Friend Sub New()",
+      "    ${0}",
+      "End Sub"
+    ],
+    "description": "Friend constructor declaration"
+  },
+  "Private constructor": {
+    "prefix": "pcr",
+    "body": [
+      "Private Sub New()",
+      "    ${0}",
+      "End Sub"
+    ],
+    "description": "Private constructor declaration"
+  },
+  "Public constructor (with parameters)": {
+    "prefix": "cr_",
+    "body": [
+      "Public Sub New(${1:parameter As Object})",
+      "    ${0}",
+      "End Sub"
+    ],
+    "description": "Public constructor declaration (with parameters)"
+  },
+  "Friend constructor (with parameters)": {
+    "prefix": "icr_",
+    "body": [
+      "Friend Sub New(${1:parameter As Object})",
+      "    ${0}",
+      "End Sub"
+    ],
+    "description": "Friend constructor declaration (with parameters)"
+  },
+  "Private constructor (with parameters)": {
+    "prefix": "pcr_",
+    "body": [
+      "Private Sub New(${1:parameter As Object})",
+      "    ${0}",
+      "End Sub"
+    ],
+    "description": "Private constructor declaration (with parameters)"
+  },
+  "Public delegate": {
+    "prefix": "de",
+    "body": [
+      "Public Delegate Function ${1:DelegateName}${2:()} As ${3:void}${0}"
+    ],
+    "description": "Public delegate declaration"
+  },
+  "Friend delegate": {
+    "prefix": "ide",
+    "body": [
+      "Friend Delegate Function ${1:DelegateName}${2:()} As ${3:void}${0}"
+    ],
+    "description": "Friend delegate declaration"
+  },
+  "Private delegate": {
+    "prefix": "pde",
+    "body": [
+      "Private Delegate Function ${1:DelegateName}${2:()} As ${3:void}${0}"
+    ],
+    "description": "Private delegate declaration"
+  },
+  "Public delegate (with parameters)": {
+    "prefix": "de_",
+    "body": [
+      "Public Delegate Function ${1:DelegateName}(${2:parameter As Object}) As ${3:void}${0}"
+    ],
+    "description": "Public delegate declaration (with parameters)"
+  },
+  "Friend delegate (with parameters)": {
+    "prefix": "ide_",
+    "body": [
+      "Friend Delegate Function ${1:DelegateName}(${2:parameter As Object}) As ${3:void}${0}"
+    ],
+    "description": "Friend delegate declaration (with parameters)"
+  },
+  "Private delegate (with parameters)": {
+    "prefix": "pde_",
+    "body": [
+      "Private Delegate Function ${1:DelegateName}(${2:parameter As Object}) As ${3:void}${0}"
+    ],
+    "description": "Private delegate declaration (with parameters)"
+  },
+  "Public enum": {
+    "prefix": "em",
+    "body": [
+      "Public Enum ${1:EnumName}",
+      "    ${0}",
+      "End Enum"
+    ],
+    "description": "Public enum declaration"
+  },
+  "Friend enum": {
+    "prefix": "iem",
+    "body": [
+      "Friend Enum ${1:EnumName}",
+      "    ${0}",
+      "End Enum"
+    ],
+    "description": "Friend enum declaration"
+  },
+  "Private enum": {
+    "prefix": "pem",
+    "body": [
+      "Private Enum ${1:EnumName}",
+      "    ${0}",
+      "End Enum"
+    ],
+    "description": "Private enum declaration"
+  },
+  "Public event with EventHandler<T>": {
+    "prefix": "et",
+    "body": [
+      "Public Event ${1:EventName} As EventHandler(Of ${2:EventArgs})",
+      "",
+      "Protected Overridable Sub On${1}(${3:e} As ${2})",
+      "    RaiseEvent ${1}(Me, ${3})",
+      "End Sub${0}"
+    ],
+    "description": "Public event declaration with EventHandler<T>"
+  },
+  "Friend event with EventHandler<T>": {
+    "prefix": "iet",
+    "body": [
+      "Friend Event ${1:EventName} As EventHandler(Of ${2:EventArgs})",
+      "",
+      "Protected Overridable Sub On${1}(${3:e} As ${2})",
+      "    RaiseEvent ${1}(Me, ${3})",
+      "End Sub${0}"
+    ],
+    "description": "Friend event declaration with EventHandler<T>"
+  },
+  "Private event with EventHandler<T>": {
+    "prefix": "pet",
+    "body": [
+      "Private Event ${1:EventName} As EventHandler(Of ${2:EventArgs})",
+      "",
+      "Protected Overridable Sub On${1}(${3:e} As ${2})",
+      "    RaiseEvent ${1}(Me, ${3})",
+      "End Sub${0}"
+    ],
+    "description": "Private event declaration with EventHandler<T>"
+  },
+  "Public field": {
+    "prefix": "f",
+    "body": [
+      "Public ${1:FieldName} As ${2:T}${0}"
+    ],
+    "description": "Public field declaration"
+  },
+  "Private field": {
+    "prefix": "pf",
+    "body": [
+      "Private ${1:FieldName} As ${2:T}${0}"
+    ],
+    "description": "Private field declaration"
+  },
+  "Public Shared field": {
+    "prefix": "sf",
+    "body": [
+      "Public Shared ${1:FieldName} As ${2:T}${0}"
+    ],
+    "description": "Public Shared field declaration"
+  },
+  "Private Shared field": {
+    "prefix": "psf",
+    "body": [
+      "Private Shared ${1:FieldName} As ${2:T}${0}"
+    ],
+    "description": "Private Shared field declaration"
+  },
+  "IEnumerable(Of T) type": {
+    "prefix": "ge",
+    "body": [
+      "IEnumerable(Of ${1:T})${0}"
+    ],
+    "description": "IEnumerable(Of T) type declaration"
+  },
+  "if not TryParse": {
+    "prefix": "ifftp",
+    "body": [
+      "Dim ${1:x} As ${2:T}",
+      "If Not ${2}.TryParse(${3:value}, ${1})",
+      "    ${0}",
+      "End If"
+    ],
+    "description": "if statement with condition whether TryParse method returns false."
+  },
+  "if TryParse": {
+    "prefix": "iftp",
+    "body": [
+      "Dim ${1:x} As ${2:T}",
+      "If ${2}.TryParse(${3:value}, ${1})",
+      "    ${0}",
+      "End If"
+    ],
+    "description": "if statement with condition whether TryParse method returns true."
+  },
+  "Public indexer": {
+    "prefix": "ir",
+    "body": [
+      "Default Public Property Item(${1:ByVal index As Integer}) As ${2:T}",
+      "    Get",
+      "        ${0}",
+      "    End Get",
+      "    Set(ByVal Value As ${2})",
+      "    End Set",
+      "End Property"
+    ],
+    "description": "Public indexer declaration"
+  },
+  "Friend indexer": {
+    "prefix": "iir",
+    "body": [
+      "Default Friend Property Item(${1:ByVal index As Integer}) As ${2:T}",
+      "    Get",
+      "        ${0}",
+      "    End Get",
+      "    Set(ByVal Value As ${2})",
+      "    End Set",
+      "End Property"
+    ],
+    "description": "Friend indexer declaration"
+  },
+  "Private indexer": {
+    "prefix": "pir",
+    "body": [
+      "Default Private Property Item(${1:ByVal index As Integer}) As ${2:T}",
+      "    Get",
+      "        ${0}",
+      "    End Get",
+      "    Set(ByVal Value As ${2})",
+      "    End Set",
+      "End Property"
+    ],
+    "description": "Private indexer declaration"
+  },
+  "Public interface": {
+    "prefix": "ie",
+    "body": [
+      "Public Interface ${1:InterfaceName}",
+      "    ${0}",
+      "End Interface"
+    ],
+    "description": "Public interface declaration"
+  },
+  "Friend interface": {
+    "prefix": "iie",
+    "body": [
+      "Friend Interface ${1:InterfaceName}",
+      "    ${0}",
+      "End Interface"
+    ],
+    "description": "Friend interface declaration"
+  },
+  "Public method": {
+    "prefix": "m",
+    "body": [
+      "Public Function ${1:MethodName}${2:()} As ${3:void}",
+      "    ${0}",
+      "End Function"
+    ],
+    "description": "Public method declaration"
+  },
+  "Friend method": {
+    "prefix": "im",
+    "body": [
+      "Friend Function ${1:MethodName}${2:()} As ${3:void}",
+      "    ${0}",
+      "End Function"
+    ],
+    "description": "Friend method declaration"
+  },
+  "Private method": {
+    "prefix": "pm",
+    "body": [
+      "Private Function ${1:MethodName}${2:()} As ${3:void}",
+      "    ${0}",
+      "End Function"
+    ],
+    "description": "Private method declaration"
+  },
+  "Public Shared method": {
+    "prefix": "sm",
+    "body": [
+      "Public Shared Function ${1:MethodName}${2:()} As ${3:void}",
+      "    ${0}",
+      "End Function"
+    ],
+    "description": "Public Shared method declaration"
+  },
+  "Friend Shared method": {
+    "prefix": "ism",
+    "body": [
+      "Friend Shared Function ${1:MethodName}${2:()} As ${3:void}",
+      "    ${0}",
+      "End Function"
+    ],
+    "description": "Friend Shared method declaration"
+  },
+  "Private Shared method": {
+    "prefix": "psm",
+    "body": [
+      "Private Shared Function ${1:MethodName}${2:()} As ${3:void}",
+      "    ${0}",
+      "End Function"
+    ],
+    "description": "Private Shared method declaration"
+  },
+  "Public Overridable method": {
+    "prefix": "vm",
+    "body": [
+      "Public Overridable Function ${1:MethodName}${2:()} As ${3:void}",
+      "    ${0}",
+      "End Function"
+    ],
+    "description": "Public Overridable method declaration"
+  },
+  "Friend Overridable method": {
+    "prefix": "ivm",
+    "body": [
+      "Friend Overridable Function ${1:MethodName}${2:()} As ${3:void}",
+      "    ${0}",
+      "End Function"
+    ],
+    "description": "Friend Overridable method declaration"
+  },
+  "Public method (with parameters)": {
+    "prefix": "m_",
+    "body": [
+      "Public Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
+      "    ${0}",
+      "End Function"
+    ],
+    "description": "Public method declaration (with parameters)"
+  },
+  "Friend method (with parameters)": {
+    "prefix": "im_",
+    "body": [
+      "Friend Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
+      "    ${0}",
+      "End Function"
+    ],
+    "description": "Friend method declaration (with parameters)"
+  },
+  "Private method (with parameters)": {
+    "prefix": "pm_",
+    "body": [
+      "Private Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
+      "    ${0}",
+      "End Function"
+    ],
+    "description": "Private method declaration (with parameters)"
+  },
+  "Public Shared method (with parameters)": {
+    "prefix": "sm_",
+    "body": [
+      "Public Shared Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
+      "    ${0}",
+      "End Function"
+    ],
+    "description": "Public Shared method declaration (with parameters)"
+  },
+  "Friend Shared method (with parameters)": {
+    "prefix": "ism_",
+    "body": [
+      "Friend Shared Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
+      "    ${0}",
+      "End Function"
+    ],
+    "description": "Friend Shared method declaration (with parameters)"
+  },
+  "Private Shared method (with parameters)": {
+    "prefix": "psm_",
+    "body": [
+      "Private Shared Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
+      "    ${0}",
+      "End Function"
+    ],
+    "description": "Private Shared method declaration (with parameters)"
+  },
+  "Public Overridable method (with parameters)": {
+    "prefix": "vm_",
+    "body": [
+      "Public Overridable Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
+      "    ${0}",
+      "End Function"
+    ],
+    "description": "Public Overridable method declaration (with parameters)"
+  },
+  "Friend Overridable method (with parameters)": {
+    "prefix": "ivm_",
+    "body": [
+      "Friend Overridable Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
+      "    ${0}",
+      "End Function"
+    ],
+    "description": "Friend Overridable method declaration (with parameters)"
+  },
+  "Public module": {
+    "prefix": "me",
+    "body": [
+      "Public Module ${1:ModuleName}",
+      "    ${0}",
+      "End Module"
+    ],
+    "description": "Public module declaration"
+  },
+  "Friend module": {
+    "prefix": "ime",
+    "body": [
+      "Friend Module ${1:ModuleName}",
+      "    ${0}",
+      "End Module"
+    ],
+    "description": "Friend module declaration"
+  },
+  "new variable (with arguments)": {
+    "prefix": "vn_",
+    "body": [
+      "Dim ${1:x} = New ${2:Object}(${3:arguments})${0}"
+    ],
+    "description": "variable declaration with new object creation (with arguments)"
+  },
+  "new variable": {
+    "prefix": "vn",
+    "body": [
+      "Dim ${1:x} = New ${2:Object}()${0}"
+    ],
+    "description": "variable declaration with new object creation"
+  },
+  "parameter array ": {
+    "prefix": "pa",
+    "body": [
+      "ParamArray ${1:values} As ${2:T}()${0}"
+    ],
+    "description": "parameter array "
+  },
+  "Public read-only auto property": {
+    "prefix": "rp",
+    "body": [
+      "Public ReadOnly Property ${1:PropertyName} As ${2:T}${0}"
+    ],
+    "description": "Public read-only auto-implemented property declaration"
+  },
+  "Friend read-only auto property": {
+    "prefix": "irp",
+    "body": [
+      "Friend ReadOnly Property ${1:PropertyName} As ${2:T}${0}"
+    ],
+    "description": "Friend read-only auto-implemented property declaration"
+  },
+  "Private read-only auto property": {
+    "prefix": "prp",
+    "body": [
+      "Private ReadOnly Property ${1:PropertyName} As ${2:T}${0}"
+    ],
+    "description": "Private read-only auto-implemented property declaration"
+  },
+  "Public Shared read-only auto property": {
+    "prefix": "srp",
+    "body": [
+      "Public Shared ReadOnly Property ${1:PropertyName} As ${2:T}${0}"
+    ],
+    "description": "Public Shared read-only auto-implemented property declaration"
+  },
+  "Friend Shared read-only auto property": {
+    "prefix": "isrp",
+    "body": [
+      "Friend Shared ReadOnly Property ${1:PropertyName} As ${2:T}${0}"
+    ],
+    "description": "Friend Shared read-only auto-implemented property declaration"
+  },
+  "Private Shared read-only auto property": {
+    "prefix": "psrp",
+    "body": [
+      "Private Shared ReadOnly Property ${1:PropertyName} As ${2:T}${0}"
+    ],
+    "description": "Private Shared read-only auto-implemented property declaration"
+  },
+  "Public Overridable read-only auto property": {
+    "prefix": "vrp",
+    "body": [
+      "Public Overridable ReadOnly Property ${1:PropertyName} As ${2:T}${0}"
+    ],
+    "description": "Public Overridable read-only auto-implemented property declaration"
+  },
+  "Friend Overridable read-only auto property": {
+    "prefix": "ivrp",
+    "body": [
+      "Friend Overridable ReadOnly Property ${1:PropertyName} As ${2:T}${0}"
+    ],
+    "description": "Friend Overridable read-only auto-implemented property declaration"
+  },
+  "Public read-only field": {
+    "prefix": "rf",
+    "body": [
+      "Public ReadOnly ${1:FieldName} As ${2:T}${0}"
+    ],
+    "description": "Public read-only field declaration"
+  },
+  "Friend read-only field": {
+    "prefix": "irf",
+    "body": [
+      "Friend ReadOnly ${1:FieldName} As ${2:T}${0}"
+    ],
+    "description": "Friend read-only field declaration"
+  },
+  "Private read-only field": {
+    "prefix": "prf",
+    "body": [
+      "Private ReadOnly ${1:FieldName} As ${2:T}${0}"
+    ],
+    "description": "Private read-only field declaration"
+  },
+  "Public Shared read-only field": {
+    "prefix": "srf",
+    "body": [
+      "Public Shared ReadOnly ${1:FieldName} As ${2:T}${0}"
+    ],
+    "description": "Public Shared read-only field declaration"
+  },
+  "Friend Shared read-only field": {
+    "prefix": "isrf",
+    "body": [
+      "Friend Shared ReadOnly ${1:FieldName} As ${2:T}${0}"
+    ],
+    "description": "Friend Shared read-only field declaration"
+  },
+  "Private Shared read-only field": {
+    "prefix": "psrf",
+    "body": [
+      "Private Shared ReadOnly ${1:FieldName} As ${2:T}${0}"
+    ],
+    "description": "Private Shared read-only field declaration"
+  },
+  "Public read-only Property": {
+    "prefix": "rpp",
+    "body": [
+      "Public ReadOnly Property ${1:PropertyName} As ${2:T}",
+      "    Get",
+      "        Return ${3:value}",
+      "    End Get",
+      "End Property${0}"
+    ],
+    "description": "Public read-only property declaration"
+  },
+  "Friend read-only Property": {
+    "prefix": "irpp",
+    "body": [
+      "Friend ReadOnly Property ${1:PropertyName} As ${2:T}",
+      "    Get",
+      "        Return ${3:value}",
+      "    End Get",
+      "End Property${0}"
+    ],
+    "description": "Friend read-only property declaration"
+  },
+  "Private read-only Property": {
+    "prefix": "prpp",
+    "body": [
+      "Private ReadOnly Property ${1:PropertyName} As ${2:T}",
+      "    Get",
+      "        Return ${3:value}",
+      "    End Get",
+      "End Property${0}"
+    ],
+    "description": "Private read-only property declaration"
+  },
+  "Public Shared read-only Property": {
+    "prefix": "srpp",
+    "body": [
+      "Public Shared ReadOnly Property ${1:PropertyName} As ${2:T}",
+      "    Get",
+      "        Return ${3:value}",
+      "    End Get",
+      "End Property${0}"
+    ],
+    "description": "Public Shared read-only property declaration"
+  },
+  "Friend Shared read-only Property": {
+    "prefix": "isrpp",
+    "body": [
+      "Friend Shared ReadOnly Property ${1:PropertyName} As ${2:T}",
+      "    Get",
+      "        Return ${3:value}",
+      "    End Get",
+      "End Property${0}"
+    ],
+    "description": "Friend Shared read-only property declaration"
+  },
+  "Private Shared read-only Property": {
+    "prefix": "psrpp",
+    "body": [
+      "Private Shared ReadOnly Property ${1:PropertyName} As ${2:T}",
+      "    Get",
+      "        Return ${3:value}",
+      "    End Get",
+      "End Property${0}"
+    ],
+    "description": "Private Shared read-only property declaration"
+  },
+  "Public Overridable read-only Property": {
+    "prefix": "vrpp",
+    "body": [
+      "Public Overridable ReadOnly Property ${1:PropertyName} As ${2:T}",
+      "    Get",
+      "        Return ${3:value}",
+      "    End Get",
+      "End Property${0}"
+    ],
+    "description": "Public Overridable read-only property declaration"
+  },
+  "Friend Overridable read-only Property": {
+    "prefix": "ivrpp",
+    "body": [
+      "Friend Overridable ReadOnly Property ${1:PropertyName} As ${2:T}",
+      "    Get",
+      "        Return ${3:value}",
+      "    End Get",
+      "End Property${0}"
+    ],
+    "description": "Friend Overridable read-only property declaration"
+  },
+  "Public structure": {
+    "prefix": "st",
+    "body": [
+      "Public Structure ${1:StructName}",
+      "    ${0}",
+      "End Structure"
+    ],
+    "description": "Public structure declaration"
+  },
+  "Friend structure": {
+    "prefix": "ist",
+    "body": [
+      "Friend Structure ${1:StructName}",
+      "    ${0}",
+      "End Structure"
+    ],
+    "description": "Friend structure declaration"
+  },
+  "Private structure": {
+    "prefix": "pst",
+    "body": [
+      "Private Structure ${1:StructName}",
+      "    ${0}",
+      "End Structure"
+    ],
+    "description": "Private structure declaration"
+  },
+  " type parameter": {
+    "prefix": "g",
+    "body": [
+      "(Of ${1:T})${0}"
+    ],
+    "description": " type parameter"
+  },
+  "interface indexer": {
+    "prefix": "_ir",
+    "body": [
+      "Default Property Item(${1:int index}) As ${2:T}${0}"
+    ],
+    "description": "interface indexer"
+  },
+  "interface method": {
+    "prefix": "_m",
+    "body": [
+      "Function ${1:MethodName}${2:()} As ${3:void};${0}"
+    ],
+    "description": "interface method"
+  },
+  "interface method (with parameters)": {
+    "prefix": "_m_",
+    "body": [
+      "Function ${1:MethodName}(${2:parameter As Object}) As ${3:void};${0}"
+    ],
+    "description": "interface method (with parameters)"
+  },
+  "interface property": {
+    "prefix": "_p",
+    "body": [
+      "Property ${1:PropertyName} As ${2:T}${0}"
+    ],
+    "description": "interface property"
+  },
+  "interface read-only property": {
+    "prefix": "_rp",
+    "body": [
+      "ReadOnly Property ${1:PropertyName} As ${2:T}${0}"
+    ],
+    "description": "interface read-only property"
+  },
+  "Attribute class": {
+    "prefix": "c_Attribute",
+    "body": [
+      "<AttributeUsage(AttributeTargets${1:.All}, AllowMultiple:=${2:False})>",
+      "${3:Public NotInheritable} Class ${4:My}Attribute",
+      "    Inherits ${5:Attribute}",
+      "    ${0}",
+      "End Class"
+    ],
+    "description": "class derived from Attribute"
+  },
+  "Boolean variable": {
+    "prefix": "vb",
+    "body": [
+      "Dim ${1:f} As Boolean = ${2:False}${0}"
+    ],
+    "description": "Boolean variable declaration"
+  },
+  "Catch clause": {
+    "prefix": "catch",
+    "body": [
+      "Catch ${1:ex} As ${2:Exception}",
+      "    ${0}"
+    ],
+    "description": "Catch clause"
+  },
+  "Collection(Of T) class": {
+    "prefix": "c_CollectionOfT",
+    "body": [
+      "${1:Public} Class ${2:Collection}",
+      "    Inherits Collection(Of ${3:Object})",
+      "",
+      "    Public Sub New()",
+      "    End Sub",
+      "",
+      "    Public Sub New(list As IList(Of ${3}))",
+      "        MyBase.New(list)",
+      "    End Sub",
+      "    ${0}",
+      "",
+      "End Class"
+    ],
+    "description": "class derived from Collection(Of T)"
+  },
+  "Containing type name": {
+    "prefix": "this",
+    "body": [
+      "${1:ThisName}${0}"
+    ],
+    "description": "Containing type name"
+  },
+  "CType operator": {
+    "prefix": "t",
+    "body": [
+      "CType(${1:x}, ${2:Object})${0}"
+    ],
+    "description": "CType operator"
+  },
+  "DateTime type": {
+    "prefix": "dt",
+    "body": [
+      "DateTime${0}"
+    ],
+    "description": "DateTime type declaration"
+  },
+  "Debug.Assert": {
+    "prefix": "da",
+    "body": [
+      "Debug.Assert(${1:False}, ${2:\"\"})${0}"
+    ],
+    "description": "Debug.Assert method"
+  },
+  "Debug.WriteLine": {
+    "prefix": "dw",
+    "body": [
+      "Debug.WriteLine(${1:\"\"})${0}"
+    ],
+    "description": "Debug.WriteLine method"
+  },
+  "Dictionary(Of TKey, TValue) class": {
+    "prefix": "c_DictionaryOfTKeyTValue",
+    "body": [
+      "${1:Public} Class ${2:Dictionary}",
+      "    Inherits Dictionary(Of ${3:Object}, ${4:Object})",
+      "",
+      "    Public Sub New()",
+      "        MyBase.New()",
+      "    End Sub",
+      "",
+      "    Public Sub New(capacity As Integer)",
+      "        MyBase.New(capacity)",
+      "    End Sub",
+      "",
+      "    Public Sub New(comparer As IEqualityComparer(Of ${3}))",
+      "        MyBase.New(comparer)",
+      "    End Sub",
+      "",
+      "    Public Sub New(dictionary As IDictionary(Of ${3}, ${4}))",
+      "        MyBase.New(dictionary)",
+      "    End Sub",
+      "",
+      "    Public Sub New(capacity As Integer, comparer As IEqualityComparer(Of ${3}))",
+      "        MyBase.New(capacity, comparer)",
+      "    End Sub",
+      "",
+      "    Public Sub New(info As SerializationInfo, context As StreamingContext)",
+      "        MyBase.New(info, context)",
+      "    End Sub",
+      "",
+      "    Public Sub New(dictionary As IDictionary(Of ${3}, ${4}), comparer As IEqualityComparer(Of ${3}))",
+      "        MyBase.New(dictionary, comparer)",
+      "    End Sub",
+      "",
+      "    ${0}",
+      "End Class"
+    ],
+    "description": "class derived from Dictionary(Of TKey, TValue)"
+  },
+  "Dictionary(Of TKey, TValue) type": {
+    "prefix": "gd",
+    "body": [
+      "Dictionary(Of ${1:Object}, ${2:Object})${0}"
+    ],
+    "description": "Dictionary(Of TKey, TValue) type declaration"
+  },
+  "Disposable class": {
+    "prefix": "c_Disposable",
+    "body": [
+      "${1:Public} Class ${2:ClassName}",
+      "    Implements IDisposable",
+      "",
+      "    Private _disposed As Boolean",
+      "",
+      "    Public Sub Dispose() Implements IDisposable.Dispose",
+      "",
+      "        Dispose(True)",
+      "        GC.SuppressFinalize(Me)",
+      "",
+      "    End Sub",
+      "",
+      "    Protected Overridable Sub Dispose(disposing As Boolean)",
+      "",
+      "        If Not _disposed Then",
+      "",
+      "            If disposing Then",
+      "                Throw New NotImplementedException()",
+      "            End If",
+      "",
+      "            _disposed = True",
+      "",
+      "        End If",
+      "",
+      "    End Sub",
+      "",
+      "End Class${0}"
+    ],
+    "description": "class that implements IDisposable interface"
+  },
+  "Dispose": {
+    "prefix": "dispose",
+    "body": [
+      "Private _disposed As Boolean",
+      "",
+      "Public Sub Dispose()",
+      "",
+      "    Dispose(True)",
+      "    GC.SuppressFinalize(Me)",
+      "",
+      "End Sub",
+      "",
+      "Protected Overridable Sub Dispose(disposing As Boolean)",
+      "",
+      "    If Not _disposed Then",
+      "        If disposing Then",
+      "            Throw New NotImplementedException()",
+      "        End If",
+      "        _disposed = True",
+      "    End If",
+      "",
+      "End Sub${0}"
+    ],
+    "description": "Dispose pattern"
+  },
+  "Do statement": {
+    "prefix": "do",
+    "body": [
+      "Do",
+      "    ${0}",
+      "Loop"
+    ],
+    "description": "Do statement"
+  },
+  "Else clause": {
+    "prefix": "e",
+    "body": [
+      "Else",
+      "    ${0}"
+    ],
+    "description": "Else clause"
+  },
+  "ElseIf": {
+    "prefix": "eif",
+    "body": [
+      "ElseIf ${1:True} Then",
+      "    ${0}"
+    ],
+    "description": "ElseIf statement"
+  },
+  "Equals and GetHashCode": {
+    "prefix": "equals",
+    "body": [
+      "Public Overrides Function Equals(obj As object) As Boolean",
+      "",
+      "    Dim other = Nothing",
+      "    If TryCast(other, ${1:ThisName}) Is Nothing Then",
+      "        Return False",
+      "    End If",
+      "",
+      "    ${0}",
+      "    Throw New NotImplementedException()",
+      "",
+      "End Function",
+      "",
+      "Public Overrides Function GetHashCode() As Integer",
+      "    Throw New NotImplementedException()",
+      "End Function"
+    ],
+    "description": "overriding Equals and GetHashCode methods"
+  },
+  "Exception class": {
+    "prefix": "c_Exception",
+    "body": [
+      "<Serializable>",
+      "${1:Public} Class ${2:My}Exception",
+      "    Inherits ${3:Exception}",
+      "",
+      "    Public Sub New()",
+      "    End Sub",
+      "",
+      "    Public Sub New(message As String)",
+      "        MyBase.New(message)",
+      "    End Sub",
+      "",
+      "    Public Sub New(message As String, inner As Exception)",
+      "        MyBase.New(message, inner)",
+      "    End Sub",
+      "",
+      "    Protected Sub New(info As SerializationInfo, context As StreamingContext)",
+      "        MyBase.New(info, context)",
+      "    End Sub${0}",
+      "",
+      "End Class"
+    ],
+    "description": "class derived from Exception"
+  },
+  "For statement": {
+    "prefix": "fr",
+    "body": [
+      "For ${1:i} = 0 To ${2:length} - 1",
+      "    ${0}",
+      "Next"
+    ],
+    "description": "For statement"
+  },
+  "For Each statement": {
+    "prefix": "fe",
+    "body": [
+      "For Each ${1:item} In ${2:items}",
+      "    ${0}",
+      "Next"
+    ],
+    "description": "For Each statement"
+  },
+  "For (reversed)": {
+    "prefix": "frr",
+    "body": [
+      "For ${1:i} = ${2:length} - 1 To 0 Step -1",
+      "    ${0}",
+      "Next"
+    ],
+    "description": "For statement (reversed)"
+  },
+  "GetType": {
+    "prefix": "gt",
+    "body": [
+      "GetType(${1:Object})${0}"
+    ],
+    "description": "GetType operator"
+  },
+  "IComparer class": {
+    "prefix": "c_IComparer",
+    "body": [
+      "${1:Public} Class ${2:Comparer}",
+      "    Implements IComparer",
+      "",
+      "    Public Function Compare(x As Object, y As Object) As Integer Implements IComparer.Compare",
+      "",
+      "        If Object.ReferenceEquals(x, y) Then",
+      "            Return 0",
+      "        End If",
+      "",
+      "        If x Is Nothing Then",
+      "            Return IIf(y Is Nothing, 0, -1)",
+      "        End If",
+      "",
+      "        If y Is Nothing Then",
+      "            Return 1",
+      "        End If",
+      "",
+      "        Dim a = CType(x, ${3:Object})",
+      "        Dim b = CType(y, ${3})",
+      "",
+      "        ${0}",
+      "        Throw New NotImplementedException()",
+      "",
+      "    End Function",
+      "",
+      "End Class"
+    ],
+    "description": "class that implements IComparer"
+  },
+  "IComparer(Of T) class": {
+    "prefix": "c_IComparerOfT",
+    "body": [
+      "${1:Public} Class ${2:Collection}",
+      "    Implements IComparer(Of ${3:Object})",
+      "",
+      "    Public Function Compare(x As ${3}, y As ${3}) As Integer Implements IComparer(Of ${3}).Compare",
+      "",
+      "        If Object.ReferenceEquals(x, y) Then",
+      "            Return 0",
+      "        End If",
+      "",
+      "        If x Is Nothing Then",
+      "            Return -1",
+      "        End If",
+      "",
+      "        If y Is Nothing Then",
+      "            Return 1",
+      "        End If",
+      "",
+      "        ${0}",
+      "        Throw New NotImplementedException()",
+      "",
+      "    End Function",
+      "",
+      "End Class"
+    ],
+    "description": "class that implements IComparer(Of T)"
+  },
+  "IEnumerator(Of T) variable": {
+    "prefix": "u_er",
+    "body": [
+      "Using ${1:en} = ${2:items}.GetEnumerator()",
+      "    While ${1}.MoveNext()",
+      "        ${0}",
+      "    End While",
+      "End Using"
+    ],
+    "description": "IEnumerator(Of T) variable declaration."
+  },
+  "IEqualityComparer class": {
+    "prefix": "c_IEqualityComparer",
+    "body": [
+      "${1:Public} Class ${2:EqualityComparer}",
+      "    Implements IEqualityComparer",
+      "",
+      "    Public Shadows Function Equals(x As Object, y As Object) As Boolean Implements IEqualityComparer.Equals",
+      "",
+      "        If Object.ReferenceEquals(x, y) Then",
+      "            Return True",
+      "        End If",
+      "",
+      "        If x Is Nothing OrElse y Is Nothing Then",
+      "            Return False",
+      "        End If",
+      "",
+      "        Dim a = CType(x, ${3:Object})",
+      "        Dim b = CType(y, ${3})",
+      "",
+      "        ${0}",
+      "        Throw New NotImplementedException()",
+      "",
+      "    End Function",
+      "",
+      "    Public Shadows Function GetHashCode(obj As Object) As Integer Implements IEqualityComparer.GetHashCode",
+      "",
+      "        If obj Is Nothing Then",
+      "            Return 0",
+      "        End If",
+      "",
+      "        Throw New NotImplementedException()",
+      "",
+      "    End Function",
+      "",
+      "End Class"
+    ],
+    "description": "class that implements IEqualityComparer"
+  },
+  "IEqualityComparer(Of T) class": {
+    "prefix": "c_IEqualityComparerOfT",
+    "body": [
+      "${1:Public} Class ${2:EqualityComparer}",
+      "    Inherits EqualityComparer(Of ${3:Object})",
+      "",
+      "    Public Overrides Function Equals(x As ${3}, y As ${3}) As Boolean",
+      "",
+      "        If Object.ReferenceEquals(x, y) Then",
+      "            Return True",
+      "        End If",
+      "",
+      "        If x Is Nothing OrElse y Is Nothing Then",
+      "            Return False",
+      "        End If",
+      "",
+      "        ${0}",
+      "        Throw New NotImplementedException()",
+      "",
+      "    End Function",
+      "",
+      "    Public Overrides Function GetHashCode(obj As ${3}) As Integer",
+      "",
+      "        If obj Is Nothing Then",
+      "            Return 0",
+      "        End If",
+      "",
+      "        Throw New NotImplementedException()",
+      "",
+      "    End Function",
+      "",
+      "End Class"
+    ],
+    "description": "class that implements IEqualityComparer(Of T)"
+  },
+  "If Is Nothing": {
+    "prefix": "ifn",
+    "body": [
+      "If ${1:x} Is Nothing Then",
+      "    ${0}",
+      "End If"
+    ],
+    "description": "If Is Nothing"
+  },
+  "If IsNot Nothing": {
+    "prefix": "ifnn",
+    "body": [
+      "If ${1:x} IsNot Nothing Then",
+      "    ${0}",
+      "End If"
+    ],
+    "description": "If IsNot Nothing"
+  },
+  "If Not": {
+    "prefix": "iff",
+    "body": [
+      "If Not ${1:x} Then",
+      "    ${0}",
+      "End If"
+    ],
+    "description": "If statement with condition whether the expression is equal to false"
+  },
+  "If TryCast Is Nothing": {
+    "prefix": "ifftc",
+    "body": [
+      "Dim ${1:x} = Nothing",
+      "    If TryCast(${1}, ${2:Object}) Is Nothing Then",
+      "        ${0}",
+      "    End If"
+    ],
+    "description": "If TryCast Is Nothing"
+  },
+  "If TryCast IsNot Nothing": {
+    "prefix": "iftc",
+    "body": [
+      "Dim ${1:x} = Nothing",
+      "    If TryCast(${1}, ${2:Object}) IsNot Nothing Then",
+      "        ${0}",
+      "    End If"
+    ],
+    "description": "If TryCast IsNot Nothing"
+  },
+  "Int32 variable": {
+    "prefix": "vi",
+    "body": [
+      "Dim ${1:i} As Integer = ${2:0}${0}"
+    ],
+    "description": "Int32 variable declaration"
+  },
+  "Is Nothing": {
+    "prefix": "n",
+    "body": [
+      "${1:x} Is Nothing${0}"
+    ],
+    "description": "A condition whether the expression is Nothing"
+  },
+  "IsNot Nothing": {
+    "prefix": "nn",
+    "body": [
+      "${1:x} IsNot Nothing${0}"
+    ],
+    "description": "A condition whether the expression is not Nothing"
+  },
+  "Lambda expression": {
+    "prefix": "l",
+    "body": [
+      "Function(${1:f}) ${0}"
+    ],
+    "description": "Lambda expression"
+  },
+  "NameOf operator": {
+    "prefix": "no",
+    "body": [
+      "NameOf(${1:value})${0}"
+    ],
+    "description": "Nameof operator"
+  },
+  "ObservableCollection(Of T) class": {
+    "prefix": "c_ObservableCollectionOfT",
+    "body": [
+      "${1:Public} Class ${2:Collection}",
+      "    Inherits ObservableCollection(Of ${3:Object})",
+      "",
+      "    Public Sub New()",
+      "    End Sub",
+      "",
+      "    Public Sub New(collection As IEnumerable(Of ${3}))",
+      "        MyBase.New(collection)",
+      "    End Sub",
+      "",
+      "    Public Sub New(list As IList(Of ${3}))",
+      "        MyBase.New(list)",
+      "    End Sub",
+      "",
+      "    ${0}",
+      "End Class"
+    ],
+    "description": "class derived from ObservableCollection(Of T)"
+  },
+  "& operator overload": {
+    "prefix": "oo_Ampersand",
+    "body": [
+      "Public Shared Operator &(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
+      "    ${0}",
+      "End Operator"
+    ],
+    "description": "& operator overload"
+  },
+  "And operator overload": {
+    "prefix": "oo_And",
+    "body": [
+      "Public Shared Operator And(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
+      "    ${0}",
+      "End Operator"
+    ],
+    "description": "And operator overload"
+  },
+  "* operator overload": {
+    "prefix": "oo_Asterisk",
+    "body": [
+      "Public Shared Operator *(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
+      "    ${0}",
+      "End Operator"
+    ],
+    "description": "* operator overload"
+  },
+  "\\ operator overload": {
+    "prefix": "oo_Backslash",
+    "body": [
+      "Public Shared Operator \\(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
+      "    ${0}",
+      "End Operator"
+    ],
+    "description": "\\ operator overload"
+  },
+  "^ operator overload": {
+    "prefix": "oo_Caret",
+    "body": [
+      "Public Shared Operator ^(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
+      "    ${0}",
+      "End Operator"
+    ],
+    "description": "^ operator overload"
+  },
+  "CType operator overload": {
+    "prefix": "oo_CType",
+    "body": [
+      "Public Shared Widening Operator CType(ByVal ${1:value} As ${2:ThisName}) As ${3:Object}",
+      "    ${0}",
+      "End Operator",
+      "",
+      "Public Shared Narrowing Operator CType(ByVal ${1} As ${3}) As ${2}",
+      "End Operator"
+    ],
+    "description": "CType operator overload"
+  },
+  "= operator overload": {
+    "prefix": "oo_Equals",
+    "body": [
+      "Public Shared Operator =(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
+      "    ${0}",
+      "End Operator",
+      "",
+      "Public Shared Operator <>(${1} As ${2}, ${3} As ${2})",
+      "    Return Not(${1} = ${3})",
+      "End Operator"
+    ],
+    "description": "= operator overload"
+  },
+  "> operator overload": {
+    "prefix": "oo_GreaterThan",
+    "body": [
+      "Public Shared Operator >(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
+      "    ${0}",
+      "End Operator",
+      "",
+      "Public Shared Operator <(${1} As ${2}, ${3} As ${2})",
+      "End Operator"
+    ],
+    "description": "> operator overload"
+  },
+  ">> operator overload": {
+    "prefix": "oo_GreaterThanGreaterThan",
+    "body": [
+      "Public Shared Operator >>(${1:left} As ${2:ThisName}, ${3:count} As Integer)",
+      "    ${0}",
+      "End Operator"
+    ],
+    "description": ">> operator overload"
+  },
+  ">= operator overload": {
+    "prefix": "oo_GreaterThanEquals",
+    "body": [
+      "Public Shared Operator >=(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
+      "    ${0}",
+      "End Operator",
+      "",
+      "Public Shared Operator <=(${1} As ${2}, ${3} As ${2})",
+      "End Operator"
+    ],
+    "description": ">= operator overload"
+  },
+  "IsFalse operator overload": {
+    "prefix": "oo_IsFalse",
+    "body": [
+      "Public Shared Operator IsTrue(${1:value} As ${2:ThisName}) As Boolean",
+      "End Operator",
+      "",
+      "Public Shared Operator IsFalse(${1} As ${2}) As Boolean",
+      "    ${0}",
+      "End Operator"
+    ],
+    "description": "IsFalse operator overload"
+  },
+  "IsTrue operator overload": {
+    "prefix": "oo_IsTrue",
+    "body": [
+      "Public Shared Operator IsTrue(${1:value} As ${2:ThisName}) As Boolean",
+      "    ${0}",
+      "End Operator",
+      "",
+      "Public Shared Operator IsFalse(${1} As ${2}) As Boolean",
+      "End Operator"
+    ],
+    "description": "IsTrue operator overload"
+  },
+  "< operator overload": {
+    "prefix": "oo_LessThan",
+    "body": [
+      "Public Shared Operator <(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
+      "    ${0}",
+      "End Operator",
+      "",
+      "Public Shared Operator >(${1} As ${2}, ${3} As ${2})",
+      "End Operator"
+    ],
+    "description": "< operator overload"
+  },
+  "<< operator overload": {
+    "prefix": "oo_LessThanLessThan",
+    "body": [
+      "Public Shared Operator <<(${1:left} As ${2:ThisName}, ${3:count} As Integer)",
+      "    ${0}",
+      "End Operator"
+    ],
+    "description": "<< operator overload"
+  },
+  "<= operator overload": {
+    "prefix": "oo_LessThanEquals",
+    "body": [
+      "Public Shared Operator <=(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
+      "    ${0}",
+      "End Operator",
+      "",
+      "Public Shared Operator >=(${1} As ${2}, ${3} As ${2})",
+      "End Operator"
+    ],
+    "description": "<= operator overload"
+  },
+  "Like operator overload": {
+    "prefix": "oo_Like",
+    "body": [
+      "Public Shared Operator Like(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
+      "    ${0}",
+      "End Operator"
+    ],
+    "description": "Like operator overload"
+  },
+  "- operator overload": {
+    "prefix": "oo_Minus",
+    "body": [
+      "Public Shared Operator -(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
+      "    ${0}",
+      "End Operator"
+    ],
+    "description": "- operator overload"
+  },
+  "Mod operator overload": {
+    "prefix": "oo_Mod",
+    "body": [
+      "Public Shared Operator Mod(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
+      "    ${0}",
+      "End Operator"
+    ],
+    "description": "Mod operator overload"
+  },
+  "Not operator overload": {
+    "prefix": "oo_Not",
+    "body": [
+      "Public Shared Operator Not(${1:value} As ${2:ThisName})",
+      "    ${0}",
+      "End Operator"
+    ],
+    "description": "Not operator overload"
+  },
+  "Or operator overload": {
+    "prefix": "oo_Or",
+    "body": [
+      "Public Shared Operator Or(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
+      "    ${0}",
+      "End Operator"
+    ],
+    "description": "Or operator overload"
+  },
+  "+ operator overload": {
+    "prefix": "oo_Plus",
+    "body": [
+      "Public Shared Operator +(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
+      "    ${0}",
+      "End Operator"
+    ],
+    "description": "+ operator overload"
+  },
+  "/ operator overload": {
+    "prefix": "oo_Slash",
+    "body": [
+      "Public Shared Operator /(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
+      "    ${0}",
+      "End Operator"
+    ],
+    "description": "/ operator overload"
+  },
+  "Xor operator overload": {
+    "prefix": "oo_Xor",
+    "body": [
+      "Public Shared Operator Xor(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
+      "    ${0}",
+      "End Operator"
+    ],
+    "description": "Xor operator overload"
+  },
+  "#If preprocessor directive": {
+    "prefix": "ppif",
+    "body": [
+      "#If ${1:DEBUG} Then",
+      "    ${0}",
+      "#End If"
+    ],
+    "description": "#If preprocessor directive"
+  },
+  "#If #Else preprocessor directive": {
+    "prefix": "ppife",
+    "body": [
+      "#If ${1:DEBUG} Then",
+      "    ${0}",
+      "#Else",
+      "",
+      "#End If"
+    ],
+    "description": "#If #Else preprocessor directives"
+  },
+  "#Region preprocessor directive": {
+    "prefix": "ppr",
+    "body": [
+      "#Region \"${1:RegionName}\"",
+      "    ${0}",
+      "#End Region"
+    ],
+    "description": "#Region preprocessor directive"
+  },
+  "ReadOnlyCollection(Of T) class": {
+    "prefix": "c_ReadOnlyCollectionOfT",
+    "body": [
+      "${1:Public} Class ${2:Collection}",
+      "    Inherits ReadOnlyCollection(Of ${3:Object})",
+      "",
+      "    Public Sub New(list As IList(Of ${3}))",
+      "        MyBase.New(list)",
+      "    End Sub",
+      "",
+      "    ${0}",
+      "End Class"
+    ],
+    "description": "class derived from ReadOnlyCollection(Of T)"
+  },
+  "Return False": {
+    "prefix": "ref",
+    "body": [
+      "Return False${0}"
+    ],
+    "description": "Return False"
+  },
+  "Return Nothing": {
+    "prefix": "ren",
+    "body": [
+      "Return Nothing${0}"
+    ],
+    "description": "Return Nothing"
+  },
+  "Return True": {
+    "prefix": "ret",
+    "body": [
+      "Return True${0}"
+    ],
+    "description": "Return True"
+  },
+  "Select Case statement": {
+    "prefix": "sc",
+    "body": [
+      "Select Case ${1:expression}",
+      "    ${0}",
+      "End Select"
+    ],
+    "description": "Select Case statement"
+  },
+  "singleton class": {
+    "prefix": "c_Singleton",
+    "body": [
+      "${1:Public NotInheritable} Class ${2:ClassName}",
+      "",
+      "    Private Sub New()",
+      "    End Sub",
+      "",
+      "    Public Shared ReadOnly Property Instance As ${2} = ${3:value}",
+      "",
+      "  End Class${0}"
+    ],
+    "description": "class that implements singleton pattern"
+  },
+  "static constructor": {
+    "prefix": "scr",
+    "body": [
+      "Shared Sub New()",
+      "    ${0}",
+      "End Sub"
+    ],
+    "description": "static constructor"
+  },
+  "StreamReader Variable": {
+    "prefix": "u_smrr",
+    "body": [
+      "Using ${1:sr} = New StreamReader(${2:stream})",
+      "    ${0}",
+      "End Using"
+    ],
+    "description": "StreamReader variable declaration."
+  },
+  "StreamWriter Variable": {
+    "prefix": "u_smwr",
+    "body": [
+      "Using ${1:sw} = New StreamWriter(${2:path}, ${3:Encoding.UTF8})",
+      "    ${0}",
+      "End Using"
+    ],
+    "description": "StreamWriter variable declaration."
+  },
+  "String.IsNullOrEmpty = False": {
+    "prefix": "snne",
+    "body": [
+      "String.IsNullOrEmpty(${1:s}) = False${0}"
+    ],
+    "description": "String.IsNullOrEmpty = False"
+  },
+  "String.IsNullOrWhiteSpace = False": {
+    "prefix": "snnw",
+    "body": [
+      "String.IsNullOrWhiteSpace(${1:s}) = False${0}"
+    ],
+    "description": "String.IsNullOrWhiteSpace = False"
+  },
+  "String.IsNullOrEmpty": {
+    "prefix": "sne",
+    "body": [
+      "String.IsNullOrEmpty(${1:s})${0}"
+    ],
+    "description": "String.IsNullOrEmpty method"
+  },
+  "String.IsNullOrWhiteSpace": {
+    "prefix": "snw",
+    "body": [
+      "String.IsNullOrWhiteSpace(${1:s})${0}"
+    ],
+    "description": "String.IsNullOrWhiteSpace method"
+  },
+  "StringReader Variable": {
+    "prefix": "u_srr",
+    "body": [
+      "Using ${1:sr} = new StringReader(${2:s})",
+      "    ${0}",
+      "End Using"
+    ],
+    "description": "StringReader variable declaration."
+  },
+  "String variable": {
+    "prefix": "vs",
+    "body": [
+      "Dim ${1:s} As String = ${2:Nothing}${0}"
+    ],
+    "description": "String variable declaration"
+  },
+  "StringWriter Variable": {
+    "prefix": "u_swr",
+    "body": [
+      "Using ${1:sw} = new StringWriter()",
+      "    ${0}",
+      "End Using"
+    ],
+    "description": "StringWriter variable declaration."
+  },
+  "Throw New": {
+    "prefix": "twn_-",
+    "body": [
+      "Throw New${0}"
+    ],
+    "description": "Throw New"
+  },
+  "Throw New ArgumentException": {
+    "prefix": "twn_ae",
+    "body": [
+      "Throw New ArgumentException(${1:\"\"}, NameOf(${2:parameter}))${0}"
+    ],
+    "description": "Throw New ArgumentException"
+  },
+  "Throw New ArgumentNullException": {
+    "prefix": "twn_ane",
+    "body": [
+      "Throw New ArgumentNullException(NameOf(${1:parameter}))${0}"
+    ],
+    "description": "Throw New ArgumentNullException"
+  },
+  "Throw New ArgumentOutOfRangeException": {
+    "prefix": "twn_aoore",
+    "body": [
+      "Throw New ArgumentOutOfRangeException(NameOf(${1:parameter}), ${1}, ${2:\"\"})${0}"
+    ],
+    "description": "Throw New ArgumentOutOfRangeException"
+  },
+  "Throw New InvalidCastException": {
+    "prefix": "twn_ice",
+    "body": [
+      "Throw New InvalidCastException(${1:\"\"})${0}"
+    ],
+    "description": "Throw New InvalidCastException"
+  },
+  "Throw New InvalidOperationException": {
+    "prefix": "twn_ioe",
+    "body": [
+      "Throw New InvalidOperationException(${1:message})${0}"
+    ],
+    "description": "Throw New InvalidOperationException"
+  },
+  "Throw New NotImplementedException": {
+    "prefix": "twn_nie",
+    "body": [
+      "Throw New NotImplementedException(${1:message})${0}"
+    ],
+    "description": "Throw New NotImplementedException"
+  },
+  "Throw New NotSupportedException": {
+    "prefix": "twn_nse",
+    "body": [
+      "Throw New NotSupportedException(${1:message})${0}"
+    ],
+    "description": "Throw New NotSupportedException"
+  },
+  "TODO comment": {
+    "prefix": "td",
+    "body": [
+      "'TODO: ${0}"
+    ],
+    "description": "TODO comment"
+  },
+  "Try-Catch": {
+    "prefix": "tc",
+    "body": [
+      "Try",
+      "    ${0}",
+      "Catch ${1:ex} as ${2:Exception}",
+      "    Throw",
+      "End Try"
+    ],
+    "description": "Try-Catch statement"
+  },
+  "Try-Catch-Finally": {
+    "prefix": "tcf",
+    "body": [
+      "Try",
+      "    ${0}",
+      "Catch ${1:ex} as ${2:Exception}",
+      "    Throw",
+      "Finally",
+      "End Try"
+    ],
+    "description": "Try-Catch-Finally statement"
+  },
+  "Try-Finally": {
+    "prefix": "tf",
+    "body": [
+      "Try",
+      "    ${0}",
+      "Finally",
+      "End Try"
+    ],
+    "description": "Try-Finally statement"
+  },
+  "Using statement": {
+    "prefix": "u_-",
+    "body": [
+      "Using ${1:disposable}",
+      "    ${0}",
+      "End Using"
+    ],
+    "description": "Using statement"
+  },
+  "variable declaration": {
+    "prefix": "v",
+    "body": [
+      "Dim ${1:x} = ${2:expression}${0}"
+    ],
+    "description": "variable declaration"
+  },
+  "variable with DirectCast": {
+    "prefix": "vt",
+    "body": [
+      "Dim ${1:x} = DirectCast(${2:expression}, ${3:T})${0}"
+    ],
+    "description": "variable declaration with DirectCast"
+  },
+  "While statement": {
+    "prefix": "we",
+    "body": [
+      "While ${1:True}",
+      "    ${0}",
+      "End While"
+    ],
+    "description": "While statement"
+  },
+  "XmlReader Variable": {
+    "prefix": "u_xmlrr",
+    "body": [
+      "Using ${1:reader} = XmlReader.Create(${2:argument})",
+      "    ${0}",
+      "End Using"
+    ],
+    "description": "XmlReader variable declaration."
+  },
+  "XmlWriter Variable": {
+    "prefix": "u_xmlwr",
+    "body": [
+      "Using ${1:writer} = XmlWriter.Create(${2:argument})",
+      "    ${0}",
+      "End Using"
+    ],
+    "description": "XmlWriter variable declaration."
+  }
+}
