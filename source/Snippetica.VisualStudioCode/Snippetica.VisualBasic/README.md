@@ -88,36 +88,26 @@ Title | Shortcut
 [\#If \#Else preprocessor directive](PreprocessorDirectiveIfElse.snippet)|ppife
 [\#If preprocessor directive](PreprocessorDirectiveIf.snippet)|ppif
 [\#Region preprocessor directive](PreprocessorDirectiveRegion.snippet)|ppr
-[= operator overload](OperatorOverloadEquality.snippet)|oo\_Equals
 [array variable](ArrayOfTVariable.snippet)|va
-[Attribute class](AttributeClass.snippet)|c\_Attribute
 [Boolean variable](BooleanVariable.snippet)|vb
 [Catch clause](Catch.snippet)|catch
-[Collection\(Of T\) class](CollectionClass.snippet)|c\_CollectionOfT
 [Containing type name](ContainingTypeName.snippet)|this
 [CType operator](CTypeOperator.snippet)|t
 [DateTime type](DateTimeType.snippet)|dt
 [Debug\.Assert](DebugAssert.snippet)|da
 [Debug\.WriteLine](DebugWriteLine.snippet)|dw
-[Dictionary\(Of TKey, TValue\) class](DictionaryOfTKeyTValueClass.snippet)|c\_DictionaryOfTKeyTValue
 [Dictionary\(Of TKey, TValue\) type](DictionaryOfTKeyTValueType.snippet)|gd
-[Disposable class](DisposableClass.snippet)|c\_Disposable
 [Dispose](Dispose.snippet)|dispose
 [Do statement](Do.snippet)|do
 [Else clause](Else.snippet)|e
 [ElseIf](ElseIf.snippet)|eif
 [Equals and GetHashCode](EqualsAndGetHashCode.snippet)|equals
-[Exception class](ExceptionClass.snippet)|c\_Exception
 [For \(reversed\)](ForReversed.snippet)|frr
 [For Each statement](ForEach.snippet)|fe
 [For statement](For.snippet)|fr
 [GetType](GetTypeOperator.snippet)|gt
-[IComparer class](IComparerClass.snippet)|c\_IComparer
-[IComparer\(Of T\) class](IComparerOfTClass.snippet)|c\_IComparerOfT
 [IEnumerable\(Of T\) type](IEnumerableOfTType.snippet)|ge
 [IEnumerator\(Of T\) variable](IEnumeratorOfTVariable.snippet)|u\_er
-[IEqualityComparer class](IEqualityComparerClass.snippet)|c\_IEqualityComparer
-[IEqualityComparer\(Of T\) class](IEqualityComparerOfTClass.snippet)|c\_IEqualityComparerOfT
 [If Is Nothing](IfIsNothing.snippet)|ifn
 [If IsNot Nothing](IfIsNotNothing.snippet)|ifnn
 [if not TryParse](IfNotTryParse.snippet)|ifftp
@@ -135,7 +125,6 @@ Title | Shortcut
 [Lambda expression](LambdaExpression.snippet)|l
 [NameOf operator](NameOfOperator.snippet)|no
 [new variable](NewVariable.snippet)|vn
-[ObservableCollection\(Of T\) class](ObservableCollectionClass.snippet)|c\_ObservableCollectionOfT
 [parameter array ](ParameterArray.snippet)|pa
 [Public auto property](PublicAutoProperty.snippet)|p
 [Public class](PublicClass.snippet)|c
@@ -161,12 +150,10 @@ Title | Shortcut
 [Public Shared read\-only field](PublicStaticReadOnlyField.snippet)|srf
 [Public Shared read\-only Property](PublicStaticReadOnlyProperty.snippet)|srpp
 [Public structure](PublicStruct.snippet)|st
-[ReadOnlyCollection\(Of T\) class](ReadOnlyCollectionClass.snippet)|c\_ReadOnlyCollectionOfT
 [Return False](ReturnFalse.snippet)|ref
 [Return Nothing](ReturnNothing.snippet)|ren
 [Return True](ReturnTrue.snippet)|ret
 [Select Case statement](SelectCase.snippet)|sc
-[singleton class](SingletonClass.snippet)|c\_Singleton
 [static constructor](StaticConstructor.snippet)|scr
 [StreamReader Variable](StreamReaderVariable.snippet)|u\_smrr
 [StreamWriter Variable](StreamWriterVariable.snippet)|u\_smwr

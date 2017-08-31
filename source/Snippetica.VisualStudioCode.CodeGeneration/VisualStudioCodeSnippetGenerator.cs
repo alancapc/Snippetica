@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 using Pihrtsoft.Snippets;
 using Snippetica.CodeGeneration.Commands;
@@ -40,7 +41,7 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
             snippets.AddRange(XmlSnippetGenerator.GetResult(snippetDirectories).Snippets);
 
             foreach (SnippetDirectory snippetDirectory in snippetDirectories
-                .Where(f => f.IsRelease && !f.IsAutoGeneration && f.Language != Language.Xaml))
+                .Where(f => f.IsRelease && !f.IsAutoGeneration && !f.HasTag(KnownTags.ExcludeFromVisualStudioCode)))
             {
                 snippets.AddRange(snippetDirectory.EnumerateSnippets(SearchOption.TopDirectoryOnly));
             }
@@ -54,17 +55,15 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
 
                 Language language = grouping.Key;
 
-                Console.WriteLine($"{language}: {grouping.Count()}");
-
                 string languageId = language.GetVisualStudioCodeIdentifier();
-
-                string fileName = Path.ChangeExtension(languageId, "json");
 
                 string directoryName = $"Snippetica.{language}";
                 string directoryPath = Path.Combine(projectPath, directoryName);
 
+                string packageDirectoryPath = Path.Combine(directoryPath, "package");
+
                 IOUtility.WriteAllText(
-                    Path.Combine(directoryPath, @"package\snippets", fileName),
+                    Path.Combine(packageDirectoryPath, "snippets", Path.ChangeExtension(languageId, "json")),
                     JsonUtility.ToJsonText(grouping));
 
                 IOUtility.SaveSnippets(grouping.ToArray(), directoryPath);
@@ -77,11 +76,15 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
                 info.Keywords.AddRange(language.GetKeywords());
                 info.Snippets.Add(new SnippetInfo() { Language = languageId, Path = $"./snippets/{languageId}.json" });
 
-                IOUtility.WriteAllText(Path.Combine(directoryPath, "package", "package.json"), info.ToString());
+                IOUtility.WriteAllText(Path.Combine(packageDirectoryPath, "package.json"), info.ToString());
 
                 var snippetDirectory = new SnippetDirectory(directoryPath, language);
 
-                MarkdownWriter.WriteDirectoryReadMe(snippetDirectory, characterSequences);
+                string readmeText = MarkdownGenerator.GenerateDirectoryReadme(snippetDirectory, characterSequences);
+
+                IOUtility.WriteAllText(Path.Combine(directoryPath, "README.md"), readmeText);
+
+                IOUtility.WriteAllText(Path.Combine(packageDirectoryPath, "README.md"), readmeText);
             }
         }
 
@@ -146,9 +149,11 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
 
                         snippet.Shortcut += shortcutSuffix;
 
+                        snippet.Keywords.Remove(keyword);
+
                         snippet.RemoveTag(KnownTags.NonUniqueShortcut);
 
-                        snippet.Keywords.Remove(keyword);
+                        snippet.AddTag(KnownTags.ExcludeFromReadme);
                     }
                 }
 

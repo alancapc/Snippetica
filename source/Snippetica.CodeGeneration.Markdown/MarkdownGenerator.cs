@@ -57,7 +57,9 @@ namespace Snippetica.CodeGeneration.Markdown
             }
         }
 
-        public static string GenerateDirectoryReadme(SnippetDirectory snippetDirectory, CharacterSequence[] characterSequences)
+        public static string GenerateDirectoryReadme(
+            SnippetDirectory snippetDirectory,
+            CharacterSequence[] characterSequences)
         {
             using (var sw = new StringWriter())
             {
@@ -66,30 +68,35 @@ namespace Snippetica.CodeGeneration.Markdown
                 sw.WriteLine($"## {directoryName}");
                 sw.WriteLine();
 
-                characterSequences = characterSequences?
-                        .Where(f => f.Languages.Select(language => GeneralSettings.Default.DirectoryNamePrefix + language.ToString())
-                        .Contains(snippetDirectory.DirectoryName)).ToArray();
-
-                if (characterSequences?.Length > 0)
+                if (!snippetDirectory.IsDev
+                    && !snippetDirectory.HasTag(KnownTags.NoQuickReference))
                 {
-                    sw.WriteLine("### Quick Reference");
-                    sw.WriteLine();
+                    characterSequences = characterSequences?
+                        .Where(f => f.Languages.Contains(snippetDirectory.Language))
+                        .ToArray();
 
-                    string filePath = $@"..\..\..\..\..\text\{directoryName}.md";
-
-                    if (File.Exists(filePath))
+                    if (characterSequences?.Length > 0)
                     {
-                        sw.WriteLine(File.ReadAllText(filePath, Encoding.UTF8));
+                        sw.WriteLine("### Quick Reference");
+                        sw.WriteLine();
+
+                        //TODO: 
+                        string filePath = $@"..\..\..\..\..\text\{directoryName}.md";
+
+                        if (File.Exists(filePath))
+                        {
+                            sw.WriteLine(File.ReadAllText(filePath, Encoding.UTF8));
+                            sw.WriteLine();
+                        }
+
+                        using (CharacterSequenceTableWriter tableWriter = CharacterSequenceTableWriter.Create())
+                        {
+                            tableWriter.WriteTable(characterSequences);
+                            sw.Write(tableWriter.ToString());
+                        }
+
                         sw.WriteLine();
                     }
-
-                    using (CharacterSequenceTableWriter tableWriter = CharacterSequenceTableWriter.Create())
-                    {
-                        tableWriter.WriteTable(characterSequences);
-                        sw.Write(tableWriter.ToString());
-                    }
-
-                    sw.WriteLine();
                 }
 
                 if (!snippetDirectory.IsDev)

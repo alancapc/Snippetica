@@ -91,39 +91,28 @@ Title | Shortcut
 [\#if preprocessor directive](PreprocessorDirectiveIf.snippet)|ppif
 [\#if\-\#else preprocessor directive](PreprocessorDirectiveIfElse.snippet)|ppife
 [\#region preprocessor directive](PreprocessorDirectiveRegion.snippet)|ppr
-[== operator overload](OperatorOverloadEquality.snippet)|oo\_EqualsEquals
 [array variable](ArrayOfTVariable.snippet)|va
-[Attribute class](AttributeClass.snippet)|c\_Attribute
 [Boolean variable](BooleanVariable.snippet)|vb
 [braces](Braces.snippet)|b
 [catch](Catch.snippet)|catch
-[Collection\<T\> class](CollectionOfTClass.snippet)|c\_CollectionOfT
 [containing type name](ContainingTypeName.snippet)|this
 [DateTime type](DateTimeType.snippet)|dt
 [Debug\.Assert](DebugAssert.snippet)|da
 [Debug\.WriteLine](DebugWriteLine.snippet)|dw
 [default keyword](DefaultKeyword.snippet)|d
-[Dictionary\<TKey, TValue\> class](DictionaryOfTKeyTValueClass.snippet)|c\_DictionaryOfTKeyTValue
-[Disposable class](DisposableClass.snippet)|c\_Disposable
 [dispose pattern](Dispose.snippet)|dispose
 [else\-if](ElseIf.snippet)|eif
 [else](Else.snippet)|e
 [equal to null](EqualToNull.snippet)|n
-[Equals and GetHashCode for value type](EqualsAndGetHashCodeForValueType.snippet)|equals\_ValueType
 [Equals and GetHashCode](EqualsAndGetHashCode.snippet)|equals
-[Exception class](ExceptionClass.snippet)|c\_Exception
 [explicit cast operator](ExplicitCastOperator.snippet)|t
 [finally](Finally.snippet)|finally
 [for \(reversed\)](ForReversed.snippet)|frr
 [for](For.snippet)|fr
 [foreach statement](Foreach.snippet)|fe
 [generic type constraint](GenericTypeConstraint.snippet)|where
-[IComparer class](IComparerClass.snippet)|c\_IComparer
-[IComparer\<T\> class](IComparerOfTClass.snippet)|c\_IComparerOfT
 [IEnumerable\<T\> type](IEnumerableOfTType.snippet)|ge
 [IEnumerator\<T\> variable](IEnumeratorOfTVariable.snippet)|u\_er
-[IEqualityComparer class](IEqualityComparerClass.snippet)|c\_IEqualityComparer
-[IEqualityComparer\<T\> class](IEqualityComparerOfTClass.snippet)|c\_IEqualityComparerOfT
 [if equal to null](IfEqualToNull.snippet)|ifn
 [if not equal to null](IfNotEqualToNull.snippet)|ifnn
 [if not TryParse](IfNotTryParse.snippet)|ifftp
@@ -139,7 +128,6 @@ Title | Shortcut
 [new variable](NewVariable.snippet)|vn
 [not equal to null](NotEqualToNull.snippet)|nn
 [object keyword](ObjectKeyword.snippet)|o
-[ObservableCollection\<T\> class](ObservableCollectionOfTClass.snippet)|c\_ObservableCollectionOfT
 [parameter array ](ParameterArray.snippet)|pa
 [public auto property with private setter](PublicAutoPropertyWithPrivateSet.snippet)|pps
 [public auto property](PublicAutoProperty.snippet)|p
@@ -166,12 +154,10 @@ Title | Shortcut
 [public virtual method](PublicVirtualMethod.snippet)|vm
 [public virtual read\-only auto property](PublicVirtualReadOnlyAutoProperty.snippet)|vrp
 [public virtual read\-only property](PublicVirtualReadOnlyProperty.snippet)|vrpp
-[ReadOnlyCollection\<T\> class](ReadOnlyCollectionOfTClass.snippet)|c\_ReadOnlyCollectionOfT
 [return false](ReturnFalse.snippet)|ref
 [return keyword](ReturnKeyword.snippet)|r
 [return null](ReturnNull.snippet)|ren
 [return true](ReturnTrue.snippet)|ret
-[Singleton class](SingletonClass.snippet)|c\_Singleton
 [static constructor](StaticConstructor.snippet)|scr
 [StreamReader Variable](StreamReaderVariable.snippet)|u\_smrr
 [StreamWriter Variable](StreamWriterVariable.snippet)|u\_smwr
