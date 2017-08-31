@@ -47,7 +47,7 @@
   <ItemGroup>
     <Compile Include="CharacterSequence.cs" />
     <Compile Include="IO\IOUtility.cs" />
-    <Compile Include="LanguageHelper.cs" />
+    <Compile Include="LanguageExtensions.cs" />
     <Compile Include="LiteralIdentifiers.cs" />
     <Compile Include="SnippetDirectoryMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

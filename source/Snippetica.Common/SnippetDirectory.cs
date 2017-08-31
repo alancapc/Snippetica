@@ -44,7 +44,7 @@ namespace Snippetica
 
         public string LanguageTitle
         {
-            get { return LanguageHelper.GetLanguageTitle(Language); }
+            get { return Language.GetTitle(); }
         }
 
         public SnippetDirectory WithPath(string path)

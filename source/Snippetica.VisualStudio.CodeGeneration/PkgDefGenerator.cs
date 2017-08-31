@@ -14,11 +14,11 @@ namespace Snippetica.CodeGeneration.VisualStudio
             {
                 foreach (IGrouping<Language, SnippetDirectory> grouping in snippetDirectories.GroupBy(f => f.Language))
                 {
-                    sw.WriteLine($"// {LanguageHelper.GetLanguageTitle(grouping.Key)}");
+                    sw.WriteLine($"// {grouping.Key.GetTitle()}");
 
                     foreach (SnippetDirectory snippetDirectory in grouping)
                     {
-                        sw.WriteLine($@"[$RootKey$\Languages\CodeExpansions\{LanguageHelper.GetRegistryCode(snippetDirectory.Language)}\Paths]");
+                        sw.WriteLine($@"[$RootKey$\Languages\CodeExpansions\{snippetDirectory.Language.GetRegistryCode()}\Paths]");
                         sw.WriteLine($"\"{snippetDirectory.DirectoryName}\" = \"$PackageFolder$\\{snippetDirectory.DirectoryName}\"");
                     }
 

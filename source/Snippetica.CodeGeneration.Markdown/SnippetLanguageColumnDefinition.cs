@@ -13,7 +13,7 @@ namespace Snippetica.CodeGeneration.Markdown
 
         public override string GetValue(object value)
         {
-            return MarkdownHelper.Escape(LanguageHelper.GetLanguageTitle(((Snippet)value).Language));
+            return MarkdownHelper.Escape(((Snippet)value).Language.GetTitle());
         }
     }
 }

@@ -56,7 +56,7 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
 
                 Console.WriteLine($"{language}: {grouping.Count()}");
 
-                string languageId = LanguageHelper.GetVisualStudioCodeLanguageIdentifier(language);
+                string languageId = language.GetVisualStudioCodeIdentifier();
 
                 string fileName = Path.ChangeExtension(languageId, "json");
 
@@ -71,10 +71,10 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
 
                 var info = GetDefaultPackageInfo();
                 info.Name += "-" + languageId;
-                info.DisplayName += " for " + LanguageHelper.GetLanguageTitle(language);
-                info.Description += LanguageHelper.GetLanguageTitle(language) + ".";
+                info.DisplayName += " for " + language.GetTitle();
+                info.Description += language.GetTitle() + ".";
                 info.Homepage += $"/{directoryName}/README.md";
-                info.Keywords.AddRange(LanguageHelper.GetKeywords(language));
+                info.Keywords.AddRange(language.GetKeywords());
                 info.Snippets.Add(new SnippetInfo() { Language = languageId, Path = $"./snippets/{languageId}.json" });
 
                 IOUtility.WriteAllText(Path.Combine(directoryPath, "package", "package.json"), info.ToString());

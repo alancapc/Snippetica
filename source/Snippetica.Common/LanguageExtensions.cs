@@ -7,9 +7,9 @@ using System.Collections.Generic;
 
 namespace Snippetica
 {
-    public static class LanguageHelper
+    public static class LanguageExtensions
     {
-        public static string GetLanguageTitle(Language language)
+        public static string GetTitle(this Language language)
         {
             switch (language)
             {
@@ -41,7 +41,7 @@ namespace Snippetica
             }
         }
 
-        public static string GetVisualStudioCodeLanguageIdentifier(Language language)
+        public static string GetVisualStudioCodeIdentifier(this Language language)
         {
             switch (language)
             {
@@ -66,7 +66,7 @@ namespace Snippetica
             }
         }
 
-        public static string GetRegistryCode(Language language)
+        public static string GetRegistryCode(this Language language)
         {
             switch (language)
             {
@@ -93,7 +93,7 @@ namespace Snippetica
             }
         }
 
-        public static IEnumerable<string> GetKeywords(Language language)
+        public static IEnumerable<string> GetKeywords(this Language language)
         {
             switch (language)
             {
