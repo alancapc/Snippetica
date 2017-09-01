@@ -13,15 +13,15 @@ a|Array|\-
 b|Boolean|\-
 c|catch|\-
 c|class declaration|\-
-c|Collection\<T\>|\-
+c|Collection&lt;T&gt;|\-
 co|conditional operator|\-
 cr|constructor declaration|\-
 d|default|\-
-d|Dictionary\<TKey,TValue\>|\-
+d|Dictionary&lt;TKey,TValue&gt;|\-
 de|delegate declaration|\-
 dt|DateTime|\-
 e|else clause|\-
-e|IEnumerable\<T\>|\-
+e|IEnumerable&lt;T&gt;|\-
 em|enum declaration|\-
 et|event declaration|\-
 f|false|\-
@@ -31,7 +31,7 @@ fe|foreach statement|\-
 fr|for statement|\-
 g|generic type|prefix
 g|type parameter|\-
-hs|HashSet\<T\>|\-
+hs|HashSet&lt;T&gt;|\-
 i|Immutable|prefix
 i|Int32|\-
 i|internal \(Friend\)|prefix
@@ -41,15 +41,15 @@ ir|indexer declaration|\-
 k|constant declaration|\-
 l|Int64|\-
 l|lambda expression|\-
-l|List\<T\>|\-
-ll|LinkedList\<T\>|\-
+l|List&lt;T&gt;|\-
+ll|LinkedList&lt;T&gt;|\-
 m|method declaration|\-
 n|\(equal to\) null|\-
 n|new object creation|\-
 nn|not \(equal to\) null|\-
 no|nameof operator|\-
 o|Object|\-
-oc|ObservableCollection\<T\>|\-
+oc|ObservableCollection&lt;T&gt;|\-
 oo|operator overload|\-
 p|private|prefix
 p|property declaration|\-
@@ -57,11 +57,11 @@ pa|parameter array|\-
 pp|preprocessor directive|prefix
 pp|property declaration \(expanded\)|\-
 ps|private set|\-
-q|Queue\<T\>|\-
+q|Queue&lt;T&gt;|\-
 r|read\-only|\-
 r|return|\-
 re|return|\-
-s|Stack\<T\>|\-
+s|Stack&lt;T&gt;|\-
 s|static \(Shared\)|prefix \(after access modifier\)
 s|String|\-
 sh|switch statement|\-
@@ -96,13 +96,13 @@ Title | Shortcut
 [Boolean variable](BooleanVariable.snippet)|vb
 [braces](Braces.snippet)|b
 [catch](Catch.snippet)|catch
-[Collection\<T\> class](CollectionOfTClass.snippet)|c\_
+[Collection&lt;T&gt; class](CollectionOfTClass.snippet)|c\_
 [containing type name](ContainingTypeName.snippet)|this
 [DateTime type](DateTimeType.snippet)|dt
 [Debug\.Assert](DebugAssert.snippet)|da
 [Debug\.WriteLine](DebugWriteLine.snippet)|dw
 [default keyword](DefaultKeyword.snippet)|d
-[Dictionary\<TKey, TValue\> class](DictionaryOfTKeyTValueClass.snippet)|c\_
+[Dictionary&lt;TKey, TValue&gt; class](DictionaryOfTKeyTValueClass.snippet)|c\_
 [Disposable class](DisposableClass.snippet)|c\_
 [dispose pattern](Dispose.snippet)|dispose
 [else\-if](ElseIf.snippet)|eif
@@ -118,11 +118,11 @@ Title | Shortcut
 [foreach statement](Foreach.snippet)|fe
 [generic type constraint](GenericTypeConstraint.snippet)|where
 [IComparer class](IComparerClass.snippet)|c\_
-[IComparer\<T\> class](IComparerOfTClass.snippet)|c\_
-[IEnumerable\<T\> type](IEnumerableOfTType.snippet)|ge
-[IEnumerator\<T\> variable](IEnumeratorOfTVariable.snippet)|u
+[IComparer&lt;T&gt; class](IComparerOfTClass.snippet)|c\_
+[IEnumerable&lt;T&gt; type](IEnumerableOfTType.snippet)|ge
+[IEnumerator&lt;T&gt; variable](IEnumeratorOfTVariable.snippet)|u
 [IEqualityComparer class](IEqualityComparerClass.snippet)|c\_
-[IEqualityComparer\<T\> class](IEqualityComparerOfTClass.snippet)|c\_
+[IEqualityComparer&lt;T&gt; class](IEqualityComparerOfTClass.snippet)|c\_
 [if equal to null](IfEqualToNull.snippet)|ifn
 [if not equal to null](IfNotEqualToNull.snippet)|ifnn
 [if not TryParse](IfNotTryParse.snippet)|ifftp
@@ -138,7 +138,7 @@ Title | Shortcut
 [new variable](NewVariable.snippet)|vn
 [not equal to null](NotEqualToNull.snippet)|nn
 [object keyword](ObjectKeyword.snippet)|o
-[ObservableCollection\<T\> class](ObservableCollectionOfTClass.snippet)|c\_
+[ObservableCollection&lt;T&gt; class](ObservableCollectionOfTClass.snippet)|c\_
 [parameter array ](ParameterArray.snippet)|pa
 [public auto property with private setter](PublicAutoPropertyWithPrivateSet.snippet)|pps
 [public auto property](PublicAutoProperty.snippet)|p
@@ -166,7 +166,7 @@ Title | Shortcut
 [public virtual method](PublicVirtualMethod.snippet)|vm
 [public virtual read\-only auto property](PublicVirtualReadOnlyAutoProperty.snippet)|vrp
 [public virtual read\-only property](PublicVirtualReadOnlyProperty.snippet)|vrpp
-[ReadOnlyCollection\<T\> class](ReadOnlyCollectionOfTClass.snippet)|c\_
+[ReadOnlyCollection&lt;T&gt; class](ReadOnlyCollectionOfTClass.snippet)|c\_
 [return false](ReturnFalse.snippet)|ref
 [return keyword](ReturnKeyword.snippet)|r
 [return null](ReturnNull.snippet)|ren

@@ -1741,7 +1741,7 @@
     "description": "StringWriter variable declaration."
   },
   "Throw New": {
-    "prefix": "twn_-",
+    "prefix": "twn",
     "body": [
       "Throw New${0}"
     ],
@@ -1837,7 +1837,7 @@
     "description": "Try-Finally statement"
   },
   "Using statement": {
-    "prefix": "u_-",
+    "prefix": "u",
     "body": [
       "Using ${1:disposable}",
       "    ${0}",

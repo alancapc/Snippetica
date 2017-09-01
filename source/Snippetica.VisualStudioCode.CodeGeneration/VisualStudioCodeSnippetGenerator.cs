@@ -78,11 +78,15 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
 
                 var snippetDirectory = new SnippetDirectory(directoryPath, language);
 
-                string readmeText = MarkdownGenerator.GenerateDirectoryReadme(snippetDirectory, characterSequences);
+                IOUtility.WriteAllText(
+                    Path.Combine(directoryPath, "README.md"),
+                    MarkdownGenerator.GenerateDirectoryReadme(snippetDirectory, characterSequences),
+                    IOUtility.UTF8NoBom);
 
-                IOUtility.WriteAllText(Path.Combine(directoryPath, "README.md"), readmeText, IOUtility.UTF8NoBom);
-
-                IOUtility.WriteAllText(Path.Combine(packageDirectoryPath, "README.md"), readmeText, IOUtility.UTF8NoBom);
+                IOUtility.WriteAllText(
+                    Path.Combine(packageDirectoryPath, "README.md"),
+                    MarkdownGenerator.GenerateDirectoryReadme(snippetDirectory, characterSequences, addLinkToTitle: false),
+                    IOUtility.UTF8NoBom);
             }
         }
 
@@ -124,12 +128,19 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
 
                 if (snippet.HasTag(KnownTags.TitleStartsWithShortcut))
                 {
-                    Debug.WriteLine(snippet.Title);
-
                     string shortcut = Regex.Match(snippet.Title, @"^\S+\s+").Value;
 
                     snippet.Title = snippet.Title.Substring(shortcut.Length);
-                    snippet.Shortcut += "_" + shortcut.TrimEnd();
+
+                    shortcut = shortcut.TrimEnd();
+
+                    if (shortcut != "-")
+                    {
+                        if (snippet.Shortcut.Last() != '_')
+                            snippet.Shortcut += "_";
+
+                        snippet.Shortcut += shortcut.TrimEnd();
+                    }
 
                     snippet.RemoveTag(KnownTags.TitleStartsWithShortcut);
                 }

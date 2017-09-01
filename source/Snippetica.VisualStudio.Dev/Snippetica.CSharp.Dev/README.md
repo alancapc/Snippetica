@@ -14,8 +14,8 @@ Title | Shortcut
 [Debug\.Assert \!= null](DebugAssertNotNull.snippet)|dann
 [DebuggerDisplay attribute](DebuggerDisplayAttribute.snippet)|ae
 [DebuggerStepThrough attribute](DebuggerStepThroughAttribute.snippet)|ae
-[Dictionary\<TKey, TValue\> type](DictionaryOfTKeyTValueType.snippet)|gd
-[Dictionary\<TKey, TValue\> variable](DictionaryOfTKeyTValueVariable.snippet)|vd
+[Dictionary&lt;TKey, TValue&gt; type](DictionaryOfTKeyTValueType.snippet)|gd
+[Dictionary&lt;TKey, TValue&gt; variable](DictionaryOfTKeyTValueVariable.snippet)|vd
 [Directory\.CreateDirectory](DirectoryCreateDirectory.snippet)|iod
 [Directory\.Delete](DirectoryDelete.snippet)|iod
 [Directory\.EnumerateDirectories](DirectoryEnumerateDirectories.snippet)|iod
@@ -42,8 +42,8 @@ Title | Shortcut
 [fod Enumerable\.FirstOrDefault](EnumerableFirstOrDefault.snippet)|q
 [gb Enumerable\.GroupBy](EnumerableGroupBy.snippet)|q
 [gj Enumerable\.GroupJoin](EnumerableGroupJoin.snippet)|q
-[HashSet\<T\> type](HashSetOfTType.snippet)|ghs
-[HashSet\<T\> variable](HashSetOfTVariable.snippet)|vhs
+[HashSet&lt;T&gt; type](HashSetOfTType.snippet)|ghs
+[HashSet&lt;T&gt; variable](HashSetOfTVariable.snippet)|vhs
 [if \!string\.IsNullOrEmpty](IfNotStringIsNullOrEmpty.snippet)|iffsne
 [if \!string\.IsNullOrWhiteSpace](IfNotStringIsNullOrWhiteSpace.snippet)|iffsnw
 [if string\.IsNullOrEmpty](IfStringIsNullOrEmpty.snippet)|ifsne
@@ -54,8 +54,8 @@ Title | Shortcut
 [internal virtual modifiers](InternalVirtualModifiers.snippet)|x
 [j Enumerable\.Join](EnumerableJoin.snippet)|q
 [l Enumerable\.Last](EnumerableLast.snippet)|q
-[List\<T\> type](ListOfTType.snippet)|gl
-[List\<T\> variable](ListOfTVariable.snippet)|vl
+[List&lt;T&gt; type](ListOfTType.snippet)|gl
+[List&lt;T&gt; variable](ListOfTVariable.snippet)|vl
 [lod Enumerable\.LastOrDefault](EnumerableLastOrDefault.snippet)|q
 [MemoryStream Variable](MemoryStreamVariable.snippet)|u
 [mn Enumerable\.Min](EnumerableMin.snippet)|q
@@ -64,8 +64,8 @@ Title | Shortcut
 [new array ](NewArrayOfT.snippet)|na
 [ob Enumerable\.OrderBy](EnumerableOrderBy.snippet)|q
 [obd Enumerable\.OrderByDescending](EnumerableOrderByDescending.snippet)|q
-[ObservableCollection\<T\> type](ObservableCollectionOfTType.snippet)|goc
-[ObservableCollection\<T\> variable](ObservableCollectionOfTVariable.snippet)|voc
+[ObservableCollection&lt;T&gt; type](ObservableCollectionOfTType.snippet)|goc
+[ObservableCollection&lt;T&gt; variable](ObservableCollectionOfTVariable.snippet)|voc
 [Obsolete attribute](ObsoleteAttribute.snippet)|ae
 [ot Enumerable\.OfType](EnumerableOfType.snippet)|q
 [override modifier](OverrideModifier.snippet)|oe

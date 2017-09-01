@@ -6,36 +6,36 @@
 
 Title | Shortcut
 ----- | --------
-[?: operator \(not equal to null\)](ConditionalOperatorNotEqualToNull.snippet)|conn
-[array type](ArrayOfTType.snippet)|a
-[break statement](BreakStatement.snippet)|bk
-[continue statement](ContinueStatement.snippet)|ce
-[Debug\.Assert \!= null](DebugAssertNotNull.snippet)|dann
-[Dictionary\<TKey, TValue\> type](DictionaryOfTKeyTValueType.snippet)|gd
-[Dictionary\<TKey, TValue\> variable](DictionaryOfTKeyTValueVariable.snippet)|vd
-[do while not null](DoNotNull.snippet)|donn
-[do while null](DoNull.snippet)|don
-[HashSet\<T\> type](HashSetOfTType.snippet)|ghs
-[HashSet\<T\> variable](HashSetOfTVariable.snippet)|vhs
-[if \!string\.IsNullOrEmpty](IfNotStringIsNullOrEmpty.snippet)|iffsne
-[if \!string\.IsNullOrWhiteSpace](IfNotStringIsNullOrWhiteSpace.snippet)|iffsnw
-[if string\.IsNullOrEmpty](IfStringIsNullOrEmpty.snippet)|ifsne
-[if string\.IsNullOrWhiteSpace](IfStringIsNullOrWhiteSpace.snippet)|ifsnw
-[List\<T\> type](ListOfTType.snippet)|gl
-[List\<T\> variable](ListOfTVariable.snippet)|vl
-[namespace](Namespace.snippet)|ns
-[new array ](NewArrayOfT.snippet)|na
-[ObservableCollection\<T\> type](ObservableCollectionOfTType.snippet)|goc
-[ObservableCollection\<T\> variable](ObservableCollectionOfTVariable.snippet)|voc
-[Regex type](Regex.snippet)|rx
-[return new containing type](ReturnNewThis.snippet)|rnthis
-[return new](ReturnNew.snippet)|rn
-[return statement](ReturnStatement.snippet)|re
-[StringBuilder variable](StringBuilderVariable.snippet)|vsb
-[throw statement](ThrowStatement.snippet)|tw
-[TimeSpan type](TimeSpanType.snippet)|ts
-[variable declaration with as operator \+ if not null](VariableAsTIfNotNull.snippet)|vasnn
-[while not null](WhileNotNull.snippet)|wenn
-[while null](WhileNull.snippet)|wen
-[yield return new containing type](YieldReturnNewThis.snippet)|yrnthis
-[yield return new](YieldReturnNew.snippet)|yrn
+?: operator \(not equal to null\)|conn
+array type|a
+break statement|bk
+continue statement|ce
+Debug\.Assert \!= null|dann
+Dictionary&lt;TKey, TValue&gt; type|gd
+Dictionary&lt;TKey, TValue&gt; variable|vd
+do while not null|donn
+do while null|don
+HashSet&lt;T&gt; type|ghs
+HashSet&lt;T&gt; variable|vhs
+if \!string\.IsNullOrEmpty|iffsne
+if \!string\.IsNullOrWhiteSpace|iffsnw
+if string\.IsNullOrEmpty|ifsne
+if string\.IsNullOrWhiteSpace|ifsnw
+List&lt;T&gt; type|gl
+List&lt;T&gt; variable|vl
+namespace|ns
+new array |na
+ObservableCollection&lt;T&gt; type|goc
+ObservableCollection&lt;T&gt; variable|voc
+Regex type|rx
+return new|rn
+return new containing type|rnthis
+return statement|re
+StringBuilder variable|vsb
+throw statement|tw
+TimeSpan type|ts
+variable declaration with as operator \+ if not null|vasnn
+while not null|wenn
+while null|wen
+yield return new|yrn
+yield return new containing type|yrnthis

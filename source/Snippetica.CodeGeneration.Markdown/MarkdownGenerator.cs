@@ -59,7 +59,8 @@ namespace Snippetica.CodeGeneration.Markdown
 
         public static string GenerateDirectoryReadme(
             SnippetDirectory snippetDirectory,
-            CharacterSequence[] characterSequences)
+            CharacterSequence[] characterSequences,
+            bool addLinkToTitle = true)
         {
             using (var sw = new StringWriter())
             {
@@ -108,7 +109,9 @@ namespace Snippetica.CodeGeneration.Markdown
                 sw.WriteLine("### List of Selected Snippets");
                 sw.WriteLine();
 
-                using (SnippetTableWriter tableWriter = SnippetTableWriter.CreateTitleWithLinkThenShortcut(snippetDirectory.Path))
+                using (SnippetTableWriter tableWriter = (addLinkToTitle)
+                    ? SnippetTableWriter.CreateTitleWithLinkThenShortcut(snippetDirectory.Path)
+                    : SnippetTableWriter.CreateTitleThenShortcut(snippetDirectory.Path))
                 {
                     IEnumerable<Snippet> snippets = snippetDirectory
                         .EnumerateSnippets()

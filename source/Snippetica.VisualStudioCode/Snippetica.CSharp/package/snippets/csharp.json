@@ -1891,7 +1891,7 @@
     "description": "switch statement"
   },
   "throw new": {
-    "prefix": "twn_-",
+    "prefix": "twn",
     "body": [
       "throw new${0}"
     ],
@@ -2005,7 +2005,7 @@
     "description": "typeof operator"
   },
   "using statement": {
-    "prefix": "u_-",
+    "prefix": "u",
     "body": [
       "using (${1:disposable})",
       "{",

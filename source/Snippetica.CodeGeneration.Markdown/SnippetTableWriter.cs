@@ -9,6 +9,15 @@ namespace Snippetica.CodeGeneration.Markdown
         {
         }
 
+        public static SnippetTableWriter CreateTitleThenShortcut(string directoryPath)
+        {
+            return new SnippetTableWriter(new ColumnDefinition[]
+            {
+                new SnippetTitleColumnDefinition(),
+                new SnippetShortcutColumnDefinition()
+            });
+        }
+
         public static SnippetTableWriter CreateTitleWithLinkThenShortcut(string directoryPath)
         {
             return new SnippetTableWriter(new ColumnDefinition[]

@@ -11,22 +11,22 @@ Title | Shortcut
 [break statement](BreakStatement.snippet)|bk
 [continue statement](ContinueStatement.snippet)|ce
 [Debug\.Assert \!= null](DebugAssertNotNull.snippet)|dann
-[Dictionary\<TKey, TValue\> type](DictionaryOfTKeyTValueType.snippet)|gd
-[Dictionary\<TKey, TValue\> variable](DictionaryOfTKeyTValueVariable.snippet)|vd
+[Dictionary&lt;TKey, TValue&gt; type](DictionaryOfTKeyTValueType.snippet)|gd
+[Dictionary&lt;TKey, TValue&gt; variable](DictionaryOfTKeyTValueVariable.snippet)|vd
 [do while not null](DoNotNull.snippet)|donn
 [do while null](DoNull.snippet)|don
-[HashSet\<T\> type](HashSetOfTType.snippet)|ghs
-[HashSet\<T\> variable](HashSetOfTVariable.snippet)|vhs
+[HashSet&lt;T&gt; type](HashSetOfTType.snippet)|ghs
+[HashSet&lt;T&gt; variable](HashSetOfTVariable.snippet)|vhs
 [if \!string\.IsNullOrEmpty](IfNotStringIsNullOrEmpty.snippet)|iffsne
 [if \!string\.IsNullOrWhiteSpace](IfNotStringIsNullOrWhiteSpace.snippet)|iffsnw
 [if string\.IsNullOrEmpty](IfStringIsNullOrEmpty.snippet)|ifsne
 [if string\.IsNullOrWhiteSpace](IfStringIsNullOrWhiteSpace.snippet)|ifsnw
-[List\<T\> type](ListOfTType.snippet)|gl
-[List\<T\> variable](ListOfTVariable.snippet)|vl
+[List&lt;T&gt; type](ListOfTType.snippet)|gl
+[List&lt;T&gt; variable](ListOfTVariable.snippet)|vl
 [namespace](Namespace.snippet)|ns
 [new array ](NewArrayOfT.snippet)|na
-[ObservableCollection\<T\> type](ObservableCollectionOfTType.snippet)|goc
-[ObservableCollection\<T\> variable](ObservableCollectionOfTVariable.snippet)|voc
+[ObservableCollection&lt;T&gt; type](ObservableCollectionOfTType.snippet)|goc
+[ObservableCollection&lt;T&gt; variable](ObservableCollectionOfTVariable.snippet)|voc
 [Regex type](Regex.snippet)|rx
 [return new containing type](ReturnNewThis.snippet)|rnthis
 [return new](ReturnNew.snippet)|rn

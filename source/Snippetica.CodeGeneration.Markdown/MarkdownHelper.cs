@@ -14,8 +14,7 @@ namespace Snippetica.CodeGeneration.Markdown
                 {
                     var sb = new StringBuilder();
                     sb.Append(value, 0, i);
-                    sb.Append('\\');
-                    sb.Append(value[i]);
+                    Escape(value[i], sb);
 
                     i++;
                     int lastIndex = i;
@@ -25,8 +24,7 @@ namespace Snippetica.CodeGeneration.Markdown
                         if (ShouldBeEscaped(value[i]))
                         {
                             sb.Append(value, lastIndex, i - lastIndex);
-                            sb.Append('\\');
-                            sb.Append(value[i]);
+                            Escape(value[i], sb);
 
                             i++;
                             lastIndex = i;
@@ -44,6 +42,29 @@ namespace Snippetica.CodeGeneration.Markdown
             }
 
             return value;
+        }
+
+        private static void Escape(char value, StringBuilder sb)
+        {
+            switch (value)
+            {
+                case '<':
+                    {
+                        sb.Append("&lt;");
+                        break;
+                    }
+                case '>':
+                    {
+                        sb.Append("&gt;");
+                        break;
+                    }
+                default:
+                    {
+                        sb.Append(@"\");
+                        sb.Append(value);
+                        break;
+                    }
+            }
         }
 
         public static bool ShouldBeEscaped(char value)

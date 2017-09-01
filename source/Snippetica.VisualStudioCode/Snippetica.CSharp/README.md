@@ -13,15 +13,15 @@ a|Array|\-
 b|Boolean|\-
 c|catch|\-
 c|class declaration|\-
-c|Collection\<T\>|\-
+c|Collection&lt;T&gt;|\-
 co|conditional operator|\-
 cr|constructor declaration|\-
 d|default|\-
-d|Dictionary\<TKey,TValue\>|\-
+d|Dictionary&lt;TKey,TValue&gt;|\-
 de|delegate declaration|\-
 dt|DateTime|\-
 e|else clause|\-
-e|IEnumerable\<T\>|\-
+e|IEnumerable&lt;T&gt;|\-
 em|enum declaration|\-
 et|event declaration|\-
 f|false|\-
@@ -31,7 +31,7 @@ fe|foreach statement|\-
 fr|for statement|\-
 g|generic type|prefix
 g|type parameter|\-
-hs|HashSet\<T\>|\-
+hs|HashSet&lt;T&gt;|\-
 i|Immutable|prefix
 i|Int32|\-
 i|internal \(Friend\)|prefix
@@ -41,15 +41,15 @@ ir|indexer declaration|\-
 k|constant declaration|\-
 l|Int64|\-
 l|lambda expression|\-
-l|List\<T\>|\-
-ll|LinkedList\<T\>|\-
+l|List&lt;T&gt;|\-
+ll|LinkedList&lt;T&gt;|\-
 m|method declaration|\-
 n|\(equal to\) null|\-
 n|new object creation|\-
 nn|not \(equal to\) null|\-
 no|nameof operator|\-
 o|Object|\-
-oc|ObservableCollection\<T\>|\-
+oc|ObservableCollection&lt;T&gt;|\-
 oo|operator overload|\-
 p|private|prefix
 p|property declaration|\-
@@ -57,11 +57,11 @@ pa|parameter array|\-
 pp|preprocessor directive|prefix
 pp|property declaration \(expanded\)|\-
 ps|private set|\-
-q|Queue\<T\>|\-
+q|Queue&lt;T&gt;|\-
 r|read\-only|\-
 r|return|\-
 re|return|\-
-s|Stack\<T\>|\-
+s|Stack&lt;T&gt;|\-
 s|static \(Shared\)|prefix \(after access modifier\)
 s|String|\-
 sh|switch statement|\-
@@ -111,8 +111,8 @@ Title | Shortcut
 [for](For.snippet)|fr
 [foreach statement](Foreach.snippet)|fe
 [generic type constraint](GenericTypeConstraint.snippet)|where
-[IEnumerable\<T\> type](IEnumerableOfTType.snippet)|ge
-[IEnumerator\<T\> variable](IEnumeratorOfTVariable.snippet)|u\_er
+[IEnumerable&lt;T&gt; type](IEnumerableOfTType.snippet)|ge
+[IEnumerator&lt;T&gt; variable](IEnumeratorOfTVariable.snippet)|u\_er
 [if equal to null](IfEqualToNull.snippet)|ifn
 [if not equal to null](IfNotEqualToNull.snippet)|ifnn
 [if not TryParse](IfNotTryParse.snippet)|ifftp
@@ -168,13 +168,13 @@ Title | Shortcut
 [StringReader Variable](StringReaderVariable.snippet)|u\_srr
 [StringWriter Variable](StringWriterVariable.snippet)|u\_swr
 [switch](Switch.snippet)|sh
-[throw new](ThrowNew.snippet)|twn\_\-
+[throw new](ThrowNew.snippet)|twn
 [TODO comment](TodoComment.snippet)|td
 [try\-catch\-finally](TryCatchFinally.snippet)|tcf
 [try\-catch](TryCatch.snippet)|tc
 [try\-finally](TryFinally.snippet)|tf
 [typeof operator](TypeOfOperator.snippet)|to
-[using statement](Using.snippet)|u\_\-
+[using statement](Using.snippet)|u
 [using static](UsingStatic.snippet)|us
 [using variable](UsingVariable.snippet)|u\_v
 [variable declaration with explicit cast operator](VariableWithExplicitCast.snippet)|vt
