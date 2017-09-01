@@ -1,11 +1,9 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 using Pihrtsoft.Snippets;
 using Snippetica.CodeGeneration.Commands;
@@ -68,7 +66,7 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
 
                 IOUtility.SaveSnippets(grouping.ToArray(), directoryPath);
 
-                var info = GetDefaultPackageInfo();
+                PackageInfo info = GetDefaultPackageInfo();
                 info.Name += "-" + languageId;
                 info.DisplayName += " for " + language.GetTitle();
                 info.Description += language.GetTitle() + ".";
@@ -128,7 +126,7 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
                 {
                     Debug.WriteLine(snippet.Title);
 
-                    var shortcut = Regex.Match(snippet.Title, @"^\S+\s+").Value;
+                    string shortcut = Regex.Match(snippet.Title, @"^\S+\s+").Value;
 
                     snippet.Title = snippet.Title.Substring(shortcut.Length);
                     snippet.Shortcut += "_" + shortcut.TrimEnd();
@@ -138,11 +136,11 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
 
                 if (snippet.HasTag(KnownTags.NonUniqueShortcut))
                 {
-                    var keyword = snippet.Keywords.FirstOrDefault(f => f.StartsWith(KnownTags.MetaShortcut));
+                    string keyword = snippet.Keywords.FirstOrDefault(f => f.StartsWith(KnownTags.MetaShortcut));
 
                     if (keyword != null)
                     {
-                        var shortcutSuffix = keyword.Substring(KnownTags.MetaShortcut.Length);
+                        string shortcutSuffix = keyword.Substring(KnownTags.MetaShortcut.Length);
 
                         if (snippet.Shortcut.Last() != '_')
                             snippet.Shortcut += "_";
