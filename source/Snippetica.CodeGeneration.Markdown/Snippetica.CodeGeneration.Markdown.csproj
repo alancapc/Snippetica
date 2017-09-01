@@ -57,6 +57,7 @@
     <Compile Include="ShortcutDescriptionColumnDefinition.cs" />
     <Compile Include="ShortcutSequenceColumnDefinition.cs" />
     <Compile Include="SnippetLanguageColumnDefinition.cs" />
+    <Compile Include="SnippetListSettings.cs" />
     <Compile Include="SnippetShortcutColumnDefinition.cs" />
     <Compile Include="SnippetTableWriter.cs" />
     <Compile Include="SnippetTitleColumnDefinition.cs" />

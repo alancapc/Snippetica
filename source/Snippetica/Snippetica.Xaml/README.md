@@ -1,5 +1,9 @@
 ﻿## Snippetica.Xaml
 
+### Snippet Browser
+
+* Browse all available snippets with [Snippet Browser](http://pihrt.net/Snippetica/Snippets?Engine=VisualStudio&Language=Xaml).
+
 ### Quick Reference
 
 * Snippet can be inserted by providing full name of an element (for example **dockpanel** for **DockPanel**).
@@ -11,8 +15,6 @@ a|\(element\) with attribute|\-
 e|element|\-
 s|self\-closing \(element\)|\-
 x|\(element\) with content|\-
-
-* [full list of snippets](http://pihrt.net/Snippetica/Snippets?Language=Xaml)
 
 ### List of Selected Snippets
 

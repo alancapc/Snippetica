@@ -1,5 +1,9 @@
 ## Snippetica.CSharp
 
+### Snippet Browser
+
+* Browse all available snippets with [Snippet Browser](http://pihrt.net/Snippetica/Snippets?Engine=VisualStudioCode&Language=CSharp).
+
 ### Quick Reference
 
 * Default access modifier is **public**.
@@ -44,9 +48,9 @@ l|lambda expression|\-
 l|List&lt;T&gt;|\-
 ll|LinkedList&lt;T&gt;|\-
 m|method declaration|\-
-n|\(equal to\) null|\-
+n|\(equals to\) null|\-
 n|new object creation|\-
-nn|not \(equal to\) null|\-
+nn|not \(equals to\) null|\-
 no|nameof operator|\-
 o|Object|\-
 oc|ObservableCollection&lt;T&gt;|\-
@@ -77,8 +81,6 @@ v|local variable|prefix
 v|virtual \(Overridable\)|prefix \(after access modifier\)
 we|while statement|\-
 y|yield|\-
-
-* [full list of snippets](http://pihrt.net/Snippetica/Snippets?Language=CSharp)
 
 ### List of Selected Snippets
 
@@ -112,7 +114,6 @@ for \(reversed\)|frr
 foreach statement|fe
 generic type constraint|where
 IEnumerable&lt;T&gt; type|ge
-IEnumerator&lt;T&gt; variable|u\_er
 if equal to null|ifn
 if not|iff
 if not equal to null|ifnn
@@ -159,14 +160,10 @@ return keyword|r
 return null|ren
 return true|ret
 static constructor|scr
-StreamReader Variable|u\_smrr
-StreamWriter Variable|u\_smwr
 string keyword|s
 String variable|vs
 string\.IsNullOrEmpty|sne
 string\.IsNullOrWhiteSpace|snw
-StringReader Variable|u\_srr
-StringWriter Variable|u\_swr
 switch|sh
 throw new|twn
 TODO comment|td
@@ -180,7 +177,5 @@ using variable|u\_v
 variable declaration|v
 variable declaration with explicit cast operator|vt
 while|we
-XmlReader Variable|u\_xmlrr
-XmlWriter Variable|u\_xmlwr
 yield break|yb
 yield return|yr

@@ -1,6 +1,8 @@
 ## Snippetica.VisualBasic
 
-* [full list of snippets](http://pihrt.net/Snippetica/Snippets?Language=VisualBasic)
+### Snippet Browser
+
+* Browse all available snippets with [Snippet Browser](http://pihrt.net/Snippetica/Snippets?Engine=VisualStudioCode&Language=VisualBasic).
 
 ### List of Selected Snippets
 

@@ -339,7 +339,7 @@
     </Languages>
     <Tags />
   </CharacterSequence>
-  <CharacterSequence Value="n" Description="(equal to) null" Comment="-">
+  <CharacterSequence Value="n" Description="(equals to) null" Comment="-">
     <Languages>
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>
@@ -353,7 +353,7 @@
     </Languages>
     <Tags />
   </CharacterSequence>
-  <CharacterSequence Value="nn" Description="not (equal to) null" Comment="-">
+  <CharacterSequence Value="nn" Description="not (equals to) null" Comment="-">
     <Languages>
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>
@@ -505,7 +505,9 @@
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>
     </Languages>
-    <Tags />
+    <Tags>
+      <Tag>ExcludeFromVisualStudioCode</Tag>
+    </Tags>
   </CharacterSequence>
   <CharacterSequence Value="tw" Description="throw statement" Comment="-">
     <Languages>

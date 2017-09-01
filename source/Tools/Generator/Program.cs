@@ -37,7 +37,6 @@ namespace Snippetica.CodeGeneration
             XamlSnippetGenerator.GetResult(snippetDirectories).Save();
             XmlSnippetGenerator.GetResult(snippetDirectories).Save();
 
-
             VisualStudioCodeSnippetGenerator.GenerateSnippets(nonDevDirectories, languageDefinitions, characterSequences, settings.VisualStudioCodeProjectPath);
             VisualStudioCodeSnippetGenerator.GenerateSnippets(devDirectories, languageDefinitions, null, settings.VisualStudioCodeProjectPath + ".Dev");
 
@@ -51,7 +50,8 @@ namespace Snippetica.CodeGeneration
                 snippetDirectories
                     .Where(f => f.HasAnyTag(KnownTags.Release, KnownTags.Dev) && !f.IsAutoGeneration)
                     .ToArray(),
-                characterSequences);
+                characterSequences,
+                new SnippetListSettings("VisualStudio"));
 
             VisualStudioPackageGenerator.GenerateVisualStudioPackageFiles(
                 directories: releaseDirectories,

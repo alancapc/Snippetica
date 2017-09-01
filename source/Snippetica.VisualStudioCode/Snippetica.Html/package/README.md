@@ -1,5 +1,9 @@
 ## Snippetica.Html
 
+### Snippet Browser
+
+* Browse all available snippets with [Snippet Browser](http://pihrt.net/Snippetica/Snippets?Engine=VisualStudioCode&Language=Html).
+
 ### Quick Reference
 
 * Snippet can be inserted by providing full name of an element (for example **div**).
@@ -11,8 +15,6 @@ a|\(element\) with attribute|\-
 e|element|\-
 s|self\-closing \(element\)|\-
 x|\(element\) with content|\-
-
-* [full list of snippets](http://pihrt.net/Snippetica/Snippets?Language=Html)
 
 ### List of Selected Snippets
 

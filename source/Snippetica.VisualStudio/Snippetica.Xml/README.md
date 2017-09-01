@@ -1,5 +1,9 @@
 ﻿## Snippetica.Xml
 
+### Snippet Browser
+
+* Browse all available snippets with [Snippet Browser](http://pihrt.net/Snippetica/Snippets?Engine=VisualStudio&Language=Xml).
+
 ### Quick Reference
 
 Character\(s\) | Description | Comment
@@ -8,8 +12,6 @@ a|\(element\) with attribute|\-
 e|element|\-
 s|self\-closing \(element\)|\-
 x|\(element\) with content|\-
-
-* [full list of snippets](http://pihrt.net/Snippetica/Snippets?Language=Xml)
 
 ### List of Selected Snippets
 

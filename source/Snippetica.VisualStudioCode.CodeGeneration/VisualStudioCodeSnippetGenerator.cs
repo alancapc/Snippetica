@@ -80,12 +80,12 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
 
                 IOUtility.WriteAllText(
                     Path.Combine(directoryPath, "README.md"),
-                    MarkdownGenerator.GenerateDirectoryReadme(snippetDirectory, characterSequences),
+                    MarkdownGenerator.GenerateDirectoryReadme(snippetDirectory, characterSequences, new SnippetListSettings("VisualStudioCode")),
                     IOUtility.UTF8NoBom);
 
                 IOUtility.WriteAllText(
                     Path.Combine(packageDirectoryPath, "README.md"),
-                    MarkdownGenerator.GenerateDirectoryReadme(snippetDirectory, characterSequences, addLinkToTitle: false),
+                    MarkdownGenerator.GenerateDirectoryReadme(snippetDirectory, characterSequences, new SnippetListSettings("VisualStudioCode", addHeading: false, addLinkToTitle: false)),
                     IOUtility.UTF8NoBom);
             }
         }
@@ -194,10 +194,17 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
             {
                 Literal literal = literals[i];
 
-                if (!literal.IsEditable
-                    && string.IsNullOrEmpty(literal.Function))
+                if (!literal.IsEditable)
                 {
-                    snippet.RemoveLiteralAndReplacePlaceholders(literal.Identifier, literal.DefaultValue);
+                    if (string.IsNullOrEmpty(literal.Function))
+                    {
+                        snippet.RemoveLiteralAndReplacePlaceholders(literal.Identifier, literal.DefaultValue);
+                    }
+                    else
+                    {
+                        literal.IsEditable = true;
+                        literal.Function = null;
+                    }
                 }
             }
         }

@@ -1,5 +1,9 @@
 ﻿## Snippetica.VisualBasic
 
+### Snippet Browser
+
+* Browse all available snippets with [Snippet Browser](http://pihrt.net/Snippetica/Snippets?Engine=VisualStudio&Language=VisualBasic).
+
 ### Quick Reference
 
 * Default access modifier is **Public**.
@@ -45,9 +49,9 @@ l|List&lt;T&gt;|\-
 ll|LinkedList&lt;T&gt;|\-
 m|method declaration|\-
 me|Module declaration|\-
-n|\(equal to\) null|\-
+n|\(equals to\) null|\-
 n|new object creation|\-
-nn|not \(equal to\) null|\-
+nn|not \(equals to\) null|\-
 no|nameof operator|\-
 o|Object|\-
 oc|ObservableCollection&lt;T&gt;|\-
@@ -77,8 +81,6 @@ v|local variable|prefix
 v|virtual \(Overridable\)|prefix \(after access modifier\)
 we|while statement|\-
 y|yield|\-
-
-* [full list of snippets](http://pihrt.net/Snippetica/Snippets?Language=VisualBasic)
 
 ### List of Selected Snippets
 

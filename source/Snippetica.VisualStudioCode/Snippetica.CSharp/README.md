@@ -1,5 +1,9 @@
 ## Snippetica.CSharp
 
+### Snippet Browser
+
+* Browse all available snippets with [Snippet Browser](http://pihrt.net/Snippetica/Snippets?Engine=VisualStudioCode&Language=CSharp).
+
 ### Quick Reference
 
 * Default access modifier is **public**.
@@ -44,9 +48,9 @@ l|lambda expression|\-
 l|List&lt;T&gt;|\-
 ll|LinkedList&lt;T&gt;|\-
 m|method declaration|\-
-n|\(equal to\) null|\-
+n|\(equals to\) null|\-
 n|new object creation|\-
-nn|not \(equal to\) null|\-
+nn|not \(equals to\) null|\-
 no|nameof operator|\-
 o|Object|\-
 oc|ObservableCollection&lt;T&gt;|\-
@@ -77,8 +81,6 @@ v|local variable|prefix
 v|virtual \(Overridable\)|prefix \(after access modifier\)
 we|while statement|\-
 y|yield|\-
-
-* [full list of snippets](http://pihrt.net/Snippetica/Snippets?Language=CSharp)
 
 ### List of Selected Snippets
 
@@ -112,7 +114,6 @@ Title | Shortcut
 [foreach statement](Foreach.snippet)|fe
 [generic type constraint](GenericTypeConstraint.snippet)|where
 [IEnumerable&lt;T&gt; type](IEnumerableOfTType.snippet)|ge
-[IEnumerator&lt;T&gt; variable](IEnumeratorOfTVariable.snippet)|u\_er
 [if equal to null](IfEqualToNull.snippet)|ifn
 [if not equal to null](IfNotEqualToNull.snippet)|ifnn
 [if not TryParse](IfNotTryParse.snippet)|ifftp
@@ -159,14 +160,10 @@ Title | Shortcut
 [return null](ReturnNull.snippet)|ren
 [return true](ReturnTrue.snippet)|ret
 [static constructor](StaticConstructor.snippet)|scr
-[StreamReader Variable](StreamReaderVariable.snippet)|u\_smrr
-[StreamWriter Variable](StreamWriterVariable.snippet)|u\_smwr
 [string keyword](StringKeyword.snippet)|s
 [String variable](StringVariable.snippet)|vs
 [string\.IsNullOrEmpty](StringIsNullOrEmpty.snippet)|sne
 [string\.IsNullOrWhiteSpace](StringIsNullOrWhiteSpace.snippet)|snw
-[StringReader Variable](StringReaderVariable.snippet)|u\_srr
-[StringWriter Variable](StringWriterVariable.snippet)|u\_swr
 [switch](Switch.snippet)|sh
 [throw new](ThrowNew.snippet)|twn
 [TODO comment](TodoComment.snippet)|td
@@ -180,7 +177,5 @@ Title | Shortcut
 [variable declaration with explicit cast operator](VariableWithExplicitCast.snippet)|vt
 [variable declaration](Variable.snippet)|v
 [while](While.snippet)|we
-[XmlReader Variable](XmlReaderVariable.snippet)|u\_xmlrr
-[XmlWriter Variable](XmlWriterVariable.snippet)|u\_xmlwr
 [yield break](YieldBreak.snippet)|yb
 [yield return](YieldReturn.snippet)|yr

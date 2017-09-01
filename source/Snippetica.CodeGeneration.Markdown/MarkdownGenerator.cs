@@ -19,7 +19,7 @@ namespace Snippetica.CodeGeneration.Markdown
 
                 sw.WriteLine($"* {settings.GetProjectSubtitle(snippetDirectories)}");
                 sw.WriteLine($"* [Release Notes]({settings.GitHubMasterPath}/{$"{settings.ChangeLogFileName}"}).");
-                sw.WriteLine("* [Browse and Search All Snippets](http://pihrt.net/Snippetica/Snippets).");
+                sw.WriteLine("* Browse all available snippets with [Snippet Browser](http://pihrt.net/Snippetica/Snippets?Engine=VisualStudio).");
                 sw.WriteLine();
                 sw.WriteLine("### Distribution");
                 sw.WriteLine();
@@ -60,14 +60,27 @@ namespace Snippetica.CodeGeneration.Markdown
         public static string GenerateDirectoryReadme(
             SnippetDirectory snippetDirectory,
             CharacterSequence[] characterSequences,
-            bool addLinkToTitle = true)
+            SnippetListSettings settings)
         {
+            settings = settings ?? SnippetListSettings.Default;
+
             using (var sw = new StringWriter())
             {
                 string directoryName = snippetDirectory.DirectoryName;
 
                 sw.WriteLine($"## {directoryName}");
                 sw.WriteLine();
+
+                if (!snippetDirectory.IsDev)
+                {
+                    sw.WriteLine("### Snippet Browser");
+                    sw.WriteLine();
+
+                    string engineParameter = (!string.IsNullOrEmpty(settings.Engine)) ? $"Engine={settings.Engine}&" : null;
+
+                    sw.WriteLine($"* Browse all available snippets with [Snippet Browser](http://pihrt.net/Snippetica/Snippets?{engineParameter}Language={snippetDirectory.Language}).");
+                    sw.WriteLine();
+                }
 
                 if (!snippetDirectory.IsDev
                     && !snippetDirectory.HasTag(KnownTags.NoQuickReference))
@@ -100,16 +113,10 @@ namespace Snippetica.CodeGeneration.Markdown
                     }
                 }
 
-                if (!snippetDirectory.IsDev)
-                {
-                    sw.WriteLine($"* [full list of snippets](http://pihrt.net/Snippetica/Snippets?Language={snippetDirectory.Language})");
-                    sw.WriteLine();
-                }
-
                 sw.WriteLine("### List of Selected Snippets");
                 sw.WriteLine();
 
-                using (SnippetTableWriter tableWriter = (addLinkToTitle)
+                using (SnippetTableWriter tableWriter = (settings.AddLinkToTitle)
                     ? SnippetTableWriter.CreateTitleWithLinkThenShortcut(snippetDirectory.Path)
                     : SnippetTableWriter.CreateTitleThenShortcut(snippetDirectory.Path))
                 {

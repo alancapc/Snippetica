@@ -1,6 +1,8 @@
 ## Snippetica.CPlusPlus
 
-* [full list of snippets](http://pihrt.net/Snippetica/Snippets?Language=CPlusPlus)
+### Snippet Browser
+
+* Browse all available snippets with [Snippet Browser](http://pihrt.net/Snippetica/Snippets?Engine=VisualStudioCode&Language=CPlusPlus).
 
 ### List of Selected Snippets
 

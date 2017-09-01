@@ -26,7 +26,7 @@ namespace Snippetica.CodeGeneration.VisualStudio
 
             MarkdownWriter.WriteProjectReadMe(directories, settings.ExtensionProjectPath);
 
-            MarkdownWriter.WriteDirectoryReadMe(directories, characterSequences);
+            MarkdownWriter.WriteDirectoryReadMe(directories, characterSequences, new SnippetListSettings("VisualStudio"));
 
             IOUtility.WriteAllText(
                 Path.Combine(settings.ExtensionProjectPath, settings.GalleryDescriptionFileName),

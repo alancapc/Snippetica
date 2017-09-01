@@ -85,10 +85,10 @@
             <New Value="ll" Description="LinkedList&lt;T&gt;" />
             <New Value="m" Description="method declaration" />
             <Set Value="n">
-              <New Description="(equal to) null" />
+              <New Description="(equals to) null" />
               <New Description="new object creation" />
             </Set>
-            <New Value="nn" Description="not (equal to) null" />
+            <New Value="nn" Description="not (equals to) null" />
             <New Value="no" Description="nameof operator" />
             <New Value="o" Description="Object" />
             <New Value="oc" Description="ObservableCollection&lt;T&gt;" />
@@ -119,7 +119,7 @@
               <New Description="true" />
               <New Description="try" />
             </Set>
-            <New Value="this" Description="containing type name" />
+            <New Value="this" Description="containing type name" Tag="ExcludeFromVisualStudioCode" />
             <New Value="tw" Description="throw statement" />
             <New Value="u" Description="using statement" />
             <Set Value="v">
