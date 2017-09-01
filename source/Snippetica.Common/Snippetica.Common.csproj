@@ -46,7 +46,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CharacterSequence.cs" />
+    <Compile Include="Engine.cs" />
+    <Compile Include="EngineExtensions.cs" />
     <Compile Include="IO\IOUtility.cs" />
+    <Compile Include="KnownNames.cs" />
+    <Compile Include="KnownPaths.cs" />
     <Compile Include="LanguageExtensions.cs" />
     <Compile Include="LiteralIdentifiers.cs" />
     <Compile Include="SnippetDirectoryMapper.cs" />

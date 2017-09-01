@@ -5,25 +5,27 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using Pihrtsoft.Snippets;
+using static Snippetica.KnownPaths;
+using static Snippetica.KnownNames;
 
 namespace Snippetica.CodeGeneration.Markdown
 {
     public static class MarkdownGenerator
     {
-        public static string GenerateSolutionReadMe(SnippetDirectory[] snippetDirectories, GeneralSettings settings)
+        public static string GenerateSolutionReadMe(SnippetDirectory[] snippetDirectories)
         {
             using (var sw = new StringWriter())
             {
-                sw.WriteLine("## Snippetica");
+                sw.WriteLine($"## {ProductName}");
                 sw.WriteLine();
 
-                sw.WriteLine($"* {settings.GetProjectSubtitle(snippetDirectories)}");
-                sw.WriteLine($"* [Release Notes]({settings.GitHubMasterPath}/{$"{settings.ChangeLogFileName}"}).");
-                sw.WriteLine("* Browse all available snippets with [Snippet Browser](http://pihrt.net/Snippetica/Snippets?Engine=VisualStudio).");
+                sw.WriteLine($"* {SnippetDirectory.GetProjectSubtitle(snippetDirectories)}");
+                sw.WriteLine($"* [Release Notes]({MasterGitHubUrl}/{$"{ChangeLogFileName}"}).");
+                sw.WriteLine($"* Browse all available snippets with [Snippet Browser]({GetSnippetBrowserUrl(Engine.VisualStudio)}).");
                 sw.WriteLine();
                 sw.WriteLine("### Distribution");
                 sw.WriteLine();
-                sw.WriteLine("* **Snippetica** is distributed as [Visual Studio Extension](http://visualstudiogallery.msdn.microsoft.com/a5576f35-9f87-4c9c-8f1f-059421a23aed).");
+                sw.WriteLine("* **Snippetica** is distributed as [Visual Studio Extension](http://marketplace.visualstudio.com/items?itemName=josefpihrt.Snippetica).");
                 sw.WriteLine();
                 sw.WriteLine("### Snippets");
                 sw.WriteLine();
@@ -35,7 +37,7 @@ namespace Snippetica.CodeGeneration.Markdown
                 {
                     Snippet[] snippets = snippetDirectory.EnumerateSnippets().ToArray();
 
-                    sw.WriteLine($"[{snippetDirectory.DirectoryName}]({settings.GitHubExtensionProjectPath}/{snippetDirectory.DirectoryName}/{settings.ReadMeFileName})|{snippets.Length}|[full list](http://pihrt.net/Snippetica/Snippets?Language={snippetDirectory.Language})");
+                    sw.WriteLine($"[{snippetDirectory.DirectoryName}]({VisualStudioExtensionGitHubUrl}/{snippetDirectory.DirectoryName}/{ReadMeFileName})|{snippets.Length}|[full list]({GetSnippetBrowserUrl(Engine.VisualStudio, snippetDirectory.Language)})");
                 }
 
                 return sw.ToString();
@@ -50,7 +52,7 @@ namespace Snippetica.CodeGeneration.Markdown
 
                 foreach (SnippetDirectory snippetDirectory in snippetDirectories)
                 {
-                    sw.WriteLine($"* [{snippetDirectory.DirectoryName}]({snippetDirectory.DirectoryName}/README.md) ({snippetDirectory.EnumerateSnippets().Count()} snippets)");
+                    sw.WriteLine($"* [{snippetDirectory.DirectoryName}]({snippetDirectory.DirectoryName}/{KnownNames.ReadMeFileName}) ({snippetDirectory.EnumerateSnippets().Count()} snippets)");
                 }
 
                 return sw.ToString();
@@ -62,23 +64,22 @@ namespace Snippetica.CodeGeneration.Markdown
             CharacterSequence[] characterSequences,
             SnippetListSettings settings)
         {
-            settings = settings ?? SnippetListSettings.Default;
-
             using (var sw = new StringWriter())
             {
                 string directoryName = snippetDirectory.DirectoryName;
 
-                sw.WriteLine($"## {directoryName}");
-                sw.WriteLine();
+                if (settings.AddHeading)
+                {
+                    sw.WriteLine($"## {directoryName}");
+                    sw.WriteLine();
+                }
 
                 if (!snippetDirectory.IsDev)
                 {
                     sw.WriteLine("### Snippet Browser");
                     sw.WriteLine();
 
-                    string engineParameter = (!string.IsNullOrEmpty(settings.Engine)) ? $"Engine={settings.Engine}&" : null;
-
-                    sw.WriteLine($"* Browse all available snippets with [Snippet Browser](http://pihrt.net/Snippetica/Snippets?{engineParameter}Language={snippetDirectory.Language}).");
+                    sw.WriteLine($"* Browse all available snippets with [Snippet Browser]({GetSnippetBrowserUrl(settings.Engine, snippetDirectory.Language)}).");
                     sw.WriteLine();
                 }
 

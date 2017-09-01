@@ -3,12 +3,14 @@
 using System.IO;
 using System.Linq;
 using System.Xml;
+using static Snippetica.KnownPaths;
+using static Snippetica.KnownNames;
 
 namespace Snippetica.CodeGeneration.VisualStudio
 {
     public static class HtmlGenerator
     {
-        public static string GenerateVisualStudioGalleryDescription(SnippetDirectory[] snippetDirectories, GeneralSettings settings)
+        public static string GenerateVisualStudioGalleryDescription(SnippetDirectory[] snippetDirectories)
         {
             using (var sw = new StringWriter())
             {
@@ -21,8 +23,8 @@ namespace Snippetica.CodeGeneration.VisualStudio
 
                 using (XmlWriter x = XmlWriter.Create(sw, xmlWriterSettings))
                 {
-                    x.WriteElementString("h3", settings.ProjectTitle);
-                    x.WriteElementString("p", settings.GetProjectSubtitle(snippetDirectories));
+                    x.WriteElementString("h3", ProductName);
+                    x.WriteElementString("p", SnippetDirectory.GetProjectSubtitle(snippetDirectories));
 
                     x.WriteElementString("h3", "Links");
 
@@ -30,22 +32,23 @@ namespace Snippetica.CodeGeneration.VisualStudio
 
                     x.WriteStartElement("li");
                     x.WriteStartElement("a");
-                    x.WriteAttributeString("href", settings.GitHubPath);
+                    x.WriteAttributeString("href", GitHubUrl);
                     x.WriteString("Project Website");
                     x.WriteEndElement();
                     x.WriteEndElement();
 
                     x.WriteStartElement("li");
                     x.WriteStartElement("a");
-                    x.WriteAttributeString("href", $"{settings.GitHubMasterPath}/{settings.ChangeLogFileName}");
+                    x.WriteAttributeString("href", $"{MasterGitHubUrl}/{ChangeLogFileName}");
                     x.WriteString("Release Notes");
                     x.WriteEndElement();
                     x.WriteEndElement();
 
                     x.WriteStartElement("li");
+                    x.WriteString("Browse all available snippets with ");
                     x.WriteStartElement("a");
-                    x.WriteAttributeString("href", "http://pihrt.net/Snippetica/Snippets");
-                    x.WriteString("Browse and Search All Snippets");
+                    x.WriteAttributeString("href", GetSnippetBrowserUrl(Engine.VisualStudio));
+                    x.WriteString("Snippet Browser");
                     x.WriteEndElement();
                     x.WriteEndElement();
 
@@ -61,14 +64,14 @@ namespace Snippetica.CodeGeneration.VisualStudio
                         x.WriteStartElement("li");
 
                         x.WriteStartElement("a");
-                        x.WriteAttributeString("href", $"{settings.GitHubSourcePath}/{settings.ExtensionProjectName}/{directoryName}/README.md");
+                        x.WriteAttributeString("href", $"{VisualStudioExtensionGitHubUrl}/{directoryName}/{ReadMeFileName}");
                         x.WriteString(directoryName);
                         x.WriteEndElement();
                         x.WriteString($" ({snippetDirectory.EnumerateSnippets().Count()} snippets)");
 
                         x.WriteString(" (");
                         x.WriteStartElement("a");
-                        x.WriteAttributeString("href", $"http://pihrt.net/Snippetica/Snippets?Language={snippetDirectory.Language}");
+                        x.WriteAttributeString("href", GetSnippetBrowserUrl(Engine.VisualStudio, snippetDirectory.Language));
                         x.WriteString("full list");
                         x.WriteEndElement();
                         x.WriteString(")");

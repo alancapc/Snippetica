@@ -34,6 +34,11 @@ namespace Snippetica.CodeGeneration
         public ReadOnlyCollection<Language> Languages { get; }
         public ReadOnlyCollection<string> Tags { get; }
 
+        public bool HasTag(string value)
+        {
+            return Tags.Contains(value);
+        }
+
         public static IEnumerable<CharacterSequence> LoadFromFile(string uri)
         {
             return Document.ReadRecords(uri)

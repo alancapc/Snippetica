@@ -13,27 +13,29 @@ namespace Snippetica.CodeGeneration.VisualStudio
 {
     public static class VisualStudioPackageGenerator
     {
+        public static object PropertyName { get; }
+
         public static void GenerateVisualStudioPackageFiles(
+            string directoryPath,
             SnippetDirectory[] directories,
-            CharacterSequence[] characterSequences,
-            GeneralSettings settings)
+            CharacterSequence[] characterSequences)
         {
-            CopySnippetsToProject(settings.ExtensionProjectPath, directories);
+            CopySnippetsToProject(directoryPath, directories);
 
             directories = directories
-                .Select(f => f.WithPath(Path.Combine(settings.ExtensionProjectPath, f.DirectoryName)))
+                .Select(f => f.WithPath(Path.Combine(directoryPath, f.DirectoryName)))
                 .ToArray();
 
-            MarkdownWriter.WriteProjectReadMe(directories, settings.ExtensionProjectPath);
+            MarkdownWriter.WriteProjectReadMe(directories, directoryPath);
 
-            MarkdownWriter.WriteDirectoryReadMe(directories, characterSequences, new SnippetListSettings("VisualStudio"));
-
-            IOUtility.WriteAllText(
-                Path.Combine(settings.ExtensionProjectPath, settings.GalleryDescriptionFileName),
-                HtmlGenerator.GenerateVisualStudioGalleryDescription(directories, settings));
+            MarkdownWriter.WriteDirectoryReadMe(directories, characterSequences, SnippetListSettings.VisualStudio);
 
             IOUtility.WriteAllText(
-                Path.Combine(settings.ExtensionProjectPath, settings.PkgDefFileName),
+                Path.Combine(directoryPath, "description.html"),
+                HtmlGenerator.GenerateVisualStudioGalleryDescription(directories));
+
+            IOUtility.WriteAllText(
+                Path.Combine(directoryPath, "regedit.pkgdef"),
                 PkgDefGenerator.GeneratePkgDefFile(directories));
         }
 

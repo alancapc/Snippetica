@@ -2,7 +2,7 @@
 
 ### Snippet Browser
 
-* Browse all available snippets with [Snippet Browser](http://pihrt.net/Snippetica/Snippets?Engine=VisualStudioCode&Language=CSharp).
+* Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vscode&language=csharp).
 
 ### Quick Reference
 
@@ -73,7 +73,6 @@ st|struct|\-
 t|explict cast operator|\-
 t|true|\-
 t|try|\-
-this|containing type name|\-
 to|typeof operator|\-
 tw|throw statement|\-
 u|using statement|\-

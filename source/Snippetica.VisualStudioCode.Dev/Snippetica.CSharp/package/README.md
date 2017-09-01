@@ -1,8 +1,6 @@
-## Snippetica.CSharp
-
 ### Snippet Browser
 
-* Browse all available snippets with [Snippet Browser](http://pihrt.net/Snippetica/Snippets?Engine=VisualStudioCode&Language=CSharp).
+* Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vscode&language=csharp).
 
 ### List of Selected Snippets
 

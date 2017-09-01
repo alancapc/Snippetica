@@ -4,15 +4,20 @@ namespace Snippetica.CodeGeneration.Markdown
 {
     public class SnippetListSettings
     {
-        public static SnippetListSettings Default { get; } = new SnippetListSettings();
+        public static SnippetListSettings VisualStudio { get; } = new SnippetListSettings(Engine.VisualStudio);
 
-        public SnippetListSettings(string engine = null, bool addHeading = true, bool addLinkToTitle = true)
+        public static SnippetListSettings VisualStudioCode { get; } = new SnippetListSettings(Engine.VisualStudioCode);
+
+        public SnippetListSettings(Engine engine, bool addHeading = true, bool addLinkToTitle = true)
         {
             Engine = engine;
+            AddHeading = addHeading;
             AddLinkToTitle = addLinkToTitle;
         }
 
-        public string Engine { get; }
+        public Engine Engine { get; }
+
+        public bool AddHeading { get; }
 
         public bool AddLinkToTitle { get; }
     }

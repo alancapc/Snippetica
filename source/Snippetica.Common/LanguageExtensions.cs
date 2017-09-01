@@ -41,7 +41,7 @@ namespace Snippetica
             }
         }
 
-        public static string GetVisualStudioCodeIdentifier(this Language language)
+        public static string GetIdentifier(this Language language)
         {
             switch (language)
             {
@@ -61,6 +61,8 @@ namespace Snippetica
                     return "html";
                 case Language.Css:
                     return "css";
+                case Language.Xaml:
+                    return "xaml";
                 default:
                     throw new ArgumentException(language.ToString(), nameof(language));
             }

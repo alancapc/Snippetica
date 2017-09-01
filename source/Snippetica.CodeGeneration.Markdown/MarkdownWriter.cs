@@ -2,22 +2,24 @@
 
 using System.IO;
 using Snippetica.IO;
+using static Snippetica.KnownPaths;
+using static Snippetica.KnownNames;
 
 namespace Snippetica.CodeGeneration.Markdown
 {
     public static class MarkdownWriter
     {
-        public static void WriteSolutionReadMe(SnippetDirectory[] snippetDirectories, GeneralSettings settings)
+        public static void WriteSolutionReadMe(SnippetDirectory[] snippetDirectories)
         {
             IOUtility.WriteAllText(
-                Path.Combine(settings.SolutionDirectoryPath, settings.ReadMeFileName),
-                MarkdownGenerator.GenerateSolutionReadMe(snippetDirectories, settings));
+                Path.Combine(SolutionDirectoryPath, ReadMeFileName),
+                MarkdownGenerator.GenerateSolutionReadMe(snippetDirectories));
         }
 
         public static void WriteProjectReadMe(SnippetDirectory[] snippetDirectories, string directoryPath)
         {
             IOUtility.WriteAllText(
-                Path.Combine(directoryPath, "README.md"),
+                Path.Combine(directoryPath, ReadMeFileName),
                 MarkdownGenerator.GenerateProjectReadMe(snippetDirectories));
         }
 
@@ -36,7 +38,7 @@ namespace Snippetica.CodeGeneration.Markdown
             SnippetListSettings settings)
         {
             IOUtility.WriteAllText(
-                Path.Combine(snippetDirectory.Path, "README.md"),
+                Path.Combine(snippetDirectory.Path, ReadMeFileName),
                 MarkdownGenerator.GenerateDirectoryReadme(snippetDirectory, characterSequences, settings));
         }
     }

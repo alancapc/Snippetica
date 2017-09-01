@@ -7,13 +7,13 @@
   "version": "0.5.2",
   "author": "Josef Pihrt",
   "license": "SEE LICENSE IN LICENSE.TXT",
-  "homepage": "https://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudioCode/Snippetica.CSharp/README.md",
+  "homepage": "http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudioCode/Snippetica.CSharp/README.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/JosefPihrt/Snippetica.git"
+    "url": "http://github.com/josefpihrt/snippetica.git"
   },
   "bugs": {
-    "url": "https://github.com/JosefPihrt/Snippetica/issues"
+    "url": "http://github.com/josefpihrt/snippetica/issues"
   },
   "categories": [
     "Snippets"

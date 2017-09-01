@@ -2,7 +2,7 @@
 
 ### Snippet Browser
 
-* Browse all available snippets with [Snippet Browser](http://pihrt.net/Snippetica/Snippets?Engine=VisualStudioCode&Language=Html).
+* Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vscode&language=html).
 
 ### Quick Reference
 

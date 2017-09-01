@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -12,6 +11,7 @@ using Snippetica.CodeGeneration.Json.Package;
 using Snippetica.CodeGeneration.Markdown;
 using Snippetica.IO;
 using Snippetica.Validations;
+using static Snippetica.KnownPaths;
 
 namespace Snippetica.CodeGeneration.VisualStudioCode
 {
@@ -53,7 +53,7 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
 
                 Language language = grouping.Key;
 
-                string languageId = language.GetVisualStudioCodeIdentifier();
+                string languageId = language.GetIdentifier();
 
                 string directoryName = $"Snippetica.{language}";
                 string directoryPath = Path.Combine(projectPath, directoryName);
@@ -70,7 +70,7 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
                 info.Name += "-" + languageId;
                 info.DisplayName += " for " + language.GetTitle();
                 info.Description += language.GetTitle() + ".";
-                info.Homepage += $"/{directoryName}/README.md";
+                info.Homepage += $"/{directoryName}/{KnownNames.ReadMeFileName}";
                 info.Keywords.AddRange(language.GetKeywords());
                 info.Snippets.Add(new SnippetInfo() { Language = languageId, Path = $"./snippets/{languageId}.json" });
 
@@ -79,13 +79,13 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
                 var snippetDirectory = new SnippetDirectory(directoryPath, language);
 
                 IOUtility.WriteAllText(
-                    Path.Combine(directoryPath, "README.md"),
-                    MarkdownGenerator.GenerateDirectoryReadme(snippetDirectory, characterSequences, new SnippetListSettings("VisualStudioCode")),
+                    Path.Combine(directoryPath, KnownNames.ReadMeFileName),
+                    MarkdownGenerator.GenerateDirectoryReadme(snippetDirectory, characterSequences, SnippetListSettings.VisualStudioCode),
                     IOUtility.UTF8NoBom);
 
                 IOUtility.WriteAllText(
-                    Path.Combine(packageDirectoryPath, "README.md"),
-                    MarkdownGenerator.GenerateDirectoryReadme(snippetDirectory, characterSequences, new SnippetListSettings("VisualStudioCode", addHeading: false, addLinkToTitle: false)),
+                    Path.Combine(packageDirectoryPath, KnownNames.ReadMeFileName),
+                    MarkdownGenerator.GenerateDirectoryReadme(snippetDirectory, characterSequences, new SnippetListSettings(Engine.VisualStudioCode, addHeading: false, addLinkToTitle: false)),
                     IOUtility.UTF8NoBom);
             }
         }
@@ -102,13 +102,13 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
                 Version = "0.5.2",
                 Author = "Josef Pihrt",
                 License = "SEE LICENSE IN LICENSE.TXT",
-                Homepage = "https://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudioCode",
+                Homepage = $"{SourceGitHubUrl}/Snippetica.VisualStudioCode",
                 Repository = new RepositoryInfo()
                 {
                     Type = "git",
-                    Url = "https://github.com/JosefPihrt/Snippetica.git"
+                    Url = $"{GitHubUrl}.git"
                 },
-                Bugs = new BugInfo() { Url = "https://github.com/JosefPihrt/Snippetica/issues" },
+                Bugs = new BugInfo() { Url = $"{GitHubUrl}/issues" },
                 EngineVersion = "^1.0.0"
             };
 
