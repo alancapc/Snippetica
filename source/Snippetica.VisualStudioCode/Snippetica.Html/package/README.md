@@ -1,4 +1,4 @@
-﻿## Snippetica.Html
+## Snippetica.Html
 
 ### Quick Reference
 

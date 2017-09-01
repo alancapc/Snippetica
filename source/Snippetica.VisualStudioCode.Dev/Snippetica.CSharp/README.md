@@ -1,4 +1,4 @@
-﻿## Snippetica.CSharp
+## Snippetica.CSharp
 
 * [full list of snippets](http://pihrt.net/Snippetica/Snippets?Language=CSharp)
 

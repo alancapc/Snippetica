@@ -1,4 +1,4 @@
-﻿## Snippetica.Html
+## Snippetica.Html
 
 * [full list of snippets](http://pihrt.net/Snippetica/Snippets?Language=Html)
 

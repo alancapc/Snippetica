@@ -76,15 +76,15 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
                 info.Keywords.AddRange(language.GetKeywords());
                 info.Snippets.Add(new SnippetInfo() { Language = languageId, Path = $"./snippets/{languageId}.json" });
 
-                IOUtility.WriteAllText(Path.Combine(packageDirectoryPath, "package.json"), info.ToString());
+                IOUtility.WriteAllText(Path.Combine(packageDirectoryPath, "package.json"), info.ToString(), IOUtility.UTF8NoBom);
 
                 var snippetDirectory = new SnippetDirectory(directoryPath, language);
 
                 string readmeText = MarkdownGenerator.GenerateDirectoryReadme(snippetDirectory, characterSequences);
 
-                IOUtility.WriteAllText(Path.Combine(directoryPath, "README.md"), readmeText);
+                IOUtility.WriteAllText(Path.Combine(directoryPath, "README.md"), readmeText, IOUtility.UTF8NoBom);
 
-                IOUtility.WriteAllText(Path.Combine(packageDirectoryPath, "README.md"), readmeText);
+                IOUtility.WriteAllText(Path.Combine(packageDirectoryPath, "README.md"), readmeText, IOUtility.UTF8NoBom);
             }
         }
 

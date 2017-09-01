@@ -1,4 +1,4 @@
-﻿## Snippetica.Xml
+## Snippetica.Xml
 
 ### Quick Reference
 

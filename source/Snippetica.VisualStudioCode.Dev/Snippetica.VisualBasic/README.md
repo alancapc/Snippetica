@@ -1,4 +1,4 @@
-﻿## Snippetica.VisualBasic
+## Snippetica.VisualBasic
 
 * [full list of snippets](http://pihrt.net/Snippetica/Snippets?Language=VisualBasic)
 

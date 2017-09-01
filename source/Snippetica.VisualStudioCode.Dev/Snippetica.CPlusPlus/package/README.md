@@ -1,4 +1,4 @@
-﻿## Snippetica.CPlusPlus
+## Snippetica.CPlusPlus
 
 * [full list of snippets](http://pihrt.net/Snippetica/Snippets?Language=CPlusPlus)
 

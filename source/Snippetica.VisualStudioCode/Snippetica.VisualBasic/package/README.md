@@ -1,4 +1,4 @@
-﻿## Snippetica.VisualBasic
+## Snippetica.VisualBasic
 
 ### Quick Reference
 

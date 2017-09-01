@@ -13,6 +13,8 @@ namespace Snippetica.IO
     {
         private static readonly StringComparer _stringComparer = StringComparer.OrdinalIgnoreCase;
 
+        public static Encoding UTF8NoBom { get; } = new UTF8Encoding(encoderShouldEmitUTF8Identifier: false);
+
         public static void SaveSnippets(ICollection<Snippet> snippets, string directoryPath)
         {
             foreach (Snippet snippet in snippets)
@@ -84,18 +86,20 @@ namespace Snippetica.IO
             Console.WriteLine();
         }
 
-        public static void WriteAllText(string filePath, string content, bool onlyIfChanged = true)
+        public static void WriteAllText(string filePath, string content, Encoding encoding = null, bool onlyIfChanged = true)
         {
+            encoding = encoding ?? Encoding.UTF8;
+
             if (!onlyIfChanged
                 || !File.Exists(filePath)
                 || !string.Equals(
-                    File.ReadAllText(filePath, Encoding.UTF8),
+                    File.ReadAllText(filePath, encoding),
                     content,
                     StringComparison.Ordinal))
             {
                 Console.WriteLine($"saving {filePath}");
 
-                File.WriteAllText(filePath, content, Encoding.UTF8);
+                File.WriteAllText(filePath, content, encoding);
             }
         }
 

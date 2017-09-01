@@ -1,4 +1,4 @@
-﻿## Snippetica.CSharp
+## Snippetica.CSharp
 
 ### Quick Reference
 
