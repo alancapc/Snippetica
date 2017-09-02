@@ -77,6 +77,7 @@ namespace Snippetica.CodeGeneration.Commands
             snippet.AddNamespace(Type.Namespace);
 
             snippet.AddTag(KnownTags.ExcludeFromReadme);
+            snippet.AddTag(KnownTags.ExcludeFromSnippetBrowser);
 
             if (Type.Keyword == "this")
             {

@@ -88,21 +88,25 @@ namespace Snippetica.IO
 
         public static void SaveSnippetBrowserFile(IEnumerable<Snippet> snippets, string filePath)
         {
-            foreach (Snippet snippet in snippets)
-            {
-                string submenuShortcut = snippet.GetSubmenuShortcut();
-
-                snippet.RemoveShortcutFromTitle();
-
-                snippet.RemoveMetaKeywords();
-
-                snippet.Keywords.Add($"{KnownTags.MetaTagPrefix}Name:{snippet.FileNameWithoutExtension()}");
-
-                if (!string.IsNullOrEmpty(submenuShortcut))
-                    snippet.Keywords.Add($"{KnownTags.MetaTagPrefix}SubmenuShortcut:{submenuShortcut}");
-            }
-
             snippets = snippets
+                .Where(f => !f.HasTag(KnownTags.ExcludeFromSnippetBrowser))
+                .Select(snippet =>
+                {
+                    snippet = (Snippet)snippet.Clone();
+
+                    string submenuShortcut = snippet.GetSubmenuShortcut();
+
+                    snippet.RemoveShortcutFromTitle();
+
+                    snippet.RemoveMetaKeywords();
+
+                    snippet.Keywords.Add($"{KnownTags.MetaTagPrefix}Name:{snippet.FileNameWithoutExtension()}");
+
+                    if (!string.IsNullOrEmpty(submenuShortcut))
+                        snippet.Keywords.Add($"{KnownTags.MetaTagPrefix}SubmenuShortcut:{submenuShortcut}");
+
+                    return snippet;
+                })
                 .OrderBy(f => f.Language.ToString())
                 .ThenBy(f => f.FileNameWithoutExtension());
 
