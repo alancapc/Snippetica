@@ -6,6 +6,7 @@
 
 Title | Shortcut
 ----- | --------
+?: operator \(equal to null\)|con
 ?: operator \(not equal to null\)|conn
 array type|a
 break statement|bk
@@ -19,8 +20,11 @@ HashSet&lt;T&gt; type|ghs
 HashSet&lt;T&gt; variable|vhs
 if \!string\.IsNullOrEmpty|iffsne
 if \!string\.IsNullOrWhiteSpace|iffsnw
+if Enum\.TryParse|ifemtp
+if not Enum\.TryParse|iffemtp
 if string\.IsNullOrEmpty|ifsne
 if string\.IsNullOrWhiteSpace|ifsnw
+lambda expression with 2 parameters|l2
 List&lt;T&gt; type|gl
 List&lt;T&gt; variable|vl
 namespace|ns

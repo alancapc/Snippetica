@@ -104,6 +104,13 @@
     ],
     "description": "break statement"
   },
+  "?: operator (equal to null)": {
+    "prefix": "con",
+    "body": [
+      "(${1:expression} == null) ? ${2:null} : ${3:null}${0}"
+    ],
+    "description": "?: (conditional) operator with condition whether the expression is equal to null"
+  },
   "?: operator (not equal to null)": {
     "prefix": "conn",
     "body": [
@@ -154,6 +161,28 @@
     ],
     "description": "do statement with condition whether an expression is equal to null"
   },
+  "if Enum.TryParse": {
+    "prefix": "ifemtp",
+    "body": [
+      "${1:TEnum} ${2:x};",
+      "if (Enum.TryParse(${3:value}, out ${2}))",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "if statement with condition whether Enum.TryParse method returns true."
+  },
+  "if not Enum.TryParse": {
+    "prefix": "iffemtp",
+    "body": [
+      "${1:TEnum} ${2:x};",
+      "if (!Enum.TryParse(${3:value}, out ${2}))",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "if statement with condition whether Enum.TryParse method returns false."
+  },
   "if !string.IsNullOrEmpty": {
     "prefix": "iffsne",
     "body": [
@@ -193,6 +222,13 @@
       "}"
     ],
     "description": "if string.IsNullOrWhiteSpace"
+  },
+  "lambda expression with 2 parameters": {
+    "prefix": "l2",
+    "body": [
+      "(${1:f}, ${2:g}) => ${0}"
+    ],
+    "description": "lambda expression with 2 parameters"
   },
   "namespace": {
     "prefix": "ns",

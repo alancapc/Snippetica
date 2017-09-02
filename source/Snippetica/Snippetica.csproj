@@ -65,10 +65,12 @@
     <None Include="Snippetica.CSharp.Dev\Attributes\AssemblyAttribute.snippet" />
     <None Include="Snippetica.CSharp.Dev\Attributes\DebuggerStepThroughAttribute.snippet" />
     <None Include="Snippetica.CSharp.Dev\Attributes\FlagsAttribute.snippet" />
+    <None Include="Snippetica.CSharp.Dev\ConditionalOperatorEqualToNull.snippet" />
     <None Include="Snippetica.CSharp.Dev\IfNotStringIsNullOrEmpty.snippet" />
     <None Include="Snippetica.CSharp.Dev\IfNotStringIsNullOrWhiteSpace.snippet" />
     <None Include="Snippetica.CSharp.Dev\IfStringIsNullOrWhiteSpace.snippet" />
     <None Include="Snippetica.CSharp.Dev\IfStringIsNullOrEmpty.snippet" />
+    <None Include="Snippetica.CSharp.Dev\LambdaExpressionWithTwoParameters.snippet" />
     <None Include="Snippetica.CSharp.Dev\Namespace.snippet" />
     <None Include="Snippetica.CSharp.Dev\DoNotNull.snippet" />
     <None Include="Snippetica.CSharp.Dev\DoNull.snippet" />
@@ -78,9 +80,14 @@
     <None Include="Snippetica.CSharp.Dev\WhileNull.snippet" />
     <None Include="Snippetica.CSharp.Dev\WhileNotNull.snippet" />
     <None Include="Snippetica.CSharp.Dev\YieldReturnNewThis.snippet" />
+    <None Include="Snippetica.CSharp.Dev\IfNotEnumTryParse.snippet" />
+    <None Include="Snippetica.CSharp.Dev\IfEnumTryParse.snippet" />
     <None Include="Snippetica.CSharp\UsingVariable.snippet" />
     <None Include="Snippetica.VisualBasic.AutoGeneration\IfNotTryParse.snippet" />
     <None Include="Snippetica.VisualBasic.AutoGeneration\IfTryParse.snippet" />
+    <None Include="Snippetica.VisualBasic.Dev\IfNotEnumTryParse.snippet" />
+    <None Include="Snippetica.VisualBasic.Dev\IfEnumTryParse.snippet" />
+    <None Include="Snippetica.VisualBasic.Dev\LambdaExpressionWithTwoParameters.snippet" />
     <None Include="Snippetica.VisualBasic.Dev\Namespace.snippet" />
     <None Include="Snippetica.VisualBasic\IEnumeratorOfTVariable.snippet" />
     <None Include="Snippetica.VisualBasic\StreamReaderVariable.snippet" />

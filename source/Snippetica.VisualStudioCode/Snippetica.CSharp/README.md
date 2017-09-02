@@ -172,7 +172,6 @@ Title | Shortcut
 [typeof operator](TypeOfOperator.snippet)|to
 [using statement](Using.snippet)|u
 [using static](UsingStatic.snippet)|us
-[using variable](UsingVariable.snippet)|u\_v
 [variable declaration with explicit cast operator](VariableWithExplicitCast.snippet)|vt
 [variable declaration](Variable.snippet)|v
 [while](While.snippet)|we

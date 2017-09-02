@@ -170,7 +170,6 @@ try\-finally|tf
 typeof operator|to
 using statement|u
 using static|us
-using variable|u\_v
 variable declaration|v
 variable declaration with explicit cast operator|vt
 while|we

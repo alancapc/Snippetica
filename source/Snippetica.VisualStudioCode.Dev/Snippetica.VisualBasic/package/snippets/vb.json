@@ -90,6 +90,33 @@
     ],
     "description": "ObservableCollection(Of T) variable declaration (with initializer)"
   },
+  "if Enum.TryParse": {
+    "prefix": "ifemtp",
+    "body": [
+      "Dim ${1:x} As ${2:TEnum}",
+      "If Enum.TryParse(${3:value}, ${1})",
+      "    ${0}",
+      "End If"
+    ],
+    "description": "if statement with condition whether Enum.TryParse method returns true."
+  },
+  "if not Enum.TryParse": {
+    "prefix": "iffemtp",
+    "body": [
+      "Dim ${1:x} As ${2:TEnum}",
+      "If Not Enum.TryParse(${3:value}, ${1})",
+      "    ${0}",
+      "End If"
+    ],
+    "description": "if statement with condition whether Enum.TryParse method returns false."
+  },
+  "Lambda expression with 2 parameters": {
+    "prefix": "l2",
+    "body": [
+      "Function(${1:f}, ${2:g}) ${0}"
+    ],
+    "description": "Lambda expression with 2 parameters"
+  },
   "namespace": {
     "prefix": "ns",
     "body": [

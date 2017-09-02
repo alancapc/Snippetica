@@ -4,6 +4,7 @@
 
 Title | Shortcut
 ----- | --------
+[?: operator \(equal to null\)](ConditionalOperatorEqualToNull.snippet)|con
 [?: operator \(not equal to null\)](ConditionalOperatorNotEqualToNull.snippet)|conn
 [array type](ArrayOfTType.snippet)|a
 [Assembly attribute](AssemblyAttribute.snippet)|ae
@@ -46,6 +47,8 @@ Title | Shortcut
 [HashSet&lt;T&gt; variable](HashSetOfTVariable.snippet)|vhs
 [if \!string\.IsNullOrEmpty](IfNotStringIsNullOrEmpty.snippet)|iffsne
 [if \!string\.IsNullOrWhiteSpace](IfNotStringIsNullOrWhiteSpace.snippet)|iffsnw
+[if Enum\.TryParse](IfEnumTryParse.snippet)|ifemtp
+[if not Enum\.TryParse](IfNotEnumTryParse.snippet)|iffemtp
 [if string\.IsNullOrEmpty](IfStringIsNullOrEmpty.snippet)|ifsne
 [if string\.IsNullOrWhiteSpace](IfStringIsNullOrWhiteSpace.snippet)|ifsnw
 [internal abstract modifiers](InternalAbstractModifiers.snippet)|x
@@ -54,6 +57,7 @@ Title | Shortcut
 [internal virtual modifiers](InternalVirtualModifiers.snippet)|x
 [j Enumerable\.Join](EnumerableJoin.snippet)|q
 [l Enumerable\.Last](EnumerableLast.snippet)|q
+[lambda expression with 2 parameters](LambdaExpressionWithTwoParameters.snippet)|l2
 [List&lt;T&gt; type](ListOfTType.snippet)|gl
 [List&lt;T&gt; variable](ListOfTVariable.snippet)|vl
 [lod Enumerable\.LastOrDefault](EnumerableLastOrDefault.snippet)|q
