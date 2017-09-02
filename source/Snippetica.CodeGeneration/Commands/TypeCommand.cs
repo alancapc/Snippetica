@@ -36,13 +36,13 @@ namespace Snippetica.CodeGeneration.Commands
         {
             LanguageDefinition language = ((LanguageExecutionContext)context).Language;
 
+            if (Type == null)
+                return;
+
             snippet.AddTag(KnownTags.NonUniqueShortcut);
 
-            if (Type == null
-                || ReferenceEquals(Type, TypeDefinition.Default))
-            {
+            if (ReferenceEquals(Type, TypeDefinition.Default))
                 return;
-            }
 
             if (snippet.HasTag(KnownTags.TryParse) && !Tags.Contains(KnownTags.TryParse))
             {

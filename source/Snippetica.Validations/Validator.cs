@@ -11,18 +11,27 @@ using Snippetica.IO;
 
 namespace Snippetica.Validations
 {
-    public static class SnippetChecker
+    public static class Validator
     {
         private static readonly SnippetDeepEqualityComparer _snippetEqualityComparer = new SnippetDeepEqualityComparer();
 
-        public static void CheckSnippets(SnippetDirectory[] snippetDirectories)
+        public static void ValidateSnippets(SnippetDirectory snippetDirectory)
+        {
+            Console.WriteLine();
+            Console.WriteLine($"validating snippets in '{snippetDirectory.Path}' ...");
+
+            CheckDuplicateShortcuts(snippetDirectory);
+
+            ValidateSnippetsCore(snippetDirectory);
+        }
+
+        public static void ValidateSnippets(IEnumerable<SnippetDirectory> snippetDirectories)
         {
             foreach (IGrouping<Language, SnippetDirectory> grouping in snippetDirectories
-                .Where(f => !f.IsAutoGeneration)
                 .GroupBy(f => f.Language))
             {
                 Console.WriteLine();
-                Console.WriteLine($"***** {grouping.Key} *****");
+                Console.WriteLine($"validating snippets with language '{grouping.Key}' ...");
 
                 SnippetDirectory[] directories = grouping.ToArray();
 
@@ -32,23 +41,34 @@ namespace Snippetica.Validations
                     .Where(f => !f.HasTag(KnownTags.VisualStudio))
                     .ToArray();
 
-                CheckLanguageSnippets(directories);
+                ValidateSnippetsCore(directories);
             }
         }
 
-        private static void CheckLanguageSnippets(SnippetDirectory[] snippetDirectories)
+        private static void ValidateSnippetsCore(SnippetDirectory snippetDirectory)
         {
-            List<Snippet> snippets = snippetDirectories
-                .SelectMany(f => f.EnumerateSnippets())
-                .ToList();
+            ValidateSnippets(snippetDirectory.EnumerateSnippets());
+        }
 
+        private static void ValidateSnippetsCore(SnippetDirectory[] snippetDirectories)
+        {
+            ValidateSnippets(snippetDirectories.SelectMany(f => f.EnumerateSnippets()));
+        }
+
+        public static void ValidateSnippets(IEnumerable<Snippet> snippets)
+        {
+            ValidateSnippets(snippets.ToList());
+        }
+
+        public static void ValidateSnippets(List<Snippet> snippets)
+        {
             Console.WriteLine();
             Console.WriteLine($"number of snippets: {snippets.Count}");
 
             foreach (SnippetValidationResult result in Validate(snippets))
             {
                 Console.WriteLine();
-                Console.WriteLine($"{result.Importance}: \"{result.Description}\" in \"{result.Snippet.FilePath}\"");
+                Console.WriteLine($"{result.Importance.ToString().ToUpper()}: \"{result.Description}\" in \"{result.Snippet.FilePath}\"");
             }
 
             foreach (IGrouping<string, Snippet> snippet in snippets
@@ -57,27 +77,36 @@ namespace Snippetica.Validations
                 .Where(f => f.Count() == 1))
             {
                 Console.WriteLine();
-                Console.WriteLine($"unused tag {KnownTags.NonUniqueShortcut} in \"{snippet.First().FilePath}\"");
+                Console.WriteLine($"UNUSED TAG {KnownTags.NonUniqueShortcut} in \"{snippet.First().FilePath}\"");
             }
 
-            foreach (Snippet snippet in snippets.Select(f => CloneAndSortCollections(f)))
-            {
+            foreach (Snippet snippet in snippets.Select(CloneAndSortCollections))
                 IOUtility.SaveSnippet(snippet);
-            }
+        }
+
+        public static void CheckDuplicateShortcuts(SnippetDirectory snippetDirectory)
+        {
+            CheckDuplicateShortcuts(snippetDirectory.EnumerateSnippets());
         }
 
         public static void CheckDuplicateShortcuts(SnippetDirectory[] snippetDirectories)
         {
-            List<Snippet> snippets = snippetDirectories
-                .SelectMany(f => f.EnumerateSnippets())
-                .ToList();
+            CheckDuplicateShortcuts(snippetDirectories.SelectMany(f => f.EnumerateSnippets()));
+        }
 
+        public static void CheckDuplicateShortcuts(IEnumerable<Snippet> snippets)
+        {
+            CheckDuplicateShortcuts(snippets.ToList());
+        }
+
+        public static void CheckDuplicateShortcuts(List<Snippet> snippets)
+        {
             foreach (DuplicateShortcutInfo info in FindDuplicateShortcuts(snippets, KnownTags.NonUniqueShortcut))
             {
                 Console.WriteLine();
-                Console.WriteLine($"shortcut duplicate: {info.Shortcut}");
+                Console.WriteLine($"DUPLICATE SHORTCUT: {info.Shortcut}");
 
-                    foreach (Snippet item in info.Snippets)
+                foreach (Snippet item in info.Snippets)
                     Console.WriteLine($"  {item.FilePath}");
             }
         }
@@ -134,7 +163,7 @@ namespace Snippetica.Validations
         {
             foreach (IGrouping<string, Snippet> grouping in snippets
                 .GroupBy(f => Path.GetFileNameWithoutExtension(f.FilePath))
-                .Where(f => f.Count() > 1))
+                .Where(f => f.CountExceeds(1)))
             {
                 throw new InvalidOperationException($"Multiple snippets with same file name '{grouping.Key}'");
             }
@@ -144,7 +173,7 @@ namespace Snippetica.Validations
         {
             foreach (IGrouping<string, Snippet> grouping in snippets
                 .GroupBy(f => f.Shortcut)
-                .Where(f => f.Count() > 1))
+                .Where(f => f.CountExceeds(1)))
             {
                 throw new InvalidOperationException($"Multiple snippets with same shortcut '{grouping.Key}'");
             }

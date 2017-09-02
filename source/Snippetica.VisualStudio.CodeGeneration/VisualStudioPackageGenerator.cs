@@ -75,7 +75,7 @@ namespace Snippetica.CodeGeneration.VisualStudio
                     snippets.Add(snippet);
                 }
 
-                SnippetChecker.ThrowOnDuplicateFileName(snippets);
+                Validator.ThrowOnDuplicateFileName(snippets);
 
                 IOUtility.SaveSnippets(snippets, directoryPath);
 
@@ -89,25 +89,7 @@ namespace Snippetica.CodeGeneration.VisualStudio
             document.Save();
 
 #if !DEBUG
-            foreach (Snippet snippet in allSnippets)
-            {
-                string submenuShortcut = snippet.GetSubmenuShortcut();
-
-                snippet.RemoveShortcutFromTitle();
-
-                snippet.RemoveMetaKeywords();
-                snippet.Keywords.Add($"{KnownTags.MetaTagPrefix}Name:{snippet.FileNameWithoutExtension()}");
-
-                if (!string.IsNullOrEmpty(submenuShortcut))
-                    snippet.Keywords.Add($"{KnownTags.MetaTagPrefix}SubmenuShortcut:{submenuShortcut}");
-            }
-
-            IOUtility.SaveSnippetsToSingleFile(
-                allSnippets
-                    .Where(f => !f.HasTag(KnownTags.ExcludeFromReadme))
-                    .OrderBy(f => f.Language.ToString())
-                    .ThenBy(f => f.FileNameWithoutExtension()),
-                Path.Combine(projectDirPath, "snippets.xml"));
+            IOUtility.SaveSnippetBrowserFile(allSnippets, Path.Combine(projectDirPath, "snippets.xml"));
 #endif
         }
     }

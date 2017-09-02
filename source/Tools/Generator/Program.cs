@@ -65,7 +65,7 @@ namespace Snippetica.CodeGeneration
                 directories: snippetDirectories.Where(f => f.HasTags(KnownTags.Release, KnownTags.Dev)).ToArray(),
                 characterSequences: null);
 
-            SnippetChecker.CheckSnippets(snippetDirectories);
+            Validator.ValidateSnippets(snippetDirectories.Where(f => !f.IsAutoGeneration));
 
             Console.WriteLine("*** END ***");
             Console.ReadKey();

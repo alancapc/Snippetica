@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -48,8 +49,7 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
 
             foreach (IGrouping<Language, Snippet> grouping in snippets.GroupBy(f => f.Language))
             {
-                SnippetChecker.ThrowOnDuplicateFileName(grouping);
-                SnippetChecker.ThrowOnDuplicateShortcut(grouping);
+                Validator.ThrowOnDuplicateFileName(grouping);
 
                 Language language = grouping.Key;
 
@@ -57,6 +57,10 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
 
                 string directoryName = $"Snippetica.{language}";
                 string directoryPath = Path.Combine(projectPath, directoryName);
+
+                var snippetDirectory = new SnippetDirectory(directoryPath, language);
+
+                Validator.ValidateSnippets(snippetDirectory);
 
                 string packageDirectoryPath = Path.Combine(directoryPath, "package");
 
@@ -76,8 +80,6 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
 
                 IOUtility.WriteAllText(Path.Combine(packageDirectoryPath, "package.json"), info.ToString(), IOUtility.UTF8NoBom);
 
-                var snippetDirectory = new SnippetDirectory(directoryPath, language);
-
                 IOUtility.WriteAllText(
                     Path.Combine(directoryPath, KnownNames.ReadMeFileName),
                     MarkdownGenerator.GenerateDirectoryReadme(snippetDirectory, characterSequences, SnippetListSettings.VisualStudioCode),
@@ -87,7 +89,9 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
                     Path.Combine(packageDirectoryPath, KnownNames.ReadMeFileName),
                     MarkdownGenerator.GenerateDirectoryReadme(snippetDirectory, characterSequences, new SnippetListSettings(Engine.VisualStudioCode, addHeading: false, addLinkToTitle: false)),
                     IOUtility.UTF8NoBom);
-            }
+                }
+
+            IOUtility.SaveSnippetBrowserFile(snippets, Path.Combine(projectPath, "snippets.xml"));
         }
 
         private static PackageInfo GetDefaultPackageInfo()
@@ -160,10 +164,10 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
 
                         snippet.Keywords.Remove(keyword);
 
-                        snippet.RemoveTag(KnownTags.NonUniqueShortcut);
-
                         snippet.AddTag(KnownTags.ExcludeFromReadme);
                     }
+
+                    snippet.RemoveTag(KnownTags.NonUniqueShortcut);
                 }
 
                 yield return snippet;

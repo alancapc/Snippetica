@@ -48,6 +48,7 @@
     <Compile Include="CharacterSequence.cs" />
     <Compile Include="Engine.cs" />
     <Compile Include="EngineExtensions.cs" />
+    <Compile Include="Extensions\Engine.cs" />
     <Compile Include="IO\IOUtility.cs" />
     <Compile Include="KnownNames.cs" />
     <Compile Include="KnownPaths.cs" />

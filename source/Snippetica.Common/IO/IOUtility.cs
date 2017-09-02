@@ -86,6 +86,29 @@ namespace Snippetica.IO
             Console.WriteLine();
         }
 
+        public static void SaveSnippetBrowserFile(IEnumerable<Snippet> snippets, string filePath)
+        {
+            foreach (Snippet snippet in snippets)
+            {
+                string submenuShortcut = snippet.GetSubmenuShortcut();
+
+                snippet.RemoveShortcutFromTitle();
+
+                snippet.RemoveMetaKeywords();
+
+                snippet.Keywords.Add($"{KnownTags.MetaTagPrefix}Name:{snippet.FileNameWithoutExtension()}");
+
+                if (!string.IsNullOrEmpty(submenuShortcut))
+                    snippet.Keywords.Add($"{KnownTags.MetaTagPrefix}SubmenuShortcut:{submenuShortcut}");
+            }
+
+            snippets = snippets
+                .OrderBy(f => f.Language.ToString())
+                .ThenBy(f => f.FileNameWithoutExtension());
+
+            SaveSnippetsToSingleFile(snippets, filePath);
+        }
+
         public static void WriteAllText(string filePath, string content, Encoding encoding = null, bool onlyIfChanged = true)
         {
             encoding = encoding ?? Encoding.UTF8;
