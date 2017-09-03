@@ -19,7 +19,7 @@ namespace Snippetica
                     return "VB";
                 case Language.CSharp:
                     return "C#";
-                case Language.CPlusPlus:
+                case Language.Cpp:
                     return "C++";
                 case Language.Xml:
                     return "XML";
@@ -33,6 +33,10 @@ namespace Snippetica
                     return "HTML";
                 case Language.Css:
                     return "CSS";
+                case Language.Json:
+                    return "JSON";
+                case Language.Markdown:
+                    return "Markdown";
                 default:
                     {
                         Debug.Fail(language.ToString());
@@ -49,7 +53,7 @@ namespace Snippetica
                     return "vb";
                 case Language.CSharp:
                     return "csharp";
-                case Language.CPlusPlus:
+                case Language.Cpp:
                     return "cpp";
                 case Language.Xml:
                     return "xml";
@@ -63,6 +67,10 @@ namespace Snippetica
                     return "css";
                 case Language.Xaml:
                     return "xaml";
+                case Language.Json:
+                    return "json";
+                case Language.Markdown:
+                    return "markdown";
                 default:
                     throw new ArgumentException(language.ToString(), nameof(language));
             }
@@ -76,7 +84,7 @@ namespace Snippetica
                     return "Basic";
                 case Language.CSharp:
                     return "CSharp";
-                case Language.CPlusPlus:
+                case Language.Cpp:
                     return "C/C++";
                 case Language.Xml:
                     return "XML";
@@ -111,7 +119,7 @@ namespace Snippetica
                         yield return "CSharp";
                         break;
                     }
-                case Language.CPlusPlus:
+                case Language.Cpp:
                     {
                         yield return "C++";
                         yield return "Cpp";
@@ -147,6 +155,16 @@ namespace Snippetica
                 case Language.Css:
                     {
                         yield return "CSS";
+                        break;
+                    }
+                case Language.Json:
+                    {
+                        yield return "JSON";
+                        break;
+                    }
+                case Language.Markdown:
+                    {
+                        yield return "Markdown";
                         break;
                     }
                 default:

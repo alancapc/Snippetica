@@ -26,30 +26,26 @@ namespace Snippetica.CodeGeneration
 
             CharacterSequence.SerializeToXml(Path.Combine(VisualStudioExtensionProjectPath, "CharacterSequences.xml"), characterSequences);
 
-            SnippetDirectory[] nonDevDirectories = snippetDirectories.Where(f => !f.IsDev).ToArray();
-            SnippetDirectory[] devDirectories = snippetDirectories.Where(f => f.IsDev).ToArray();
+            SnippetDirectory[] visualStudioDirectories = snippetDirectories.Where(f => !f.HasTag(KnownTags.ExcludeFromVisualStudio)).ToArray();
 
-            foreach (SnippetGeneratorResult result in SnippetGenerator.GetResults(devDirectories, languageDefinitions.Select(f => new VisualStudioSnippetGenerator(f)).ToArray()))
+            foreach (SnippetGeneratorResult result in SnippetGenerator.GetResults(visualStudioDirectories.Where(f => f.IsDev).ToArray(), languageDefinitions.Select(f => new VisualStudioSnippetGenerator(f)).ToArray()))
                 result.Save();
 
-            foreach (SnippetGeneratorResult result in SnippetGenerator.GetResults(nonDevDirectories, languageDefinitions.Select(f => new VisualStudioSnippetGenerator(f)).ToArray()))
+            foreach (SnippetGeneratorResult result in SnippetGenerator.GetResults(visualStudioDirectories.Where(f => !f.IsDev).ToArray(), languageDefinitions.Select(f => new VisualStudioSnippetGenerator(f)).ToArray()))
                 result.Save();
 
-            HtmlSnippetGenerator.GetResult(snippetDirectories).Save();
-            XamlSnippetGenerator.GetResult(snippetDirectories).Save();
-            XmlSnippetGenerator.GetResult(snippetDirectories).Save();
+            HtmlSnippetGenerator.GetResult(visualStudioDirectories).Save();
+            XamlSnippetGenerator.GetResult(visualStudioDirectories).Save();
+            XmlSnippetGenerator.GetResult(visualStudioDirectories).Save();
 
-            VisualStudioCodeSnippetGenerator.GenerateSnippets(nonDevDirectories, languageDefinitions, characterSequences.Where(f => !f.HasTag(KnownTags.ExcludeFromVisualStudioCode)).ToArray(), VisualStudioCodeExtensionProjectPath);
-            VisualStudioCodeSnippetGenerator.GenerateSnippets(devDirectories, languageDefinitions, null, VisualStudioCodeExtensionProjectPath + DevelopmentSuffix);
-
-            SnippetDirectory[] releaseDirectories = snippetDirectories.Where(f => f.IsRelease && !f.IsDev).ToArray();
+            SnippetDirectory[] releaseDirectories = visualStudioDirectories.Where(f => f.IsRelease && !f.IsDev).ToArray();
 
             MarkdownWriter.WriteSolutionReadMe(releaseDirectories);
 
             MarkdownWriter.WriteProjectReadMe(releaseDirectories, Path.Combine(SolutionDirectoryPath, SourceDirectoryName, ProductName));
 
             MarkdownWriter.WriteDirectoryReadMe(
-                snippetDirectories
+                visualStudioDirectories
                     .Where(f => f.HasAnyTag(KnownTags.Release, KnownTags.Dev) && !f.IsAutoGeneration)
                     .ToArray(),
                 characterSequences,
@@ -62,10 +58,15 @@ namespace Snippetica.CodeGeneration
 
             VisualStudioPackageGenerator.GenerateVisualStudioPackageFiles(
                 VisualStudioExtensionProjectPath + DevelopmentSuffix,
-                directories: snippetDirectories.Where(f => f.HasTags(KnownTags.Release, KnownTags.Dev)).ToArray(),
+                directories: visualStudioDirectories.Where(f => f.HasTags(KnownTags.Release, KnownTags.Dev)).ToArray(),
                 characterSequences: null);
 
-            Validator.ValidateSnippets(snippetDirectories.Where(f => !f.IsAutoGeneration));
+            Validator.ValidateSnippets(visualStudioDirectories.Where(f => !f.IsAutoGeneration));
+
+            SnippetDirectory[] visualStudioCodeDirectories = snippetDirectories.Where(f => !f.HasTag(KnownTags.ExcludeFromVisualStudioCode)).ToArray();
+
+            VisualStudioCodeSnippetGenerator.GenerateSnippets(visualStudioCodeDirectories.Where(f => !f.IsDev).ToArray(), languageDefinitions, characterSequences.Where(f => !f.HasTag(KnownTags.ExcludeFromVisualStudioCode)).ToArray(), VisualStudioCodeExtensionProjectPath);
+            VisualStudioCodeSnippetGenerator.GenerateSnippets(visualStudioCodeDirectories.Where(f => f.IsDev).ToArray(), languageDefinitions, null, VisualStudioCodeExtensionProjectPath + DevelopmentSuffix);
 
             Console.WriteLine("*** END ***");
             Console.ReadKey();

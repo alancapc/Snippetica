@@ -33,8 +33,8 @@
     <CodeAnalysisRuleSet>..\global.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Pihrtsoft.Snippets, Version=1.3.0.0, Culture=neutral, PublicKeyToken=47d18de6ae9b6208, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SnippetManager.1.3.0\lib\net40\Pihrtsoft.Snippets.dll</HintPath>
+    <Reference Include="Pihrtsoft.Snippets, Version=1.3.2.0, Culture=neutral, PublicKeyToken=47d18de6ae9b6208, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SnippetManager.1.3.2\lib\net40\Pihrtsoft.Snippets.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -72,10 +72,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

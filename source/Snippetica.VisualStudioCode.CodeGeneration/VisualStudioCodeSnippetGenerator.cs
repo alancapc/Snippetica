@@ -40,7 +40,7 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
             snippets.AddRange(XmlSnippetGenerator.GetResult(snippetDirectories).Snippets);
 
             foreach (SnippetDirectory snippetDirectory in snippetDirectories
-                .Where(f => f.IsRelease && !f.IsAutoGeneration && !f.HasTag(KnownTags.ExcludeFromVisualStudioCode)))
+                .Where(f => f.IsRelease && !f.IsAutoGeneration))
             {
                 snippets.AddRange(snippetDirectory.EnumerateSnippets(SearchOption.TopDirectoryOnly));
             }
