@@ -22,7 +22,7 @@ namespace Snippetica
             switch (value)
             {
                 case "Cpp":
-                    return Language.CPlusPlus;
+                    return Language.Cpp;
                 case "CSharp":
                     return Language.CSharp;
                 case "Html":
@@ -33,6 +33,10 @@ namespace Snippetica
                     return Language.Xaml;
                 case "Xml":
                     return Language.Xml;
+                case "Json":
+                    return Language.Json;
+                case "Markdown":
+                    return Language.Markdown;
                 default:
                     {
                         Debug.Fail(value);

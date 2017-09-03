@@ -1,0 +1,268 @@
+﻿{
+  "bold": {
+    "prefix": "b",
+    "body": [
+      "**${1:x}**${0}"
+    ],
+    "description": "bold"
+  },
+  "bold italic": {
+    "prefix": "bi",
+    "body": [
+      "**_${1:x}_**${0}"
+    ],
+    "description": "bold italic"
+  },
+  "code": {
+    "prefix": "c",
+    "body": [
+      "`${1:x}`${0}"
+    ],
+    "description": "code"
+  },
+  "code block": {
+    "prefix": "cc",
+    "body": [
+      "```",
+      "${1:x}",
+      "```${0}"
+    ],
+    "description": "code block"
+  },
+  "code block with language": {
+    "prefix": "cc_",
+    "body": [
+      "```${1:language}",
+      "${2:x}",
+      "```${0}"
+    ],
+    "description": "code block with language"
+  },
+  "header 1": {
+    "prefix": "h",
+    "body": [
+      "# ${0}"
+    ],
+    "description": "header 1"
+  },
+  "header 2": {
+    "prefix": "h2",
+    "body": [
+      "## ${0}"
+    ],
+    "description": "header 2"
+  },
+  "header 2 _": {
+    "prefix": "hh",
+    "body": [
+      "## ${0}"
+    ],
+    "description": "header 2"
+  },
+  "header 3": {
+    "prefix": "h3",
+    "body": [
+      "### ${0}"
+    ],
+    "description": "header 3"
+  },
+  "header 3 _": {
+    "prefix": "hhh",
+    "body": [
+      "### ${0}"
+    ],
+    "description": "header 3"
+  },
+  "header 4": {
+    "prefix": "h4",
+    "body": [
+      "#### ${0}"
+    ],
+    "description": "header 4"
+  },
+  "header 5": {
+    "prefix": "h5",
+    "body": [
+      "##### ${0}"
+    ],
+    "description": "header 5"
+  },
+  "header 6": {
+    "prefix": "h6",
+    "body": [
+      "###### ${0}"
+    ],
+    "description": "header 6"
+  },
+  "horizontal rule": {
+    "prefix": "hr",
+    "body": [
+      "___${0}"
+    ],
+    "description": "horizontal rule"
+  },
+  "image": {
+    "prefix": "ie",
+    "body": [
+      "![${1:text}](${2:url})${0}"
+    ],
+    "description": "image"
+  },
+  "italic": {
+    "prefix": "i",
+    "body": [
+      "*${1:x}*${0}"
+    ],
+    "description": "italic"
+  },
+  "italic bold": {
+    "prefix": "ib",
+    "body": [
+      "_**${1:x}**_${0}"
+    ],
+    "description": "italic bold"
+  },
+  "link": {
+    "prefix": "l",
+    "body": [
+      "[${1:text}](${2:http://www.url.com})${0}"
+    ],
+    "description": "link"
+  },
+  "ordered list item": {
+    "prefix": "ol",
+    "body": [
+      "${1:1}. ${2:x}${0}"
+    ],
+    "description": "ordered list item"
+  },
+  "ordered list item (level 2)": {
+    "prefix": "ol2",
+    "body": [
+      "   ${1:1}. ${2:x}${0}"
+    ],
+    "description": "ordered list item (level 2)"
+  },
+  "ordered list item (level 2) _": {
+    "prefix": "oll",
+    "body": [
+      "   ${1:1}. ${2:x}${0}"
+    ],
+    "description": "ordered list item (level 2)"
+  },
+  "ordered list item (level 3)": {
+    "prefix": "ol3",
+    "body": [
+      "      ${1:1}. ${2:x}${0}"
+    ],
+    "description": "ordered list item (level 3)"
+  },
+  "ordered list item (level 3) _": {
+    "prefix": "olll",
+    "body": [
+      "      ${1:1}. ${2:x}${0}"
+    ],
+    "description": "ordered list item (level 3)"
+  },
+  "quote": {
+    "prefix": "q",
+    "body": [
+      "> ${1:x}${0}"
+    ],
+    "description": "quote"
+  },
+  "strikethrough": {
+    "prefix": "st",
+    "body": [
+      "~~${1:x}~~${0}"
+    ],
+    "description": "strikethrough"
+  },
+  "table with 1 column": {
+    "prefix": "t",
+    "body": [
+      "${1:header1} |",
+      "--- |",
+      "${2:x} |${0}"
+    ],
+    "description": "table with 1 column"
+  },
+  "table with 2 columns": {
+    "prefix": "t2",
+    "body": [
+      "${1:header1} | ${2:header2}",
+      "--- | ---",
+      "${3:x} | ${4:x}${0}"
+    ],
+    "description": "table with 2 columns"
+  },
+  "table with 2 columns _": {
+    "prefix": "tt",
+    "body": [
+      "${1:header1} | ${2:header2}",
+      "--- | ---",
+      "${3:x} | ${4:x}${0}"
+    ],
+    "description": "table with 2 columns"
+  },
+  "table with 3 columns": {
+    "prefix": "t3",
+    "body": [
+      "${1:header1} | ${2:header2} | ${3:header3}",
+      "--- | --- | ---",
+      "${4:x} | ${5:x} | ${6:x}${0}"
+    ],
+    "description": "table with 3 columns"
+  },
+  "table with 3 columns _": {
+    "prefix": "ttt",
+    "body": [
+      "${1:header1} | ${2:header2} | ${3:header3}",
+      "--- | --- | ---",
+      "${4:x} | ${5:x} | ${6:x}${0}"
+    ],
+    "description": "table with 3 columns"
+  },
+  "task list item": {
+    "prefix": "tl",
+    "body": [
+      "- [ ] ${1:x}${0}"
+    ],
+    "description": "task list item"
+  },
+  "unordered list item": {
+    "prefix": "ul",
+    "body": [
+      "* ${1:x}${0}"
+    ],
+    "description": "unordered list item"
+  },
+  "unordered list item (level 2)": {
+    "prefix": "ul2",
+    "body": [
+      "  * ${1:x}${0}"
+    ],
+    "description": "unordered list item (level 2)"
+  },
+  "unordered list item (level 2) _": {
+    "prefix": "ull",
+    "body": [
+      "  * ${1:x}${0}"
+    ],
+    "description": "unordered list item (level 2)"
+  },
+  "unordered list item (level 3)": {
+    "prefix": "ul3",
+    "body": [
+      "    * ${1:x}${0}"
+    ],
+    "description": "unordered list item (level 3)"
+  },
+  "unordered list item (level 3) _": {
+    "prefix": "ulll",
+    "body": [
+      "    * ${1:x}${0}"
+    ],
+    "description": "unordered list item (level 3)"
+  }
+}

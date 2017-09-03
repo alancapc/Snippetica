@@ -12233,6 +12233,894 @@ finally
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>bold</Title>
+      <Shortcut>b</Shortcut>
+      <Description>bold</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:Bold</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[**$content$**$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>bold italic</Title>
+      <Shortcut>bi</Shortcut>
+      <Description>bold italic</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:BoldItalic</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[**_$content$_**$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>code</Title>
+      <Shortcut>c</Shortcut>
+      <Description>code</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:Code</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[`$content$`$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>code block</Title>
+      <Shortcut>cc</Shortcut>
+      <Description>code block</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:CodeBlock</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[```
+$content$
+```$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>code block with language</Title>
+      <Shortcut>cc_</Shortcut>
+      <Description>code block with language</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:CodeBlockWithLanguage</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>language</ID>
+          <Default>language</Default>
+        </Literal>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[```$language$
+$content$
+```$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>header 1</Title>
+      <Shortcut>h</Shortcut>
+      <Description>header 1</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:Header1</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Markdown"><![CDATA[# $end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>header 2</Title>
+      <Shortcut>h2</Shortcut>
+      <Description>header 2</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:Header2</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Markdown"><![CDATA[## $end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>header 2 _</Title>
+      <Shortcut>hh</Shortcut>
+      <Description>header 2</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:Header2_</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Markdown"><![CDATA[## $end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>header 3</Title>
+      <Shortcut>h3</Shortcut>
+      <Description>header 3</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:Header3</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Markdown"><![CDATA[### $end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>header 3 _</Title>
+      <Shortcut>hhh</Shortcut>
+      <Description>header 3</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:Header3_</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Markdown"><![CDATA[### $end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>header 4</Title>
+      <Shortcut>h4</Shortcut>
+      <Description>header 4</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:Header4</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Markdown"><![CDATA[#### $end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>header 5</Title>
+      <Shortcut>h5</Shortcut>
+      <Description>header 5</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:Header5</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Markdown"><![CDATA[##### $end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>header 6</Title>
+      <Shortcut>h6</Shortcut>
+      <Description>header 6</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:Header6</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Markdown"><![CDATA[###### $end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>horizontal rule</Title>
+      <Shortcut>hr</Shortcut>
+      <Description>horizontal rule</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:HorizontalRule</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Markdown"><![CDATA[___$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>image</Title>
+      <Shortcut>ie</Shortcut>
+      <Description>image</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:Image</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>text</ID>
+          <Default>text</Default>
+        </Literal>
+        <Literal>
+          <ID>url</ID>
+          <Default>url</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[![$text$]($url$)$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>italic</Title>
+      <Shortcut>i</Shortcut>
+      <Description>italic</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:Italic</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[*$content$*$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>italic bold</Title>
+      <Shortcut>ib</Shortcut>
+      <Description>italic bold</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:ItalicBold</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[_**$content$**_$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>link</Title>
+      <Shortcut>l</Shortcut>
+      <Description>link</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:Link</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>text</ID>
+          <Default>text</Default>
+        </Literal>
+        <Literal>
+          <ID>url</ID>
+          <Default>http://www.url.com</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[[$text$]($url$)$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>ordered list item</Title>
+      <Shortcut>ol</Shortcut>
+      <Description>ordered list item</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:OrderedListItem</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>index</ID>
+          <Default>1</Default>
+        </Literal>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[$index$. $content$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>ordered list item (level 2)</Title>
+      <Shortcut>ol2</Shortcut>
+      <Description>ordered list item (level 2)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:OrderedListItemLevel2</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>index</ID>
+          <Default>1</Default>
+        </Literal>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[   $index$. $content$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>ordered list item (level 2) _</Title>
+      <Shortcut>oll</Shortcut>
+      <Description>ordered list item (level 2)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:OrderedListItemLevel2_</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>index</ID>
+          <Default>1</Default>
+        </Literal>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[   $index$. $content$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>ordered list item (level 3)</Title>
+      <Shortcut>ol3</Shortcut>
+      <Description>ordered list item (level 3)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:OrderedListItemLevel3</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>index</ID>
+          <Default>1</Default>
+        </Literal>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[      $index$. $content$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>ordered list item (level 3) _</Title>
+      <Shortcut>olll</Shortcut>
+      <Description>ordered list item (level 3)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:OrderedListItemLevel3_</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>index</ID>
+          <Default>1</Default>
+        </Literal>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[      $index$. $content$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>quote</Title>
+      <Shortcut>q</Shortcut>
+      <Description>quote</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:Quote</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[> $content$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>strikethrough</Title>
+      <Shortcut>st</Shortcut>
+      <Description>strikethrough</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:StrikeThrough</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[~~$content$~~$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>table with 1 column</Title>
+      <Shortcut>t</Shortcut>
+      <Description>table with 1 column</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:Table</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>header1</ID>
+          <Default>header1</Default>
+        </Literal>
+        <Literal>
+          <ID>content1</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[$header1$ |
+--- |
+$content1$ |$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>table with 2 columns</Title>
+      <Shortcut>t2</Shortcut>
+      <Description>table with 2 columns</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:Table2</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>header1</ID>
+          <Default>header1</Default>
+        </Literal>
+        <Literal>
+          <ID>header2</ID>
+          <Default>header2</Default>
+        </Literal>
+        <Literal>
+          <ID>content1</ID>
+          <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>content2</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[$header1$ | $header2$
+--- | ---
+$content1$ | $content2$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>table with 2 columns _</Title>
+      <Shortcut>tt</Shortcut>
+      <Description>table with 2 columns</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:Table2_</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>header1</ID>
+          <Default>header1</Default>
+        </Literal>
+        <Literal>
+          <ID>header2</ID>
+          <Default>header2</Default>
+        </Literal>
+        <Literal>
+          <ID>content1</ID>
+          <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>content2</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[$header1$ | $header2$
+--- | ---
+$content1$ | $content2$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>table with 3 columns</Title>
+      <Shortcut>t3</Shortcut>
+      <Description>table with 3 columns</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:Table3</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>header1</ID>
+          <Default>header1</Default>
+        </Literal>
+        <Literal>
+          <ID>header2</ID>
+          <Default>header2</Default>
+        </Literal>
+        <Literal>
+          <ID>header3</ID>
+          <Default>header3</Default>
+        </Literal>
+        <Literal>
+          <ID>content1</ID>
+          <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>content2</ID>
+          <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>content3</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[$header1$ | $header2$ | $header3$
+--- | --- | ---
+$content1$ | $content2$ | $content3$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>table with 3 columns _</Title>
+      <Shortcut>ttt</Shortcut>
+      <Description>table with 3 columns</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:Table3_</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>header1</ID>
+          <Default>header1</Default>
+        </Literal>
+        <Literal>
+          <ID>header2</ID>
+          <Default>header2</Default>
+        </Literal>
+        <Literal>
+          <ID>header3</ID>
+          <Default>header3</Default>
+        </Literal>
+        <Literal>
+          <ID>content1</ID>
+          <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>content2</ID>
+          <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>content3</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[$header1$ | $header2$ | $header3$
+--- | --- | ---
+$content1$ | $content2$ | $content3$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>task list item</Title>
+      <Shortcut>tl</Shortcut>
+      <Description>task list item</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:TaskListItem</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[- [ ] $content$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>unordered list item</Title>
+      <Shortcut>ul</Shortcut>
+      <Description>unordered list item</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:UnorderedListItem</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[* $content$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>unordered list item (level 2)</Title>
+      <Shortcut>ul2</Shortcut>
+      <Description>unordered list item (level 2)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:UnorderedListItemLevel2</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[  * $content$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>unordered list item (level 2) _</Title>
+      <Shortcut>ull</Shortcut>
+      <Description>unordered list item (level 2)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:UnorderedListItemLevel2_</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[  * $content$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>unordered list item (level 3)</Title>
+      <Shortcut>ul3</Shortcut>
+      <Description>unordered list item (level 3)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:UnorderedListItemLevel3</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[    * $content$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>unordered list item (level 3) _</Title>
+      <Shortcut>ulll</Shortcut>
+      <Description>unordered list item (level 3)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Tag Name:UnorderedListItemLevel3_</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[    * $content$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>array variable</Title>
       <Shortcut>va</Shortcut>
       <Description>array variable declaration</Description>

@@ -26,6 +26,7 @@ namespace Snippetica
         public const string NonUniqueShortcut = nameof(NonUniqueShortcut);
         public const string ExcludeFromReadme = nameof(ExcludeFromReadme);
         public const string TitleStartsWithShortcut = nameof(TitleStartsWithShortcut);
+        public const string ExcludeFromVisualStudio = nameof(ExcludeFromVisualStudio);
         public const string ExcludeFromVisualStudioCode = nameof(ExcludeFromVisualStudioCode);
         public const string NoQuickReference = nameof(NoQuickReference);
         public const string ExcludeFromSnippetBrowser = nameof(ExcludeFromSnippetBrowser);

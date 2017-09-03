@@ -93,6 +93,11 @@
     <None Include="Snippetica.Markdown\Header4.snippet" />
     <None Include="Snippetica.Markdown\Header3.snippet" />
     <None Include="Snippetica.Markdown\Header2.snippet" />
+    <None Include="Snippetica.Markdown\josefpihrt.snippetica-csharp-0.5.2\.vscode\launch.json" />
+    <None Include="Snippetica.Markdown\josefpihrt.snippetica-csharp-0.5.2\CHANGELOG.md" />
+    <None Include="Snippetica.Markdown\josefpihrt.snippetica-csharp-0.5.2\package.json" />
+    <None Include="Snippetica.Markdown\josefpihrt.snippetica-csharp-0.5.2\README.md" />
+    <None Include="Snippetica.Markdown\josefpihrt.snippetica-csharp-0.5.2\snippets\csharp.json" />
     <None Include="Snippetica.Markdown\OrderedListItemLevel2_.snippet" />
     <None Include="Snippetica.Markdown\OrderedListItemLevel3_.snippet" />
     <None Include="Snippetica.Markdown\Quote.snippet" />
@@ -100,7 +105,9 @@
     <None Include="Snippetica.Markdown\StrikeThrough.snippet" />
     <None Include="Snippetica.Markdown\Link.snippet" />
     <None Include="Snippetica.Markdown\Image.snippet" />
+    <None Include="Snippetica.Markdown\Table2_.snippet" />
     <None Include="Snippetica.Markdown\Table2.snippet" />
+    <None Include="Snippetica.Markdown\Table3_.snippet" />
     <None Include="Snippetica.Markdown\Table3.snippet" />
     <None Include="Snippetica.Markdown\Table.snippet" />
     <None Include="Snippetica.Markdown\TaskListItem.snippet" />
@@ -142,6 +149,8 @@
     <None Include="Snippetica.Xaml.Dev\WrapPanelHorizontal.snippet" />
     <None Include="Snippetica.Xaml.Dev\WrapPanelVertical.snippet" />
     <None Include="Snippetica.Xml.CodeSnippet\README.md" />
+    <Content Include="Snippetica.Markdown\josefpihrt.snippetica-csharp-0.5.2\images\icon.png" />
+    <Content Include="Snippetica.Markdown\josefpihrt.snippetica-csharp-0.5.2\LICENSE.txt" />
     <Content Include="Snippetica.Xml\CDataSection.snippet" />
     <None Include="Snippetica.Xml.CodeSnippet\SnippetType.snippet" />
     <None Include="Snippetica.Xml\README.md" />
