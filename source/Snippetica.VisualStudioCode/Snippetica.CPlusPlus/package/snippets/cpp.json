@@ -1,4 +1,40 @@
 ﻿{
+  "#if": {
+    "prefix": "ppif",
+    "body": [
+      "#if ${1:0}",
+      "    ${TM_SELECTED_TEXT}${0}",
+      "#endif"
+    ],
+    "description": "#if directive"
+  },
+  "#ifdef": {
+    "prefix": "ppifd",
+    "body": [
+      "#ifdef ${1:DEBUG}",
+      "    ${TM_SELECTED_TEXT}${0}",
+      "#endif"
+    ],
+    "description": "#ifdef directive"
+  },
+  "#ifndef": {
+    "prefix": "ppifnd",
+    "body": [
+      "#ifndef ${1:1}",
+      "    ${TM_SELECTED_TEXT}${0}",
+      "#endif"
+    ],
+    "description": "#ifndef directive"
+  },
+  "#pragma region": {
+    "prefix": "ppr",
+    "body": [
+      "#pragma region ${1:RegionName}",
+      "    ${TM_SELECTED_TEXT}${0}",
+      "#pragma endregion"
+    ],
+    "description": "#pragma region directive"
+  },
   "class": {
     "prefix": "c",
     "body": [
@@ -92,16 +128,6 @@
     ],
     "description": "for statement"
   },
-  "for each": {
-    "prefix": "fe",
-    "body": [
-      "for each (${1:object} ${2:var} in ${3:items})",
-      "{",
-      "    ${TM_SELECTED_TEXT}${0}",
-      "}"
-    ],
-    "description": "for each statement"
-  },
   "for (range-based)": {
     "prefix": "frrb",
     "body": [
@@ -121,6 +147,16 @@
       "}"
     ],
     "description": "for statement (reversed)"
+  },
+  "for each": {
+    "prefix": "fe",
+    "body": [
+      "for each (${1:object} ${2:var} in ${3:items})",
+      "{",
+      "    ${TM_SELECTED_TEXT}${0}",
+      "}"
+    ],
+    "description": "for each statement"
   },
   "if": {
     "prefix": "if",
@@ -151,42 +187,6 @@
       "}"
     ],
     "description": "namespace declaration"
-  },
-  "#if": {
-    "prefix": "ppif",
-    "body": [
-      "#if ${1:0}",
-      "    ${TM_SELECTED_TEXT}${0}",
-      "#endif"
-    ],
-    "description": "#if directive"
-  },
-  "#ifdef": {
-    "prefix": "ppifd",
-    "body": [
-      "#ifdef ${1:DEBUG}",
-      "    ${TM_SELECTED_TEXT}${0}",
-      "#endif"
-    ],
-    "description": "#ifdef directive"
-  },
-  "#ifndef": {
-    "prefix": "ppifnd",
-    "body": [
-      "#ifndef ${1:1}",
-      "    ${TM_SELECTED_TEXT}${0}",
-      "#endif"
-    ],
-    "description": "#ifndef directive"
-  },
-  "#pragma region": {
-    "prefix": "ppr",
-    "body": [
-      "#pragma region ${1:RegionName}",
-      "    ${TM_SELECTED_TEXT}${0}",
-      "#pragma endregion"
-    ],
-    "description": "#pragma region directive"
   },
   "struct": {
     "prefix": "st",

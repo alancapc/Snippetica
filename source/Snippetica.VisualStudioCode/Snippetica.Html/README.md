@@ -46,7 +46,6 @@ Title | Shortcut
 [code](code.snippet)|code
 [col](col.snippet)|col
 [colgroup](colgroup.snippet)|colgroup
-[comment](Comment.snippet)|c
 [datalist](datalist.snippet)|datalist
 [dd](dd.snippet)|dd
 [del\+ins](del_ins.snippet)|delins
@@ -58,10 +57,6 @@ Title | Shortcut
 [div](div.snippet)|div
 [dl](dl.snippet)|dl
 [dt](dt.snippet)|dt
-[element \(with attribute, with content\)](ElementWithAttributeWithContent.snippet)|eax
-[element \(with attribute\)](ElementWithAttribute.snippet)|ea
-[element \(with content\)](ElementWithContent.snippet)|ex
-[element](Element.snippet)|e
 [em](em.snippet)|em
 [embed](embed.snippet)|embed
 [fieldset](fieldset.snippet)|fieldset
@@ -72,9 +67,7 @@ Title | Shortcut
 [frame](frame.snippet)|frame
 [frameset](frameset.snippet)|frameset
 [h1](h1.snippet)|h
-[h2 \_](h2_.snippet)|hh
 [h2](h2.snippet)|h2
-[h3 \_](h3_.snippet)|hhh
 [h3](h3.snippet)|h3
 [h4](h4.snippet)|h4
 [h5](h5.snippet)|h5
@@ -123,8 +116,6 @@ Title | Shortcut
 [script](script.snippet)|script
 [section](section.snippet)|section
 [select](select.snippet)|select
-[self\-closing element \(with attribute\)](SelfClosingElementWithAttribute.snippet)|eas
-[self\-closing element](SelfClosingElement.snippet)|es
 [small](small.snippet)|small
 [source](source.snippet)|source
 [span](span.snippet)|span

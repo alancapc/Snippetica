@@ -19,7 +19,7 @@ namespace Snippetica.CodeGeneration.Markdown
                 sw.WriteLine($"## {ProductName}");
                 sw.WriteLine();
 
-                sw.WriteLine($"* {SnippetDirectory.GetProjectSubtitle(snippetDirectories)}");
+                sw.WriteLine($"* {CodeGenerationUtility.GetProjectSubtitle(snippetDirectories)}");
                 sw.WriteLine($"* [Release Notes]({MasterGitHubUrl}/{$"{ChangeLogFileName}"}).");
                 sw.WriteLine($"* Browse all available snippets with [Snippet Browser]({GetSnippetBrowserUrl(Engine.VisualStudio)}).");
                 sw.WriteLine();
@@ -74,7 +74,7 @@ namespace Snippetica.CodeGeneration.Markdown
                     sw.WriteLine();
                 }
 
-                if (!snippetDirectory.IsDev)
+                if (!snippetDirectory.IsDevelopment)
                 {
                     sw.WriteLine("### Snippet Browser");
                     sw.WriteLine();
@@ -83,7 +83,7 @@ namespace Snippetica.CodeGeneration.Markdown
                     sw.WriteLine();
                 }
 
-                if (!snippetDirectory.IsDev
+                if (!snippetDirectory.IsDevelopment
                     && !snippetDirectory.HasTag(KnownTags.NoQuickReference))
                 {
                     characterSequences = characterSequences?
@@ -95,7 +95,7 @@ namespace Snippetica.CodeGeneration.Markdown
                         sw.WriteLine("### Quick Reference");
                         sw.WriteLine();
 
-                        //TODO: 
+                        //TODO: ?
                         string filePath = $@"..\..\..\..\..\text\{directoryName}.md";
 
                         if (File.Exists(filePath))
@@ -119,7 +119,7 @@ namespace Snippetica.CodeGeneration.Markdown
 
                 using (SnippetTableWriter tableWriter = (settings.AddLinkToTitle)
                     ? SnippetTableWriter.CreateTitleWithLinkThenShortcut(snippetDirectory.Path)
-                    : SnippetTableWriter.CreateTitleThenShortcut(snippetDirectory.Path))
+                    : SnippetTableWriter.CreateTitleThenShortcut())
                 {
                     IEnumerable<Snippet> snippets = snippetDirectory
                         .EnumerateSnippets()

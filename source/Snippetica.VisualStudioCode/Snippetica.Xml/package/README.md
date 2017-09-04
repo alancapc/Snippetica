@@ -16,10 +16,3 @@ x|\(element\) with content|\-
 Title | Shortcut
 ----- | --------
 CDATA section|cdata
-comment|c
-element|e
-element \(with attribute, with content\)|eax
-element \(with attribute\)|ea
-element \(with content\)|ex
-self\-closing element|es
-self\-closing element \(with attribute\)|eas

@@ -9,7 +9,7 @@ namespace Snippetica.CodeGeneration.Markdown
         {
         }
 
-        public static SnippetTableWriter CreateTitleThenShortcut(string directoryPath)
+        public static SnippetTableWriter CreateTitleThenShortcut()
         {
             return new SnippetTableWriter(new ColumnDefinition[]
             {

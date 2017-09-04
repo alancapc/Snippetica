@@ -48,8 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CodeGenerationUtility.cs" />
     <Compile Include="Commands\CommandUtility.cs" />
     <Compile Include="HtmlSnippetGenerator.cs" />
+    <Compile Include="Commands\HtmlWithContentCommand.cs" />
+    <Compile Include="Commands\HtmlWithoutContentCommand.cs" />
+    <Compile Include="LanguageSnippetGenerator.cs" />
     <Compile Include="ModifierKind.cs" />
     <Compile Include="Commands\AlternativeShortcutCommand.cs" />
     <Compile Include="Commands\CommandKind.cs" />
@@ -79,14 +83,18 @@
     <Compile Include="ShortcutChars.cs" />
     <Compile Include="ExecutionContext.cs" />
     <Compile Include="SnippetCodeWriter.cs" />
+    <Compile Include="SnippetEnvironment.cs" />
     <Compile Include="SnippetGenerator.cs" />
-    <Compile Include="SnippetGeneratorInfo.cs" />
     <Compile Include="SnippetGeneratorResult.cs" />
     <Compile Include="StringExtensions.cs" />
     <Compile Include="TypeDefinition.cs" />
     <Compile Include="Commands\TypeCommand.cs" />
     <Compile Include="TypeDefinitionCollection.cs" />
     <Compile Include="VisualBasicDefinition.cs" />
+    <Compile Include="VisualStudioCodeEnvironment.cs" />
+    <Compile Include="VisualStudioCodeSnippetGenerator.cs" />
+    <Compile Include="VisualStudioEnvironment.cs" />
+    <Compile Include="VisualStudioSnippetGenerator.cs" />
     <Compile Include="XamlSnippetGenerator.cs" />
     <Compile Include="XmlSnippetGenerator.cs" />
   </ItemGroup>

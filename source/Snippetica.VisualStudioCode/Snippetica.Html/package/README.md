@@ -44,7 +44,6 @@ cite|cite
 code|code
 col|col
 colgroup|colgroup
-comment|c
 datalist|datalist
 dd|dd
 del|del
@@ -56,10 +55,6 @@ dir|dir
 div|div
 dl|dl
 dt|dt
-element|e
-element \(with attribute, with content\)|eax
-element \(with attribute\)|ea
-element \(with content\)|ex
 em|em
 embed|embed
 fieldset|fieldset
@@ -71,9 +66,7 @@ frame|frame
 frameset|frameset
 h1|h
 h2|h2
-h2 \_|hh
 h3|h3
-h3 \_|hhh
 h4|h4
 h5|h5
 h6|h6
@@ -121,8 +114,6 @@ samp|samp
 script|script
 section|section
 select|select
-self\-closing element|es
-self\-closing element \(with attribute\)|eas
 small|small
 source|source
 span|span

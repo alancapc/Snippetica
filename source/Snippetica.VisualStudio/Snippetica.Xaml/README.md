@@ -28,7 +28,6 @@ Title | Shortcut
 [ColumnDefinition](ColumnDefinition_.snippet)|cndn
 [ComboBox](ComboBox.snippet)|combobox
 [ComboBox](ComboBox_.snippet)|cobx
-[comment](Comment.snippet)|c
 [ContentControl](ContentControl.snippet)|contentcontrol
 [ContentControl](ContentControl_.snippet)|ctcl
 [ContextMenu](ContextMenu.snippet)|contextmenu
@@ -51,10 +50,6 @@ Title | Shortcut
 [DockPanel\.Dock](DockPanelDock_.snippet)|dkpl
 [DockPanel](DockPanel.snippet)|dockpanel
 [DockPanel](DockPanel_.snippet)|dkpl
-[element \(with attribute, with content\)](ElementWithAttributeWithContent.snippet)|eax
-[element \(with attribute\)](ElementWithAttribute.snippet)|ea
-[element \(with content\)](ElementWithContent.snippet)|ex
-[element](Element.snippet)|e
 [Grid](Grid.snippet)|grid
 [Grid](Grid_.snippet)|gd
 [GridSplitter \(horizontal\)](GridSplitterHorizontal.snippet)|gridsplitter
@@ -83,8 +78,6 @@ Title | Shortcut
 [MenuItem](MenuItem_.snippet)|muim
 [RowDefinition](RowDefinition.snippet)|rowdefinition
 [RowDefinition](RowDefinition_.snippet)|rwdn
-[self\-closing element \(with attribute\)](SelfClosingElementWithAttribute.snippet)|eas
-[self\-closing element](SelfClosingElement.snippet)|es
 [Setter](Setter.snippet)|setter
 [Setter](Setter_.snippet)|sr
 [StackPanel \(horizontal\)](StackPanelHorizontal.snippet)|stackpanel

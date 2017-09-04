@@ -83,964 +83,748 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Snippetica.CSharp.Dev\BreakStatement.snippet">
+    <Content Include="Snippetica.CSharp\BreakStatement.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ConditionalOperatorEqualToNull.snippet">
+    <Content Include="Snippetica.CSharp\ConditionalOperatorEqualToNull.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ConditionalOperatorNotEqualToNull.snippet">
+    <Content Include="Snippetica.CSharp\ConditionalOperatorNotEqualToNull.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ContinueStatement.snippet">
+    <Content Include="Snippetica.CSharp\ContinueStatement.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\DebugAssertNotNull.snippet">
+    <Content Include="Snippetica.CSharp\DebugAssertNotNull.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\DictionaryOfTKeyTValueType.snippet">
+    <Content Include="Snippetica.CSharp\DictionaryOfTKeyTValueType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\DoNotNull.snippet">
+    <Content Include="Snippetica.CSharp\DoNotNull.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\DoNull.snippet">
+    <Content Include="Snippetica.CSharp\DoNull.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\IfEnumTryParse.snippet">
+    <Content Include="Snippetica.CSharp\IfEnumTryParse.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\IfNotEnumTryParse.snippet">
+    <Content Include="Snippetica.CSharp\IfNotEnumTryParse.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\IfNotStringIsNullOrEmpty.snippet">
+    <Content Include="Snippetica.CSharp\IfNotStringIsNullOrEmpty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\IfNotStringIsNullOrWhiteSpace.snippet">
+    <Content Include="Snippetica.CSharp\IfNotStringIsNullOrWhiteSpace.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\IfStringIsNullOrEmpty.snippet">
+    <Content Include="Snippetica.CSharp\IfStringIsNullOrEmpty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\IfStringIsNullOrWhiteSpace.snippet">
+    <Content Include="Snippetica.CSharp\IfStringIsNullOrWhiteSpace.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\LambdaExpressionWithTwoParameters.snippet">
+    <Content Include="Snippetica.CSharp\LambdaExpressionWithTwoParameters.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\Namespace.snippet">
+    <Content Include="Snippetica.CSharp\Namespace.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\Regex.snippet">
+    <Content Include="Snippetica.CSharp\Regex.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ReturnNew.snippet">
+    <Content Include="Snippetica.CSharp\ReturnNew.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ReturnNewThis.snippet">
+    <Content Include="Snippetica.CSharp\ReturnNewThis.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ReturnStatement.snippet">
+    <Content Include="Snippetica.CSharp\ReturnStatement.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\StringBuilderVariable.snippet">
+    <Content Include="Snippetica.CSharp\StringBuilderVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ThrowStatement.snippet">
+    <Content Include="Snippetica.CSharp\ThrowStatement.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\TimeSpanType.snippet">
+    <Content Include="Snippetica.CSharp\TimeSpanType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\VariableAsTIfNotNull.snippet">
+    <Content Include="Snippetica.CSharp\VariableAsTIfNotNull.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\WhileNotNull.snippet">
+    <Content Include="Snippetica.CSharp\WhileNotNull.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\WhileNull.snippet">
+    <Content Include="Snippetica.CSharp\WhileNull.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\YieldReturnNew.snippet">
+    <Content Include="Snippetica.CSharp\YieldReturnNew.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\YieldReturnNewThis.snippet">
+    <Content Include="Snippetica.CSharp\YieldReturnNewThis.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ArrayOfBooleanType.snippet">
+    <Content Include="Snippetica.CSharp\ArrayOfThisType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ArrayOfDateTimeType.snippet">
+    <Content Include="Snippetica.CSharp\ArrayOfTType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ArrayOfInt32Type.snippet">
+    <Content Include="Snippetica.CSharp\ArrayOfBooleanType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ArrayOfInt64Type.snippet">
+    <Content Include="Snippetica.CSharp\ArrayOfInt32Type.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ArrayOfObjectType.snippet">
+    <Content Include="Snippetica.CSharp\ArrayOfObjectType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ArrayOfStringType.snippet">
+    <Content Include="Snippetica.CSharp\ArrayOfStringType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ArrayOfThisType.snippet">
+    <Content Include="Snippetica.CSharp\ArrayOfInt64Type.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ArrayOfTType.snippet">
+    <Content Include="Snippetica.CSharp\ArrayOfDateTimeType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\DictionaryOfTKeyTValueVariable.snippet">
+    <Content Include="Snippetica.CSharp\DictionaryOfTKeyTValueVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\DictionaryOfTKeyTValueVariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\DictionaryOfTKeyTValueVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\HashSetOfBooleanType.snippet">
+    <Content Include="Snippetica.CSharp\HashSetOfThisType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\HashSetOfBooleanVariable.snippet">
+    <Content Include="Snippetica.CSharp\HashSetOfTType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\HashSetOfBooleanVariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\HashSetOfBooleanType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\HashSetOfDateTimeType.snippet">
+    <Content Include="Snippetica.CSharp\HashSetOfInt32Type.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\HashSetOfDateTimeVariable.snippet">
+    <Content Include="Snippetica.CSharp\HashSetOfObjectType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\HashSetOfDateTimeVariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\HashSetOfStringType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\HashSetOfInt32Type.snippet">
+    <Content Include="Snippetica.CSharp\HashSetOfInt64Type.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\HashSetOfInt32Variable.snippet">
+    <Content Include="Snippetica.CSharp\HashSetOfDateTimeType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\HashSetOfInt32VariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\HashSetOfThisVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\HashSetOfInt64Type.snippet">
+    <Content Include="Snippetica.CSharp\HashSetOfTVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\HashSetOfInt64Variable.snippet">
+    <Content Include="Snippetica.CSharp\HashSetOfBooleanVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\HashSetOfInt64VariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\HashSetOfInt32Variable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\HashSetOfObjectType.snippet">
+    <Content Include="Snippetica.CSharp\HashSetOfObjectVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\HashSetOfObjectVariable.snippet">
+    <Content Include="Snippetica.CSharp\HashSetOfStringVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\HashSetOfObjectVariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\HashSetOfInt64Variable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\HashSetOfStringType.snippet">
+    <Content Include="Snippetica.CSharp\HashSetOfDateTimeVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\HashSetOfStringVariable.snippet">
+    <Content Include="Snippetica.CSharp\HashSetOfThisVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\HashSetOfStringVariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\HashSetOfTVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\HashSetOfThisType.snippet">
+    <Content Include="Snippetica.CSharp\HashSetOfBooleanVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\HashSetOfThisVariable.snippet">
+    <Content Include="Snippetica.CSharp\HashSetOfInt32VariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\HashSetOfThisVariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\HashSetOfObjectVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\HashSetOfTType.snippet">
+    <Content Include="Snippetica.CSharp\HashSetOfStringVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\HashSetOfTVariable.snippet">
+    <Content Include="Snippetica.CSharp\HashSetOfInt64VariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\HashSetOfTVariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\HashSetOfDateTimeVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ListOfBooleanType.snippet">
+    <Content Include="Snippetica.CSharp\ListOfThisType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ListOfBooleanVariable.snippet">
+    <Content Include="Snippetica.CSharp\ListOfTType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ListOfBooleanVariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\ListOfBooleanType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ListOfDateTimeType.snippet">
+    <Content Include="Snippetica.CSharp\ListOfInt32Type.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ListOfDateTimeVariable.snippet">
+    <Content Include="Snippetica.CSharp\ListOfObjectType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ListOfDateTimeVariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\ListOfStringType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ListOfInt32Type.snippet">
+    <Content Include="Snippetica.CSharp\ListOfInt64Type.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ListOfInt32Variable.snippet">
+    <Content Include="Snippetica.CSharp\ListOfDateTimeType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ListOfInt32VariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\ListOfThisVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ListOfInt64Type.snippet">
+    <Content Include="Snippetica.CSharp\ListOfTVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ListOfInt64Variable.snippet">
+    <Content Include="Snippetica.CSharp\ListOfBooleanVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ListOfInt64VariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\ListOfInt32Variable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ListOfObjectType.snippet">
+    <Content Include="Snippetica.CSharp\ListOfObjectVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ListOfObjectVariable.snippet">
+    <Content Include="Snippetica.CSharp\ListOfStringVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ListOfObjectVariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\ListOfInt64Variable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ListOfStringType.snippet">
+    <Content Include="Snippetica.CSharp\ListOfDateTimeVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ListOfStringVariable.snippet">
+    <Content Include="Snippetica.CSharp\ListOfThisVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ListOfStringVariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\ListOfTVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ListOfThisType.snippet">
+    <Content Include="Snippetica.CSharp\ListOfBooleanVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ListOfThisVariable.snippet">
+    <Content Include="Snippetica.CSharp\ListOfInt32VariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ListOfThisVariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\ListOfObjectVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ListOfTType.snippet">
+    <Content Include="Snippetica.CSharp\ListOfStringVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ListOfTVariable.snippet">
+    <Content Include="Snippetica.CSharp\ListOfInt64VariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ListOfTVariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\ListOfDateTimeVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\NewArrayOfBoolean.snippet">
+    <Content Include="Snippetica.CSharp\NewArrayOfThis.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\NewArrayOfBooleanWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\NewArrayOfT.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\NewArrayOfDateTime.snippet">
+    <Content Include="Snippetica.CSharp\NewArrayOfBoolean.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\NewArrayOfDateTimeWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\NewArrayOfInt32.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\NewArrayOfInt32.snippet">
+    <Content Include="Snippetica.CSharp\NewArrayOfObject.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\NewArrayOfInt32WithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\NewArrayOfString.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\NewArrayOfInt64.snippet">
+    <Content Include="Snippetica.CSharp\NewArrayOfInt64.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\NewArrayOfInt64WithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\NewArrayOfDateTime.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\NewArrayOfObject.snippet">
+    <Content Include="Snippetica.CSharp\NewArrayOfThisWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\NewArrayOfObjectWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\NewArrayOfTWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\NewArrayOfString.snippet">
+    <Content Include="Snippetica.CSharp\NewArrayOfBooleanWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\NewArrayOfStringWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\NewArrayOfInt32WithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\NewArrayOfT.snippet">
+    <Content Include="Snippetica.CSharp\NewArrayOfObjectWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\NewArrayOfThis.snippet">
+    <Content Include="Snippetica.CSharp\NewArrayOfStringWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\NewArrayOfThisWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\NewArrayOfInt64WithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\NewArrayOfTWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\NewArrayOfDateTimeWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfBooleanType.snippet">
+    <Content Include="Snippetica.CSharp\ObservableCollectionOfThisType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfBooleanVariable.snippet">
+    <Content Include="Snippetica.CSharp\ObservableCollectionOfTType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfBooleanVariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\ObservableCollectionOfBooleanType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfDateTimeType.snippet">
+    <Content Include="Snippetica.CSharp\ObservableCollectionOfInt32Type.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfDateTimeVariable.snippet">
+    <Content Include="Snippetica.CSharp\ObservableCollectionOfObjectType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfDateTimeVariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\ObservableCollectionOfStringType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfInt32Type.snippet">
+    <Content Include="Snippetica.CSharp\ObservableCollectionOfInt64Type.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfInt32Variable.snippet">
+    <Content Include="Snippetica.CSharp\ObservableCollectionOfDateTimeType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfInt32VariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\ObservableCollectionOfThisVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfInt64Type.snippet">
+    <Content Include="Snippetica.CSharp\ObservableCollectionOfTVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfInt64Variable.snippet">
+    <Content Include="Snippetica.CSharp\ObservableCollectionOfBooleanVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfInt64VariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\ObservableCollectionOfInt32Variable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfObjectType.snippet">
+    <Content Include="Snippetica.CSharp\ObservableCollectionOfObjectVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfObjectVariable.snippet">
+    <Content Include="Snippetica.CSharp\ObservableCollectionOfStringVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfObjectVariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\ObservableCollectionOfInt64Variable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfStringType.snippet">
+    <Content Include="Snippetica.CSharp\ObservableCollectionOfDateTimeVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfStringVariable.snippet">
+    <Content Include="Snippetica.CSharp\ObservableCollectionOfThisVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfStringVariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\ObservableCollectionOfTVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfThisType.snippet">
+    <Content Include="Snippetica.CSharp\ObservableCollectionOfBooleanVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfThisVariable.snippet">
+    <Content Include="Snippetica.CSharp\ObservableCollectionOfInt32VariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfThisVariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\ObservableCollectionOfObjectVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfTType.snippet">
+    <Content Include="Snippetica.CSharp\ObservableCollectionOfStringVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfTVariable.snippet">
+    <Content Include="Snippetica.CSharp\ObservableCollectionOfInt64VariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfTVariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\ObservableCollectionOfDateTimeVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\InternalAbstractModifiers.snippet">
+    <Content Include="Snippetica.VisualBasic\IfEnumTryParse.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\InternalModifier.snippet">
+    <Content Include="Snippetica.VisualBasic\IfNotEnumTryParse.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\InternalStaticModifiers.snippet">
+    <Content Include="Snippetica.VisualBasic\LambdaExpressionWithTwoParameters.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\InternalVirtualModifiers.snippet">
+    <Content Include="Snippetica.VisualBasic\Namespace.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\OverrideModifier.snippet">
+    <Content Include="Snippetica.VisualBasic\ObjectKeyword.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\PrivateModifier.snippet">
+    <Content Include="Snippetica.VisualBasic\Regex.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\PrivateStaticModifiers.snippet">
+    <Content Include="Snippetica.VisualBasic\ReturnKeyword.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ProtectedAbstractModifiers.snippet">
+    <Content Include="Snippetica.VisualBasic\StringBuilderVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ProtectedModifier.snippet">
+    <Content Include="Snippetica.VisualBasic\StringKeyword.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ProtectedVirtualModifiers.snippet">
+    <Content Include="Snippetica.VisualBasic\ThrowStatement.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\PublicAbstractModifiers.snippet">
+    <Content Include="Snippetica.VisualBasic\TimeSpanType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\PublicModifier.snippet">
+    <Content Include="Snippetica.VisualBasic\YieldKeyword.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\PublicStaticModifiers.snippet">
+    <Content Include="Snippetica.VisualBasic\ArrayOfThisType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\PublicVirtualModifiers.snippet">
+    <Content Include="Snippetica.VisualBasic\ArrayOfTType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ReadOnlyModifier.snippet">
+    <Content Include="Snippetica.VisualBasic\ArrayOfBooleanType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\EnumerableCast.snippet">
+    <Content Include="Snippetica.VisualBasic\ArrayOfInt32Type.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\EnumerableEmpty.snippet">
+    <Content Include="Snippetica.VisualBasic\ArrayOfObjectType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\EnumerableFirst.snippet">
+    <Content Include="Snippetica.VisualBasic\ArrayOfStringType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\EnumerableFirstOrDefault.snippet">
+    <Content Include="Snippetica.VisualBasic\ArrayOfInt64Type.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\EnumerableGroupBy.snippet">
+    <Content Include="Snippetica.VisualBasic\ArrayOfDateTimeType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\EnumerableGroupJoin.snippet">
+    <Content Include="Snippetica.VisualBasic\DictionaryOfTKeyTValueVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\EnumerableJoin.snippet">
+    <Content Include="Snippetica.VisualBasic\DictionaryOfTKeyTValueVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\EnumerableLast.snippet">
+    <Content Include="Snippetica.VisualBasic\HashSetOfThisType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\EnumerableLastOrDefault.snippet">
+    <Content Include="Snippetica.VisualBasic\HashSetOfTType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\EnumerableMax.snippet">
+    <Content Include="Snippetica.VisualBasic\HashSetOfBooleanType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\EnumerableMin.snippet">
+    <Content Include="Snippetica.VisualBasic\HashSetOfInt32Type.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\EnumerableOfType.snippet">
+    <Content Include="Snippetica.VisualBasic\HashSetOfObjectType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\EnumerableOrderBy.snippet">
+    <Content Include="Snippetica.VisualBasic\HashSetOfStringType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\EnumerableOrderByDescending.snippet">
+    <Content Include="Snippetica.VisualBasic\HashSetOfInt64Type.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\EnumerableSelect.snippet">
+    <Content Include="Snippetica.VisualBasic\HashSetOfDateTimeType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\EnumerableSelectMany.snippet">
+    <Content Include="Snippetica.VisualBasic\HashSetOfThisVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\EnumerableSingleOrDefault.snippet">
+    <Content Include="Snippetica.VisualBasic\HashSetOfTVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\EnumerableSkipWhile.snippet">
+    <Content Include="Snippetica.VisualBasic\HashSetOfBooleanVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\EnumerableTakeWhile.snippet">
+    <Content Include="Snippetica.VisualBasic\HashSetOfInt32Variable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\EnumerableThenBy.snippet">
+    <Content Include="Snippetica.VisualBasic\HashSetOfObjectVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\EnumerableThenByDescending.snippet">
+    <Content Include="Snippetica.VisualBasic\HashSetOfStringVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\EnumerableWhere.snippet">
+    <Content Include="Snippetica.VisualBasic\HashSetOfInt64Variable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\EnumerableWhereNotNull.snippet">
+    <Content Include="Snippetica.VisualBasic\HashSetOfDateTimeVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\EnumerableZip.snippet">
+    <Content Include="Snippetica.VisualBasic\HashSetOfThisVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\DirectoryCreateDirectory.snippet">
+    <Content Include="Snippetica.VisualBasic\HashSetOfTVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\DirectoryDelete.snippet">
+    <Content Include="Snippetica.VisualBasic\HashSetOfBooleanVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\DirectoryEnumerateDirectories.snippet">
+    <Content Include="Snippetica.VisualBasic\HashSetOfInt32VariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\DirectoryEnumerateFiles.snippet">
+    <Content Include="Snippetica.VisualBasic\HashSetOfObjectVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\DirectoryExists.snippet">
+    <Content Include="Snippetica.VisualBasic\HashSetOfStringVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\DirectoryGetDirectories.snippet">
+    <Content Include="Snippetica.VisualBasic\HashSetOfInt64VariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\DirectoryGetFiles.snippet">
+    <Content Include="Snippetica.VisualBasic\HashSetOfDateTimeVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\DirectoryMove.snippet">
+    <Content Include="Snippetica.VisualBasic\ListOfThisType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\FileCopy.snippet">
+    <Content Include="Snippetica.VisualBasic\ListOfTType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\FileDelete.snippet">
+    <Content Include="Snippetica.VisualBasic\ListOfBooleanType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\FileExists.snippet">
+    <Content Include="Snippetica.VisualBasic\ListOfInt32Type.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\FileMove.snippet">
+    <Content Include="Snippetica.VisualBasic\ListOfObjectType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\FileReadAllLines.snippet">
+    <Content Include="Snippetica.VisualBasic\ListOfStringType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\FileReadAllText.snippet">
+    <Content Include="Snippetica.VisualBasic\ListOfInt64Type.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\FileReadLines.snippet">
+    <Content Include="Snippetica.VisualBasic\ListOfDateTimeType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\FileStreamVariable.snippet">
+    <Content Include="Snippetica.VisualBasic\ListOfThisVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\FileWriteAllLines.snippet">
+    <Content Include="Snippetica.VisualBasic\ListOfTVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\FileWriteAllText.snippet">
+    <Content Include="Snippetica.VisualBasic\ListOfBooleanVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\MemoryStreamVariable.snippet">
+    <Content Include="Snippetica.VisualBasic\ListOfInt32Variable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\PathChangeExtension.snippet">
+    <Content Include="Snippetica.VisualBasic\ListOfObjectVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\PathCombine.snippet">
+    <Content Include="Snippetica.VisualBasic\ListOfStringVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\PathGetDirectoryName.snippet">
+    <Content Include="Snippetica.VisualBasic\ListOfInt64Variable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\PathGetExtension.snippet">
+    <Content Include="Snippetica.VisualBasic\ListOfDateTimeVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\PathGetFileName.snippet">
+    <Content Include="Snippetica.VisualBasic\ListOfThisVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\PathGetFileNameWithoutExtension.snippet">
+    <Content Include="Snippetica.VisualBasic\ListOfTVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\PathGetFullPath.snippet">
+    <Content Include="Snippetica.VisualBasic\ListOfBooleanVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\PathHasExtension.snippet">
+    <Content Include="Snippetica.VisualBasic\ListOfInt32VariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\AssemblyAttribute.snippet">
+    <Content Include="Snippetica.VisualBasic\ListOfObjectVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ConditionalAttribute.snippet">
+    <Content Include="Snippetica.VisualBasic\ListOfStringVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\DebuggerDisplayAttribute.snippet">
+    <Content Include="Snippetica.VisualBasic\ListOfInt64VariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\DebuggerStepThroughAttribute.snippet">
+    <Content Include="Snippetica.VisualBasic\ListOfDateTimeVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\FlagsAttribute.snippet">
+    <Content Include="Snippetica.VisualBasic\NewArrayOfThis.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObsoleteAttribute.snippet">
+    <Content Include="Snippetica.VisualBasic\NewArrayOfT.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\IfEnumTryParse.snippet">
+    <Content Include="Snippetica.VisualBasic\NewArrayOfBoolean.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\IfNotEnumTryParse.snippet">
+    <Content Include="Snippetica.VisualBasic\NewArrayOfInt32.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\LambdaExpressionWithTwoParameters.snippet">
+    <Content Include="Snippetica.VisualBasic\NewArrayOfObject.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\Namespace.snippet">
+    <Content Include="Snippetica.VisualBasic\NewArrayOfString.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObjectKeyword.snippet">
+    <Content Include="Snippetica.VisualBasic\NewArrayOfInt64.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\Regex.snippet">
+    <Content Include="Snippetica.VisualBasic\NewArrayOfDateTime.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ReturnKeyword.snippet">
+    <Content Include="Snippetica.VisualBasic\ObservableCollectionOfThisType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\StringBuilderVariable.snippet">
+    <Content Include="Snippetica.VisualBasic\ObservableCollectionOfTType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\StringKeyword.snippet">
+    <Content Include="Snippetica.VisualBasic\ObservableCollectionOfBooleanType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ThrowStatement.snippet">
+    <Content Include="Snippetica.VisualBasic\ObservableCollectionOfInt32Type.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\TimeSpanType.snippet">
+    <Content Include="Snippetica.VisualBasic\ObservableCollectionOfObjectType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\YieldKeyword.snippet">
+    <Content Include="Snippetica.VisualBasic\ObservableCollectionOfStringType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ArrayOfBooleanType.snippet">
+    <Content Include="Snippetica.VisualBasic\ObservableCollectionOfInt64Type.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ArrayOfDateTimeType.snippet">
+    <Content Include="Snippetica.VisualBasic\ObservableCollectionOfDateTimeType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ArrayOfInt32Type.snippet">
+    <Content Include="Snippetica.VisualBasic\ObservableCollectionOfThisVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ArrayOfInt64Type.snippet">
+    <Content Include="Snippetica.VisualBasic\ObservableCollectionOfTVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ArrayOfObjectType.snippet">
+    <Content Include="Snippetica.VisualBasic\ObservableCollectionOfBooleanVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ArrayOfStringType.snippet">
+    <Content Include="Snippetica.VisualBasic\ObservableCollectionOfInt32Variable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ArrayOfThisType.snippet">
+    <Content Include="Snippetica.VisualBasic\ObservableCollectionOfObjectVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ArrayOfTType.snippet">
+    <Content Include="Snippetica.VisualBasic\ObservableCollectionOfStringVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\DictionaryOfTKeyTValueVariable.snippet">
+    <Content Include="Snippetica.VisualBasic\ObservableCollectionOfInt64Variable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\DictionaryOfTKeyTValueVariableWithInitializer.snippet">
+    <Content Include="Snippetica.VisualBasic\ObservableCollectionOfDateTimeVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfBooleanType.snippet">
+    <Content Include="Snippetica.VisualBasic\ObservableCollectionOfThisVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfBooleanVariable.snippet">
+    <Content Include="Snippetica.VisualBasic\ObservableCollectionOfTVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfBooleanVariableWithInitializer.snippet">
+    <Content Include="Snippetica.VisualBasic\ObservableCollectionOfBooleanVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfDateTimeType.snippet">
+    <Content Include="Snippetica.VisualBasic\ObservableCollectionOfInt32VariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfDateTimeVariable.snippet">
+    <Content Include="Snippetica.VisualBasic\ObservableCollectionOfObjectVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfDateTimeVariableWithInitializer.snippet">
+    <Content Include="Snippetica.VisualBasic\ObservableCollectionOfStringVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfInt32Type.snippet">
+    <Content Include="Snippetica.VisualBasic\ObservableCollectionOfInt64VariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfInt32Variable.snippet">
+    <Content Include="Snippetica.VisualBasic\ObservableCollectionOfDateTimeVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfInt32VariableWithInitializer.snippet">
+    <Content Include="Snippetica.Cpp\class_with_inline_constructor_destructor.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfInt64Type.snippet">
+    <Content Include="Snippetica.Html\div_class.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfInt64Variable.snippet">
+    <Content Include="Snippetica.Html\div_id.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfInt64VariableWithInitializer.snippet">
+    <Content Include="Snippetica.Html\meta_viewport.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfObjectType.snippet">
+    <Content Include="Snippetica.Html\span_class.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfObjectVariable.snippet">
+    <Content Include="Snippetica.Html\span_id.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfObjectVariableWithInitializer.snippet">
+    <Content Include="Snippetica.Html\table_with_sections.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfStringType.snippet">
+    <Content Include="Snippetica.Xaml\Canvas.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfStringVariable.snippet">
+    <Content Include="Snippetica.Xaml\DockPanel.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfStringVariableWithInitializer.snippet">
+    <Content Include="Snippetica.Xaml\Grid.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfThisType.snippet">
+    <Content Include="Snippetica.Xaml\GridRowGridColumn.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfThisVariable.snippet">
+    <Content Include="Snippetica.Xaml\ListBoxItem.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfThisVariableWithInitializer.snippet">
+    <Content Include="Snippetica.Xaml\StackPanel.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfTType.snippet">
+    <Content Include="Snippetica.Xaml\StackPanelHorizontal.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfTVariable.snippet">
+    <Content Include="Snippetica.Xaml\StackPanelVertical.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfTVariableWithInitializer.snippet">
+    <Content Include="Snippetica.Xaml\ToolBarTray.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ListOfBooleanType.snippet">
+    <Content Include="Snippetica.Xaml\UniformGrid.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ListOfBooleanVariable.snippet">
+    <Content Include="Snippetica.Xaml\WrapPanel.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ListOfBooleanVariableWithInitializer.snippet">
+    <Content Include="Snippetica.Xaml\WrapPanelHorizontal.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ListOfDateTimeType.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ListOfDateTimeVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ListOfDateTimeVariableWithInitializer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ListOfInt32Type.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ListOfInt32Variable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ListOfInt32VariableWithInitializer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ListOfInt64Type.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ListOfInt64Variable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ListOfInt64VariableWithInitializer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ListOfObjectType.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ListOfObjectVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ListOfObjectVariableWithInitializer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ListOfStringType.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ListOfStringVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ListOfStringVariableWithInitializer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ListOfThisType.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ListOfThisVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ListOfThisVariableWithInitializer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ListOfTType.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ListOfTVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ListOfTVariableWithInitializer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\NewArrayOfBoolean.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\NewArrayOfDateTime.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\NewArrayOfInt32.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\NewArrayOfInt64.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\NewArrayOfObject.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\NewArrayOfString.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\NewArrayOfT.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\NewArrayOfThis.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfBooleanType.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfBooleanVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfBooleanVariableWithInitializer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfDateTimeType.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfDateTimeVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfDateTimeVariableWithInitializer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfInt32Type.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfInt32Variable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfInt32VariableWithInitializer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfInt64Type.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfInt64Variable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfInt64VariableWithInitializer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfObjectType.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfObjectVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfObjectVariableWithInitializer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfStringType.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfStringVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfStringVariableWithInitializer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfThisType.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfThisVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfThisVariableWithInitializer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfTType.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfTVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfTVariableWithInitializer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Cpp.Dev\class_with_inline_constructor_destructor.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Html.Dev\div_class.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Html.Dev\div_id.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Html.Dev\meta_viewport.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Html.Dev\span_class.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Html.Dev\span_id.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Html.Dev\table_with_sections.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Xaml.Dev\Canvas.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Xaml.Dev\DockPanel.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Xaml.Dev\Grid.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Xaml.Dev\GridRowGridColumn.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Xaml.Dev\ListBoxItem.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Xaml.Dev\StackPanel.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Xaml.Dev\StackPanelHorizontal.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Xaml.Dev\StackPanelVertical.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Xaml.Dev\ToolBarTray.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Xaml.Dev\UniformGrid.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Xaml.Dev\WrapPanel.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Xaml.Dev\WrapPanelHorizontal.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Xaml.Dev\WrapPanelVertical.snippet">
+    <Content Include="Snippetica.Xaml\WrapPanelVertical.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
   </ItemGroup>

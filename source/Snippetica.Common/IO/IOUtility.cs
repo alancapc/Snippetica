@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -15,21 +16,26 @@ namespace Snippetica.IO
 
         public static Encoding UTF8NoBom { get; } = new UTF8Encoding(encoderShouldEmitUTF8Identifier: false);
 
-        public static void SaveSnippets(ICollection<Snippet> snippets, string directoryPath)
+        public static void SaveSnippets(IEnumerable<Snippet> snippets, string directoryPath)
         {
-            foreach (Snippet snippet in snippets)
-                snippet.FilePath = Path.Combine(directoryPath, Path.GetFileName(snippet.FilePath));
+            Console.WriteLine($"saving snippets to {directoryPath}");
 
             if (!Directory.Exists(directoryPath))
                 Directory.CreateDirectory(directoryPath);
 
-            string[] filePaths = Directory.GetFiles(directoryPath, "*.snippet", SearchOption.TopDirectoryOnly);
-
-            foreach (string path in filePaths.Except(snippets.Select(f => f.FilePath), _stringComparer))
-                DeleteFile(path);
+            var filePaths = new HashSet<string>(Directory.GetFiles(directoryPath, "*.snippet", SearchOption.TopDirectoryOnly), _stringComparer);
 
             foreach (Snippet snippet in snippets)
+            {
+                snippet.FilePath = Path.Combine(directoryPath, Path.GetFileName(snippet.FilePath));
+
                 SaveSnippet(snippet);
+
+                filePaths.Remove(snippet.FilePath);
+            }
+
+            foreach (string path in filePaths)
+                DeleteFile(path);
         }
 
         public static void SaveSnippet(Snippet snippet, bool onlyIfChanged = true)
@@ -44,12 +50,7 @@ namespace Snippetica.IO
 
             SaveSettings settings = CreateSaveSettings();
 
-            if (!onlyIfChanged
-                || !File.Exists(filePath)
-                || !string.Equals(
-                    File.ReadAllText(filePath, Encoding.UTF8),
-                    SnippetSerializer.CreateXml(snippet, settings),
-                    StringComparison.Ordinal))
+            if (ShouldSave(snippet, filePath, settings, onlyIfChanged))
             {
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
@@ -59,6 +60,20 @@ namespace Snippetica.IO
 
                 Console.WriteLine();
             }
+        }
+
+        private static bool ShouldSave(Snippet snippet, string filePath, SaveSettings settings, bool onlyIfChanged)
+        {
+            if (!onlyIfChanged)
+                return true;
+
+            if (!File.Exists(filePath))
+                return true;
+
+            string s1 = File.ReadAllText(filePath, Encoding.UTF8);
+            string s2 = SnippetSerializer.CreateXml(snippet, settings);
+
+            return !string.Equals(s1, s2, StringComparison.Ordinal);
         }
 
         private static SaveSettings CreateSaveSettings()
@@ -94,12 +109,13 @@ namespace Snippetica.IO
                 {
                     snippet = (Snippet)snippet.Clone();
 
-                    string submenuShortcut = snippet.GetSubmenuShortcut();
+                    string submenuShortcut = snippet.GetShortcutFromTitle();
 
                     snippet.RemoveShortcutFromTitle();
 
                     snippet.RemoveMetaKeywords();
 
+                    //TODO: 
                     snippet.Keywords.Add($"{KnownTags.MetaTagPrefix}Name:{snippet.FileNameWithoutExtension()}");
 
                     if (!string.IsNullOrEmpty(submenuShortcut))
@@ -117,17 +133,25 @@ namespace Snippetica.IO
         {
             encoding = encoding ?? Encoding.UTF8;
 
-            if (!onlyIfChanged
-                || !File.Exists(filePath)
-                || !string.Equals(
-                    File.ReadAllText(filePath, encoding),
-                    content,
-                    StringComparison.Ordinal))
+            if (ShouldSave(filePath, content, encoding, onlyIfChanged))
             {
                 Console.WriteLine($"saving {filePath}");
 
                 File.WriteAllText(filePath, content, encoding);
             }
+        }
+
+        private static bool ShouldSave(string filePath, string content, Encoding encoding, bool onlyIfChanged)
+        {
+            if (!onlyIfChanged)
+                return true;
+
+            if (!File.Exists(filePath))
+                return true;
+
+            string content2 = File.ReadAllText(filePath, encoding);
+
+            return !string.Equals(content, content2, StringComparison.Ordinal);
         }
 
         public static void CleanOrCreateDirectory(string directoryPath)

@@ -1,10 +1,59 @@
 ﻿{
+  "?: operator (equal to null)": {
+    "prefix": "con",
+    "body": [
+      "(${1:expression} == null) ? ${2:null} : ${3:null}${0}"
+    ],
+    "description": "?: (conditional) operator with condition whether the expression is equal to null"
+  },
+  "?: operator (not equal to null)": {
+    "prefix": "conn",
+    "body": [
+      "(${1:expression} != null) ? ${2:null} : ${3:null}${0}"
+    ],
+    "description": "?: (conditional) operator with condition whether the expression is not equal to null"
+  },
   "array type": {
     "prefix": "a",
     "body": [
       "${1:T}[]${0}"
     ],
     "description": "array type declaration"
+  },
+  "break statement": {
+    "prefix": "bk",
+    "body": [
+      "break;${0}"
+    ],
+    "description": "break statement"
+  },
+  "continue statement": {
+    "prefix": "ce",
+    "body": [
+      "continue;${0}"
+    ],
+    "description": "continue statement"
+  },
+  "Debug.Assert != null": {
+    "prefix": "dann",
+    "body": [
+      "Debug.Assert(${1:false} != null, ${2:\"\"});${0}"
+    ],
+    "description": "Debug.Assert method with condition whether the expression is not equal to null"
+  },
+  "Dictionary<TKey, TValue> type": {
+    "prefix": "gd",
+    "body": [
+      "Dictionary<${1:object}, ${2:object}>${0}"
+    ],
+    "description": "Dictionary<TKey, TValue> type declaration"
+  },
+  "Dictionary<TKey, TValue> variable": {
+    "prefix": "vd",
+    "body": [
+      "var ${1:dic} = new Dictionary<${2:object}, ${3:object}>();${0}"
+    ],
+    "description": "Dictionary<TKey, TValue> variable declaration"
   },
   "Dictionary<TKey, TValue> variable (with initializer)": {
     "prefix": "vd_",
@@ -13,12 +62,27 @@
     ],
     "description": "Dictionary<TKey, TValue> variable declaration (with initializer)"
   },
-  "Dictionary<TKey, TValue> variable": {
-    "prefix": "vd",
+  "do while not null": {
+    "prefix": "donn",
     "body": [
-      "var ${1:dic} = new Dictionary<${2:object}, ${3:object}>();${0}"
+      "do",
+      "{",
+      "    ${0}",
+      "",
+      "} while (${1:x} != null);"
     ],
-    "description": "Dictionary<TKey, TValue> variable declaration"
+    "description": "do statement with condition whether an expression is not equal to null"
+  },
+  "do while null": {
+    "prefix": "don",
+    "body": [
+      "do",
+      "{",
+      "    ${0}",
+      "",
+      "} while (${1:x} == null);"
+    ],
+    "description": "do statement with condition whether an expression is equal to null"
   },
   "HashSet<T> type": {
     "prefix": "ghs",
@@ -41,6 +105,75 @@
     ],
     "description": "HashSet<T> variable declaration (with initializer)"
   },
+  "if !string.IsNullOrEmpty": {
+    "prefix": "iffsne",
+    "body": [
+      "if (!string.IsNullOrEmpty(${1:s}))",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "if !string.IsNullOrEmpty"
+  },
+  "if !string.IsNullOrWhiteSpace": {
+    "prefix": "iffsnw",
+    "body": [
+      "if (!string.IsNullOrWhiteSpace(${1:s}))",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "if !string.IsNullOrWhiteSpace"
+  },
+  "if Enum.TryParse": {
+    "prefix": "ifemtp",
+    "body": [
+      "${1:TEnum} ${2:x};",
+      "if (Enum.TryParse(${3:value}, out ${2}))",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "if statement with condition whether Enum.TryParse method returns true."
+  },
+  "if not Enum.TryParse": {
+    "prefix": "iffemtp",
+    "body": [
+      "${1:TEnum} ${2:x};",
+      "if (!Enum.TryParse(${3:value}, out ${2}))",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "if statement with condition whether Enum.TryParse method returns false."
+  },
+  "if string.IsNullOrEmpty": {
+    "prefix": "ifsne",
+    "body": [
+      "if (string.IsNullOrEmpty(${1:s}))",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "if string.IsNullOrEmpty"
+  },
+  "if string.IsNullOrWhiteSpace": {
+    "prefix": "ifsnw",
+    "body": [
+      "if (string.IsNullOrWhiteSpace(${1:s}))",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "if string.IsNullOrWhiteSpace"
+  },
+  "lambda expression with 2 parameters": {
+    "prefix": "l2",
+    "body": [
+      "(${1:f}, ${2:g}) => ${0}"
+    ],
+    "description": "lambda expression with 2 parameters"
+  },
   "List<T> type": {
     "prefix": "gl",
     "body": [
@@ -61,6 +194,16 @@
       "var ${1:items} = new List<${2:T}>() { ${3:null} };${0}"
     ],
     "description": "List<T> variable declaration (with initializer)"
+  },
+  "namespace": {
+    "prefix": "ns",
+    "body": [
+      "namespace ${1:NamespaceName}",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "namespace declaration"
   },
   "new array ": {
     "prefix": "na",
@@ -96,149 +239,6 @@
       "var ${1:items} = new ObservableCollection<${2:T}>() { ${3:null} };${0}"
     ],
     "description": "ObservableCollection<T> variable declaration (with initializer)"
-  },
-  "break statement": {
-    "prefix": "bk",
-    "body": [
-      "break;${0}"
-    ],
-    "description": "break statement"
-  },
-  "?: operator (equal to null)": {
-    "prefix": "con",
-    "body": [
-      "(${1:expression} == null) ? ${2:null} : ${3:null}${0}"
-    ],
-    "description": "?: (conditional) operator with condition whether the expression is equal to null"
-  },
-  "?: operator (not equal to null)": {
-    "prefix": "conn",
-    "body": [
-      "(${1:expression} != null) ? ${2:null} : ${3:null}${0}"
-    ],
-    "description": "?: (conditional) operator with condition whether the expression is not equal to null"
-  },
-  "continue statement": {
-    "prefix": "ce",
-    "body": [
-      "continue;${0}"
-    ],
-    "description": "continue statement"
-  },
-  "Debug.Assert != null": {
-    "prefix": "dann",
-    "body": [
-      "Debug.Assert(${1:false} != null, ${2:\"\"});${0}"
-    ],
-    "description": "Debug.Assert method with condition whether the expression is not equal to null"
-  },
-  "Dictionary<TKey, TValue> type": {
-    "prefix": "gd",
-    "body": [
-      "Dictionary<${1:object}, ${2:object}>${0}"
-    ],
-    "description": "Dictionary<TKey, TValue> type declaration"
-  },
-  "do while not null": {
-    "prefix": "donn",
-    "body": [
-      "do",
-      "{",
-      "    ${0}",
-      "",
-      "} while (${1:x} != null);"
-    ],
-    "description": "do statement with condition whether an expression is not equal to null"
-  },
-  "do while null": {
-    "prefix": "don",
-    "body": [
-      "do",
-      "{",
-      "    ${0}",
-      "",
-      "} while (${1:x} == null);"
-    ],
-    "description": "do statement with condition whether an expression is equal to null"
-  },
-  "if Enum.TryParse": {
-    "prefix": "ifemtp",
-    "body": [
-      "${1:TEnum} ${2:x};",
-      "if (Enum.TryParse(${3:value}, out ${2}))",
-      "{",
-      "    ${0}",
-      "}"
-    ],
-    "description": "if statement with condition whether Enum.TryParse method returns true."
-  },
-  "if not Enum.TryParse": {
-    "prefix": "iffemtp",
-    "body": [
-      "${1:TEnum} ${2:x};",
-      "if (!Enum.TryParse(${3:value}, out ${2}))",
-      "{",
-      "    ${0}",
-      "}"
-    ],
-    "description": "if statement with condition whether Enum.TryParse method returns false."
-  },
-  "if !string.IsNullOrEmpty": {
-    "prefix": "iffsne",
-    "body": [
-      "if (!string.IsNullOrEmpty(${1:s}))",
-      "{",
-      "    ${0}",
-      "}"
-    ],
-    "description": "if !string.IsNullOrEmpty"
-  },
-  "if !string.IsNullOrWhiteSpace": {
-    "prefix": "iffsnw",
-    "body": [
-      "if (!string.IsNullOrWhiteSpace(${1:s}))",
-      "{",
-      "    ${0}",
-      "}"
-    ],
-    "description": "if !string.IsNullOrWhiteSpace"
-  },
-  "if string.IsNullOrEmpty": {
-    "prefix": "ifsne",
-    "body": [
-      "if (string.IsNullOrEmpty(${1:s}))",
-      "{",
-      "    ${0}",
-      "}"
-    ],
-    "description": "if string.IsNullOrEmpty"
-  },
-  "if string.IsNullOrWhiteSpace": {
-    "prefix": "ifsnw",
-    "body": [
-      "if (string.IsNullOrWhiteSpace(${1:s}))",
-      "{",
-      "    ${0}",
-      "}"
-    ],
-    "description": "if string.IsNullOrWhiteSpace"
-  },
-  "lambda expression with 2 parameters": {
-    "prefix": "l2",
-    "body": [
-      "(${1:f}, ${2:g}) => ${0}"
-    ],
-    "description": "lambda expression with 2 parameters"
-  },
-  "namespace": {
-    "prefix": "ns",
-    "body": [
-      "namespace ${1:NamespaceName}",
-      "{",
-      "    ${0}",
-      "}"
-    ],
-    "description": "namespace declaration"
   },
   "Regex type": {
     "prefix": "rx",

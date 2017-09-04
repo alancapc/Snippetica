@@ -6,7 +6,7 @@ namespace Snippetica.CodeGeneration
 {
     public static class StringExtensions
     {
-        public static string ReplacePlaceholder(this string value, string placeholder, string replacement, bool includeWhitespace = false)
+        internal static string ReplacePlaceholder(this string value, string placeholder, string replacement, bool includeWhitespace = false)
         {
             if (includeWhitespace)
             {

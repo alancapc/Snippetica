@@ -1,19 +1,17 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.RegularExpressions;
 using Pihrtsoft.Snippets;
-using Pihrtsoft.Text.RegularExpressions.Linq;
-using static Pihrtsoft.Text.RegularExpressions.Linq.Patterns;
 
 namespace Snippetica.CodeGeneration.Commands
 {
     public class AlternativeShortcutCommand : BaseCommand
     {
-        private static readonly Pattern _pattern = AssertBack(LetterLower()).Assert(LetterUpper());
+        public AlternativeShortcutCommand(string shortcut)
+        {
+            Shortcut = shortcut;
+        }
 
-        private static readonly Regex _regex = _pattern.ToRegex();
+        public string Shortcut { get; }
 
         public override CommandKind Kind
         {
@@ -27,11 +25,9 @@ namespace Snippetica.CodeGeneration.Commands
 
         protected override void Execute(ExecutionContext context, Snippet snippet)
         {
-            IEnumerable<string> values = _regex.Split(snippet.Shortcut)
-                .Select(f => f.Substring(0, 1) + f.Substring(f.Length - 1, 1))
-                .Select(f => f.ToLower());
+            snippet.Shortcut = Shortcut;
 
-            snippet.Shortcut = string.Concat(values);
+            snippet.AddTag(KnownTags.NonUniqueTitle);
         }
     }
 }

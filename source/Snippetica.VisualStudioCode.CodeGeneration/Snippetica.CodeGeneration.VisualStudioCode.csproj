@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VisualStudioCodeSnippetGenerator.cs" />
+    <Compile Include="VisualStudioCodePackageGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Snippetica.CodeGeneration.Json\Snippetica.CodeGeneration.Json.csproj">

@@ -3,65 +3,55 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Pihrtsoft.Snippets;
 using Snippetica.CodeGeneration.Commands;
+using static Pihrtsoft.Text.RegularExpressions.Linq.Patterns;
 
 namespace Snippetica.CodeGeneration
 {
-    public class XamlSnippetGenerator
+    public class XamlSnippetGenerator : SnippetGenerator
     {
-        public static SnippetGeneratorResult GetResult(SnippetDirectory[] snippetDirectories)
+        private static readonly Regex _regex = AssertBack(LetterLower()).Assert(LetterUpper()).ToRegex();
+
+        public override IEnumerable<Snippet> GenerateSnippets(string sourceDirectoryPath, SearchOption searchOption = SearchOption.AllDirectories)
         {
-            IEnumerable<SnippetDirectory> directories = snippetDirectories
-                .Where(f => f.Language == Language.Xaml);
+            return base.GenerateSnippets(sourceDirectoryPath, searchOption);
 
-            string sourceDirPath = directories.First(f => f.IsAutoGenerationSource).Path;
-            string destinationDirPath = directories.First(f => f.IsAutoGenerationDestination).Path;
-
-            var snippets = new List<Snippet>();
-
-            snippets.AddRange(XmlSnippetGenerator.GenerateSnippets(destinationDirPath, Language.Xaml));
-
-            var generator = new XamlSnippetGenerator();
-            snippets.AddRange(generator.GenerateSnippets(sourceDirPath));
-
-            return new SnippetGeneratorResult(snippets, destinationDirPath);
+            //TODO: 
+            //.Concat(XmlSnippetGenerator.GenerateSnippets(Language.Xaml));
         }
 
-        public IEnumerable<Snippet> GenerateSnippets(string sourceDirectoryPath)
-        {
-            return SnippetSerializer.Deserialize(sourceDirectoryPath, SearchOption.AllDirectories)
-                .SelectMany(snippet => GenerateSnippets(snippet));
-        }
-
-        public IEnumerable<Snippet> GenerateSnippets(Snippet snippet)
+        protected override JobCollection CreateJobs(Snippet snippet)
         {
             var jobs = new JobCollection();
 
             if (snippet.HasTag(KnownTags.GenerateAlternativeShortcut))
             {
                 jobs.AddCommand(new SimpleCommand(f => f.Shortcut = f.Shortcut.ToLowerInvariant(), CommandKind.ShortcutToLowercase));
-                jobs.AddCommand(new AlternativeShortcutCommand());
+                jobs.AddCommand(new AlternativeShortcutCommand(CreateAlternativeShortcut(snippet)));
             }
+
+            return jobs;
 
             //if (snippet.HasTag(KnownTags.GenerateXamlProperty))
             //    jobs.AddCommand(new XamlPropertyCommand());
+        }
 
-            foreach (Job job in jobs)
-            {
-                var context = new ExecutionContext((Snippet)snippet.Clone());
+        protected override Snippet PostProcess(Snippet snippet)
+        {
+            snippet.RemoveTag(KnownTags.NonUniqueTitle);
 
-                job.Execute(context);
+            return base.PostProcess(snippet);
+        }
 
-                if (!context.IsCanceled)
-                {
-                    foreach (Snippet snippet2 in context.Snippets)
-                    {
-                        snippet2.SortCollections();
-                        yield return snippet2;
-                    }
-                }
-            }
+        private static string CreateAlternativeShortcut(Snippet snippet)
+        {
+            IEnumerable<string> values = _regex.Split(snippet.Shortcut)
+                .Select(f => f.Substring(0, 1) + f.Substring(f.Length - 1, 1))
+                .Select(f => f.ToLower());
+
+            return string.Concat(values);
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Snippetica.CodeGeneration.VisualStudio
 {
     public static class HtmlGenerator
     {
-        public static string GenerateVisualStudioGalleryDescription(SnippetDirectory[] snippetDirectories)
+        public static string GenerateVisualStudioMarketplaceDescription(SnippetDirectory[] snippetDirectories)
         {
             using (var sw = new StringWriter())
             {
@@ -24,7 +24,7 @@ namespace Snippetica.CodeGeneration.VisualStudio
                 using (XmlWriter x = XmlWriter.Create(sw, xmlWriterSettings))
                 {
                     x.WriteElementString("h3", ProductName);
-                    x.WriteElementString("p", SnippetDirectory.GetProjectSubtitle(snippetDirectories));
+                    x.WriteElementString("p", CodeGenerationUtility.GetProjectSubtitle(snippetDirectories));
 
                     x.WriteElementString("h3", "Links");
 

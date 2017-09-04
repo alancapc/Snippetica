@@ -8351,30 +8351,6 @@ finally
 </colgroup>]]></Code>
     </Snippet>
   </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>comment</Title>
-      <Shortcut>c</Shortcut>
-      <Description>comment</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Tag Name:Comment</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>comment</ID>
-          <ToolTip>Comment</ToolTip>
-          <Default>comment</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Html"><![CDATA[<!-- $comment$ -->$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>datalist</Title>
@@ -8754,122 +8730,6 @@ finally
         </Literal>
       </Declarations>
       <Code Language="Html"><![CDATA[<dt>$content$</dt>$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>element</Title>
-      <Shortcut>e</Shortcut>
-      <Description>element</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Tag Name:Element</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Element name</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Html"><![CDATA[<$name$>$end$</$name$>]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>element (with attribute)</Title>
-      <Shortcut>ea</Shortcut>
-      <Description>element (with attribute)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Tag Name:ElementWithAttribute</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>attribute</ID>
-          <ToolTip>Attribute(s)</ToolTip>
-          <Default>attribute=""</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Element name</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Html"><![CDATA[<$name$ $attribute$>$end$</$name$>]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>element (with attribute, with content)</Title>
-      <Shortcut>eax</Shortcut>
-      <Description>element (with attribute, with content)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Tag Name:ElementWithAttributeWithContent</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>attribute</ID>
-          <ToolTip>Attribute(s)</ToolTip>
-          <Default>attribute=""</Default>
-        </Literal>
-        <Literal>
-          <ID>content</ID>
-          <ToolTip>Content</ToolTip>
-          <Default>content</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Element name</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Html"><![CDATA[<$name$ $attribute$>$content$</$name$>$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>element (with content)</Title>
-      <Shortcut>ex</Shortcut>
-      <Description>element (with content)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Tag Name:ElementWithContent</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>content</ID>
-          <ToolTip>Content</ToolTip>
-          <Default>content</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Element name</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Html"><![CDATA[<$name$>$content$</$name$>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -9283,29 +9143,6 @@ finally
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>h2 _</Title>
-      <Shortcut>hh</Shortcut>
-      <Description>h2</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Tag Name:h2_</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>content</ID>
-          <Default>content</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Html"><![CDATA[<h2>$content$</h2>$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
       <Title>h2 (with content)</Title>
       <Shortcut>h2x</Shortcut>
       <Description>h2 (with content)</Description>
@@ -9342,29 +9179,6 @@ finally
     </Header>
     <Snippet>
       <Code Language="Html"><![CDATA[<h3>$end$</h3>]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>h3 _</Title>
-      <Shortcut>hhh</Shortcut>
-      <Description>h3</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Tag Name:h3_</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>content</ID>
-          <Default>content</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Html"><![CDATA[<h3>$content$</h3>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -11199,59 +11013,6 @@ finally
 </select>]]></Code>
     </Snippet>
   </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>self-closing element</Title>
-      <Shortcut>es</Shortcut>
-      <Description>self-closing element</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Tag Name:SelfClosingElement</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Element name</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Html"><![CDATA[<$name$ />$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>self-closing element (with attribute)</Title>
-      <Shortcut>eas</Shortcut>
-      <Description>self-closing element (with attribute)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Tag Name:SelfClosingElementWithAttribute</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>attribute</ID>
-          <ToolTip>Attribute(s)</ToolTip>
-          <Default>attribute=""</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Element name</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Html"><![CDATA[<$name$ $attribute$ />$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>small</Title>
@@ -12341,12 +12102,12 @@ $content$
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>language</ID>
-          <Default>language</Default>
-        </Literal>
-        <Literal>
           <ID>content</ID>
           <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>language</ID>
+          <Default>language</Default>
         </Literal>
       </Declarations>
       <Code Language="Markdown"><![CDATA[```$language$
@@ -12623,12 +12384,12 @@ $content$
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>index</ID>
-          <Default>1</Default>
-        </Literal>
-        <Literal>
           <ID>content</ID>
           <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>index</ID>
+          <Default>1</Default>
         </Literal>
       </Declarations>
       <Code Language="Markdown"><![CDATA[$index$. $content$$end$]]></Code>
@@ -12650,12 +12411,12 @@ $content$
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>index</ID>
-          <Default>1</Default>
-        </Literal>
-        <Literal>
           <ID>content</ID>
           <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>index</ID>
+          <Default>1</Default>
         </Literal>
       </Declarations>
       <Code Language="Markdown"><![CDATA[   $index$. $content$$end$]]></Code>
@@ -12677,12 +12438,12 @@ $content$
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>index</ID>
-          <Default>1</Default>
-        </Literal>
-        <Literal>
           <ID>content</ID>
           <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>index</ID>
+          <Default>1</Default>
         </Literal>
       </Declarations>
       <Code Language="Markdown"><![CDATA[   $index$. $content$$end$]]></Code>
@@ -12704,12 +12465,12 @@ $content$
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>index</ID>
-          <Default>1</Default>
-        </Literal>
-        <Literal>
           <ID>content</ID>
           <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>index</ID>
+          <Default>1</Default>
         </Literal>
       </Declarations>
       <Code Language="Markdown"><![CDATA[      $index$. $content$$end$]]></Code>
@@ -12731,12 +12492,12 @@ $content$
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>index</ID>
-          <Default>1</Default>
-        </Literal>
-        <Literal>
           <ID>content</ID>
           <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>index</ID>
+          <Default>1</Default>
         </Literal>
       </Declarations>
       <Code Language="Markdown"><![CDATA[      $index$. $content$$end$]]></Code>
@@ -12804,12 +12565,12 @@ $content$
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>header1</ID>
-          <Default>header1</Default>
-        </Literal>
-        <Literal>
           <ID>content1</ID>
           <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>header1</ID>
+          <Default>header1</Default>
         </Literal>
       </Declarations>
       <Code Language="Markdown"><![CDATA[$header1$ |
@@ -12833,20 +12594,20 @@ $content1$ |$end$]]></Code>
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>header1</ID>
-          <Default>header1</Default>
-        </Literal>
-        <Literal>
-          <ID>header2</ID>
-          <Default>header2</Default>
-        </Literal>
-        <Literal>
           <ID>content1</ID>
           <Default>x</Default>
         </Literal>
         <Literal>
           <ID>content2</ID>
           <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>header1</ID>
+          <Default>header1</Default>
+        </Literal>
+        <Literal>
+          <ID>header2</ID>
+          <Default>header2</Default>
         </Literal>
       </Declarations>
       <Code Language="Markdown"><![CDATA[$header1$ | $header2$
@@ -12870,20 +12631,20 @@ $content1$ | $content2$$end$]]></Code>
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>header1</ID>
-          <Default>header1</Default>
-        </Literal>
-        <Literal>
-          <ID>header2</ID>
-          <Default>header2</Default>
-        </Literal>
-        <Literal>
           <ID>content1</ID>
           <Default>x</Default>
         </Literal>
         <Literal>
           <ID>content2</ID>
           <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>header1</ID>
+          <Default>header1</Default>
+        </Literal>
+        <Literal>
+          <ID>header2</ID>
+          <Default>header2</Default>
         </Literal>
       </Declarations>
       <Code Language="Markdown"><![CDATA[$header1$ | $header2$
@@ -12907,18 +12668,6 @@ $content1$ | $content2$$end$]]></Code>
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>header1</ID>
-          <Default>header1</Default>
-        </Literal>
-        <Literal>
-          <ID>header2</ID>
-          <Default>header2</Default>
-        </Literal>
-        <Literal>
-          <ID>header3</ID>
-          <Default>header3</Default>
-        </Literal>
-        <Literal>
           <ID>content1</ID>
           <Default>x</Default>
         </Literal>
@@ -12929,6 +12678,18 @@ $content1$ | $content2$$end$]]></Code>
         <Literal>
           <ID>content3</ID>
           <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>header1</ID>
+          <Default>header1</Default>
+        </Literal>
+        <Literal>
+          <ID>header2</ID>
+          <Default>header2</Default>
+        </Literal>
+        <Literal>
+          <ID>header3</ID>
+          <Default>header3</Default>
         </Literal>
       </Declarations>
       <Code Language="Markdown"><![CDATA[$header1$ | $header2$ | $header3$
@@ -12952,18 +12713,6 @@ $content1$ | $content2$ | $content3$$end$]]></Code>
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>header1</ID>
-          <Default>header1</Default>
-        </Literal>
-        <Literal>
-          <ID>header2</ID>
-          <Default>header2</Default>
-        </Literal>
-        <Literal>
-          <ID>header3</ID>
-          <Default>header3</Default>
-        </Literal>
-        <Literal>
           <ID>content1</ID>
           <Default>x</Default>
         </Literal>
@@ -12974,6 +12723,18 @@ $content1$ | $content2$ | $content3$$end$]]></Code>
         <Literal>
           <ID>content3</ID>
           <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>header1</ID>
+          <Default>header1</Default>
+        </Literal>
+        <Literal>
+          <ID>header2</ID>
+          <Default>header2</Default>
+        </Literal>
+        <Literal>
+          <ID>header3</ID>
+          <Default>header3</Default>
         </Literal>
       </Declarations>
       <Code Language="Markdown"><![CDATA[$header1$ | $header2$ | $header3$
@@ -19516,199 +19277,6 @@ End Using]]></Code>
         </Literal>
       </Declarations>
       <Code Language="Xml"><![CDATA[<![CDATA[$end$$CDataEnd$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>comment</Title>
-      <Shortcut>c</Shortcut>
-      <Description>comment</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Tag Name:Comment</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>comment</ID>
-          <ToolTip>Comment</ToolTip>
-          <Default>comment</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Xml"><![CDATA[<!-- $comment$ -->$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>element</Title>
-      <Shortcut>e</Shortcut>
-      <Description>element</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Tag Name:Element</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Element name</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Xml"><![CDATA[<$name$>$end$</$name$>]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>element (with attribute)</Title>
-      <Shortcut>ea</Shortcut>
-      <Description>element (with attribute)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Tag Name:ElementWithAttribute</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>attribute</ID>
-          <ToolTip>Attribute(s)</ToolTip>
-          <Default>attribute=""</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Element name</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Xml"><![CDATA[<$name$ $attribute$>$end$</$name$>]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>element (with attribute, with content)</Title>
-      <Shortcut>eax</Shortcut>
-      <Description>element (with attribute, with content)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Tag Name:ElementWithAttributeWithContent</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>attribute</ID>
-          <ToolTip>Attribute(s)</ToolTip>
-          <Default>attribute=""</Default>
-        </Literal>
-        <Literal>
-          <ID>content</ID>
-          <ToolTip>Content</ToolTip>
-          <Default>content</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Element name</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Xml"><![CDATA[<$name$ $attribute$>$content$</$name$>$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>element (with content)</Title>
-      <Shortcut>ex</Shortcut>
-      <Description>element (with content)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Tag Name:ElementWithContent</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>content</ID>
-          <ToolTip>Content</ToolTip>
-          <Default>content</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Element name</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Xml"><![CDATA[<$name$>$content$</$name$>$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>self-closing element</Title>
-      <Shortcut>es</Shortcut>
-      <Description>self-closing element</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Tag Name:SelfClosingElement</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Element name</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Xml"><![CDATA[<$name$ />$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>self-closing element (with attribute)</Title>
-      <Shortcut>eas</Shortcut>
-      <Description>self-closing element (with attribute)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Tag Name:SelfClosingElementWithAttribute</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>attribute</ID>
-          <ToolTip>Attribute(s)</ToolTip>
-          <Default>attribute=""</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Element name</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Xml"><![CDATA[<$name$ $attribute$ />$end$]]></Code>
     </Snippet>
   </CodeSnippet>
 </CodeSnippets>
