@@ -10,13 +10,13 @@ namespace Snippetica.CodeGeneration
 {
     public abstract class SnippetGenerator
     {
-        public virtual IEnumerable<Snippet> GenerateSnippets(string sourceDirectoryPath, SearchOption searchOption = SearchOption.AllDirectories)
+        public IEnumerable<Snippet> GenerateSnippets(string sourceDirectoryPath, SearchOption searchOption = SearchOption.AllDirectories)
         {
             return SnippetSerializer.Deserialize(sourceDirectoryPath, searchOption)
                 .SelectMany(snippet => GenerateSnippets(snippet));
         }
 
-        public virtual IEnumerable<Snippet> GenerateSnippets(Snippet snippet)
+        public IEnumerable<Snippet> GenerateSnippets(Snippet snippet)
         {
             foreach (Job job in CreateJobs(snippet))
             {

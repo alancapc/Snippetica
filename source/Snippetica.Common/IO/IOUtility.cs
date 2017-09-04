@@ -57,8 +57,6 @@ namespace Snippetica.IO
                     Console.WriteLine($"saving {filePath}");
                     SnippetSerializer.Serialize(fileStream, snippet, settings);
                 }
-
-                Console.WriteLine();
             }
         }
 
@@ -97,8 +95,6 @@ namespace Snippetica.IO
                 Console.WriteLine($"saving {filePath}");
                 SnippetSerializer.Serialize(fileStream, snippets, CreateSaveSettings());
             }
-
-            Console.WriteLine();
         }
 
         public static void SaveSnippetBrowserFile(IEnumerable<Snippet> snippets, string filePath)
@@ -115,11 +111,10 @@ namespace Snippetica.IO
 
                     snippet.RemoveMetaKeywords();
 
-                    //TODO: 
-                    snippet.Keywords.Add($"{KnownTags.MetaTagPrefix}Name:{snippet.FileNameWithoutExtension()}");
+                    snippet.Keywords.Add($"{KnownTags.MetaPrefix}Name {snippet.FileNameWithoutExtension()}");
 
                     if (!string.IsNullOrEmpty(submenuShortcut))
-                        snippet.Keywords.Add($"{KnownTags.MetaTagPrefix}SubmenuShortcut:{submenuShortcut}");
+                        snippet.Keywords.Add($"{KnownTags.MetaPrefix}SubmenuShortcut {submenuShortcut}");
 
                     return snippet;
                 })

@@ -61,7 +61,7 @@ namespace Snippetica.CodeGeneration.Markdown
 
         public static string GenerateDirectoryReadme(
             SnippetDirectory snippetDirectory,
-            CharacterSequence[] characterSequences,
+            IList<ShortcutInfo> shortcuts,
             SnippetListSettings settings)
         {
             using (var sw = new StringWriter())
@@ -86,11 +86,11 @@ namespace Snippetica.CodeGeneration.Markdown
                 if (!snippetDirectory.IsDevelopment
                     && !snippetDirectory.HasTag(KnownTags.NoQuickReference))
                 {
-                    characterSequences = characterSequences?
+                    shortcuts = shortcuts?
                         .Where(f => f.Languages.Contains(snippetDirectory.Language))
-                        .ToArray();
+                        .ToList();
 
-                    if (characterSequences?.Length > 0)
+                    if (shortcuts?.Count > 0)
                     {
                         sw.WriteLine("### Quick Reference");
                         sw.WriteLine();
@@ -104,9 +104,9 @@ namespace Snippetica.CodeGeneration.Markdown
                             sw.WriteLine();
                         }
 
-                        using (CharacterSequenceTableWriter tableWriter = CharacterSequenceTableWriter.Create())
+                        using (ShortcutInfoTableWriter tableWriter = ShortcutInfoTableWriter.Create())
                         {
-                            tableWriter.WriteTable(characterSequences);
+                            tableWriter.WriteTable(shortcuts);
                             sw.Write(tableWriter.ToString());
                         }
 

@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CharacterSequenceTableWriter.cs" />
+    <Compile Include="ShortcutInfoTableWriter.cs" />
     <Compile Include="ColumnDefinition.cs" />
     <Compile Include="MarkdownGenerator.cs" />
     <Compile Include="MarkdownHelper.cs" />
@@ -55,7 +55,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShortcutCommentColumnDefinition.cs" />
     <Compile Include="ShortcutDescriptionColumnDefinition.cs" />
-    <Compile Include="ShortcutSequenceColumnDefinition.cs" />
+    <Compile Include="ShortcutInfoColumnDefinition.cs" />
     <Compile Include="SnippetLanguageColumnDefinition.cs" />
     <Compile Include="SnippetListSettings.cs" />
     <Compile Include="SnippetShortcutColumnDefinition.cs" />

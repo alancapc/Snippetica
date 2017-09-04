@@ -11,7 +11,7 @@ namespace Snippetica.CodeGeneration.Markdown
 
         public override string GetValue(object value)
         {
-            return MarkdownHelper.Escape(((CharacterSequence)value).Comment);
+            return MarkdownHelper.Escape(((ShortcutInfo)value).Comment);
         }
     }
 }

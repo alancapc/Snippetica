@@ -7,6 +7,11 @@ namespace Snippetica.CodeGeneration
 {
     public class VisualStudioCodeEnvironment : SnippetEnvironment
     {
+        public override Engine Engine
+        {
+            get { return Engine.VisualStudioCode; }
+        }
+
         public override bool ShouldGenerateSnippets(SnippetDirectory directory)
         {
             return base.ShouldGenerateSnippets(directory)

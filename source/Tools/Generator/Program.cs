@@ -6,50 +6,87 @@ using System.IO;
 using System.Linq;
 using Pihrtsoft.Records;
 using Pihrtsoft.Snippets;
-using Snippetica.CodeGeneration.Markdown;
-using Snippetica.CodeGeneration.VisualStudio;
+using Pihrtsoft.Snippets.Comparers;
+using Snippetica.CodeGeneration.Package;
+using Snippetica.CodeGeneration.Package.VisualStudio;
+using Snippetica.CodeGeneration.Package.VisualStudioCode;
+using Snippetica.IO;
 using static Snippetica.KnownPaths;
 
 namespace Snippetica.CodeGeneration
 {
     internal static class Program
     {
-        private const string DevelopmentSuffix = ".Dev";
+        private static readonly SnippetDeepEqualityComparer _snippetEqualityComparer = new SnippetDeepEqualityComparer();
 
         private static void Main(string[] args)
         {
-            SnippetDirectory[] snippetDirectories = LoadSnippetDirectories(@"..\..\SnippetDirectories.xml").ToArray();
+            SnippetDirectory[] directories = LoadSnippetDirectories(@"..\..\SnippetDirectories.xml").ToArray();
 
-            CharacterSequence[] characterSequences = CharacterSequence.LoadFromFile(@"..\..\CharacterSequences.xml").ToArray();
+            ShortcutInfo[] shortcuts = ShortcutInfo.LoadFromFile(@"..\..\Shortcuts.xml").ToArray();
+
+            ShortcutInfo.SerializeToXml(Path.Combine(VisualStudioExtensionProjectPath, "Shortcuts.xml"), shortcuts);
 
             LoadLanguageDefinitions();
 
-            VisualStudioPackageGenerator.GeneratePackageFiles(
-                snippetDirectories,
+            SaveChangedSnippets(directories);
+
+            GenerateSnippets(
+                new VisualStudioEnvironment().GenerateSnippets(directories),
+                new VisualStudioPackageGenerator(),
                 VisualStudioExtensionProjectPath,
-                characterSequences);
+                shortcuts,
+                KnownTags.ExcludeFromVisualStudio);
 
-            VisualStudioCodePackageGenerator.GeneratePackageFiles(
-                snippetDirectories,
+            GenerateSnippets(
+                new VisualStudioCodeEnvironment().GenerateSnippets(directories),
+                new VisualStudioCodePackageGenerator(),
                 VisualStudioCodeExtensionProjectPath,
-                characterSequences);
-
-            //TODO: WriteSolutionReadme
-
-            CharacterSequence.SerializeToXml(Path.Combine(VisualStudioExtensionProjectPath, "CharacterSequences.xml"), characterSequences);
+                shortcuts,
+                KnownTags.ExcludeFromVisualStudioCode);
 
             Console.WriteLine("*** END ***");
             Console.ReadKey();
         }
 
-        public static IEnumerable<SnippetDirectory> LoadSnippetDirectories(string url)
+        private static void GenerateSnippets(
+            IEnumerable<SnippetGeneratorResult> results,
+            PackageGenerator generator,
+            string projectPath,
+            ShortcutInfo[] shortcuts,
+            string excludeTag)
+        {
+            generator.Shortcuts.AddRange(shortcuts.Where(f => !f.HasTag(excludeTag)));
+
+            generator.GeneratePackageFiles(projectPath, results.Where(f => !f.SnippetDirectory.IsDevelopment));
+
+            generator.GeneratePackageFiles(projectPath + KnownNames.DevSuffix, results.Where(f => f.SnippetDirectory.IsDevelopment));
+        }
+
+        private static void SaveChangedSnippets(SnippetDirectory[] directories)
+        {
+            foreach (SnippetDirectory directory in directories)
+            {
+                foreach (Snippet snippet in directory.EnumerateSnippets())
+                {
+                    var clone = (Snippet)snippet.Clone();
+
+                    clone.SortCollections();
+
+                    if (!_snippetEqualityComparer.Equals(snippet, clone))
+                        IOUtility.SaveSnippet(clone, onlyIfChanged: false);
+                }
+            }
+        }
+
+        private static IEnumerable<SnippetDirectory> LoadSnippetDirectories(string url)
         {
             return Document.ReadRecords(url)
                 .Where(f => !f.HasTag(KnownTags.Disabled))
                 .Select(SnippetDirectoryMapper.MapFromRecord);
         }
 
-        public static void LoadLanguageDefinitions()
+        private static void LoadLanguageDefinitions()
         {
             LanguageDefinition[] languageDefinitions = Document.ReadRecords(@"..\..\LanguageDefinitions.xml")
                 .Where(f => !f.HasTag(KnownTags.Disabled))

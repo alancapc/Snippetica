@@ -9,11 +9,13 @@ namespace Snippetica.CodeGeneration
 {
     public abstract class SnippetEnvironment
     {
-        public IEnumerable<SnippetGeneratorResult> GenerateSnippets(IEnumerable<SnippetDirectory> snippetDirectories)
+        public abstract Engine Engine { get; }
+
+        public IEnumerable<SnippetGeneratorResult> GenerateSnippets(IEnumerable<SnippetDirectory> directories)
         {
-            foreach (SnippetDirectory snippetDirectory in snippetDirectories)
+            foreach (SnippetDirectory directory in directories)
             {
-                foreach (SnippetGeneratorResult result in GenerateSnippets(snippetDirectory))
+                foreach (SnippetGeneratorResult result in GenerateSnippets(directory))
                 {
                     yield return result;
                 }
@@ -38,7 +40,7 @@ namespace Snippetica.CodeGeneration
 
                 var devDirectory = new SnippetDirectory(devPath, directory.Language, tags.ToArray());
 
-                yield return new SnippetGeneratorResult(GenerateSnippetsCore(devDirectory), devDirectory.WithPath(directory.Path));
+                yield return new SnippetGeneratorResult(GenerateSnippetsCore(devDirectory), devDirectory.WithPath(directory.Path + KnownNames.DevSuffix));
             }
         }
 
@@ -46,12 +48,26 @@ namespace Snippetica.CodeGeneration
         {
             var snippets = new List<Snippet>();
 
-            snippets.AddRange(directory.EnumerateSnippets(SearchOption.TopDirectoryOnly));
+            snippets.AddRange(EnumerateSnippets(directory.Path));
+
+            snippets.AddRange(SnippetGenerator.GenerateAlternativeShortcuts(snippets));
+
+            if (!directory.IsDevelopment
+                && directory.HasTag(KnownTags.GenerateXmlSnippets))
+            {
+                switch (directory.Language)
+                {
+                    case Language.Xml:
+                    case Language.Xaml:
+                    case Language.Html:
+                        {
+                            snippets.AddRange(XmlSnippetGenerator.GenerateSnippets(directory.Language));
+                            break;
+                        }
+                }
+            }
 
             string autoGenerationPath = Path.Combine(directory.Path, "AutoGeneration");
-
-            //TODO: 
-            snippets.AddRange(SnippetGenerator.GenerateAlternativeShortcuts(snippets));
 
             if (Directory.Exists(autoGenerationPath))
             {
@@ -63,6 +79,33 @@ namespace Snippetica.CodeGeneration
             }
 
             return snippets;
+        }
+
+        private static IEnumerable<Snippet> EnumerateSnippets(string directoryPath)
+        {
+            foreach (string path in Directory.EnumerateDirectories(directoryPath, "*", SearchOption.TopDirectoryOnly))
+            {
+                string name = Path.GetFileName(path);
+
+                if (name == "Dev")
+                    continue;
+
+                if (name == "AutoGeneration")
+                    continue;
+
+                foreach (Snippet snippet in SnippetSerializer.Deserialize(path, SearchOption.AllDirectories))
+                {
+                    yield return snippet;
+                }
+            }
+
+            foreach (string filePath in Directory.EnumerateFiles(directoryPath, SnippetFileSearcher.Pattern, SearchOption.TopDirectoryOnly))
+            {
+                foreach (Snippet snippet in SnippetSerializer.DeserializeFile(filePath).Snippets)
+                {
+                    yield return snippet;
+                }
+            }
         }
 
         public virtual bool ShouldGenerateSnippets(SnippetDirectory directory)

@@ -25,21 +25,21 @@ namespace Snippetica.CodeGeneration.Markdown
 
         public static void WriteDirectoryReadMe(
             SnippetDirectory[] snippetDirectories,
-            CharacterSequence[] characterSequences,
+            ShortcutInfo[] shortcuts,
             SnippetListSettings settings)
         {
             foreach (SnippetDirectory snippetDirectory in snippetDirectories)
-                WriteDirectoryReadMe(snippetDirectory, characterSequences, settings);
+                WriteDirectoryReadMe(snippetDirectory, shortcuts, settings);
         }
 
         public static void WriteDirectoryReadMe(
             SnippetDirectory snippetDirectory,
-            CharacterSequence[] characterSequences,
+            ShortcutInfo[] shortcuts,
             SnippetListSettings settings)
         {
             IOUtility.WriteAllText(
                 Path.Combine(snippetDirectory.Path, ReadMeFileName),
-                MarkdownGenerator.GenerateDirectoryReadme(snippetDirectory, characterSequences, settings));
+                MarkdownGenerator.GenerateDirectoryReadme(snippetDirectory, shortcuts, settings));
         }
     }
 }

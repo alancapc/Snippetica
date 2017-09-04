@@ -86,12 +86,14 @@ namespace Snippetica
             return Path.GetFileNameWithoutExtension(snippet.FilePath);
         }
 
-        public static void SortCollections(this Snippet snippet)
+        public static Snippet SortCollections(this Snippet snippet)
         {
             snippet.AlternativeShortcuts.Sort();
             snippet.Literals.Sort();
             snippet.Keywords.Sort();
             snippet.Namespaces.Sort();
+
+            return snippet;
         }
 
         public static void AddTag(this Snippet snippet, string tag)

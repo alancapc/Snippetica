@@ -43,7 +43,7 @@
           <Set Language="Html">
             <PrefixMany Path=".Html">
               <Tag Value="Release">
-                <New Path="" />
+                <New Path="" Tag="GenerateXmlSnippets" />
               </Tag>
               <!--<New Path="\AutoGeneration" Tag="AutoGenerationSource" />
               <Tag Value="Dev">
@@ -54,7 +54,9 @@
           <Tag Value="ExcludeFromVisualStudioCode">
             <Set Language="Xaml">
               <PrefixMany Path=".Xaml">
-                <New Path="" Tag="Release" />
+                <New Path="" Tag="Release">
+                  <Tag Value="GenerateXmlSnippets" />
+                </New>
                 <!--<New Path="\AutoGeneration" Tag="AutoGenerationSource" />
                 <Tag Value="Dev">
                   <New Path="\Dev" Tag="Release" />
@@ -65,7 +67,7 @@
           <Set Language="Xml">
             <PrefixMany Path=".Xml">
               <Tag Value="Release">
-                <New Path="" />
+                <New Path="" Tag="GenerateXmlSnippets" />
                 <Tag Value="ExcludeFromVisualStudioCode">
                   <Tag Value="NoQuickReference">
                     <New Path=".CodeSnippet" />

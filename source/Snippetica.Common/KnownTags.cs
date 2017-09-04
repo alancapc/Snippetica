@@ -34,6 +34,7 @@ namespace Snippetica
         public const string ExcludeFromVisualStudioCode = nameof(ExcludeFromVisualStudioCode);
         public const string NoQuickReference = nameof(NoQuickReference);
         public const string ExcludeFromSnippetBrowser = nameof(ExcludeFromSnippetBrowser);
+        public const string GenerateXmlSnippets = "GenerateXmlSnippets";
 
         public const string MetaPrefix = "Meta-";
         public const string MetaTagPrefix = MetaPrefix + Tag + " ";

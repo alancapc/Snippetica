@@ -63,13 +63,9 @@
       <Project>{3011fad5-89c1-4db8-ba47-239023af4cf3}</Project>
       <Name>Snippetica.CodeGeneration.Markdown</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Snippetica.VisualStudio.CodeGeneration\Snippetica.CodeGeneration.VisualStudio.csproj">
-      <Project>{8dcb0266-01bc-4f2f-b99f-b0000a4d8149}</Project>
-      <Name>Snippetica.CodeGeneration.VisualStudio</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Snippetica.VisualStudioCode.CodeGeneration\Snippetica.CodeGeneration.VisualStudioCode.csproj">
-      <Project>{28f57403-5d16-4a70-b4b5-a750d35466a4}</Project>
-      <Name>Snippetica.CodeGeneration.VisualStudioCode</Name>
+    <ProjectReference Include="..\..\Snippetica.CodeGeneration.Package\Snippetica.CodeGeneration.Package.csproj">
+      <Project>{B94C0A26-B8C1-49C7-AA65-251E0C432539}</Project>
+      <Name>Snippetica.CodeGeneration.Package</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Snippetica.Common\Snippetica.Common.csproj">
       <Project>{ea986e08-dd26-43ea-94f0-8d2f70d4a17f}</Project>
@@ -88,7 +84,7 @@
     <Content Include="HtmlElements.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="CharacterSequences.xml">
+    <Content Include="Shortcuts.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="LanguageDefinitions.xml">
