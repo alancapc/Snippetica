@@ -21,7 +21,6 @@
     <None Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic.Dev\package\CHANGELOG.md" />
     <None Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic.Dev\package\README.md" />
     <None Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic.Dev\README.md" />
-    <None Include="$(MSBuildThisFileDirectory)Snippetica.Xml.Dev\package\CHANGELOG.md" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)Snippetica.Cpp.Dev\package\.vscode\launch.json" />
@@ -44,9 +43,5 @@
     <Content Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic.Dev\package\LICENSE.txt" />
     <Content Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic.Dev\package\package.json" />
     <Content Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic.Dev\package\snippets\vb.json" />
-    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Xml.Dev\package\.vscode\launch.json" />
-    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Xml.Dev\package\images\icon.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Xml.Dev\package\LICENSE.txt" />
-    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Xml.Dev\package\snippets\xml.json" />
   </ItemGroup>
 </Project>
