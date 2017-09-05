@@ -71,9 +71,7 @@ frame|frame
 frameset|frameset
 h1|h
 h2|h2
-h2 \_|hh
 h3|h3
-h3 \_|hhh
 h4|h4
 h5|h5
 h6|h6

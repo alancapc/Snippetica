@@ -9,9 +9,44 @@
     <Import_RootNamespace>Snippetica.VisualStudioCode.Dev</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)Snippetica.CSharp\package\snippets\csharp.json" />
-    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Html\package\snippets\html.json" />
-    <Content Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic\package\snippets\vb.json" />
-    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Xml\package\snippets\xml.json" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.Cpp.Dev\package\CHANGELOG.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.Cpp.Dev\package\README.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.Cpp.Dev\README.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.CSharp.Dev\package\CHANGELOG.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.CSharp.Dev\package\README.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.CSharp.Dev\README.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.Html.Dev\package\CHANGELOG.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.Html.Dev\package\README.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.Html.Dev\README.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic.Dev\package\CHANGELOG.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic.Dev\package\README.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic.Dev\README.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.Xml.Dev\package\CHANGELOG.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Cpp.Dev\package\.vscode\launch.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Cpp.Dev\package\images\icon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Cpp.Dev\package\LICENSE.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Cpp.Dev\package\package.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Cpp.Dev\package\snippets\cpp.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.CSharp.Dev\package\.vscode\launch.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.CSharp.Dev\package\images\icon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.CSharp.Dev\package\LICENSE.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.CSharp.Dev\package\package.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.CSharp.Dev\package\snippets\csharp.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Html.Dev\package\.vscode\launch.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Html.Dev\package\images\icon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Html.Dev\package\LICENSE.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Html.Dev\package\package.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Html.Dev\package\snippets\html.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic.Dev\package\.vscode\launch.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic.Dev\package\images\icon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic.Dev\package\LICENSE.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic.Dev\package\package.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic.Dev\package\snippets\vb.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Xml.Dev\package\.vscode\launch.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Xml.Dev\package\images\icon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Xml.Dev\package\LICENSE.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Xml.Dev\package\snippets\xml.json" />
   </ItemGroup>
 </Project>

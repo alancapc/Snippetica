@@ -1,4 +1,4 @@
-﻿## Snippetica.Xaml
+## Snippetica.Xaml
 
 ### Snippet Browser
 

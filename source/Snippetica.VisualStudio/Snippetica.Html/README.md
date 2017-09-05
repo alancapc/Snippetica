@@ -1,4 +1,4 @@
-﻿## Snippetica.Html
+## Snippetica.Html
 
 ### Snippet Browser
 
@@ -72,9 +72,7 @@ Title | Shortcut
 [frame](frame.snippet)|frame
 [frameset](frameset.snippet)|frameset
 [h1](h1.snippet)|h
-[h2 \_](h2_.snippet)|hh
 [h2](h2.snippet)|h2
-[h3 \_](h3_.snippet)|hhh
 [h3](h3.snippet)|h3
 [h4](h4.snippet)|h4
 [h5](h5.snippet)|h5

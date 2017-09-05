@@ -1,4 +1,11 @@
 ﻿{
+  "CDATA section": {
+    "prefix": "cdata",
+    "body": [
+      "<![CDATA[${0}${1:]]>}"
+    ],
+    "description": "CDATA section"
+  },
   "comment": {
     "prefix": "c",
     "body": [
@@ -20,19 +27,19 @@
     ],
     "description": "element (with attribute)"
   },
-  "element (with content)": {
-    "prefix": "ex",
-    "body": [
-      "<${1:x}>${2:content}</${1}>${0}"
-    ],
-    "description": "element (with content)"
-  },
   "element (with attribute, with content)": {
     "prefix": "eax",
     "body": [
       "<${1:x} ${2:attribute=\"\"}>${3:content}</${1}>${0}"
     ],
     "description": "element (with attribute, with content)"
+  },
+  "element (with content)": {
+    "prefix": "ex",
+    "body": [
+      "<${1:x}>${2:content}</${1}>${0}"
+    ],
+    "description": "element (with content)"
   },
   "self-closing element": {
     "prefix": "es",
@@ -47,12 +54,5 @@
       "<${1:x} ${2:attribute=\"\"} />${0}"
     ],
     "description": "self-closing element (with attribute)"
-  },
-  "CDATA section": {
-    "prefix": "cdata",
-    "body": [
-      "<![CDATA[${0}${1:]]>}"
-    ],
-    "description": "CDATA section"
   }
 }

@@ -1,30 +1,56 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Pihrtsoft.Snippets;
-using Snippetica.IO;
 
 namespace Snippetica.CodeGeneration
 {
     public class SnippetGeneratorResult
     {
-        public static SnippetGeneratorResult Empty { get; } = new SnippetGeneratorResult(new Snippet[0], "");
-
-    public SnippetGeneratorResult(IEnumerable<Snippet> snippets, string destinationDirectoryPath)
+        public SnippetGeneratorResult(
+            List<Snippet> snippets,
+            string name,
+            Language language,
+            bool isDevelopment = false,
+            params string[] tags)
         {
-            Snippets = snippets;
-            DestinationDirectoryPath = destinationDirectoryPath;
+            Snippets.AddRange(snippets);
+            Path = name;
+            Language = language;
+            IsDevelopment = isDevelopment;
+
+            if (tags != null)
+                Tags.AddRange(tags);
         }
 
-        public IEnumerable<Snippet> Snippets { get; }
+        public List<Snippet> Snippets { get; } = new List<Snippet>();
 
-        public string DestinationDirectoryPath { get; }
+        public string Path { get; set; }
 
-        public void Save()
+        public bool IsDevelopment { get; set; }
+
+        public Language Language { get; set; }
+
+        public List<string> Tags { get; } = new List<string>();
+
+        public bool HasTag(string tag)
         {
-            if (!string.IsNullOrEmpty(DestinationDirectoryPath))
-                IOUtility.SaveSnippets(Snippets.ToArray(), DestinationDirectoryPath);
+            return Tags.Any(f => f.Equals(tag, StringComparison.Ordinal));
+        }
+
+        public string DirectoryName
+        {
+            get
+            {
+                string name = System.IO.Path.GetFileName(Path);
+
+                if (!string.IsNullOrEmpty(name))
+                    return name;
+
+                return Path;
+            }
         }
     }
 }

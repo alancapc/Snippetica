@@ -1,4 +1,4 @@
-﻿## Snippetica.CSharp.Dev
+## Snippetica.CSharp.Dev
 
 ### List of Selected Snippets
 
@@ -9,7 +9,6 @@ Title | Shortcut
 [array type](ArrayOfTType.snippet)|a
 [Assembly attribute](AssemblyAttribute.snippet)|ae
 [break statement](BreakStatement.snippet)|bk
-[c Enumerable\.Cast](EnumerableCast.snippet)|q
 [Conditional attribute](ConditionalAttribute.snippet)|ae
 [continue statement](ContinueStatement.snippet)|ce
 [Debug\.Assert \!= null](DebugAssertNotNull.snippet)|dann
@@ -27,8 +26,30 @@ Title | Shortcut
 [Directory\.Move](DirectoryMove.snippet)|iod
 [do while not null](DoNotNull.snippet)|donn
 [do while null](DoNull.snippet)|don
-[e Enumerable\.Empty](EnumerableEmpty.snippet)|q
-[f Enumerable\.First](EnumerableFirst.snippet)|q
+[Enumerable\.Cast](EnumerableCast.snippet)|q
+[Enumerable\.Empty](EnumerableEmpty.snippet)|q
+[Enumerable\.First](EnumerableFirst.snippet)|q
+[Enumerable\.FirstOrDefault](EnumerableFirstOrDefault.snippet)|q
+[Enumerable\.GroupBy](EnumerableGroupBy.snippet)|q
+[Enumerable\.GroupJoin](EnumerableGroupJoin.snippet)|q
+[Enumerable\.Join](EnumerableJoin.snippet)|q
+[Enumerable\.Last](EnumerableLast.snippet)|q
+[Enumerable\.LastOrDefault](EnumerableLastOrDefault.snippet)|q
+[Enumerable\.Max](EnumerableMax.snippet)|q
+[Enumerable\.Min](EnumerableMin.snippet)|q
+[Enumerable\.OfType](EnumerableOfType.snippet)|q
+[Enumerable\.OrderBy](EnumerableOrderBy.snippet)|q
+[Enumerable\.OrderByDescending](EnumerableOrderByDescending.snippet)|q
+[Enumerable\.Select](EnumerableSelect.snippet)|q
+[Enumerable\.SelectMany](EnumerableSelectMany.snippet)|q
+[Enumerable\.SingleOrDefault](EnumerableSingleOrDefault.snippet)|q
+[Enumerable\.SkipWhile](EnumerableSkipWhile.snippet)|q
+[Enumerable\.TakeWhile](EnumerableTakeWhile.snippet)|q
+[Enumerable\.ThenBy](EnumerableThenBy.snippet)|q
+[Enumerable\.ThenByDescending](EnumerableThenByDescending.snippet)|q
+[Enumerable\.Where not equal to null](EnumerableWhereNotNull.snippet)|q
+[Enumerable\.Where](EnumerableWhere.snippet)|q
+[Enumerable\.Zip](EnumerableZip.snippet)|q
 [File Exists](FileExists.snippet)|iof
 [File\.Copy](FileCopy.snippet)|iof
 [File\.Delete](FileDelete.snippet)|iof
@@ -40,9 +61,6 @@ Title | Shortcut
 [File\.WriteAllText](FileWriteAllText.snippet)|iof
 [FileStream Variable](FileStreamVariable.snippet)|u
 [Flags attribute](FlagsAttribute.snippet)|ae
-[fod Enumerable\.FirstOrDefault](EnumerableFirstOrDefault.snippet)|q
-[gb Enumerable\.GroupBy](EnumerableGroupBy.snippet)|q
-[gj Enumerable\.GroupJoin](EnumerableGroupJoin.snippet)|q
 [HashSet&lt;T&gt; type](HashSetOfTType.snippet)|ghs
 [HashSet&lt;T&gt; variable](HashSetOfTVariable.snippet)|vhs
 [if \!string\.IsNullOrEmpty](IfNotStringIsNullOrEmpty.snippet)|iffsne
@@ -55,23 +73,15 @@ Title | Shortcut
 [internal modifier](InternalModifier.snippet)|x
 [internal static modifiers](InternalStaticModifiers.snippet)|x
 [internal virtual modifiers](InternalVirtualModifiers.snippet)|x
-[j Enumerable\.Join](EnumerableJoin.snippet)|q
-[l Enumerable\.Last](EnumerableLast.snippet)|q
 [lambda expression with 2 parameters](LambdaExpressionWithTwoParameters.snippet)|l2
 [List&lt;T&gt; type](ListOfTType.snippet)|gl
 [List&lt;T&gt; variable](ListOfTVariable.snippet)|vl
-[lod Enumerable\.LastOrDefault](EnumerableLastOrDefault.snippet)|q
 [MemoryStream Variable](MemoryStreamVariable.snippet)|u
-[mn Enumerable\.Min](EnumerableMin.snippet)|q
-[mx Enumerable\.Max](EnumerableMax.snippet)|q
 [namespace](Namespace.snippet)|ns
 [new array ](NewArrayOfT.snippet)|na
-[ob Enumerable\.OrderBy](EnumerableOrderBy.snippet)|q
-[obd Enumerable\.OrderByDescending](EnumerableOrderByDescending.snippet)|q
 [ObservableCollection&lt;T&gt; type](ObservableCollectionOfTType.snippet)|goc
 [ObservableCollection&lt;T&gt; variable](ObservableCollectionOfTVariable.snippet)|voc
 [Obsolete attribute](ObsoleteAttribute.snippet)|ae
-[ot Enumerable\.OfType](EnumerableOfType.snippet)|q
 [override modifier](OverrideModifier.snippet)|oe
 [Path\.Combine](PathCombine.snippet)|iop
 [Path\.GetDirectoryName](PathGetDirectoryName.snippet)|iop
@@ -95,21 +105,11 @@ Title | Shortcut
 [return new containing type](ReturnNewThis.snippet)|rnthis
 [return new](ReturnNew.snippet)|rn
 [return statement](ReturnStatement.snippet)|re
-[s Enumerable\.Select](EnumerableSelect.snippet)|q
-[sm Enumerable\.SelectMany](EnumerableSelectMany.snippet)|q
-[sod Enumerable\.SingleOrDefault](EnumerableSingleOrDefault.snippet)|q
 [StringBuilder variable](StringBuilderVariable.snippet)|vsb
-[sw Enumerable\.SkipWhile](EnumerableSkipWhile.snippet)|q
-[tb Enumerable\.ThenBy](EnumerableThenBy.snippet)|q
-[tbd Enumerable\.ThenByDescending](EnumerableThenByDescending.snippet)|q
 [throw statement](ThrowStatement.snippet)|tw
 [TimeSpan type](TimeSpanType.snippet)|ts
-[tw Enumerable\.TakeWhile](EnumerableTakeWhile.snippet)|q
 [variable declaration with as operator \+ if not null](VariableAsTIfNotNull.snippet)|vasnn
-[w Enumerable\.Where](EnumerableWhere.snippet)|q
 [while not null](WhileNotNull.snippet)|wenn
 [while null](WhileNull.snippet)|wen
-[wnn Enumerable\.Where not equal to null](EnumerableWhereNotNull.snippet)|q
 [yield return new containing type](YieldReturnNewThis.snippet)|yrnthis
 [yield return new](YieldReturnNew.snippet)|yrn
-[z Enumerable\.Zip](EnumerableZip.snippet)|q

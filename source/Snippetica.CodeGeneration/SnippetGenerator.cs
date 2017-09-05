@@ -1,112 +1,55 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using Pihrtsoft.Snippets;
-using Snippetica.CodeGeneration.Commands;
 
 namespace Snippetica.CodeGeneration
 {
-    public class SnippetGenerator
+    public abstract class SnippetGenerator
     {
-        public SnippetGenerator(LanguageDefinition languageDefinition)
+        public IEnumerable<Snippet> GenerateSnippets(string sourceDirectoryPath, SearchOption searchOption = SearchOption.AllDirectories)
         {
-            LanguageDefinition = languageDefinition;
-        }
-
-        public LanguageDefinition LanguageDefinition { get; }
-
-        public static IEnumerable<SnippetGeneratorResult> GetResults(SnippetDirectory[] snippetDirectories, SnippetGenerator[] snippetGenerators)
-        {
-            foreach (SnippetGeneratorInfo info in SnippetGeneratorInfo.CreateMany(snippetDirectories, snippetGenerators))
-            {
-                IEnumerable<Snippet> snippets = SnippetSerializer.Deserialize(info.SourcePath, SearchOption.AllDirectories)
-                    .SelectMany(info.Generator.GenerateSnippets);
-
-                yield return new SnippetGeneratorResult(snippets, info.DestinationPath);
-            }
+            return SnippetSerializer.Deserialize(sourceDirectoryPath, searchOption)
+                .SelectMany(snippet => GenerateSnippets(snippet));
         }
 
         public IEnumerable<Snippet> GenerateSnippets(Snippet snippet)
         {
-            var jobs = new JobCollection();
-
-            jobs.AddCommands(GetTypeCommands(snippet));
-
-            if (snippet.HasTag(KnownTags.GenerateCollection))
-                jobs.AddCommands(GetNonImmutableCollectionCommands(snippet));
-
-            if (snippet.HasTag(KnownTags.GenerateImmutableCollection))
-                jobs.AddCommands(GetImmutableCollectionCommands(snippet));
-
-            jobs.AddCommands(GetAccessModifierCommands(snippet));
-
-            if (snippet.HasTag(KnownTags.GenerateStaticModifier))
-                jobs.AddCommand(CommandUtility.StaticCommand);
-
-            if (snippet.HasTag(KnownTags.GenerateVirtualModifier))
-                jobs.AddCommand(CommandUtility.VirtualCommand);
-
-            if (snippet.HasTag(KnownTags.GenerateInitializer))
-                jobs.AddCommand(CommandUtility.InitializerCommand);
-
-            if (snippet.HasTag(KnownTags.GenerateParameters))
-                jobs.AddCommand(CommandUtility.ParametersCommand);
-
-            if (snippet.HasTag(KnownTags.GenerateArguments))
-                jobs.AddCommand(CommandUtility.ArgumentsCommand);
-
-            if (snippet.HasTag(KnownTags.GenerateUnchanged))
-                jobs.Add(new Job());
-
-            foreach (Job job in jobs)
+            foreach (Job job in CreateJobs(snippet))
             {
-                var context = new LanguageExecutionContext((Snippet)snippet.Clone(), LanguageDefinition);
+                ExecutionContext context = CreateExecutionContext(snippet);
 
                 job.Execute(context);
 
                 if (!context.IsCanceled)
                 {
-                    foreach (Snippet snippet2 in context.Snippets)
-                    {
-                        PostProcess(snippet2);
-                        yield return snippet2;
-                    }
+                    Collection<Snippet> snippets = context.Snippets;
+
+                    for (int i = 0; i < snippets.Count; i++)
+                        yield return PostProcess(snippets[i]);
                 }
             }
         }
 
-        protected virtual IEnumerable<Command> GetTypeCommands(Snippet snippet)
+        protected virtual ExecutionContext CreateExecutionContext(Snippet snippet)
         {
-            return CommandUtility.GetTypeCommands(snippet, LanguageDefinition);
+            return new ExecutionContext((Snippet)snippet.Clone());
         }
 
-        protected virtual IEnumerable<Command> GetNonImmutableCollectionCommands(Snippet snippet)
+        protected abstract JobCollection CreateJobs(Snippet snippet);
+
+        protected virtual Snippet PostProcess(Snippet snippet)
         {
-            return CommandUtility.GetNonImmutableCollectionCommands(LanguageDefinition);
-        }
-
-        protected virtual IEnumerable<Command> GetImmutableCollectionCommands(Snippet snippet)
-        {
-            return CommandUtility.GetImmutableCollectionCommands(LanguageDefinition);
-        }
-
-        protected virtual IEnumerable<Command> GetAccessModifierCommands(Snippet snippet)
-        {
-            return CommandUtility.GetAccessModifierCommands(snippet, LanguageDefinition);
-        }
-
-        protected virtual void PostProcess(Snippet snippet)
-        {
-            ReplacePlaceholders(snippet);
-
-            if (snippet.Language == Language.VisualBasic)
-                snippet.ReplaceSubOrFunctionLiteral("Function");
-
             RemoveUnusedLiterals(snippet);
 
-            RemoveKeywords(snippet);
+            if (snippet.HasTag(KnownTags.NonUniqueTitle))
+            {
+                snippet.Title += " _";
+                snippet.RemoveTag(KnownTags.NonUniqueTitle);
+            }
 
             snippet.AddTag(KnownTags.AutoGenerated);
 
@@ -116,40 +59,8 @@ namespace Snippetica.CodeGeneration
 
             if (snippet.SnippetTypes == SnippetTypes.None)
                 snippet.SnippetTypes = SnippetTypes.Expansion;
-        }
 
-        private void ReplacePlaceholders(Snippet snippet)
-        {
-            snippet.Title = snippet.Title
-                .ReplacePlaceholder(Placeholders.Type, " ", true)
-                .ReplacePlaceholder(Placeholders.OfType, " ", true)
-                .ReplacePlaceholder(Placeholders.GenericType, LanguageDefinition.GetTypeParameterList("T"));
-
-            snippet.Description = snippet.Description
-                .ReplacePlaceholder(Placeholders.Type, " ", true)
-                .ReplacePlaceholder(Placeholders.OfType, " ", true)
-                .ReplacePlaceholder(Placeholders.GenericType, LanguageDefinition.GetTypeParameterList("T"));
-        }
-
-        private void RemoveKeywords(Snippet snippet)
-        {
-            snippet.RemoveTags(LanguageDefinition.Types.Select(f => KnownTags.GenerateTypeTag(f.Name)));
-            snippet.RemoveTags(LanguageDefinition.Modifiers.Select(f => KnownTags.GenerateModifierTag(f.Name)));
-
-            snippet.RemoveTags(
-                KnownTags.GenerateType,
-                KnownTags.GenerateAccessModifier,
-                KnownTags.GenerateInitializer,
-                KnownTags.GenerateUnchanged,
-                KnownTags.GenerateParameters,
-                KnownTags.GenerateArguments,
-                KnownTags.GenerateCollection,
-                KnownTags.GenerateImmutableCollection,
-                KnownTags.Array,
-                KnownTags.Collection,
-                KnownTags.Dictionary,
-                KnownTags.TryParse,
-                KnownTags.Initializer);
+            return snippet;
         }
 
         private static void RemoveUnusedLiterals(Snippet snippet)
@@ -163,6 +74,34 @@ namespace Snippetica.CodeGeneration
                 {
                     snippet.RemoveLiteralAndPlaceholders(literal);
                 }
+            }
+        }
+
+        public static IEnumerable<Snippet> GenerateAlternativeShortcuts(List<Snippet> snippets)
+        {
+            int count = snippets.Count;
+
+            for (int i = 0; i < count; i++)
+            {
+                MetaValueInfo info = snippets[i].FindMetaValue(KnownTags.AlternativeShortcut);
+
+                if (info.Success)
+                {
+                    snippets[i].Keywords.RemoveAt(info.KeywordIndex);
+
+                    yield return GenerateSnippet(snippets[i], info.Value);
+                }
+            }
+
+            Snippet GenerateSnippet(Snippet snippet, string shortcut)
+            {
+                snippet = (Snippet)snippet.Clone();
+
+                snippet.Shortcut = shortcut;
+                snippet.SuffixTitle(" _");
+                snippet.SuffixFileName("_");
+
+                return snippet;
             }
         }
     }

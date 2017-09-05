@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System.IO;
-using Pihrtsoft.Snippets;
 using static Snippetica.KnownNames;
 
 namespace Snippetica
@@ -36,16 +35,6 @@ namespace Snippetica
         public static string VisualStudioCodeExtensionGitHubUrl
         {
             get { return $"{SourceGitHubUrl}/{VisualStudioCodeExtensionProjectName}"; }
-        }
-
-        public static string GetSnippetBrowserUrl(Engine engine, Language language = Language.None)
-        {
-            string s = $"?engine={engine.GetIdentifier()}";
-
-            if (language != Language.None)
-                s += $"&language={language.GetIdentifier()}";
-
-            return SnippetBrowserUrl + s;
         }
     }
 }

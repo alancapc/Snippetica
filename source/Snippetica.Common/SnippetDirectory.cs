@@ -37,14 +37,9 @@ namespace Snippetica
 
         public ReadOnlyCollection<string> Tags { get; }
 
-        public string DirectoryName
+        public string Name
         {
             get { return System.IO.Path.GetFileName(Path); }
-        }
-
-        public string LanguageTitle
-        {
-            get { return Language.GetTitle(); }
         }
 
         public SnippetDirectory WithPath(string path)
@@ -84,63 +79,9 @@ namespace Snippetica
             get { return string.Join(", ", Tags); }
         }
 
-        public static IEnumerable<SnippetDirectory> LoadFromFile(string url)
-        {
-            return Document.ReadRecords(url)
-                .Where(f => !f.HasTag(KnownTags.Disabled))
-                .Select(SnippetDirectoryMapper.MapFromRecord);
-        }
-
         public IEnumerable<Snippet> EnumerateSnippets(SearchOption searchOption = SearchOption.AllDirectories)
         {
             return SnippetSerializer.Deserialize(Path, searchOption);
-        }
-
-        public bool IsRelease
-        {
-            get { return HasTag(KnownTags.Release); }
-        }
-
-        public bool IsDev
-        {
-            get { return HasTag(KnownTags.Dev); }
-        }
-
-        public bool IsAutoGeneration
-        {
-            get { return HasAnyTag(KnownTags.AutoGenerationSource, KnownTags.AutoGenerationDestination); }
-        }
-
-        public bool IsAutoGenerationSource
-        {
-            get { return HasTag(KnownTags.AutoGenerationSource); }
-        }
-
-        public bool IsAutoGenerationDestination
-        {
-            get { return HasTag(KnownTags.AutoGenerationDestination); }
-        }
-
-        public static string GetProjectSubtitle(SnippetDirectory[] snippetDirectories)
-        {
-            return $"A collection of snippets for {GetLanguagesSeparatedWithComma(snippetDirectories)}.";
-        }
-
-        private static string GetLanguagesSeparatedWithComma(SnippetDirectory[] snippetDirectories)
-        {
-            string[] languages = snippetDirectories
-                .GroupBy(f => f.LanguageTitle)
-                .Select(f => f.Key)
-                .ToArray();
-
-            for (int i = 1; i < languages.Length - 1; i++)
-            {
-                languages[i] = ", " + languages[i];
-            }
-
-            languages[languages.Length - 1] = " and " + languages[languages.Length - 1];
-
-            return string.Concat(languages);
         }
     }
 }

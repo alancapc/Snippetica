@@ -1,4 +1,4 @@
-﻿## Snippetica.Xaml.Dev
+## Snippetica.Xaml.Dev
 
 ### List of Selected Snippets
 

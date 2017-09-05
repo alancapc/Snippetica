@@ -54,6 +54,7 @@ namespace Snippetica.Validations
             }
 
             Match match = RegexHelper.InvalidLeadingSpaces.Match(context.Snippet.CodeText);
+
             if (match.Success)
             {
                 Console.WriteLine(match.Value);

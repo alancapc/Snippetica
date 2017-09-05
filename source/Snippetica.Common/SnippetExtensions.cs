@@ -10,7 +10,9 @@ namespace Snippetica
 {
     public static class SnippetExtensions
     {
-        public static string GetSubmenuShortcut(this Snippet snippet)
+        private static readonly int _metaPrefixLength = KnownTags.MetaPrefix.Length;
+
+        public static string GetShortcutFromTitle(this Snippet snippet)
         {
             if (snippet.HasTag(KnownTags.TitleStartsWithShortcut))
             {
@@ -84,11 +86,14 @@ namespace Snippetica
             return Path.GetFileNameWithoutExtension(snippet.FilePath);
         }
 
-        public static void SortCollections(this Snippet snippet)
+        public static Snippet SortCollections(this Snippet snippet)
         {
+            snippet.AlternativeShortcuts.Sort();
             snippet.Literals.Sort();
             snippet.Keywords.Sort();
             snippet.Namespaces.Sort();
+
+            return snippet;
         }
 
         public static void AddTag(this Snippet snippet, string tag)
@@ -110,15 +115,10 @@ namespace Snippetica
 
         public static Snippet RemoveTag(this Snippet snippet, string tag)
         {
-            string tagWithPrefix = KnownTags.MetaTagPrefix + tag;
+            MetaValueInfo info = FindMetaValue(snippet, KnownTags.Tag, tag);
 
-            if (!RemoveKeyword(snippet, tagWithPrefix))
-            {
-                string keyword = snippet.Keywords.FirstOrDefault(f => f.StartsWith(tagWithPrefix + " ", StringComparison.Ordinal));
-
-                if (keyword != null)
-                    snippet.RemoveKeyword(keyword);
-            }
+            if (info.Success)
+                snippet.Keywords.RemoveAt(info.KeywordIndex);
 
             return snippet;
         }
@@ -141,44 +141,62 @@ namespace Snippetica
 
         public static bool HasTag(this Snippet snippet, string tag)
         {
-            foreach (string keyword in snippet.Keywords)
-            {
-                if (keyword.StartsWith(KnownTags.MetaTagPrefix))
-                {
-                    int i = KnownTags.MetaTagPrefix.Length;
-                    while (i < keyword.Length
-                        && char.IsWhiteSpace(keyword[i]))
-                    {
-                        i++;
-                    }
-
-                    if (string.Equals(keyword.Substring(i, Math.Min(keyword.Length - i, tag.Length)), tag, StringComparison.Ordinal))
-                        return true;
-                }
-            }
-
-            return false;
+            return FindMetaValue(snippet, KnownTags.Tag, tag).Success;
         }
 
-        public static string GetTagValueOrDefault(this Snippet snippet, string tag)
+        public static MetaValueInfo FindMetaValue(this Snippet snippet, string name, string value = null)
         {
-            foreach (string keyword in snippet.Keywords)
-            {
-                if (keyword.StartsWith(KnownTags.MetaTagPrefix))
-                {
-                    int i = KnownTags.MetaTagPrefix.Length;
-                    while (i < keyword.Length
-                        && char.IsWhiteSpace(keyword[i]))
-                    {
-                        i++;
-                    }
+            if (string.IsNullOrEmpty(name))
+                return MetaValueInfo.Default;
 
-                    if (string.Equals(keyword.Substring(i, Math.Min(keyword.Length - i, tag.Length)), tag, StringComparison.Ordinal))
-                        return keyword.Substring(i + tag.Length).Trim();
+            KeywordCollection keywords = snippet.Keywords;
+
+            for (int i = 0; i < keywords.Count; i++)
+            {
+                string keyword = keywords[i];
+
+                if (!keyword.StartsWith(KnownTags.MetaPrefix, StringComparison.Ordinal))
+                    continue;
+
+                int length = name.Length;
+
+                if (keyword.Length < _metaPrefixLength + length)
+                    continue;
+
+                if (string.Compare(keyword, _metaPrefixLength, name, 0, length, StringComparison.Ordinal) != 0)
+                    continue;
+
+                int start = _metaPrefixLength + length;
+
+                while (start < keyword.Length
+                    && char.IsWhiteSpace(keyword[start]))
+                {
+                    start++;
+                }
+
+                int end = start;
+
+                while (end < keyword.Length
+                    && !char.IsWhiteSpace(keyword[end]))
+                {
+                    end++;
+                }
+
+                if (start == end)
+                    continue;
+
+                if (value == null)
+                {
+                    return new MetaValueInfo(name, keyword.Substring(start, end - start), i);
+                }
+
+                if (string.Compare(keyword, start, value, 0, end - start, StringComparison.Ordinal) == 0)
+                {
+                    return new MetaValueInfo(name, value, i);
                 }
             }
 
-            return null;
+            return MetaValueInfo.Default;
         }
 
         public static void AddNamespace(this Snippet snippet, string @namespace)

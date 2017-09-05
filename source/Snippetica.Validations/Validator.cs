@@ -5,19 +5,14 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Pihrtsoft.Snippets;
-using Pihrtsoft.Snippets.Comparers;
 using Pihrtsoft.Snippets.Validations;
-using Snippetica.IO;
 
 namespace Snippetica.Validations
 {
     public static class Validator
     {
-        private static readonly SnippetDeepEqualityComparer _snippetEqualityComparer = new SnippetDeepEqualityComparer();
-
         public static void ValidateSnippets(SnippetDirectory snippetDirectory)
         {
-            Console.WriteLine();
             Console.WriteLine($"validating snippets in '{snippetDirectory.Path}' ...");
 
             CheckDuplicateShortcuts(snippetDirectory);
@@ -30,7 +25,6 @@ namespace Snippetica.Validations
             foreach (IGrouping<Language, SnippetDirectory> grouping in snippetDirectories
                 .GroupBy(f => f.Language))
             {
-                Console.WriteLine();
                 Console.WriteLine($"validating snippets with language '{grouping.Key}' ...");
 
                 SnippetDirectory[] directories = grouping.ToArray();
@@ -62,7 +56,6 @@ namespace Snippetica.Validations
 
         public static void ValidateSnippets(List<Snippet> snippets)
         {
-            Console.WriteLine();
             Console.WriteLine($"number of snippets: {snippets.Count}");
 
             foreach (SnippetValidationResult result in Validate(snippets))
@@ -79,9 +72,6 @@ namespace Snippetica.Validations
                 Console.WriteLine();
                 Console.WriteLine($"UNUSED TAG {KnownTags.NonUniqueShortcut} in \"{snippet.First().FilePath}\"");
             }
-
-            foreach (Snippet snippet in snippets.Select(CloneAndSortCollections))
-                IOUtility.SaveSnippet(snippet);
         }
 
         public static void CheckDuplicateShortcuts(SnippetDirectory snippetDirectory)
@@ -135,28 +125,6 @@ namespace Snippetica.Validations
                 foreach (SnippetValidationResult result in validator.Validate(snippet))
                     yield return result;
             }
-        }
-
-        private static Snippet CloneAndSortCollections(Snippet snippet)
-        {
-            var clone = (Snippet)snippet.Clone();
-
-            clone.Literals.Sort();
-            clone.Keywords.Sort();
-            clone.Namespaces.Sort();
-            clone.AlternativeShortcuts.Sort();
-
-            return clone;
-        }
-
-        private static Snippet GetChangedSnippetOrDefault(Snippet snippet)
-        {
-            Snippet snippet2 = CloneAndSortCollections(snippet);
-
-            if (!_snippetEqualityComparer.Equals(snippet, snippet2))
-                return snippet2;
-
-            return null;
         }
 
         public static void ThrowOnDuplicateFileName(IEnumerable<Snippet> snippets)

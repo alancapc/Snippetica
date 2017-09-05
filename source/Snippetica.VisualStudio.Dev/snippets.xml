@@ -11,7 +11,7 @@
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:class_with_inline_constructor_destructor</Keyword>
+        <Keyword>Meta-Name class_with_inline_constructor_destructor</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -48,8 +48,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ArrayOfTType</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:a</Keyword>
+        <Keyword>Meta-Name ArrayOfTType</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -73,8 +73,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:AssemblyAttribute</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:ay</Keyword>
+        <Keyword>Meta-Name AssemblyAttribute</Keyword>
+        <Keyword>Meta-SubmenuShortcut ay</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -98,7 +98,7 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:BreakStatement</Keyword>
+        <Keyword>Meta-Name BreakStatement</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -115,8 +115,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ConditionalAttribute</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:cl</Keyword>
+        <Keyword>Meta-Name ConditionalAttribute</Keyword>
+        <Keyword>Meta-SubmenuShortcut cl</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -145,7 +145,7 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ConditionalOperatorEqualToNull</Keyword>
+        <Keyword>Meta-Name ConditionalOperatorEqualToNull</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -179,7 +179,7 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ConditionalOperatorNotEqualToNull</Keyword>
+        <Keyword>Meta-Name ConditionalOperatorNotEqualToNull</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -213,7 +213,7 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ContinueStatement</Keyword>
+        <Keyword>Meta-Name ContinueStatement</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -230,7 +230,7 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:DebugAssertNotNull</Keyword>
+        <Keyword>Meta-Name DebugAssertNotNull</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -264,8 +264,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:DebuggerDisplayAttribute</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:dd</Keyword>
+        <Keyword>Meta-Name DebuggerDisplayAttribute</Keyword>
+        <Keyword>Meta-SubmenuShortcut dd</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -294,8 +294,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:DebuggerStepThroughAttribute</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:dst</Keyword>
+        <Keyword>Meta-Name DebuggerStepThroughAttribute</Keyword>
+        <Keyword>Meta-SubmenuShortcut dst</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -317,7 +317,7 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:DictionaryOfTKeyTValueType</Keyword>
+        <Keyword>Meta-Name DictionaryOfTKeyTValueType</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -351,7 +351,7 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:DictionaryOfTKeyTValueVariable</Keyword>
+        <Keyword>Meta-Name DictionaryOfTKeyTValueVariable</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -390,7 +390,7 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:DictionaryOfTKeyTValueVariableWithInitializer</Keyword>
+        <Keyword>Meta-Name DictionaryOfTKeyTValueVariableWithInitializer</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -433,8 +433,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:DirectoryCreateDirectory</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:cd</Keyword>
+        <Keyword>Meta-Name DirectoryCreateDirectory</Keyword>
+        <Keyword>Meta-SubmenuShortcut cd</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -463,8 +463,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:DirectoryDelete</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:d</Keyword>
+        <Keyword>Meta-Name DirectoryDelete</Keyword>
+        <Keyword>Meta-SubmenuShortcut d</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -497,8 +497,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:DirectoryEnumerateDirectories</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:ed</Keyword>
+        <Keyword>Meta-Name DirectoryEnumerateDirectories</Keyword>
+        <Keyword>Meta-SubmenuShortcut ed</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -537,8 +537,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:DirectoryEnumerateFiles</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:ef</Keyword>
+        <Keyword>Meta-Name DirectoryEnumerateFiles</Keyword>
+        <Keyword>Meta-SubmenuShortcut ef</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -577,8 +577,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:DirectoryExists</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:e</Keyword>
+        <Keyword>Meta-Name DirectoryExists</Keyword>
+        <Keyword>Meta-SubmenuShortcut e</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -607,8 +607,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:DirectoryGetDirectories</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:gd</Keyword>
+        <Keyword>Meta-Name DirectoryGetDirectories</Keyword>
+        <Keyword>Meta-SubmenuShortcut gd</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -647,8 +647,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:DirectoryGetFiles</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:gf</Keyword>
+        <Keyword>Meta-Name DirectoryGetFiles</Keyword>
+        <Keyword>Meta-SubmenuShortcut gf</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -687,8 +687,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:DirectoryMove</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:m</Keyword>
+        <Keyword>Meta-Name DirectoryMove</Keyword>
+        <Keyword>Meta-SubmenuShortcut m</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -722,7 +722,7 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:DoNotNull</Keyword>
+        <Keyword>Meta-Name DoNotNull</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -750,7 +750,7 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:DoNull</Keyword>
+        <Keyword>Meta-Name DoNull</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -770,7 +770,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>c Enumerable.Cast</Title>
+      <Title>Enumerable.Cast</Title>
       <Shortcut>q</Shortcut>
       <Description>Enumerable.Cast method</Description>
       <Author>Josef Pihrt</Author>
@@ -778,7 +778,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:EnumerableCast</Keyword>
+        <Keyword>Meta-Name EnumerableCast</Keyword>
+        <Keyword>Meta-SubmenuShortcut c</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -799,7 +800,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>e Enumerable.Empty</Title>
+      <Title>Enumerable.Empty</Title>
       <Shortcut>q</Shortcut>
       <Description>Enumerable.Empty method</Description>
       <Author>Josef Pihrt</Author>
@@ -807,7 +808,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:EnumerableEmpty</Keyword>
+        <Keyword>Meta-Name EnumerableEmpty</Keyword>
+        <Keyword>Meta-SubmenuShortcut e</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -828,7 +830,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>f Enumerable.First</Title>
+      <Title>Enumerable.First</Title>
       <Shortcut>q</Shortcut>
       <Description>Enumerable.First method</Description>
       <Author>Josef Pihrt</Author>
@@ -836,7 +838,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:EnumerableFirst</Keyword>
+        <Keyword>Meta-Name EnumerableFirst</Keyword>
+        <Keyword>Meta-SubmenuShortcut f</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -861,7 +864,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>fod Enumerable.FirstOrDefault</Title>
+      <Title>Enumerable.FirstOrDefault</Title>
       <Shortcut>q</Shortcut>
       <Description>Enumerable.FirstOrDefault method</Description>
       <Author>Josef Pihrt</Author>
@@ -869,7 +872,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:EnumerableFirstOrDefault</Keyword>
+        <Keyword>Meta-Name EnumerableFirstOrDefault</Keyword>
+        <Keyword>Meta-SubmenuShortcut fod</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -894,7 +898,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>gb Enumerable.GroupBy</Title>
+      <Title>Enumerable.GroupBy</Title>
       <Shortcut>q</Shortcut>
       <Description>Enumerable.GroupBy method</Description>
       <Author>Josef Pihrt</Author>
@@ -902,7 +906,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:EnumerableGroupBy</Keyword>
+        <Keyword>Meta-Name EnumerableGroupBy</Keyword>
+        <Keyword>Meta-SubmenuShortcut gb</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -927,7 +932,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>gj Enumerable.GroupJoin</Title>
+      <Title>Enumerable.GroupJoin</Title>
       <Shortcut>q</Shortcut>
       <Description>Enumerable.GroupJoin method</Description>
       <Author>Josef Pihrt</Author>
@@ -935,7 +940,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:EnumerableGroupJoin</Keyword>
+        <Keyword>Meta-Name EnumerableGroupJoin</Keyword>
+        <Keyword>Meta-SubmenuShortcut gj</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -979,7 +985,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>j Enumerable.Join</Title>
+      <Title>Enumerable.Join</Title>
       <Shortcut>q</Shortcut>
       <Description>Enumerable.Join method</Description>
       <Author>Josef Pihrt</Author>
@@ -987,7 +993,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:EnumerableJoin</Keyword>
+        <Keyword>Meta-Name EnumerableJoin</Keyword>
+        <Keyword>Meta-SubmenuShortcut j</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1031,7 +1038,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>l Enumerable.Last</Title>
+      <Title>Enumerable.Last</Title>
       <Shortcut>q</Shortcut>
       <Description>Enumerable.Last method</Description>
       <Author>Josef Pihrt</Author>
@@ -1039,7 +1046,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:EnumerableLast</Keyword>
+        <Keyword>Meta-Name EnumerableLast</Keyword>
+        <Keyword>Meta-SubmenuShortcut l</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1064,7 +1072,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>lod Enumerable.LastOrDefault</Title>
+      <Title>Enumerable.LastOrDefault</Title>
       <Shortcut>q</Shortcut>
       <Description>Enumerable.LastOrDefault method</Description>
       <Author>Josef Pihrt</Author>
@@ -1072,7 +1080,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:EnumerableLastOrDefault</Keyword>
+        <Keyword>Meta-Name EnumerableLastOrDefault</Keyword>
+        <Keyword>Meta-SubmenuShortcut lod</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1097,7 +1106,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>mx Enumerable.Max</Title>
+      <Title>Enumerable.Max</Title>
       <Shortcut>q</Shortcut>
       <Description>Enumerable.Max method</Description>
       <Author>Josef Pihrt</Author>
@@ -1105,7 +1114,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:EnumerableMax</Keyword>
+        <Keyword>Meta-Name EnumerableMax</Keyword>
+        <Keyword>Meta-SubmenuShortcut mx</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1130,7 +1140,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>mn Enumerable.Min</Title>
+      <Title>Enumerable.Min</Title>
       <Shortcut>q</Shortcut>
       <Description>Enumerable.Min method</Description>
       <Author>Josef Pihrt</Author>
@@ -1138,7 +1148,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:EnumerableMin</Keyword>
+        <Keyword>Meta-Name EnumerableMin</Keyword>
+        <Keyword>Meta-SubmenuShortcut mn</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1163,7 +1174,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>ot Enumerable.OfType</Title>
+      <Title>Enumerable.OfType</Title>
       <Shortcut>q</Shortcut>
       <Description>Enumerable.OfType method</Description>
       <Author>Josef Pihrt</Author>
@@ -1171,7 +1182,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:EnumerableOfType</Keyword>
+        <Keyword>Meta-Name EnumerableOfType</Keyword>
+        <Keyword>Meta-SubmenuShortcut ot</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1192,7 +1204,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>ob Enumerable.OrderBy</Title>
+      <Title>Enumerable.OrderBy</Title>
       <Shortcut>q</Shortcut>
       <Description>Enumerable.OrderBy method</Description>
       <Author>Josef Pihrt</Author>
@@ -1200,7 +1212,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:EnumerableOrderBy</Keyword>
+        <Keyword>Meta-Name EnumerableOrderBy</Keyword>
+        <Keyword>Meta-SubmenuShortcut ob</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1225,7 +1238,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>obd Enumerable.OrderByDescending</Title>
+      <Title>Enumerable.OrderByDescending</Title>
       <Shortcut>q</Shortcut>
       <Description>Enumerable.OrderByDescending method</Description>
       <Author>Josef Pihrt</Author>
@@ -1233,7 +1246,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:EnumerableOrderByDescending</Keyword>
+        <Keyword>Meta-Name EnumerableOrderByDescending</Keyword>
+        <Keyword>Meta-SubmenuShortcut obd</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1258,7 +1272,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>s Enumerable.Select</Title>
+      <Title>Enumerable.Select</Title>
       <Shortcut>q</Shortcut>
       <Description>Enumerable.Select method</Description>
       <Author>Josef Pihrt</Author>
@@ -1266,7 +1280,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:EnumerableSelect</Keyword>
+        <Keyword>Meta-Name EnumerableSelect</Keyword>
+        <Keyword>Meta-SubmenuShortcut s</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1291,7 +1306,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>sm Enumerable.SelectMany</Title>
+      <Title>Enumerable.SelectMany</Title>
       <Shortcut>q</Shortcut>
       <Description>Enumerable.SelectMany method</Description>
       <Author>Josef Pihrt</Author>
@@ -1299,7 +1314,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:EnumerableSelectMany</Keyword>
+        <Keyword>Meta-Name EnumerableSelectMany</Keyword>
+        <Keyword>Meta-SubmenuShortcut sm</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1324,7 +1340,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>sod Enumerable.SingleOrDefault</Title>
+      <Title>Enumerable.SingleOrDefault</Title>
       <Shortcut>q</Shortcut>
       <Description>Enumerable.SingleOrDefault method</Description>
       <Author>Josef Pihrt</Author>
@@ -1332,7 +1348,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:EnumerableSingleOrDefault</Keyword>
+        <Keyword>Meta-Name EnumerableSingleOrDefault</Keyword>
+        <Keyword>Meta-SubmenuShortcut sod</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1357,7 +1374,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>sw Enumerable.SkipWhile</Title>
+      <Title>Enumerable.SkipWhile</Title>
       <Shortcut>q</Shortcut>
       <Description>Enumerable.SkipWhile method</Description>
       <Author>Josef Pihrt</Author>
@@ -1365,7 +1382,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:EnumerableSkipWhile</Keyword>
+        <Keyword>Meta-Name EnumerableSkipWhile</Keyword>
+        <Keyword>Meta-SubmenuShortcut sw</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1390,7 +1408,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>tw Enumerable.TakeWhile</Title>
+      <Title>Enumerable.TakeWhile</Title>
       <Shortcut>q</Shortcut>
       <Description>Enumerable.TakeWhile method</Description>
       <Author>Josef Pihrt</Author>
@@ -1398,7 +1416,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:EnumerableTakeWhile</Keyword>
+        <Keyword>Meta-Name EnumerableTakeWhile</Keyword>
+        <Keyword>Meta-SubmenuShortcut tw</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1423,7 +1442,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>tb Enumerable.ThenBy</Title>
+      <Title>Enumerable.ThenBy</Title>
       <Shortcut>q</Shortcut>
       <Description>Enumerable.ThenBy method</Description>
       <Author>Josef Pihrt</Author>
@@ -1431,7 +1450,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:EnumerableThenBy</Keyword>
+        <Keyword>Meta-Name EnumerableThenBy</Keyword>
+        <Keyword>Meta-SubmenuShortcut tb</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1456,7 +1476,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>tbd Enumerable.ThenByDescending</Title>
+      <Title>Enumerable.ThenByDescending</Title>
       <Shortcut>q</Shortcut>
       <Description>Enumerable.ThenByDescending method</Description>
       <Author>Josef Pihrt</Author>
@@ -1464,7 +1484,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:EnumerableThenByDescending</Keyword>
+        <Keyword>Meta-Name EnumerableThenByDescending</Keyword>
+        <Keyword>Meta-SubmenuShortcut tbd</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1489,7 +1510,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>w Enumerable.Where</Title>
+      <Title>Enumerable.Where</Title>
       <Shortcut>q</Shortcut>
       <Description>Enumerable.Where method</Description>
       <Author>Josef Pihrt</Author>
@@ -1497,7 +1518,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:EnumerableWhere</Keyword>
+        <Keyword>Meta-Name EnumerableWhere</Keyword>
+        <Keyword>Meta-SubmenuShortcut w</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1522,7 +1544,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>wnn Enumerable.Where not equal to null</Title>
+      <Title>Enumerable.Where not equal to null</Title>
       <Shortcut>q</Shortcut>
       <Description>Enumerable.Where method with predicate whether the expression is not equal to null</Description>
       <Author>Josef Pihrt</Author>
@@ -1530,7 +1552,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:EnumerableWhereNotNull</Keyword>
+        <Keyword>Meta-Name EnumerableWhereNotNull</Keyword>
+        <Keyword>Meta-SubmenuShortcut wnn</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1550,7 +1573,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>z Enumerable.Zip</Title>
+      <Title>Enumerable.Zip</Title>
       <Shortcut>q</Shortcut>
       <Description>Enumerable.Zip method</Description>
       <Author>Josef Pihrt</Author>
@@ -1558,7 +1581,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:EnumerableZip</Keyword>
+        <Keyword>Meta-Name EnumerableZip</Keyword>
+        <Keyword>Meta-SubmenuShortcut z</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1600,8 +1624,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:FileCopy</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:c</Keyword>
+        <Keyword>Meta-Name FileCopy</Keyword>
+        <Keyword>Meta-SubmenuShortcut c</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1635,8 +1659,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:FileDelete</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:d</Keyword>
+        <Keyword>Meta-Name FileDelete</Keyword>
+        <Keyword>Meta-SubmenuShortcut d</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1665,8 +1689,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:FileExists</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:e</Keyword>
+        <Keyword>Meta-Name FileExists</Keyword>
+        <Keyword>Meta-SubmenuShortcut e</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1695,8 +1719,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:FileMove</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:m</Keyword>
+        <Keyword>Meta-Name FileMove</Keyword>
+        <Keyword>Meta-SubmenuShortcut m</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1730,8 +1754,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:FileReadAllLines</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:ral</Keyword>
+        <Keyword>Meta-Name FileReadAllLines</Keyword>
+        <Keyword>Meta-SubmenuShortcut ral</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1768,8 +1792,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:FileReadAllText</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:rat</Keyword>
+        <Keyword>Meta-Name FileReadAllText</Keyword>
+        <Keyword>Meta-SubmenuShortcut rat</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1806,8 +1830,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:FileReadLines</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:rl</Keyword>
+        <Keyword>Meta-Name FileReadLines</Keyword>
+        <Keyword>Meta-SubmenuShortcut rl</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1844,8 +1868,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:FileStreamVariable</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:fesm</Keyword>
+        <Keyword>Meta-Name FileStreamVariable</Keyword>
+        <Keyword>Meta-SubmenuShortcut fesm</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1887,8 +1911,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:FileWriteAllLines</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:wal</Keyword>
+        <Keyword>Meta-Name FileWriteAllLines</Keyword>
+        <Keyword>Meta-SubmenuShortcut wal</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1930,8 +1954,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:FileWriteAllText</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:wat</Keyword>
+        <Keyword>Meta-Name FileWriteAllText</Keyword>
+        <Keyword>Meta-SubmenuShortcut wat</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1973,8 +1997,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:FlagsAttribute</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:fs</Keyword>
+        <Keyword>Meta-Name FlagsAttribute</Keyword>
+        <Keyword>Meta-SubmenuShortcut fs</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1996,8 +2020,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:HashSetOfTType</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:a</Keyword>
+        <Keyword>Meta-Name HashSetOfTType</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2026,8 +2050,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:HashSetOfTVariable</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:a</Keyword>
+        <Keyword>Meta-Name HashSetOfTVariable</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2061,8 +2085,8 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:HashSetOfTVariableWithInitializer</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:a</Keyword>
+        <Keyword>Meta-Name HashSetOfTVariableWithInitializer</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2100,7 +2124,7 @@ private:
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:IfEnumTryParse</Keyword>
+        <Keyword>Meta-Name IfEnumTryParse</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2143,7 +2167,7 @@ if (Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:IfNotEnumTryParse</Keyword>
+        <Keyword>Meta-Name IfNotEnumTryParse</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2186,7 +2210,7 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:IfNotStringIsNullOrEmpty</Keyword>
+        <Keyword>Meta-Name IfNotStringIsNullOrEmpty</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2213,7 +2237,7 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:IfNotStringIsNullOrWhiteSpace</Keyword>
+        <Keyword>Meta-Name IfNotStringIsNullOrWhiteSpace</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2240,7 +2264,7 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:IfStringIsNullOrEmpty</Keyword>
+        <Keyword>Meta-Name IfStringIsNullOrEmpty</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2267,7 +2291,7 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:IfStringIsNullOrWhiteSpace</Keyword>
+        <Keyword>Meta-Name IfStringIsNullOrWhiteSpace</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2294,8 +2318,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:InternalAbstractModifiers</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:ia</Keyword>
+        <Keyword>Meta-Name InternalAbstractModifiers</Keyword>
+        <Keyword>Meta-SubmenuShortcut ia</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2312,8 +2336,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:InternalModifier</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:i</Keyword>
+        <Keyword>Meta-Name InternalModifier</Keyword>
+        <Keyword>Meta-SubmenuShortcut i</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2330,8 +2354,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:InternalStaticModifiers</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:is</Keyword>
+        <Keyword>Meta-Name InternalStaticModifiers</Keyword>
+        <Keyword>Meta-SubmenuShortcut is</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2348,8 +2372,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:InternalVirtualModifiers</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:iv</Keyword>
+        <Keyword>Meta-Name InternalVirtualModifiers</Keyword>
+        <Keyword>Meta-SubmenuShortcut iv</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2366,7 +2390,7 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:LambdaExpressionWithTwoParameters</Keyword>
+        <Keyword>Meta-Name LambdaExpressionWithTwoParameters</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2395,8 +2419,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ListOfTType</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:a</Keyword>
+        <Keyword>Meta-Name ListOfTType</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2425,8 +2449,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ListOfTVariable</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:a</Keyword>
+        <Keyword>Meta-Name ListOfTVariable</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2460,8 +2484,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ListOfTVariableWithInitializer</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:a</Keyword>
+        <Keyword>Meta-Name ListOfTVariableWithInitializer</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2499,8 +2523,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:MemoryStreamVariable</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:mysm</Keyword>
+        <Keyword>Meta-Name MemoryStreamVariable</Keyword>
+        <Keyword>Meta-SubmenuShortcut mysm</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2537,7 +2561,7 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:Namespace</Keyword>
+        <Keyword>Meta-Name Namespace</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2564,8 +2588,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:NewArrayOfT</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:a</Keyword>
+        <Keyword>Meta-Name NewArrayOfT</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2594,8 +2618,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:NewArrayOfTWithInitializer</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:a</Keyword>
+        <Keyword>Meta-Name NewArrayOfTWithInitializer</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2623,8 +2647,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ObservableCollectionOfTType</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:a</Keyword>
+        <Keyword>Meta-Name ObservableCollectionOfTType</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2653,8 +2677,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ObservableCollectionOfTVariable</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:a</Keyword>
+        <Keyword>Meta-Name ObservableCollectionOfTVariable</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2688,8 +2712,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ObservableCollectionOfTVariableWithInitializer</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:a</Keyword>
+        <Keyword>Meta-Name ObservableCollectionOfTVariableWithInitializer</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2727,8 +2751,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ObsoleteAttribute</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:oe</Keyword>
+        <Keyword>Meta-Name ObsoleteAttribute</Keyword>
+        <Keyword>Meta-SubmenuShortcut oe</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2757,7 +2781,7 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:OverrideModifier</Keyword>
+        <Keyword>Meta-Name OverrideModifier</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2774,8 +2798,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:PathCombine</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:c</Keyword>
+        <Keyword>Meta-Name PathCombine</Keyword>
+        <Keyword>Meta-SubmenuShortcut c</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2809,8 +2833,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:PathGetDirectoryName</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:gdn</Keyword>
+        <Keyword>Meta-Name PathGetDirectoryName</Keyword>
+        <Keyword>Meta-SubmenuShortcut gdn</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2839,8 +2863,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:PathGetExtension</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:ge</Keyword>
+        <Keyword>Meta-Name PathGetExtension</Keyword>
+        <Keyword>Meta-SubmenuShortcut ge</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2869,8 +2893,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:PathGetFileName</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:gfn</Keyword>
+        <Keyword>Meta-Name PathGetFileName</Keyword>
+        <Keyword>Meta-SubmenuShortcut gfn</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2899,8 +2923,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:PathGetFileNameWithoutExtension</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:gfnwe</Keyword>
+        <Keyword>Meta-Name PathGetFileNameWithoutExtension</Keyword>
+        <Keyword>Meta-SubmenuShortcut gfnwe</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2929,8 +2953,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:PathGetFullPath</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:gfp</Keyword>
+        <Keyword>Meta-Name PathGetFullPath</Keyword>
+        <Keyword>Meta-SubmenuShortcut gfp</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2959,8 +2983,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:PathHasExtension</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:he</Keyword>
+        <Keyword>Meta-Name PathHasExtension</Keyword>
+        <Keyword>Meta-SubmenuShortcut he</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2989,8 +3013,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:PathChangeExtension</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:ce</Keyword>
+        <Keyword>Meta-Name PathChangeExtension</Keyword>
+        <Keyword>Meta-SubmenuShortcut ce</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3024,8 +3048,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:PrivateModifier</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:p</Keyword>
+        <Keyword>Meta-Name PrivateModifier</Keyword>
+        <Keyword>Meta-SubmenuShortcut p</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3042,8 +3066,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:PrivateStaticModifiers</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:ps</Keyword>
+        <Keyword>Meta-Name PrivateStaticModifiers</Keyword>
+        <Keyword>Meta-SubmenuShortcut ps</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3060,8 +3084,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ProtectedAbstractModifiers</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:da</Keyword>
+        <Keyword>Meta-Name ProtectedAbstractModifiers</Keyword>
+        <Keyword>Meta-SubmenuShortcut da</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3078,8 +3102,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ProtectedModifier</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:d</Keyword>
+        <Keyword>Meta-Name ProtectedModifier</Keyword>
+        <Keyword>Meta-SubmenuShortcut d</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3096,8 +3120,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ProtectedVirtualModifiers</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:dv</Keyword>
+        <Keyword>Meta-Name ProtectedVirtualModifiers</Keyword>
+        <Keyword>Meta-SubmenuShortcut dv</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3114,8 +3138,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:PublicAbstractModifiers</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:a</Keyword>
+        <Keyword>Meta-Name PublicAbstractModifiers</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3132,8 +3156,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:PublicModifier</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:-</Keyword>
+        <Keyword>Meta-Name PublicModifier</Keyword>
+        <Keyword>Meta-SubmenuShortcut -</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3150,8 +3174,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:PublicStaticModifiers</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:s</Keyword>
+        <Keyword>Meta-Name PublicStaticModifiers</Keyword>
+        <Keyword>Meta-SubmenuShortcut s</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3168,8 +3192,8 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:PublicVirtualModifiers</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:v</Keyword>
+        <Keyword>Meta-Name PublicVirtualModifiers</Keyword>
+        <Keyword>Meta-SubmenuShortcut v</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3186,7 +3210,7 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ReadOnlyModifier</Keyword>
+        <Keyword>Meta-Name ReadOnlyModifier</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3203,7 +3227,7 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:Regex</Keyword>
+        <Keyword>Meta-Name Regex</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3225,7 +3249,7 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ReturnNew</Keyword>
+        <Keyword>Meta-Name ReturnNew</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3242,7 +3266,7 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ReturnNewThis</Keyword>
+        <Keyword>Meta-Name ReturnNewThis</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3267,7 +3291,7 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ReturnStatement</Keyword>
+        <Keyword>Meta-Name ReturnStatement</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3284,7 +3308,7 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:StringBuilderVariable</Keyword>
+        <Keyword>Meta-Name StringBuilderVariable</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3313,7 +3337,7 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ThrowStatement</Keyword>
+        <Keyword>Meta-Name ThrowStatement</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3330,7 +3354,7 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:TimeSpanType</Keyword>
+        <Keyword>Meta-Name TimeSpanType</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3352,7 +3376,7 @@ if (!Enum.TryParse($value$, out $result$))
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:VariableAsTIfNotNull</Keyword>
+        <Keyword>Meta-Name VariableAsTIfNotNull</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3390,7 +3414,7 @@ if ($identifier$ != null)
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:WhileNotNull</Keyword>
+        <Keyword>Meta-Name WhileNotNull</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3417,7 +3441,7 @@ if ($identifier$ != null)
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:WhileNull</Keyword>
+        <Keyword>Meta-Name WhileNull</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3444,7 +3468,7 @@ if ($identifier$ != null)
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:YieldReturnNew</Keyword>
+        <Keyword>Meta-Name YieldReturnNew</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3461,7 +3485,7 @@ if ($identifier$ != null)
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:YieldReturnNewThis</Keyword>
+        <Keyword>Meta-Name YieldReturnNewThis</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3486,7 +3510,7 @@ if ($identifier$ != null)
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:div_class</Keyword>
+        <Keyword>Meta-Name div_class</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3510,7 +3534,7 @@ if ($identifier$ != null)
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:div_id</Keyword>
+        <Keyword>Meta-Name div_id</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3534,7 +3558,7 @@ if ($identifier$ != null)
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:meta_viewport</Keyword>
+        <Keyword>Meta-Name meta_viewport</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3551,7 +3575,7 @@ if ($identifier$ != null)
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:span_class</Keyword>
+        <Keyword>Meta-Name span_class</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3575,7 +3599,7 @@ if ($identifier$ != null)
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:span_id</Keyword>
+        <Keyword>Meta-Name span_id</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3599,7 +3623,7 @@ if ($identifier$ != null)
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:table_with_sections</Keyword>
+        <Keyword>Meta-Name table_with_sections</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3633,8 +3657,8 @@ if ($identifier$ != null)
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ArrayOfTType</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:a</Keyword>
+        <Keyword>Meta-Name ArrayOfTType</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3658,7 +3682,7 @@ if ($identifier$ != null)
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:DictionaryOfTKeyTValueVariable</Keyword>
+        <Keyword>Meta-Name DictionaryOfTKeyTValueVariable</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3697,7 +3721,7 @@ if ($identifier$ != null)
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:DictionaryOfTKeyTValueVariableWithInitializer</Keyword>
+        <Keyword>Meta-Name DictionaryOfTKeyTValueVariableWithInitializer</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3740,8 +3764,8 @@ if ($identifier$ != null)
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:HashSetOfTType</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:a</Keyword>
+        <Keyword>Meta-Name HashSetOfTType</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3770,8 +3794,8 @@ if ($identifier$ != null)
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:HashSetOfTVariable</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:a</Keyword>
+        <Keyword>Meta-Name HashSetOfTVariable</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3805,8 +3829,8 @@ if ($identifier$ != null)
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:HashSetOfTVariableWithInitializer</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:a</Keyword>
+        <Keyword>Meta-Name HashSetOfTVariableWithInitializer</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3844,7 +3868,7 @@ if ($identifier$ != null)
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:IfEnumTryParse</Keyword>
+        <Keyword>Meta-Name IfEnumTryParse</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3886,7 +3910,7 @@ End If]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:IfNotEnumTryParse</Keyword>
+        <Keyword>Meta-Name IfNotEnumTryParse</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3928,7 +3952,7 @@ End If]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:LambdaExpressionWithTwoParameters</Keyword>
+        <Keyword>Meta-Name LambdaExpressionWithTwoParameters</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3957,8 +3981,8 @@ End If]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ListOfTType</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:a</Keyword>
+        <Keyword>Meta-Name ListOfTType</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3987,8 +4011,8 @@ End If]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ListOfTVariable</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:a</Keyword>
+        <Keyword>Meta-Name ListOfTVariable</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4022,8 +4046,8 @@ End If]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ListOfTVariableWithInitializer</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:a</Keyword>
+        <Keyword>Meta-Name ListOfTVariableWithInitializer</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4061,7 +4085,7 @@ End If]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:Namespace</Keyword>
+        <Keyword>Meta-Name Namespace</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4087,8 +4111,8 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:NewArrayOfT</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:a</Keyword>
+        <Keyword>Meta-Name NewArrayOfT</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4121,7 +4145,7 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ObjectKeyword</Keyword>
+        <Keyword>Meta-Name ObjectKeyword</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4138,8 +4162,8 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ObservableCollectionOfTType</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:a</Keyword>
+        <Keyword>Meta-Name ObservableCollectionOfTType</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4168,8 +4192,8 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ObservableCollectionOfTVariable</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:a</Keyword>
+        <Keyword>Meta-Name ObservableCollectionOfTVariable</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4203,8 +4227,8 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ObservableCollectionOfTVariableWithInitializer</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:a</Keyword>
+        <Keyword>Meta-Name ObservableCollectionOfTVariableWithInitializer</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4242,7 +4266,7 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:Regex</Keyword>
+        <Keyword>Meta-Name Regex</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4264,7 +4288,7 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ReturnKeyword</Keyword>
+        <Keyword>Meta-Name ReturnKeyword</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4281,7 +4305,7 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:StringBuilderVariable</Keyword>
+        <Keyword>Meta-Name StringBuilderVariable</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4310,7 +4334,7 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:StringKeyword</Keyword>
+        <Keyword>Meta-Name StringKeyword</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4327,7 +4351,7 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ThrowStatement</Keyword>
+        <Keyword>Meta-Name ThrowStatement</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4344,7 +4368,7 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:TimeSpanType</Keyword>
+        <Keyword>Meta-Name TimeSpanType</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4366,7 +4390,7 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:YieldKeyword</Keyword>
+        <Keyword>Meta-Name YieldKeyword</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4383,8 +4407,8 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:Canvas</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:c</Keyword>
+        <Keyword>Meta-Name Canvas</Keyword>
+        <Keyword>Meta-SubmenuShortcut c</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4401,8 +4425,8 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:DockPanel</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:dp</Keyword>
+        <Keyword>Meta-Name DockPanel</Keyword>
+        <Keyword>Meta-SubmenuShortcut dp</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4419,8 +4443,8 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:Grid</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:g</Keyword>
+        <Keyword>Meta-Name Grid</Keyword>
+        <Keyword>Meta-SubmenuShortcut g</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4444,7 +4468,7 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:GridRowGridColumn</Keyword>
+        <Keyword>Meta-Name GridRowGridColumn</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4473,7 +4497,7 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ListBoxItem</Keyword>
+        <Keyword>Meta-Name ListBoxItem</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4490,8 +4514,8 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:StackPanel</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:sp</Keyword>
+        <Keyword>Meta-Name StackPanel</Keyword>
+        <Keyword>Meta-SubmenuShortcut sp</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4508,8 +4532,8 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:StackPanelHorizontal</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:sph</Keyword>
+        <Keyword>Meta-Name StackPanelHorizontal</Keyword>
+        <Keyword>Meta-SubmenuShortcut sph</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4526,8 +4550,8 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:StackPanelVertical</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:spv</Keyword>
+        <Keyword>Meta-Name StackPanelVertical</Keyword>
+        <Keyword>Meta-SubmenuShortcut spv</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4544,7 +4568,7 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:ToolBarTray</Keyword>
+        <Keyword>Meta-Name ToolBarTray</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4564,8 +4588,8 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:UniformGrid</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:ug</Keyword>
+        <Keyword>Meta-Name UniformGrid</Keyword>
+        <Keyword>Meta-SubmenuShortcut ug</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4582,8 +4606,8 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:WrapPanel</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:wp</Keyword>
+        <Keyword>Meta-Name WrapPanel</Keyword>
+        <Keyword>Meta-SubmenuShortcut wp</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4600,8 +4624,8 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:WrapPanelHorizontal</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:wph</Keyword>
+        <Keyword>Meta-Name WrapPanelHorizontal</Keyword>
+        <Keyword>Meta-SubmenuShortcut wph</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4618,8 +4642,8 @@ End Namespace]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Tag Name:WrapPanelVertical</Keyword>
-        <Keyword>Meta-Tag SubmenuShortcut:wpv</Keyword>
+        <Keyword>Meta-Name WrapPanelVertical</Keyword>
+        <Keyword>Meta-SubmenuShortcut wpv</Keyword>
       </Keywords>
     </Header>
     <Snippet>
