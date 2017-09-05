@@ -4,18 +4,18 @@ using System;
 
 namespace Snippetica
 {
-    public static class EngineExtensions
+    public static class EnvironmentKindExtensions
     {
-        public static string GetIdentifier(this Engine engine)
+        public static string GetIdentifier(this EnvironmentKind kind)
         {
-            switch (engine)
+            switch (kind)
             {
-                case Engine.VisualStudio:
+                case EnvironmentKind.VisualStudio:
                     return "vs";
-                case Engine.VisualStudioCode:
+                case EnvironmentKind.VisualStudioCode:
                     return "vscode";
                 default:
-                    throw new ArgumentException("", nameof(engine));
+                    throw new ArgumentException("", nameof(kind));
             }
         }
     }

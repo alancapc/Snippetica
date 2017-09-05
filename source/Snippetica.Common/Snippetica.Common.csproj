@@ -46,8 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ShortcutInfo.cs" />
-    <Compile Include="Engine.cs" />
-    <Compile Include="EngineExtensions.cs" />
+    <Compile Include="EnvironmentKind.cs" />
+    <Compile Include="EnvironmentKindExtensions.cs" />
     <Compile Include="Extensions\Engine.cs" />
     <Compile Include="IO\IOUtility.cs" />
     <Compile Include="KnownNames.cs" />

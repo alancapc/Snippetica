@@ -7,18 +7,18 @@ namespace Snippetica.CodeGeneration
 {
     public class VisualStudioEnvironment : SnippetEnvironment
     {
-        public override Engine Engine
+        public override EnvironmentKind Kind
         {
-            get { return Engine.VisualStudio; }
+            get { return EnvironmentKind.VisualStudio; }
         }
 
-        public override bool ShouldGenerateSnippets(SnippetDirectory directory)
+        protected override bool ShouldGenerateSnippets(SnippetDirectory directory)
         {
             return base.ShouldGenerateSnippets(directory)
                 && !directory.HasTag(KnownTags.ExcludeFromVisualStudio);
         }
 
-        public override SnippetGenerator CreateGenerator(SnippetDirectory directory)
+        protected override SnippetGenerator CreateGenerator(SnippetDirectory directory)
         {
             switch (directory.Language)
             {

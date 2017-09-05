@@ -56,14 +56,6 @@
     <Compile Include="VisualStudio\VisualStudioPackageGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Snippetica.CodeGeneration.Json\Snippetica.CodeGeneration.Json.csproj">
-      <Project>{BCF0125E-EFF9-4D3A-9C64-AB630BDA2F29}</Project>
-      <Name>Snippetica.CodeGeneration.Json</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Snippetica.CodeGeneration.Markdown\Snippetica.CodeGeneration.Markdown.csproj">
-      <Project>{3011FAD5-89C1-4DB8-BA47-239023AF4CF3}</Project>
-      <Name>Snippetica.CodeGeneration.Markdown</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Snippetica.CodeGeneration\Snippetica.CodeGeneration.csproj">
       <Project>{b53b29d0-8bb3-478d-ad94-863f913e56ce}</Project>
       <Name>Snippetica.CodeGeneration</Name>

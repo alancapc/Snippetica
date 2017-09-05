@@ -3,25 +3,25 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using Pihrtsoft.Snippets;
-using static Snippetica.KnownPaths;
+using static Snippetica.CodeGeneration.CodeGenerationUtility;
 using static Snippetica.KnownNames;
+using static Snippetica.KnownPaths;
 
 namespace Snippetica.CodeGeneration.Markdown
 {
     public static class MarkdownGenerator
     {
-        public static string GenerateSolutionReadMe(SnippetDirectory[] snippetDirectories)
+        public static string GenerateSolutionReadMe(SnippetGeneratorResult[] results)
         {
             using (var sw = new StringWriter())
             {
                 sw.WriteLine($"## {ProductName}");
                 sw.WriteLine();
 
-                sw.WriteLine($"* {CodeGenerationUtility.GetProjectSubtitle(snippetDirectories)}");
+                sw.WriteLine($"* {GetProjectSubtitle(results)}");
                 sw.WriteLine($"* [Release Notes]({MasterGitHubUrl}/{$"{ChangeLogFileName}"}).");
-                sw.WriteLine($"* Browse all available snippets with [Snippet Browser]({GetSnippetBrowserUrl(Engine.VisualStudio)}).");
+                sw.WriteLine($"* Browse all available snippets with [Snippet Browser]({GetSnippetBrowserUrl(EnvironmentKind.VisualStudio)}).");
                 sw.WriteLine();
                 sw.WriteLine("### Distribution");
                 sw.WriteLine();
@@ -33,26 +33,24 @@ namespace Snippetica.CodeGeneration.Markdown
                 sw.WriteLine("Folder|Count| |");
                 sw.WriteLine("--- | --- | ---:");
 
-                foreach (SnippetDirectory snippetDirectory in snippetDirectories)
+                foreach (SnippetGeneratorResult result in results)
                 {
-                    Snippet[] snippets = snippetDirectory.EnumerateSnippets().ToArray();
-
-                    sw.WriteLine($"[{snippetDirectory.DirectoryName}]({VisualStudioExtensionGitHubUrl}/{snippetDirectory.DirectoryName}/{ReadMeFileName})|{snippets.Length}|[full list]({GetSnippetBrowserUrl(Engine.VisualStudio, snippetDirectory.Language)})");
+                    sw.WriteLine($"[{result.DirectoryName}]({VisualStudioExtensionGitHubUrl}/{result.DirectoryName}/{ReadMeFileName})|{result.Snippets.Count}|[full list]({GetSnippetBrowserUrl(EnvironmentKind.VisualStudio, result.Language)})");
                 }
 
                 return sw.ToString();
             }
         }
 
-        public static string GenerateProjectReadMe(SnippetDirectory[] snippetDirectories)
+        public static string GenerateProjectReadMe(IEnumerable<SnippetGeneratorResult> results)
         {
             using (var sw = new StringWriter())
             {
                 sw.WriteLine();
 
-                foreach (SnippetDirectory snippetDirectory in snippetDirectories)
+                foreach (SnippetGeneratorResult result in results)
                 {
-                    sw.WriteLine($"* [{snippetDirectory.DirectoryName}]({snippetDirectory.DirectoryName}/{KnownNames.ReadMeFileName}) ({snippetDirectory.EnumerateSnippets().Count()} snippets)");
+                    sw.WriteLine($"* [{result.DirectoryName}]({result.DirectoryName}/{ReadMeFileName}) ({result.Snippets.Count} snippets)");
                 }
 
                 return sw.ToString();
@@ -60,47 +58,41 @@ namespace Snippetica.CodeGeneration.Markdown
         }
 
         public static string GenerateDirectoryReadme(
-            SnippetDirectory snippetDirectory,
-            IList<ShortcutInfo> shortcuts,
+            IEnumerable<Snippet> snippets,
             SnippetListSettings settings)
         {
             using (var sw = new StringWriter())
             {
-                string directoryName = snippetDirectory.DirectoryName;
-
-                if (settings.AddHeading)
+                if (!string.IsNullOrEmpty(settings.Header))
                 {
-                    sw.WriteLine($"## {directoryName}");
+                    sw.WriteLine($"## {settings.Header}");
                     sw.WriteLine();
                 }
 
-                if (!snippetDirectory.IsDevelopment)
+                if (!settings.IsDevelopment)
                 {
                     sw.WriteLine("### Snippet Browser");
                     sw.WriteLine();
 
-                    sw.WriteLine($"* Browse all available snippets with [Snippet Browser]({GetSnippetBrowserUrl(settings.Engine, snippetDirectory.Language)}).");
+                    sw.WriteLine($"* Browse all available snippets with [Snippet Browser]({GetSnippetBrowserUrl(settings.Environment.Kind, settings.Language)}).");
                     sw.WriteLine();
                 }
 
-                if (!snippetDirectory.IsDevelopment
-                    && !snippetDirectory.HasTag(KnownTags.NoQuickReference))
+                if (!settings.IsDevelopment
+                    && settings.AddQuickReference)
                 {
-                    shortcuts = shortcuts?
-                        .Where(f => f.Languages.Contains(snippetDirectory.Language))
+                    List<ShortcutInfo> shortcuts = settings.Shortcuts
+                        .Where(f => f.Languages.Contains(settings.Language))
                         .ToList();
 
-                    if (shortcuts?.Count > 0)
+                    if (shortcuts.Count > 0)
                     {
                         sw.WriteLine("### Quick Reference");
                         sw.WriteLine();
 
-                        //TODO: ?
-                        string filePath = $@"..\..\..\..\..\text\{directoryName}.md";
-
-                        if (File.Exists(filePath))
+                        if (settings.QuickReferenceText != null)
                         {
-                            sw.WriteLine(File.ReadAllText(filePath, Encoding.UTF8));
+                            sw.WriteLine(settings.QuickReferenceText);
                             sw.WriteLine();
                         }
 
@@ -118,12 +110,10 @@ namespace Snippetica.CodeGeneration.Markdown
                 sw.WriteLine();
 
                 using (SnippetTableWriter tableWriter = (settings.AddLinkToTitle)
-                    ? SnippetTableWriter.CreateTitleWithLinkThenShortcut(snippetDirectory.Path)
+                    ? SnippetTableWriter.CreateTitleWithLinkThenShortcut(settings.DirectoryPath)
                     : SnippetTableWriter.CreateTitleThenShortcut())
                 {
-                    IEnumerable<Snippet> snippets = snippetDirectory
-                        .EnumerateSnippets()
-                        .Where(f => !f.HasTag(KnownTags.ExcludeFromReadme));
+                    snippets = snippets.Where(f => !f.HasTag(KnownTags.ExcludeFromReadme));
 
                     tableWriter.WriteTable(snippets);
                     sw.Write(tableWriter.ToString());

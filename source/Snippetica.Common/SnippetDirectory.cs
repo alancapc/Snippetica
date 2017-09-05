@@ -37,7 +37,7 @@ namespace Snippetica
 
         public ReadOnlyCollection<string> Tags { get; }
 
-        public string DirectoryName
+        public string Name
         {
             get { return System.IO.Path.GetFileName(Path); }
         }
@@ -82,31 +82,6 @@ namespace Snippetica
         public IEnumerable<Snippet> EnumerateSnippets(SearchOption searchOption = SearchOption.AllDirectories)
         {
             return SnippetSerializer.Deserialize(Path, searchOption);
-        }
-
-        public bool IsRelease
-        {
-            get { return HasTag(KnownTags.Release); }
-        }
-
-        public bool IsDevelopment
-        {
-            get { return HasTag(KnownTags.Dev); }
-        }
-
-        public bool IsAutoGeneration
-        {
-            get { return HasAnyTag(KnownTags.AutoGenerationSource, KnownTags.AutoGenerationDestination); }
-        }
-
-        public bool IsAutoGenerationSource
-        {
-            get { return HasTag(KnownTags.AutoGenerationSource); }
-        }
-
-        public bool IsAutoGenerationDestination
-        {
-            get { return HasTag(KnownTags.AutoGenerationDestination); }
         }
     }
 }

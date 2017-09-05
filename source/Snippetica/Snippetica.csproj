@@ -139,7 +139,6 @@
     <Content Include="Snippetica.Xml\CDataSection.snippet" />
     <None Include="Snippetica.Xml.CodeSnippet\SnippetType.snippet" />
     <None Include="Snippetica.Xml\README.md" />
-    <Content Include="Todo CSharp.txt" />
     <None Include="Snippetica.CSharp\AutoGeneration\CollectionOfTType.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\AutoPropertyWithPrivateSet.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\CollectionOfTVariable.snippet" />
@@ -373,7 +372,6 @@
     <None Include="Snippetica.Xaml\AutoGeneration\WrapPanelHorizontal.snippet" />
     <None Include="Snippetica.Xaml\AutoGeneration\WrapPanelVertical.snippet" />
     <None Include="License.txt" />
-    <Content Include="Todo.txt" />
     <None Include="Snippetica.Cpp\Dev\class_with_inline_constructor_destructor.snippet" />
     <None Include="Snippetica.Cpp\class.snippet" />
     <None Include="Snippetica.Cpp\constructor.snippet" />

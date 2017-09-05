@@ -21,9 +21,9 @@ namespace Snippetica.CodeGeneration
 
         private static void Main(string[] args)
         {
-            SnippetDirectory[] directories = LoadSnippetDirectories(@"..\..\SnippetDirectories.xml").ToArray();
+            SnippetDirectory[] directories = LoadDirectories(@"..\..\Data\Directories.xml");
 
-            ShortcutInfo[] shortcuts = ShortcutInfo.LoadFromFile(@"..\..\Shortcuts.xml").ToArray();
+            ShortcutInfo[] shortcuts = ShortcutInfo.LoadFromFile(@"..\..\Data\Shortcuts.xml").ToArray();
 
             ShortcutInfo.SerializeToXml(Path.Combine(VisualStudioExtensionProjectPath, "Shortcuts.xml"), shortcuts);
 
@@ -31,16 +31,22 @@ namespace Snippetica.CodeGeneration
 
             SaveChangedSnippets(directories);
 
+            var visualStudio = new VisualStudioEnvironment();
+
             GenerateSnippets(
-                new VisualStudioEnvironment().GenerateSnippets(directories),
-                new VisualStudioPackageGenerator(),
+                visualStudio,
+                directories,
+                new VisualStudioPackageGenerator(visualStudio),
                 VisualStudioExtensionProjectPath,
                 shortcuts,
                 KnownTags.ExcludeFromVisualStudio);
 
+            var visualStudioCode = new VisualStudioCodeEnvironment();
+
             GenerateSnippets(
-                new VisualStudioCodeEnvironment().GenerateSnippets(directories),
-                new VisualStudioCodePackageGenerator(),
+                visualStudioCode,
+                directories,
+                new VisualStudioCodePackageGenerator(visualStudioCode),
                 VisualStudioCodeExtensionProjectPath,
                 shortcuts,
                 KnownTags.ExcludeFromVisualStudioCode);
@@ -50,7 +56,8 @@ namespace Snippetica.CodeGeneration
         }
 
         private static void GenerateSnippets(
-            IEnumerable<SnippetGeneratorResult> results,
+            SnippetEnvironment environment,
+            SnippetDirectory[] directories,
             PackageGenerator generator,
             string projectPath,
             ShortcutInfo[] shortcuts,
@@ -58,9 +65,24 @@ namespace Snippetica.CodeGeneration
         {
             generator.Shortcuts.AddRange(shortcuts.Where(f => !f.HasTag(excludeTag)));
 
-            generator.GeneratePackageFiles(projectPath, results.Where(f => !f.SnippetDirectory.IsDevelopment));
+            var results = new List<SnippetGeneratorResult>();
+            var devResults = new List<SnippetGeneratorResult>();
 
-            generator.GeneratePackageFiles(projectPath + KnownNames.DevSuffix, results.Where(f => f.SnippetDirectory.IsDevelopment));
+            foreach (SnippetGeneratorResult result in environment.GenerateSnippets(directories))
+            {
+                if (result.IsDevelopment)
+                {
+                    devResults.Add(result);
+                }
+                else
+                {
+                    results.Add(result);
+                }
+            }
+
+            generator.GeneratePackageFiles(projectPath, results);
+
+            generator.GeneratePackageFiles(projectPath + KnownNames.DevSuffix, devResults);
         }
 
         private static void SaveChangedSnippets(SnippetDirectory[] directories)
@@ -79,16 +101,17 @@ namespace Snippetica.CodeGeneration
             }
         }
 
-        private static IEnumerable<SnippetDirectory> LoadSnippetDirectories(string url)
+        private static SnippetDirectory[] LoadDirectories(string url)
         {
             return Document.ReadRecords(url)
                 .Where(f => !f.HasTag(KnownTags.Disabled))
-                .Select(SnippetDirectoryMapper.MapFromRecord);
+                .Select(SnippetDirectoryMapper.MapFromRecord)
+                .ToArray();
         }
 
         private static void LoadLanguageDefinitions()
         {
-            LanguageDefinition[] languageDefinitions = Document.ReadRecords(@"..\..\LanguageDefinitions.xml")
+            LanguageDefinition[] languageDefinitions = Document.ReadRecords(@"..\..\Data\Languages.xml")
                 .Where(f => !f.HasTag(KnownTags.Disabled))
                 .ToLanguageDefinitions()
                 .ToArray();

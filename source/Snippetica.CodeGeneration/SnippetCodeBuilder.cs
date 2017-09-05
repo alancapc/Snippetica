@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Snippetica.CodeGeneration
 {
-    public class SnippetCodeWriter
+    public class SnippetCodeBuilder
     {
-        public SnippetCodeWriter()
+        public SnippetCodeBuilder()
         {
             StringBuilder = new StringBuilder();
         }
@@ -20,34 +20,34 @@ namespace Snippetica.CodeGeneration
             return StringBuilder.ToString();
         }
 
-        public void WritePlaceholder(string identifier)
+        public void Appendlaceholder(string identifier)
         {
-            WriteDelimiter();
-            Write(identifier);
-            WriteDelimiter();
+            AppendDelimiter();
+            Append(identifier);
+            AppendDelimiter();
         }
 
-        public void WriteEndPlaceholder()
+        public void AppendEndPlaceholder()
         {
-            WritePlaceholder("end");
+            Appendlaceholder("end");
         }
 
-        internal void WriteSelectedPlaceholder()
+        internal void AppendSelectedPlaceholder()
         {
-            WritePlaceholder("selected");
+            Appendlaceholder("selected");
         }
 
-        public void WriteDelimiter()
+        public void AppendDelimiter()
         {
-            Write(Delimiter);
+            Append(Delimiter);
         }
 
-        public void Write(string value)
+        public void Append(string value)
         {
             StringBuilder.Append(value);
         }
 
-        public void Write(char value)
+        public void Append(char value)
         {
             StringBuilder.Append(value);
         }

@@ -5,10 +5,6 @@ namespace Snippetica
     public static class KnownTags
     {
         public const string Tag = nameof(Tag);
-        public const string Release = nameof(Release);
-        public const string Dev = nameof(Dev);
-        public const string AutoGenerationSource = nameof(AutoGenerationSource);
-        public const string AutoGenerationDestination = nameof(AutoGenerationDestination);
         public const string VisualStudio = nameof(VisualStudio);
         public const string Default = nameof(Default);
         public const string AccessModifier = nameof(AccessModifier);

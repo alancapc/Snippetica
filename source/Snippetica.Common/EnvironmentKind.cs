@@ -2,8 +2,9 @@
 
 namespace Snippetica
 {
-    public enum Engine
+    public enum EnvironmentKind
     {
+        None,
         VisualStudio,
         VisualStudioCode
     }

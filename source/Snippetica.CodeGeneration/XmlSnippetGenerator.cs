@@ -109,16 +109,16 @@ namespace Snippetica.CodeGeneration
             Literal contentLiteral = CreateContentLiteral();
             s.AddLiteral(contentLiteral);
 
-            var w = new SnippetCodeWriter();
-            w.Write("<");
-            w.WritePlaceholder(nameLiteral.Identifier);
-            w.WritePlaceholder(attributeLiteral.Identifier);
-            w.Write(">");
-            w.WritePlaceholder(contentLiteral.Identifier);
-            w.Write("</");
-            w.WritePlaceholder(NameIdentifier);
-            w.Write(">");
-            w.WriteEndPlaceholder();
+            var w = new SnippetCodeBuilder();
+            w.Append("<");
+            w.Appendlaceholder(nameLiteral.Identifier);
+            w.Appendlaceholder(attributeLiteral.Identifier);
+            w.Append(">");
+            w.Appendlaceholder(contentLiteral.Identifier);
+            w.Append("</");
+            w.Appendlaceholder(NameIdentifier);
+            w.Append(">");
+            w.AppendEndPlaceholder();
             s.CodeText = w.ToString();
 
             s.FilePath = "Element";
@@ -142,12 +142,12 @@ namespace Snippetica.CodeGeneration
             Literal attributeLiteral = CreateAttributeLiteral();
             s.AddLiteral(attributeLiteral);
 
-            var w = new SnippetCodeWriter();
-            w.Write("<");
-            w.WritePlaceholder(nameLiteral.Identifier);
-            w.WritePlaceholder(attributeLiteral.Identifier);
-            w.Write(" />");
-            w.WriteEndPlaceholder();
+            var w = new SnippetCodeBuilder();
+            w.Append("<");
+            w.Appendlaceholder(nameLiteral.Identifier);
+            w.Appendlaceholder(attributeLiteral.Identifier);
+            w.Append(" />");
+            w.AppendEndPlaceholder();
             s.CodeText = w.ToString();
 
             s.FilePath = "SelfClosingElement";
@@ -168,11 +168,11 @@ namespace Snippetica.CodeGeneration
             Literal commentLiteral = CreateCommentLiteral();
             s.AddLiteral(commentLiteral);
 
-            var w = new SnippetCodeWriter();
-            w.Write("<!-- ");
-            w.WritePlaceholder(commentLiteral.Identifier);
-            w.Write(" -->");
-            w.WriteEndPlaceholder();
+            var w = new SnippetCodeBuilder();
+            w.Append("<!-- ");
+            w.Appendlaceholder(commentLiteral.Identifier);
+            w.Append(" -->");
+            w.AppendEndPlaceholder();
             s.CodeText = w.ToString();
 
             s.FilePath = "Comment";

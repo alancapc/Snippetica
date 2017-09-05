@@ -1,4 +1,4 @@
-﻿## Snippetica.Cpp
+## Snippetica.Cpp
 
 ### Snippet Browser
 

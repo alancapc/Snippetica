@@ -1,4 +1,4 @@
-﻿## Snippetica.Xml.CodeSnippet
+## Snippetica.Xml.CodeSnippet
 
 ### Snippet Browser
 

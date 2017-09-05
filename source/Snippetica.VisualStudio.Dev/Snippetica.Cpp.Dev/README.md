@@ -1,4 +1,4 @@
-﻿## Snippetica.Cpp.Dev
+## Snippetica.Cpp.Dev
 
 ### List of Selected Snippets
 

@@ -1,4 +1,4 @@
-﻿## Snippetica.CSharp.Dev
+## Snippetica.CSharp.Dev
 
 ### List of Selected Snippets
 

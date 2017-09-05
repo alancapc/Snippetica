@@ -6,44 +6,39 @@ using System.Linq;
 using System.Xml.Linq;
 using Pihrtsoft.Snippets;
 using Snippetica.CodeGeneration.Markdown;
-using Snippetica.CodeGeneration.Package;
 using Snippetica.IO;
 
 namespace Snippetica.CodeGeneration.Package.VisualStudio
 {
     public class VisualStudioPackageGenerator : PackageGenerator
     {
+        public VisualStudioPackageGenerator(SnippetEnvironment environment)
+            : base(environment)
+        {
+        }
+
         public override void GeneratePackageFiles(string directoryPath, IEnumerable<SnippetGeneratorResult> results)
         {
             base.GeneratePackageFiles(directoryPath, results);
 
-            SnippetDirectory[] directories = results
-                .Select(f => f.SnippetDirectory.WithPath(Path.Combine(directoryPath, f.SnippetDirectory.DirectoryName)))
-                .ToArray();
-
-            MarkdownWriter.WriteProjectReadMe(directories, directoryPath);
+            MarkdownWriter.WriteProjectReadme(directoryPath, results);
 
             IOUtility.WriteAllText(
                 Path.Combine(directoryPath, "description.html"),
-                HtmlGenerator.GenerateVisualStudioMarketplaceDescription(directories));
+                HtmlGenerator.GenerateVisualStudioMarketplaceDescription(results));
 
             IOUtility.WriteAllText(
                 Path.Combine(directoryPath, "regedit.pkgdef"),
-                PkgDefGenerator.GeneratePkgDefFile(directories));
+                PkgDefGenerator.GeneratePkgDefFile(results));
         }
 
-        protected override void SaveSnippets(List<Snippet> snippets, SnippetDirectory snippetDirectory)
+        protected override void SaveSnippets(List<Snippet> snippets, SnippetGeneratorResult result)
         {
-            base.SaveSnippets(snippets, snippetDirectory);
+            base.SaveSnippets(snippets, result);
 
-            //TODO: 
-            List<ShortcutInfo> shortcuts = (snippetDirectory.IsDevelopment)
-                ? null
-                : Shortcuts;
+            SnippetListSettings settings = CreateSnippetListSettings(result);
 
-            IOUtility.WriteAllText(
-                Path.Combine(snippetDirectory.Path, KnownNames.ReadMeFileName),
-                MarkdownGenerator.GenerateDirectoryReadme(snippetDirectory, Shortcuts, SnippetListSettings.VisualStudio));
+            MarkdownWriter.WriteReadme(result.Path, snippets, settings);
         }
 
         protected override void SaveAllSnippets(string projectPath, List<Snippet> allSnippets)

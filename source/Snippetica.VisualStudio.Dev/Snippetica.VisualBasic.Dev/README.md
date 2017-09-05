@@ -1,4 +1,4 @@
-﻿## Snippetica.VisualBasic.Dev
+## Snippetica.VisualBasic.Dev
 
 ### List of Selected Snippets
 

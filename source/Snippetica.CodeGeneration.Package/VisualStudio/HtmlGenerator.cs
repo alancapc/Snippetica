@@ -1,16 +1,18 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml;
-using static Snippetica.KnownPaths;
 using static Snippetica.KnownNames;
+using static Snippetica.KnownPaths;
+using static Snippetica.CodeGeneration.CodeGenerationUtility;
 
 namespace Snippetica.CodeGeneration.Package.VisualStudio
 {
     public static class HtmlGenerator
     {
-        public static string GenerateVisualStudioMarketplaceDescription(SnippetDirectory[] snippetDirectories)
+        public static string GenerateVisualStudioMarketplaceDescription(IEnumerable<SnippetGeneratorResult> results)
         {
             using (var sw = new StringWriter())
             {
@@ -24,7 +26,7 @@ namespace Snippetica.CodeGeneration.Package.VisualStudio
                 using (XmlWriter x = XmlWriter.Create(sw, xmlWriterSettings))
                 {
                     x.WriteElementString("h3", ProductName);
-                    x.WriteElementString("p", CodeGenerationUtility.GetProjectSubtitle(snippetDirectories));
+                    x.WriteElementString("p", GetProjectSubtitle(results));
 
                     x.WriteElementString("h3", "Links");
 
@@ -47,7 +49,7 @@ namespace Snippetica.CodeGeneration.Package.VisualStudio
                     x.WriteStartElement("li");
                     x.WriteString("Browse all available snippets with ");
                     x.WriteStartElement("a");
-                    x.WriteAttributeString("href", GetSnippetBrowserUrl(Engine.VisualStudio));
+                    x.WriteAttributeString("href", GetSnippetBrowserUrl(EnvironmentKind.VisualStudio));
                     x.WriteString("Snippet Browser");
                     x.WriteEndElement();
                     x.WriteEndElement();
@@ -57,9 +59,9 @@ namespace Snippetica.CodeGeneration.Package.VisualStudio
                     x.WriteElementString("h3", "Snippets");
                     x.WriteStartElement("ul");
 
-                    foreach (SnippetDirectory snippetDirectory in snippetDirectories)
+                    foreach (SnippetGeneratorResult result in results)
                     {
-                        string directoryName = Path.GetFileName(snippetDirectory.Path);
+                        string directoryName = result.DirectoryName;
 
                         x.WriteStartElement("li");
 
@@ -67,11 +69,11 @@ namespace Snippetica.CodeGeneration.Package.VisualStudio
                         x.WriteAttributeString("href", $"{VisualStudioExtensionGitHubUrl}/{directoryName}/{ReadMeFileName}");
                         x.WriteString(directoryName);
                         x.WriteEndElement();
-                        x.WriteString($" ({snippetDirectory.EnumerateSnippets().Count()} snippets)");
+                        x.WriteString($" ({result.Snippets.Count} snippets)");
 
                         x.WriteString(" (");
                         x.WriteStartElement("a");
-                        x.WriteAttributeString("href", GetSnippetBrowserUrl(Engine.VisualStudio, snippetDirectory.Language));
+                        x.WriteAttributeString("href", GetSnippetBrowserUrl(EnvironmentKind.VisualStudio, result.Language));
                         x.WriteString("full list");
                         x.WriteEndElement();
                         x.WriteString(")");

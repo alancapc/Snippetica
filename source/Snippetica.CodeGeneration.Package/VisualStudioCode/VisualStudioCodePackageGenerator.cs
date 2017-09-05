@@ -8,22 +8,28 @@ using Pihrtsoft.Snippets;
 using Snippetica.CodeGeneration.Json;
 using Snippetica.CodeGeneration.Json.Package;
 using Snippetica.CodeGeneration.Markdown;
-using Snippetica.CodeGeneration.Package;
 using Snippetica.IO;
+using static Snippetica.KnownNames;
 using static Snippetica.KnownPaths;
 
 namespace Snippetica.CodeGeneration.Package.VisualStudioCode
 {
     public class VisualStudioCodePackageGenerator : PackageGenerator
     {
-        protected override void SaveSnippets(List<Snippet> snippets, SnippetDirectory snippetDirectory)
+        public VisualStudioCodePackageGenerator(SnippetEnvironment environment)
+            : base(environment)
         {
-            base.SaveSnippets(snippets, snippetDirectory);
+        }
 
-            Language language = snippetDirectory.Language;
-            string languageId = snippetDirectory.Language.GetIdentifier();
+        protected override void SaveSnippets(List<Snippet> snippets, SnippetGeneratorResult result)
+        {
+            base.SaveSnippets(snippets, result);
 
-            string directoryPath = snippetDirectory.Path;
+            Language language = result.Language;
+
+            string languageId = result.Language.GetIdentifier();
+
+            string directoryPath = result.Path;
 
             string packageDirectoryPath = Path.Combine(directoryPath, "package");
 
@@ -35,26 +41,20 @@ namespace Snippetica.CodeGeneration.Package.VisualStudioCode
             info.Name += "-" + languageId;
             info.DisplayName += " for " + language.GetTitle();
             info.Description += language.GetTitle() + ".";
-            info.Homepage += $"/{Path.GetFileName(directoryPath)}/{KnownNames.ReadMeFileName}";
+            info.Homepage += $"/{Path.GetFileName(directoryPath)}/{ReadMeFileName}";
             info.Keywords.AddRange(language.GetKeywords());
             info.Snippets.Add(new SnippetInfo() { Language = languageId, Path = $"./snippets/{languageId}.json" });
 
             IOUtility.WriteAllText(Path.Combine(packageDirectoryPath, "package.json"), info.ToString(), IOUtility.UTF8NoBom);
 
-            //TODO: 
-            List<ShortcutInfo> shortcuts = (snippetDirectory.IsDevelopment)
-                ? null
-                : Shortcuts;
+            SnippetListSettings settings = CreateSnippetListSettings(result);
 
-            IOUtility.WriteAllText(
-                Path.Combine(directoryPath, KnownNames.ReadMeFileName),
-                MarkdownGenerator.GenerateDirectoryReadme(snippetDirectory, shortcuts, SnippetListSettings.VisualStudioCode),
-                IOUtility.UTF8NoBom);
+            MarkdownWriter.WriteReadme(directoryPath, snippets, settings);
 
-            IOUtility.WriteAllText(
-                Path.Combine(packageDirectoryPath, KnownNames.ReadMeFileName),
-                MarkdownGenerator.GenerateDirectoryReadme(snippetDirectory, shortcuts, new SnippetListSettings(Engine.VisualStudioCode, addHeading: false, addLinkToTitle: false)),
-                IOUtility.UTF8NoBom);
+            settings.AddLinkToTitle = false;
+            settings.Header = null;
+
+            MarkdownWriter.WriteReadme(packageDirectoryPath, snippets, settings);
         }
 
         private static PackageInfo GetDefaultPackageInfo()
@@ -69,7 +69,7 @@ namespace Snippetica.CodeGeneration.Package.VisualStudioCode
                 Version = "0.5.2",
                 Author = "Josef Pihrt",
                 License = "SEE LICENSE IN LICENSE.TXT",
-                Homepage = $"{SourceGitHubUrl}/Snippetica.VisualStudioCode",
+                Homepage = $"{SourceGitHubUrl}/{VisualStudioCodeExtensionProjectName}",
                 Repository = new RepositoryInfo()
                 {
                     Type = "git",

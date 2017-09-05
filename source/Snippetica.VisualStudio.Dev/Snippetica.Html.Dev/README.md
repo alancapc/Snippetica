@@ -1,4 +1,4 @@
-﻿## Snippetica.Html.Dev
+## Snippetica.Html.Dev
 
 ### List of Selected Snippets
 
