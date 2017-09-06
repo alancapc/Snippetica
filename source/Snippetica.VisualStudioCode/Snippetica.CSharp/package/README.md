@@ -1,5 +1,3 @@
-### Snippet Browser
-
 * Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vscode&language=csharp).
 
 ### Quick Reference
@@ -48,7 +46,6 @@ ll|LinkedList&lt;T&gt;|\-
 m|method declaration|\-
 n|\(equals to\) null|\-
 n|new object creation|\-
-nn|not \(equals to\) null|\-
 no|nameof operator|\-
 o|Object|\-
 oc|ObservableCollection&lt;T&gt;|\-
@@ -77,6 +74,7 @@ u|using statement|\-
 v|local variable|prefix
 v|virtual \(Overridable\)|prefix \(after access modifier\)
 we|while statement|\-
+x|not \(negation\)|\-
 y|yield|\-
 
 ### List of Selected Snippets
@@ -112,7 +110,7 @@ foreach statement|fe
 generic type constraint|where
 IEnumerable&lt;T&gt; type|ge
 if equal to null|ifn
-if not|iff
+if not \_|ifx
 if not equal to null|ifnn
 if not TryParse|ifftp
 if TryParse|iftp

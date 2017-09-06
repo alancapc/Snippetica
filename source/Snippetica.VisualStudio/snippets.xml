@@ -2358,15 +2358,15 @@ $modifier$ class $name$Exception : $base$
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>if not</Title>
-      <Shortcut>iff</Shortcut>
+      <Title>if not _</Title>
+      <Shortcut>ifx</Shortcut>
       <Description>if with condition whether the expression is equal to false</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name IfNot</Keyword>
+        <Keyword>Meta-Name IfNot_</Keyword>
       </Keywords>
     </Header>
     <Snippet>

@@ -353,13 +353,6 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="nn" Description="not (equals to) null" Comment="-">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
   <ShortcutInfo Value="no" Description="nameof operator" Comment="-">
     <Languages>
       <Language>CSharp</Language>
@@ -545,6 +538,13 @@
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="y" Description="yield" Comment="-">
+    <Languages>
+      <Language>CSharp</Language>
+      <Language>VisualBasic</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="x" Description="not (negation)" Comment="-">
     <Languages>
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>

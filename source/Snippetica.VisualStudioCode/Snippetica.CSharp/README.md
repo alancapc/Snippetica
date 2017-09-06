@@ -1,7 +1,5 @@
 ## Snippetica.CSharp
 
-### Snippet Browser
-
 * Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vscode&language=csharp).
 
 ### Quick Reference
@@ -50,7 +48,6 @@ ll|LinkedList&lt;T&gt;|\-
 m|method declaration|\-
 n|\(equals to\) null|\-
 n|new object creation|\-
-nn|not \(equals to\) null|\-
 no|nameof operator|\-
 o|Object|\-
 oc|ObservableCollection&lt;T&gt;|\-
@@ -79,6 +76,7 @@ u|using statement|\-
 v|local variable|prefix
 v|virtual \(Overridable\)|prefix \(after access modifier\)
 we|while statement|\-
+x|not \(negation\)|\-
 y|yield|\-
 
 ### List of Selected Snippets
@@ -114,9 +112,9 @@ Title | Shortcut
 [generic type constraint](GenericTypeConstraint.snippet)|where
 [IEnumerable&lt;T&gt; type](IEnumerableOfTType.snippet)|ge
 [if equal to null](IfEqualToNull.snippet)|ifn
+[if not \_](IfNot_.snippet)|ifx
 [if not equal to null](IfNotEqualToNull.snippet)|ifnn
 [if not TryParse](IfNotTryParse.snippet)|ifftp
-[if not](IfNot.snippet)|iff
 [if TryParse](IfTryParse.snippet)|iftp
 [Int32 variable](Int32Variable.snippet)|vi
 [interface indexer](InterfaceIndexer.snippet)|\_ir

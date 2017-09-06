@@ -88,7 +88,6 @@
               <New Description="(equals to) null" />
               <New Description="new object creation" />
             </Set>
-            <New Value="nn" Description="not (equals to) null" />
             <New Value="no" Description="nameof operator" />
             <New Value="o" Description="Object" />
             <New Value="oc" Description="ObservableCollection&lt;T&gt;" />
@@ -128,6 +127,7 @@
             </Set>
             <New Value="we" Description="while statement" />
             <New Value="y" Description="yield" />
+            <New Value="x" Description="not (negation)" />
           </Add>
         </Add>
       </Records>

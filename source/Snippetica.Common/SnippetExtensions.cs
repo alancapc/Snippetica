@@ -115,9 +115,7 @@ namespace Snippetica
 
         public static Snippet RemoveTag(this Snippet snippet, string tag)
         {
-            MetaValueInfo info = FindMetaValue(snippet, KnownTags.Tag, tag);
-
-            if (info.Success)
+            if (TryGetMetaValue(snippet, KnownTags.Tag, tag, out MetaValueInfo info))
                 snippet.Keywords.RemoveAt(info.KeywordIndex);
 
             return snippet;
@@ -142,6 +140,18 @@ namespace Snippetica
         public static bool HasTag(this Snippet snippet, string tag)
         {
             return FindMetaValue(snippet, KnownTags.Tag, tag).Success;
+        }
+
+        public static bool TryGetMetaValue(this Snippet snippet, string name, out MetaValueInfo info)
+        {
+            return TryGetMetaValue(snippet, name, null, out info);
+        }
+
+        public static bool TryGetMetaValue(this Snippet snippet, string name, string value, out MetaValueInfo info)
+        {
+            info = FindMetaValue(snippet, name, value);
+
+            return info.Success;
         }
 
         public static MetaValueInfo FindMetaValue(this Snippet snippet, string name, string value = null)

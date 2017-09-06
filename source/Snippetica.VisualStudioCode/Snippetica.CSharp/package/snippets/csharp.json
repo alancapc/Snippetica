@@ -795,8 +795,8 @@
     ],
     "description": "if equal to null"
   },
-  "if not": {
-    "prefix": "iff",
+  "if not _": {
+    "prefix": "ifx",
     "body": [
       "if (!${1:x})",
       "{",

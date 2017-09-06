@@ -12,24 +12,6 @@ namespace Snippetica.CodeGeneration.Markdown
 {
     public static class MarkdownGenerator
     {
-        public static void GenerateSolutionReadme(
-            List<List<SnippetGeneratorResult>> results,
-            TextWriter writer,
-            ProjectReadmeSettings settings)
-        {
-            writer.WriteLine($"## {ProductName}");
-            writer.WriteLine();
-
-            writer.WriteLine($"* {GetProjectSubtitle(results.SelectMany(f => f))}");
-            writer.WriteLine($"* [Release Notes]({MasterGitHubUrl}/{$"{ChangeLogFileName}"}).");
-            writer.WriteLine();
-
-            foreach (List<SnippetGeneratorResult> results2 in results)
-            {
-                GenerateProjectReadme(results2, settings);
-            }
-        }
-
         public static string GenerateProjectReadme(
             IEnumerable<SnippetGeneratorResult> results,
             ProjectReadmeSettings settings)
@@ -49,15 +31,15 @@ namespace Snippetica.CodeGeneration.Markdown
         {
             if (!string.IsNullOrEmpty(settings.Header))
             {
-                writer.WriteLine($"### {settings.Header}");
+                writer.WriteLine($"## {settings.Header}");
                 writer.WriteLine();
             }
 
-            writer.WriteLine($"* Browse snippets with [Snippet Browser]({GetSnippetBrowserUrl(settings.Environment.Kind)}).");
+            writer.WriteLine($"* Browse all available snippets with [Snippet Browser]({GetSnippetBrowserUrl(settings.Environment.Kind)}).");
             writer.WriteLine($"* Download extension from [Marketplace](http://marketplace.visualstudio.com/search?term=publisher%3A\"Josef%20Pihrt\"%20{ProductName}&target={settings.Environment.Kind.GetIdentifier()}&sortBy=Name).");
             writer.WriteLine();
 
-            writer.WriteLine("#### Snippets");
+            writer.WriteLine("### Snippets");
             writer.WriteLine();
 
             writer.WriteLine("Group|Count| |");
@@ -94,9 +76,6 @@ namespace Snippetica.CodeGeneration.Markdown
 
             if (!settings.IsDevelopment)
             {
-                writer.WriteLine("### Snippet Browser");
-                writer.WriteLine();
-
                 writer.WriteLine($"* Browse all available snippets with [Snippet Browser]({GetSnippetBrowserUrl(settings.Environment.Kind, settings.Language)}).");
                 writer.WriteLine();
             }

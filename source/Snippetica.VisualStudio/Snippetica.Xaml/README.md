@@ -1,7 +1,5 @@
 ## Snippetica.Xaml
 
-### Snippet Browser
-
 * Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vs&language=xaml).
 
 ### Quick Reference

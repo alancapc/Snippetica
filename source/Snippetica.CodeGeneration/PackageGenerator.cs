@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -28,7 +29,7 @@ namespace Snippetica.CodeGeneration
             {
                 result.Path = Path.Combine(directoryPath, result.DirectoryName);
 
-                List<Snippet> snippets = ProcessSnippets(result.Snippets).ToList();
+                List<Snippet> snippets = PostProcess(result.Snippets).ToList();
 
                 ValidateSnippets(snippets);
 
@@ -57,9 +58,65 @@ namespace Snippetica.CodeGeneration
             Validator.ThrowOnDuplicateFileName(snippets);
         }
 
-        protected virtual IEnumerable<Snippet> ProcessSnippets(List<Snippet> snippets)
+        protected virtual IEnumerable<Snippet> PostProcess(List<Snippet> snippets)
         {
-            return snippets;
+            foreach (Snippet snippet in snippets)
+            {
+                if (snippet.TryGetMetaValue(KnownTags.Environment, out MetaValueInfo info))
+                {
+                    if (string.Equals(info.Value, Environment.Kind.GetIdentifier()))
+                    {
+                        snippet.Keywords.RemoveAt(info.KeywordIndex);
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+
+                if (snippet.HasTag(KnownTags.NonUniqueTitle))
+                {
+                    snippet.Title += " _";
+                    snippet.RemoveTag(KnownTags.NonUniqueTitle);
+                }
+
+                CheckObsoleteSnippet(snippet);
+
+                snippet.SortCollections();
+
+                snippet.Author = "Josef Pihrt";
+
+                if (snippet.SnippetTypes == SnippetTypes.None)
+                    snippet.SnippetTypes = SnippetTypes.Expansion;
+
+                yield return snippet;
+            }
+        }
+
+        private static void CheckObsoleteSnippet(Snippet snippet)
+        {
+            if (snippet.TryGetMetaValue(KnownTags.Obsolete, out MetaValueInfo info))
+            {
+                string s = $"Shortcut '{snippet.Shortcut}' is obsolete, use '{info.Value}' instead.";
+
+                if (snippet.Language == Language.CSharp)
+                {
+                    s = $"/* {s} */";
+                }
+                else if (snippet.Language == Language.VisualBasic)
+                {
+                    s = $"' {s}\r\n";
+                }
+                else
+                {
+                    throw new NotSupportedException(snippet.Language.ToString());
+                }
+
+                snippet.CodeText += s;
+
+                snippet.Keywords.RemoveAt(info.KeywordIndex);
+                snippet.AddTag(KnownTags.ExcludeFromSnippetBrowser);
+            }
         }
     }
 }

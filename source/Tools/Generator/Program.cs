@@ -50,7 +50,7 @@ namespace Snippetica.CodeGeneration
 
             using (var sw = new StringWriter())
             {
-                sw.WriteLine($"## {ProductName}");
+                sw.WriteLine($"# {ProductName}");
                 sw.WriteLine();
 
                 IEnumerable<Language> languages = visualStudioResults
@@ -59,7 +59,6 @@ namespace Snippetica.CodeGeneration
 
                 sw.WriteLine($"* {CodeGenerationUtility.GetProjectSubtitle(languages)}");
                 sw.WriteLine($"* [Release Notes]({MasterGitHubUrl}/{$"{ChangeLogFileName}"}).");
-                sw.WriteLine();
 
                 MarkdownGenerator.GenerateProjectReadme(visualStudioResults, sw, visualStudio.CreateProjectReadmeSettings());
 

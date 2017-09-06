@@ -58,15 +58,13 @@ namespace Snippetica.CodeGeneration.VisualStudio
             document.Save();
         }
 
-        protected override IEnumerable<Snippet> ProcessSnippets(List<Snippet> snippets)
+        protected override IEnumerable<Snippet> PostProcess(List<Snippet> snippets)
         {
-            foreach (Snippet snippet in snippets)
+            foreach (Snippet snippet in base.PostProcess(snippets))
             {
                 snippet.RemoveTag(KnownTags.ExcludeFromVisualStudioCode);
 
-                MetaValueInfo info = snippet.FindMetaValue(KnownTags.Shortcut);
-
-                if (info.Success)
+                if (snippet.TryGetMetaValue(KnownTags.Shortcut, out MetaValueInfo info))
                     snippet.Keywords.RemoveAt(info.KeywordIndex);
 
                 yield return snippet;

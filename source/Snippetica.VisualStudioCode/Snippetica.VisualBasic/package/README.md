@@ -1,5 +1,3 @@
-### Snippet Browser
-
 * Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vscode&language=vb).
 
 ### Quick Reference
@@ -49,7 +47,6 @@ m|method declaration|\-
 me|Module declaration|\-
 n|\(equals to\) null|\-
 n|new object creation|\-
-nn|not \(equals to\) null|\-
 no|nameof operator|\-
 o|Object|\-
 oc|ObservableCollection&lt;T&gt;|\-
@@ -77,6 +74,7 @@ u|using statement|\-
 v|local variable|prefix
 v|virtual \(Overridable\)|prefix \(after access modifier\)
 we|while statement|\-
+x|not \(negation\)|\-
 y|yield|\-
 
 ### List of Selected Snippets

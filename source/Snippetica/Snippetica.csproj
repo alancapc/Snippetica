@@ -266,6 +266,7 @@
     <None Include="Snippetica.CSharp\IEqualityComparerOfTClass.snippet" />
     <None Include="Snippetica.CSharp\If.snippet_" />
     <None Include="Snippetica.CSharp\IfEqualToNull.snippet" />
+    <None Include="Snippetica.CSharp\IfNot_.snippet" />
     <None Include="Snippetica.CSharp\IfNot.snippet" />
     <None Include="Snippetica.CSharp\IfNotEqualToNull.snippet" />
     <None Include="Snippetica.CSharp\Int32Variable.snippet" />
