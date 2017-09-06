@@ -4,172 +4,204 @@
 
 * Default access modifier is **public**.
 
+#### Member Declaration
+
 Character\(s\) | Description | Comment
------------- | ----------- | -------
-\_|interface member|prefix
-\_|with initializer|suffix
-\_|with parameters|suffix
-a|Array|\-
-b|Boolean|\-
-c|catch|\-
+-------------- | ----------- | -------
+\_|interface member declaration|prefix
 c|class declaration|\-
-c|Collection&lt;T&gt;|\-
-co|conditional operator|\-
 cr|constructor declaration|\-
-d|default|\-
-d|Dictionary&lt;TKey,TValue&gt;|\-
 de|delegate declaration|\-
-dt|DateTime|\-
-e|else clause|\-
-e|IEnumerable&lt;T&gt;|\-
 em|enum declaration|\-
 et|event declaration|\-
-f|false|\-
 f|field declaration|\-
-f|finally|\-
-fe|foreach statement|\-
-fr|for statement|\-
-g|generic type|prefix
-g|type parameter|\-
-hs|HashSet&lt;T&gt;|\-
-i|Immutable|prefix
-i|Int32|\-
-i|internal \(Friend\)|prefix
 ie|inteface declaration|\-
-if|if statement|\-
 ir|indexer declaration|\-
 k|constant declaration|\-
-l|Int64|\-
-l|lambda expression|\-
-l|List&lt;T&gt;|\-
-ll|LinkedList&lt;T&gt;|\-
 m|method declaration|\-
-n|\(equals to\) null|\-
-n|new object creation|\-
-no|nameof operator|\-
-o|Object|\-
-oc|ObservableCollection&lt;T&gt;|\-
-oo|operator overload|\-
-p|private|prefix
 p|property declaration|\-
-pa|parameter array|\-
-pp|preprocessor directive|prefix
 pp|property declaration \(expanded\)|\-
-ps|private set|\-
-q|Queue&lt;T&gt;|\-
+st|struct declaration|\-
+
+#### Modifer
+
+Character\(s\) | Description | Comment
+-------------- | ----------- | -------
+i|internal \(Friend\)|prefix
+p|private|prefix
 r|read\-only|\-
-r|return|\-
-re|return|\-
-s|Stack&lt;T&gt;|\-
 s|static \(Shared\)|prefix \(after access modifier\)
-s|String|\-
+v|virtual \(Overridable\)|prefix \(after access modifier\)
+
+#### Statement
+
+Character\(s\) | Description | Comment
+-------------- | ----------- | -------
+fe|foreach statement|\-
+fr|for statement|\-
+if|if statement|\-
+re|return statement|\-
 sh|switch statement|\-
-st|struct|\-
-t|explict cast operator|\-
-t|true|\-
-t|try|\-
-to|typeof operator|\-
+t|try statement|\-
 tw|throw statement|\-
 u|using statement|\-
-v|local variable|prefix
-v|virtual \(Overridable\)|prefix \(after access modifier\)
 we|while statement|\-
-x|not \(negation\)|prefix
+
+#### Operator
+
+Character\(s\) | Description | Comment
+-------------- | ----------- | -------
+co|conditional operator|\-
+no|nameof operator|\-
+oo|operator overload|\-
+t|explict cast operator|\-
+to|typeof operator|\-
+x|logical not operator|prefix
+
+#### Keyword
+
+Character\(s\) | Description | Comment
+-------------- | ----------- | -------
+d|default|\-
+f|false|\-
+r|return|\-
+t|true|\-
 y|yield|\-
+
+#### Type
+
+Character\(s\) | Description | Comment
+-------------- | ----------- | -------
+a|Array|\-
+b|Boolean|\-
+c|Collection&lt;T&gt;|\-
+d|Dictionary&lt;TKey,TValue&gt;|\-
+dt|DateTime|\-
+e|IEnumerable&lt;T&gt;|\-
+hs|HashSet&lt;T&gt;|\-
+i|Int32|\-
+l|Int64|\-
+l|List&lt;T&gt;|\-
+ll|LinkedList&lt;T&gt;|\-
+o|Object|\-
+oc|ObservableCollection&lt;T&gt;|\-
+q|Queue&lt;T&gt;|\-
+s|Stack&lt;T&gt;|\-
+s|String|\-
+
+#### Other
+
+Character\(s\) | Description | Comment
+-------------- | ----------- | -------
+\_|with initializer|suffix
+\_|with parameters|suffix
+c|catch clause|\-
+e|else clause|\-
+f|finally clause|\-
+g|generic type|prefix
+g|type parameter|\-
+i|Immutable|prefix
+l|lambda expression|\-
+n|\(equals to\) null|\-
+n|new object creation|\-
+pa|parameter array|\-
+pp|preprocessor directive|prefix
+ps|private set|\-
+v|local variable declaration|prefix
 
 ### List of Selected Snippets
 
-Title | Shortcut
------ | --------
- type parameter|g
-?: operator|co
-\!string\.IsNullOrEmpty|xsne
-\!string\.IsNullOrWhiteSpace|xsnw
-\#if preprocessor directive|ppif
-\#if\-\#else preprocessor directive|ppife
-\#region preprocessor directive|ppr
-array variable|va
-Boolean variable|vb
-braces|b
+Shortcut | Title
+-------- | -----
+\_ir|interface indexer
+\_m|interface method
+\_p|interface property
+\_rp|interface read\-only property
+b|braces
+c|public class
 catch|catch
-containing type name|this
-DateTime type|dt
-Debug\.Assert|da
-Debug\.WriteLine|dw
-default keyword|d
-dispose pattern|dispose
-else|e
-else\-if|eif
-equal to null|n
-Equals and GetHashCode|equals
-explicit cast operator|t
+co|?: operator
+cr|public constructor
+d|default keyword
+da|Debug\.Assert
+de|public delegate
+dispose|dispose pattern
+dt|DateTime type
+dw|Debug\.WriteLine
+e|else
+eif|else\-if
+em|public enum
+equals|Equals and GetHashCode
+f|public field
+fe|foreach statement
 finally|finally
-for|fr
-for \(reversed\)|frr
-foreach statement|fe
-generic type constraint|where
-IEnumerable&lt;T&gt; type|ge
-if equal to null|ifn
-if not|ifx
-if not equal to null|ifxn
-if not TryParse|ifxtp
-if TryParse|iftp
-Int32 variable|vi
-interface indexer|\_ir
-interface method|\_m
-interface property|\_p
-interface read\-only property|\_rp
-lambda expression|l
-nameof operator|no
-new variable|vn
-not equal to null|xn
-object keyword|o
-parameter array |pa
-public auto property|p
-public auto property with private setter|pps
-public class|c
-public const|k
-public constructor|cr
-public delegate|de
-public enum|em
-public field|f
-public indexer|ir
-public interface|ie
-public method|m
-public read\-only auto property|rp
-public read\-only field|rf
-public read\-only property|rpp
-public static class|sc
-public static field|sf
-public static method|sm
-public static read\-only auto property|srp
-public static read\-only field|srf
-public static read\-only property|srpp
-public struct|st
-public virtual auto property|vp
-public virtual method|vm
-public virtual read\-only auto property|vrp
-public virtual read\-only property|vrpp
-return false|ref
-return keyword|r
-return null|ren
-return true|ret
-static constructor|scr
-string keyword|s
-String variable|vs
-string\.IsNullOrEmpty|sne
-string\.IsNullOrWhiteSpace|snw
-switch|sh
-throw new|twn
-TODO comment|td
-try\-catch|tc
-try\-catch\-finally|tcf
-try\-finally|tf
-typeof operator|to
-using statement|u
-using static|us
-variable declaration|v
-variable declaration with explicit cast operator|vt
-while|we
-yield break|yb
-yield return|yr
+fr|for
+frr|for \(reversed\)
+g| type parameter
+ge|IEnumerable&lt;T&gt; type
+ie|public interface
+ifn|if equal to null
+iftp|if TryParse
+ifx|if not
+ifxn|if not equal to null
+ifxtp|if not TryParse
+ir|public indexer
+k|public const
+l|lambda expression
+m|public method
+n|equal to null
+no|nameof operator
+o|object keyword
+p|public auto property
+pa|parameter array 
+ppif|\#if preprocessor directive
+ppife|\#if\-\#else preprocessor directive
+ppr|\#region preprocessor directive
+pps|public auto property with private setter
+r|return keyword
+ref|return false
+ren|return null
+ret|return true
+rf|public read\-only field
+rp|public read\-only auto property
+rpp|public read\-only property
+s|string keyword
+sc|public static class
+scr|static constructor
+sf|public static field
+sh|switch
+sm|public static method
+sne|string\.IsNullOrEmpty
+snw|string\.IsNullOrWhiteSpace
+srf|public static read\-only field
+srp|public static read\-only auto property
+srpp|public static read\-only property
+st|public struct
+t|explicit cast operator
+tc|try\-catch
+tcf|try\-catch\-finally
+td|TODO comment
+tf|try\-finally
+this|containing type name
+to|typeof operator
+twn|throw new
+u|using statement
+us|using static
+v|variable declaration
+va|array variable
+vb|Boolean variable
+vi|Int32 variable
+vm|public virtual method
+vn|new variable
+vp|public virtual auto property
+vrp|public virtual read\-only auto property
+vrpp|public virtual read\-only property
+vs|String variable
+vt|variable declaration with explicit cast operator
+we|while
+where|generic type constraint
+xn|not equal to null
+xsne|\!string\.IsNullOrEmpty
+xsnw|\!string\.IsNullOrWhiteSpace
+yb|yield break
+yr|yield return

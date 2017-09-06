@@ -6,6 +6,7 @@
         <Property Name="Value" IsRequired="true" />
         <Property Name="Description" IsRequired="true" />
         <Property Name="Comment" />
+        <Property Name="Kind" />
         <Property Name="Languages" IsCollection="true" />
       </Declarations>
       <Records>
@@ -20,114 +21,100 @@
           </Add>
         </Add>
         <Add Languages="CSharp">
-          <New Value="co" Description="conditional operator" />
-          <New Value="sh" Description="switch statement" />
-          <New Value="t" Description="explict cast operator" />
-          <New Value="to" Description="typeof operator" />
+          <New Value="co" Description="conditional operator" Kind="Operator" />
+          <New Value="sh" Description="switch statement" Kind="Statement" />
+          <New Value="t" Description="explict cast operator" Kind="Operator" />
+          <New Value="to" Description="typeof operator" Kind="Operator" />
         </Add>
         <Add Languages="VisualBasic">
-          <New Value="gt" Description="GetType operator" />
-          <New Value="me" Description="Module declaration" />
-          <New Value="sc" Description="Select Case statement" />
-          <New Value="tc" Description="TryCast operator" />
+          <New Value="gt" Description="GetType operator" Kind="Operator" />
+          <New Value="me" Description="Module declaration" Kind="MemberDeclaration" />
+          <New Value="sc" Description="Select Case statement" Kind="Statement" />
+          <New Value="tc" Description="TryCast operator" Kind="Operator" />
         </Add>
         <Add Languages="CSharp">
           <Add Languages="VisualBasic">
-            <New Value="_" Description="interface member" Comment="prefix" />
-            <New Value="_" Description="with parameters" Comment="suffix" />
-            <New Value="_" Description="with initializer" Comment="suffix" />
-            <New Value="a" Description="Array" />
-            <New Value="b" Description="Boolean" />
-            <Set Value="c">
-              <New Description="class declaration" />
-              <New Description="catch" />
-              <New Description="Collection&lt;T&gt;" />
+            <Set Kind="Keyword">
+              <New Value="d" Description="default" />
+              <New Value="f" Description="false" />
+              <New Value="r" Description="return" />
+              <New Value="t" Description="true" />
+              <New Value="y" Description="yield" />
             </Set>
-            <New Value="cr" Description="constructor declaration" />
-            <Set Value="d">
-              <New Description="default" />
-              <New Description="Dictionary&lt;TKey,TValue&gt;" />
+            <Set Kind="MemberDeclaration">
+              <New Value="_" Description="interface member declaration" Comment="prefix" />
+              <New Value="c" Description="class declaration" />
+              <New Value="cr" Description="constructor declaration" />
+              <New Value="de" Description="delegate declaration" />
+              <New Value="em" Description="enum declaration" />
+              <New Value="et" Description="event declaration" />
+              <New Value="f" Description="field declaration" />
+              <New Value="ie" Description="inteface declaration" />
+              <New Value="ir" Description="indexer declaration" />
+              <New Value="k" Description="constant declaration" />
+              <New Value="m" Description="method declaration" />
+              <New Value="p" Description="property declaration" />
+              <New Value="pp" Description="property declaration (expanded)" />
+              <New Value="st" Description="struct declaration" />
             </Set>
-            <New Value="de" Description="delegate declaration" />
-            <New Value="dt" Description="DateTime" />
-            <Set Value="e">
-              <New Description="IEnumerable&lt;T&gt;" />
-              <New Description="else clause" />
+            <Set Kind="Modifier">
+              <New Value="i" Description="internal (Friend)" Comment="prefix" />
+              <New Value="p" Description="private" Comment="prefix" />
+              <New Value="r" Description="read-only" />
+              <New Value="s" Description="static (Shared)" Comment="prefix (after access modifier)" />
+              <New Value="v" Description="virtual (Overridable)" Comment="prefix (after access modifier)" />
             </Set>
-            <New Value="em" Description="enum declaration" />
-            <New Value="et" Description="event declaration" />
-            <Set Value="f">
-              <New Description="finally" />
-              <New Description="field declaration" />
-              <New Description="false" />
+            <Set Kind="Operator">
+              <New Value="no" Description="nameof operator" />
+              <New Value="oo" Description="operator overload" />
+              <New Value="x" Description="logical not operator" Comment="prefix" />
             </Set>
-            <New Value="fe" Description="foreach statement" />
-            <New Value="fr" Description="for statement" />
-            <Set Value="g">
-              <New Description="type parameter" />
-              <New Description="generic type" Comment="prefix" />
+            <Set Kind="Statement">
+              <New Value="fe" Description="foreach statement" />
+              <New Value="fr" Description="for statement" />
+              <New Value="if" Description="if statement" />
+              <New Value="re" Description="return statement" />
+              <New Value="t" Description="try statement" />
+              <New Value="tw" Description="throw statement" />
+              <New Value="u" Description="using statement" />
+              <New Value="we" Description="while statement" />
             </Set>
-            <New Value="hs" Description="HashSet&lt;T&gt;" />
-            <Set Value="i">
-              <New Description="internal (Friend)" Comment="prefix" />
-              <New Description="Int32" />
-              <New Description="Immutable" Comment="prefix" />
+            <Set Kind="Type">
+              <New Value="a" Description="Array" />
+              <New Value="b" Description="Boolean" />
+              <New Value="c" Description="Collection&lt;T&gt;" />
+              <New Value="d" Description="Dictionary&lt;TKey,TValue&gt;" />
+              <New Value="dt" Description="DateTime" />
+              <New Value="e" Description="IEnumerable&lt;T&gt;" />
+              <New Value="hs" Description="HashSet&lt;T&gt;" />
+              <New Value="i" Description="Int32" />
+              <New Value="l" Description="Int64" />
+              <New Value="l" Description="List&lt;T&gt;" />
+              <New Value="ll" Description="LinkedList&lt;T&gt;" />
+              <New Value="o" Description="Object" />
+              <New Value="oc" Description="ObservableCollection&lt;T&gt;" />
+              <New Value="q" Description="Queue&lt;T&gt;" />
+              <New Value="s" Description="Stack&lt;T&gt;" />
+              <New Value="s" Description="String" />
             </Set>
-            <New Value="ie" Description="inteface declaration" />
-            <New Value="if" Description="if statement" />
-            <New Value="ir" Description="indexer declaration" />
-            <New Value="k" Description="constant declaration" />
-            <Set Value="l">
-              <New Description="Int64" />
-              <New Description="List&lt;T&gt;" />
-              <New Description="lambda expression" />
+            <Set Kind="Other">
+              <New Value="_" Description="with parameters" Comment="suffix" />
+              <New Value="_" Description="with initializer" Comment="suffix" />
+              <New Value="c" Description="catch clause" />
+              <New Value="e" Description="else clause" />
+              <New Value="f" Description="finally clause" />
+              <New Value="g" Description="type parameter" />
+              <New Value="g" Description="generic type" Comment="prefix" />
+              <New Value="i" Description="Immutable" Comment="prefix" />
+              <New Value="l" Description="lambda expression" />
+              <New Value="n" Description="(equals to) null" />
+              <New Value="n" Description="new object creation" />
+              <New Value="pa" Description="parameter array" />
+              <New Value="pp" Description="preprocessor directive" Comment="prefix" />
+              <New Value="ps" Description="private set" />
+              <New Value="this" Description="containing type name" Tag="ExcludeFromVisualStudioCode" />
+              <New Value="v" Description="local variable declaration" Comment="prefix" />
             </Set>
-            <New Value="ll" Description="LinkedList&lt;T&gt;" />
-            <New Value="m" Description="method declaration" />
-            <Set Value="n">
-              <New Description="(equals to) null" />
-              <New Description="new object creation" />
-            </Set>
-            <New Value="no" Description="nameof operator" />
-            <New Value="o" Description="Object" />
-            <New Value="oc" Description="ObservableCollection&lt;T&gt;" />
-            <New Value="oo" Description="operator overload" />
-            <Set Value="p">
-              <New Description="property declaration" />
-              <New Description="private" Comment="prefix" />
-            </Set>
-            <New Value="pa" Description="parameter array" />
-            <Set Value="pp">
-              <New Description="preprocessor directive" Comment="prefix" />
-              <New Description="property declaration (expanded)" />
-            </Set>
-            <New Value="ps" Description="private set" />
-            <New Value="q" Description="Queue&lt;T&gt;" />
-            <Set Value="r">
-              <New Description="read-only" />
-              <New Description="return" />
-            </Set>
-            <New Value="re" Description="return" />
-            <Set Value="s">
-              <New Description="static (Shared)" Comment="prefix (after access modifier)" />
-              <New Description="String" />
-              <New Description="Stack&lt;T&gt;" />
-            </Set>
-            <New Value="st" Description="struct" />
-            <Set Value="t">
-              <New Description="true" />
-              <New Description="try" />
-            </Set>
-            <New Value="this" Description="containing type name" Tag="ExcludeFromVisualStudioCode" />
-            <New Value="tw" Description="throw statement" />
-            <New Value="u" Description="using statement" />
-            <Set Value="v">
-              <New Description="local variable" Comment="prefix" />
-              <New Description="virtual (Overridable)" Comment="prefix (after access modifier)" />
-            </Set>
-            <New Value="we" Description="while statement" />
-            <New Value="y" Description="yield" />
-            <New Value="x" Description="not (negation)" Comment="prefix" />
           </Add>
         </Add>
       </Records>

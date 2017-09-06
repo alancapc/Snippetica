@@ -5,8 +5,10 @@
 * Snippet can be inserted by providing full name of an element (for example **div**).
 * If you want to provide element's content right during snippet insertion you can do it by appending **x** to the element name (for example **divx**).
 
+#### 
+
 Character\(s\) | Description | Comment
------------- | ----------- | -------
+-------------- | ----------- | -------
 a|\(element\) with attribute|\-
 e|element|\-
 s|self\-closing \(element\)|\-
@@ -14,8 +16,8 @@ x|\(element\) with content|\-
 
 ### List of Selected Snippets
 
-Title | Shortcut
------ | --------
+Shortcut | Title
+-------- | -----
 a|a
 abbr|abbr
 acronym|acronym
@@ -35,6 +37,7 @@ blockquote|blockquote
 body|body
 br|br
 button|button
+c|comment
 canvas|canvas
 caption|caption
 center|center
@@ -42,11 +45,10 @@ cite|cite
 code|code
 col|col
 colgroup|colgroup
-comment|c
 datalist|datalist
 dd|dd
 del|del
-del\+ins|delins
+delins|del\+ins
 details|details
 dfn|dfn
 dialog|dialog
@@ -54,12 +56,14 @@ dir|dir
 div|div
 dl|dl
 dt|dt
-element|e
-element \(with attribute, with content\)|eax
-element \(with attribute\)|ea
-element \(with content\)|ex
+e|element
+ea|element \(with attribute\)
+eas|self\-closing element \(with attribute\)
+eax|element \(with attribute, with content\)
 em|em
 embed|embed
+es|self\-closing element
+ex|element \(with content\)
 fieldset|fieldset
 figure|figure
 font|font
@@ -67,7 +71,7 @@ footer|footer
 form|form
 frame|frame
 frameset|frameset
-h1|h
+h|h1
 h2|h2
 h3|h3
 h4|h4
@@ -108,7 +112,7 @@ param|param
 pre|pre
 progress|progress
 q|q
-region|r
+r|region
 rp|rp
 rt|rt
 ruby|ruby
@@ -117,8 +121,6 @@ samp|samp
 script|script
 section|section
 select|select
-self\-closing element|es
-self\-closing element \(with attribute\)|eas
 small|small
 source|source
 span|span

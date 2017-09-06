@@ -23,6 +23,8 @@ namespace Snippetica.CodeGeneration.Markdown
 
         public bool AddLinkToTitle { get; set; }
 
+        public bool GroupShortcuts { get; set; }
+
         public List<ShortcutInfo> Shortcuts { get; } = new List<ShortcutInfo>();
     }
 }

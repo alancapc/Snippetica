@@ -130,7 +130,8 @@ namespace Snippetica.CodeGeneration
                 AddLinkToTitle = true,
                 AddQuickReference = !result.IsDevelopment && !result.HasTag(KnownTags.NoQuickReference),
                 Language = result.Language,
-                DirectoryPath = result.Path
+                DirectoryPath = result.Path,
+                GroupShortcuts = true
             };
 
             if (!settings.IsDevelopment)

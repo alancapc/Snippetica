@@ -54,6 +54,8 @@
     <Compile Include="KnownPaths.cs" />
     <Compile Include="LanguageExtensions.cs" />
     <Compile Include="LiteralIdentifiers.cs" />
+    <Compile Include="ShortcutKind.cs" />
+    <Compile Include="ShortcutKindExtensions.cs" />
     <Compile Include="TagInfo.cs" />
     <Compile Include="SnippetDirectoryMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

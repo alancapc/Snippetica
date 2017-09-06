@@ -95,14 +95,36 @@ namespace Snippetica.CodeGeneration.Markdown
                     if (settings.QuickReferenceText != null)
                     {
                         writer.WriteLine(settings.QuickReferenceText);
-                        writer.WriteLine();
                     }
 
-                    using (ShortcutInfoTableWriter tableWriter = ShortcutInfoTableWriter.Create())
+                    if (settings.GroupShortcuts)
                     {
-                        tableWriter.WriteTable(shortcuts);
-                        writer.Write(tableWriter.ToString());
+                        foreach (IGrouping<ShortcutKind, ShortcutInfo> grouping in shortcuts
+                            .GroupBy(f => f.Kind)
+                            .OrderBy(f => f.Key))
+                        {
+                            writer.WriteLine();
+                            writer.WriteLine($"#### {grouping.Key.GetTitle()}");
+                            writer.WriteLine();
+
+                            using (ShortcutInfoTableWriter tableWriter = ShortcutInfoTableWriter.Create())
+                            {
+                                tableWriter.WriteTable(grouping);
+                                writer.Write(tableWriter.ToString());
+                            }
+                        }
                     }
+                    else
+                    {
+                        writer.WriteLine();
+
+                        using (ShortcutInfoTableWriter tableWriter = ShortcutInfoTableWriter.Create())
+                        {
+                            tableWriter.WriteTable(shortcuts);
+                            writer.Write(tableWriter.ToString());
+                        }
+                    }
+
 
                     writer.WriteLine();
                 }
@@ -112,8 +134,8 @@ namespace Snippetica.CodeGeneration.Markdown
             writer.WriteLine();
 
             using (SnippetTableWriter tableWriter = (settings.AddLinkToTitle)
-                ? SnippetTableWriter.CreateTitleWithLinkThenShortcut(settings.DirectoryPath)
-                : SnippetTableWriter.CreateTitleThenShortcut())
+                ? SnippetTableWriter.CreateShortcutThenTitleWithLink(settings.DirectoryPath)
+                : SnippetTableWriter.CreateShortcutThenTitle())
             {
                 snippets = snippets.Where(f => !f.HasTag(KnownTags.ExcludeFromReadme));
 

@@ -4,28 +4,28 @@
 
 ### List of Selected Snippets
 
-Title | Shortcut
------ | --------
-[\#if](preprocessor_directive_if.snippet)|ppif
-[\#ifdef](preprocessor_directive_ifdef.snippet)|ppifd
-[\#ifndef](preprocessor_directive_ifndef.snippet)|ppifnd
-[\#pragma region](preprocessor_directive_region.snippet)|ppr
-[class](Class.snippet)|c
-[constructor](Constructor.snippet)|cr
-[destructor](Destructor.snippet)|dr
-[do\-while](do_while.snippet)|dw
-[else](Else.snippet)|e
-[enum class](enum_class.snippet)|emc
-[enum](Enum.snippet)|em
-[for \(range\-based\)](for_range_based.snippet)|frrb
-[for \(reversed\)](for_reversed.snippet)|frr
-[for each](ForEach.snippet)|fe
-[for](For.snippet)|fr
-[if](If.snippet)|if
-[interface](Interface.snippet)|ie
-[namespace](Namespace.snippet)|ns
-[struct](Struct.snippet)|st
-[switch](Switch.snippet)|sh
-[try\-catch](Try.snippet)|tc
-[union](Union.snippet)|un
-[while](While.snippet)|we
+Shortcut | Title
+-------- | -----
+c|[class](Class.snippet)
+cr|[constructor](Constructor.snippet)
+dr|[destructor](Destructor.snippet)
+dw|[do\-while](do_while.snippet)
+e|[else](Else.snippet)
+em|[enum](Enum.snippet)
+emc|[enum class](enum_class.snippet)
+fe|[for each](ForEach.snippet)
+fr|[for](For.snippet)
+frr|[for \(reversed\)](for_reversed.snippet)
+frrb|[for \(range\-based\)](for_range_based.snippet)
+ie|[interface](Interface.snippet)
+if|[if](If.snippet)
+ns|[namespace](Namespace.snippet)
+ppif|[\#if](preprocessor_directive_if.snippet)
+ppifd|[\#ifdef](preprocessor_directive_ifdef.snippet)
+ppifnd|[\#ifndef](preprocessor_directive_ifndef.snippet)
+ppr|[\#pragma region](preprocessor_directive_region.snippet)
+sh|[switch](Switch.snippet)
+st|[struct](Struct.snippet)
+tc|[try\-catch](Try.snippet)
+un|[union](Union.snippet)
+we|[while](While.snippet)

@@ -27,6 +27,15 @@ namespace Snippetica.CodeGeneration.Markdown
             });
         }
 
+        public static SnippetTableWriter CreateShortcutThenTitle()
+        {
+            return new SnippetTableWriter(new ColumnDefinition[]
+            {
+                new SnippetShortcutColumnDefinition(),
+                new SnippetTitleColumnDefinition()
+            });
+        }
+
         public static SnippetTableWriter CreateShortcutThenTitleWithLink(string directoryPath)
         {
             return new SnippetTableWriter(new ColumnDefinition[]

@@ -4,171 +4,203 @@
 
 * Default access modifier is **Public**.
 
+#### Member Declaration
+
 Character\(s\) | Description | Comment
------------- | ----------- | -------
-\_|interface member|prefix
-\_|with initializer|suffix
-\_|with parameters|suffix
-a|Array|\-
-b|Boolean|\-
-c|catch|\-
+-------------- | ----------- | -------
+\_|interface member declaration|prefix
 c|class declaration|\-
-c|Collection&lt;T&gt;|\-
 cr|constructor declaration|\-
-d|default|\-
-d|Dictionary&lt;TKey,TValue&gt;|\-
 de|delegate declaration|\-
-dt|DateTime|\-
-e|else clause|\-
-e|IEnumerable&lt;T&gt;|\-
 em|enum declaration|\-
 et|event declaration|\-
-f|false|\-
 f|field declaration|\-
-f|finally|\-
-fe|foreach statement|\-
-fr|for statement|\-
-g|generic type|prefix
-g|type parameter|\-
-gt|GetType operator|\-
-hs|HashSet&lt;T&gt;|\-
-i|Immutable|prefix
-i|Int32|\-
-i|internal \(Friend\)|prefix
 ie|inteface declaration|\-
-if|if statement|\-
 ir|indexer declaration|\-
 k|constant declaration|\-
-l|Int64|\-
-l|lambda expression|\-
-l|List&lt;T&gt;|\-
-ll|LinkedList&lt;T&gt;|\-
 m|method declaration|\-
 me|Module declaration|\-
-n|\(equals to\) null|\-
-n|new object creation|\-
-no|nameof operator|\-
-o|Object|\-
-oc|ObservableCollection&lt;T&gt;|\-
-oo|operator overload|\-
-p|private|prefix
 p|property declaration|\-
-pa|parameter array|\-
-pp|preprocessor directive|prefix
 pp|property declaration \(expanded\)|\-
-ps|private set|\-
-q|Queue&lt;T&gt;|\-
+st|struct declaration|\-
+
+#### Modifer
+
+Character\(s\) | Description | Comment
+-------------- | ----------- | -------
+i|internal \(Friend\)|prefix
+p|private|prefix
 r|read\-only|\-
-r|return|\-
-re|return|\-
-s|Stack&lt;T&gt;|\-
 s|static \(Shared\)|prefix \(after access modifier\)
-s|String|\-
+v|virtual \(Overridable\)|prefix \(after access modifier\)
+
+#### Statement
+
+Character\(s\) | Description | Comment
+-------------- | ----------- | -------
+fe|foreach statement|\-
+fr|for statement|\-
+if|if statement|\-
+re|return statement|\-
 sc|Select Case statement|\-
-st|struct|\-
-t|true|\-
-t|try|\-
-tc|TryCast operator|\-
+t|try statement|\-
 tw|throw statement|\-
 u|using statement|\-
-v|local variable|prefix
-v|virtual \(Overridable\)|prefix \(after access modifier\)
 we|while statement|\-
-x|not \(negation\)|prefix
+
+#### Operator
+
+Character\(s\) | Description | Comment
+-------------- | ----------- | -------
+gt|GetType operator|\-
+no|nameof operator|\-
+oo|operator overload|\-
+tc|TryCast operator|\-
+x|logical not operator|prefix
+
+#### Keyword
+
+Character\(s\) | Description | Comment
+-------------- | ----------- | -------
+d|default|\-
+f|false|\-
+r|return|\-
+t|true|\-
 y|yield|\-
+
+#### Type
+
+Character\(s\) | Description | Comment
+-------------- | ----------- | -------
+a|Array|\-
+b|Boolean|\-
+c|Collection&lt;T&gt;|\-
+d|Dictionary&lt;TKey,TValue&gt;|\-
+dt|DateTime|\-
+e|IEnumerable&lt;T&gt;|\-
+hs|HashSet&lt;T&gt;|\-
+i|Int32|\-
+l|Int64|\-
+l|List&lt;T&gt;|\-
+ll|LinkedList&lt;T&gt;|\-
+o|Object|\-
+oc|ObservableCollection&lt;T&gt;|\-
+q|Queue&lt;T&gt;|\-
+s|Stack&lt;T&gt;|\-
+s|String|\-
+
+#### Other
+
+Character\(s\) | Description | Comment
+-------------- | ----------- | -------
+\_|with initializer|suffix
+\_|with parameters|suffix
+c|catch clause|\-
+e|else clause|\-
+f|finally clause|\-
+g|generic type|prefix
+g|type parameter|\-
+i|Immutable|prefix
+l|lambda expression|\-
+n|\(equals to\) null|\-
+n|new object creation|\-
+pa|parameter array|\-
+pp|preprocessor directive|prefix
+ps|private set|\-
+v|local variable declaration|prefix
 
 ### List of Selected Snippets
 
-Title | Shortcut
------ | --------
- type parameter|g
-\#If \#Else preprocessor directive|ppife
-\#If preprocessor directive|ppif
-\#Region preprocessor directive|ppr
-array variable|va
-Boolean variable|vb
-Catch clause|catch
-Containing type name|this
-CType operator|t
-DateTime type|dt
-Debug\.Assert|da
-Debug\.WriteLine|dw
-Dictionary\(Of TKey, TValue\) type|gd
-Dispose|dispose
-Do statement|do
-Else clause|e
-ElseIf|eif
-Equals and GetHashCode|equals
-For \(reversed\)|frr
-For Each statement|fe
-For statement|fr
-GetType|gt
-IEnumerable\(Of T\) type|ge
-IEnumerator\(Of T\) variable|u\_er
-If Is Nothing|ifn
-If IsNot Nothing|ifxn
-If Not|ifx
-if not TryParse|ifxtp
-If TryCast Is Nothing|ifxtc
-If TryCast IsNot Nothing|iftc
-if TryParse|iftp
-Int32 variable|vi
-interface indexer|\_ir
-interface method|\_m
-interface property|\_p
-interface read\-only property|\_rp
-Is Nothing|n
-IsNot Nothing|xn
-Lambda expression|l
-NameOf operator|no
-new variable|vn
-parameter array |pa
-Public auto property|p
-Public class|c
-Public constant|k
-Public constructor|cr
-Public delegate|de
-Public enum|em
-Public field|f
-Public indexer|ir
-Public interface|ie
-Public method|m
-Public module|me
-Public Overridable auto property|vp
-Public Overridable method|vm
-Public Overridable read\-only auto property|vrp
-Public Overridable read\-only Property|vrpp
-Public read\-only auto property|rp
-Public read\-only field|rf
-Public read\-only Property|rpp
-Public Shared field|sf
-Public Shared method|sm
-Public Shared read\-only auto property|srp
-Public Shared read\-only field|srf
-Public Shared read\-only Property|srpp
-Public structure|st
-Return False|ref
-Return Nothing|ren
-Return True|ret
-Select Case statement|sc
-static constructor|scr
-StreamReader Variable|u\_smrr
-StreamWriter Variable|u\_smwr
-String variable|vs
-String\.IsNullOrEmpty|sne
-String\.IsNullOrEmpty = False|xsne
-String\.IsNullOrWhiteSpace|snw
-String\.IsNullOrWhiteSpace = False|xsnw
-StringReader Variable|u\_srr
-StringWriter Variable|u\_swr
-Throw New|twn
-TODO comment|td
-Try\-Catch|tc
-Try\-Catch\-Finally|tcf
-Try\-Finally|tf
-Using statement|u
-variable declaration|v
-variable with DirectCast|vt
-While statement|we
-XmlReader Variable|u\_xmlrr
-XmlWriter Variable|u\_xmlwr
+Shortcut | Title
+-------- | -----
+\_ir|interface indexer
+\_m|interface method
+\_p|interface property
+\_rp|interface read\-only property
+c|Public class
+catch|Catch clause
+cr|Public constructor
+da|Debug\.Assert
+de|Public delegate
+dispose|Dispose
+do|Do statement
+dt|DateTime type
+dw|Debug\.WriteLine
+e|Else clause
+eif|ElseIf
+em|Public enum
+equals|Equals and GetHashCode
+f|Public field
+fe|For Each statement
+fr|For statement
+frr|For \(reversed\)
+g| type parameter
+gd|Dictionary\(Of TKey, TValue\) type
+ge|IEnumerable\(Of T\) type
+gt|GetType
+ie|Public interface
+ifn|If Is Nothing
+iftc|If TryCast IsNot Nothing
+iftp|if TryParse
+ifx|If Not
+ifxn|If IsNot Nothing
+ifxtc|If TryCast Is Nothing
+ifxtp|if not TryParse
+ir|Public indexer
+k|Public constant
+l|Lambda expression
+m|Public method
+me|Public module
+n|Is Nothing
+no|NameOf operator
+p|Public auto property
+pa|parameter array 
+ppif|\#If preprocessor directive
+ppife|\#If \#Else preprocessor directive
+ppr|\#Region preprocessor directive
+ref|Return False
+ren|Return Nothing
+ret|Return True
+rf|Public read\-only field
+rp|Public read\-only auto property
+rpp|Public read\-only Property
+sc|Select Case statement
+scr|static constructor
+sf|Public Shared field
+sm|Public Shared method
+sne|String\.IsNullOrEmpty
+snw|String\.IsNullOrWhiteSpace
+srf|Public Shared read\-only field
+srp|Public Shared read\-only auto property
+srpp|Public Shared read\-only Property
+st|Public structure
+t|CType operator
+tc|Try\-Catch
+tcf|Try\-Catch\-Finally
+td|TODO comment
+tf|Try\-Finally
+this|Containing type name
+twn|Throw New
+u|Using statement
+u\_er|IEnumerator\(Of T\) variable
+u\_smrr|StreamReader Variable
+u\_smwr|StreamWriter Variable
+u\_srr|StringReader Variable
+u\_swr|StringWriter Variable
+u\_xmlrr|XmlReader Variable
+u\_xmlwr|XmlWriter Variable
+v|variable declaration
+va|array variable
+vb|Boolean variable
+vi|Int32 variable
+vm|Public Overridable method
+vn|new variable
+vp|Public Overridable auto property
+vrp|Public Overridable read\-only auto property
+vrpp|Public Overridable read\-only Property
+vs|String variable
+vt|variable with DirectCast
+we|While statement
+xn|IsNot Nothing
+xsne|String\.IsNullOrEmpty = False
+xsnw|String\.IsNullOrWhiteSpace = False

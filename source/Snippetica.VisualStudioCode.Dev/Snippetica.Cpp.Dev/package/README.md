@@ -1,5 +1,5 @@
 ### List of Selected Snippets
 
-Title | Shortcut
------ | --------
-Class with Inline Constructor/Destructor|ci
+Shortcut | Title
+-------- | -----
+ci|Class with Inline Constructor/Destructor

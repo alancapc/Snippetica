@@ -1,113 +1,113 @@
 ### List of Selected Snippets
 
-Title | Shortcut
------ | --------
-?: operator \(equal to null\)|con
-?: operator \(not equal to null\)|coxn
-array type|a
-Assembly attribute|ae\_ay
-break statement|bk
-Conditional attribute|ae\_cl
-continue statement|ce
-Debug\.Assert \!= null|daxn
-DebuggerDisplay attribute|ae\_dd
-DebuggerStepThrough attribute|ae\_dst
-Dictionary&lt;TKey, TValue&gt; type|gd
-Dictionary&lt;TKey, TValue&gt; variable|vd
-Directory\.CreateDirectory|iod\_cd
-Directory\.Delete|iod\_d
-Directory\.EnumerateDirectories|iod\_ed
-Directory\.EnumerateFiles|iod\_ef
-Directory\.Exists|iod\_e
-Directory\.GetDirectories|iod\_gd
-Directory\.GetFiles|iod\_gf
-Directory\.Move|iod\_m
-do while not null|doxn
-do while null|don
-Enumerable\.Cast|q\_c
-Enumerable\.Empty|q\_e
-Enumerable\.First|q\_f
-Enumerable\.FirstOrDefault|q\_fod
-Enumerable\.GroupBy|q\_gb
-Enumerable\.GroupJoin|q\_gj
-Enumerable\.Join|q\_j
-Enumerable\.Last|q\_l
-Enumerable\.LastOrDefault|q\_lod
-Enumerable\.Max|q\_mx
-Enumerable\.Min|q\_mn
-Enumerable\.OfType|q\_ot
-Enumerable\.OrderBy|q\_ob
-Enumerable\.OrderByDescending|q\_obd
-Enumerable\.Select|q\_s
-Enumerable\.SelectMany|q\_sm
-Enumerable\.SingleOrDefault|q\_sod
-Enumerable\.SkipWhile|q\_sw
-Enumerable\.TakeWhile|q\_tw
-Enumerable\.ThenBy|q\_tb
-Enumerable\.ThenByDescending|q\_tbd
-Enumerable\.Where|q\_w
-Enumerable\.Where not equal to null|q\_wxn
-Enumerable\.Zip|q\_z
-File Exists|iof\_e
-File\.Copy|iof\_c
-File\.Delete|iof\_d
-File\.Move|iof\_m
-File\.ReadAllLines|iof\_ral
-File\.ReadAllText|iof\_rat
-File\.ReadLines|iof\_rl
-File\.WriteAllLines|iof\_wal
-File\.WriteAllText|iof\_wat
-FileStream Variable|u\_fesm
-Flags attribute|ae\_fs
-HashSet&lt;T&gt; type|ghs
-HashSet&lt;T&gt; variable|vhs
-if \!string\.IsNullOrEmpty|ifxsne
-if \!string\.IsNullOrWhiteSpace|ifxsnw
-if Enum\.TryParse|ifemtp
-if not Enum\.TryParse|ifxemtp
-if string\.IsNullOrEmpty|ifsne
-if string\.IsNullOrWhiteSpace|ifsnw
-internal abstract modifiers|x\_ia
-internal modifier|x\_i
-internal static modifiers|x\_is
-internal virtual modifiers|x\_iv
-lambda expression with 2 parameters|l2
-List&lt;T&gt; type|gl
-List&lt;T&gt; variable|vl
-MemoryStream Variable|u\_mysm
-namespace|ns
-new array |na
-ObservableCollection&lt;T&gt; type|goc
-ObservableCollection&lt;T&gt; variable|voc
-Obsolete attribute|ae\_oe
-override modifier|oe
-Path\.Combine|iop\_c
-Path\.GetDirectoryName|iop\_gdn
-Path\.GetExtension|iop\_ge
-Path\.GetFileName|iop\_gfn
-Path\.GetFileNameWithoutExtension|iop\_gfnwe
-Path\.GetFullPath|iop\_gfp
-Path\.HasExtension|iop\_he
-Path\.ChangeExtension|iop\_ce
-private modifier|x\_p
-private static modifiers|x\_ps
-protected abstract modifiers|x\_da
-protected modifier|x\_d
-protected virtual modifiers|x\_dv
-public abstract modifiers|x\_a
-public modifier|x
-public static modifiers|x\_s
-public virtual modifiers|x\_v
-readonly modifier|ro
-Regex type|rx
-return new|rn
-return new containing type|rnthis
-return statement|re
-StringBuilder variable|vsb
-throw statement|tw
-TimeSpan type|ts
-variable declaration with as operator \+ if not null|vasxn
-while not null|wexn
-while null|wen
-yield return new|yrn
-yield return new containing type|yrnthis
+Shortcut | Title
+-------- | -----
+a|array type
+ae\_ay|Assembly attribute
+ae\_cl|Conditional attribute
+ae\_dd|DebuggerDisplay attribute
+ae\_dst|DebuggerStepThrough attribute
+ae\_fs|Flags attribute
+ae\_oe|Obsolete attribute
+bk|break statement
+ce|continue statement
+con|?: operator \(equal to null\)
+coxn|?: operator \(not equal to null\)
+daxn|Debug\.Assert \!= null
+don|do while null
+doxn|do while not null
+gd|Dictionary&lt;TKey, TValue&gt; type
+ghs|HashSet&lt;T&gt; type
+gl|List&lt;T&gt; type
+goc|ObservableCollection&lt;T&gt; type
+ifemtp|if Enum\.TryParse
+ifsne|if string\.IsNullOrEmpty
+ifsnw|if string\.IsNullOrWhiteSpace
+ifxemtp|if not Enum\.TryParse
+ifxsne|if \!string\.IsNullOrEmpty
+ifxsnw|if \!string\.IsNullOrWhiteSpace
+iod\_cd|Directory\.CreateDirectory
+iod\_d|Directory\.Delete
+iod\_e|Directory\.Exists
+iod\_ed|Directory\.EnumerateDirectories
+iod\_ef|Directory\.EnumerateFiles
+iod\_gd|Directory\.GetDirectories
+iod\_gf|Directory\.GetFiles
+iod\_m|Directory\.Move
+iof\_c|File\.Copy
+iof\_d|File\.Delete
+iof\_e|File Exists
+iof\_m|File\.Move
+iof\_ral|File\.ReadAllLines
+iof\_rat|File\.ReadAllText
+iof\_rl|File\.ReadLines
+iof\_wal|File\.WriteAllLines
+iof\_wat|File\.WriteAllText
+iop\_c|Path\.Combine
+iop\_ce|Path\.ChangeExtension
+iop\_gdn|Path\.GetDirectoryName
+iop\_ge|Path\.GetExtension
+iop\_gfn|Path\.GetFileName
+iop\_gfnwe|Path\.GetFileNameWithoutExtension
+iop\_gfp|Path\.GetFullPath
+iop\_he|Path\.HasExtension
+l2|lambda expression with 2 parameters
+na|new array 
+ns|namespace
+oe|override modifier
+q\_c|Enumerable\.Cast
+q\_e|Enumerable\.Empty
+q\_f|Enumerable\.First
+q\_fod|Enumerable\.FirstOrDefault
+q\_gb|Enumerable\.GroupBy
+q\_gj|Enumerable\.GroupJoin
+q\_j|Enumerable\.Join
+q\_l|Enumerable\.Last
+q\_lod|Enumerable\.LastOrDefault
+q\_mn|Enumerable\.Min
+q\_mx|Enumerable\.Max
+q\_ob|Enumerable\.OrderBy
+q\_obd|Enumerable\.OrderByDescending
+q\_ot|Enumerable\.OfType
+q\_s|Enumerable\.Select
+q\_sm|Enumerable\.SelectMany
+q\_sod|Enumerable\.SingleOrDefault
+q\_sw|Enumerable\.SkipWhile
+q\_tb|Enumerable\.ThenBy
+q\_tbd|Enumerable\.ThenByDescending
+q\_tw|Enumerable\.TakeWhile
+q\_w|Enumerable\.Where
+q\_wxn|Enumerable\.Where not equal to null
+q\_z|Enumerable\.Zip
+re|return statement
+rn|return new
+rnthis|return new containing type
+ro|readonly modifier
+rx|Regex type
+ts|TimeSpan type
+tw|throw statement
+u\_fesm|FileStream Variable
+u\_mysm|MemoryStream Variable
+vasxn|variable declaration with as operator \+ if not null
+vd|Dictionary&lt;TKey, TValue&gt; variable
+vhs|HashSet&lt;T&gt; variable
+vl|List&lt;T&gt; variable
+voc|ObservableCollection&lt;T&gt; variable
+vsb|StringBuilder variable
+wen|while null
+wexn|while not null
+x|public modifier
+x\_a|public abstract modifiers
+x\_d|protected modifier
+x\_da|protected abstract modifiers
+x\_dv|protected virtual modifiers
+x\_i|internal modifier
+x\_ia|internal abstract modifiers
+x\_is|internal static modifiers
+x\_iv|internal virtual modifiers
+x\_p|private modifier
+x\_ps|private static modifiers
+x\_s|public static modifiers
+x\_v|public virtual modifiers
+yrn|yield return new
+yrnthis|yield return new containing type

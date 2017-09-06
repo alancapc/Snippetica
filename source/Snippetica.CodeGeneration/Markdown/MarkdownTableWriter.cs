@@ -67,7 +67,7 @@ namespace Snippetica.CodeGeneration.Markdown
                     Write(" ");
                 }
 
-                Write(new string('-', definition.Title.Length));
+                Write(new string('-', MarkdownHelper.Escape(definition.Title).Length));
             }
 
             WriteLine();
@@ -111,7 +111,7 @@ namespace Snippetica.CodeGeneration.Markdown
         {
             bool isFirst = true;
 
-            foreach (ColumnDefinition definitions in ColumnDefinitions)
+            foreach (ColumnDefinition definition in ColumnDefinitions)
             {
                 if (isFirst)
                 {
@@ -122,7 +122,7 @@ namespace Snippetica.CodeGeneration.Markdown
                     WriteColumnSeparator();
                 }
 
-                Write(definitions.GetValue(value));
+                Write(definition.GetValue(value));
             }
 
             WriteLine();

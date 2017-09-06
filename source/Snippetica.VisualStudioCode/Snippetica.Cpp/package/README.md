@@ -2,28 +2,28 @@
 
 ### List of Selected Snippets
 
-Title | Shortcut
------ | --------
-\#if|ppif
-\#ifdef|ppifd
-\#ifndef|ppifnd
-\#pragma region|ppr
-class|c
-constructor|cr
-destructor|dr
-do\-while|dw
-else|e
-enum|em
-enum class|emc
-for|fr
-for \(range\-based\)|frrb
-for \(reversed\)|frr
-for each|fe
+Shortcut | Title
+-------- | -----
+c|class
+cr|constructor
+dr|destructor
+dw|do\-while
+e|else
+em|enum
+emc|enum class
+fe|for each
+fr|for
+frr|for \(reversed\)
+frrb|for \(range\-based\)
+ie|interface
 if|if
-interface|ie
-namespace|ns
-struct|st
-switch|sh
-try\-catch|tc
-union|un
-while|we
+ns|namespace
+ppif|\#if
+ppifd|\#ifdef
+ppifnd|\#ifndef
+ppr|\#pragma region
+sh|switch
+st|struct
+tc|try\-catch
+un|union
+we|while

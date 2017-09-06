@@ -18,12 +18,14 @@ namespace Snippetica.CodeGeneration
             string value,
             string description,
             string comment,
+            ShortcutKind kind,
             IEnumerable<Language> languages,
             IEnumerable<string> tags)
         {
             Value = value;
             Description = description;
             Comment = comment;
+            Kind = kind;
             Languages = new ReadOnlyCollection<Language>(languages.ToArray());
             Tags = new ReadOnlyCollection<string>(tags.ToArray());
         }
@@ -33,6 +35,8 @@ namespace Snippetica.CodeGeneration
         public string Description { get; }
 
         public string Comment { get; }
+
+        public ShortcutKind Kind { get; }
 
         public ReadOnlyCollection<Language> Languages { get; }
 
@@ -53,6 +57,7 @@ namespace Snippetica.CodeGeneration
                         record.GetString("Value"),
                         record.GetString("Description"),
                         record.GetStringOrDefault("Comment", "-"),
+                        record.GetEnumOrDefault("Kind", ShortcutKind.None),
                         record.GetItems("Languages").Select(f => (Language)Enum.Parse(typeof(Language), f)),
                         record.GetTags());
                 });
