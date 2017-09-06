@@ -98,39 +98,34 @@ namespace Snippetica
 
         public static void AddTag(this Snippet snippet, string tag)
         {
-            AddKeyword(snippet, KnownTags.MetaTagPrefix + tag);
-        }
+            if (!tag.StartsWith(KnownTags.MetaPrefix))
+                tag = KnownTags.MetaPrefix + tag;
 
-        public static void AddTags(this Snippet snippet, IEnumerable<string> tags)
-        {
-            foreach (string tag in tags)
-                AddTag(snippet, tag);
+            AddKeyword(snippet, tag);
         }
 
         public static void AddTags(this Snippet snippet, params string[] tags)
         {
+            if (tags == null)
+                return;
+
             foreach (string tag in tags)
                 AddTag(snippet, tag);
         }
 
-        public static Snippet RemoveTag(this Snippet snippet, string tag)
+        public static Snippet RemoveTag(this Snippet snippet, string tag, string value = null)
         {
-            if (TryGetMetaValue(snippet, KnownTags.Tag, tag, out MetaValueInfo info))
+            if (TryGetTag(snippet, tag, value, out TagInfo info))
                 snippet.Keywords.RemoveAt(info.KeywordIndex);
-
-            return snippet;
-        }
-
-        public static Snippet RemoveTags(this Snippet snippet, IEnumerable<string> tags)
-        {
-            foreach (string tag in tags)
-                RemoveTag(snippet, tag);
 
             return snippet;
         }
 
         public static Snippet RemoveTags(this Snippet snippet, params string[] tags)
         {
+            if (tags == null)
+                return snippet;
+
             foreach (string tag in tags)
                 RemoveTag(snippet, tag);
 
@@ -139,25 +134,25 @@ namespace Snippetica
 
         public static bool HasTag(this Snippet snippet, string tag)
         {
-            return FindMetaValue(snippet, KnownTags.Tag, tag).Success;
+            return FindTag(snippet, tag).Success;
         }
 
-        public static bool TryGetMetaValue(this Snippet snippet, string name, out MetaValueInfo info)
+        public static bool TryGetTag(this Snippet snippet, string name, out TagInfo info)
         {
-            return TryGetMetaValue(snippet, name, null, out info);
+            return TryGetTag(snippet, name, null, out info);
         }
 
-        public static bool TryGetMetaValue(this Snippet snippet, string name, string value, out MetaValueInfo info)
+        public static bool TryGetTag(this Snippet snippet, string name, string value, out TagInfo info)
         {
-            info = FindMetaValue(snippet, name, value);
+            info = FindTag(snippet, name, value);
 
             return info.Success;
         }
 
-        public static MetaValueInfo FindMetaValue(this Snippet snippet, string name, string value = null)
+        public static TagInfo FindTag(this Snippet snippet, string name, string value = null)
         {
             if (string.IsNullOrEmpty(name))
-                return MetaValueInfo.Default;
+                return TagInfo.Default;
 
             KeywordCollection keywords = snippet.Keywords;
 
@@ -192,21 +187,19 @@ namespace Snippetica
                     end++;
                 }
 
-                if (start == end)
-                    continue;
-
                 if (value == null)
                 {
-                    return new MetaValueInfo(name, keyword.Substring(start, end - start), i);
+                    return new TagInfo(name, keyword.Substring(start, end - start), i);
                 }
 
-                if (string.Compare(keyword, start, value, 0, end - start, StringComparison.Ordinal) == 0)
+                if (end > start
+                    && string.Compare(keyword, start, value, 0, end - start, StringComparison.Ordinal) == 0)
                 {
-                    return new MetaValueInfo(name, value, i);
+                    return new TagInfo(name, value, i);
                 }
             }
 
-            return MetaValueInfo.Default;
+            return TagInfo.Default;
         }
 
         public static void AddNamespace(this Snippet snippet, string @namespace)

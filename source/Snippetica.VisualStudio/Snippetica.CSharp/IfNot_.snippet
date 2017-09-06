@@ -2,12 +2,15 @@
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
     <Title>if not _</Title>
-    <Shortcut>ifx</Shortcut>
+    <Shortcut>iff</Shortcut>
     <Description>if with condition whether the expression is equal to false</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-ExcludeFromSnippetBrowser</Keyword>
+    </Keywords>
   </Header>
   <Snippet>
     <Declarations>
@@ -20,6 +23,6 @@
     <Code Language="CSharp"><![CDATA[if (!$expression$)
 {
     $end$
-}]]></Code>
+}/* Shortcut 'iff' is obsolete, use 'ifx' instead. */]]></Code>
   </Snippet>
 </CodeSnippet>

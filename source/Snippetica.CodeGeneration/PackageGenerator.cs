@@ -62,7 +62,7 @@ namespace Snippetica.CodeGeneration
         {
             foreach (Snippet snippet in snippets)
             {
-                if (snippet.TryGetMetaValue(KnownTags.Environment, out MetaValueInfo info))
+                if (snippet.TryGetTag(KnownTags.Environment, out TagInfo info))
                 {
                     if (string.Equals(info.Value, Environment.Kind.GetIdentifier()))
                     {
@@ -95,7 +95,7 @@ namespace Snippetica.CodeGeneration
 
         private static void CheckObsoleteSnippet(Snippet snippet)
         {
-            if (snippet.TryGetMetaValue(KnownTags.Obsolete, out MetaValueInfo info))
+            if (snippet.TryGetTag(KnownTags.Obsolete, out TagInfo info))
             {
                 string s = $"Shortcut '{snippet.Shortcut}' is obsolete, use '{info.Value}' instead.";
 

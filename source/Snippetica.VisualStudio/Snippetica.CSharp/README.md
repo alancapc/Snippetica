@@ -77,7 +77,7 @@ u|using statement|\-
 v|local variable|prefix
 v|virtual \(Overridable\)|prefix \(after access modifier\)
 we|while statement|\-
-x|not \(negation\)|\-
+x|not \(negation\)|prefix
 y|yield|\-
 
 ### List of Selected Snippets
@@ -85,8 +85,10 @@ y|yield|\-
 Title | Shortcut
 ----- | --------
 [?: operator](ConditionalOperator.snippet)|co
-[\!string\.IsNullOrEmpty](StringIsNotNullOrEmpty.snippet)|snne
-[\!string\.IsNullOrWhiteSpace](StringIsNotNullOrWhiteSpace.snippet)|snnw
+[\!string\.IsNullOrEmpty \_](NotStringIsNullOrEmpty_.snippet)|snne
+[\!string\.IsNullOrEmpty](NotStringIsNullOrEmpty.snippet)|xsne
+[\!string\.IsNullOrWhiteSpace \_](NotStringIsNullOrWhiteSpace_.snippet)|snnw
+[\!string\.IsNullOrWhiteSpace](NotStringIsNullOrWhiteSpace.snippet)|xsnw
 [\#if preprocessor directive](PreprocessorDirectiveIf.snippet)|ppif
 [\#if\-\#else preprocessor directive](PreprocessorDirectiveIfElse.snippet)|ppife
 [\#region preprocessor directive](PreprocessorDirectiveRegion.snippet)|ppr
@@ -123,10 +125,12 @@ Title | Shortcut
 [IEqualityComparer class](IEqualityComparerClass.snippet)|c\_
 [IEqualityComparer&lt;T&gt; class](IEqualityComparerOfTClass.snippet)|c\_
 [if equal to null](IfEqualToNull.snippet)|ifn
-[if not \_](IfNot_.snippet)|ifx
-[if not equal to null](IfNotEqualToNull.snippet)|ifnn
-[if not TryParse](IfNotTryParse.snippet)|ifftp
-[if not](IfNot.snippet)|iff
+[if not \_](IfNot_.snippet)|iff
+[if not equal to null \_](IfNotEqualToNull_.snippet)|ifnn
+[if not equal to null](IfNotEqualToNull.snippet)|ifxn
+[if not TryParse \_](IfNotTryParse_.snippet)|ifftp
+[if not TryParse](IfNotTryParse.snippet)|ifxtp
+[if not](IfNot.snippet)|ifx
 [if TryParse](IfTryParse.snippet)|iftp
 [Int32 variable](Int32Variable.snippet)|vi
 [interface indexer](InterfaceIndexer.snippet)|\_ir
@@ -136,7 +140,8 @@ Title | Shortcut
 [lambda expression](LambdaExpression.snippet)|l
 [nameof operator](NameOfOperator.snippet)|no
 [new variable](NewVariable.snippet)|vn
-[not equal to null](NotEqualToNull.snippet)|nn
+[not equal to null \_](NotEqualToNull_.snippet)|nn
+[not equal to null](NotEqualToNull.snippet)|xn
 [object keyword](ObjectKeyword.snippet)|o
 [ObservableCollection&lt;T&gt; class](ObservableCollectionOfTClass.snippet)|c\_
 [parameter array ](ParameterArray.snippet)|pa

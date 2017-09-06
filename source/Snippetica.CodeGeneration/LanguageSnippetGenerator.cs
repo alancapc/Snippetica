@@ -9,9 +9,14 @@ namespace Snippetica.CodeGeneration
 {
     public class LanguageSnippetGenerator : SnippetGenerator
     {
+        private readonly string[] _generateTypeTags;
+        private readonly string[] _generateModifierTags;
+
         public LanguageSnippetGenerator(LanguageDefinition languageDefinition)
         {
             LanguageDefinition = languageDefinition;
+            _generateTypeTags = LanguageDefinition.Types.Select(f => KnownTags.GenerateTypeTag(f.Name)).ToArray();
+            _generateModifierTags = LanguageDefinition.Modifiers.Select(f => KnownTags.GenerateModifierTag(f.Name)).ToArray();
         }
 
         public LanguageDefinition LanguageDefinition { get; }
@@ -93,8 +98,8 @@ namespace Snippetica.CodeGeneration
                 .ReplacePlaceholder(Placeholders.OfType, " ", true)
                 .ReplacePlaceholder(Placeholders.GenericType, LanguageDefinition.GetTypeParameterList("T"));
 
-            snippet.RemoveTags(LanguageDefinition.Types.Select(f => KnownTags.GenerateTypeTag(f.Name)));
-            snippet.RemoveTags(LanguageDefinition.Modifiers.Select(f => KnownTags.GenerateModifierTag(f.Name)));
+            snippet.RemoveTags(_generateTypeTags);
+            snippet.RemoveTags(_generateModifierTags);
 
             snippet.RemoveTags(
                 KnownTags.GenerateType,

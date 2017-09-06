@@ -907,7 +907,7 @@
     "description": "If Is Nothing"
   },
   "If IsNot Nothing": {
-    "prefix": "ifnn",
+    "prefix": "ifxn",
     "body": [
       "If ${1:x} IsNot Nothing Then",
       "    ${0}",
@@ -916,7 +916,7 @@
     "description": "If IsNot Nothing"
   },
   "If Not": {
-    "prefix": "iff",
+    "prefix": "ifx",
     "body": [
       "If Not ${1:x} Then",
       "    ${0}",
@@ -925,7 +925,7 @@
     "description": "If statement with condition whether the expression is equal to false"
   },
   "if not TryParse": {
-    "prefix": "ifftp",
+    "prefix": "ifxtp",
     "body": [
       "Dim ${1:x} As ${2:T}",
       "If Not ${2}.TryParse(${3:value}, ${1})",
@@ -935,7 +935,7 @@
     "description": "if statement with condition whether TryParse method returns false."
   },
   "If TryCast Is Nothing": {
-    "prefix": "ifftc",
+    "prefix": "ifxtc",
     "body": [
       "Dim ${1:x} = Nothing",
       "    If TryCast(${1}, ${2:Object}) Is Nothing Then",
@@ -1026,7 +1026,7 @@
     "description": "IsFalse operator overload"
   },
   "IsNot Nothing": {
-    "prefix": "nn",
+    "prefix": "xn",
     "body": [
       "${1:x} IsNot Nothing${0}"
     ],
@@ -1693,7 +1693,7 @@
     "description": "String.IsNullOrEmpty method"
   },
   "String.IsNullOrEmpty = False": {
-    "prefix": "snne",
+    "prefix": "xsne",
     "body": [
       "String.IsNullOrEmpty(${1:s}) = False${0}"
     ],
@@ -1707,7 +1707,7 @@
     "description": "String.IsNullOrWhiteSpace method"
   },
   "String.IsNullOrWhiteSpace = False": {
-    "prefix": "snnw",
+    "prefix": "xsnw",
     "body": [
       "String.IsNullOrWhiteSpace(${1:s}) = False${0}"
     ],

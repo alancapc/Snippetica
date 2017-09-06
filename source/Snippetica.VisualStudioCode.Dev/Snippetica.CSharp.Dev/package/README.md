@@ -3,13 +3,13 @@
 Title | Shortcut
 ----- | --------
 ?: operator \(equal to null\)|con
-?: operator \(not equal to null\)|conn
+?: operator \(not equal to null\)|coxn
 array type|a
 Assembly attribute|ae\_ay
 break statement|bk
 Conditional attribute|ae\_cl
 continue statement|ce
-Debug\.Assert \!= null|dann
+Debug\.Assert \!= null|daxn
 DebuggerDisplay attribute|ae\_dd
 DebuggerStepThrough attribute|ae\_dst
 Dictionary&lt;TKey, TValue&gt; type|gd
@@ -22,7 +22,7 @@ Directory\.Exists|iod\_e
 Directory\.GetDirectories|iod\_gd
 Directory\.GetFiles|iod\_gf
 Directory\.Move|iod\_m
-do while not null|donn
+do while not null|doxn
 do while null|don
 Enumerable\.Cast|q\_c
 Enumerable\.Empty|q\_e
@@ -46,7 +46,7 @@ Enumerable\.TakeWhile|q\_tw
 Enumerable\.ThenBy|q\_tb
 Enumerable\.ThenByDescending|q\_tbd
 Enumerable\.Where|q\_w
-Enumerable\.Where not equal to null|q\_wnn
+Enumerable\.Where not equal to null|q\_wxn
 Enumerable\.Zip|q\_z
 File Exists|iof\_e
 File\.Copy|iof\_c
@@ -61,10 +61,10 @@ FileStream Variable|u\_fesm
 Flags attribute|ae\_fs
 HashSet&lt;T&gt; type|ghs
 HashSet&lt;T&gt; variable|vhs
-if \!string\.IsNullOrEmpty|iffsne
-if \!string\.IsNullOrWhiteSpace|iffsnw
+if \!string\.IsNullOrEmpty|ifxsne
+if \!string\.IsNullOrWhiteSpace|ifxsnw
 if Enum\.TryParse|ifemtp
-if not Enum\.TryParse|iffemtp
+if not Enum\.TryParse|ifxemtp
 if string\.IsNullOrEmpty|ifsne
 if string\.IsNullOrWhiteSpace|ifsnw
 internal abstract modifiers|x\_ia
@@ -106,8 +106,8 @@ return statement|re
 StringBuilder variable|vsb
 throw statement|tw
 TimeSpan type|ts
-variable declaration with as operator \+ if not null|vasnn
-while not null|wenn
+variable declaration with as operator \+ if not null|vasxn
+while not null|wexn
 while null|wen
 yield return new|yrn
 yield return new containing type|yrnthis

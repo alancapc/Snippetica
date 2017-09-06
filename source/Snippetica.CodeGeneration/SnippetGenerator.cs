@@ -70,7 +70,7 @@ namespace Snippetica.CodeGeneration
 
             for (int i = 0; i < count; i++)
             {
-                if (snippets[i].TryGetMetaValue(KnownTags.AlternativeShortcut, out MetaValueInfo info))
+                if (snippets[i].TryGetTag(KnownTags.AlternativeShortcut, out TagInfo info))
                 {
                     snippets[i].Keywords.RemoveAt(info.KeywordIndex);
 

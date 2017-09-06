@@ -64,7 +64,7 @@ namespace Snippetica.CodeGeneration.VisualStudio
             {
                 snippet.RemoveTag(KnownTags.ExcludeFromVisualStudioCode);
 
-                if (snippet.TryGetMetaValue(KnownTags.Shortcut, out MetaValueInfo info))
+                if (snippet.TryGetTag(KnownTags.Shortcut, out TagInfo info))
                     snippet.Keywords.RemoveAt(info.KeywordIndex);
 
                 yield return snippet;

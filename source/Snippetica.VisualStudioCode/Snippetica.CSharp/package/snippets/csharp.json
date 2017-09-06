@@ -37,14 +37,14 @@
     "description": "! operator overload"
   },
   "!string.IsNullOrEmpty": {
-    "prefix": "snne",
+    "prefix": "xsne",
     "body": [
       "!string.IsNullOrEmpty(${1:s})${0}"
     ],
     "description": "!string.IsNullOrEmpty method"
   },
   "!string.IsNullOrWhiteSpace": {
-    "prefix": "snnw",
+    "prefix": "xsnw",
     "body": [
       "!string.IsNullOrWhiteSpace(${1:s})${0}"
     ],
@@ -795,7 +795,7 @@
     ],
     "description": "if equal to null"
   },
-  "if not _": {
+  "if not": {
     "prefix": "ifx",
     "body": [
       "if (!${1:x})",
@@ -806,7 +806,7 @@
     "description": "if with condition whether the expression is equal to false"
   },
   "if not equal to null": {
-    "prefix": "ifnn",
+    "prefix": "ifxn",
     "body": [
       "if (${1:x} != null)",
       "{",
@@ -816,7 +816,7 @@
     "description": "if not equal to null"
   },
   "if not TryParse": {
-    "prefix": "ifftp",
+    "prefix": "ifxtp",
     "body": [
       "${1:T} ${2:x};",
       "if (!${1}.TryParse(${3:value}, out ${2}))",
@@ -1184,7 +1184,7 @@
     "description": "variable declaration with new object creation (with arguments)"
   },
   "not equal to null": {
-    "prefix": "nn",
+    "prefix": "xn",
     "body": [
       "${1:x} != null${0}"
     ],

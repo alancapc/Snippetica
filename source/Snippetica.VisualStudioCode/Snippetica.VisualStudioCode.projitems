@@ -9,6 +9,9 @@
     <Import_RootNamespace>Snippetica.VisualStudioCode</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.Cpp\package\CHANGELOG.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.Cpp\package\README.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.Cpp\README.md" />
     <None Include="$(MSBuildThisFileDirectory)Snippetica.CSharp\package\CHANGELOG.md" />
     <None Include="$(MSBuildThisFileDirectory)Snippetica.CSharp\package\README.md" />
     <None Include="$(MSBuildThisFileDirectory)Snippetica.CSharp\README.md" />
@@ -23,6 +26,11 @@
     <None Include="$(MSBuildThisFileDirectory)Snippetica.Xml\README.md" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Cpp\package\.vscode\launch.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Cpp\package\images\icon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Cpp\package\LICENSE.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Cpp\package\package.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Cpp\package\snippets\cpp.json" />
     <Content Include="$(MSBuildThisFileDirectory)Snippetica.CSharp\package\.vscode\launch.json" />
     <Content Include="$(MSBuildThisFileDirectory)Snippetica.CSharp\package\images\icon.png" />
     <Content Include="$(MSBuildThisFileDirectory)Snippetica.CSharp\package\LICENSE.txt" />

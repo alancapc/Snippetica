@@ -77,7 +77,7 @@ u|using statement|\-
 v|local variable|prefix
 v|virtual \(Overridable\)|prefix \(after access modifier\)
 we|while statement|\-
-x|not \(negation\)|\-
+x|not \(negation\)|prefix
 y|yield|\-
 
 ### List of Selected Snippets
@@ -118,10 +118,13 @@ Title | Shortcut
 [IEqualityComparer class](IEqualityComparerClass.snippet)|c\_
 [IEqualityComparer\(Of T\) class](IEqualityComparerOfTClass.snippet)|c\_
 [If Is Nothing](IfIsNothing.snippet)|ifn
-[If IsNot Nothing](IfIsNotNothing.snippet)|ifnn
-[if not TryParse](IfNotTryParse.snippet)|ifftp
-[If Not](IfNot.snippet)|iff
-[If TryCast Is Nothing](IfTryCastIsNothing.snippet)|ifftc
+[If IsNot Nothing \_](IfIsNotNothing_.snippet)|ifnn
+[If IsNot Nothing](IfIsNotNothing.snippet)|ifxn
+[If Not \_](IfNot_.snippet)|iff
+[if not TryParse \_](IfNotTryParse_.snippet)|ifftp
+[if not TryParse](IfNotTryParse.snippet)|ifxtp
+[If Not](IfNot.snippet)|ifx
+[If TryCast Is Nothing](IfTryCastIsNothing.snippet)|ifxtc
 [If TryCast IsNot Nothing](IfTryCastIsNotNothing.snippet)|iftc
 [if TryParse](IfTryParse.snippet)|iftp
 [Int32 variable](Int32Variable.snippet)|vi
@@ -130,7 +133,8 @@ Title | Shortcut
 [interface property](InterfaceProperty.snippet)|\_p
 [interface read\-only property](InterfaceReadOnlyProperty.snippet)|\_rp
 [Is Nothing](IsNothing.snippet)|n
-[IsNot Nothing](IsNotNothing.snippet)|nn
+[IsNot Nothing \_](IsNotNothing_.snippet)|nn
+[IsNot Nothing](IsNotNothing.snippet)|xn
 [Lambda expression](LambdaExpression.snippet)|l
 [NameOf operator](NameOfOperator.snippet)|no
 [new variable](NewVariable.snippet)|vn
@@ -171,9 +175,11 @@ Title | Shortcut
 [StreamReader Variable](StreamReaderVariable.snippet)|u
 [StreamWriter Variable](StreamWriterVariable.snippet)|u
 [String variable](StringVariable.snippet)|vs
-[String\.IsNullOrEmpty = False](StringIsNotNullOrEmpty.snippet)|snne
+[String\.IsNullOrEmpty = False \_](NotStringIsNullOrEmpty_.snippet)|snne
+[String\.IsNullOrEmpty = False](NotStringIsNullOrEmpty.snippet)|xsne
 [String\.IsNullOrEmpty](StringIsNullOrEmpty.snippet)|sne
-[String\.IsNullOrWhiteSpace = False](StringIsNotNullOrWhiteSpace.snippet)|snnw
+[String\.IsNullOrWhiteSpace = False \_](NotStringIsNullOrWhiteSpace_.snippet)|snnw
+[String\.IsNullOrWhiteSpace = False](NotStringIsNullOrWhiteSpace.snippet)|xsnw
 [String\.IsNullOrWhiteSpace](StringIsNullOrWhiteSpace.snippet)|snw
 [StringReader Variable](StringReaderVariable.snippet)|u
 [StringWriter Variable](StringWriterVariable.snippet)|u

@@ -2358,7 +2358,7 @@ $modifier$ class $name$Exception : $base$
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>if not _</Title>
+      <Title>if not</Title>
       <Shortcut>ifx</Shortcut>
       <Description>if with condition whether the expression is equal to false</Description>
       <Author>Josef Pihrt</Author>
@@ -2366,7 +2366,7 @@ $modifier$ class $name$Exception : $base$
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name IfNot_</Keyword>
+        <Keyword>Meta-Name IfNot</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2386,7 +2386,7 @@ $modifier$ class $name$Exception : $base$
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>if not equal to null</Title>
-      <Shortcut>ifnn</Shortcut>
+      <Shortcut>ifxn</Shortcut>
       <Description>if not equal to null</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2413,7 +2413,7 @@ $modifier$ class $name$Exception : $base$
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>if not TryParse</Title>
-      <Shortcut>ifftp</Shortcut>
+      <Shortcut>ifxtp</Shortcut>
       <Description>if statement with condition whether TryParse method returns false.</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4529,7 +4529,7 @@ protected virtual void On$name$($eventArgs$ e)
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>not equal to null</Title>
-      <Shortcut>nn</Shortcut>
+      <Shortcut>xn</Shortcut>
       <Description>not equal to null</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4548,6 +4548,54 @@ protected virtual void On$name$($eventArgs$ e)
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[$left$ != null$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>!string.IsNullOrEmpty</Title>
+      <Shortcut>xsne</Shortcut>
+      <Description>!string.IsNullOrEmpty method</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name NotStringIsNullOrEmpty</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>String expression</ToolTip>
+          <Default>s</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[!string.IsNullOrEmpty($expression$)$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>!string.IsNullOrWhiteSpace</Title>
+      <Shortcut>xsnw</Shortcut>
+      <Description>!string.IsNullOrWhiteSpace method</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name NotStringIsNullOrWhiteSpace</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>String expression</ToolTip>
+          <Default>s</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[!string.IsNullOrWhiteSpace($expression$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -8354,54 +8402,6 @@ protected virtual void On$name$($eventArgs$ e)
 {
     $end$
 }]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>!string.IsNullOrEmpty</Title>
-      <Shortcut>snne</Shortcut>
-      <Description>!string.IsNullOrEmpty method</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name StringIsNotNullOrEmpty</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>String expression</ToolTip>
-          <Default>s</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[!string.IsNullOrEmpty($expression$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>!string.IsNullOrWhiteSpace</Title>
-      <Shortcut>snnw</Shortcut>
-      <Description>!string.IsNullOrWhiteSpace method</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name StringIsNotNullOrWhiteSpace</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>String expression</ToolTip>
-          <Default>s</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[!string.IsNullOrWhiteSpace($expression$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -15675,7 +15675,7 @@ End If]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>If IsNot Nothing</Title>
-      <Shortcut>ifnn</Shortcut>
+      <Shortcut>ifxn</Shortcut>
       <Description>If IsNot Nothing</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -15701,7 +15701,7 @@ End If]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>If Not</Title>
-      <Shortcut>iff</Shortcut>
+      <Shortcut>ifx</Shortcut>
       <Description>If statement with condition whether the expression is equal to false</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -15727,7 +15727,7 @@ End If]]></Code>
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>if not TryParse</Title>
-      <Shortcut>ifftp</Shortcut>
+      <Shortcut>ifxtp</Shortcut>
       <Description>if statement with condition whether TryParse method returns false.</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -15765,7 +15765,7 @@ End If]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>If TryCast Is Nothing</Title>
-      <Shortcut>ifftc</Shortcut>
+      <Shortcut>ifxtc</Shortcut>
       <Description>If TryCast Is Nothing</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -17649,7 +17649,7 @@ End Property$end$]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>IsNot Nothing</Title>
-      <Shortcut>nn</Shortcut>
+      <Shortcut>xn</Shortcut>
       <Description>A condition whether the expression is not Nothing</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -17952,6 +17952,64 @@ End Property$end$]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Dim $identifier$ = New $type$($arguments$)$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>String.IsNullOrEmpty = False</Title>
+      <Shortcut>xsne</Shortcut>
+      <Description>String.IsNullOrEmpty = False</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name NotStringIsNullOrEmpty</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>String expression</ToolTip>
+          <Default>s</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[String.IsNullOrEmpty($expression$) = False$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>String.IsNullOrWhiteSpace = False</Title>
+      <Shortcut>xsnw</Shortcut>
+      <Description>String.IsNullOrWhiteSpace = False</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name NotStringIsNullOrWhiteSpace</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>String expression</ToolTip>
+          <Default>s</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[String.IsNullOrWhiteSpace($expression$) = False$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -21708,64 +21766,6 @@ End Using]]></Code>
       <Code Language="VB"><![CDATA[Using $identifier$ = New StreamWriter($parameters$, $_encoding$)
     $end$
 End Using]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>String.IsNullOrEmpty = False</Title>
-      <Shortcut>snne</Shortcut>
-      <Description>String.IsNullOrEmpty = False</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name StringIsNotNullOrEmpty</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>String expression</ToolTip>
-          <Default>s</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[String.IsNullOrEmpty($expression$) = False$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>String.IsNullOrWhiteSpace = False</Title>
-      <Shortcut>snnw</Shortcut>
-      <Description>String.IsNullOrWhiteSpace = False</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name StringIsNotNullOrWhiteSpace</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>String expression</ToolTip>
-          <Default>s</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[String.IsNullOrWhiteSpace($expression$) = False$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">

@@ -52,7 +52,7 @@
     "description": "if statement with condition whether Enum.TryParse method returns true."
   },
   "if not Enum.TryParse": {
-    "prefix": "iffemtp",
+    "prefix": "ifxemtp",
     "body": [
       "Dim ${1:x} As ${2:TEnum}",
       "If Not Enum.TryParse(${3:value}, ${1})",

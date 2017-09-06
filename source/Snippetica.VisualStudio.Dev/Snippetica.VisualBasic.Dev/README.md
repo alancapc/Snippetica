@@ -9,7 +9,7 @@ Title | Shortcut
 [HashSet\(Of T\) type](HashSetOfTType.snippet)|ghs
 [HashSet\(Of T\) variable](HashSetOfTVariable.snippet)|vhs
 [if Enum\.TryParse](IfEnumTryParse.snippet)|ifemtp
-[if not Enum\.TryParse](IfNotEnumTryParse.snippet)|iffemtp
+[if not Enum\.TryParse](IfNotEnumTryParse.snippet)|ifxemtp
 [Lambda expression with 2 parameters](LambdaExpressionWithTwoParameters.snippet)|l2
 [List\(Of T\) type](ListOfTType.snippet)|gl
 [List\(Of T\) variable](ListOfTVariable.snippet)|vl

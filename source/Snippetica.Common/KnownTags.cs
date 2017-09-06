@@ -4,7 +4,6 @@ namespace Snippetica
 {
     public static class KnownTags
     {
-        public const string Tag = nameof(Tag);
         public const string VisualStudio = nameof(VisualStudio);
         public const string Default = nameof(Default);
         public const string AccessModifier = nameof(AccessModifier);
@@ -35,7 +34,6 @@ namespace Snippetica
         public const string GenerateXmlSnippets = "GenerateXmlSnippets";
 
         public const string MetaPrefix = "Meta-";
-        public const string MetaTagPrefix = MetaPrefix + Tag + " ";
         private const string GeneratePrefix = "Generate";
 
         public const string GenerateAccessModifier = GeneratePrefix + "AccessModifier";

@@ -74,7 +74,7 @@ u|using statement|\-
 v|local variable|prefix
 v|virtual \(Overridable\)|prefix \(after access modifier\)
 we|while statement|\-
-x|not \(negation\)|\-
+x|not \(negation\)|prefix
 y|yield|\-
 
 ### List of Selected Snippets
@@ -106,10 +106,10 @@ GetType|gt
 IEnumerable\(Of T\) type|ge
 IEnumerator\(Of T\) variable|u\_er
 If Is Nothing|ifn
-If IsNot Nothing|ifnn
-If Not|iff
-if not TryParse|ifftp
-If TryCast Is Nothing|ifftc
+If IsNot Nothing|ifxn
+If Not|ifx
+if not TryParse|ifxtp
+If TryCast Is Nothing|ifxtc
 If TryCast IsNot Nothing|iftc
 if TryParse|iftp
 Int32 variable|vi
@@ -118,7 +118,7 @@ interface method|\_m
 interface property|\_p
 interface read\-only property|\_rp
 Is Nothing|n
-IsNot Nothing|nn
+IsNot Nothing|xn
 Lambda expression|l
 NameOf operator|no
 new variable|vn
@@ -156,9 +156,9 @@ StreamReader Variable|u\_smrr
 StreamWriter Variable|u\_smwr
 String variable|vs
 String\.IsNullOrEmpty|sne
-String\.IsNullOrEmpty = False|snne
+String\.IsNullOrEmpty = False|xsne
 String\.IsNullOrWhiteSpace|snw
-String\.IsNullOrWhiteSpace = False|snnw
+String\.IsNullOrWhiteSpace = False|xsnw
 StringReader Variable|u\_srr
 StringWriter Variable|u\_swr
 Throw New|twn

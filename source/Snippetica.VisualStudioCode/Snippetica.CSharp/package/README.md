@@ -74,7 +74,7 @@ u|using statement|\-
 v|local variable|prefix
 v|virtual \(Overridable\)|prefix \(after access modifier\)
 we|while statement|\-
-x|not \(negation\)|\-
+x|not \(negation\)|prefix
 y|yield|\-
 
 ### List of Selected Snippets
@@ -83,8 +83,8 @@ Title | Shortcut
 ----- | --------
  type parameter|g
 ?: operator|co
-\!string\.IsNullOrEmpty|snne
-\!string\.IsNullOrWhiteSpace|snnw
+\!string\.IsNullOrEmpty|xsne
+\!string\.IsNullOrWhiteSpace|xsnw
 \#if preprocessor directive|ppif
 \#if\-\#else preprocessor directive|ppife
 \#region preprocessor directive|ppr
@@ -110,9 +110,9 @@ foreach statement|fe
 generic type constraint|where
 IEnumerable&lt;T&gt; type|ge
 if equal to null|ifn
-if not \_|ifx
-if not equal to null|ifnn
-if not TryParse|ifftp
+if not|ifx
+if not equal to null|ifxn
+if not TryParse|ifxtp
 if TryParse|iftp
 Int32 variable|vi
 interface indexer|\_ir
@@ -122,7 +122,7 @@ interface read\-only property|\_rp
 lambda expression|l
 nameof operator|no
 new variable|vn
-not equal to null|nn
+not equal to null|xn
 object keyword|o
 parameter array |pa
 public auto property|p

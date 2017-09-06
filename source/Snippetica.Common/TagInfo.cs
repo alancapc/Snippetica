@@ -2,11 +2,11 @@
 
 namespace Snippetica
 {
-    public struct MetaValueInfo
+    public struct TagInfo
     {
-        public static MetaValueInfo Default { get; } = new MetaValueInfo();
+        public static TagInfo Default { get; } = new TagInfo();
 
-        internal MetaValueInfo(string name, string value, int keywordIndex)
+        internal TagInfo(string name, string value, int keywordIndex)
         {
             Name = name;
             Value = value;

@@ -27,10 +27,9 @@ namespace Snippetica.CodeGeneration.Commands
 
             snippet.AddNamespace(Type.Namespace);
 
-            snippet.AddTags(
-                KnownTags.NonUniqueShortcut,
-                KnownTags.TitleStartsWithShortcut,
-                KnownTags.ExcludeFromReadme);
+            snippet.AddTags(KnownTags.NonUniqueShortcut);
+            snippet.AddTags(KnownTags.TitleStartsWithShortcut);
+            snippet.AddTags(KnownTags.ExcludeFromReadme);
 
             snippet.RemoveLiteralAndReplacePlaceholders(LiteralIdentifiers.Collection, Type.Name);
 

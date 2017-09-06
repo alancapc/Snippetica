@@ -81,7 +81,6 @@
     <None Include="Snippetica.Cpp\preprocessor_directive_ifdef.snippet" />
     <None Include="Snippetica.Cpp\preprocessor_directive_ifndef.snippet" />
     <None Include="Snippetica.Cpp\preprocessor_directive_region.snippet" />
-    <None Include="Snippetica.Cpp\README.md" />
     <None Include="Snippetica.Cpp\struct.snippet" />
     <None Include="Snippetica.Cpp\switch.snippet" />
     <None Include="Snippetica.Cpp\try.snippet" />
@@ -102,6 +101,7 @@
     <None Include="Snippetica.CSharp\AutoGeneration\EventWithEventHandlerOfT.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\Field.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\IEnumerableOfTType.snippet" />
+    <None Include="Snippetica.CSharp\AutoGeneration\IfNotTryParse_.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\IfNotTryParse.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\IfTryParse.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\ImmutableCollectionOfTType.snippet" />
@@ -266,13 +266,17 @@
     <None Include="Snippetica.CSharp\IEqualityComparerOfTClass.snippet" />
     <None Include="Snippetica.CSharp\If.snippet_" />
     <None Include="Snippetica.CSharp\IfEqualToNull.snippet" />
-    <None Include="Snippetica.CSharp\IfNot_.snippet" />
     <None Include="Snippetica.CSharp\IfNot.snippet" />
+    <None Include="Snippetica.CSharp\IfNotEqualToNull_.snippet" />
+    <None Include="Snippetica.CSharp\IfNot_.snippet" />
     <None Include="Snippetica.CSharp\IfNotEqualToNull.snippet" />
     <None Include="Snippetica.CSharp\Int32Variable.snippet" />
     <None Include="Snippetica.CSharp\LambdaExpression.snippet" />
     <None Include="Snippetica.CSharp\NameOfOperator.snippet" />
+    <None Include="Snippetica.CSharp\NotEqualToNull_.snippet" />
     <None Include="Snippetica.CSharp\NotEqualToNull.snippet" />
+    <None Include="Snippetica.CSharp\NotStringIsNullOrEmpty_.snippet" />
+    <None Include="Snippetica.CSharp\NotStringIsNullOrWhiteSpace_.snippet" />
     <None Include="Snippetica.CSharp\ObjectKeyword.snippet" />
     <None Include="Snippetica.CSharp\ObservableCollectionOfTClass.snippet" />
     <None Include="Snippetica.CSharp\OperatorOverloadAmpersand.snippet" />
@@ -300,7 +304,6 @@
     <None Include="Snippetica.CSharp\PreprocessorDirectiveIf.snippet" />
     <None Include="Snippetica.CSharp\PreprocessorDirectiveIfElse.snippet" />
     <None Include="Snippetica.CSharp\PreprocessorDirectiveRegion.snippet" />
-    <None Include="Snippetica.CSharp\README.md" />
     <None Include="Snippetica.CSharp\ReadOnlyCollectionOfTClass.snippet" />
     <None Include="Snippetica.CSharp\ReturnFalse.snippet" />
     <None Include="Snippetica.CSharp\ReturnKeyword.snippet" />
@@ -310,8 +313,8 @@
     <None Include="Snippetica.CSharp\StaticConstructor.snippet" />
     <None Include="Snippetica.CSharp\StreamReaderVariable.snippet" />
     <None Include="Snippetica.CSharp\StreamWriterVariable.snippet" />
-    <None Include="Snippetica.CSharp\StringIsNotNullOrEmpty.snippet" />
-    <None Include="Snippetica.CSharp\StringIsNotNullOrWhiteSpace.snippet" />
+    <None Include="Snippetica.CSharp\NotStringIsNullOrEmpty.snippet" />
+    <None Include="Snippetica.CSharp\NotStringIsNullOrWhiteSpace.snippet" />
     <None Include="Snippetica.CSharp\StringIsNullOrEmpty.snippet" />
     <None Include="Snippetica.CSharp\StringIsNullOrWhiteSpace.snippet" />
     <None Include="Snippetica.CSharp\StringKeyword.snippet" />
@@ -472,7 +475,6 @@
     <None Include="Snippetica.Html\Dev\span_class.snippet" />
     <None Include="Snippetica.Html\Dev\span_id.snippet" />
     <None Include="Snippetica.Html\Dev\table_with_sections.snippet" />
-    <None Include="Snippetica.Html\README.md" />
     <None Include="Snippetica.snk" />
     <None Include="Snippetica.VisualBasic\AttributeClass.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\ArrayOfTVariable.snippet" />
@@ -488,6 +490,7 @@
     <None Include="Snippetica.VisualBasic\AutoGeneration\EventWithEventHandlerOfT.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\Field.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\IEnumerableOfTType.snippet" />
+    <None Include="Snippetica.VisualBasic\AutoGeneration\IfNotTryParse_.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\IfNotTryParse.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\IfTryParse.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\ImmutableCollectionOfTType.snippet" />
@@ -564,15 +567,20 @@
     <None Include="Snippetica.VisualBasic\IEqualityComparerOfTClass.snippet" />
     <None Include="Snippetica.VisualBasic\If.snippet_" />
     <None Include="Snippetica.VisualBasic\IfIsNothing.snippet" />
+    <None Include="Snippetica.VisualBasic\IfIsNotNothing_.snippet" />
     <None Include="Snippetica.VisualBasic\IfIsNotNothing.snippet" />
+    <None Include="Snippetica.VisualBasic\IfNot_.snippet" />
     <None Include="Snippetica.VisualBasic\IfNot.snippet" />
     <None Include="Snippetica.VisualBasic\IfTryCastIsNothing.snippet" />
     <None Include="Snippetica.VisualBasic\IfTryCastIsNotNothing.snippet" />
     <None Include="Snippetica.VisualBasic\Int32Variable.snippet" />
     <None Include="Snippetica.VisualBasic\IsNothing.snippet" />
+    <None Include="Snippetica.VisualBasic\IsNotNothing_.snippet" />
     <None Include="Snippetica.VisualBasic\IsNotNothing.snippet" />
     <None Include="Snippetica.VisualBasic\LambdaExpression.snippet" />
     <None Include="Snippetica.VisualBasic\NameOfOperator.snippet" />
+    <None Include="Snippetica.VisualBasic\NotStringIsNullOrEmpty_.snippet" />
+    <None Include="Snippetica.VisualBasic\NotStringIsNullOrWhiteSpace_.snippet" />
     <None Include="Snippetica.VisualBasic\ObservableCollectionClass.snippet" />
     <None Include="Snippetica.VisualBasic\OperatorOverloadAmpersand.snippet" />
     <None Include="Snippetica.VisualBasic\OperatorOverloadAnd.snippet" />
@@ -600,7 +608,6 @@
     <None Include="Snippetica.VisualBasic\PreprocessorDirectiveIf.snippet" />
     <None Include="Snippetica.VisualBasic\PreprocessorDirectiveIfElse.snippet" />
     <None Include="Snippetica.VisualBasic\PreprocessorDirectiveRegion.snippet" />
-    <None Include="Snippetica.VisualBasic\README.md" />
     <None Include="Snippetica.VisualBasic\ReadOnlyCollectionClass.snippet" />
     <None Include="Snippetica.VisualBasic\ReturnFalse.snippet" />
     <None Include="Snippetica.VisualBasic\ReturnNothing.snippet" />
@@ -610,8 +617,8 @@
     <None Include="Snippetica.VisualBasic\StaticConstructor.snippet" />
     <None Include="Snippetica.VisualBasic\StreamReaderVariable.snippet" />
     <None Include="Snippetica.VisualBasic\StreamWriterVariable.snippet" />
-    <None Include="Snippetica.VisualBasic\StringIsNotNullOrEmpty.snippet" />
-    <None Include="Snippetica.VisualBasic\StringIsNotNullOrWhiteSpace.snippet" />
+    <None Include="Snippetica.VisualBasic\NotStringIsNullOrEmpty.snippet" />
+    <None Include="Snippetica.VisualBasic\NotStringIsNullOrWhiteSpace.snippet" />
     <None Include="Snippetica.VisualBasic\StringIsNullOrEmpty.snippet" />
     <None Include="Snippetica.VisualBasic\StringIsNullOrWhiteSpace.snippet" />
     <None Include="Snippetica.VisualBasic\StringReaderVariable.snippet" />
@@ -663,7 +670,6 @@
     <None Include="Snippetica.Xaml\AutoGeneration\ListBox.snippet" />
     <None Include="Snippetica.Xaml\AutoGeneration\ListView.snippet" />
     <None Include="Snippetica.Xaml\AutoGeneration\MenuItem.snippet" />
-    <None Include="Snippetica.Xaml\AutoGeneration\README.md" />
     <None Include="Snippetica.Xaml\AutoGeneration\RowDefinition.snippet" />
     <None Include="Snippetica.Xaml\AutoGeneration\Setter.snippet" />
     <None Include="Snippetica.Xaml\AutoGeneration\StackPanel.snippet" />
@@ -690,7 +696,6 @@
     <None Include="Snippetica.Xaml\Dev\WrapPanel.snippet" />
     <None Include="Snippetica.Xaml\Dev\WrapPanelHorizontal.snippet" />
     <None Include="Snippetica.Xaml\Dev\WrapPanelVertical.snippet" />
-    <None Include="Snippetica.Xaml\README.md" />
     <None Include="Snippetica.Xml.CodeSnippet\Code.snippet">
       <SubType>Designer</SubType>
     </None>
@@ -711,12 +716,10 @@
     <None Include="Snippetica.Xml.CodeSnippet\Literal.snippet" />
     <None Include="Snippetica.Xml.CodeSnippet\LiteralWithEditableAttribute.snippet" />
     <None Include="Snippetica.Xml.CodeSnippet\LiteralWithFunction.snippet" />
-    <None Include="Snippetica.Xml.CodeSnippet\README.md" />
     <None Include="Snippetica.Xml.CodeSnippet\SnippetType.snippet" />
     <None Include="Snippetica.Xml.CodeSnippet\SnippetTypeExpansion.snippet" />
     <None Include="Snippetica.Xml.CodeSnippet\SnippetTypes.snippet" />
     <None Include="Snippetica.Xml.CodeSnippet\SnippetTypeSurroundsWith.snippet" />
-    <None Include="Snippetica.Xml\README.md" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

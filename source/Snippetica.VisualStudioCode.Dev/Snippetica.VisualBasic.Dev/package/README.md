@@ -7,7 +7,7 @@ Dictionary\(Of TKey, TValue\) variable|vd
 HashSet\(Of T\) type|ghs
 HashSet\(Of T\) variable|vhs
 if Enum\.TryParse|ifemtp
-if not Enum\.TryParse|iffemtp
+if not Enum\.TryParse|ifxemtp
 Lambda expression with 2 parameters|l2
 List\(Of T\) type|gl
 List\(Of T\) variable|vl

@@ -544,7 +544,7 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="x" Description="not (negation)" Comment="-">
+  <ShortcutInfo Value="x" Description="not (negation)" Comment="prefix">
     <Languages>
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>

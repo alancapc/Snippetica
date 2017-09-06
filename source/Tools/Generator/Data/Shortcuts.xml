@@ -127,7 +127,7 @@
             </Set>
             <New Value="we" Description="while statement" />
             <New Value="y" Description="yield" />
-            <New Value="x" Description="not (negation)" />
+            <New Value="x" Description="not (negation)" Comment="prefix" />
           </Add>
         </Add>
       </Records>

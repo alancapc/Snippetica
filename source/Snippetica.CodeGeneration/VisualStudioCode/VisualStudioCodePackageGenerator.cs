@@ -114,7 +114,7 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
 
                 if (snippet.HasTag(KnownTags.NonUniqueShortcut))
                 {
-                    if (snippet.TryGetMetaValue(KnownTags.Shortcut, out MetaValueInfo info))
+                    if (snippet.TryGetTag(KnownTags.Shortcut, out TagInfo info))
                     {
                         if (snippet.Shortcut.Last() != '_')
                             snippet.Shortcut += "_";

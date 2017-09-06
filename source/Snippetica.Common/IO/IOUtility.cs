@@ -54,7 +54,7 @@ namespace Snippetica.IO
             {
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
-                    Console.WriteLine($"saving {filePath}");
+                    Console.WriteLine($"saving file {filePath}");
                     SnippetSerializer.Serialize(fileStream, snippet, settings);
                 }
             }
@@ -92,7 +92,7 @@ namespace Snippetica.IO
 
             using (var fileStream = new FileStream(filePath, FileMode.Create))
             {
-                Console.WriteLine($"saving {filePath}");
+                Console.WriteLine($"saving file {filePath}");
                 SnippetSerializer.Serialize(fileStream, snippets, CreateSaveSettings());
             }
         }
@@ -130,7 +130,7 @@ namespace Snippetica.IO
 
             if (ShouldSave(filePath, content, encoding, onlyIfChanged))
             {
-                Console.WriteLine($"saving {filePath}");
+                Console.WriteLine($"saving file {filePath}");
 
                 File.WriteAllText(filePath, content, encoding);
             }

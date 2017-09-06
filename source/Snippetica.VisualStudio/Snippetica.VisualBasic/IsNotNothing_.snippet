@@ -1,22 +1,26 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>!string.IsNullOrEmpty</Title>
-    <Shortcut>snne</Shortcut>
-    <Description>!string.IsNullOrEmpty method</Description>
+    <Title>IsNot Nothing _</Title>
+    <Shortcut>nn</Shortcut>
+    <Description>A condition whether the expression is not Nothing</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-ExcludeFromSnippetBrowser</Keyword>
+    </Keywords>
   </Header>
   <Snippet>
     <Declarations>
       <Literal>
-        <ID>expression</ID>
-        <ToolTip>String expression</ToolTip>
-        <Default>s</Default>
+        <ID>left</ID>
+        <ToolTip>Left operand</ToolTip>
+        <Default>x</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[!string.IsNullOrEmpty($expression$)$end$]]></Code>
+    <Code Language="VB"><![CDATA[$left$ IsNot Nothing$end$' Shortcut 'nn' is obsolete, use 'xn' instead.
+]]></Code>
   </Snippet>
 </CodeSnippet>

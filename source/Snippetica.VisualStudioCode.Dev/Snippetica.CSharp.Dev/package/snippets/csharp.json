@@ -7,7 +7,7 @@
     "description": "?: (conditional) operator with condition whether the expression is equal to null"
   },
   "?: operator (not equal to null)": {
-    "prefix": "conn",
+    "prefix": "coxn",
     "body": [
       "(${1:expression} != null) ? ${2:null} : ${3:null}${0}"
     ],
@@ -49,7 +49,7 @@
     "description": "continue statement"
   },
   "Debug.Assert != null": {
-    "prefix": "dann",
+    "prefix": "daxn",
     "body": [
       "Debug.Assert(${1:false} != null, ${2:\"\"});${0}"
     ],
@@ -147,7 +147,7 @@
     "description": "Directory.Move method."
   },
   "do while not null": {
-    "prefix": "donn",
+    "prefix": "doxn",
     "body": [
       "do",
       "{",
@@ -323,7 +323,7 @@
     "description": "Enumerable.Where method"
   },
   "Enumerable.Where not equal to null": {
-    "prefix": "q_wnn",
+    "prefix": "q_wxn",
     "body": [
       ".Where(${1:f} => ${1} != null)${0}"
     ],
@@ -438,7 +438,7 @@
     "description": "HashSet<T> variable declaration (with initializer)"
   },
   "if !string.IsNullOrEmpty": {
-    "prefix": "iffsne",
+    "prefix": "ifxsne",
     "body": [
       "if (!string.IsNullOrEmpty(${1:s}))",
       "{",
@@ -448,7 +448,7 @@
     "description": "if !string.IsNullOrEmpty"
   },
   "if !string.IsNullOrWhiteSpace": {
-    "prefix": "iffsnw",
+    "prefix": "ifxsnw",
     "body": [
       "if (!string.IsNullOrWhiteSpace(${1:s}))",
       "{",
@@ -469,7 +469,7 @@
     "description": "if statement with condition whether Enum.TryParse method returns true."
   },
   "if not Enum.TryParse": {
-    "prefix": "iffemtp",
+    "prefix": "ifxemtp",
     "body": [
       "${1:TEnum} ${2:x};",
       "if (!Enum.TryParse(${3:value}, out ${2}))",
@@ -800,7 +800,7 @@
     "description": "TimeSpan type declaration"
   },
   "variable declaration with as operator + if not null": {
-    "prefix": "vasnn",
+    "prefix": "vasxn",
     "body": [
       "var ${1:x} = ${2:expression} as ${3:T};",
       "if (${1} != null)",
@@ -811,7 +811,7 @@
     "description": "variable declaration with as operator + condition whether the variable is not equal to null"
   },
   "while not null": {
-    "prefix": "wenn",
+    "prefix": "wexn",
     "body": [
       "while (${1:x} != null)",
       "{",

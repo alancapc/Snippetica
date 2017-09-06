@@ -5,13 +5,13 @@
 Title | Shortcut
 ----- | --------
 [?: operator \(equal to null\)](ConditionalOperatorEqualToNull.snippet)|con
-[?: operator \(not equal to null\)](ConditionalOperatorNotEqualToNull.snippet)|conn
+[?: operator \(not equal to null\)](ConditionalOperatorNotEqualToNull.snippet)|coxn
 [array type](ArrayOfTType.snippet)|a
 [Assembly attribute](AssemblyAttribute.snippet)|ae
 [break statement](BreakStatement.snippet)|bk
 [Conditional attribute](ConditionalAttribute.snippet)|ae
 [continue statement](ContinueStatement.snippet)|ce
-[Debug\.Assert \!= null](DebugAssertNotNull.snippet)|dann
+[Debug\.Assert \!= null](DebugAssertNotNull.snippet)|daxn
 [DebuggerDisplay attribute](DebuggerDisplayAttribute.snippet)|ae
 [DebuggerStepThrough attribute](DebuggerStepThroughAttribute.snippet)|ae
 [Dictionary&lt;TKey, TValue&gt; type](DictionaryOfTKeyTValueType.snippet)|gd
@@ -24,7 +24,7 @@ Title | Shortcut
 [Directory\.GetDirectories](DirectoryGetDirectories.snippet)|iod
 [Directory\.GetFiles](DirectoryGetFiles.snippet)|iod
 [Directory\.Move](DirectoryMove.snippet)|iod
-[do while not null](DoNotNull.snippet)|donn
+[do while not null](DoNotNull.snippet)|doxn
 [do while null](DoNull.snippet)|don
 [Enumerable\.Cast](EnumerableCast.snippet)|q
 [Enumerable\.Empty](EnumerableEmpty.snippet)|q
@@ -63,10 +63,10 @@ Title | Shortcut
 [Flags attribute](FlagsAttribute.snippet)|ae
 [HashSet&lt;T&gt; type](HashSetOfTType.snippet)|ghs
 [HashSet&lt;T&gt; variable](HashSetOfTVariable.snippet)|vhs
-[if \!string\.IsNullOrEmpty](IfNotStringIsNullOrEmpty.snippet)|iffsne
-[if \!string\.IsNullOrWhiteSpace](IfNotStringIsNullOrWhiteSpace.snippet)|iffsnw
+[if \!string\.IsNullOrEmpty](IfNotStringIsNullOrEmpty.snippet)|ifxsne
+[if \!string\.IsNullOrWhiteSpace](IfNotStringIsNullOrWhiteSpace.snippet)|ifxsnw
 [if Enum\.TryParse](IfEnumTryParse.snippet)|ifemtp
-[if not Enum\.TryParse](IfNotEnumTryParse.snippet)|iffemtp
+[if not Enum\.TryParse](IfNotEnumTryParse.snippet)|ifxemtp
 [if string\.IsNullOrEmpty](IfStringIsNullOrEmpty.snippet)|ifsne
 [if string\.IsNullOrWhiteSpace](IfStringIsNullOrWhiteSpace.snippet)|ifsnw
 [internal abstract modifiers](InternalAbstractModifiers.snippet)|x
@@ -108,8 +108,8 @@ Title | Shortcut
 [StringBuilder variable](StringBuilderVariable.snippet)|vsb
 [throw statement](ThrowStatement.snippet)|tw
 [TimeSpan type](TimeSpanType.snippet)|ts
-[variable declaration with as operator \+ if not null](VariableAsTIfNotNull.snippet)|vasnn
-[while not null](WhileNotNull.snippet)|wenn
+[variable declaration with as operator \+ if not null](VariableAsTIfNotNull.snippet)|vasxn
+[while not null](WhileNotNull.snippet)|wexn
 [while null](WhileNull.snippet)|wen
 [yield return new containing type](YieldReturnNewThis.snippet)|yrnthis
 [yield return new](YieldReturnNew.snippet)|yrn
