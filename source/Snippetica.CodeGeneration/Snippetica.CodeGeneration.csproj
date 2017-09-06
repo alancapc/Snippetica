@@ -53,9 +53,15 @@
   <ItemGroup>
     <Compile Include="CodeGenerationUtility.cs" />
     <Compile Include="Commands\CommandUtility.cs" />
+    <Compile Include="Markdown\ProjectReadmeSettings.cs" />
+    <Compile Include="PackageGenerator.cs" />
     <Compile Include="SnippetEnvironment.cs" />
-    <Compile Include="VisualStudioCodeEnvironment.cs" />
-    <Compile Include="VisualStudioEnvironment.cs" />
+    <Compile Include="VisualStudioCode\VisualStudioCodeEnvironment.cs" />
+    <Compile Include="VisualStudioCode\VisualStudioCodePackageGenerator.cs" />
+    <Compile Include="VisualStudio\HtmlGenerator.cs" />
+    <Compile Include="VisualStudio\PkgDefGenerator.cs" />
+    <Compile Include="VisualStudio\ProjectDocument.cs" />
+    <Compile Include="VisualStudio\VisualStudioEnvironment.cs" />
     <Compile Include="HtmlSnippetGenerator.cs" />
     <Compile Include="Commands\HtmlWithContentCommand.cs" />
     <Compile Include="Commands\HtmlWithoutContentCommand.cs" />
@@ -76,7 +82,7 @@
     <Compile Include="Markdown\ShortcutInfoColumnDefinition.cs" />
     <Compile Include="Markdown\ShortcutInfoTableWriter.cs" />
     <Compile Include="Markdown\SnippetLanguageColumnDefinition.cs" />
-    <Compile Include="Markdown\SnippetListSettings.cs" />
+    <Compile Include="Markdown\DirectoryReadmeSettings.cs" />
     <Compile Include="Markdown\SnippetShortcutColumnDefinition.cs" />
     <Compile Include="Markdown\SnippetTableWriter.cs" />
     <Compile Include="Markdown\SnippetTitleColumnDefinition.cs" />
@@ -117,8 +123,9 @@
     <Compile Include="Commands\TypeCommand.cs" />
     <Compile Include="TypeDefinitionCollection.cs" />
     <Compile Include="VisualBasicDefinition.cs" />
-    <Compile Include="VisualStudioCodeSnippetGenerator.cs" />
-    <Compile Include="VisualStudioSnippetGenerator.cs" />
+    <Compile Include="VisualStudioCode\VisualStudioCodeSnippetGenerator.cs" />
+    <Compile Include="VisualStudio\VisualStudioPackageGenerator.cs" />
+    <Compile Include="VisualStudio\VisualStudioSnippetGenerator.cs" />
     <Compile Include="XamlSnippetGenerator.cs" />
     <Compile Include="XmlSnippetGenerator.cs" />
   </ItemGroup>
@@ -133,6 +140,10 @@
     <ProjectReference Include="..\Snippetica.Common\Snippetica.Common.csproj">
       <Project>{ea986e08-dd26-43ea-94f0-8d2f70d4a17f}</Project>
       <Name>Snippetica.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Snippetica.Validations\Snippetica.Validations.csproj">
+      <Project>{FBCD876B-5CDE-4C75-834C-685D33FB1725}</Project>
+      <Name>Snippetica.Validations</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

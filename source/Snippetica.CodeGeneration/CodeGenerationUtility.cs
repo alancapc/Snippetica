@@ -10,24 +10,31 @@ namespace Snippetica.CodeGeneration
     {
         public static string GetProjectSubtitle(IEnumerable<SnippetGeneratorResult> results)
         {
-            return $"A collection of snippets for {GetLanguagesSeparatedWithComma(results)}.";
+            IEnumerable<Language> languages = results.Select(f => f.Language).Distinct();
+
+            return GetProjectSubtitle(languages);
         }
 
-        private static string GetLanguagesSeparatedWithComma(IEnumerable<SnippetGeneratorResult> results)
+        public static string GetProjectSubtitle(IEnumerable<Language> languages)
         {
-            string[] languages = results
-                .GroupBy(f => f.Language.GetTitle())
-                .Select(f => f.Key)
+            return $"A collection of snippets for {GetLanguagesSeparatedWithComma(languages)}.";
+        }
+
+        private static string GetLanguagesSeparatedWithComma(IEnumerable<Language> languages)
+        {
+            string[] titles = languages
+                .Select(f => f.GetTitle())
+                .OrderBy(f => f)
                 .ToArray();
 
-            for (int i = 1; i < languages.Length - 1; i++)
+            for (int i = 1; i < titles.Length - 1; i++)
             {
-                languages[i] = ", " + languages[i];
+                titles[i] = ", " + titles[i];
             }
 
-            languages[languages.Length - 1] = " and " + languages[languages.Length - 1];
+            titles[titles.Length - 1] = " and " + titles[titles.Length - 1];
 
-            return string.Concat(languages);
+            return string.Concat(titles);
         }
 
         public static string GetSnippetBrowserUrl(EnvironmentKind environmentKind, Language language = Language.None)

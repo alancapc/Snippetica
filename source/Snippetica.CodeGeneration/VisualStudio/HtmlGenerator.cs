@@ -2,13 +2,12 @@
 
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Xml;
+using static Snippetica.CodeGeneration.CodeGenerationUtility;
 using static Snippetica.KnownNames;
 using static Snippetica.KnownPaths;
-using static Snippetica.CodeGeneration.CodeGenerationUtility;
 
-namespace Snippetica.CodeGeneration.Package.VisualStudio
+namespace Snippetica.CodeGeneration.VisualStudio
 {
     public static class HtmlGenerator
     {

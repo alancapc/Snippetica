@@ -8,7 +8,7 @@ using Pihrtsoft.Snippets;
 using Snippetica.CodeGeneration.Markdown;
 using Snippetica.IO;
 
-namespace Snippetica.CodeGeneration.Package.VisualStudio
+namespace Snippetica.CodeGeneration.VisualStudio
 {
     public class VisualStudioPackageGenerator : PackageGenerator
     {
@@ -20,8 +20,6 @@ namespace Snippetica.CodeGeneration.Package.VisualStudio
         public override void GeneratePackageFiles(string directoryPath, IEnumerable<SnippetGeneratorResult> results)
         {
             base.GeneratePackageFiles(directoryPath, results);
-
-            MarkdownWriter.WriteProjectReadme(directoryPath, results);
 
             IOUtility.WriteAllText(
                 Path.Combine(directoryPath, "description.html"),
@@ -36,9 +34,9 @@ namespace Snippetica.CodeGeneration.Package.VisualStudio
         {
             base.SaveSnippets(snippets, result);
 
-            SnippetListSettings settings = CreateSnippetListSettings(result);
+            DirectoryReadmeSettings settings = Environment.CreateDirectoryReadmeSettings(result);
 
-            MarkdownWriter.WriteReadme(result.Path, snippets, settings);
+            MarkdownWriter.WriteDirectoryReadme(result.Path, snippets, settings);
         }
 
         protected override void SaveAllSnippets(string projectPath, List<Snippet> allSnippets)

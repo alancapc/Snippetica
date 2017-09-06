@@ -3,7 +3,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using Pihrtsoft.Snippets;
+using Snippetica.CodeGeneration.Markdown;
 
 namespace Snippetica.CodeGeneration
 {
@@ -11,14 +13,14 @@ namespace Snippetica.CodeGeneration
     {
         public abstract EnvironmentKind Kind { get; }
 
+        public List<ShortcutInfo> Shortcuts { get; } = new List<ShortcutInfo>();
+
         public IEnumerable<SnippetGeneratorResult> GenerateSnippets(IEnumerable<SnippetDirectory> directories)
         {
             foreach (SnippetDirectory directory in directories)
             {
                 foreach (SnippetGeneratorResult result in GenerateSnippets(directory))
-                {
                     yield return result;
-                }
             }
         }
 
@@ -34,7 +36,7 @@ namespace Snippetica.CodeGeneration
                 isDevelopment: false,
                 tags: directory.Tags.ToArray());
 
-            string devPath = Path.Combine(directory.Path, "Dev");
+            string devPath = Path.Combine(directory.Path, KnownNames.Dev);
 
             if (Directory.Exists(devPath))
             {
@@ -72,13 +74,13 @@ namespace Snippetica.CodeGeneration
                 }
             }
 
-            string autoGenerationPath = Path.Combine(directory.Path, "AutoGeneration");
+            string autoGenerationPath = Path.Combine(directory.Path, KnownNames.AutoGeneration);
 
             if (Directory.Exists(autoGenerationPath))
             {
                 SnippetDirectory autoGenerationDirectory = directory.WithPath(autoGenerationPath);
 
-                SnippetGenerator generator = CreateGenerator(autoGenerationDirectory);
+                SnippetGenerator generator = CreateSnippetGenerator(autoGenerationDirectory);
 
                 snippets.AddRange(generator.GenerateSnippets(autoGenerationDirectory.Path));
             }
@@ -92,10 +94,10 @@ namespace Snippetica.CodeGeneration
             {
                 string name = Path.GetFileName(path);
 
-                if (name == "Dev")
+                if (name == KnownNames.Dev)
                     continue;
 
-                if (name == "AutoGeneration")
+                if (name == KnownNames.AutoGeneration)
                     continue;
 
                 foreach (Snippet snippet in SnippetSerializer.Deserialize(path, SearchOption.AllDirectories))
@@ -118,7 +120,45 @@ namespace Snippetica.CodeGeneration
             return IsSupportedLanguage(directory.Language);
         }
 
-        protected abstract SnippetGenerator CreateGenerator(SnippetDirectory directory);
+        public virtual DirectoryReadmeSettings CreateDirectoryReadmeSettings(SnippetGeneratorResult result)
+        {
+            var settings = new DirectoryReadmeSettings()
+            {
+                Environment = this,
+                IsDevelopment = result.IsDevelopment,
+                Header = result.DirectoryName,
+                AddLinkToTitle = true,
+                AddQuickReference = !result.IsDevelopment && !result.HasTag(KnownTags.NoQuickReference),
+                Language = result.Language,
+                DirectoryPath = result.Path
+            };
+
+            if (!settings.IsDevelopment)
+            {
+                //TODO: 
+                string filePath = $@"..\..\..\..\..\text\{result.DirectoryName}.md";
+
+                if (File.Exists(filePath))
+                    settings.QuickReferenceText = File.ReadAllText(filePath, Encoding.UTF8);
+
+                settings.Shortcuts.AddRange(Shortcuts);
+            }
+
+            return settings;
+        }
+
+        public virtual ProjectReadmeSettings CreateProjectReadmeSettings()
+        {
+            return new ProjectReadmeSettings()
+            {
+                Environment = this,
+                Header = $"{KnownNames.ProductName} for {Kind.GetTitle()}"
+            };
+        }
+
+        protected abstract SnippetGenerator CreateSnippetGenerator(SnippetDirectory directory);
+
+        public abstract PackageGenerator CreatePackageGenerator();
 
         public abstract bool IsSupportedLanguage(Language language);
     }

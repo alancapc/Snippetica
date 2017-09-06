@@ -12,136 +12,137 @@ namespace Snippetica.CodeGeneration.Markdown
 {
     public static class MarkdownGenerator
     {
-        public static string GenerateSolutionReadMe(SnippetGeneratorResult[] results)
+        public static void GenerateSolutionReadme(
+            List<List<SnippetGeneratorResult>> results,
+            TextWriter writer,
+            ProjectReadmeSettings settings)
+        {
+            writer.WriteLine($"## {ProductName}");
+            writer.WriteLine();
+
+            writer.WriteLine($"* {GetProjectSubtitle(results.SelectMany(f => f))}");
+            writer.WriteLine($"* [Release Notes]({MasterGitHubUrl}/{$"{ChangeLogFileName}"}).");
+            writer.WriteLine();
+
+            foreach (List<SnippetGeneratorResult> results2 in results)
+            {
+                GenerateProjectReadme(results2, settings);
+            }
+        }
+
+        public static string GenerateProjectReadme(
+            IEnumerable<SnippetGeneratorResult> results,
+            ProjectReadmeSettings settings)
         {
             using (var sw = new StringWriter())
             {
-                sw.WriteLine($"## {ProductName}");
-                sw.WriteLine();
-
-                sw.WriteLine($"* {GetProjectSubtitle(results)}");
-                sw.WriteLine($"* [Release Notes]({MasterGitHubUrl}/{$"{ChangeLogFileName}"}).");
-                sw.WriteLine($"* Browse all available snippets with [Snippet Browser]({GetSnippetBrowserUrl(EnvironmentKind.VisualStudio)}).");
-                sw.WriteLine();
-                sw.WriteLine("### Distribution");
-                sw.WriteLine();
-                sw.WriteLine("* **Snippetica** is distributed as [Visual Studio Extension](http://marketplace.visualstudio.com/items?itemName=josefpihrt.Snippetica).");
-                sw.WriteLine();
-                sw.WriteLine("### Snippets");
-                sw.WriteLine();
-
-                sw.WriteLine("Folder|Count| |");
-                sw.WriteLine("--- | --- | ---:");
-
-                foreach (SnippetGeneratorResult result in results)
-                {
-                    sw.WriteLine($"[{result.DirectoryName}]({VisualStudioExtensionGitHubUrl}/{result.DirectoryName}/{ReadMeFileName})|{result.Snippets.Count}|[full list]({GetSnippetBrowserUrl(EnvironmentKind.VisualStudio, result.Language)})");
-                }
+                GenerateProjectReadme(results, sw, settings);
 
                 return sw.ToString();
             }
         }
 
-        public static string GenerateProjectReadMe(IEnumerable<SnippetGeneratorResult> results)
+        public static void GenerateProjectReadme(
+            IEnumerable<SnippetGeneratorResult> results,
+            TextWriter writer,
+            ProjectReadmeSettings settings)
         {
-            using (var sw = new StringWriter())
+            if (!string.IsNullOrEmpty(settings.Header))
             {
-                sw.WriteLine();
+                writer.WriteLine($"### {settings.Header}");
+                writer.WriteLine();
+            }
 
-                foreach (SnippetGeneratorResult result in results)
-                {
-                    sw.WriteLine($"* [{result.DirectoryName}]({result.DirectoryName}/{ReadMeFileName}) ({result.Snippets.Count} snippets)");
-                }
+            writer.WriteLine($"* Browse snippets with [Snippet Browser]({GetSnippetBrowserUrl(settings.Environment.Kind)}).");
+            writer.WriteLine($"* Download extension from [Marketplace](http://marketplace.visualstudio.com/search?term=publisher%3A\"Josef%20Pihrt\"%20{ProductName}&target={settings.Environment.Kind.GetIdentifier()}&sortBy=Name).");
+            writer.WriteLine();
 
-                return sw.ToString();
+            writer.WriteLine("#### Snippets");
+            writer.WriteLine();
+
+            writer.WriteLine("Group|Count| |");
+            writer.WriteLine("--- | --- | ---:");
+
+            foreach (SnippetGeneratorResult result in results.OrderBy(f => f.DirectoryName))
+            {
+                writer.WriteLine($"[{result.DirectoryName}]({VisualStudioExtensionGitHubUrl}/{result.DirectoryName}/{ReadMeFileName})|{result.Snippets.Count}|[Browse]({GetSnippetBrowserUrl(settings.Environment.Kind, result.Language)})");
             }
         }
 
         public static string GenerateDirectoryReadme(
             IEnumerable<Snippet> snippets,
-            SnippetListSettings settings)
+            DirectoryReadmeSettings settings)
         {
             using (var sw = new StringWriter())
             {
-                if (!string.IsNullOrEmpty(settings.Header))
-                {
-                    sw.WriteLine($"## {settings.Header}");
-                    sw.WriteLine();
-                }
-
-                if (!settings.IsDevelopment)
-                {
-                    sw.WriteLine("### Snippet Browser");
-                    sw.WriteLine();
-
-                    sw.WriteLine($"* Browse all available snippets with [Snippet Browser]({GetSnippetBrowserUrl(settings.Environment.Kind, settings.Language)}).");
-                    sw.WriteLine();
-                }
-
-                if (!settings.IsDevelopment
-                    && settings.AddQuickReference)
-                {
-                    List<ShortcutInfo> shortcuts = settings.Shortcuts
-                        .Where(f => f.Languages.Contains(settings.Language))
-                        .ToList();
-
-                    if (shortcuts.Count > 0)
-                    {
-                        sw.WriteLine("### Quick Reference");
-                        sw.WriteLine();
-
-                        if (settings.QuickReferenceText != null)
-                        {
-                            sw.WriteLine(settings.QuickReferenceText);
-                            sw.WriteLine();
-                        }
-
-                        using (ShortcutInfoTableWriter tableWriter = ShortcutInfoTableWriter.Create())
-                        {
-                            tableWriter.WriteTable(shortcuts);
-                            sw.Write(tableWriter.ToString());
-                        }
-
-                        sw.WriteLine();
-                    }
-                }
-
-                sw.WriteLine("### List of Selected Snippets");
-                sw.WriteLine();
-
-                using (SnippetTableWriter tableWriter = (settings.AddLinkToTitle)
-                    ? SnippetTableWriter.CreateTitleWithLinkThenShortcut(settings.DirectoryPath)
-                    : SnippetTableWriter.CreateTitleThenShortcut())
-                {
-                    snippets = snippets.Where(f => !f.HasTag(KnownTags.ExcludeFromReadme));
-
-                    tableWriter.WriteTable(snippets);
-                    sw.Write(tableWriter.ToString());
-                }
+                snippets = GenerateDirectoryReadme(snippets, sw, settings);
 
                 return sw.ToString();
             }
         }
 
-        private static string GenerateSnippetList(Snippet[] snippets, string directoryPath, SnippetTableWriter tableWriter)
+        public static IEnumerable<Snippet> GenerateDirectoryReadme(
+            IEnumerable<Snippet> snippets,
+            TextWriter writer,
+            DirectoryReadmeSettings settings)
         {
-            using (var sw = new StringWriter())
+            if (!string.IsNullOrEmpty(settings.Header))
             {
-                sw.WriteLine($"## {Path.GetFileName(directoryPath)}");
-                sw.WriteLine();
+                writer.WriteLine($"## {settings.Header}");
+                writer.WriteLine();
+            }
 
-                string s = $"* {snippets.Length} snippets";
-                sw.WriteLine(s);
+            if (!settings.IsDevelopment)
+            {
+                writer.WriteLine("### Snippet Browser");
+                writer.WriteLine();
 
-                sw.WriteLine();
-                sw.WriteLine("### List of Snippets");
-                sw.WriteLine();
+                writer.WriteLine($"* Browse all available snippets with [Snippet Browser]({GetSnippetBrowserUrl(settings.Environment.Kind, settings.Language)}).");
+                writer.WriteLine();
+            }
+
+            if (!settings.IsDevelopment
+                && settings.AddQuickReference)
+            {
+                List<ShortcutInfo> shortcuts = settings.Shortcuts
+                    .Where(f => f.Languages.Contains(settings.Language))
+                    .ToList();
+
+                if (shortcuts.Count > 0)
+                {
+                    writer.WriteLine("### Quick Reference");
+                    writer.WriteLine();
+
+                    if (settings.QuickReferenceText != null)
+                    {
+                        writer.WriteLine(settings.QuickReferenceText);
+                        writer.WriteLine();
+                    }
+
+                    using (ShortcutInfoTableWriter tableWriter = ShortcutInfoTableWriter.Create())
+                    {
+                        tableWriter.WriteTable(shortcuts);
+                        writer.Write(tableWriter.ToString());
+                    }
+
+                    writer.WriteLine();
+                }
+            }
+
+            writer.WriteLine("### List of Selected Snippets");
+            writer.WriteLine();
+
+            using (SnippetTableWriter tableWriter = (settings.AddLinkToTitle)
+                ? SnippetTableWriter.CreateTitleWithLinkThenShortcut(settings.DirectoryPath)
+                : SnippetTableWriter.CreateTitleThenShortcut())
+            {
+                snippets = snippets.Where(f => !f.HasTag(KnownTags.ExcludeFromReadme));
 
                 tableWriter.WriteTable(snippets);
-                sw.Write(tableWriter.ToString());
-
-                return sw.ToString();
+                writer.Write(tableWriter.ToString());
             }
+
+            return snippets;
         }
     }
 }

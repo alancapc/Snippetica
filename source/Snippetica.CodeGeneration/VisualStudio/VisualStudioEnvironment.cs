@@ -3,7 +3,7 @@
 using System;
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration
+namespace Snippetica.CodeGeneration.VisualStudio
 {
     public class VisualStudioEnvironment : SnippetEnvironment
     {
@@ -18,7 +18,7 @@ namespace Snippetica.CodeGeneration
                 && !directory.HasTag(KnownTags.ExcludeFromVisualStudio);
         }
 
-        protected override SnippetGenerator CreateGenerator(SnippetDirectory directory)
+        protected override SnippetGenerator CreateSnippetGenerator(SnippetDirectory directory)
         {
             switch (directory.Language)
             {
@@ -52,6 +52,11 @@ namespace Snippetica.CodeGeneration
                 default:
                     return false;
             }
+        }
+
+        public override PackageGenerator CreatePackageGenerator()
+        {
+            return new VisualStudioPackageGenerator(this);
         }
     }
 }

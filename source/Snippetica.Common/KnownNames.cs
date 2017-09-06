@@ -10,6 +10,8 @@ namespace Snippetica
         public const string SourceDirectoryName = "source";
         public const string VisualStudioExtensionProjectName = ProductName + ".VisualStudio";
         public const string VisualStudioCodeExtensionProjectName = ProductName + ".VisualStudioCode";
-        public const string DevSuffix = ".Dev";
+        public const string AutoGeneration = "AutoGeneration";
+        public const string Dev = "Dev";
+        public const string DevSuffix = "." + Dev;
     }
 }

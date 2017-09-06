@@ -2,7 +2,7 @@
 
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration
+namespace Snippetica.CodeGeneration.VisualStudio
 {
     public class VisualStudioSnippetGenerator : LanguageSnippetGenerator
     {

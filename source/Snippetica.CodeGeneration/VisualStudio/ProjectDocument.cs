@@ -6,7 +6,7 @@ using System.Linq;
 using System.Xml.Linq;
 using Snippetica.Xml;
 
-namespace Snippetica.CodeGeneration.Package.VisualStudio
+namespace Snippetica.CodeGeneration.VisualStudio
 {
     public class ProjectDocument
     {

@@ -3,13 +3,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using Pihrtsoft.Snippets;
-using Snippetica.CodeGeneration.Markdown;
 using Snippetica.IO;
 using Snippetica.Validations;
 
-namespace Snippetica.CodeGeneration.Package
+namespace Snippetica.CodeGeneration
 {
     public class PackageGenerator
     {
@@ -19,8 +17,6 @@ namespace Snippetica.CodeGeneration.Package
         }
 
         public SnippetEnvironment Environment { get; }
-
-        public List<ShortcutInfo> Shortcuts { get; } = new List<ShortcutInfo>();
 
         public virtual void GeneratePackageFiles(
             string directoryPath,
@@ -64,32 +60,6 @@ namespace Snippetica.CodeGeneration.Package
         protected virtual IEnumerable<Snippet> ProcessSnippets(List<Snippet> snippets)
         {
             return snippets;
-        }
-
-        protected virtual SnippetListSettings CreateSnippetListSettings(SnippetGeneratorResult result)
-        {
-            var settings = new SnippetListSettings()
-            {
-                Environment = Environment,
-                IsDevelopment = result.IsDevelopment,
-                Header = result.DirectoryName,
-                AddLinkToTitle = true,
-                AddQuickReference = !result.IsDevelopment && !result.HasTag(KnownTags.NoQuickReference),
-                Language = result.Language,
-                DirectoryPath = result.Path
-            };
-
-            if (!settings.IsDevelopment)
-            {
-                string filePath = $@"..\..\..\..\..\text\{result.DirectoryName}.md";
-
-                if (File.Exists(filePath))
-                    settings.QuickReferenceText = File.ReadAllText(filePath, Encoding.UTF8);
-
-                settings.Shortcuts.AddRange(Shortcuts);
-            }
-
-            return settings;
         }
     }
 }

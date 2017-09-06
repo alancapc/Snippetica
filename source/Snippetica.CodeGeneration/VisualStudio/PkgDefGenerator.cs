@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration.Package.VisualStudio
+namespace Snippetica.CodeGeneration.VisualStudio
 {
     public static class PkgDefGenerator
     {

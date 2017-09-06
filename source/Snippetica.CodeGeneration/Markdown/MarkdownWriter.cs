@@ -10,17 +10,21 @@ namespace Snippetica.CodeGeneration.Markdown
 {
     public static class MarkdownWriter
     {
-        public static void WriteProjectReadme(string directoryPath, IEnumerable<SnippetGeneratorResult> results)
+        public static void WriteProjectReadme(
+            string directoryPath,
+            IEnumerable<SnippetGeneratorResult> results,
+            ProjectReadmeSettings settings)
         {
             IOUtility.WriteAllText(
                 Path.Combine(directoryPath, ReadMeFileName),
-                MarkdownGenerator.GenerateProjectReadMe(results));
+                MarkdownGenerator.GenerateProjectReadme(results, settings),
+                IOUtility.UTF8NoBom);
         }
 
-        public static void WriteReadme(
+        public static void WriteDirectoryReadme(
             string directoryPath,
             List<Snippet> snippets,
-            SnippetListSettings settings)
+            DirectoryReadmeSettings settings)
         {
             IOUtility.WriteAllText(
                 Path.Combine(directoryPath, ReadMeFileName),

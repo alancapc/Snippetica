@@ -18,5 +18,18 @@ namespace Snippetica
                     throw new ArgumentException("", nameof(kind));
             }
         }
+
+        public static string GetTitle(this EnvironmentKind kind)
+        {
+            switch (kind)
+            {
+                case EnvironmentKind.VisualStudio:
+                    return "Visual Studio";
+                case EnvironmentKind.VisualStudioCode:
+                    return "Visual Studio Code";
+                default:
+                    throw new ArgumentException("", nameof(kind));
+            }
+        }
     }
 }

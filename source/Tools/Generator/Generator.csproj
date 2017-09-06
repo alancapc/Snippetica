@@ -59,10 +59,6 @@
       <Project>{5f21280b-2029-4d27-aee6-c6e3e8c09c29}</Project>
       <Name>Pihrtsoft.Records</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Snippetica.CodeGeneration.Package\Snippetica.CodeGeneration.Package.csproj">
-      <Project>{B94C0A26-B8C1-49C7-AA65-251E0C432539}</Project>
-      <Name>Snippetica.CodeGeneration.Package</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Snippetica.Common\Snippetica.Common.csproj">
       <Project>{ea986e08-dd26-43ea-94f0-8d2f70d4a17f}</Project>
       <Name>Snippetica.Common</Name>

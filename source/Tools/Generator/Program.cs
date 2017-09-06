@@ -7,10 +7,11 @@ using System.Linq;
 using Pihrtsoft.Records;
 using Pihrtsoft.Snippets;
 using Pihrtsoft.Snippets.Comparers;
-using Snippetica.CodeGeneration.Package;
-using Snippetica.CodeGeneration.Package.VisualStudio;
-using Snippetica.CodeGeneration.Package.VisualStudioCode;
+using Snippetica.CodeGeneration.Markdown;
+using Snippetica.CodeGeneration.VisualStudio;
+using Snippetica.CodeGeneration.VisualStudioCode;
 using Snippetica.IO;
+using static Snippetica.KnownNames;
 using static Snippetica.KnownPaths;
 
 namespace Snippetica.CodeGeneration
@@ -19,13 +20,13 @@ namespace Snippetica.CodeGeneration
     {
         private static readonly SnippetDeepEqualityComparer _snippetEqualityComparer = new SnippetDeepEqualityComparer();
 
+        private static readonly ShortcutInfo[] _shortcuts = ShortcutInfo.LoadFromFile(@"..\..\Data\Shortcuts.xml").ToArray();
+
         private static void Main(string[] args)
         {
             SnippetDirectory[] directories = LoadDirectories(@"..\..\Data\Directories.xml");
 
-            ShortcutInfo[] shortcuts = ShortcutInfo.LoadFromFile(@"..\..\Data\Shortcuts.xml").ToArray();
-
-            ShortcutInfo.SerializeToXml(Path.Combine(VisualStudioExtensionProjectPath, "Shortcuts.xml"), shortcuts);
+            ShortcutInfo.SerializeToXml(Path.Combine(VisualStudioExtensionProjectPath, "Shortcuts.xml"), _shortcuts);
 
             LoadLanguageDefinitions();
 
@@ -33,36 +34,55 @@ namespace Snippetica.CodeGeneration
 
             var visualStudio = new VisualStudioEnvironment();
 
-            GenerateSnippets(
+            List<SnippetGeneratorResult> visualStudioResults = GenerateSnippets(
                 visualStudio,
                 directories,
-                new VisualStudioPackageGenerator(visualStudio),
                 VisualStudioExtensionProjectPath,
-                shortcuts,
                 KnownTags.ExcludeFromVisualStudio);
 
             var visualStudioCode = new VisualStudioCodeEnvironment();
 
-            GenerateSnippets(
+            List<SnippetGeneratorResult> visualStudioCodeResults = GenerateSnippets(
                 visualStudioCode,
                 directories,
-                new VisualStudioCodePackageGenerator(visualStudioCode),
                 VisualStudioCodeExtensionProjectPath,
-                shortcuts,
                 KnownTags.ExcludeFromVisualStudioCode);
+
+            using (var sw = new StringWriter())
+            {
+                sw.WriteLine($"## {ProductName}");
+                sw.WriteLine();
+
+                IEnumerable<Language> languages = visualStudioResults
+                    .Concat(visualStudioCodeResults)
+                    .Select(f => f.Language).Distinct();
+
+                sw.WriteLine($"* {CodeGenerationUtility.GetProjectSubtitle(languages)}");
+                sw.WriteLine($"* [Release Notes]({MasterGitHubUrl}/{$"{ChangeLogFileName}"}).");
+                sw.WriteLine();
+
+                MarkdownGenerator.GenerateProjectReadme(visualStudioResults, sw, visualStudio.CreateProjectReadmeSettings());
+
+                sw.WriteLine();
+
+                MarkdownGenerator.GenerateProjectReadme(visualStudioCodeResults, sw, visualStudioCode.CreateProjectReadmeSettings());
+
+                IOUtility.WriteAllText(Path.Combine(SolutionDirectoryPath, ReadMeFileName), sw.ToString(), IOUtility.UTF8NoBom);
+            }
+
             Console.WriteLine("*** END ***");
             Console.ReadKey();
         }
 
-        private static void GenerateSnippets(
+        private static List<SnippetGeneratorResult> GenerateSnippets(
             SnippetEnvironment environment,
             SnippetDirectory[] directories,
-            PackageGenerator generator,
             string projectPath,
-            ShortcutInfo[] shortcuts,
             string excludeTag)
         {
-            generator.Shortcuts.AddRange(shortcuts.Where(f => !f.HasTag(excludeTag)));
+            environment.Shortcuts.AddRange(_shortcuts.Where(f => !f.HasTag(excludeTag)));
+
+            PackageGenerator generator = environment.CreatePackageGenerator();
 
             var results = new List<SnippetGeneratorResult>();
             var devResults = new List<SnippetGeneratorResult>();
@@ -81,7 +101,11 @@ namespace Snippetica.CodeGeneration
 
             generator.GeneratePackageFiles(projectPath, results);
 
-            generator.GeneratePackageFiles(projectPath + KnownNames.DevSuffix, devResults);
+            generator.GeneratePackageFiles(projectPath + DevSuffix, devResults);
+
+            MarkdownWriter.WriteProjectReadme(projectPath, results, environment.CreateProjectReadmeSettings());
+
+            return results;
         }
 
         private static void SaveChangedSnippets(SnippetDirectory[] directories)

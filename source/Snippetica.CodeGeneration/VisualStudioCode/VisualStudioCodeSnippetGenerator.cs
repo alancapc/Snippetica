@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Pihrtsoft.Snippets;
 using Snippetica.CodeGeneration.Commands;
 
-namespace Snippetica.CodeGeneration
+namespace Snippetica.CodeGeneration.VisualStudioCode
 {
     public class VisualStudioCodeSnippetGenerator : LanguageSnippetGenerator
     {

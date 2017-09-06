@@ -12,7 +12,7 @@ using Snippetica.IO;
 using static Snippetica.KnownNames;
 using static Snippetica.KnownPaths;
 
-namespace Snippetica.CodeGeneration.Package.VisualStudioCode
+namespace Snippetica.CodeGeneration.VisualStudioCode
 {
     public class VisualStudioCodePackageGenerator : PackageGenerator
     {
@@ -47,14 +47,14 @@ namespace Snippetica.CodeGeneration.Package.VisualStudioCode
 
             IOUtility.WriteAllText(Path.Combine(packageDirectoryPath, "package.json"), info.ToString(), IOUtility.UTF8NoBom);
 
-            SnippetListSettings settings = CreateSnippetListSettings(result);
+            DirectoryReadmeSettings settings = Environment.CreateDirectoryReadmeSettings(result);
 
-            MarkdownWriter.WriteReadme(directoryPath, snippets, settings);
+            MarkdownWriter.WriteDirectoryReadme(directoryPath, snippets, settings);
 
             settings.AddLinkToTitle = false;
             settings.Header = null;
 
-            MarkdownWriter.WriteReadme(packageDirectoryPath, snippets, settings);
+            MarkdownWriter.WriteDirectoryReadme(packageDirectoryPath, snippets, settings);
         }
 
         private static PackageInfo GetDefaultPackageInfo()
