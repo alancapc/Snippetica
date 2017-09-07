@@ -475,6 +475,16 @@
     <None Include="Snippetica.Html\Dev\span_class.snippet" />
     <None Include="Snippetica.Html\Dev\span_id.snippet" />
     <None Include="Snippetica.Html\Dev\table_with_sections.snippet" />
+    <None Include="Snippetica.Json\Array.snippet" />
+    <None Include="Snippetica.Json\EmptyArray.snippet" />
+    <None Include="Snippetica.Json\EmptyObject.snippet" />
+    <None Include="Snippetica.Json\FalseValue.snippet" />
+    <None Include="Snippetica.Json\NullValue.snippet" />
+    <None Include="Snippetica.Json\Object.snippet" />
+    <None Include="Snippetica.Json\StringValue.snippet" />
+    <None Include="Snippetica.Json\TrueValue.snippet" />
+    <None Include="Snippetica.Json\Value.snippet" />
+    <None Include="Snippetica.Json\ZeroValue.snippet" />
     <None Include="Snippetica.Markdown\Bold.snippet" />
     <None Include="Snippetica.Markdown\BoldItalic.snippet" />
     <None Include="Snippetica.Markdown\Code.snippet" />

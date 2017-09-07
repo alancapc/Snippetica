@@ -18,6 +18,8 @@
     <None Include="$(MSBuildThisFileDirectory)Snippetica.Html\package\CHANGELOG.md" />
     <None Include="$(MSBuildThisFileDirectory)Snippetica.Html\package\README.md" />
     <None Include="$(MSBuildThisFileDirectory)Snippetica.Html\README.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.Json\package\README.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.Json\README.md" />
     <None Include="$(MSBuildThisFileDirectory)Snippetica.Markdown\package\README.md" />
     <None Include="$(MSBuildThisFileDirectory)Snippetica.Markdown\README.md" />
     <None Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic\package\CHANGELOG.md" />
@@ -43,6 +45,8 @@
     <Content Include="$(MSBuildThisFileDirectory)Snippetica.Html\package\LICENSE.txt" />
     <Content Include="$(MSBuildThisFileDirectory)Snippetica.Html\package\package.json" />
     <Content Include="$(MSBuildThisFileDirectory)Snippetica.Html\package\snippets\html.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Json\package\package.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Json\package\snippets\json.json" />
     <Content Include="$(MSBuildThisFileDirectory)Snippetica.Markdown\package\package.json" />
     <Content Include="$(MSBuildThisFileDirectory)Snippetica.Markdown\package\snippets\markdown.json" />
     <Content Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic\package\.vscode\launch.json" />

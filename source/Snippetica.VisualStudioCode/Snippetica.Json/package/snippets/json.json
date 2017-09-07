@@ -1,0 +1,72 @@
+﻿{
+  "array": {
+    "prefix": "a",
+    "body": [
+      "\"${1:name}\": [ ${0} ]"
+    ],
+    "description": "array"
+  },
+  "empty array": {
+    "prefix": "ea",
+    "body": [
+      "[ ${0}]"
+    ],
+    "description": "empty array"
+  },
+  "empty object": {
+    "prefix": "eo",
+    "body": [
+      "{ ${0}}"
+    ],
+    "description": "empty object"
+  },
+  "false value": {
+    "prefix": "f",
+    "body": [
+      "\"${1:name}\": false${0}"
+    ],
+    "description": "false value"
+  },
+  "null value": {
+    "prefix": "n",
+    "body": [
+      "\"${1:name}\": null${0}"
+    ],
+    "description": "null value"
+  },
+  "object": {
+    "prefix": "o",
+    "body": [
+      "\"${1:name}\": { ${0} }"
+    ],
+    "description": "object"
+  },
+  "string value": {
+    "prefix": "s",
+    "body": [
+      "\"${1:name}\": \"${2:value}\"${0}"
+    ],
+    "description": "string value"
+  },
+  "true value": {
+    "prefix": "t",
+    "body": [
+      "\"${1:name}\": true${0}"
+    ],
+    "description": "true value"
+  },
+  "value": {
+    "prefix": "v",
+    "body": [
+      "\"${1:name}\": ${2:0}${0}"
+    ],
+    "description": "value"
+  },
+  "zero value": {
+    "prefix": "z",
+    "body": [
+      "\"${1:name}\": 0${0}"
+    ],
+    "description": "zero value"
+  }
+}
