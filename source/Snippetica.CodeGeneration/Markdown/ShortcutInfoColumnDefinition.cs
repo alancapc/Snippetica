@@ -6,7 +6,7 @@ namespace Snippetica.CodeGeneration.Markdown
     {
         public override string Title
         {
-            get { return "Character(s)"; }
+            get { return "Shortcut"; }
         }
 
         public override string GetValue(object value)

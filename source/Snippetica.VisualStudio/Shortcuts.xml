@@ -227,7 +227,7 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="r" Description="read-only" Comment="-">
+  <ShortcutInfo Value="r" Description="read-only" Comment="prefix (after access modifier)">
     <Languages>
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>
@@ -544,7 +544,7 @@
       <Tag>ExcludeFromVisualStudioCode</Tag>
     </Tags>
   </ShortcutInfo>
-  <ShortcutInfo Value="v" Description="local variable declaration" Comment="prefix">
+  <ShortcutInfo Value="v" Description="local variable declaration" Comment="-">
     <Languages>
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>

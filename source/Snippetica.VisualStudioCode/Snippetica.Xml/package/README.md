@@ -5,8 +5,8 @@
 
 #### 
 
-Character\(s\) | Description | Comment
--------------- | ----------- | -------
+Shortcut | Description | Comment
+-------- | ----------- | -------
 a|\(element\) with attribute|\-
 e|element|\-
 s|self\-closing \(element\)|\-

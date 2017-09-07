@@ -60,7 +60,7 @@
             <Set Kind="Modifier">
               <New Value="i" Description="internal (Friend)" Comment="prefix" />
               <New Value="p" Description="private" Comment="prefix" />
-              <New Value="r" Description="read-only" />
+              <New Value="r" Description="read-only" Comment="prefix (after access modifier)" />
               <New Value="s" Description="static (Shared)" Comment="prefix (after access modifier)" />
               <New Value="v" Description="virtual (Overridable)" Comment="prefix (after access modifier)" />
             </Set>
@@ -113,7 +113,7 @@
               <New Value="pp" Description="preprocessor directive" Comment="prefix" />
               <New Value="ps" Description="private set" />
               <New Value="this" Description="containing type name" Tag="ExcludeFromVisualStudioCode" />
-              <New Value="v" Description="local variable declaration" Comment="prefix" />
+              <New Value="v" Description="local variable declaration" />
             </Set>
           </Add>
         </Add>

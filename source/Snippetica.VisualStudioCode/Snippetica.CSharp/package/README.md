@@ -6,8 +6,8 @@
 
 #### Member Declaration
 
-Character\(s\) | Description | Comment
--------------- | ----------- | -------
+Shortcut | Description | Comment
+-------- | ----------- | -------
 \_|interface member declaration|prefix
 c|class declaration|\-
 cr|constructor declaration|\-
@@ -25,18 +25,18 @@ st|struct declaration|\-
 
 #### Modifer
 
-Character\(s\) | Description | Comment
--------------- | ----------- | -------
+Shortcut | Description | Comment
+-------- | ----------- | -------
 i|internal \(Friend\)|prefix
 p|private|prefix
-r|read\-only|\-
+r|read\-only|prefix \(after access modifier\)
 s|static \(Shared\)|prefix \(after access modifier\)
 v|virtual \(Overridable\)|prefix \(after access modifier\)
 
 #### Statement
 
-Character\(s\) | Description | Comment
--------------- | ----------- | -------
+Shortcut | Description | Comment
+-------- | ----------- | -------
 fe|foreach statement|\-
 fr|for statement|\-
 if|if statement|\-
@@ -49,8 +49,8 @@ we|while statement|\-
 
 #### Operator
 
-Character\(s\) | Description | Comment
--------------- | ----------- | -------
+Shortcut | Description | Comment
+-------- | ----------- | -------
 co|conditional operator|\-
 no|nameof operator|\-
 oo|operator overload|\-
@@ -60,8 +60,8 @@ x|logical not operator|prefix
 
 #### Keyword
 
-Character\(s\) | Description | Comment
--------------- | ----------- | -------
+Shortcut | Description | Comment
+-------- | ----------- | -------
 d|default|\-
 f|false|\-
 r|return|\-
@@ -70,8 +70,8 @@ y|yield|\-
 
 #### Type
 
-Character\(s\) | Description | Comment
--------------- | ----------- | -------
+Shortcut | Description | Comment
+-------- | ----------- | -------
 a|Array|\-
 b|Boolean|\-
 c|Collection&lt;T&gt;|\-
@@ -91,8 +91,8 @@ s|String|\-
 
 #### Other
 
-Character\(s\) | Description | Comment
--------------- | ----------- | -------
+Shortcut | Description | Comment
+-------- | ----------- | -------
 \_|with initializer|suffix
 \_|with parameters|suffix
 c|catch clause|\-
@@ -107,7 +107,7 @@ n|new object creation|\-
 pa|parameter array|\-
 pp|preprocessor directive|prefix
 ps|private set|\-
-v|local variable declaration|prefix
+v|local variable declaration|\-
 
 ### List of Selected Snippets
 
