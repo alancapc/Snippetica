@@ -33,6 +33,9 @@
               <Tag Value="NoQuickReference" />
             </New>
           </Set>
+          <Set Language="Markdown">
+            <New Path=".Markdown" Tag="ExcludeFromVisualStudio" />
+          </Set>
         </PrefixMany>
       </Records>
     </Entity>

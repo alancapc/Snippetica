@@ -124,16 +124,29 @@ namespace Snippetica.IO
             SaveSnippetsToSingleFile(snippets, filePath);
         }
 
-        public static void WriteAllText(string filePath, string content, Encoding encoding = null, bool onlyIfChanged = true)
+        public static void WriteAllText(
+            string filePath,
+            string content,
+            Encoding encoding = null,
+            bool onlyIfChanged = true,
+            bool createDirectory = false)
         {
             encoding = encoding ?? Encoding.UTF8;
 
             if (ShouldSave(filePath, content, encoding, onlyIfChanged))
             {
+                if (createDirectory)
+                    Directory.CreateDirectory(Path.GetDirectoryName(filePath));
+
                 Console.WriteLine($"saving file {filePath}");
 
                 File.WriteAllText(filePath, content, encoding);
             }
+        }
+
+        private static bool NewMethod(string filePath)
+        {
+            return !Directory.Exists(Path.GetDirectoryName(filePath));
         }
 
         private static bool ShouldSave(string filePath, string content, Encoding encoding, bool onlyIfChanged)

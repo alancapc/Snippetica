@@ -35,7 +35,8 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
 
             IOUtility.WriteAllText(
                 Path.Combine(packageDirectoryPath, "snippets", Path.ChangeExtension(languageId, "json")),
-                JsonUtility.ToJsonText(snippets.OrderBy(f => f.Title)));
+                JsonUtility.ToJsonText(snippets.OrderBy(f => f.Title)),
+                createDirectory: true);
 
             PackageInfo info = GetDefaultPackageInfo();
             info.Name += "-" + languageId;
