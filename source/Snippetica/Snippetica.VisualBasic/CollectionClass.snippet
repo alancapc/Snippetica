@@ -40,15 +40,15 @@
       </Literal>
     </Declarations>
     <Code Language="VB"><![CDATA[$modifier$ Class $name$
-    Inherits Collection(Of $type$)
+	Inherits Collection(Of $type$)
 
-    Public Sub New()
-    End Sub
+	Public Sub New()
+	End Sub
 
-    Public Sub New(list As IList(Of $type$))
-        MyBase.New(list)
-    End Sub
-    $end$
+	Public Sub New(list As IList(Of $type$))
+		MyBase.New(list)
+	End Sub
+	$end$
 
 End Class]]></Code>
   </Snippet>

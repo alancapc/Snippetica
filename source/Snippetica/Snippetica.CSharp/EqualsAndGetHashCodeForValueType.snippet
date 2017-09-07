@@ -29,20 +29,20 @@
     </Declarations>
     <Code Language="CSharp"><![CDATA[public override bool Equals(object obj)
 {
-    if(!(obj is $thisname$))
-    {
-        return false;
-    }
+	if(!(obj is $thisname$))
+	{
+		return false;
+	}
 
-    var other = ($thisname$)obj;
+	var other = ($thisname$)obj;
 
-    $end$
-    throw new NotImplementedException();
+	$end$
+	throw new NotImplementedException();
 }
 
 public override int GetHashCode()
 {
-    throw new NotImplementedException();
+	throw new NotImplementedException();
 }]]></Code>
   </Snippet>
 </CodeSnippet>

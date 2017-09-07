@@ -2,8 +2,10 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Pihrtsoft.Records;
 using Pihrtsoft.Snippets;
 using Pihrtsoft.Snippets.Comparers;
@@ -21,6 +23,8 @@ namespace Snippetica.CodeGeneration
         private static readonly SnippetDeepEqualityComparer _snippetEqualityComparer = new SnippetDeepEqualityComparer();
 
         private static readonly ShortcutInfo[] _shortcuts = ShortcutInfo.LoadFromFile(@"..\..\Data\Shortcuts.xml").ToArray();
+
+        private static readonly Regex _regexReplaceSpacesWithTabs = new Regex(@"(?<=^(\ {4})*)(?<x>\ {4})(?=(\ {4})*\S)", RegexOptions.Multiline);
 
         private static void Main(string[] args)
         {
@@ -117,6 +121,8 @@ namespace Snippetica.CodeGeneration
                     var clone = (Snippet)snippet.Clone();
 
                     clone.SortCollections();
+
+                    clone.CodeText = _regexReplaceSpacesWithTabs.Replace(clone.CodeText, "\t");
 
                     if (!_snippetEqualityComparer.Equals(snippet, clone))
                         IOUtility.SaveSnippet(clone, onlyIfChanged: false);
