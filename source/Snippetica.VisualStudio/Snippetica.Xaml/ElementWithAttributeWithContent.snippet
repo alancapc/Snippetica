@@ -3,7 +3,7 @@
   <Header>
     <Title>element (with attribute, with content)</Title>
     <Shortcut>eax</Shortcut>
-    <Description>element (with attribute, with content)</Description>
+    <Description> (with attribute, with content)</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
@@ -15,9 +15,14 @@
   <Snippet>
     <Declarations>
       <Literal>
-        <ID>attribute</ID>
-        <ToolTip>Attribute(s)</ToolTip>
-        <Default>attribute=""</Default>
+        <ID>attributeName</ID>
+        <ToolTip>Attribute name</ToolTip>
+        <Default>Attribute</Default>
+      </Literal>
+      <Literal>
+        <ID>attributeValue</ID>
+        <ToolTip>Attribute value</ToolTip>
+        <Default>Value</Default>
       </Literal>
       <Literal>
         <ID>content</ID>
@@ -25,11 +30,11 @@
         <Default>content</Default>
       </Literal>
       <Literal>
-        <ID>name</ID>
+        <ID>elementName</ID>
         <ToolTip>Element name</ToolTip>
         <Default>x</Default>
       </Literal>
     </Declarations>
-    <Code Language="Xaml"><![CDATA[<$name$ $attribute$>$content$</$name$>$end$]]></Code>
+    <Code Language="Xaml"><![CDATA[<$elementName$ $attributeName$="$attributeValue$">$content$</$elementName$>$end$]]></Code>
   </Snippet>
 </CodeSnippet>

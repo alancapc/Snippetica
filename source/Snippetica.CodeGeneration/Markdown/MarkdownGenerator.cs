@@ -76,6 +76,7 @@ namespace Snippetica.CodeGeneration.Markdown
 
             if (!settings.IsDevelopment)
             {
+                writer.WriteLine("### Snippet Browser");
                 writer.WriteLine($"* Browse all available snippets with [Snippet Browser]({GetSnippetBrowserUrl(settings.Environment.Kind, settings.Language)}).");
                 writer.WriteLine();
             }

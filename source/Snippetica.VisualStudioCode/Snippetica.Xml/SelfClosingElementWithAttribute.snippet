@@ -15,16 +15,21 @@
   <Snippet>
     <Declarations>
       <Literal>
-        <ID>attribute</ID>
-        <ToolTip>Attribute(s)</ToolTip>
-        <Default>attribute=""</Default>
+        <ID>attributeName</ID>
+        <ToolTip>Attribute name</ToolTip>
+        <Default>Attribute</Default>
       </Literal>
       <Literal>
-        <ID>name</ID>
+        <ID>attributeValue</ID>
+        <ToolTip>Attribute value</ToolTip>
+        <Default>Value</Default>
+      </Literal>
+      <Literal>
+        <ID>elementName</ID>
         <ToolTip>Element name</ToolTip>
         <Default>x</Default>
       </Literal>
     </Declarations>
-    <Code Language="Xml"><![CDATA[<$name$ $attribute$ />$end$]]></Code>
+    <Code Language="Xml"><![CDATA[<$elementName$ $attributeName$="$attributeValue$" />$end$]]></Code>
   </Snippet>
 </CodeSnippet>

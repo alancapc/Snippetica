@@ -151,7 +151,7 @@
     "body": [
       "do",
       "{",
-      "    ${0}",
+      "\t${0}",
       "",
       "} while (${1:x} != null);"
     ],
@@ -162,7 +162,7 @@
     "body": [
       "do",
       "{",
-      "    ${0}",
+      "\t${0}",
       "",
       "} while (${1:x} == null);"
     ],
@@ -185,63 +185,63 @@
   "Enumerable.First": {
     "prefix": "q_f",
     "body": [
-      ".First(${1:f} => ${2:false})${0}"
+      ".First(f => ${1:false})${0}"
     ],
     "description": "Enumerable.First method"
   },
   "Enumerable.FirstOrDefault": {
     "prefix": "q_fod",
     "body": [
-      ".FirstOrDefault(${1:f} => ${2:false})${0}"
+      ".FirstOrDefault(f => ${1:false})${0}"
     ],
     "description": "Enumerable.FirstOrDefault method"
   },
   "Enumerable.GroupBy": {
     "prefix": "q_gb",
     "body": [
-      ".GroupBy(${1:f} => ${2:f})${0}"
+      ".GroupBy(f => ${1:f})${0}"
     ],
     "description": "Enumerable.GroupBy method"
   },
   "Enumerable.GroupJoin": {
     "prefix": "q_gj",
     "body": [
-      ".GroupJoin(${1:inner}, ${2:f} => ${3:f}, ${4:g} => ${5:g}, (${2}, ${4}) => ${6:new { }})${0}"
+      ".GroupJoin(${1:inner}, f => ${2:f}, g => ${3:g}, (f, g) => ${4:new { }})${0}"
     ],
     "description": "Enumerable.GroupJoin method"
   },
   "Enumerable.Join": {
     "prefix": "q_j",
     "body": [
-      ".Join(${1:inner}, ${2:f} => ${3:f}, ${4:g} => ${5:g}, (${2}, ${4}) => ${6:new { }})${0}"
+      ".Join(${1:inner}, f => ${2:f}, g => ${3:g}, (f, g) => ${4:new { }})${0}"
     ],
     "description": "Enumerable.Join method"
   },
   "Enumerable.Last": {
     "prefix": "q_l",
     "body": [
-      ".Last(${1:f} => ${2:false})${0}"
+      ".Last(f => ${1:false})${0}"
     ],
     "description": "Enumerable.Last method"
   },
   "Enumerable.LastOrDefault": {
     "prefix": "q_lod",
     "body": [
-      ".LastOrDefault(${1:f} => ${2:false})${0}"
+      ".LastOrDefault(f => ${1:false})${0}"
     ],
     "description": "Enumerable.LastOrDefault method"
   },
   "Enumerable.Max": {
     "prefix": "q_mx",
     "body": [
-      ".Max(${1:f} => ${2:f})${0}"
+      ".Max(f => ${1:f})${0}"
     ],
     "description": "Enumerable.Max method"
   },
   "Enumerable.Min": {
     "prefix": "q_mn",
     "body": [
-      ".Min(${1:f} => ${2:f})${0}"
+      ".Min(f => ${1:f})${0}"
     ],
     "description": "Enumerable.Min method"
   },
@@ -255,84 +255,84 @@
   "Enumerable.OrderBy": {
     "prefix": "q_ob",
     "body": [
-      ".OrderBy(${1:f} => ${2:f})${0}"
+      ".OrderBy(f => ${1:f})${0}"
     ],
     "description": "Enumerable.OrderBy method"
   },
   "Enumerable.OrderByDescending": {
     "prefix": "q_obd",
     "body": [
-      ".OrderByDescending(${1:f} => ${2:f})${0}"
+      ".OrderByDescending(f => ${1:f})${0}"
     ],
     "description": "Enumerable.OrderByDescending method"
   },
   "Enumerable.Select": {
     "prefix": "q_s",
     "body": [
-      ".Select(${1:f} => ${2:f})${0}"
+      ".Select(f => ${1:f})${0}"
     ],
     "description": "Enumerable.Select method"
   },
   "Enumerable.SelectMany": {
     "prefix": "q_sm",
     "body": [
-      ".SelectMany(${1:f} => ${2:f})${0}"
+      ".SelectMany(f => ${1:f})${0}"
     ],
     "description": "Enumerable.SelectMany method"
   },
   "Enumerable.SingleOrDefault": {
     "prefix": "q_sod",
     "body": [
-      ".SingleOrDefault(${1:f} => ${2:false})${0}"
+      ".SingleOrDefault(f => ${1:false})${0}"
     ],
     "description": "Enumerable.SingleOrDefault method"
   },
   "Enumerable.SkipWhile": {
     "prefix": "q_sw",
     "body": [
-      ".SkipWhile(${1:f} => ${2:false})${0}"
+      ".SkipWhile(f => ${1:false})${0}"
     ],
     "description": "Enumerable.SkipWhile method"
   },
   "Enumerable.TakeWhile": {
     "prefix": "q_tw",
     "body": [
-      ".TakeWhile(${1:f} => ${2:false})${0}"
+      ".TakeWhile(f => ${1:false})${0}"
     ],
     "description": "Enumerable.TakeWhile method"
   },
   "Enumerable.ThenBy": {
     "prefix": "q_tb",
     "body": [
-      ".ThenBy(${1:f} => ${2:f})${0}"
+      ".ThenBy(f => ${1:f})${0}"
     ],
     "description": "Enumerable.ThenBy method"
   },
   "Enumerable.ThenByDescending": {
     "prefix": "q_tbd",
     "body": [
-      ".ThenByDescending(${1:f} => ${2:f})${0}"
+      ".ThenByDescending(f => ${1:f})${0}"
     ],
     "description": "Enumerable.ThenByDescending method"
   },
   "Enumerable.Where": {
     "prefix": "q_w",
     "body": [
-      ".Where(${1:f} => ${2:false})${0}"
+      ".Where(f => ${1:false})${0}"
     ],
     "description": "Enumerable.Where method"
   },
   "Enumerable.Where not equal to null": {
     "prefix": "q_wxn",
     "body": [
-      ".Where(${1:f} => ${1} != null)${0}"
+      ".Where(f => f != null)${0}"
     ],
     "description": "Enumerable.Where method with predicate whether the expression is not equal to null"
   },
   "Enumerable.Zip": {
     "prefix": "q_z",
     "body": [
-      ".Zip(${1:second}, (${2:f}, ${3:g}) => ${4:new { }})${0}"
+      ".Zip(${1:second}, (f, g) => ${2:new { }})${0}"
     ],
     "description": "Enumerable.Zip method"
   },
@@ -404,7 +404,7 @@
     "body": [
       "using (var ${1:fs} = new FileStream(${2:path}, FileMode${3:.OpenOrCreate}))",
       "{",
-      "    ${0}",
+      "\t${0}",
       "}"
     ],
     "description": "FileStream variable declaration."
@@ -442,7 +442,7 @@
     "body": [
       "if (!string.IsNullOrEmpty(${1:s}))",
       "{",
-      "    ${0}",
+      "\t${0}",
       "}"
     ],
     "description": "if !string.IsNullOrEmpty"
@@ -452,7 +452,7 @@
     "body": [
       "if (!string.IsNullOrWhiteSpace(${1:s}))",
       "{",
-      "    ${0}",
+      "\t${0}",
       "}"
     ],
     "description": "if !string.IsNullOrWhiteSpace"
@@ -463,7 +463,7 @@
       "${1:TEnum} ${2:x};",
       "if (Enum.TryParse(${3:value}, out ${2}))",
       "{",
-      "    ${0}",
+      "\t${0}",
       "}"
     ],
     "description": "if statement with condition whether Enum.TryParse method returns true."
@@ -474,7 +474,7 @@
       "${1:TEnum} ${2:x};",
       "if (!Enum.TryParse(${3:value}, out ${2}))",
       "{",
-      "    ${0}",
+      "\t${0}",
       "}"
     ],
     "description": "if statement with condition whether Enum.TryParse method returns false."
@@ -484,7 +484,7 @@
     "body": [
       "if (string.IsNullOrEmpty(${1:s}))",
       "{",
-      "    ${0}",
+      "\t${0}",
       "}"
     ],
     "description": "if string.IsNullOrEmpty"
@@ -494,7 +494,7 @@
     "body": [
       "if (string.IsNullOrWhiteSpace(${1:s}))",
       "{",
-      "    ${0}",
+      "\t${0}",
       "}"
     ],
     "description": "if string.IsNullOrWhiteSpace"
@@ -530,7 +530,7 @@
   "lambda expression with 2 parameters": {
     "prefix": "l2",
     "body": [
-      "(${1:f}, ${2:g}) => ${0}"
+      "(f, g) => ${0}"
     ],
     "description": "lambda expression with 2 parameters"
   },
@@ -560,7 +560,7 @@
     "body": [
       "using (var ${1:ms} = new MemoryStream(${2:0}))",
       "{",
-      "    ${0}",
+      "\t${0}",
       "}"
     ],
     "description": "MemoryStream variable declaration."
@@ -570,7 +570,7 @@
     "body": [
       "namespace ${1:NamespaceName}",
       "{",
-      "    ${0}",
+      "\t${0}",
       "}"
     ],
     "description": "namespace declaration"
@@ -764,13 +764,6 @@
     ],
     "description": "return new"
   },
-  "return new containing type": {
-    "prefix": "rnthis",
-    "body": [
-      "return new ${1:ThisName}${0}"
-    ],
-    "description": "return new containing type"
-  },
   "return statement": {
     "prefix": "re",
     "body": [
@@ -805,7 +798,7 @@
       "var ${1:x} = ${2:expression} as ${3:T};",
       "if (${1} != null)",
       "{",
-      "    ${0}",
+      "\t${0}",
       "}"
     ],
     "description": "variable declaration with as operator + condition whether the variable is not equal to null"
@@ -815,7 +808,7 @@
     "body": [
       "while (${1:x} != null)",
       "{",
-      "    ${0}",
+      "\t${0}",
       "}"
     ],
     "description": "while statement with condition whether an expression is not equal to null"
@@ -825,7 +818,7 @@
     "body": [
       "while (${1:x} == null)",
       "{",
-      "    ${0}",
+      "\t${0}",
       "}"
     ],
     "description": "while statement with condition whether an expression is equal to null"
@@ -836,12 +829,5 @@
       "yield return new${0}"
     ],
     "description": "yield return new"
-  },
-  "yield return new containing type": {
-    "prefix": "yrnthis",
-    "body": [
-      "yield return new ${1:ThisName}${0}"
-    ],
-    "description": "yield return new containing type"
   }
 }

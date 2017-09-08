@@ -25,11 +25,11 @@
       <Code Language="Cpp"><![CDATA[class $name$
 {
 public:
-    $name$();
-    ~$name$();
+	$name$();
+	~$name$();
 
 private:
-    $selected$$end$
+	$selected$$end$
 };
 
 $name$::$name$()
@@ -56,16 +56,15 @@ $name$::~$name$()
     </Header>
     <Snippet>
       <Declarations>
-        <Literal Editable="false">
+        <Literal>
           <ID>typeName</ID>
           <ToolTip>Type name</ToolTip>
           <Default>TypeName</Default>
-          <Function>TypeName()</Function>
         </Literal>
       </Declarations>
       <Code Language="Cpp"><![CDATA[$typeName$()
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -84,16 +83,15 @@ $name$::~$name$()
     </Header>
     <Snippet>
       <Declarations>
-        <Literal Editable="false">
+        <Literal>
           <ID>typeName</ID>
           <ToolTip>Type name</ToolTip>
           <Default>TypeName</Default>
-          <Function>TypeName()</Function>
         </Literal>
       </Declarations>
       <Code Language="Cpp"><![CDATA[~$typeName$()
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -121,7 +119,7 @@ $name$::~$name$()
       </Declarations>
       <Code Language="Cpp"><![CDATA[do
 {
-    $selected$$end$
+	$selected$$end$
 } while ($expression$);]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -142,7 +140,7 @@ $name$::~$name$()
     <Snippet>
       <Code Language="Cpp"><![CDATA[else
 {
-    $selected$$end$
+	$selected$$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -170,7 +168,7 @@ $name$::~$name$()
       </Declarations>
       <Code Language="Cpp"><![CDATA[enum $name$
 {
-    $selected$$end$
+	$selected$$end$
 };]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -198,7 +196,7 @@ $name$::~$name$()
       </Declarations>
       <Code Language="Cpp"><![CDATA[enum class $name$
 {
-    $selected$$end$
+	$selected$$end$
 };]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -236,7 +234,7 @@ $name$::~$name$()
       </Declarations>
       <Code Language="Cpp"><![CDATA[for ($type$ $index$ = 0; $index$ < $max$; $index$++)
 {
-    $selected$$end$
+	$selected$$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -269,7 +267,7 @@ $name$::~$name$()
       </Declarations>
       <Code Language="Cpp"><![CDATA[for (auto& $variable$ : $range$)
 {
-    $selected$$end$
+	$selected$$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -302,7 +300,7 @@ $name$::~$name$()
       </Declarations>
       <Code Language="Cpp"><![CDATA[for (int $index$ = $max$ - 1; $index$ >= 0; $index$--)
 {
-    $selected$$end$
+	$selected$$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -340,7 +338,7 @@ $name$::~$name$()
       </Declarations>
       <Code Language="Cpp"><![CDATA[for each ($type$ $identifier$ in $_collectionIdentifier$)
 {
-    $selected$$end$
+	$selected$$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -368,7 +366,7 @@ $name$::~$name$()
       </Declarations>
       <Code Language="Cpp"><![CDATA[if ($expression$)
 {
-    $selected$$end$
+	$selected$$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -396,7 +394,7 @@ $name$::~$name$()
       </Declarations>
       <Code Language="Cpp"><![CDATA[__interface $name$
 {
-    $selected$$end$
+	$selected$$end$
 };]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -424,7 +422,7 @@ $name$::~$name$()
       </Declarations>
       <Code Language="Cpp"><![CDATA[namespace $name$
 {
-    $selected$$end$
+	$selected$$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -451,7 +449,7 @@ $name$::~$name$()
         </Literal>
       </Declarations>
       <Code Language="Cpp"><![CDATA[#if $expression$
-    $selected$$end$
+	$selected$$end$
 #endif]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -478,7 +476,7 @@ $name$::~$name$()
         </Literal>
       </Declarations>
       <Code Language="Cpp"><![CDATA[#ifdef $expression$
-    $selected$$end$
+	$selected$$end$
 #endif]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -505,7 +503,7 @@ $name$::~$name$()
         </Literal>
       </Declarations>
       <Code Language="Cpp"><![CDATA[#ifndef $expression$
-    $selected$$end$
+	$selected$$end$
 #endif]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -532,7 +530,7 @@ $name$::~$name$()
         </Literal>
       </Declarations>
       <Code Language="Cpp"><![CDATA[#pragma region $name$
-    $selected$$end$
+	$selected$$end$
 #pragma endregion]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -560,7 +558,7 @@ $name$::~$name$()
       </Declarations>
       <Code Language="Cpp"><![CDATA[struct $name$
 {
-    $selected$$end$
+	$selected$$end$
 };]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -579,11 +577,10 @@ $name$::~$name$()
     </Header>
     <Snippet>
       <Declarations>
-        <Literal Editable="false">
+        <Literal>
           <ID>cases</ID>
           <Default>default:
     break;</Default>
-          <Function>GenerateSwitchCases($expression$)</Function>
         </Literal>
         <Literal>
           <ID>expression</ID>
@@ -593,7 +590,7 @@ $name$::~$name$()
       </Declarations>
       <Code Language="Cpp"><![CDATA[switch ($expression$)
 {
-    $cases$$end$
+	$cases$$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -613,7 +610,7 @@ $name$::~$name$()
     <Snippet>
       <Code Language="Cpp"><![CDATA[try
 {
-    $end$
+	$end$
 }
 catch (const std::exception&)
 {
@@ -644,7 +641,7 @@ catch (const std::exception&)
       </Declarations>
       <Code Language="Cpp"><![CDATA[union $name$
 {
-    $selected$$end$
+	$selected$$end$
 };]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -672,7 +669,7 @@ catch (const std::exception&)
       </Declarations>
       <Code Language="Cpp"><![CDATA[while ($expression$)
 {
-    $selected$$end$
+	$selected$$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -790,7 +787,7 @@ catch (const std::exception&)
       <Code Language="CSharp"><![CDATA[[AttributeUsage(AttributeTargets$target$, AllowMultiple = $allowMultiple$)]
 $modifier$ class $name$Attribute : $base$
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -838,7 +835,7 @@ $modifier$ class $name$Attribute : $base$
     </Header>
     <Snippet>
       <Code Language="CSharp"><![CDATA[{
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -875,7 +872,7 @@ $modifier$ class $name$Attribute : $base$
       </Declarations>
       <Code Language="CSharp"><![CDATA[catch ($type$ $name$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -920,16 +917,16 @@ $modifier$ class $name$Attribute : $base$
       </Declarations>
       <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : Collection<$type$>
 {
-    public $name$()
-    {
-    }
+	public $name$()
+	{
+	}
 
-    public $name$(IList<$type$> list)
-        : base(list)
-    {
-    }
+	public $name$(IList<$type$> list)
+		: base(list)
+	{
+	}
 
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -965,31 +962,6 @@ $modifier$ class $name$Attribute : $base$
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[($expression$) ? $true$ : $false$$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>containing type name</Title>
-      <Shortcut>this</Shortcut>
-      <Description>containing type name</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ContainingTypeName</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal Editable="false">
-          <ID>className</ID>
-          <ToolTip>Containing type name</ToolTip>
-          <Default>ThisName</Default>
-          <Function>ClassName()</Function>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[$className$$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -1140,35 +1112,35 @@ $modifier$ class $name$Attribute : $base$
       </Declarations>
       <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : Dictionary<$_keyType$, $_valueType$>
 {
-    public $name$() : base()
-    {
-    }
+	public $name$() : base()
+	{
+	}
 
-    public $name$(int capacity) : base(capacity)
-    {
-    }
+	public $name$(int capacity) : base(capacity)
+	{
+	}
 
-    public $name$(IEqualityComparer<$_keyType$> comparer) : base(comparer)
-    {
-    }
+	public $name$(IEqualityComparer<$_keyType$> comparer) : base(comparer)
+	{
+	}
 
-    public $name$(IDictionary<$_keyType$, $_valueType$> dictionary) : base(dictionary)
-    {
-    }
+	public $name$(IDictionary<$_keyType$, $_valueType$> dictionary) : base(dictionary)
+	{
+	}
 
-    public $name$(int capacity, IEqualityComparer<$_keyType$> comparer) : base(capacity, comparer)
-    {
-    }
+	public $name$(int capacity, IEqualityComparer<$_keyType$> comparer) : base(capacity, comparer)
+	{
+	}
 
-    public $name$(SerializationInfo info, StreamingContext context) : base(info, context)
-    {
-    }
+	public $name$(SerializationInfo info, StreamingContext context) : base(info, context)
+	{
+	}
 
-    public $name$(IDictionary<$_keyType$, $_valueType$> dictionary, IEqualityComparer<$_keyType$> comparer) : base(dictionary, comparer)
-    {
-    }
+	public $name$(IDictionary<$_keyType$, $_valueType$> dictionary, IEqualityComparer<$_keyType$> comparer) : base(dictionary, comparer)
+	{
+	}
 
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1205,26 +1177,26 @@ $modifier$ class $name$Attribute : $base$
       </Declarations>
       <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : IDisposable
 {
-    private bool _disposed;
+	private bool _disposed;
 
-    public void Dispose()
-    {
-        Dispose(true);
-        GC.SuppressFinalize(this);
-    }
+	public void Dispose()
+	{
+		Dispose(true);
+		GC.SuppressFinalize(this);
+	}
 
-    protected virtual void Dispose(bool disposing)
-    {
-        if (!_disposed)
-        {
-            if (disposing)
-            {
-                throw new NotImplementedException();
-            }
+	protected virtual void Dispose(bool disposing)
+	{
+		if (!_disposed)
+		{
+			if (disposing)
+			{
+				throw new NotImplementedException();
+			}
 
-            _disposed = true;
-        }
-    }
+			_disposed = true;
+		}
+	}
 }$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1251,21 +1223,21 @@ $modifier$ class $name$Attribute : $base$
 
 public void Dispose()
 {
-    Dispose(true);
-    GC.SuppressFinalize(this);
+	Dispose(true);
+	GC.SuppressFinalize(this);
 }
 
 protected virtual void Dispose(bool disposing)
 {
-    if (!_disposed)
-    {
-        if (disposing)
-        {
-            throw new NotImplementedException();
-        }
+	if (!_disposed)
+	{
+		if (disposing)
+		{
+			throw new NotImplementedException();
+		}
 
-        _disposed = true;
-    }
+		_disposed = true;
+	}
 }$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1285,7 +1257,7 @@ protected virtual void Dispose(bool disposing)
     <Snippet>
       <Code Language="CSharp"><![CDATA[else
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1312,7 +1284,7 @@ protected virtual void Dispose(bool disposing)
       </Declarations>
       <Code Language="CSharp"><![CDATA[else if ($expression$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1336,28 +1308,27 @@ protected virtual void Dispose(bool disposing)
         </Import>
       </Imports>
       <Declarations>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[public override bool Equals(object obj)
 {
-    var other = obj as $thisname$;
-    if (other == null)
-    {
-        return false;
-    }
+	var other = obj as $thisName$;
+	if (other == null)
+	{
+		return false;
+	}
 
-    $end$
-    throw new NotImplementedException();
+	$end$
+	throw new NotImplementedException();
 }
 
 public override int GetHashCode()
 {
-    throw new NotImplementedException();
+	throw new NotImplementedException();
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1381,29 +1352,28 @@ public override int GetHashCode()
         </Import>
       </Imports>
       <Declarations>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[public override bool Equals(object obj)
 {
-    if(!(obj is $thisname$))
-    {
-        return false;
-    }
+	if(!(obj is $thisName$))
+	{
+		return false;
+	}
 
-    var other = ($thisname$)obj;
+	var other = ($thisName$)obj;
 
-    $end$
-    throw new NotImplementedException();
+	$end$
+	throw new NotImplementedException();
 }
 
 public override int GetHashCode()
 {
-    throw new NotImplementedException();
+	throw new NotImplementedException();
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1473,24 +1443,24 @@ public override int GetHashCode()
       <Code Language="CSharp"><![CDATA[[Serializable]
 $modifier$ class $name$Exception : $base$
 {
-    public $name$Exception()
-    {
-    }
+	public $name$Exception()
+	{
+	}
 
-    public $name$Exception(string message)
-        : base(message)
-    {
-    }
+	public $name$Exception(string message)
+		: base(message)
+	{
+	}
 
-    public $name$Exception(string message, Exception inner)
-        : base(message, inner)
-    {
-    }
+	public $name$Exception(string message, Exception inner)
+		: base(message, inner)
+	{
+	}
 
-    protected $name$Exception(SerializationInfo info, StreamingContext context)
-        : base(info, context)
-    {
-    }$end$
+	protected $name$Exception(SerializationInfo info, StreamingContext context)
+		: base(info, context)
+	{
+	}$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1539,7 +1509,7 @@ $modifier$ class $name$Exception : $base$
     <Snippet>
       <Code Language="CSharp"><![CDATA[finally
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1571,7 +1541,7 @@ $modifier$ class $name$Exception : $base$
       </Declarations>
       <Code Language="CSharp"><![CDATA[for (int $index$ = 0; $index$ < $length$; $index$++)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1603,7 +1573,7 @@ $modifier$ class $name$Exception : $base$
       </Declarations>
       <Code Language="CSharp"><![CDATA[foreach (var $identifier$ in $_collection$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1635,7 +1605,7 @@ $modifier$ class $name$Exception : $base$
       </Declarations>
       <Code Language="CSharp"><![CDATA[for (int $index$ = $length$ - 1; $index$ >= 0; $index$--)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1709,29 +1679,29 @@ $modifier$ class $name$Exception : $base$
       </Declarations>
       <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : IComparer
 {
-    public int Compare(object x, object y)
-    {
-        if (object.ReferenceEquals(x, y))
-        {
-            return 0;
-        }
+	public int Compare(object x, object y)
+	{
+		if (object.ReferenceEquals(x, y))
+		{
+			return 0;
+		}
 
-        if (x == null)
-        {
-            return (y == null) ? 0 : -1;
-        }
+		if (x == null)
+		{
+			return (y == null) ? 0 : -1;
+		}
 
-        if (y == null)
-        {
-            return 1;
-        }
+		if (y == null)
+		{
+			return 1;
+		}
 
-        var a = ($type$)x;
-        var b = ($type$)y;
+		var a = ($type$)x;
+		var b = ($type$)y;
 
-        $end$
-        throw new NotImplementedException();
-    }
+		$end$
+		throw new NotImplementedException();
+	}
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1776,26 +1746,26 @@ $modifier$ class $name$Exception : $base$
       </Declarations>
       <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : IComparer<$type$>
 {
-    public int Compare($type$ x, $type$ y)
-    {
-        if (object.ReferenceEquals(x, y))
-        {
-            return 0;
-        }
+	public int Compare($type$ x, $type$ y)
+	{
+		if (object.ReferenceEquals(x, y))
+		{
+			return 0;
+		}
 
-        if (x == null)
-        {
-            return -1;
-        }
+		if (x == null)
+		{
+			return -1;
+		}
 
-        if (y == null)
-        {
-            return 1;
-        }
+		if (y == null)
+		{
+			return 1;
+		}
 
-        $end$
-        throw new NotImplementedException();
-    }
+		$end$
+		throw new NotImplementedException();
+	}
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1856,10 +1826,10 @@ $modifier$ class $name$Exception : $base$
       </Declarations>
       <Code Language="CSharp"><![CDATA[using (var $enumerator$ = $_collectionIdentifier$.GetEnumerator())
 {
-    while ($enumerator$.MoveNext())
-    {
-        $end$
-    }
+	while ($enumerator$.MoveNext())
+	{
+		$end$
+	}
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1904,34 +1874,34 @@ $modifier$ class $name$Exception : $base$
       </Declarations>
       <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : IEqualityComparer
 {
-    new public bool Equals(object x, object y)
-    {
-        if (object.ReferenceEquals(x, y))
-        {
-            return true;
-        }
+	new public bool Equals(object x, object y)
+	{
+		if (object.ReferenceEquals(x, y))
+		{
+			return true;
+		}
 
-        if (x == null || y == null)
-        {
-            return false;
-        }
+		if (x == null || y == null)
+		{
+			return false;
+		}
 
-        var a = ($type$)x;
-        var b = ($type$)y;
+		var a = ($type$)x;
+		var b = ($type$)y;
 
-        $end$
-        throw new NotImplementedException();
-    }
+		$end$
+		throw new NotImplementedException();
+	}
 
-    public int GetHashCode(object obj)
-    {
-        if (obj == null)
-        {
-            return 0;
-        }
+	public int GetHashCode(object obj)
+	{
+		if (obj == null)
+		{
+			return 0;
+		}
 
-        throw new NotImplementedException();
-    }
+		throw new NotImplementedException();
+	}
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1976,31 +1946,31 @@ $modifier$ class $name$Exception : $base$
       </Declarations>
       <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : EqualityComparer<$type$>
 {
-    public override bool Equals($type$ x, $type$ y)
-    {
-        if (object.ReferenceEquals(x, y))
-        {
-            return true;
-        }
+	public override bool Equals($type$ x, $type$ y)
+	{
+		if (object.ReferenceEquals(x, y))
+		{
+			return true;
+		}
 
-        if (x == null || y == null)
-        {
-            return false;
-        }
+		if (x == null || y == null)
+		{
+			return false;
+		}
 
-        $end$
-        throw new NotImplementedException();
-    }
+		$end$
+		throw new NotImplementedException();
+	}
 
-    public override int GetHashCode($type$ obj)
-    {
-        if (obj == null)
-        {
-            return 0;
-        }
+	public override int GetHashCode($type$ obj)
+	{
+		if (obj == null)
+		{
+			return 0;
+		}
 
-        throw new NotImplementedException();
-    }
+		throw new NotImplementedException();
+	}
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2027,7 +1997,7 @@ $modifier$ class $name$Exception : $base$
       </Declarations>
       <Code Language="CSharp"><![CDATA[if ($expression$ == null)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2054,7 +2024,7 @@ $modifier$ class $name$Exception : $base$
       </Declarations>
       <Code Language="CSharp"><![CDATA[if (!$expression$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2081,7 +2051,7 @@ $modifier$ class $name$Exception : $base$
       </Declarations>
       <Code Language="CSharp"><![CDATA[if ($expression$ != null)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2119,7 +2089,7 @@ $modifier$ class $name$Exception : $base$
       <Code Language="CSharp"><![CDATA[$_type$ $result$;
 if (!$_type$.TryParse($value$, out $result$))
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2157,7 +2127,7 @@ if (!$_type$.TryParse($value$, out $result$))
       <Code Language="CSharp"><![CDATA[$_type$ $result$;
 if ($_type$.TryParse($value$, out $result$))
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2421,7 +2391,7 @@ if ($_type$.TryParse($value$, out $result$))
       </Declarations>
       <Code Language="CSharp"><![CDATA[internal class $name$
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2474,16 +2444,15 @@ if ($_type$.TryParse($value$, out $result$))
     </Header>
     <Snippet>
       <Declarations>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[internal $thisname$()
+      <Code Language="CSharp"><![CDATA[internal $thisName$()
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2508,14 +2477,14 @@ if ($_type$.TryParse($value$, out $result$))
           <Default>object parameter</Default>
         </Literal>
         <Literal>
-          <ID>thisname</ID>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[internal $thisname$($parameters$)
+      <Code Language="CSharp"><![CDATA[internal $thisName$($parameters$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2605,7 +2574,7 @@ if ($_type$.TryParse($value$, out $result$))
       </Declarations>
       <Code Language="CSharp"><![CDATA[internal enum $name$
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2644,9 +2613,9 @@ if ($_type$.TryParse($value$, out $result$))
 
 protected virtual void On$name$($eventArgs$ e)
 {
-    EventHandler<$eventArgs$> handler = $name$;
-    if (handler != null)
-        handler(this, e);
+	EventHandler<$eventArgs$> handler = $name$;
+	if (handler != null)
+		handler(this, e);
 }$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2678,8 +2647,8 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[internal $_type$ this[$parameter$]
 {
-    get { $end$}
-    set { }
+	get { $end$}
+	set { }
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2706,7 +2675,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[internal interface $name$
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2738,7 +2707,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[internal $_type$ $name$()
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2775,7 +2744,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[internal $_type$ $name$($parameters$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2870,7 +2839,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[internal $_type$ $name$
 {
-    get { return $value$; }
+	get { return $value$; }
 }$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2897,7 +2866,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[internal static class $name$
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2929,7 +2898,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[internal static $_type$ $name$()
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2966,7 +2935,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[internal static $_type$ $name$($parameters$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3061,7 +3030,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[internal static $_type$ $name$
 {
-    get { return $value$; }
+	get { return $value$; }
 }$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3088,7 +3057,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[internal struct $name$
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3149,7 +3118,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[internal virtual $_type$ $name$()
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3186,7 +3155,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[internal virtual $_type$ $name$($parameters$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3252,7 +3221,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[internal virtual $_type$ $name$
 {
-    get { return $value$; }
+	get { return $value$; }
 }$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3270,14 +3239,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Keywords>
     </Header>
     <Snippet>
-      <Declarations>
-        <Literal Editable="false">
-          <ID>lambdaParam</ID>
-          <ToolTip>Lambda parameter name</ToolTip>
-          <Default>f</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[$lambdaParam$ => $end$]]></Code>
+      <Code Language="CSharp"><![CDATA[f => $end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -3497,21 +3459,21 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : ObservableCollection<$type$>
 {
-    public $name$()
-    {
-    }
+	public $name$()
+	{
+	}
 
-    public $name$(IEnumerable<$type$> collection)
-        : base(collection)
-    {
-    }
+	public $name$(IEnumerable<$type$> collection)
+		: base(collection)
+	{
+	}
 
-    public $name$(IList<$type$> list)
-        : base(list)
-    {
-    }
+	public $name$(IList<$type$> list)
+		: base(list)
+	{
+	}
 
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3540,16 +3502,15 @@ protected virtual void On$name$($eventArgs$ e)
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisname$ operator &($thisname$ $left$, $thisname$ $right$)
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator &($thisName$ $left$, $thisName$ $right$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3578,16 +3539,15 @@ protected virtual void On$name$($eventArgs$ e)
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisname$ operator *($thisname$ $left$, $thisname$ $right$)
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator *($thisName$ $left$, $thisName$ $right$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3616,16 +3576,15 @@ protected virtual void On$name$($eventArgs$ e)
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisname$ operator ^($thisname$ $left$, $thisname$ $right$)
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator ^($thisName$ $left$, $thisName$ $right$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3654,21 +3613,20 @@ protected virtual void On$name$($eventArgs$ e)
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static bool operator ==($thisname$ $left$, $thisname$ $right$)
+      <Code Language="CSharp"><![CDATA[public static bool operator ==($thisName$ $left$, $thisName$ $right$)
 {
-    $end$
+	$end$
 }
 
-public static bool operator !=($thisname$ $left$, $thisname$ $right$)
+public static bool operator !=($thisName$ $left$, $thisName$ $right$)
 {
-    return !($left$ == $right$);
+	return !($left$ == $right$);
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3692,16 +3650,15 @@ public static bool operator !=($thisname$ $left$, $thisname$ $right$)
           <ToolTip>Operand</ToolTip>
           <Default>value</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisname$ operator !($thisname$ $operand$)
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator !($thisName$ $operand$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3725,11 +3682,10 @@ public static bool operator !=($thisname$ $left$, $thisname$ $right$)
           <ToolTip>Operand</ToolTip>
           <Default>value</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
         <Literal>
           <ID>type</ID>
@@ -3737,12 +3693,12 @@ public static bool operator !=($thisname$ $left$, $thisname$ $right$)
           <Default>object</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static explicit operator $thisname$($type$ $operand$)
+      <Code Language="CSharp"><![CDATA[public static explicit operator $thisName$($type$ $operand$)
 {
-    $end$
+	$end$
 }
 
-public static explicit operator $type$($thisname$ $operand$)
+public static explicit operator $type$($thisName$ $operand$)
 {
 }]]></Code>
     </Snippet>
@@ -3772,20 +3728,19 @@ public static explicit operator $type$($thisname$ $operand$)
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static bool operator <($thisname$ $left$, $thisname$ $right$)
+      <Code Language="CSharp"><![CDATA[public static bool operator <($thisName$ $left$, $thisName$ $right$)
 {
 }
 
-public static bool operator >($thisname$ $left$, $thisname$ $right$)
+public static bool operator >($thisName$ $left$, $thisName$ $right$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3814,16 +3769,15 @@ public static bool operator >($thisname$ $left$, $thisname$ $right$)
           <ToolTip>Right operand</ToolTip>
           <Default>count</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisname$ operator >>($thisname$ $left$, int $right$)
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator >>($thisName$ $left$, int $right$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3852,20 +3806,19 @@ public static bool operator >($thisname$ $left$, $thisname$ $right$)
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static bool operator <=($thisname$ $left$, $thisname$ $right$)
+      <Code Language="CSharp"><![CDATA[public static bool operator <=($thisName$ $left$, $thisName$ $right$)
 {
 }
 
-public static bool operator >=($thisname$ $left$, $thisname$ $right$)
+public static bool operator >=($thisName$ $left$, $thisName$ $right$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3889,11 +3842,10 @@ public static bool operator >=($thisname$ $left$, $thisname$ $right$)
           <ToolTip>Operand</ToolTip>
           <Default>value</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
         <Literal>
           <ID>type</ID>
@@ -3901,12 +3853,12 @@ public static bool operator >=($thisname$ $left$, $thisname$ $right$)
           <Default>object</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static implicit operator $thisname$($type$ $operand$)
+      <Code Language="CSharp"><![CDATA[public static implicit operator $thisName$($type$ $operand$)
 {
-    $end$
+	$end$
 }
 
-public static implicit operator $type$($thisname$ $operand$)
+public static implicit operator $type$($thisName$ $operand$)
 {
 }]]></Code>
     </Snippet>
@@ -3936,19 +3888,18 @@ public static implicit operator $type$($thisname$ $operand$)
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static bool operator <($thisname$ $left$, $thisname$ $right$)
+      <Code Language="CSharp"><![CDATA[public static bool operator <($thisName$ $left$, $thisName$ $right$)
 {
-    $end$
+	$end$
 }
 
-public static bool operator >($thisname$ $left$, $thisname$ $right$)
+public static bool operator >($thisName$ $left$, $thisName$ $right$)
 {
 }]]></Code>
     </Snippet>
@@ -3978,16 +3929,15 @@ public static bool operator >($thisname$ $left$, $thisname$ $right$)
           <ToolTip>Right operand</ToolTip>
           <Default>count</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisname$ operator <<($thisname$ $left$, int $right$)
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator <<($thisName$ $left$, int $right$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -4016,19 +3966,18 @@ public static bool operator >($thisname$ $left$, $thisname$ $right$)
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static bool operator <=($thisname$ $left$, $thisname$ $right$)
+      <Code Language="CSharp"><![CDATA[public static bool operator <=($thisName$ $left$, $thisName$ $right$)
 {
-    $end$
+	$end$
 }
 
-public static bool operator >=($thisname$ $left$, $thisname$ $right$)
+public static bool operator >=($thisName$ $left$, $thisName$ $right$)
 {
 }]]></Code>
     </Snippet>
@@ -4058,16 +4007,15 @@ public static bool operator >=($thisname$ $left$, $thisname$ $right$)
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisname$ operator -($thisname$ $left$, $thisname$ $right$)
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator -($thisName$ $left$, $thisName$ $right$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -4091,16 +4039,15 @@ public static bool operator >=($thisname$ $left$, $thisname$ $right$)
           <ToolTip>Operand</ToolTip>
           <Default>value</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisname$ operator --($thisname$ $operand$)
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator --($thisName$ $operand$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -4129,16 +4076,15 @@ public static bool operator >=($thisname$ $left$, $thisname$ $right$)
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisname$ operator %($thisname$ $left$, $thisname$ $right$)
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator %($thisName$ $left$, $thisName$ $right$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -4167,16 +4113,15 @@ public static bool operator >=($thisname$ $left$, $thisname$ $right$)
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisname$ operator +($thisname$ $left$, $thisname$ $right$)
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator +($thisName$ $left$, $thisName$ $right$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -4200,16 +4145,15 @@ public static bool operator >=($thisname$ $left$, $thisname$ $right$)
           <ToolTip>Operand</ToolTip>
           <Default>value</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisname$ operator ++($thisname$ $operand$)
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator ++($thisName$ $operand$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -4238,16 +4182,15 @@ public static bool operator >=($thisname$ $left$, $thisname$ $right$)
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisname$ operator /($thisname$ $left$, $thisname$ $right$)
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator /($thisName$ $left$, $thisName$ $right$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -4271,16 +4214,15 @@ public static bool operator >=($thisname$ $left$, $thisname$ $right$)
           <ToolTip>Operand</ToolTip>
           <Default>value</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisname$ operator ~($thisname$ $operand$)
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator ~($thisName$ $operand$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -4304,19 +4246,18 @@ public static bool operator >=($thisname$ $left$, $thisname$ $right$)
           <ToolTip>Operand</ToolTip>
           <Default>value</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static bool operator true($thisname$ $operand$)
+      <Code Language="CSharp"><![CDATA[public static bool operator true($thisName$ $operand$)
 {
-    $end$
+	$end$
 }
 
-public static bool operator false($thisname$ $operand$)
+public static bool operator false($thisName$ $operand$)
 {
 }]]></Code>
     </Snippet>
@@ -4346,16 +4287,15 @@ public static bool operator false($thisname$ $operand$)
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisname$ operator |($thisname$ $left$, $thisname$ $right$)
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator |($thisName$ $left$, $thisName$ $right$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -4405,7 +4345,7 @@ public static bool operator false($thisname$ $operand$)
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[#if $symbol$
-    $end$
+	$end$
 #endif]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -4431,7 +4371,7 @@ public static bool operator false($thisname$ $operand$)
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[#if $symbol$
-    $end$
+	$end$
 #else
 
 #endif]]></Code>
@@ -4459,7 +4399,7 @@ public static bool operator false($thisname$ $operand$)
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[#region $name$
-    $end$
+	$end$
 #endregion]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -4544,7 +4484,7 @@ public static bool operator false($thisname$ $operand$)
       </Declarations>
       <Code Language="CSharp"><![CDATA[private class $name$
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -4597,16 +4537,15 @@ public static bool operator false($thisname$ $operand$)
     </Header>
     <Snippet>
       <Declarations>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[private $thisname$()
+      <Code Language="CSharp"><![CDATA[private $thisName$()
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -4631,14 +4570,14 @@ public static bool operator false($thisname$ $operand$)
           <Default>object parameter</Default>
         </Literal>
         <Literal>
-          <ID>thisname</ID>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[private $thisname$($parameters$)
+      <Code Language="CSharp"><![CDATA[private $thisName$($parameters$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -4728,7 +4667,7 @@ public static bool operator false($thisname$ $operand$)
       </Declarations>
       <Code Language="CSharp"><![CDATA[private enum $name$
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -4767,9 +4706,9 @@ public static bool operator false($thisname$ $operand$)
 
 protected virtual void On$name$($eventArgs$ e)
 {
-    EventHandler<$eventArgs$> handler = $name$;
-    if (handler != null)
-        handler(this, e);
+	EventHandler<$eventArgs$> handler = $name$;
+	if (handler != null)
+		handler(this, e);
 }$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -4830,8 +4769,8 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[private $_type$ this[$parameter$]
 {
-    get { $end$}
-    set { }
+	get { $end$}
+	set { }
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -4863,7 +4802,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[private $_type$ $name$()
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -4900,7 +4839,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[private $_type$ $name$($parameters$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -4995,7 +4934,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[private $_type$ $name$
 {
-    get { return $value$; }
+	get { return $value$; }
 }$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -5022,7 +4961,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[private static class $name$
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -5083,7 +5022,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[private static $_type$ $name$()
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -5120,7 +5059,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[private static $_type$ $name$($parameters$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -5215,7 +5154,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[private static $_type$ $name$
 {
-    get { return $value$; }
+	get { return $value$; }
 }$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -5242,7 +5181,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[private struct $name$
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -5327,7 +5266,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[public class $name$
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -5380,16 +5319,15 @@ protected virtual void On$name$($eventArgs$ e)
     </Header>
     <Snippet>
       <Declarations>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public $thisname$()
+      <Code Language="CSharp"><![CDATA[public $thisName$()
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -5414,14 +5352,14 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>object parameter</Default>
         </Literal>
         <Literal>
-          <ID>thisname</ID>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public $thisname$($parameters$)
+      <Code Language="CSharp"><![CDATA[public $thisName$($parameters$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -5511,7 +5449,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[public enum $name$
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -5550,9 +5488,9 @@ protected virtual void On$name$($eventArgs$ e)
 
 protected virtual void On$name$($eventArgs$ e)
 {
-    EventHandler<$eventArgs$> handler = $name$;
-    if (handler != null)
-        handler(this, e);
+	EventHandler<$eventArgs$> handler = $name$;
+	if (handler != null)
+		handler(this, e);
 }$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -5613,8 +5551,8 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[public $_type$ this[$parameter$]
 {
-    get { $end$}
-    set { }
+	get { $end$}
+	set { }
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -5641,7 +5579,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[public interface $name$
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -5673,7 +5611,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[public $_type$ $name$()
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -5710,7 +5648,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[public $_type$ $name$($parameters$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -5805,7 +5743,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[public $_type$ $name$
 {
-    get { return $value$; }
+	get { return $value$; }
 }$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -5832,7 +5770,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[public static class $name$
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -5893,7 +5831,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[public static $_type$ $name$()
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -5930,7 +5868,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[public static $_type$ $name$($parameters$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -6025,7 +5963,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[public static $_type$ $name$
 {
-    get { return $value$; }
+	get { return $value$; }
 }$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -6052,7 +5990,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[public struct $name$
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -6113,7 +6051,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[public virtual $_type$ $name$()
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -6150,7 +6088,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[public virtual $_type$ $name$($parameters$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -6216,7 +6154,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[public virtual $_type$ $name$
 {
-    get { return $value$; }
+	get { return $value$; }
 }$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -6261,12 +6199,12 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : ReadOnlyCollection<$type$>
 {
-    public $name$(IList<$type$> list)
-        : base(list)
-    {
-    }
+	public $name$(IList<$type$> list)
+		: base(list)
+	{
+	}
 
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -6371,16 +6309,16 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[$modifier$ class $name$
 {
-    private static readonly $name$ _instance = $value$;
+	private static readonly $name$ _instance = $value$;
 
-    private $name$()
-    {
-    }
+	private $name$()
+	{
+	}
 
-    public static $name$ Instance
-    {
-        get { return _instance; }
-    }
+	public static $name$ Instance
+	{
+		get { return _instance; }
+	}
 }$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -6399,16 +6337,15 @@ protected virtual void On$name$($eventArgs$ e)
     </Header>
     <Snippet>
       <Declarations>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[static $thisname$()
+      <Code Language="CSharp"><![CDATA[static $thisName$()
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -6445,7 +6382,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[using (var $identifier$ = new StreamReader($parameters$))
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -6490,7 +6427,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[using (var $identifier$ = new StreamWriter($parameters$, $_encoding$))
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -6592,7 +6529,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[using (var $identifier$ = new StringReader($string$))
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -6653,7 +6590,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[using (var $identifier$ = new StringWriter())
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -6680,7 +6617,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[switch ($expression$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -6964,11 +6901,11 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[try
 {
-    $end$
+	$end$
 }
 catch ($exceptionType$ $identifier$)
 {
-    throw;
+	throw;
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -7005,11 +6942,11 @@ catch ($exceptionType$ $identifier$)
       </Declarations>
       <Code Language="CSharp"><![CDATA[try
 {
-    $end$
+	$end$
 }
 catch ($exceptionType$ $identifier$)
 {
-    throw;
+	throw;
 }
 finally
 {
@@ -7032,7 +6969,7 @@ finally
     <Snippet>
       <Code Language="CSharp"><![CDATA[try
 {
-    $end$
+	$end$
 }
 finally
 {
@@ -7110,7 +7047,7 @@ finally
       </Declarations>
       <Code Language="CSharp"><![CDATA[using ($disposable$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -7151,20 +7088,15 @@ finally
           <ToolTip>Identifier name</ToolTip>
           <Default>x</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>_type</ID>
-          <ToolTip>Declaration type</ToolTip>
-          <Default>var</Default>
-        </Literal>
         <Literal>
           <ID>_value</ID>
           <ToolTip>Value to assign</ToolTip>
           <Default>expression</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[using ($_type$ $_identifier$ = $_value$)
+      <Code Language="CSharp"><![CDATA[using (var $_identifier$ = $_value$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -7188,18 +7120,13 @@ finally
           <ToolTip>Identifier name</ToolTip>
           <Default>x</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>_type</ID>
-          <ToolTip>Declaration type</ToolTip>
-          <Default>var</Default>
-        </Literal>
         <Literal>
           <ID>_value</ID>
           <ToolTip>Value to assign</ToolTip>
           <Default>expression</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[$_type$ $_identifier$ = $_value$;$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[var $_identifier$ = $_value$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -7259,7 +7186,7 @@ finally
       </Declarations>
       <Code Language="CSharp"><![CDATA[while ($expression$)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -7296,7 +7223,7 @@ finally
       </Declarations>
       <Code Language="CSharp"><![CDATA[using (var $identifier$ = XmlReader.Create($argument$))
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -7333,7 +7260,7 @@ finally
       </Declarations>
       <Code Language="CSharp"><![CDATA[using (var $identifier$ = XmlWriter.Create($argument$))
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -7749,7 +7676,7 @@ finally
         </Literal>
       </Declarations>
       <Code Language="Html"><![CDATA[<audio controls="controls">
-    <source src="$src$" type="$type$">
+	<source src="$src$" type="$type$">
 </audio>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -8214,6 +8141,42 @@ finally
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>CDATA section</Title>
+      <Shortcut>cdata</Shortcut>
+      <Description>CDATA section</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name CDataSection</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<![CDATA[$selected$$end$__cdataEnd]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>CDATA section (with content)</Title>
+      <Shortcut>cdatax</Shortcut>
+      <Description>CDATA section (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name CDataSectionWithContent</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<![CDATA[$selected$$end$__cdataEnd]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>center</Title>
       <Shortcut>center</Shortcut>
       <Description>center</Description>
@@ -8347,7 +8310,7 @@ finally
     </Header>
     <Snippet>
       <Code Language="Html"><![CDATA[<colgroup>
-  <col $end$>
+	<col $end$>
 </colgroup>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -8359,6 +8322,7 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name Comment</Keyword>
@@ -8372,7 +8336,7 @@ finally
           <Default>comment</Default>
         </Literal>
       </Declarations>
-      <Code Language="Html"><![CDATA[<!-- $comment$ -->$end$]]></Code>
+      <Code Language="Html"><![CDATA[<!-- $selected$$comment$ -->$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -8396,7 +8360,7 @@ finally
         </Literal>
       </Declarations>
       <Code Language="Html"><![CDATA[<datalist>
-    <option value="$value$">$end$
+	<option value="$value$">$end$
 </datalist>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -8528,7 +8492,7 @@ finally
         </Literal>
       </Declarations>
       <Code Language="Html"><![CDATA[<details>
-    <summary>$summary$</summary>$end$
+	<summary>$summary$</summary>$end$
 </details>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -8627,7 +8591,7 @@ finally
     </Header>
     <Snippet>
       <Code Language="Html"><![CDATA[<dir>
-    <li>$end$</li>
+	<li>$end$</li>
 </dir>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -8652,7 +8616,7 @@ finally
         </Literal>
       </Declarations>
       <Code Language="Html"><![CDATA[<dir>
-    <li>$content$</li>$end$
+	<li>$content$</li>$end$
 </dir>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -8711,8 +8675,8 @@ finally
     </Header>
     <Snippet>
       <Code Language="Html"><![CDATA[<dl>
-    <dt>$end$</dt>
-    <dd></dd>
+	<dt>$end$</dt>
+	<dd></dd>
 </dl>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -8760,10 +8724,10 @@ finally
     <Header>
       <Title>element</Title>
       <Shortcut>e</Shortcut>
-      <Description>element</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name Element</Keyword>
@@ -8772,22 +8736,25 @@ finally
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>name</ID>
+          <ID>elementName</ID>
           <ToolTip>Element name</ToolTip>
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="Html"><![CDATA[<$name$>$end$</$name$>]]></Code>
+      <Code Language="Html"><![CDATA[<$elementName$>
+	$selected$$end$
+</$elementName$>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>element (with attribute)</Title>
       <Shortcut>ea</Shortcut>
-      <Description>element (with attribute)</Description>
+      <Description> (with attribute)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name ElementWithAttribute</Keyword>
@@ -8796,24 +8763,31 @@ finally
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>attribute</ID>
-          <ToolTip>Attribute(s)</ToolTip>
-          <Default>attribute=""</Default>
+          <ID>attributeName</ID>
+          <ToolTip>Attribute name</ToolTip>
+          <Default>Attribute</Default>
         </Literal>
         <Literal>
-          <ID>name</ID>
+          <ID>attributeValue</ID>
+          <ToolTip>Attribute value</ToolTip>
+          <Default>Value</Default>
+        </Literal>
+        <Literal>
+          <ID>elementName</ID>
           <ToolTip>Element name</ToolTip>
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="Html"><![CDATA[<$name$ $attribute$>$end$</$name$>]]></Code>
+      <Code Language="Html"><![CDATA[<$elementName$ $attributeName$="$attributeValue$">
+	$selected$$end$
+</$elementName$>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>element (with attribute, with content)</Title>
       <Shortcut>eax</Shortcut>
-      <Description>element (with attribute, with content)</Description>
+      <Description> (with attribute, with content)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -8825,9 +8799,14 @@ finally
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>attribute</ID>
-          <ToolTip>Attribute(s)</ToolTip>
-          <Default>attribute=""</Default>
+          <ID>attributeName</ID>
+          <ToolTip>Attribute name</ToolTip>
+          <Default>Attribute</Default>
+        </Literal>
+        <Literal>
+          <ID>attributeValue</ID>
+          <ToolTip>Attribute value</ToolTip>
+          <Default>Value</Default>
         </Literal>
         <Literal>
           <ID>content</ID>
@@ -8835,19 +8814,19 @@ finally
           <Default>content</Default>
         </Literal>
         <Literal>
-          <ID>name</ID>
+          <ID>elementName</ID>
           <ToolTip>Element name</ToolTip>
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="Html"><![CDATA[<$name$ $attribute$>$content$</$name$>$end$]]></Code>
+      <Code Language="Html"><![CDATA[<$elementName$ $attributeName$="$attributeValue$">$content$</$elementName$>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>element (with content)</Title>
       <Shortcut>ex</Shortcut>
-      <Description>element (with content)</Description>
+      <Description> (with content)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -8864,12 +8843,12 @@ finally
           <Default>content</Default>
         </Literal>
         <Literal>
-          <ID>name</ID>
+          <ID>elementName</ID>
           <ToolTip>Element name</ToolTip>
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="Html"><![CDATA[<$name$>$content$</$name$>$end$]]></Code>
+      <Code Language="Html"><![CDATA[<$elementName$>$content$</$elementName$>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -8950,7 +8929,7 @@ finally
     </Header>
     <Snippet>
       <Code Language="Html"><![CDATA[<fieldset>
-    <legend>$end$</legend>
+	<legend>$end$</legend>
 </fieldset>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -8975,7 +8954,7 @@ finally
         </Literal>
       </Declarations>
       <Code Language="Html"><![CDATA[<fieldset>
-    <legend>$content$</legend>$end$
+	<legend>$content$</legend>$end$
 </fieldset>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -9008,8 +8987,8 @@ finally
         </Literal>
       </Declarations>
       <Code Language="Html"><![CDATA[<figure>
-    <img src="$src$" alt="$alt$">
-    <figcaption>$caption$</figcaption>
+	<img src="$src$" alt="$alt$">
+	<figcaption>$caption$</figcaption>
 </figure>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -9583,11 +9562,11 @@ finally
         </Literal>
       </Declarations>
       <Code Language="Html"><![CDATA[<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>$title$</title>
-    </head>
-    <body>$end$
-    </body>
+	<head>
+		<title>$title$</title>
+	</head>
+	<body>$end$
+	</body>
 </html>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -10429,7 +10408,7 @@ finally
     </Header>
     <Snippet>
       <Code Language="Html"><![CDATA[<ol>
-    <li>$end$</li>
+	<li>$end$</li>
 </ol>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -10454,7 +10433,7 @@ finally
         </Literal>
       </Declarations>
       <Code Language="Html"><![CDATA[<ol>
-    <li>$content$</li>$end$
+	<li>$content$</li>$end$
 </ol>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -10479,7 +10458,7 @@ finally
         </Literal>
       </Declarations>
       <Code Language="Html"><![CDATA[<optgroup>
-    <option value="$value$">$end$</option>
+	<option value="$value$">$end$</option>
 </optgroup>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -10508,7 +10487,7 @@ finally
         </Literal>
       </Declarations>
       <Code Language="Html"><![CDATA[<optgroup>
-    <option value="$value$">$content$</option>$end$
+	<option value="$value$">$content$</option>$end$
 </optgroup>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -11120,7 +11099,7 @@ finally
         </Literal>
       </Declarations>
       <Code Language="Html"><![CDATA[<select>
-    <option value="$value$">$end$</option>
+	<option value="$value$">$end$</option>
 </select>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -11149,7 +11128,7 @@ finally
         </Literal>
       </Declarations>
       <Code Language="Html"><![CDATA[<select>
-    <option value="$value$">$content$</option>$end$
+	<option value="$value$">$content$</option>$end$
 </select>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -11169,12 +11148,12 @@ finally
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>name</ID>
+          <ID>elementName</ID>
           <ToolTip>Element name</ToolTip>
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="Html"><![CDATA[<$name$ />$end$]]></Code>
+      <Code Language="Html"><![CDATA[<$elementName$ />$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -11193,17 +11172,22 @@ finally
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>attribute</ID>
-          <ToolTip>Attribute(s)</ToolTip>
-          <Default>attribute=""</Default>
+          <ID>attributeName</ID>
+          <ToolTip>Attribute name</ToolTip>
+          <Default>Attribute</Default>
         </Literal>
         <Literal>
-          <ID>name</ID>
+          <ID>attributeValue</ID>
+          <ToolTip>Attribute value</ToolTip>
+          <Default>Value</Default>
+        </Literal>
+        <Literal>
+          <ID>elementName</ID>
           <ToolTip>Element name</ToolTip>
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="Html"><![CDATA[<$name$ $attribute$ />$end$]]></Code>
+      <Code Language="Html"><![CDATA[<$elementName$ $attributeName$="$attributeValue$" />$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -11568,13 +11552,13 @@ finally
     </Header>
     <Snippet>
       <Code Language="Html"><![CDATA[<table>
-    <caption>$end$</caption>
-    <tr>
-        <th></th>
-    </tr>
-    <tr>
-        <td></td>
-    </tr>
+	<caption>$end$</caption>
+	<tr>
+		<th></th>
+	</tr>
+	<tr>
+		<td></td>
+	</tr>
 </table>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -12068,7 +12052,7 @@ finally
     </Header>
     <Snippet>
       <Code Language="Html"><![CDATA[<ul>
-    <li>$end$</li>
+	<li>$end$</li>
 </ul>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -12093,7 +12077,7 @@ finally
         </Literal>
       </Declarations>
       <Code Language="Html"><![CDATA[<ul>
-    <li>$content$</li>$end$
+	<li>$content$</li>$end$
 </ul>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -12164,7 +12148,7 @@ finally
         </Literal>
       </Declarations>
       <Code Language="Html"><![CDATA[<video controls="controls">
-    <source src="$src$" type="$type$">$end$
+	<source src="$src$" type="$type$">$end$
 </video>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -13283,7 +13267,7 @@ $content1$ | $content2$ | $content3$$end$]]></Code>
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="Markdown"><![CDATA[    * $content$$end$]]></Code>
+      <Code Language="Markdown"><![CDATA[	* $content$$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13306,7 +13290,7 @@ $content1$ | $content2$ | $content3$$end$]]></Code>
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="Markdown"><![CDATA[    * $content$$end$]]></Code>
+      <Code Language="Markdown"><![CDATA[	* $content$$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13422,8 +13406,8 @@ $content1$ | $content2$ | $content3$$end$]]></Code>
       </Declarations>
       <Code Language="VB"><![CDATA[<AttributeUsage(AttributeTargets$target$, AllowMultiple:=$allowMultiple$)>
 $modifier$ Class $name$Attribute
-    Inherits $base$
-    $end$
+	Inherits $base$
+	$end$
 End Class]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -13488,7 +13472,7 @@ End Class]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Catch $identifier$ As $exceptionType$
-    $end$]]></Code>
+	$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13531,42 +13515,17 @@ End Class]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[$modifier$ Class $name$
-    Inherits Collection(Of $type$)
+	Inherits Collection(Of $type$)
 
-    Public Sub New()
-    End Sub
+	Public Sub New()
+	End Sub
 
-    Public Sub New(list As IList(Of $type$))
-        MyBase.New(list)
-    End Sub
-    $end$
+	Public Sub New(list As IList(Of $type$))
+		MyBase.New(list)
+	End Sub
+	$end$
 
 End Class]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>Containing type name</Title>
-      <Shortcut>this</Shortcut>
-      <Description>Containing type name</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ContainingTypeName</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal Editable="false">
-          <ID>className</ID>
-          <ToolTip>Containing type name</ToolTip>
-          <Default>ThisName</Default>
-          <Function>ClassName()</Function>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[$className$$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13728,37 +13687,37 @@ End Class]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[$modifier$ Class $name$
-    Inherits Dictionary(Of $_keyType$, $_valueType$)
+	Inherits Dictionary(Of $_keyType$, $_valueType$)
 
-    Public Sub New()
-        MyBase.New()
-    End Sub
+	Public Sub New()
+		MyBase.New()
+	End Sub
 
-    Public Sub New(capacity As Integer)
-        MyBase.New(capacity)
-    End Sub
+	Public Sub New(capacity As Integer)
+		MyBase.New(capacity)
+	End Sub
 
-    Public Sub New(comparer As IEqualityComparer(Of $_keyType$))
-        MyBase.New(comparer)
-    End Sub
+	Public Sub New(comparer As IEqualityComparer(Of $_keyType$))
+		MyBase.New(comparer)
+	End Sub
 
-    Public Sub New(dictionary As IDictionary(Of $_keyType$, $_valueType$))
-        MyBase.New(dictionary)
-    End Sub
+	Public Sub New(dictionary As IDictionary(Of $_keyType$, $_valueType$))
+		MyBase.New(dictionary)
+	End Sub
 
-    Public Sub New(capacity As Integer, comparer As IEqualityComparer(Of $_keyType$))
-        MyBase.New(capacity, comparer)
-    End Sub
+	Public Sub New(capacity As Integer, comparer As IEqualityComparer(Of $_keyType$))
+		MyBase.New(capacity, comparer)
+	End Sub
 
-    Public Sub New(info As SerializationInfo, context As StreamingContext)
-        MyBase.New(info, context)
-    End Sub
+	Public Sub New(info As SerializationInfo, context As StreamingContext)
+		MyBase.New(info, context)
+	End Sub
 
-    Public Sub New(dictionary As IDictionary(Of $_keyType$, $_valueType$), comparer As IEqualityComparer(Of $_keyType$))
-        MyBase.New(dictionary, comparer)
-    End Sub
+	Public Sub New(dictionary As IDictionary(Of $_keyType$, $_valueType$), comparer As IEqualityComparer(Of $_keyType$))
+		MyBase.New(dictionary, comparer)
+	End Sub
 
-    $end$
+	$end$
 End Class]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -13828,30 +13787,30 @@ End Class]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[$modifier$ Class $name$
-    Implements IDisposable
+	Implements IDisposable
 
-    Private _disposed As Boolean
+	Private _disposed As Boolean
 
-    Public Sub Dispose() Implements IDisposable.Dispose
+	Public Sub Dispose() Implements IDisposable.Dispose
 
-        Dispose(True)
-        GC.SuppressFinalize(Me)
+		Dispose(True)
+		GC.SuppressFinalize(Me)
 
-    End Sub
+	End Sub
 
-    Protected Overridable Sub Dispose(disposing As Boolean)
+	Protected Overridable Sub Dispose(disposing As Boolean)
 
-        If Not _disposed Then
+		If Not _disposed Then
 
-            If disposing Then
-                Throw New NotImplementedException()
-            End If
+			If disposing Then
+				Throw New NotImplementedException()
+			End If
 
-            _disposed = True
+			_disposed = True
 
-        End If
+		End If
 
-    End Sub
+	End Sub
 
 End Class$end$]]></Code>
     </Snippet>
@@ -13879,19 +13838,19 @@ End Class$end$]]></Code>
 
 Public Sub Dispose()
 
-    Dispose(True)
-    GC.SuppressFinalize(Me)
+	Dispose(True)
+	GC.SuppressFinalize(Me)
 
 End Sub
 
 Protected Overridable Sub Dispose(disposing As Boolean)
 
-    If Not _disposed Then
-        If disposing Then
-            Throw New NotImplementedException()
-        End If
-        _disposed = True
-    End If
+	If Not _disposed Then
+		If disposing Then
+			Throw New NotImplementedException()
+		End If
+		_disposed = True
+	End If
 
 End Sub$end$]]></Code>
     </Snippet>
@@ -13911,7 +13870,7 @@ End Sub$end$]]></Code>
     </Header>
     <Snippet>
       <Code Language="VB"><![CDATA[Do
-    $end$
+	$end$
 Loop]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -13930,7 +13889,7 @@ Loop]]></Code>
     </Header>
     <Snippet>
       <Code Language="VB"><![CDATA[Else
-    $end$]]></Code>
+	$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13955,7 +13914,7 @@ Loop]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[ElseIf $expression$ Then
-    $end$]]></Code>
+	$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -13978,27 +13937,26 @@ Loop]]></Code>
         </Import>
       </Imports>
       <Declarations>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Public Overrides Function Equals(obj As object) As Boolean
 
-    Dim other = Nothing
-    If TryCast(other, $thisname$) Is Nothing Then
-        Return False
-    End If
+	Dim other = Nothing
+	If TryCast(other, $thisName$) Is Nothing Then
+		Return False
+	End If
 
-    $end$
-    Throw New NotImplementedException()
+	$end$
+	Throw New NotImplementedException()
 
 End Function
 
 Public Overrides Function GetHashCode() As Integer
-    Throw New NotImplementedException()
+	Throw New NotImplementedException()
 End Function]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -14043,22 +14001,22 @@ End Function]]></Code>
       </Declarations>
       <Code Language="VB"><![CDATA[<Serializable>
 $modifier$ Class $name$Exception
-    Inherits $base$
+	Inherits $base$
 
-    Public Sub New()
-    End Sub
+	Public Sub New()
+	End Sub
 
-    Public Sub New(message As String)
-        MyBase.New(message)
-    End Sub
+	Public Sub New(message As String)
+		MyBase.New(message)
+	End Sub
 
-    Public Sub New(message As String, inner As Exception)
-        MyBase.New(message, inner)
-    End Sub
+	Public Sub New(message As String, inner As Exception)
+		MyBase.New(message, inner)
+	End Sub
 
-    Protected Sub New(info As SerializationInfo, context As StreamingContext)
-        MyBase.New(info, context)
-    End Sub$end$
+	Protected Sub New(info As SerializationInfo, context As StreamingContext)
+		MyBase.New(info, context)
+	End Sub$end$
 
 End Class]]></Code>
     </Snippet>
@@ -14090,7 +14048,7 @@ End Class]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[For $index$ = 0 To $length$ - 1
-    $end$
+	$end$
 Next]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -14121,7 +14079,7 @@ Next]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[For Each $elementIdentifier$ In $_collectionIdentifier$
-    $end$
+	$end$
 Next]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -14152,7 +14110,7 @@ Next]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[For $index$ = $length$ - 1 To 0 Step -1
-    $end$
+	$end$
 Next]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -14220,29 +14178,29 @@ Next]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[$modifier$ Class $name$
-    Implements IComparer
+	Implements IComparer
 
-    Public Function Compare(x As Object, y As Object) As Integer Implements IComparer.Compare
+	Public Function Compare(x As Object, y As Object) As Integer Implements IComparer.Compare
 
-        If Object.ReferenceEquals(x, y) Then
-            Return 0
-        End If
+		If Object.ReferenceEquals(x, y) Then
+			Return 0
+		End If
 
-        If x Is Nothing Then
-            Return IIf(y Is Nothing, 0, -1)
-        End If
+		If x Is Nothing Then
+			Return IIf(y Is Nothing, 0, -1)
+		End If
 
-        If y Is Nothing Then
-            Return 1
-        End If
+		If y Is Nothing Then
+			Return 1
+		End If
 
-        Dim a = CType(x, $type$)
-        Dim b = CType(y, $type$)
+		Dim a = CType(x, $type$)
+		Dim b = CType(y, $type$)
 
-        $end$
-        Throw New NotImplementedException()
+		$end$
+		Throw New NotImplementedException()
 
-    End Function
+	End Function
 
 End Class]]></Code>
     </Snippet>
@@ -14287,26 +14245,26 @@ End Class]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[$modifier$ Class $name$
-    Implements IComparer(Of $type$)
+	Implements IComparer(Of $type$)
 
-    Public Function Compare(x As $type$, y As $type$) As Integer Implements IComparer(Of $type$).Compare
+	Public Function Compare(x As $type$, y As $type$) As Integer Implements IComparer(Of $type$).Compare
 
-        If Object.ReferenceEquals(x, y) Then
-            Return 0
-        End If
+		If Object.ReferenceEquals(x, y) Then
+			Return 0
+		End If
 
-        If x Is Nothing Then
-            Return -1
-        End If
+		If x Is Nothing Then
+			Return -1
+		End If
 
-        If y Is Nothing Then
-            Return 1
-        End If
+		If y Is Nothing Then
+			Return 1
+		End If
 
-        $end$
-        Throw New NotImplementedException()
+		$end$
+		Throw New NotImplementedException()
 
-    End Function
+	End Function
 
 End Class]]></Code>
     </Snippet>
@@ -14367,9 +14325,9 @@ End Class]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Using $enumerator$ = $_collectionIdentifier$.GetEnumerator()
-    While $enumerator$.MoveNext()
-        $end$
-    End While
+	While $enumerator$.MoveNext()
+		$end$
+	End While
 End Using]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -14413,35 +14371,35 @@ End Using]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[$modifier$ Class $name$
-    Implements IEqualityComparer
+	Implements IEqualityComparer
 
-    Public Shadows Function Equals(x As Object, y As Object) As Boolean Implements IEqualityComparer.Equals
+	Public Shadows Function Equals(x As Object, y As Object) As Boolean Implements IEqualityComparer.Equals
 
-        If Object.ReferenceEquals(x, y) Then
-            Return True
-        End If
+		If Object.ReferenceEquals(x, y) Then
+			Return True
+		End If
 
-        If x Is Nothing OrElse y Is Nothing Then
-            Return False
-        End If
+		If x Is Nothing OrElse y Is Nothing Then
+			Return False
+		End If
 
-        Dim a = CType(x, $type$)
-        Dim b = CType(y, $type$)
+		Dim a = CType(x, $type$)
+		Dim b = CType(y, $type$)
 
-        $end$
-        Throw New NotImplementedException()
+		$end$
+		Throw New NotImplementedException()
 
-    End Function
+	End Function
 
-    Public Shadows Function GetHashCode(obj As Object) As Integer Implements IEqualityComparer.GetHashCode
+	Public Shadows Function GetHashCode(obj As Object) As Integer Implements IEqualityComparer.GetHashCode
 
-        If obj Is Nothing Then
-            Return 0
-        End If
+		If obj Is Nothing Then
+			Return 0
+		End If
 
-        Throw New NotImplementedException()
+		Throw New NotImplementedException()
 
-    End Function
+	End Function
 
 End Class]]></Code>
     </Snippet>
@@ -14486,32 +14444,32 @@ End Class]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[$modifier$ Class $name$
-    Inherits EqualityComparer(Of $type$)
+	Inherits EqualityComparer(Of $type$)
 
-    Public Overrides Function Equals(x As $type$, y As $type$) As Boolean
+	Public Overrides Function Equals(x As $type$, y As $type$) As Boolean
 
-        If Object.ReferenceEquals(x, y) Then
-            Return True
-        End If
+		If Object.ReferenceEquals(x, y) Then
+			Return True
+		End If
 
-        If x Is Nothing OrElse y Is Nothing Then
-            Return False
-        End If
+		If x Is Nothing OrElse y Is Nothing Then
+			Return False
+		End If
 
-        $end$
-        Throw New NotImplementedException()
+		$end$
+		Throw New NotImplementedException()
 
-    End Function
+	End Function
 
-    Public Overrides Function GetHashCode(obj As $type$) As Integer
+	Public Overrides Function GetHashCode(obj As $type$) As Integer
 
-        If obj Is Nothing Then
-            Return 0
-        End If
+		If obj Is Nothing Then
+			Return 0
+		End If
 
-        Throw New NotImplementedException()
+		Throw New NotImplementedException()
 
-    End Function
+	End Function
 
 End Class]]></Code>
     </Snippet>
@@ -14538,7 +14496,7 @@ End Class]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[If $expression$ Is Nothing Then
-    $end$
+	$end$
 End If]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -14564,7 +14522,7 @@ End If]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[If $expression$ IsNot Nothing Then
-    $end$
+	$end$
 End If]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -14590,7 +14548,7 @@ End If]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[If Not $expression$ Then
-    $end$
+	$end$
 End If]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -14627,7 +14585,7 @@ End If]]></Code>
       </Declarations>
       <Code Language="VB"><![CDATA[Dim $result$ As $_type$
 If Not $_type$.TryParse($value$, $result$)
-    $end$
+	$end$
 End If]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -14658,9 +14616,9 @@ End If]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Dim $identifier$ = Nothing
-    If TryCast($identifier$, $type$) Is Nothing Then
-        $end$
-    End If]]></Code>
+	If TryCast($identifier$, $type$) Is Nothing Then
+		$end$
+	End If]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -14690,9 +14648,9 @@ End If]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Dim $identifier$ = Nothing
-    If TryCast($identifier$, $type$) IsNot Nothing Then
-        $end$
-    End If]]></Code>
+	If TryCast($identifier$, $type$) IsNot Nothing Then
+		$end$
+	End If]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -14728,7 +14686,7 @@ End If]]></Code>
       </Declarations>
       <Code Language="VB"><![CDATA[Dim $result$ As $_type$
 If $_type$.TryParse($value$, $result$)
-    $end$
+	$end$
 End If]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -14805,10 +14763,6 @@ End If]]></Code>
     </Header>
     <Snippet>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_parameterList</ID>
-          <Default>()</Default>
-        </Literal>
         <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
@@ -14820,7 +14774,7 @@ End If]]></Code>
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Function $name$$_parameterList$ As $_type$;$end$]]></Code>
+      <Code Language="VB"><![CDATA[Function $name$() As $_type$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -14966,7 +14920,7 @@ End If]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Friend Class $name$
-    $end$
+	$end$
 End Class]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -15019,7 +14973,7 @@ End Class]]></Code>
     </Header>
     <Snippet>
       <Code Language="VB"><![CDATA[Friend Sub New()
-    $end$
+	$end$
 End Sub]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -15045,7 +14999,7 @@ End Sub]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Friend Sub New($parameters$)
-    $end$
+	$end$
 End Sub]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -15064,10 +15018,6 @@ End Sub]]></Code>
     </Header>
     <Snippet>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_parameterList</ID>
-          <Default>()</Default>
-        </Literal>
         <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
@@ -15079,7 +15029,7 @@ End Sub]]></Code>
           <Default>DelegateName</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Friend Delegate Function $name$$_parameterList$ As $_type$$end$]]></Code>
+      <Code Language="VB"><![CDATA[Friend Delegate Function $name$() As $_type$$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -15138,7 +15088,7 @@ End Sub]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Friend Enum $enum$
-    $end$
+	$end$
 End Enum]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -15181,7 +15131,7 @@ End Enum]]></Code>
       <Code Language="VB"><![CDATA[Friend Event $name$ As EventHandler(Of $eventArgs$)
 
 Protected Overridable Sub On$name$($parameterName$ As $eventArgs$)
-    RaiseEvent $name$(Me, $parameterName$)
+	RaiseEvent $name$(Me, $parameterName$)
 End Sub$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -15212,11 +15162,11 @@ End Sub$end$]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Default Friend Property Item($parameter$) As $_type$
-    Get
-        $end$
-    End Get
-    Set(ByVal Value As $_type$)
-    End Set
+	Get
+		$end$
+	End Get
+	Set(ByVal Value As $_type$)
+	End Set
 End Property]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -15242,7 +15192,7 @@ End Property]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Friend Interface $name$
-    $end$
+	$end$
 End Interface]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -15261,10 +15211,6 @@ End Interface]]></Code>
     </Header>
     <Snippet>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_parameterList</ID>
-          <Default>()</Default>
-        </Literal>
         <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
@@ -15276,8 +15222,8 @@ End Interface]]></Code>
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Friend Function $name$$_parameterList$ As $_type$
-    $end$
+      <Code Language="VB"><![CDATA[Friend Function $name$() As $_type$
+	$end$
 End Function]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -15313,7 +15259,7 @@ End Function]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Friend Function $name$($parameters$) As $_type$
-    $end$
+	$end$
 End Function]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -15339,7 +15285,7 @@ End Function]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Friend Module $name$
-    $end$
+	$end$
 End Module]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -15433,9 +15379,9 @@ End Module]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Friend ReadOnly Property $name$ As $_type$
-    Get
-        Return $value$
-    End Get
+	Get
+		Return $value$
+	End Get
 End Property$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -15454,10 +15400,6 @@ End Property$end$]]></Code>
     </Header>
     <Snippet>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_parameterList</ID>
-          <Default>()</Default>
-        </Literal>
         <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
@@ -15469,8 +15411,8 @@ End Property$end$]]></Code>
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Friend Shared Function $name$$_parameterList$ As $_type$
-    $end$
+      <Code Language="VB"><![CDATA[Friend Shared Function $name$() As $_type$
+	$end$
 End Function]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -15506,7 +15448,7 @@ End Function]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Friend Shared Function $name$($parameters$) As $_type$
-    $end$
+	$end$
 End Function]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -15600,9 +15542,9 @@ End Function]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Friend Shared ReadOnly Property $name$ As $_type$
-    Get
-        Return $value$
-    End Get
+	Get
+		Return $value$
+	End Get
 End Property$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -15628,7 +15570,7 @@ End Property$end$]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Friend Structure $name$
-    $end$
+	$end$
 End Structure]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -15676,10 +15618,6 @@ End Structure]]></Code>
     </Header>
     <Snippet>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_parameterList</ID>
-          <Default>()</Default>
-        </Literal>
         <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
@@ -15691,8 +15629,8 @@ End Structure]]></Code>
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Friend Overridable Function $name$$_parameterList$ As $_type$
-    $end$
+      <Code Language="VB"><![CDATA[Friend Overridable Function $name$() As $_type$
+	$end$
 End Function]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -15728,7 +15666,7 @@ End Function]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Friend Overridable Function $name$($parameters$) As $_type$
-    $end$
+	$end$
 End Function]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -15793,9 +15731,9 @@ End Function]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Friend Overridable ReadOnly Property $name$ As $_type$
-    Get
-        Return $value$
-    End Get
+	Get
+		Return $value$
+	End Get
 End Property$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -15861,14 +15799,7 @@ End Property$end$]]></Code>
       </Keywords>
     </Header>
     <Snippet>
-      <Declarations>
-        <Literal Editable="false">
-          <ID>lambdaParam</ID>
-          <ToolTip>Lambda parameter name</ToolTip>
-          <Default>f</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Function($lambdaParam$) $end$]]></Code>
+      <Code Language="VB"><![CDATA[Function(f) $end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -16056,20 +15987,20 @@ End Property$end$]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[$modifier$ Class $name$
-    Inherits ObservableCollection(Of $type$)
+	Inherits ObservableCollection(Of $type$)
 
-    Public Sub New()
-    End Sub
+	Public Sub New()
+	End Sub
 
-    Public Sub New(collection As IEnumerable(Of $type$))
-        MyBase.New(collection)
-    End Sub
+	Public Sub New(collection As IEnumerable(Of $type$))
+		MyBase.New(collection)
+	End Sub
 
-    Public Sub New(list As IList(Of $type$))
-        MyBase.New(list)
-    End Sub
+	Public Sub New(list As IList(Of $type$))
+		MyBase.New(list)
+	End Sub
 
-    $end$
+	$end$
 End Class]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -16098,15 +16029,14 @@ End Class]]></Code>
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Operator &($left$ As $thisname$, $right$ As $thisname$)
-    $end$
+      <Code Language="VB"><![CDATA[Public Shared Operator &($left$ As $thisName$, $right$ As $thisName$)
+	$end$
 End Operator]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -16135,15 +16065,14 @@ End Operator]]></Code>
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Operator And($left$ As $thisname$, $right$ As $thisname$)
-    $end$
+      <Code Language="VB"><![CDATA[Public Shared Operator And($left$ As $thisName$, $right$ As $thisName$)
+	$end$
 End Operator]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -16172,15 +16101,14 @@ End Operator]]></Code>
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Operator *($left$ As $thisname$, $right$ As $thisname$)
-    $end$
+      <Code Language="VB"><![CDATA[Public Shared Operator *($left$ As $thisName$, $right$ As $thisName$)
+	$end$
 End Operator]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -16209,15 +16137,14 @@ End Operator]]></Code>
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Operator \($left$ As $thisname$, $right$ As $thisname$)
-    $end$
+      <Code Language="VB"><![CDATA[Public Shared Operator \($left$ As $thisName$, $right$ As $thisName$)
+	$end$
 End Operator]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -16246,15 +16173,14 @@ End Operator]]></Code>
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Operator ^($left$ As $thisname$, $right$ As $thisname$)
-    $end$
+      <Code Language="VB"><![CDATA[Public Shared Operator ^($left$ As $thisName$, $right$ As $thisName$)
+	$end$
 End Operator]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -16278,11 +16204,10 @@ End Operator]]></Code>
           <ToolTip>Object to convert</ToolTip>
           <Default>value</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
         <Literal>
           <ID>type</ID>
@@ -16290,11 +16215,11 @@ End Operator]]></Code>
           <Default>Object</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Widening Operator CType(ByVal $operand$ As $thisname$) As $type$
-    $end$
+      <Code Language="VB"><![CDATA[Public Shared Widening Operator CType(ByVal $operand$ As $thisName$) As $type$
+	$end$
 End Operator
 
-Public Shared Narrowing Operator CType(ByVal $operand$ As $type$) As $thisname$
+Public Shared Narrowing Operator CType(ByVal $operand$ As $type$) As $thisName$
 End Operator]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -16323,19 +16248,18 @@ End Operator]]></Code>
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Operator =($left$ As $thisname$, $right$ As $thisname$)
-    $end$
+      <Code Language="VB"><![CDATA[Public Shared Operator =($left$ As $thisName$, $right$ As $thisName$)
+	$end$
 End Operator
 
-Public Shared Operator <>($left$ As $thisname$, $right$ As $thisname$)
-    Return Not($left$ = $right$)
+Public Shared Operator <>($left$ As $thisName$, $right$ As $thisName$)
+	Return Not($left$ = $right$)
 End Operator]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -16364,18 +16288,17 @@ End Operator]]></Code>
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Operator >($left$ As $thisname$, $right$ As $thisname$)
-    $end$
+      <Code Language="VB"><![CDATA[Public Shared Operator >($left$ As $thisName$, $right$ As $thisName$)
+	$end$
 End Operator
 
-Public Shared Operator <($left$ As $thisname$, $right$ As $thisname$)
+Public Shared Operator <($left$ As $thisName$, $right$ As $thisName$)
 End Operator]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -16404,15 +16327,14 @@ End Operator]]></Code>
           <ToolTip>Right operand</ToolTip>
           <Default>count</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Operator >>($left$ As $thisname$, $right$ As Integer)
-    $end$
+      <Code Language="VB"><![CDATA[Public Shared Operator >>($left$ As $thisName$, $right$ As Integer)
+	$end$
 End Operator]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -16441,18 +16363,17 @@ End Operator]]></Code>
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Operator >=($left$ As $thisname$, $right$ As $thisname$)
-    $end$
+      <Code Language="VB"><![CDATA[Public Shared Operator >=($left$ As $thisName$, $right$ As $thisName$)
+	$end$
 End Operator
 
-Public Shared Operator <=($left$ As $thisname$, $right$ As $thisname$)
+Public Shared Operator <=($left$ As $thisName$, $right$ As $thisName$)
 End Operator]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -16476,18 +16397,17 @@ End Operator]]></Code>
           <ToolTip>Operand</ToolTip>
           <Default>value</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Operator IsTrue($operand$ As $thisname$) As Boolean
+      <Code Language="VB"><![CDATA[Public Shared Operator IsTrue($operand$ As $thisName$) As Boolean
 End Operator
 
-Public Shared Operator IsFalse($operand$ As $thisname$) As Boolean
-    $end$
+Public Shared Operator IsFalse($operand$ As $thisName$) As Boolean
+	$end$
 End Operator]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -16511,18 +16431,17 @@ End Operator]]></Code>
           <ToolTip>Operand</ToolTip>
           <Default>value</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Operator IsTrue($operand$ As $thisname$) As Boolean
-    $end$
+      <Code Language="VB"><![CDATA[Public Shared Operator IsTrue($operand$ As $thisName$) As Boolean
+	$end$
 End Operator
 
-Public Shared Operator IsFalse($operand$ As $thisname$) As Boolean
+Public Shared Operator IsFalse($operand$ As $thisName$) As Boolean
 End Operator]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -16551,18 +16470,17 @@ End Operator]]></Code>
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Operator <($left$ As $thisname$, $right$ As $thisname$)
-    $end$
+      <Code Language="VB"><![CDATA[Public Shared Operator <($left$ As $thisName$, $right$ As $thisName$)
+	$end$
 End Operator
 
-Public Shared Operator >($left$ As $thisname$, $right$ As $thisname$)
+Public Shared Operator >($left$ As $thisName$, $right$ As $thisName$)
 End Operator]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -16591,15 +16509,14 @@ End Operator]]></Code>
           <ToolTip>Right operand</ToolTip>
           <Default>count</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Operator <<($left$ As $thisname$, $right$ As Integer)
-    $end$
+      <Code Language="VB"><![CDATA[Public Shared Operator <<($left$ As $thisName$, $right$ As Integer)
+	$end$
 End Operator]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -16628,18 +16545,17 @@ End Operator]]></Code>
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Operator <=($left$ As $thisname$, $right$ As $thisname$)
-    $end$
+      <Code Language="VB"><![CDATA[Public Shared Operator <=($left$ As $thisName$, $right$ As $thisName$)
+	$end$
 End Operator
 
-Public Shared Operator >=($left$ As $thisname$, $right$ As $thisname$)
+Public Shared Operator >=($left$ As $thisName$, $right$ As $thisName$)
 End Operator]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -16668,15 +16584,14 @@ End Operator]]></Code>
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Operator Like($left$ As $thisname$, $right$ As $thisname$)
-    $end$
+      <Code Language="VB"><![CDATA[Public Shared Operator Like($left$ As $thisName$, $right$ As $thisName$)
+	$end$
 End Operator]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -16705,15 +16620,14 @@ End Operator]]></Code>
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Operator -($left$ As $thisname$, $right$ As $thisname$)
-    $end$
+      <Code Language="VB"><![CDATA[Public Shared Operator -($left$ As $thisName$, $right$ As $thisName$)
+	$end$
 End Operator]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -16742,15 +16656,14 @@ End Operator]]></Code>
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Operator Mod($left$ As $thisname$, $right$ As $thisname$)
-    $end$
+      <Code Language="VB"><![CDATA[Public Shared Operator Mod($left$ As $thisName$, $right$ As $thisName$)
+	$end$
 End Operator]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -16774,15 +16687,14 @@ End Operator]]></Code>
           <ToolTip>Operand</ToolTip>
           <Default>value</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Operator Not($operand$ As $thisname$)
-    $end$
+      <Code Language="VB"><![CDATA[Public Shared Operator Not($operand$ As $thisName$)
+	$end$
 End Operator]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -16811,15 +16723,14 @@ End Operator]]></Code>
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Operator Or($left$ As $thisname$, $right$ As $thisname$)
-    $end$
+      <Code Language="VB"><![CDATA[Public Shared Operator Or($left$ As $thisName$, $right$ As $thisName$)
+	$end$
 End Operator]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -16848,15 +16759,14 @@ End Operator]]></Code>
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Operator +($left$ As $thisname$, $right$ As $thisname$)
-    $end$
+      <Code Language="VB"><![CDATA[Public Shared Operator +($left$ As $thisName$, $right$ As $thisName$)
+	$end$
 End Operator]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -16885,15 +16795,14 @@ End Operator]]></Code>
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Operator /($left$ As $thisname$, $right$ As $thisname$)
-    $end$
+      <Code Language="VB"><![CDATA[Public Shared Operator /($left$ As $thisName$, $right$ As $thisName$)
+	$end$
 End Operator]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -16922,15 +16831,14 @@ End Operator]]></Code>
           <ToolTip>Right operand</ToolTip>
           <Default>right</Default>
         </Literal>
-        <Literal Editable="false">
-          <ID>thisname</ID>
+        <Literal>
+          <ID>thisName</ID>
           <ToolTip>Containing type name</ToolTip>
           <Default>ThisName</Default>
-          <Function>ClassName()</Function>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Operator Xor($left$ As $thisname$, $right$ As $thisname$)
-    $end$
+      <Code Language="VB"><![CDATA[Public Shared Operator Xor($left$ As $thisName$, $right$ As $thisName$)
+	$end$
 End Operator]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -16985,7 +16893,7 @@ End Operator]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[#If $symbol$ Then
-    $end$
+	$end$
 #End If]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -17011,7 +16919,7 @@ End Operator]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[#If $symbol$ Then
-    $end$
+	$end$
 #Else
 
 #End If]]></Code>
@@ -17039,7 +16947,7 @@ End Operator]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[#Region "$name$"
-    $end$
+	$end$
 #End Region]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -17094,7 +17002,7 @@ End Operator]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Private Class $name$
-    $end$
+	$end$
 End Class]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -17147,7 +17055,7 @@ End Class]]></Code>
     </Header>
     <Snippet>
       <Code Language="VB"><![CDATA[Private Sub New()
-    $end$
+	$end$
 End Sub]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -17173,7 +17081,7 @@ End Sub]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Private Sub New($parameters$)
-    $end$
+	$end$
 End Sub]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -17192,10 +17100,6 @@ End Sub]]></Code>
     </Header>
     <Snippet>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_parameterList</ID>
-          <Default>()</Default>
-        </Literal>
         <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
@@ -17207,7 +17111,7 @@ End Sub]]></Code>
           <Default>DelegateName</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Private Delegate Function $name$$_parameterList$ As $_type$$end$]]></Code>
+      <Code Language="VB"><![CDATA[Private Delegate Function $name$() As $_type$$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -17266,7 +17170,7 @@ End Sub]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Private Enum $enum$
-    $end$
+	$end$
 End Enum]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -17309,7 +17213,7 @@ End Enum]]></Code>
       <Code Language="VB"><![CDATA[Private Event $name$ As EventHandler(Of $eventArgs$)
 
 Protected Overridable Sub On$name$($parameterName$ As $eventArgs$)
-    RaiseEvent $name$(Me, $parameterName$)
+	RaiseEvent $name$(Me, $parameterName$)
 End Sub$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -17369,11 +17273,11 @@ End Sub$end$]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Default Private Property Item($parameter$) As $_type$
-    Get
-        $end$
-    End Get
-    Set(ByVal Value As $_type$)
-    End Set
+	Get
+		$end$
+	End Get
+	Set(ByVal Value As $_type$)
+	End Set
 End Property]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -17392,10 +17296,6 @@ End Property]]></Code>
     </Header>
     <Snippet>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_parameterList</ID>
-          <Default>()</Default>
-        </Literal>
         <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
@@ -17407,8 +17307,8 @@ End Property]]></Code>
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Private Function $name$$_parameterList$ As $_type$
-    $end$
+      <Code Language="VB"><![CDATA[Private Function $name$() As $_type$
+	$end$
 End Function]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -17444,7 +17344,7 @@ End Function]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Private Function $name$($parameters$) As $_type$
-    $end$
+	$end$
 End Function]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -17538,9 +17438,9 @@ End Function]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Private ReadOnly Property $name$ As $_type$
-    Get
-        Return $value$
-    End Get
+	Get
+		Return $value$
+	End Get
 End Property$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -17588,10 +17488,6 @@ End Property$end$]]></Code>
     </Header>
     <Snippet>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_parameterList</ID>
-          <Default>()</Default>
-        </Literal>
         <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
@@ -17603,8 +17499,8 @@ End Property$end$]]></Code>
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Private Shared Function $name$$_parameterList$ As $_type$
-    $end$
+      <Code Language="VB"><![CDATA[Private Shared Function $name$() As $_type$
+	$end$
 End Function]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -17640,7 +17536,7 @@ End Function]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Private Shared Function $name$($parameters$) As $_type$
-    $end$
+	$end$
 End Function]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -17734,9 +17630,9 @@ End Function]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Private Shared ReadOnly Property $name$ As $_type$
-    Get
-        Return $value$
-    End Get
+	Get
+		Return $value$
+	End Get
 End Property$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -17762,7 +17658,7 @@ End Property$end$]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Private Structure $name$
-    $end$
+	$end$
 End Structure]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -17817,7 +17713,7 @@ End Structure]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Public Class $name$
-    $end$
+	$end$
 End Class]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -17870,7 +17766,7 @@ End Class]]></Code>
     </Header>
     <Snippet>
       <Code Language="VB"><![CDATA[Public Sub New()
-    $end$
+	$end$
 End Sub]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -17896,7 +17792,7 @@ End Sub]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Public Sub New($parameters$)
-    $end$
+	$end$
 End Sub]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -17915,10 +17811,6 @@ End Sub]]></Code>
     </Header>
     <Snippet>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_parameterList</ID>
-          <Default>()</Default>
-        </Literal>
         <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
@@ -17930,7 +17822,7 @@ End Sub]]></Code>
           <Default>DelegateName</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Delegate Function $name$$_parameterList$ As $_type$$end$]]></Code>
+      <Code Language="VB"><![CDATA[Public Delegate Function $name$() As $_type$$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -17989,7 +17881,7 @@ End Sub]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Public Enum $enum$
-    $end$
+	$end$
 End Enum]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -18032,7 +17924,7 @@ End Enum]]></Code>
       <Code Language="VB"><![CDATA[Public Event $name$ As EventHandler(Of $eventArgs$)
 
 Protected Overridable Sub On$name$($parameterName$ As $eventArgs$)
-    RaiseEvent $name$(Me, $parameterName$)
+	RaiseEvent $name$(Me, $parameterName$)
 End Sub$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -18092,11 +17984,11 @@ End Sub$end$]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Default Public Property Item($parameter$) As $_type$
-    Get
-        $end$
-    End Get
-    Set(ByVal Value As $_type$)
-    End Set
+	Get
+		$end$
+	End Get
+	Set(ByVal Value As $_type$)
+	End Set
 End Property]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -18122,7 +18014,7 @@ End Property]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Public Interface $name$
-    $end$
+	$end$
 End Interface]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -18141,10 +18033,6 @@ End Interface]]></Code>
     </Header>
     <Snippet>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_parameterList</ID>
-          <Default>()</Default>
-        </Literal>
         <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
@@ -18156,8 +18044,8 @@ End Interface]]></Code>
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Function $name$$_parameterList$ As $_type$
-    $end$
+      <Code Language="VB"><![CDATA[Public Function $name$() As $_type$
+	$end$
 End Function]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -18193,7 +18081,7 @@ End Function]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Public Function $name$($parameters$) As $_type$
-    $end$
+	$end$
 End Function]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -18219,7 +18107,7 @@ End Function]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Public Module $name$
-    $end$
+	$end$
 End Module]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -18313,9 +18201,9 @@ End Module]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Public ReadOnly Property $name$ As $_type$
-    Get
-        Return $value$
-    End Get
+	Get
+		Return $value$
+	End Get
 End Property$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -18363,10 +18251,6 @@ End Property$end$]]></Code>
     </Header>
     <Snippet>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_parameterList</ID>
-          <Default>()</Default>
-        </Literal>
         <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
@@ -18378,8 +18262,8 @@ End Property$end$]]></Code>
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Function $name$$_parameterList$ As $_type$
-    $end$
+      <Code Language="VB"><![CDATA[Public Shared Function $name$() As $_type$
+	$end$
 End Function]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -18415,7 +18299,7 @@ End Function]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Public Shared Function $name$($parameters$) As $_type$
-    $end$
+	$end$
 End Function]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -18509,9 +18393,9 @@ End Function]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Public Shared ReadOnly Property $name$ As $_type$
-    Get
-        Return $value$
-    End Get
+	Get
+		Return $value$
+	End Get
 End Property$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -18537,7 +18421,7 @@ End Property$end$]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Public Structure $name$
-    $end$
+	$end$
 End Structure]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -18585,10 +18469,6 @@ End Structure]]></Code>
     </Header>
     <Snippet>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_parameterList</ID>
-          <Default>()</Default>
-        </Literal>
         <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
@@ -18600,8 +18480,8 @@ End Structure]]></Code>
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Overridable Function $name$$_parameterList$ As $_type$
-    $end$
+      <Code Language="VB"><![CDATA[Public Overridable Function $name$() As $_type$
+	$end$
 End Function]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -18637,7 +18517,7 @@ End Function]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Public Overridable Function $name$($parameters$) As $_type$
-    $end$
+	$end$
 End Function]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -18702,9 +18582,9 @@ End Function]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Public Overridable ReadOnly Property $name$ As $_type$
-    Get
-        Return $value$
-    End Get
+	Get
+		Return $value$
+	End Get
 End Property$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -18748,13 +18628,13 @@ End Property$end$]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[$modifier$ Class $name$
-    Inherits ReadOnlyCollection(Of $type$)
+	Inherits ReadOnlyCollection(Of $type$)
 
-    Public Sub New(list As IList(Of $type$))
-        MyBase.New(list)
-    End Sub
+	Public Sub New(list As IList(Of $type$))
+		MyBase.New(list)
+	End Sub
 
-    $end$
+	$end$
 End Class]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -18831,7 +18711,7 @@ End Class]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Select Case $expression$
-    $end$
+	$end$
 End Select]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -18868,12 +18748,12 @@ End Select]]></Code>
       </Declarations>
       <Code Language="VB"><![CDATA[$modifier$ Class $name$
 
-    Private Sub New()
-    End Sub
+	Private Sub New()
+	End Sub
 
-    Public Shared ReadOnly Property Instance As $name$ = $value$
+	Public Shared ReadOnly Property Instance As $name$ = $value$
 
-  End Class$end$]]></Code>
+End Class$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -18891,7 +18771,7 @@ End Select]]></Code>
     </Header>
     <Snippet>
       <Code Language="VB"><![CDATA[Shared Sub New()
-    $end$
+	$end$
 End Sub]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -18927,7 +18807,7 @@ End Sub]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Using $identifier$ = New StreamReader($parameters$)
-    $end$
+	$end$
 End Using]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -18971,7 +18851,7 @@ End Using]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Using $identifier$ = New StreamWriter($parameters$, $_encoding$)
-    $end$
+	$end$
 End Using]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -19065,7 +18945,7 @@ End Using]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Using $identifier$ = new StringReader($string$)
-    $end$
+	$end$
 End Using]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -19125,7 +19005,7 @@ End Using]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Using $identifier$ = new StringWriter()
-    $end$
+	$end$
 End Using]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -19408,9 +19288,9 @@ End Using]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Try
-    $end$
+	$end$
 Catch $identifier$ as $exceptionType$
-    Throw
+	Throw
 End Try]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -19446,9 +19326,9 @@ End Try]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Try
-    $end$
+	$end$
 Catch $identifier$ as $exceptionType$
-    Throw
+	Throw
 Finally
 End Try]]></Code>
     </Snippet>
@@ -19468,7 +19348,7 @@ End Try]]></Code>
     </Header>
     <Snippet>
       <Code Language="VB"><![CDATA[Try
-    $end$
+	$end$
 Finally
 End Try]]></Code>
     </Snippet>
@@ -19519,7 +19399,7 @@ End Try]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Using $disposable$
-    $end$
+	$end$
 End Using]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -19608,7 +19488,7 @@ End Using]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[While $expression$
-    $end$
+	$end$
 End While]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -19644,7 +19524,7 @@ End While]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Using $identifier$ = XmlReader.Create($argument$)
-    $end$
+	$end$
 End Using]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -19680,11 +19560,11 @@ End Using]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Using $identifier$ = XmlWriter.Create($argument$)
-    $end$
+	$end$
 End Using]]></Code>
     </Snippet>
   </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
+  <CodeSnippet Format="1.1.0">
     <Header>
       <Title>CDATA section</Title>
       <Shortcut>cdata</Shortcut>
@@ -19692,20 +19572,32 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name CDataSection</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Declarations>
-        <Literal Editable="false">
-          <ID>CDataEnd</ID>
-          <ToolTip>End of CDATA section</ToolTip>
-          <Default>]]&gt;</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Xml"><![CDATA[<![CDATA[$end$$CDataEnd$]]></Code>
+      <Code Language="Xml"><![CDATA[<![CDATA[$selected$$end$__cdataEnd]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>CDATA section (with content)</Title>
+      <Shortcut>cdatax</Shortcut>
+      <Description>CDATA section (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name CDataSectionWithContent</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Xml"><![CDATA[<![CDATA[$selected$$end$__cdataEnd]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -19716,6 +19608,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name Comment</Keyword>
@@ -19729,17 +19622,17 @@ End Using]]></Code>
           <Default>comment</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xml"><![CDATA[<!-- $comment$ -->$end$]]></Code>
+      <Code Language="Xml"><![CDATA[<!-- $selected$$comment$ -->$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>element</Title>
       <Shortcut>e</Shortcut>
-      <Description>element</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name Element</Keyword>
@@ -19748,22 +19641,25 @@ End Using]]></Code>
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>name</ID>
+          <ID>elementName</ID>
           <ToolTip>Element name</ToolTip>
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xml"><![CDATA[<$name$>$end$</$name$>]]></Code>
+      <Code Language="Xml"><![CDATA[<$elementName$>
+	$selected$$end$
+</$elementName$>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>element (with attribute)</Title>
       <Shortcut>ea</Shortcut>
-      <Description>element (with attribute)</Description>
+      <Description> (with attribute)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name ElementWithAttribute</Keyword>
@@ -19772,24 +19668,31 @@ End Using]]></Code>
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>attribute</ID>
-          <ToolTip>Attribute(s)</ToolTip>
-          <Default>attribute=""</Default>
+          <ID>attributeName</ID>
+          <ToolTip>Attribute name</ToolTip>
+          <Default>Attribute</Default>
         </Literal>
         <Literal>
-          <ID>name</ID>
+          <ID>attributeValue</ID>
+          <ToolTip>Attribute value</ToolTip>
+          <Default>Value</Default>
+        </Literal>
+        <Literal>
+          <ID>elementName</ID>
           <ToolTip>Element name</ToolTip>
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xml"><![CDATA[<$name$ $attribute$>$end$</$name$>]]></Code>
+      <Code Language="Xml"><![CDATA[<$elementName$ $attributeName$="$attributeValue$">
+	$selected$$end$
+</$elementName$>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>element (with attribute, with content)</Title>
       <Shortcut>eax</Shortcut>
-      <Description>element (with attribute, with content)</Description>
+      <Description> (with attribute, with content)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -19801,9 +19704,14 @@ End Using]]></Code>
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>attribute</ID>
-          <ToolTip>Attribute(s)</ToolTip>
-          <Default>attribute=""</Default>
+          <ID>attributeName</ID>
+          <ToolTip>Attribute name</ToolTip>
+          <Default>Attribute</Default>
+        </Literal>
+        <Literal>
+          <ID>attributeValue</ID>
+          <ToolTip>Attribute value</ToolTip>
+          <Default>Value</Default>
         </Literal>
         <Literal>
           <ID>content</ID>
@@ -19811,19 +19719,19 @@ End Using]]></Code>
           <Default>content</Default>
         </Literal>
         <Literal>
-          <ID>name</ID>
+          <ID>elementName</ID>
           <ToolTip>Element name</ToolTip>
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xml"><![CDATA[<$name$ $attribute$>$content$</$name$>$end$]]></Code>
+      <Code Language="Xml"><![CDATA[<$elementName$ $attributeName$="$attributeValue$">$content$</$elementName$>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>element (with content)</Title>
       <Shortcut>ex</Shortcut>
-      <Description>element (with content)</Description>
+      <Description> (with content)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -19840,12 +19748,12 @@ End Using]]></Code>
           <Default>content</Default>
         </Literal>
         <Literal>
-          <ID>name</ID>
+          <ID>elementName</ID>
           <ToolTip>Element name</ToolTip>
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xml"><![CDATA[<$name$>$content$</$name$>$end$]]></Code>
+      <Code Language="Xml"><![CDATA[<$elementName$>$content$</$elementName$>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -19864,12 +19772,12 @@ End Using]]></Code>
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>name</ID>
+          <ID>elementName</ID>
           <ToolTip>Element name</ToolTip>
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xml"><![CDATA[<$name$ />$end$]]></Code>
+      <Code Language="Xml"><![CDATA[<$elementName$ />$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -19888,17 +19796,22 @@ End Using]]></Code>
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>attribute</ID>
-          <ToolTip>Attribute(s)</ToolTip>
-          <Default>attribute=""</Default>
+          <ID>attributeName</ID>
+          <ToolTip>Attribute name</ToolTip>
+          <Default>Attribute</Default>
         </Literal>
         <Literal>
-          <ID>name</ID>
+          <ID>attributeValue</ID>
+          <ToolTip>Attribute value</ToolTip>
+          <Default>Value</Default>
+        </Literal>
+        <Literal>
+          <ID>elementName</ID>
           <ToolTip>Element name</ToolTip>
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xml"><![CDATA[<$name$ $attribute$ />$end$]]></Code>
+      <Code Language="Xml"><![CDATA[<$elementName$ $attributeName$="$attributeValue$" />$end$]]></Code>
     </Snippet>
   </CodeSnippet>
 </CodeSnippets>

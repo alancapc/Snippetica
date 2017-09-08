@@ -1,5 +1,6 @@
 ## Snippetica.VisualBasic
 
+### Snippet Browser
 * Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vscode&language=vb).
 
 ### Quick Reference
@@ -181,7 +182,6 @@ tc|[Try\-Catch](TryCatch.snippet)
 tcf|[Try\-Catch\-Finally](TryCatchFinally.snippet)
 td|[TODO comment](TodoComment.snippet)
 tf|[Try\-Finally](TryFinally.snippet)
-this|[Containing type name](ContainingTypeName.snippet)
 twn|[Throw New](ThrowNew.snippet)
 u|[Using statement](Using.snippet)
 u\_er|[IEnumerator\(Of T\) variable](IEnumeratorOfTVariable.snippet)

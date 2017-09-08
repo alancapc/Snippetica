@@ -108,7 +108,7 @@
     "prefix": "audio",
     "body": [
       "<audio controls=\"controls\">",
-      "    <source src=\"${1:url}\" type=\"${2:audio/mpeg}\">",
+      "\t<source src=\"${1:url}\" type=\"${2:audio/mpeg}\">",
       "</audio>${0}"
     ],
     "description": "audio"
@@ -260,6 +260,20 @@
     ],
     "description": "caption (with content)"
   },
+  "CDATA section": {
+    "prefix": "cdata",
+    "body": [
+      "<![CDATA[${TM_SELECTED_TEXT}${0}__cdataEnd"
+    ],
+    "description": "CDATA section"
+  },
+  "CDATA section (with content)": {
+    "prefix": "cdatax",
+    "body": [
+      "<![CDATA[${TM_SELECTED_TEXT}${0}__cdataEnd"
+    ],
+    "description": "CDATA section (with content)"
+  },
   "center": {
     "prefix": "center",
     "body": [
@@ -306,7 +320,7 @@
     "prefix": "colgroup",
     "body": [
       "<colgroup>",
-      "  <col ${0}>",
+      "\t<col ${0}>",
       "</colgroup>"
     ],
     "description": "colgroup"
@@ -314,7 +328,7 @@
   "comment": {
     "prefix": "c",
     "body": [
-      "<!-- ${1:comment} -->${0}"
+      "<!-- ${TM_SELECTED_TEXT}${1:comment} -->${0}"
     ],
     "description": "comment"
   },
@@ -322,7 +336,7 @@
     "prefix": "datalist",
     "body": [
       "<datalist>",
-      "    <option value=\"${1:value}\">${0}",
+      "\t<option value=\"${1:value}\">${0}",
       "</datalist>"
     ],
     "description": "datalist"
@@ -366,7 +380,7 @@
     "prefix": "details",
     "body": [
       "<details>",
-      "    <summary>${1:summary}</summary>${0}",
+      "\t<summary>${1:summary}</summary>${0}",
       "</details>"
     ],
     "description": "details"
@@ -403,7 +417,7 @@
     "prefix": "dir",
     "body": [
       "<dir>",
-      "    <li>${0}</li>",
+      "\t<li>${0}</li>",
       "</dir>"
     ],
     "description": "dir"
@@ -412,7 +426,7 @@
     "prefix": "dirx",
     "body": [
       "<dir>",
-      "    <li>${1:content}</li>${0}",
+      "\t<li>${1:content}</li>${0}",
       "</dir>"
     ],
     "description": "dir (with content)"
@@ -435,8 +449,8 @@
     "prefix": "dl",
     "body": [
       "<dl>",
-      "    <dt>${0}</dt>",
-      "    <dd></dd>",
+      "\t<dt>${0}</dt>",
+      "\t<dd></dd>",
       "</dl>"
     ],
     "description": "dl"
@@ -458,30 +472,34 @@
   "element": {
     "prefix": "e",
     "body": [
-      "<${1:x}>${0}</${1}>"
+      "<${1:x}>",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "</${1}>"
     ],
-    "description": "element"
+    "description": ""
   },
   "element (with attribute)": {
     "prefix": "ea",
     "body": [
-      "<${1:x} ${2:attribute=\"\"}>${0}</${1}>"
+      "<${1:x} ${2:Attribute}=\"${3:Value}\">",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "</${1}>"
     ],
-    "description": "element (with attribute)"
+    "description": " (with attribute)"
   },
   "element (with attribute, with content)": {
     "prefix": "eax",
     "body": [
-      "<${1:x} ${2:attribute=\"\"}>${3:content}</${1}>${0}"
+      "<${1:x} ${2:Attribute}=\"${3:Value}\">${4:content}</${1}>${0}"
     ],
-    "description": "element (with attribute, with content)"
+    "description": " (with attribute, with content)"
   },
   "element (with content)": {
     "prefix": "ex",
     "body": [
       "<${1:x}>${2:content}</${1}>${0}"
     ],
-    "description": "element (with content)"
+    "description": " (with content)"
   },
   "em": {
     "prefix": "em",
@@ -508,7 +526,7 @@
     "prefix": "fieldset",
     "body": [
       "<fieldset>",
-      "    <legend>${0}</legend>",
+      "\t<legend>${0}</legend>",
       "</fieldset>"
     ],
     "description": "fieldset"
@@ -517,7 +535,7 @@
     "prefix": "fieldsetx",
     "body": [
       "<fieldset>",
-      "    <legend>${1:content}</legend>${0}",
+      "\t<legend>${1:content}</legend>${0}",
       "</fieldset>"
     ],
     "description": "fieldset (with content)"
@@ -526,8 +544,8 @@
     "prefix": "figure",
     "body": [
       "<figure>",
-      "    <img src=\"${1:url}\" alt=\"${2:alt}\">",
-      "    <figcaption>${3:caption}</figcaption>",
+      "\t<img src=\"${1:url}\" alt=\"${2:alt}\">",
+      "\t<figcaption>${3:caption}</figcaption>",
       "</figure>${0}"
     ],
     "description": "figure"
@@ -718,11 +736,11 @@
     "prefix": "html",
     "body": [
       "<html xmlns=\"http://www.w3.org/1999/xhtml\">",
-      "    <head>",
-      "        <title>${1:title}</title>",
-      "    </head>",
-      "    <body>${0}",
-      "    </body>",
+      "\t<head>",
+      "\t\t<title>${1:title}</title>",
+      "\t</head>",
+      "\t<body>${0}",
+      "\t</body>",
       "</html>"
     ],
     "description": "html"
@@ -992,7 +1010,7 @@
     "prefix": "ol",
     "body": [
       "<ol>",
-      "    <li>${0}</li>",
+      "\t<li>${0}</li>",
       "</ol>"
     ],
     "description": "ol"
@@ -1001,7 +1019,7 @@
     "prefix": "olx",
     "body": [
       "<ol>",
-      "    <li>${1:content}</li>${0}",
+      "\t<li>${1:content}</li>${0}",
       "</ol>"
     ],
     "description": "ol (with content)"
@@ -1010,7 +1028,7 @@
     "prefix": "optgroup",
     "body": [
       "<optgroup>",
-      "    <option value=\"${1:value}\">${0}</option>",
+      "\t<option value=\"${1:value}\">${0}</option>",
       "</optgroup>"
     ],
     "description": "optgroup"
@@ -1019,7 +1037,7 @@
     "prefix": "optgroupx",
     "body": [
       "<optgroup>",
-      "    <option value=\"${1:value}\">${2:content}</option>${0}",
+      "\t<option value=\"${1:value}\">${2:content}</option>${0}",
       "</optgroup>"
     ],
     "description": "optgroup (with content)"
@@ -1218,7 +1236,7 @@
     "prefix": "select",
     "body": [
       "<select>",
-      "    <option value=\"${1:value}\">${0}</option>",
+      "\t<option value=\"${1:value}\">${0}</option>",
       "</select>"
     ],
     "description": "select"
@@ -1227,7 +1245,7 @@
     "prefix": "selectx",
     "body": [
       "<select>",
-      "    <option value=\"${1:value}\">${2:content}</option>${0}",
+      "\t<option value=\"${1:value}\">${2:content}</option>${0}",
       "</select>"
     ],
     "description": "select (with content)"
@@ -1242,7 +1260,7 @@
   "self-closing element (with attribute)": {
     "prefix": "eas",
     "body": [
-      "<${1:x} ${2:attribute=\"\"} />${0}"
+      "<${1:x} ${2:Attribute}=\"${3:Value}\" />${0}"
     ],
     "description": "self-closing element (with attribute)"
   },
@@ -1369,13 +1387,13 @@
     "prefix": "table",
     "body": [
       "<table>",
-      "    <caption>${0}</caption>",
-      "    <tr>",
-      "        <th></th>",
-      "    </tr>",
-      "    <tr>",
-      "        <td></td>",
-      "    </tr>",
+      "\t<caption>${0}</caption>",
+      "\t<tr>",
+      "\t\t<th></th>",
+      "\t</tr>",
+      "\t<tr>",
+      "\t\t<td></td>",
+      "\t</tr>",
       "</table>"
     ],
     "description": "table"
@@ -1545,7 +1563,7 @@
     "prefix": "ul",
     "body": [
       "<ul>",
-      "    <li>${0}</li>",
+      "\t<li>${0}</li>",
       "</ul>"
     ],
     "description": "ul"
@@ -1554,7 +1572,7 @@
     "prefix": "ulx",
     "body": [
       "<ul>",
-      "    <li>${1:content}</li>${0}",
+      "\t<li>${1:content}</li>${0}",
       "</ul>"
     ],
     "description": "ul (with content)"
@@ -1577,7 +1595,7 @@
     "prefix": "video",
     "body": [
       "<video controls=\"controls\">",
-      "    <source src=\"${1:url}\" type=\"${2:audio/mp4}\">${0}",
+      "\t<source src=\"${1:url}\" type=\"${2:audio/mp4}\">${0}",
       "</video>"
     ],
     "description": "video"

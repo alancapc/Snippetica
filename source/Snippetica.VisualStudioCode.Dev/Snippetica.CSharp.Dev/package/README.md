@@ -81,7 +81,6 @@ q\_wxn|Enumerable\.Where not equal to null
 q\_z|Enumerable\.Zip
 re|return statement
 rn|return new
-rnthis|return new containing type
 ro|readonly modifier
 rx|Regex type
 ts|TimeSpan type
@@ -110,4 +109,3 @@ x\_ps|private static modifiers
 x\_s|public static modifiers
 x\_v|public virtual modifiers
 yrn|yield return new
-yrnthis|yield return new containing type

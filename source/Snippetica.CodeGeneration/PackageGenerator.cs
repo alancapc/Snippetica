@@ -62,6 +62,28 @@ namespace Snippetica.CodeGeneration
         {
             foreach (Snippet snippet in snippets)
             {
+                for (int i = snippet.Literals.Count - 1; i >= 0; i--)
+                {
+                    Literal literal = snippet.Literals[i];
+
+                    if (!literal.IsEditable
+                        && !string.Equals(literal.Identifier, "__cdataEnd", StringComparison.Ordinal))
+                    {
+                        if (string.IsNullOrEmpty(literal.DefaultValue))
+                        {
+                            snippet.RemoveLiteralAndPlaceholders(literal);
+                        }
+                        else if (string.IsNullOrEmpty(literal.Function))
+                        {
+                            snippet.RemoveLiteralAndReplacePlaceholders(literal.Identifier, literal.DefaultValue);
+                        }
+                    }
+                    else if (!snippet.Code.Placeholders.Contains(literal.Identifier))
+                    {
+                        snippet.Literals.Remove(literal);
+                    }
+                }
+
                 if (snippet.TryGetTag(KnownTags.Environment, out TagInfo info))
                 {
                     if (string.Equals(info.Value, Environment.Kind.GetIdentifier()))
@@ -112,10 +134,15 @@ namespace Snippetica.CodeGeneration
                     throw new NotSupportedException(snippet.Language.ToString());
                 }
 
-                snippet.CodeText += s;
+                snippet.CodeText = s + $"${Placeholder.EndIdentifier}$";
+
+                snippet.Literals.Clear();
 
                 snippet.Keywords.RemoveAt(info.KeywordIndex);
+
                 snippet.AddTag(KnownTags.ExcludeFromSnippetBrowser);
+
+                snippet.SuffixFileName("_Obsolete");
             }
         }
     }

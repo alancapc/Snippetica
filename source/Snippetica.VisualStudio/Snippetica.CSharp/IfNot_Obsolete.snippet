@@ -1,9 +1,9 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>if not equal to null _</Title>
-    <Shortcut>ifnn</Shortcut>
-    <Description>if not equal to null</Description>
+    <Title>if not _</Title>
+    <Shortcut>iff</Shortcut>
+    <Description>if with condition whether the expression is equal to false</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
@@ -13,16 +13,6 @@
     </Keywords>
   </Header>
   <Snippet>
-    <Declarations>
-      <Literal>
-        <ID>expression</ID>
-        <ToolTip>Expression to evaluate</ToolTip>
-        <Default>x</Default>
-      </Literal>
-    </Declarations>
-    <Code Language="CSharp"><![CDATA[if ($expression$ != null)
-{
-    $end$
-}/* Shortcut 'ifnn' is obsolete, use 'ifxn' instead. */]]></Code>
+    <Code Language="CSharp"><![CDATA[/* Shortcut 'iff' is obsolete, use 'ifx' instead. */$end$]]></Code>
   </Snippet>
 </CodeSnippet>

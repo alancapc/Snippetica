@@ -1,5 +1,6 @@
 ## Snippetica.Html
 
+### Snippet Browser
 * Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vs&language=html).
 
 ### Quick Reference
@@ -42,6 +43,8 @@ button|[button](button.snippet)
 c|[comment](Comment.snippet)
 canvas|[canvas](canvas.snippet)
 caption|[caption](caption.snippet)
+cdata|[CDATA section](CDataSection.snippet)
+cdatax|[CDATA section \(with content\)](CDataSectionWithContent.snippet)
 center|[center](center.snippet)
 cite|[cite](cite.snippet)
 code|[code](code.snippet)

@@ -20,7 +20,7 @@ namespace Snippetica.CodeGeneration
             return StringBuilder.ToString();
         }
 
-        public void Appendlaceholder(string identifier)
+        public void AppendPlaceholder(string identifier)
         {
             AppendDelimiter();
             Append(identifier);
@@ -29,12 +29,12 @@ namespace Snippetica.CodeGeneration
 
         public void AppendEndPlaceholder()
         {
-            Appendlaceholder("end");
+            AppendPlaceholder("end");
         }
 
         internal void AppendSelectedPlaceholder()
         {
-            Appendlaceholder("selected");
+            AppendPlaceholder("selected");
         }
 
         public void AppendDelimiter()

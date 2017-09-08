@@ -16,14 +16,6 @@
       </Import>
     </Imports>
     <Declarations>
-      <Literal Editable="false">
-        <ID>_lambdaParam</ID>
-        <Default>f</Default>
-      </Literal>
-      <Literal Editable="false">
-        <ID>_lambdaParam2</ID>
-        <Default>g</Default>
-      </Literal>
       <Literal>
         <ID>inner</ID>
         <ToolTip>Inner sequence</ToolTip>
@@ -45,6 +37,6 @@
         <Default>new { }</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[.GroupJoin($inner$, $_lambdaParam$ => $outerKeySelector$, $_lambdaParam2$ => $innerKeySelector$, ($_lambdaParam$, $_lambdaParam2$) => $resultSelector$)$end$]]></Code>
+    <Code Language="CSharp"><![CDATA[.GroupJoin($inner$, f => $outerKeySelector$, g => $innerKeySelector$, (f, g) => $resultSelector$)$end$]]></Code>
   </Snippet>
 </CodeSnippet>

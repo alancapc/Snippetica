@@ -15,10 +15,6 @@
   </Header>
   <Snippet>
     <Declarations>
-      <Literal Editable="false">
-        <ID>_parameterList</ID>
-        <Default>()</Default>
-      </Literal>
       <Literal>
         <ID>_type</ID>
         <ToolTip>Return type</ToolTip>
@@ -30,8 +26,8 @@
         <Default>MethodName</Default>
       </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[Private Function $name$$_parameterList$ As $_type$
-    $end$
+    <Code Language="VB"><![CDATA[Private Function $name$() As $_type$
+	$end$
 End Function]]></Code>
   </Snippet>
 </CodeSnippet>

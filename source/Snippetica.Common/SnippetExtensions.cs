@@ -384,6 +384,11 @@ namespace Snippetica
             snippet.CodeText = snippet.Code.ReplacePlaceholders(identifier, replacement);
         }
 
+        public static void RemovePlaceholders(this Snippet snippet, string identifier)
+        {
+            ReplacePlaceholders(snippet, identifier, "");
+        }
+
         public static void ReplaceSubOrFunctionLiteral(this Snippet snippet, string replacement)
         {
             Literal literal = snippet.Literals.FirstOrDefault(f => f.Identifier == LiteralIdentifiers.SubOrFunction);

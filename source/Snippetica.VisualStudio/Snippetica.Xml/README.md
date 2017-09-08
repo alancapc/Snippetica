@@ -1,5 +1,6 @@
 ## Snippetica.Xml
 
+### Snippet Browser
 * Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vs&language=xml).
 
 ### Quick Reference
@@ -20,6 +21,7 @@ Shortcut | Title
 -------- | -----
 c|[comment](Comment.snippet)
 cdata|[CDATA section](CDataSection.snippet)
+cdatax|[CDATA section \(with content\)](CDataSectionWithContent.snippet)
 e|[element](Element.snippet)
 ea|[element \(with attribute\)](ElementWithAttribute.snippet)
 eas|[self\-closing element \(with attribute\)](SelfClosingElementWithAttribute.snippet)

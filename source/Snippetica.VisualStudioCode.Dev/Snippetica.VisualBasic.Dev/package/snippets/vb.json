@@ -46,7 +46,7 @@
     "body": [
       "Dim ${1:x} As ${2:TEnum}",
       "If Enum.TryParse(${3:value}, ${1})",
-      "    ${0}",
+      "\t${0}",
       "End If"
     ],
     "description": "if statement with condition whether Enum.TryParse method returns true."
@@ -56,7 +56,7 @@
     "body": [
       "Dim ${1:x} As ${2:TEnum}",
       "If Not Enum.TryParse(${3:value}, ${1})",
-      "    ${0}",
+      "\t${0}",
       "End If"
     ],
     "description": "if statement with condition whether Enum.TryParse method returns false."
@@ -64,7 +64,7 @@
   "Lambda expression with 2 parameters": {
     "prefix": "l2",
     "body": [
-      "Function(${1:f}, ${2:g}) ${0}"
+      "Function(f, g) ${0}"
     ],
     "description": "Lambda expression with 2 parameters"
   },
@@ -93,7 +93,7 @@
     "prefix": "ns",
     "body": [
       "Namespace ${1:NamespaceName}",
-      "    ${0}",
+      "\t${0}",
       "End Namespace"
     ],
     "description": "namespace declaration"

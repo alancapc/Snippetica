@@ -1,5 +1,6 @@
 ## Snippetica.Xaml
 
+### Snippet Browser
 * Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vs&language=xaml).
 
 ### Quick Reference
@@ -24,6 +25,8 @@ bn|[Button](Button_.snippet)
 button|[Button](Button.snippet)
 c|[comment](Comment.snippet)
 canvas|[Canvas](Canvas.snippet)
+cdata|[CDATA section](CDataSection.snippet)
+cdatax|[CDATA section \(with content\)](CDataSectionWithContent.snippet)
 ckbx|[CheckBox](CheckBox_.snippet)
 clte|[ControlTemplate](ControlTemplate_.snippet)
 cndn|[ColumnDefinition](ColumnDefinition_.snippet)

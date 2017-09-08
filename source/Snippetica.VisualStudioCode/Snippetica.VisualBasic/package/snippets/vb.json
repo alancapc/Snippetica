@@ -3,7 +3,7 @@
     "prefix": "oo_Minus",
     "body": [
       "Public Shared Operator -(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
-      "    ${0}",
+      "\t${0}",
       "End Operator"
     ],
     "description": "- operator overload"
@@ -19,7 +19,7 @@
     "prefix": "ppife",
     "body": [
       "#If ${1:DEBUG} Then",
-      "    ${0}",
+      "\t${0}",
       "#Else",
       "",
       "#End If"
@@ -30,7 +30,7 @@
     "prefix": "ppif",
     "body": [
       "#If ${1:DEBUG} Then",
-      "    ${0}",
+      "\t${0}",
       "#End If"
     ],
     "description": "#If preprocessor directive"
@@ -39,7 +39,7 @@
     "prefix": "ppr",
     "body": [
       "#Region \"${1:RegionName}\"",
-      "    ${0}",
+      "\t${0}",
       "#End Region"
     ],
     "description": "#Region preprocessor directive"
@@ -48,7 +48,7 @@
     "prefix": "oo_Ampersand",
     "body": [
       "Public Shared Operator &(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
-      "    ${0}",
+      "\t${0}",
       "End Operator"
     ],
     "description": "& operator overload"
@@ -57,7 +57,7 @@
     "prefix": "oo_Asterisk",
     "body": [
       "Public Shared Operator *(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
-      "    ${0}",
+      "\t${0}",
       "End Operator"
     ],
     "description": "* operator overload"
@@ -66,7 +66,7 @@
     "prefix": "oo_Slash",
     "body": [
       "Public Shared Operator /(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
-      "    ${0}",
+      "\t${0}",
       "End Operator"
     ],
     "description": "/ operator overload"
@@ -75,7 +75,7 @@
     "prefix": "oo_Backslash",
     "body": [
       "Public Shared Operator \\(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
-      "    ${0}",
+      "\t${0}",
       "End Operator"
     ],
     "description": "\\ operator overload"
@@ -84,7 +84,7 @@
     "prefix": "oo_Caret",
     "body": [
       "Public Shared Operator ^(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
-      "    ${0}",
+      "\t${0}",
       "End Operator"
     ],
     "description": "^ operator overload"
@@ -93,7 +93,7 @@
     "prefix": "oo_Plus",
     "body": [
       "Public Shared Operator +(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
-      "    ${0}",
+      "\t${0}",
       "End Operator"
     ],
     "description": "+ operator overload"
@@ -102,7 +102,7 @@
     "prefix": "oo_LessThan",
     "body": [
       "Public Shared Operator <(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
-      "    ${0}",
+      "\t${0}",
       "End Operator",
       "",
       "Public Shared Operator >(${1} As ${2}, ${3} As ${2})",
@@ -114,7 +114,7 @@
     "prefix": "oo_LessThanLessThan",
     "body": [
       "Public Shared Operator <<(${1:left} As ${2:ThisName}, ${3:count} As Integer)",
-      "    ${0}",
+      "\t${0}",
       "End Operator"
     ],
     "description": "<< operator overload"
@@ -123,7 +123,7 @@
     "prefix": "oo_LessThanEquals",
     "body": [
       "Public Shared Operator <=(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
-      "    ${0}",
+      "\t${0}",
       "End Operator",
       "",
       "Public Shared Operator >=(${1} As ${2}, ${3} As ${2})",
@@ -135,11 +135,11 @@
     "prefix": "oo_Equals",
     "body": [
       "Public Shared Operator =(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
-      "    ${0}",
+      "\t${0}",
       "End Operator",
       "",
       "Public Shared Operator <>(${1} As ${2}, ${3} As ${2})",
-      "    Return Not(${1} = ${3})",
+      "\tReturn Not(${1} = ${3})",
       "End Operator"
     ],
     "description": "= operator overload"
@@ -148,7 +148,7 @@
     "prefix": "oo_GreaterThan",
     "body": [
       "Public Shared Operator >(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
-      "    ${0}",
+      "\t${0}",
       "End Operator",
       "",
       "Public Shared Operator <(${1} As ${2}, ${3} As ${2})",
@@ -160,7 +160,7 @@
     "prefix": "oo_GreaterThanEquals",
     "body": [
       "Public Shared Operator >=(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
-      "    ${0}",
+      "\t${0}",
       "End Operator",
       "",
       "Public Shared Operator <=(${1} As ${2}, ${3} As ${2})",
@@ -172,7 +172,7 @@
     "prefix": "oo_GreaterThanGreaterThan",
     "body": [
       "Public Shared Operator >>(${1:left} As ${2:ThisName}, ${3:count} As Integer)",
-      "    ${0}",
+      "\t${0}",
       "End Operator"
     ],
     "description": ">> operator overload"
@@ -181,7 +181,7 @@
     "prefix": "oo_And",
     "body": [
       "Public Shared Operator And(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
-      "    ${0}",
+      "\t${0}",
       "End Operator"
     ],
     "description": "And operator overload"
@@ -205,8 +205,8 @@
     "body": [
       "<AttributeUsage(AttributeTargets${1:.All}, AllowMultiple:=${2:False})>",
       "${3:Public NotInheritable} Class ${4:My}Attribute",
-      "    Inherits ${5:Attribute}",
-      "    ${0}",
+      "\tInherits ${5:Attribute}",
+      "\t${0}",
       "End Class"
     ],
     "description": "class derived from Attribute"
@@ -222,7 +222,7 @@
     "prefix": "catch",
     "body": [
       "Catch ${1:ex} As ${2:Exception}",
-      "    ${0}"
+      "\t${0}"
     ],
     "description": "Catch clause"
   },
@@ -230,26 +230,19 @@
     "prefix": "c_CollectionOfT",
     "body": [
       "${1:Public} Class ${2:Collection}",
-      "    Inherits Collection(Of ${3:Object})",
+      "\tInherits Collection(Of ${3:Object})",
       "",
-      "    Public Sub New()",
-      "    End Sub",
+      "\tPublic Sub New()",
+      "\tEnd Sub",
       "",
-      "    Public Sub New(list As IList(Of ${3}))",
-      "        MyBase.New(list)",
-      "    End Sub",
-      "    ${0}",
+      "\tPublic Sub New(list As IList(Of ${3}))",
+      "\t\tMyBase.New(list)",
+      "\tEnd Sub",
+      "\t${0}",
       "",
       "End Class"
     ],
     "description": "class derived from Collection(Of T)"
-  },
-  "Containing type name": {
-    "prefix": "this",
-    "body": [
-      "${1:ThisName}${0}"
-    ],
-    "description": "Containing type name"
   },
   "CType operator": {
     "prefix": "t",
@@ -262,7 +255,7 @@
     "prefix": "oo_CType",
     "body": [
       "Public Shared Widening Operator CType(ByVal ${1:value} As ${2:ThisName}) As ${3:Object}",
-      "    ${0}",
+      "\t${0}",
       "End Operator",
       "",
       "Public Shared Narrowing Operator CType(ByVal ${1} As ${3}) As ${2}",
@@ -295,37 +288,37 @@
     "prefix": "c_DictionaryOfTKeyTValue",
     "body": [
       "${1:Public} Class ${2:Dictionary}",
-      "    Inherits Dictionary(Of ${3:Object}, ${4:Object})",
+      "\tInherits Dictionary(Of ${3:Object}, ${4:Object})",
       "",
-      "    Public Sub New()",
-      "        MyBase.New()",
-      "    End Sub",
+      "\tPublic Sub New()",
+      "\t\tMyBase.New()",
+      "\tEnd Sub",
       "",
-      "    Public Sub New(capacity As Integer)",
-      "        MyBase.New(capacity)",
-      "    End Sub",
+      "\tPublic Sub New(capacity As Integer)",
+      "\t\tMyBase.New(capacity)",
+      "\tEnd Sub",
       "",
-      "    Public Sub New(comparer As IEqualityComparer(Of ${3}))",
-      "        MyBase.New(comparer)",
-      "    End Sub",
+      "\tPublic Sub New(comparer As IEqualityComparer(Of ${3}))",
+      "\t\tMyBase.New(comparer)",
+      "\tEnd Sub",
       "",
-      "    Public Sub New(dictionary As IDictionary(Of ${3}, ${4}))",
-      "        MyBase.New(dictionary)",
-      "    End Sub",
+      "\tPublic Sub New(dictionary As IDictionary(Of ${3}, ${4}))",
+      "\t\tMyBase.New(dictionary)",
+      "\tEnd Sub",
       "",
-      "    Public Sub New(capacity As Integer, comparer As IEqualityComparer(Of ${3}))",
-      "        MyBase.New(capacity, comparer)",
-      "    End Sub",
+      "\tPublic Sub New(capacity As Integer, comparer As IEqualityComparer(Of ${3}))",
+      "\t\tMyBase.New(capacity, comparer)",
+      "\tEnd Sub",
       "",
-      "    Public Sub New(info As SerializationInfo, context As StreamingContext)",
-      "        MyBase.New(info, context)",
-      "    End Sub",
+      "\tPublic Sub New(info As SerializationInfo, context As StreamingContext)",
+      "\t\tMyBase.New(info, context)",
+      "\tEnd Sub",
       "",
-      "    Public Sub New(dictionary As IDictionary(Of ${3}, ${4}), comparer As IEqualityComparer(Of ${3}))",
-      "        MyBase.New(dictionary, comparer)",
-      "    End Sub",
+      "\tPublic Sub New(dictionary As IDictionary(Of ${3}, ${4}), comparer As IEqualityComparer(Of ${3}))",
+      "\t\tMyBase.New(dictionary, comparer)",
+      "\tEnd Sub",
       "",
-      "    ${0}",
+      "\t${0}",
       "End Class"
     ],
     "description": "class derived from Dictionary(Of TKey, TValue)"
@@ -341,30 +334,30 @@
     "prefix": "c_Disposable",
     "body": [
       "${1:Public} Class ${2:ClassName}",
-      "    Implements IDisposable",
+      "\tImplements IDisposable",
       "",
-      "    Private _disposed As Boolean",
+      "\tPrivate _disposed As Boolean",
       "",
-      "    Public Sub Dispose() Implements IDisposable.Dispose",
+      "\tPublic Sub Dispose() Implements IDisposable.Dispose",
       "",
-      "        Dispose(True)",
-      "        GC.SuppressFinalize(Me)",
+      "\t\tDispose(True)",
+      "\t\tGC.SuppressFinalize(Me)",
       "",
-      "    End Sub",
+      "\tEnd Sub",
       "",
-      "    Protected Overridable Sub Dispose(disposing As Boolean)",
+      "\tProtected Overridable Sub Dispose(disposing As Boolean)",
       "",
-      "        If Not _disposed Then",
+      "\t\tIf Not _disposed Then",
       "",
-      "            If disposing Then",
-      "                Throw New NotImplementedException()",
-      "            End If",
+      "\t\t\tIf disposing Then",
+      "\t\t\t\tThrow New NotImplementedException()",
+      "\t\t\tEnd If",
       "",
-      "            _disposed = True",
+      "\t\t\t_disposed = True",
       "",
-      "        End If",
+      "\t\tEnd If",
       "",
-      "    End Sub",
+      "\tEnd Sub",
       "",
       "End Class${0}"
     ],
@@ -377,19 +370,19 @@
       "",
       "Public Sub Dispose()",
       "",
-      "    Dispose(True)",
-      "    GC.SuppressFinalize(Me)",
+      "\tDispose(True)",
+      "\tGC.SuppressFinalize(Me)",
       "",
       "End Sub",
       "",
       "Protected Overridable Sub Dispose(disposing As Boolean)",
       "",
-      "    If Not _disposed Then",
-      "        If disposing Then",
-      "            Throw New NotImplementedException()",
-      "        End If",
-      "        _disposed = True",
-      "    End If",
+      "\tIf Not _disposed Then",
+      "\t\tIf disposing Then",
+      "\t\t\tThrow New NotImplementedException()",
+      "\t\tEnd If",
+      "\t\t_disposed = True",
+      "\tEnd If",
       "",
       "End Sub${0}"
     ],
@@ -399,7 +392,7 @@
     "prefix": "do",
     "body": [
       "Do",
-      "    ${0}",
+      "\t${0}",
       "Loop"
     ],
     "description": "Do statement"
@@ -408,7 +401,7 @@
     "prefix": "e",
     "body": [
       "Else",
-      "    ${0}"
+      "\t${0}"
     ],
     "description": "Else clause"
   },
@@ -416,7 +409,7 @@
     "prefix": "eif",
     "body": [
       "ElseIf ${1:True} Then",
-      "    ${0}"
+      "\t${0}"
     ],
     "description": "ElseIf statement"
   },
@@ -425,18 +418,18 @@
     "body": [
       "Public Overrides Function Equals(obj As object) As Boolean",
       "",
-      "    Dim other = Nothing",
-      "    If TryCast(other, ${1:ThisName}) Is Nothing Then",
-      "        Return False",
-      "    End If",
+      "\tDim other = Nothing",
+      "\tIf TryCast(other, ${1:ThisName}) Is Nothing Then",
+      "\t\tReturn False",
+      "\tEnd If",
       "",
-      "    ${0}",
-      "    Throw New NotImplementedException()",
+      "\t${0}",
+      "\tThrow New NotImplementedException()",
       "",
       "End Function",
       "",
       "Public Overrides Function GetHashCode() As Integer",
-      "    Throw New NotImplementedException()",
+      "\tThrow New NotImplementedException()",
       "End Function"
     ],
     "description": "overriding Equals and GetHashCode methods"
@@ -446,22 +439,22 @@
     "body": [
       "<Serializable>",
       "${1:Public} Class ${2:My}Exception",
-      "    Inherits ${3:Exception}",
+      "\tInherits ${3:Exception}",
       "",
-      "    Public Sub New()",
-      "    End Sub",
+      "\tPublic Sub New()",
+      "\tEnd Sub",
       "",
-      "    Public Sub New(message As String)",
-      "        MyBase.New(message)",
-      "    End Sub",
+      "\tPublic Sub New(message As String)",
+      "\t\tMyBase.New(message)",
+      "\tEnd Sub",
       "",
-      "    Public Sub New(message As String, inner As Exception)",
-      "        MyBase.New(message, inner)",
-      "    End Sub",
+      "\tPublic Sub New(message As String, inner As Exception)",
+      "\t\tMyBase.New(message, inner)",
+      "\tEnd Sub",
       "",
-      "    Protected Sub New(info As SerializationInfo, context As StreamingContext)",
-      "        MyBase.New(info, context)",
-      "    End Sub${0}",
+      "\tProtected Sub New(info As SerializationInfo, context As StreamingContext)",
+      "\t\tMyBase.New(info, context)",
+      "\tEnd Sub${0}",
       "",
       "End Class"
     ],
@@ -471,7 +464,7 @@
     "prefix": "frr",
     "body": [
       "For ${1:i} = ${2:length} - 1 To 0 Step -1",
-      "    ${0}",
+      "\t${0}",
       "Next"
     ],
     "description": "For statement (reversed)"
@@ -480,7 +473,7 @@
     "prefix": "fe",
     "body": [
       "For Each ${1:item} In ${2:items}",
-      "    ${0}",
+      "\t${0}",
       "Next"
     ],
     "description": "For Each statement"
@@ -489,7 +482,7 @@
     "prefix": "fr",
     "body": [
       "For ${1:i} = 0 To ${2:length} - 1",
-      "    ${0}",
+      "\t${0}",
       "Next"
     ],
     "description": "For statement"
@@ -505,7 +498,7 @@
     "prefix": "ic",
     "body": [
       "Friend Class ${1:ClassName}",
-      "    ${0}",
+      "\t${0}",
       "End Class"
     ],
     "description": "Friend class declaration"
@@ -521,7 +514,7 @@
     "prefix": "icr",
     "body": [
       "Friend Sub New()",
-      "    ${0}",
+      "\t${0}",
       "End Sub"
     ],
     "description": "Friend constructor declaration"
@@ -530,7 +523,7 @@
     "prefix": "icr_",
     "body": [
       "Friend Sub New(${1:parameter As Object})",
-      "    ${0}",
+      "\t${0}",
       "End Sub"
     ],
     "description": "Friend constructor declaration (with parameters)"
@@ -538,7 +531,7 @@
   "Friend delegate": {
     "prefix": "ide",
     "body": [
-      "Friend Delegate Function ${1:DelegateName}${2:()} As ${3:void}${0}"
+      "Friend Delegate Function ${1:DelegateName}() As ${2:void}${0}"
     ],
     "description": "Friend delegate declaration"
   },
@@ -553,7 +546,7 @@
     "prefix": "iem",
     "body": [
       "Friend Enum ${1:EnumName}",
-      "    ${0}",
+      "\t${0}",
       "End Enum"
     ],
     "description": "Friend enum declaration"
@@ -564,7 +557,7 @@
       "Friend Event ${1:EventName} As EventHandler(Of ${2:EventArgs})",
       "",
       "Protected Overridable Sub On${1}(${3:e} As ${2})",
-      "    RaiseEvent ${1}(Me, ${3})",
+      "\tRaiseEvent ${1}(Me, ${3})",
       "End Sub${0}"
     ],
     "description": "Friend event declaration with EventHandler<T>"
@@ -573,11 +566,11 @@
     "prefix": "iir",
     "body": [
       "Default Friend Property Item(${1:ByVal index As Integer}) As ${2:T}",
-      "    Get",
-      "        ${0}",
-      "    End Get",
-      "    Set(ByVal Value As ${2})",
-      "    End Set",
+      "\tGet",
+      "\t\t${0}",
+      "\tEnd Get",
+      "\tSet(ByVal Value As ${2})",
+      "\tEnd Set",
       "End Property"
     ],
     "description": "Friend indexer declaration"
@@ -586,7 +579,7 @@
     "prefix": "iie",
     "body": [
       "Friend Interface ${1:InterfaceName}",
-      "    ${0}",
+      "\t${0}",
       "End Interface"
     ],
     "description": "Friend interface declaration"
@@ -594,8 +587,8 @@
   "Friend method": {
     "prefix": "im",
     "body": [
-      "Friend Function ${1:MethodName}${2:()} As ${3:void}",
-      "    ${0}",
+      "Friend Function ${1:MethodName}() As ${2:void}",
+      "\t${0}",
       "End Function"
     ],
     "description": "Friend method declaration"
@@ -604,7 +597,7 @@
     "prefix": "im_",
     "body": [
       "Friend Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
-      "    ${0}",
+      "\t${0}",
       "End Function"
     ],
     "description": "Friend method declaration (with parameters)"
@@ -613,7 +606,7 @@
     "prefix": "ime",
     "body": [
       "Friend Module ${1:ModuleName}",
-      "    ${0}",
+      "\t${0}",
       "End Module"
     ],
     "description": "Friend module declaration"
@@ -628,8 +621,8 @@
   "Friend Overridable method": {
     "prefix": "ivm",
     "body": [
-      "Friend Overridable Function ${1:MethodName}${2:()} As ${3:void}",
-      "    ${0}",
+      "Friend Overridable Function ${1:MethodName}() As ${2:void}",
+      "\t${0}",
       "End Function"
     ],
     "description": "Friend Overridable method declaration"
@@ -638,7 +631,7 @@
     "prefix": "ivm_",
     "body": [
       "Friend Overridable Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
-      "    ${0}",
+      "\t${0}",
       "End Function"
     ],
     "description": "Friend Overridable method declaration (with parameters)"
@@ -654,9 +647,9 @@
     "prefix": "ivrpp",
     "body": [
       "Friend Overridable ReadOnly Property ${1:PropertyName} As ${2:T}",
-      "    Get",
-      "        Return ${3:value}",
-      "    End Get",
+      "\tGet",
+      "\t\tReturn ${3:value}",
+      "\tEnd Get",
       "End Property${0}"
     ],
     "description": "Friend Overridable read-only property declaration"
@@ -679,9 +672,9 @@
     "prefix": "irpp",
     "body": [
       "Friend ReadOnly Property ${1:PropertyName} As ${2:T}",
-      "    Get",
-      "        Return ${3:value}",
-      "    End Get",
+      "\tGet",
+      "\t\tReturn ${3:value}",
+      "\tEnd Get",
       "End Property${0}"
     ],
     "description": "Friend read-only property declaration"
@@ -689,8 +682,8 @@
   "Friend Shared method": {
     "prefix": "ism",
     "body": [
-      "Friend Shared Function ${1:MethodName}${2:()} As ${3:void}",
-      "    ${0}",
+      "Friend Shared Function ${1:MethodName}() As ${2:void}",
+      "\t${0}",
       "End Function"
     ],
     "description": "Friend Shared method declaration"
@@ -699,7 +692,7 @@
     "prefix": "ism_",
     "body": [
       "Friend Shared Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
-      "    ${0}",
+      "\t${0}",
       "End Function"
     ],
     "description": "Friend Shared method declaration (with parameters)"
@@ -722,9 +715,9 @@
     "prefix": "isrpp",
     "body": [
       "Friend Shared ReadOnly Property ${1:PropertyName} As ${2:T}",
-      "    Get",
-      "        Return ${3:value}",
-      "    End Get",
+      "\tGet",
+      "\t\tReturn ${3:value}",
+      "\tEnd Get",
       "End Property${0}"
     ],
     "description": "Friend Shared read-only property declaration"
@@ -733,7 +726,7 @@
     "prefix": "ist",
     "body": [
       "Friend Structure ${1:StructName}",
-      "    ${0}",
+      "\t${0}",
       "End Structure"
     ],
     "description": "Friend structure declaration"
@@ -749,29 +742,29 @@
     "prefix": "c_IComparer",
     "body": [
       "${1:Public} Class ${2:Comparer}",
-      "    Implements IComparer",
+      "\tImplements IComparer",
       "",
-      "    Public Function Compare(x As Object, y As Object) As Integer Implements IComparer.Compare",
+      "\tPublic Function Compare(x As Object, y As Object) As Integer Implements IComparer.Compare",
       "",
-      "        If Object.ReferenceEquals(x, y) Then",
-      "            Return 0",
-      "        End If",
+      "\t\tIf Object.ReferenceEquals(x, y) Then",
+      "\t\t\tReturn 0",
+      "\t\tEnd If",
       "",
-      "        If x Is Nothing Then",
-      "            Return IIf(y Is Nothing, 0, -1)",
-      "        End If",
+      "\t\tIf x Is Nothing Then",
+      "\t\t\tReturn IIf(y Is Nothing, 0, -1)",
+      "\t\tEnd If",
       "",
-      "        If y Is Nothing Then",
-      "            Return 1",
-      "        End If",
+      "\t\tIf y Is Nothing Then",
+      "\t\t\tReturn 1",
+      "\t\tEnd If",
       "",
-      "        Dim a = CType(x, ${3:Object})",
-      "        Dim b = CType(y, ${3})",
+      "\t\tDim a = CType(x, ${3:Object})",
+      "\t\tDim b = CType(y, ${3})",
       "",
-      "        ${0}",
-      "        Throw New NotImplementedException()",
+      "\t\t${0}",
+      "\t\tThrow New NotImplementedException()",
       "",
-      "    End Function",
+      "\tEnd Function",
       "",
       "End Class"
     ],
@@ -781,26 +774,26 @@
     "prefix": "c_IComparerOfT",
     "body": [
       "${1:Public} Class ${2:Collection}",
-      "    Implements IComparer(Of ${3:Object})",
+      "\tImplements IComparer(Of ${3:Object})",
       "",
-      "    Public Function Compare(x As ${3}, y As ${3}) As Integer Implements IComparer(Of ${3}).Compare",
+      "\tPublic Function Compare(x As ${3}, y As ${3}) As Integer Implements IComparer(Of ${3}).Compare",
       "",
-      "        If Object.ReferenceEquals(x, y) Then",
-      "            Return 0",
-      "        End If",
+      "\t\tIf Object.ReferenceEquals(x, y) Then",
+      "\t\t\tReturn 0",
+      "\t\tEnd If",
       "",
-      "        If x Is Nothing Then",
-      "            Return -1",
-      "        End If",
+      "\t\tIf x Is Nothing Then",
+      "\t\t\tReturn -1",
+      "\t\tEnd If",
       "",
-      "        If y Is Nothing Then",
-      "            Return 1",
-      "        End If",
+      "\t\tIf y Is Nothing Then",
+      "\t\t\tReturn 1",
+      "\t\tEnd If",
       "",
-      "        ${0}",
-      "        Throw New NotImplementedException()",
+      "\t\t${0}",
+      "\t\tThrow New NotImplementedException()",
       "",
-      "    End Function",
+      "\tEnd Function",
       "",
       "End Class"
     ],
@@ -817,9 +810,9 @@
     "prefix": "u_er",
     "body": [
       "Using ${1:en} = ${2:items}.GetEnumerator()",
-      "    While ${1}.MoveNext()",
-      "        ${0}",
-      "    End While",
+      "\tWhile ${1}.MoveNext()",
+      "\t\t${0}",
+      "\tEnd While",
       "End Using"
     ],
     "description": "IEnumerator(Of T) variable declaration."
@@ -828,35 +821,35 @@
     "prefix": "c_IEqualityComparer",
     "body": [
       "${1:Public} Class ${2:EqualityComparer}",
-      "    Implements IEqualityComparer",
+      "\tImplements IEqualityComparer",
       "",
-      "    Public Shadows Function Equals(x As Object, y As Object) As Boolean Implements IEqualityComparer.Equals",
+      "\tPublic Shadows Function Equals(x As Object, y As Object) As Boolean Implements IEqualityComparer.Equals",
       "",
-      "        If Object.ReferenceEquals(x, y) Then",
-      "            Return True",
-      "        End If",
+      "\t\tIf Object.ReferenceEquals(x, y) Then",
+      "\t\t\tReturn True",
+      "\t\tEnd If",
       "",
-      "        If x Is Nothing OrElse y Is Nothing Then",
-      "            Return False",
-      "        End If",
+      "\t\tIf x Is Nothing OrElse y Is Nothing Then",
+      "\t\t\tReturn False",
+      "\t\tEnd If",
       "",
-      "        Dim a = CType(x, ${3:Object})",
-      "        Dim b = CType(y, ${3})",
+      "\t\tDim a = CType(x, ${3:Object})",
+      "\t\tDim b = CType(y, ${3})",
       "",
-      "        ${0}",
-      "        Throw New NotImplementedException()",
+      "\t\t${0}",
+      "\t\tThrow New NotImplementedException()",
       "",
-      "    End Function",
+      "\tEnd Function",
       "",
-      "    Public Shadows Function GetHashCode(obj As Object) As Integer Implements IEqualityComparer.GetHashCode",
+      "\tPublic Shadows Function GetHashCode(obj As Object) As Integer Implements IEqualityComparer.GetHashCode",
       "",
-      "        If obj Is Nothing Then",
-      "            Return 0",
-      "        End If",
+      "\t\tIf obj Is Nothing Then",
+      "\t\t\tReturn 0",
+      "\t\tEnd If",
       "",
-      "        Throw New NotImplementedException()",
+      "\t\tThrow New NotImplementedException()",
       "",
-      "    End Function",
+      "\tEnd Function",
       "",
       "End Class"
     ],
@@ -866,32 +859,32 @@
     "prefix": "c_IEqualityComparerOfT",
     "body": [
       "${1:Public} Class ${2:EqualityComparer}",
-      "    Inherits EqualityComparer(Of ${3:Object})",
+      "\tInherits EqualityComparer(Of ${3:Object})",
       "",
-      "    Public Overrides Function Equals(x As ${3}, y As ${3}) As Boolean",
+      "\tPublic Overrides Function Equals(x As ${3}, y As ${3}) As Boolean",
       "",
-      "        If Object.ReferenceEquals(x, y) Then",
-      "            Return True",
-      "        End If",
+      "\t\tIf Object.ReferenceEquals(x, y) Then",
+      "\t\t\tReturn True",
+      "\t\tEnd If",
       "",
-      "        If x Is Nothing OrElse y Is Nothing Then",
-      "            Return False",
-      "        End If",
+      "\t\tIf x Is Nothing OrElse y Is Nothing Then",
+      "\t\t\tReturn False",
+      "\t\tEnd If",
       "",
-      "        ${0}",
-      "        Throw New NotImplementedException()",
+      "\t\t${0}",
+      "\t\tThrow New NotImplementedException()",
       "",
-      "    End Function",
+      "\tEnd Function",
       "",
-      "    Public Overrides Function GetHashCode(obj As ${3}) As Integer",
+      "\tPublic Overrides Function GetHashCode(obj As ${3}) As Integer",
       "",
-      "        If obj Is Nothing Then",
-      "            Return 0",
-      "        End If",
+      "\t\tIf obj Is Nothing Then",
+      "\t\t\tReturn 0",
+      "\t\tEnd If",
       "",
-      "        Throw New NotImplementedException()",
+      "\t\tThrow New NotImplementedException()",
       "",
-      "    End Function",
+      "\tEnd Function",
       "",
       "End Class"
     ],
@@ -901,7 +894,7 @@
     "prefix": "ifn",
     "body": [
       "If ${1:x} Is Nothing Then",
-      "    ${0}",
+      "\t${0}",
       "End If"
     ],
     "description": "If Is Nothing"
@@ -910,7 +903,7 @@
     "prefix": "ifxn",
     "body": [
       "If ${1:x} IsNot Nothing Then",
-      "    ${0}",
+      "\t${0}",
       "End If"
     ],
     "description": "If IsNot Nothing"
@@ -919,7 +912,7 @@
     "prefix": "ifx",
     "body": [
       "If Not ${1:x} Then",
-      "    ${0}",
+      "\t${0}",
       "End If"
     ],
     "description": "If statement with condition whether the expression is equal to false"
@@ -929,7 +922,7 @@
     "body": [
       "Dim ${1:x} As ${2:T}",
       "If Not ${2}.TryParse(${3:value}, ${1})",
-      "    ${0}",
+      "\t${0}",
       "End If"
     ],
     "description": "if statement with condition whether TryParse method returns false."
@@ -938,9 +931,9 @@
     "prefix": "ifxtc",
     "body": [
       "Dim ${1:x} = Nothing",
-      "    If TryCast(${1}, ${2:Object}) Is Nothing Then",
-      "        ${0}",
-      "    End If"
+      "\tIf TryCast(${1}, ${2:Object}) Is Nothing Then",
+      "\t\t${0}",
+      "\tEnd If"
     ],
     "description": "If TryCast Is Nothing"
   },
@@ -948,9 +941,9 @@
     "prefix": "iftc",
     "body": [
       "Dim ${1:x} = Nothing",
-      "    If TryCast(${1}, ${2:Object}) IsNot Nothing Then",
-      "        ${0}",
-      "    End If"
+      "\tIf TryCast(${1}, ${2:Object}) IsNot Nothing Then",
+      "\t\t${0}",
+      "\tEnd If"
     ],
     "description": "If TryCast IsNot Nothing"
   },
@@ -959,7 +952,7 @@
     "body": [
       "Dim ${1:x} As ${2:T}",
       "If ${2}.TryParse(${3:value}, ${1})",
-      "    ${0}",
+      "\t${0}",
       "End If"
     ],
     "description": "if statement with condition whether TryParse method returns true."
@@ -981,7 +974,7 @@
   "interface method": {
     "prefix": "_m",
     "body": [
-      "Function ${1:MethodName}${2:()} As ${3:void};${0}"
+      "Function ${1:MethodName}() As ${2:void};${0}"
     ],
     "description": "interface method"
   },
@@ -1020,7 +1013,7 @@
       "End Operator",
       "",
       "Public Shared Operator IsFalse(${1} As ${2}) As Boolean",
-      "    ${0}",
+      "\t${0}",
       "End Operator"
     ],
     "description": "IsFalse operator overload"
@@ -1036,7 +1029,7 @@
     "prefix": "oo_IsTrue",
     "body": [
       "Public Shared Operator IsTrue(${1:value} As ${2:ThisName}) As Boolean",
-      "    ${0}",
+      "\t${0}",
       "End Operator",
       "",
       "Public Shared Operator IsFalse(${1} As ${2}) As Boolean",
@@ -1047,7 +1040,7 @@
   "Lambda expression": {
     "prefix": "l",
     "body": [
-      "Function(${1:f}) ${0}"
+      "Function(f) ${0}"
     ],
     "description": "Lambda expression"
   },
@@ -1055,7 +1048,7 @@
     "prefix": "oo_Like",
     "body": [
       "Public Shared Operator Like(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
-      "    ${0}",
+      "\t${0}",
       "End Operator"
     ],
     "description": "Like operator overload"
@@ -1064,7 +1057,7 @@
     "prefix": "oo_Mod",
     "body": [
       "Public Shared Operator Mod(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
-      "    ${0}",
+      "\t${0}",
       "End Operator"
     ],
     "description": "Mod operator overload"
@@ -1094,7 +1087,7 @@
     "prefix": "oo_Not",
     "body": [
       "Public Shared Operator Not(${1:value} As ${2:ThisName})",
-      "    ${0}",
+      "\t${0}",
       "End Operator"
     ],
     "description": "Not operator overload"
@@ -1103,20 +1096,20 @@
     "prefix": "c_ObservableCollectionOfT",
     "body": [
       "${1:Public} Class ${2:Collection}",
-      "    Inherits ObservableCollection(Of ${3:Object})",
+      "\tInherits ObservableCollection(Of ${3:Object})",
       "",
-      "    Public Sub New()",
-      "    End Sub",
+      "\tPublic Sub New()",
+      "\tEnd Sub",
       "",
-      "    Public Sub New(collection As IEnumerable(Of ${3}))",
-      "        MyBase.New(collection)",
-      "    End Sub",
+      "\tPublic Sub New(collection As IEnumerable(Of ${3}))",
+      "\t\tMyBase.New(collection)",
+      "\tEnd Sub",
       "",
-      "    Public Sub New(list As IList(Of ${3}))",
-      "        MyBase.New(list)",
-      "    End Sub",
+      "\tPublic Sub New(list As IList(Of ${3}))",
+      "\t\tMyBase.New(list)",
+      "\tEnd Sub",
       "",
-      "    ${0}",
+      "\t${0}",
       "End Class"
     ],
     "description": "class derived from ObservableCollection(Of T)"
@@ -1125,7 +1118,7 @@
     "prefix": "oo_Or",
     "body": [
       "Public Shared Operator Or(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
-      "    ${0}",
+      "\t${0}",
       "End Operator"
     ],
     "description": "Or operator overload"
@@ -1148,7 +1141,7 @@
     "prefix": "pc",
     "body": [
       "Private Class ${1:ClassName}",
-      "    ${0}",
+      "\t${0}",
       "End Class"
     ],
     "description": "Private class declaration"
@@ -1164,7 +1157,7 @@
     "prefix": "pcr",
     "body": [
       "Private Sub New()",
-      "    ${0}",
+      "\t${0}",
       "End Sub"
     ],
     "description": "Private constructor declaration"
@@ -1173,7 +1166,7 @@
     "prefix": "pcr_",
     "body": [
       "Private Sub New(${1:parameter As Object})",
-      "    ${0}",
+      "\t${0}",
       "End Sub"
     ],
     "description": "Private constructor declaration (with parameters)"
@@ -1181,7 +1174,7 @@
   "Private delegate": {
     "prefix": "pde",
     "body": [
-      "Private Delegate Function ${1:DelegateName}${2:()} As ${3:void}${0}"
+      "Private Delegate Function ${1:DelegateName}() As ${2:void}${0}"
     ],
     "description": "Private delegate declaration"
   },
@@ -1196,7 +1189,7 @@
     "prefix": "pem",
     "body": [
       "Private Enum ${1:EnumName}",
-      "    ${0}",
+      "\t${0}",
       "End Enum"
     ],
     "description": "Private enum declaration"
@@ -1207,7 +1200,7 @@
       "Private Event ${1:EventName} As EventHandler(Of ${2:EventArgs})",
       "",
       "Protected Overridable Sub On${1}(${3:e} As ${2})",
-      "    RaiseEvent ${1}(Me, ${3})",
+      "\tRaiseEvent ${1}(Me, ${3})",
       "End Sub${0}"
     ],
     "description": "Private event declaration with EventHandler<T>"
@@ -1223,11 +1216,11 @@
     "prefix": "pir",
     "body": [
       "Default Private Property Item(${1:ByVal index As Integer}) As ${2:T}",
-      "    Get",
-      "        ${0}",
-      "    End Get",
-      "    Set(ByVal Value As ${2})",
-      "    End Set",
+      "\tGet",
+      "\t\t${0}",
+      "\tEnd Get",
+      "\tSet(ByVal Value As ${2})",
+      "\tEnd Set",
       "End Property"
     ],
     "description": "Private indexer declaration"
@@ -1235,8 +1228,8 @@
   "Private method": {
     "prefix": "pm",
     "body": [
-      "Private Function ${1:MethodName}${2:()} As ${3:void}",
-      "    ${0}",
+      "Private Function ${1:MethodName}() As ${2:void}",
+      "\t${0}",
       "End Function"
     ],
     "description": "Private method declaration"
@@ -1245,7 +1238,7 @@
     "prefix": "pm_",
     "body": [
       "Private Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
-      "    ${0}",
+      "\t${0}",
       "End Function"
     ],
     "description": "Private method declaration (with parameters)"
@@ -1268,9 +1261,9 @@
     "prefix": "prpp",
     "body": [
       "Private ReadOnly Property ${1:PropertyName} As ${2:T}",
-      "    Get",
-      "        Return ${3:value}",
-      "    End Get",
+      "\tGet",
+      "\t\tReturn ${3:value}",
+      "\tEnd Get",
       "End Property${0}"
     ],
     "description": "Private read-only property declaration"
@@ -1285,8 +1278,8 @@
   "Private Shared method": {
     "prefix": "psm",
     "body": [
-      "Private Shared Function ${1:MethodName}${2:()} As ${3:void}",
-      "    ${0}",
+      "Private Shared Function ${1:MethodName}() As ${2:void}",
+      "\t${0}",
       "End Function"
     ],
     "description": "Private Shared method declaration"
@@ -1295,7 +1288,7 @@
     "prefix": "psm_",
     "body": [
       "Private Shared Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
-      "    ${0}",
+      "\t${0}",
       "End Function"
     ],
     "description": "Private Shared method declaration (with parameters)"
@@ -1318,9 +1311,9 @@
     "prefix": "psrpp",
     "body": [
       "Private Shared ReadOnly Property ${1:PropertyName} As ${2:T}",
-      "    Get",
-      "        Return ${3:value}",
-      "    End Get",
+      "\tGet",
+      "\t\tReturn ${3:value}",
+      "\tEnd Get",
       "End Property${0}"
     ],
     "description": "Private Shared read-only property declaration"
@@ -1329,7 +1322,7 @@
     "prefix": "pst",
     "body": [
       "Private Structure ${1:StructName}",
-      "    ${0}",
+      "\t${0}",
       "End Structure"
     ],
     "description": "Private structure declaration"
@@ -1345,7 +1338,7 @@
     "prefix": "c",
     "body": [
       "Public Class ${1:ClassName}",
-      "    ${0}",
+      "\t${0}",
       "End Class"
     ],
     "description": "Public class declaration"
@@ -1361,7 +1354,7 @@
     "prefix": "cr",
     "body": [
       "Public Sub New()",
-      "    ${0}",
+      "\t${0}",
       "End Sub"
     ],
     "description": "Public constructor declaration"
@@ -1370,7 +1363,7 @@
     "prefix": "cr_",
     "body": [
       "Public Sub New(${1:parameter As Object})",
-      "    ${0}",
+      "\t${0}",
       "End Sub"
     ],
     "description": "Public constructor declaration (with parameters)"
@@ -1378,7 +1371,7 @@
   "Public delegate": {
     "prefix": "de",
     "body": [
-      "Public Delegate Function ${1:DelegateName}${2:()} As ${3:void}${0}"
+      "Public Delegate Function ${1:DelegateName}() As ${2:void}${0}"
     ],
     "description": "Public delegate declaration"
   },
@@ -1393,7 +1386,7 @@
     "prefix": "em",
     "body": [
       "Public Enum ${1:EnumName}",
-      "    ${0}",
+      "\t${0}",
       "End Enum"
     ],
     "description": "Public enum declaration"
@@ -1404,7 +1397,7 @@
       "Public Event ${1:EventName} As EventHandler(Of ${2:EventArgs})",
       "",
       "Protected Overridable Sub On${1}(${3:e} As ${2})",
-      "    RaiseEvent ${1}(Me, ${3})",
+      "\tRaiseEvent ${1}(Me, ${3})",
       "End Sub${0}"
     ],
     "description": "Public event declaration with EventHandler<T>"
@@ -1420,11 +1413,11 @@
     "prefix": "ir",
     "body": [
       "Default Public Property Item(${1:ByVal index As Integer}) As ${2:T}",
-      "    Get",
-      "        ${0}",
-      "    End Get",
-      "    Set(ByVal Value As ${2})",
-      "    End Set",
+      "\tGet",
+      "\t\t${0}",
+      "\tEnd Get",
+      "\tSet(ByVal Value As ${2})",
+      "\tEnd Set",
       "End Property"
     ],
     "description": "Public indexer declaration"
@@ -1433,7 +1426,7 @@
     "prefix": "ie",
     "body": [
       "Public Interface ${1:InterfaceName}",
-      "    ${0}",
+      "\t${0}",
       "End Interface"
     ],
     "description": "Public interface declaration"
@@ -1441,8 +1434,8 @@
   "Public method": {
     "prefix": "m",
     "body": [
-      "Public Function ${1:MethodName}${2:()} As ${3:void}",
-      "    ${0}",
+      "Public Function ${1:MethodName}() As ${2:void}",
+      "\t${0}",
       "End Function"
     ],
     "description": "Public method declaration"
@@ -1451,7 +1444,7 @@
     "prefix": "m_",
     "body": [
       "Public Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
-      "    ${0}",
+      "\t${0}",
       "End Function"
     ],
     "description": "Public method declaration (with parameters)"
@@ -1460,7 +1453,7 @@
     "prefix": "me",
     "body": [
       "Public Module ${1:ModuleName}",
-      "    ${0}",
+      "\t${0}",
       "End Module"
     ],
     "description": "Public module declaration"
@@ -1475,8 +1468,8 @@
   "Public Overridable method": {
     "prefix": "vm",
     "body": [
-      "Public Overridable Function ${1:MethodName}${2:()} As ${3:void}",
-      "    ${0}",
+      "Public Overridable Function ${1:MethodName}() As ${2:void}",
+      "\t${0}",
       "End Function"
     ],
     "description": "Public Overridable method declaration"
@@ -1485,7 +1478,7 @@
     "prefix": "vm_",
     "body": [
       "Public Overridable Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
-      "    ${0}",
+      "\t${0}",
       "End Function"
     ],
     "description": "Public Overridable method declaration (with parameters)"
@@ -1501,9 +1494,9 @@
     "prefix": "vrpp",
     "body": [
       "Public Overridable ReadOnly Property ${1:PropertyName} As ${2:T}",
-      "    Get",
-      "        Return ${3:value}",
-      "    End Get",
+      "\tGet",
+      "\t\tReturn ${3:value}",
+      "\tEnd Get",
       "End Property${0}"
     ],
     "description": "Public Overridable read-only property declaration"
@@ -1526,9 +1519,9 @@
     "prefix": "rpp",
     "body": [
       "Public ReadOnly Property ${1:PropertyName} As ${2:T}",
-      "    Get",
-      "        Return ${3:value}",
-      "    End Get",
+      "\tGet",
+      "\t\tReturn ${3:value}",
+      "\tEnd Get",
       "End Property${0}"
     ],
     "description": "Public read-only property declaration"
@@ -1543,8 +1536,8 @@
   "Public Shared method": {
     "prefix": "sm",
     "body": [
-      "Public Shared Function ${1:MethodName}${2:()} As ${3:void}",
-      "    ${0}",
+      "Public Shared Function ${1:MethodName}() As ${2:void}",
+      "\t${0}",
       "End Function"
     ],
     "description": "Public Shared method declaration"
@@ -1553,7 +1546,7 @@
     "prefix": "sm_",
     "body": [
       "Public Shared Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
-      "    ${0}",
+      "\t${0}",
       "End Function"
     ],
     "description": "Public Shared method declaration (with parameters)"
@@ -1576,9 +1569,9 @@
     "prefix": "srpp",
     "body": [
       "Public Shared ReadOnly Property ${1:PropertyName} As ${2:T}",
-      "    Get",
-      "        Return ${3:value}",
-      "    End Get",
+      "\tGet",
+      "\t\tReturn ${3:value}",
+      "\tEnd Get",
       "End Property${0}"
     ],
     "description": "Public Shared read-only property declaration"
@@ -1587,7 +1580,7 @@
     "prefix": "st",
     "body": [
       "Public Structure ${1:StructName}",
-      "    ${0}",
+      "\t${0}",
       "End Structure"
     ],
     "description": "Public structure declaration"
@@ -1596,13 +1589,13 @@
     "prefix": "c_ReadOnlyCollectionOfT",
     "body": [
       "${1:Public} Class ${2:Collection}",
-      "    Inherits ReadOnlyCollection(Of ${3:Object})",
+      "\tInherits ReadOnlyCollection(Of ${3:Object})",
       "",
-      "    Public Sub New(list As IList(Of ${3}))",
-      "        MyBase.New(list)",
-      "    End Sub",
+      "\tPublic Sub New(list As IList(Of ${3}))",
+      "\t\tMyBase.New(list)",
+      "\tEnd Sub",
       "",
-      "    ${0}",
+      "\t${0}",
       "End Class"
     ],
     "description": "class derived from ReadOnlyCollection(Of T)"
@@ -1632,7 +1625,7 @@
     "prefix": "sc",
     "body": [
       "Select Case ${1:expression}",
-      "    ${0}",
+      "\t${0}",
       "End Select"
     ],
     "description": "Select Case statement"
@@ -1642,12 +1635,12 @@
     "body": [
       "${1:Public NotInheritable} Class ${2:ClassName}",
       "",
-      "    Private Sub New()",
-      "    End Sub",
+      "\tPrivate Sub New()",
+      "\tEnd Sub",
       "",
-      "    Public Shared ReadOnly Property Instance As ${2} = ${3:value}",
+      "\tPublic Shared ReadOnly Property Instance As ${2} = ${3:value}",
       "",
-      "  End Class${0}"
+      "End Class${0}"
     ],
     "description": "class that implements singleton pattern"
   },
@@ -1655,7 +1648,7 @@
     "prefix": "scr",
     "body": [
       "Shared Sub New()",
-      "    ${0}",
+      "\t${0}",
       "End Sub"
     ],
     "description": "static constructor"
@@ -1664,7 +1657,7 @@
     "prefix": "u_smrr",
     "body": [
       "Using ${1:sr} = New StreamReader(${2:stream})",
-      "    ${0}",
+      "\t${0}",
       "End Using"
     ],
     "description": "StreamReader variable declaration."
@@ -1673,7 +1666,7 @@
     "prefix": "u_smwr",
     "body": [
       "Using ${1:sw} = New StreamWriter(${2:path}, ${3:Encoding.UTF8})",
-      "    ${0}",
+      "\t${0}",
       "End Using"
     ],
     "description": "StreamWriter variable declaration."
@@ -1717,7 +1710,7 @@
     "prefix": "u_srr",
     "body": [
       "Using ${1:sr} = new StringReader(${2:s})",
-      "    ${0}",
+      "\t${0}",
       "End Using"
     ],
     "description": "StringReader variable declaration."
@@ -1726,7 +1719,7 @@
     "prefix": "u_swr",
     "body": [
       "Using ${1:sw} = new StringWriter()",
-      "    ${0}",
+      "\t${0}",
       "End Using"
     ],
     "description": "StringWriter variable declaration."
@@ -1798,9 +1791,9 @@
     "prefix": "tc",
     "body": [
       "Try",
-      "    ${0}",
+      "\t${0}",
       "Catch ${1:ex} as ${2:Exception}",
-      "    Throw",
+      "\tThrow",
       "End Try"
     ],
     "description": "Try-Catch statement"
@@ -1809,9 +1802,9 @@
     "prefix": "tcf",
     "body": [
       "Try",
-      "    ${0}",
+      "\t${0}",
       "Catch ${1:ex} as ${2:Exception}",
-      "    Throw",
+      "\tThrow",
       "Finally",
       "End Try"
     ],
@@ -1821,7 +1814,7 @@
     "prefix": "tf",
     "body": [
       "Try",
-      "    ${0}",
+      "\t${0}",
       "Finally",
       "End Try"
     ],
@@ -1831,7 +1824,7 @@
     "prefix": "u",
     "body": [
       "Using ${1:disposable}",
-      "    ${0}",
+      "\t${0}",
       "End Using"
     ],
     "description": "Using statement"
@@ -1854,7 +1847,7 @@
     "prefix": "we",
     "body": [
       "While ${1:True}",
-      "    ${0}",
+      "\t${0}",
       "End While"
     ],
     "description": "While statement"
@@ -1863,7 +1856,7 @@
     "prefix": "u_xmlrr",
     "body": [
       "Using ${1:reader} = XmlReader.Create(${2:argument})",
-      "    ${0}",
+      "\t${0}",
       "End Using"
     ],
     "description": "XmlReader variable declaration."
@@ -1872,7 +1865,7 @@
     "prefix": "u_xmlwr",
     "body": [
       "Using ${1:writer} = XmlWriter.Create(${2:argument})",
-      "    ${0}",
+      "\t${0}",
       "End Using"
     ],
     "description": "XmlWriter variable declaration."
@@ -1881,7 +1874,7 @@
     "prefix": "oo_Xor",
     "body": [
       "Public Shared Operator Xor(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
-      "    ${0}",
+      "\t${0}",
       "End Operator"
     ],
     "description": "Xor operator overload"

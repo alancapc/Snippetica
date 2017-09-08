@@ -18,15 +18,6 @@
   </Header>
   <Snippet>
     <Declarations>
-      <Literal Editable="false">
-        <ID>_as</ID>
-        <ToolTip>As keyword</ToolTip>
-        <Default>As</Default>
-      </Literal>
-      <Literal Editable="false">
-        <ID>_parameterList</ID>
-        <Default>()</Default>
-      </Literal>
       <Literal>
         <ID>name</ID>
         <ToolTip>Method name</ToolTip>
@@ -39,8 +30,8 @@
         <Function>ClassName()</Function>
       </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[Public Shared Function $name$$_parameterList$ $_as$ $this$
-    $end$
+    <Code Language="VB"><![CDATA[Public Shared Function $name$() As $this$
+	$end$
 End Function]]></Code>
   </Snippet>
 </CodeSnippet>

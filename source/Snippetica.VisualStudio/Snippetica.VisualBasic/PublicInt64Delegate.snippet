@@ -18,21 +18,12 @@
   </Header>
   <Snippet>
     <Declarations>
-      <Literal Editable="false">
-        <ID>_as</ID>
-        <ToolTip>As keyword</ToolTip>
-        <Default>As</Default>
-      </Literal>
-      <Literal Editable="false">
-        <ID>_parameterList</ID>
-        <Default>()</Default>
-      </Literal>
       <Literal>
         <ID>name</ID>
         <ToolTip>Delegate name</ToolTip>
         <Default>DelegateName</Default>
       </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[Public Delegate Function $name$$_parameterList$ $_as$ Long$end$]]></Code>
+    <Code Language="VB"><![CDATA[Public Delegate Function $name$() As Long$end$]]></Code>
   </Snippet>
 </CodeSnippet>

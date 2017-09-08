@@ -3,7 +3,7 @@
     "prefix": "ppif",
     "body": [
       "#if ${1:0}",
-      "    ${TM_SELECTED_TEXT}${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "#endif"
     ],
     "description": "#if directive"
@@ -12,7 +12,7 @@
     "prefix": "ppifd",
     "body": [
       "#ifdef ${1:DEBUG}",
-      "    ${TM_SELECTED_TEXT}${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "#endif"
     ],
     "description": "#ifdef directive"
@@ -21,7 +21,7 @@
     "prefix": "ppifnd",
     "body": [
       "#ifndef ${1:1}",
-      "    ${TM_SELECTED_TEXT}${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "#endif"
     ],
     "description": "#ifndef directive"
@@ -30,7 +30,7 @@
     "prefix": "ppr",
     "body": [
       "#pragma region ${1:RegionName}",
-      "    ${TM_SELECTED_TEXT}${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "#pragma endregion"
     ],
     "description": "#pragma region directive"
@@ -41,11 +41,11 @@
       "class ${1:ClassName}",
       "{",
       "public:",
-      "    ${1}();",
-      "    ~${1}();",
+      "\t${1}();",
+      "\t~${1}();",
       "",
       "private:",
-      "    ${TM_SELECTED_TEXT}${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "};",
       "",
       "${1}::${1}()",
@@ -63,7 +63,7 @@
     "body": [
       "${1:TypeName}()",
       "{",
-      "    ${0}",
+      "\t${0}",
       "}"
     ],
     "description": "constructor declaration"
@@ -73,7 +73,7 @@
     "body": [
       "~${1:TypeName}()",
       "{",
-      "    ${0}",
+      "\t${0}",
       "}"
     ],
     "description": "destructor declaration"
@@ -83,7 +83,7 @@
     "body": [
       "do",
       "{",
-      "    ${TM_SELECTED_TEXT}${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "} while (${1:true});"
     ],
     "description": "do-while statement"
@@ -93,7 +93,7 @@
     "body": [
       "else",
       "{",
-      "    ${TM_SELECTED_TEXT}${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "}"
     ],
     "description": "else statement"
@@ -103,7 +103,7 @@
     "body": [
       "enum ${1:EnumName}",
       "{",
-      "    ${TM_SELECTED_TEXT}${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "};"
     ],
     "description": "enum declaration"
@@ -113,7 +113,7 @@
     "body": [
       "enum class ${1:EnumClassName}",
       "{",
-      "    ${TM_SELECTED_TEXT}${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "};"
     ],
     "description": "enum class declaration"
@@ -123,7 +123,7 @@
     "body": [
       "for (${1:size_t} ${2:i} = 0; ${2} < ${3:length}; ${2}++)",
       "{",
-      "    ${TM_SELECTED_TEXT}${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "}"
     ],
     "description": "for statement"
@@ -133,7 +133,7 @@
     "body": [
       "for (auto& ${1:i} : ${2:x})",
       "{",
-      "    ${TM_SELECTED_TEXT}${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "}"
     ],
     "description": "range-based for statement"
@@ -143,7 +143,7 @@
     "body": [
       "for (int ${1:i} = ${2:length} - 1; ${1} >= 0; ${1}--)",
       "{",
-      "    ${TM_SELECTED_TEXT}${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "}"
     ],
     "description": "for statement (reversed)"
@@ -153,7 +153,7 @@
     "body": [
       "for each (${1:object} ${2:var} in ${3:items})",
       "{",
-      "    ${TM_SELECTED_TEXT}${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "}"
     ],
     "description": "for each statement"
@@ -163,7 +163,7 @@
     "body": [
       "if (${1:true})",
       "{",
-      "    ${TM_SELECTED_TEXT}${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "}"
     ],
     "description": "if statement"
@@ -173,7 +173,7 @@
     "body": [
       "__interface ${1:InterfaceName}",
       "{",
-      "    ${TM_SELECTED_TEXT}${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "};"
     ],
     "description": "interface declaration"
@@ -183,7 +183,7 @@
     "body": [
       "namespace ${1:NamespaceName}",
       "{",
-      "    ${TM_SELECTED_TEXT}${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "}"
     ],
     "description": "namespace declaration"
@@ -193,7 +193,7 @@
     "body": [
       "struct ${1:StructName}",
       "{",
-      "    ${TM_SELECTED_TEXT}${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "};"
     ],
     "description": "struct declaration"
@@ -203,7 +203,7 @@
     "body": [
       "switch (${1:SwitchOn})",
       "{",
-      "    ${2:default:",
+      "\t${2:default:",
       "    break;}${0}",
       "}"
     ],
@@ -214,7 +214,7 @@
     "body": [
       "try",
       "{",
-      "    ${0}",
+      "\t${0}",
       "}",
       "catch (const std::exception&)",
       "{",
@@ -227,7 +227,7 @@
     "body": [
       "union ${1:UnionName}",
       "{",
-      "    ${TM_SELECTED_TEXT}${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "};"
     ],
     "description": "union"
@@ -237,7 +237,7 @@
     "body": [
       "while (${1:true})",
       "{",
-      "    ${TM_SELECTED_TEXT}${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "}"
     ],
     "description": "while statement"

@@ -21,7 +21,7 @@
     </Imports>
     <Declarations>
       <Literal Editable="false">
-        <ID>thisname</ID>
+        <ID>thisName</ID>
         <ToolTip>Containing type name</ToolTip>
         <Default>ThisName</Default>
         <Function>ClassName()</Function>
@@ -29,12 +29,12 @@
     </Declarations>
     <Code Language="CSharp"><![CDATA[public override bool Equals(object obj)
 {
-	if(!(obj is $thisname$))
+	if(!(obj is $thisName$))
 	{
 		return false;
 	}
 
-	var other = ($thisname$)obj;
+	var other = ($thisName$)obj;
 
 	$end$
 	throw new NotImplementedException();

@@ -1,5 +1,6 @@
 ## Snippetica.Markdown
 
+### Snippet Browser
 * Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vscode&language=markdown).
 
 ### List of Selected Snippets

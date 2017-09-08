@@ -1,5 +1,6 @@
 ## Snippetica.CSharp
 
+### Snippet Browser
 * Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vscode&language=csharp).
 
 ### Quick Reference
@@ -184,7 +185,6 @@ tc|[try\-catch](TryCatch.snippet)
 tcf|[try\-catch\-finally](TryCatchFinally.snippet)
 td|[TODO comment](TodoComment.snippet)
 tf|[try\-finally](TryFinally.snippet)
-this|[containing type name](ContainingTypeName.snippet)
 to|[typeof operator](TypeOfOperator.snippet)
 twn|[throw new](ThrowNew.snippet)
 u|[using statement](Using.snippet)

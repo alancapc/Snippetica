@@ -94,6 +94,20 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
                 if (snippet.HasTag(KnownTags.ExcludeFromVisualStudioCode))
                     continue;
 
+                LiteralCollection literals = snippet.Literals;
+
+                for (int i = literals.Count - 1; i >= 0; i--)
+                {
+                    Literal literal = literals[i];
+
+                    if (!literal.IsEditable
+                        && !string.IsNullOrEmpty(literal.Function))
+                    {
+                        literal.IsEditable = true;
+                        literal.Function = null;
+                    }
+                }
+
                 if (snippet.HasTag(KnownTags.TitleStartsWithShortcut))
                 {
                     string shortcut = Regex.Match(snippet.Title, @"^\S+\s+").Value;

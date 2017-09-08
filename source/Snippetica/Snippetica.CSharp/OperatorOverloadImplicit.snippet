@@ -22,7 +22,7 @@
         <Default>value</Default>
       </Literal>
       <Literal Editable="false">
-        <ID>thisname</ID>
+        <ID>thisName</ID>
         <ToolTip>Containing type name</ToolTip>
         <Default>ThisName</Default>
         <Function>ClassName()</Function>
@@ -33,12 +33,12 @@
         <Default>object</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[public static implicit operator $thisname$($type$ $operand$)
+    <Code Language="CSharp"><![CDATA[public static implicit operator $thisName$($type$ $operand$)
 {
 	$end$
 }
 
-public static implicit operator $type$($thisname$ $operand$)
+public static implicit operator $type$($thisName$ $operand$)
 {
 }]]></Code>
   </Snippet>

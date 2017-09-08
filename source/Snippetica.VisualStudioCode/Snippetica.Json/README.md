@@ -1,5 +1,6 @@
 ## Snippetica.Json
 
+### Snippet Browser
 * Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vscode&language=json).
 
 ### List of Selected Snippets

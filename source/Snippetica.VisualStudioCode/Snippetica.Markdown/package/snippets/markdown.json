@@ -254,14 +254,14 @@
   "unordered list item (level 3)": {
     "prefix": "ul3",
     "body": [
-      "    * ${1:x}${0}"
+      "\t* ${1:x}${0}"
     ],
     "description": "unordered list item (level 3)"
   },
   "unordered list item (level 3) _": {
     "prefix": "ulll",
     "body": [
-      "    * ${1:x}${0}"
+      "\t* ${1:x}${0}"
     ],
     "description": "unordered list item (level 3)"
   }

@@ -1,3 +1,4 @@
+### Snippet Browser
 * Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vscode&language=vb).
 
 ### Quick Reference
@@ -179,7 +180,6 @@ tc|Try\-Catch
 tcf|Try\-Catch\-Finally
 td|TODO comment
 tf|Try\-Finally
-this|Containing type name
 twn|Throw New
 u|Using statement
 u\_er|IEnumerator\(Of T\) variable

@@ -2,44 +2,55 @@
   "CDATA section": {
     "prefix": "cdata",
     "body": [
-      "<![CDATA[${0}${1:]]>}"
+      "<![CDATA[${TM_SELECTED_TEXT}${0}__cdataEnd"
     ],
     "description": "CDATA section"
+  },
+  "CDATA section (with content)": {
+    "prefix": "cdatax",
+    "body": [
+      "<![CDATA[${TM_SELECTED_TEXT}${0}__cdataEnd"
+    ],
+    "description": "CDATA section (with content)"
   },
   "comment": {
     "prefix": "c",
     "body": [
-      "<!-- ${1:comment} -->${0}"
+      "<!-- ${TM_SELECTED_TEXT}${1:comment} -->${0}"
     ],
     "description": "comment"
   },
   "element": {
     "prefix": "e",
     "body": [
-      "<${1:x}>${0}</${1}>"
+      "<${1:x}>",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "</${1}>"
     ],
-    "description": "element"
+    "description": ""
   },
   "element (with attribute)": {
     "prefix": "ea",
     "body": [
-      "<${1:x} ${2:attribute=\"\"}>${0}</${1}>"
+      "<${1:x} ${2:Attribute}=\"${3:Value}\">",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "</${1}>"
     ],
-    "description": "element (with attribute)"
+    "description": " (with attribute)"
   },
   "element (with attribute, with content)": {
     "prefix": "eax",
     "body": [
-      "<${1:x} ${2:attribute=\"\"}>${3:content}</${1}>${0}"
+      "<${1:x} ${2:Attribute}=\"${3:Value}\">${4:content}</${1}>${0}"
     ],
-    "description": "element (with attribute, with content)"
+    "description": " (with attribute, with content)"
   },
   "element (with content)": {
     "prefix": "ex",
     "body": [
       "<${1:x}>${2:content}</${1}>${0}"
     ],
-    "description": "element (with content)"
+    "description": " (with content)"
   },
   "self-closing element": {
     "prefix": "es",
@@ -51,7 +62,7 @@
   "self-closing element (with attribute)": {
     "prefix": "eas",
     "body": [
-      "<${1:x} ${2:attribute=\"\"} />${0}"
+      "<${1:x} ${2:Attribute}=\"${3:Value}\" />${0}"
     ],
     "description": "self-closing element (with attribute)"
   }

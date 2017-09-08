@@ -1,3 +1,4 @@
+### Snippet Browser
 * Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vscode&language=html).
 
 ### Quick Reference
@@ -40,6 +41,8 @@ button|button
 c|comment
 canvas|canvas
 caption|caption
+cdata|CDATA section
+cdatax|CDATA section \(with content\)
 center|center
 cite|cite
 code|code

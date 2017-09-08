@@ -19,29 +19,28 @@
       </Import>
     </Imports>
     <Declarations>
-      <Literal Editable="false">
-        <ID>thisname</ID>
+      <Literal>
+        <ID>thisName</ID>
         <ToolTip>Containing type name</ToolTip>
         <Default>ThisName</Default>
-        <Function>ClassName()</Function>
       </Literal>
     </Declarations>
     <Code Language="CSharp"><![CDATA[public override bool Equals(object obj)
 {
-    if(!(obj is $thisname$))
-    {
-        return false;
-    }
+	if(!(obj is $thisName$))
+	{
+		return false;
+	}
 
-    var other = ($thisname$)obj;
+	var other = ($thisName$)obj;
 
-    $end$
-    throw new NotImplementedException();
+	$end$
+	throw new NotImplementedException();
 }
 
 public override int GetHashCode()
 {
-    throw new NotImplementedException();
+	throw new NotImplementedException();
 }]]></Code>
   </Snippet>
 </CodeSnippet>

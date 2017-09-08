@@ -20,14 +20,6 @@
       </Import>
     </Imports>
     <Declarations>
-      <Literal Editable="false">
-        <ID>_lambdaParam</ID>
-        <Default>f</Default>
-      </Literal>
-      <Literal Editable="false">
-        <ID>_lambdaParam2</ID>
-        <Default>g</Default>
-      </Literal>
       <Literal>
         <ID>resultSelector</ID>
         <ToolTip>Result selector</ToolTip>
@@ -39,6 +31,6 @@
         <Default>second</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[.Zip($second$, ($_lambdaParam$, $_lambdaParam2$) => $resultSelector$)$end$]]></Code>
+    <Code Language="CSharp"><![CDATA[.Zip($second$, (f, g) => $resultSelector$)$end$]]></Code>
   </Snippet>
 </CodeSnippet>

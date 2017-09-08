@@ -11,11 +11,10 @@
   </Header>
   <Snippet>
     <Declarations>
-      <Literal Editable="false">
+      <Literal>
         <ID>cases</ID>
         <Default>default:
     break;</Default>
-        <Function>GenerateSwitchCases($expression$)</Function>
       </Literal>
       <Literal>
         <ID>expression</ID>
@@ -25,7 +24,7 @@
     </Declarations>
     <Code Language="Cpp"><![CDATA[switch ($expression$)
 {
-    $cases$$end$
+	$cases$$end$
 }]]></Code>
   </Snippet>
 </CodeSnippet>

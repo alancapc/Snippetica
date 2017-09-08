@@ -33,24 +33,6 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
 
             base.PostProcess(snippet);
 
-            for (int i = 0; i < literals.Count; i++)
-            {
-                Literal literal = literals[i];
-
-                if (!literal.IsEditable)
-                {
-                    if (string.IsNullOrEmpty(literal.Function))
-                    {
-                        snippet.RemoveLiteralAndReplacePlaceholders(literal.Identifier, literal.DefaultValue);
-                    }
-                    else
-                    {
-                        literal.IsEditable = true;
-                        literal.Function = null;
-                    }
-                }
-            }
-
             return snippet;
         }
 

@@ -101,7 +101,7 @@
     <None Include="Snippetica.CSharp\AutoGeneration\EventWithEventHandlerOfT.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\Field.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\IEnumerableOfTType.snippet" />
-    <None Include="Snippetica.CSharp\AutoGeneration\IfNotTryParse_.snippet" />
+    <None Include="Snippetica.CSharp\AutoGeneration\Obsolete\IfNotTryParse.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\IfNotTryParse.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\IfTryParse.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\ImmutableCollectionOfTType.snippet" />
@@ -267,16 +267,16 @@
     <None Include="Snippetica.CSharp\If.snippet_" />
     <None Include="Snippetica.CSharp\IfEqualToNull.snippet" />
     <None Include="Snippetica.CSharp\IfNot.snippet" />
-    <None Include="Snippetica.CSharp\IfNotEqualToNull_.snippet" />
-    <None Include="Snippetica.CSharp\IfNot_.snippet" />
+    <None Include="Snippetica.CSharp\Obsolete\IfNotEqualToNull.snippet" />
+    <None Include="Snippetica.CSharp\Obsolete\IfNot.snippet" />
     <None Include="Snippetica.CSharp\IfNotEqualToNull.snippet" />
     <None Include="Snippetica.CSharp\Int32Variable.snippet" />
     <None Include="Snippetica.CSharp\LambdaExpression.snippet" />
     <None Include="Snippetica.CSharp\NameOfOperator.snippet" />
-    <None Include="Snippetica.CSharp\NotEqualToNull_.snippet" />
+    <None Include="Snippetica.CSharp\Obsolete\NotEqualToNull.snippet" />
     <None Include="Snippetica.CSharp\NotEqualToNull.snippet" />
-    <None Include="Snippetica.CSharp\NotStringIsNullOrEmpty_.snippet" />
-    <None Include="Snippetica.CSharp\NotStringIsNullOrWhiteSpace_.snippet" />
+    <None Include="Snippetica.CSharp\Obsolete\NotStringIsNullOrEmpty.snippet" />
+    <None Include="Snippetica.CSharp\Obsolete\NotStringIsNullOrWhiteSpace.snippet" />
     <None Include="Snippetica.CSharp\ObjectKeyword.snippet" />
     <None Include="Snippetica.CSharp\ObservableCollectionOfTClass.snippet" />
     <None Include="Snippetica.CSharp\OperatorOverloadAmpersand.snippet" />
@@ -528,7 +528,7 @@
     <None Include="Snippetica.VisualBasic\AutoGeneration\EventWithEventHandlerOfT.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\Field.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\IEnumerableOfTType.snippet" />
-    <None Include="Snippetica.VisualBasic\AutoGeneration\IfNotTryParse_.snippet" />
+    <None Include="Snippetica.VisualBasic\AutoGeneration\Obsolete\IfNotTryParse.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\IfNotTryParse.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\IfTryParse.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\ImmutableCollectionOfTType.snippet" />
@@ -605,20 +605,20 @@
     <None Include="Snippetica.VisualBasic\IEqualityComparerOfTClass.snippet" />
     <None Include="Snippetica.VisualBasic\If.snippet_" />
     <None Include="Snippetica.VisualBasic\IfIsNothing.snippet" />
-    <None Include="Snippetica.VisualBasic\IfIsNotNothing_.snippet" />
+    <None Include="Snippetica.VisualBasic\Obsolete\IfIsNotNothing.snippet" />
     <None Include="Snippetica.VisualBasic\IfIsNotNothing.snippet" />
-    <None Include="Snippetica.VisualBasic\IfNot_.snippet" />
+    <None Include="Snippetica.VisualBasic\Obsolete\IfNot.snippet" />
     <None Include="Snippetica.VisualBasic\IfNot.snippet" />
     <None Include="Snippetica.VisualBasic\IfTryCastIsNothing.snippet" />
     <None Include="Snippetica.VisualBasic\IfTryCastIsNotNothing.snippet" />
     <None Include="Snippetica.VisualBasic\Int32Variable.snippet" />
     <None Include="Snippetica.VisualBasic\IsNothing.snippet" />
-    <None Include="Snippetica.VisualBasic\IsNotNothing_.snippet" />
+    <None Include="Snippetica.VisualBasic\Obsolete\IsNotNothing.snippet" />
     <None Include="Snippetica.VisualBasic\IsNotNothing.snippet" />
     <None Include="Snippetica.VisualBasic\LambdaExpression.snippet" />
     <None Include="Snippetica.VisualBasic\NameOfOperator.snippet" />
-    <None Include="Snippetica.VisualBasic\NotStringIsNullOrEmpty_.snippet" />
-    <None Include="Snippetica.VisualBasic\NotStringIsNullOrWhiteSpace_.snippet" />
+    <None Include="Snippetica.VisualBasic\Obsolete\NotStringIsNullOrEmpty.snippet" />
+    <None Include="Snippetica.VisualBasic\Obsolete\NotStringIsNullOrWhiteSpace.snippet" />
     <None Include="Snippetica.VisualBasic\ObservableCollectionClass.snippet" />
     <None Include="Snippetica.VisualBasic\OperatorOverloadAmpersand.snippet" />
     <None Include="Snippetica.VisualBasic\OperatorOverloadAnd.snippet" />
@@ -764,9 +764,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Snippetica.CSharp\Dev\Xml\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Snippetica.Xml\CDataSection.snippet" />
+    <Folder Include="Snippetica.Xml\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />

@@ -1,3 +1,4 @@
+### Snippet Browser
 * Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vscode&language=csharp).
 
 ### Quick Reference
@@ -182,7 +183,6 @@ tc|try\-catch
 tcf|try\-catch\-finally
 td|TODO comment
 tf|try\-finally
-this|containing type name
 to|typeof operator
 twn|throw new
 u|using statement

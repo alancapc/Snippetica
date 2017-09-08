@@ -25,16 +25,16 @@
       <Code Language="Cpp"><![CDATA[class $name$
 {
 public:
-    $name$()
-    {
-    }
+	$name$()
+	{
+	}
 
-    ~$name$()
-    {
-    }
+	~$name$()
+	{
+	}
 
 private:
-    $selected$$end$
+	$selected$$end$
 };]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -722,7 +722,7 @@ private:
       </Declarations>
       <Code Language="CSharp"><![CDATA[do
 {
-    $end$
+	$end$
 
 } while ($expression$ != null);]]></Code>
     </Snippet>
@@ -750,7 +750,7 @@ private:
       </Declarations>
       <Code Language="CSharp"><![CDATA[do
 {
-    $end$
+	$end$
 
 } while ($expression$ == null);]]></Code>
     </Snippet>
@@ -833,17 +833,13 @@ private:
         </Import>
       </Imports>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_lambdaParam</ID>
-          <Default>f</Default>
-        </Literal>
         <Literal>
           <ID>predicate</ID>
           <ToolTip>Predicate</ToolTip>
           <Default>false</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[.First($_lambdaParam$ => $predicate$)$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[.First(f => $predicate$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -866,17 +862,13 @@ private:
         </Import>
       </Imports>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_lambdaParam</ID>
-          <Default>f</Default>
-        </Literal>
         <Literal>
           <ID>predicate</ID>
           <ToolTip>Predicate</ToolTip>
           <Default>false</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[.FirstOrDefault($_lambdaParam$ => $predicate$)$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[.FirstOrDefault(f => $predicate$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -899,17 +891,13 @@ private:
         </Import>
       </Imports>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_lambdaParam</ID>
-          <Default>f</Default>
-        </Literal>
         <Literal>
           <ID>keySelector</ID>
           <ToolTip>Key selector</ToolTip>
           <Default>f</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[.GroupBy($_lambdaParam$ => $keySelector$)$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[.GroupBy(f => $keySelector$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -932,14 +920,6 @@ private:
         </Import>
       </Imports>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_lambdaParam</ID>
-          <Default>f</Default>
-        </Literal>
-        <Literal Editable="false">
-          <ID>_lambdaParam2</ID>
-          <Default>g</Default>
-        </Literal>
         <Literal>
           <ID>inner</ID>
           <ToolTip>Inner sequence</ToolTip>
@@ -961,7 +941,7 @@ private:
           <Default>new { }</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[.GroupJoin($inner$, $_lambdaParam$ => $outerKeySelector$, $_lambdaParam2$ => $innerKeySelector$, ($_lambdaParam$, $_lambdaParam2$) => $resultSelector$)$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[.GroupJoin($inner$, f => $outerKeySelector$, g => $innerKeySelector$, (f, g) => $resultSelector$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -984,14 +964,6 @@ private:
         </Import>
       </Imports>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_lambdaParam</ID>
-          <Default>f</Default>
-        </Literal>
-        <Literal Editable="false">
-          <ID>_lambdaParam2</ID>
-          <Default>g</Default>
-        </Literal>
         <Literal>
           <ID>inner</ID>
           <ToolTip>Inner sequence</ToolTip>
@@ -1013,7 +985,7 @@ private:
           <Default>new { }</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[.Join($inner$, $_lambdaParam$ => $outerKeySelector$, $_lambdaParam2$ => $innerKeySelector$, ($_lambdaParam$, $_lambdaParam2$) => $resultSelector$)$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[.Join($inner$, f => $outerKeySelector$, g => $innerKeySelector$, (f, g) => $resultSelector$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -1036,17 +1008,13 @@ private:
         </Import>
       </Imports>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_lambdaParam</ID>
-          <Default>f</Default>
-        </Literal>
         <Literal>
           <ID>predicate</ID>
           <ToolTip>Predicate</ToolTip>
           <Default>false</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[.Last($_lambdaParam$ => $predicate$)$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[.Last(f => $predicate$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -1069,17 +1037,13 @@ private:
         </Import>
       </Imports>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_lambdaParam</ID>
-          <Default>f</Default>
-        </Literal>
         <Literal>
           <ID>predicate</ID>
           <ToolTip>Predicate</ToolTip>
           <Default>false</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[.LastOrDefault($_lambdaParam$ => $predicate$)$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[.LastOrDefault(f => $predicate$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -1102,17 +1066,13 @@ private:
         </Import>
       </Imports>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_lambdaParam</ID>
-          <Default>f</Default>
-        </Literal>
         <Literal>
           <ID>selector</ID>
           <ToolTip>Selector</ToolTip>
           <Default>f</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[.Max($_lambdaParam$ => $selector$)$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[.Max(f => $selector$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -1135,17 +1095,13 @@ private:
         </Import>
       </Imports>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_lambdaParam</ID>
-          <Default>f</Default>
-        </Literal>
         <Literal>
           <ID>selector</ID>
           <ToolTip>Selector</ToolTip>
           <Default>f</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[.Min($_lambdaParam$ => $selector$)$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[.Min(f => $selector$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -1197,17 +1153,13 @@ private:
         </Import>
       </Imports>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_lambdaParam</ID>
-          <Default>f</Default>
-        </Literal>
         <Literal>
           <ID>keySelector</ID>
           <ToolTip>Key selector</ToolTip>
           <Default>f</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[.OrderBy($_lambdaParam$ => $keySelector$)$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[.OrderBy(f => $keySelector$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -1230,17 +1182,13 @@ private:
         </Import>
       </Imports>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_lambdaParam</ID>
-          <Default>f</Default>
-        </Literal>
         <Literal>
           <ID>keySelector</ID>
           <ToolTip>Key selector</ToolTip>
           <Default>f</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[.OrderByDescending($_lambdaParam$ => $keySelector$)$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[.OrderByDescending(f => $keySelector$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -1263,17 +1211,13 @@ private:
         </Import>
       </Imports>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_lambdaParam</ID>
-          <Default>f</Default>
-        </Literal>
         <Literal>
           <ID>selector</ID>
           <ToolTip>Selector</ToolTip>
           <Default>f</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[.Select($_lambdaParam$ => $selector$)$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[.Select(f => $selector$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -1296,17 +1240,13 @@ private:
         </Import>
       </Imports>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_lambdaParam</ID>
-          <Default>f</Default>
-        </Literal>
         <Literal>
           <ID>selector</ID>
           <ToolTip>Selector</ToolTip>
           <Default>f</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[.SelectMany($_lambdaParam$ => $selector$)$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[.SelectMany(f => $selector$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -1329,17 +1269,13 @@ private:
         </Import>
       </Imports>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_lambdaParam</ID>
-          <Default>f</Default>
-        </Literal>
         <Literal>
           <ID>predicate</ID>
           <ToolTip>Predicate</ToolTip>
           <Default>false</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[.SingleOrDefault($_lambdaParam$ => $predicate$)$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[.SingleOrDefault(f => $predicate$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -1362,17 +1298,13 @@ private:
         </Import>
       </Imports>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_lambdaParam</ID>
-          <Default>f</Default>
-        </Literal>
         <Literal>
           <ID>predicate</ID>
           <ToolTip>Predicate</ToolTip>
           <Default>false</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[.SkipWhile($_lambdaParam$ => $predicate$)$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[.SkipWhile(f => $predicate$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -1395,17 +1327,13 @@ private:
         </Import>
       </Imports>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_lambdaParam</ID>
-          <Default>f</Default>
-        </Literal>
         <Literal>
           <ID>predicate</ID>
           <ToolTip>Predicate</ToolTip>
           <Default>false</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[.TakeWhile($_lambdaParam$ => $predicate$)$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[.TakeWhile(f => $predicate$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -1428,17 +1356,13 @@ private:
         </Import>
       </Imports>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_lambdaParam</ID>
-          <Default>f</Default>
-        </Literal>
         <Literal>
           <ID>keySelector</ID>
           <ToolTip>Key selector</ToolTip>
           <Default>f</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[.ThenBy($_lambdaParam$ => $keySelector$)$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[.ThenBy(f => $keySelector$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -1461,17 +1385,13 @@ private:
         </Import>
       </Imports>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_lambdaParam</ID>
-          <Default>f</Default>
-        </Literal>
         <Literal>
           <ID>keySelector</ID>
           <ToolTip>Key selector</ToolTip>
           <Default>f</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[.ThenByDescending($_lambdaParam$ => $keySelector$)$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[.ThenByDescending(f => $keySelector$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -1494,17 +1414,13 @@ private:
         </Import>
       </Imports>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_lambdaParam</ID>
-          <Default>f</Default>
-        </Literal>
         <Literal>
           <ID>predicate</ID>
           <ToolTip>Predicate</ToolTip>
           <Default>false</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[.Where($_lambdaParam$ => $predicate$)$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[.Where(f => $predicate$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -1526,13 +1442,7 @@ private:
           <Namespace>System.Linq</Namespace>
         </Import>
       </Imports>
-      <Declarations>
-        <Literal Editable="false">
-          <ID>_lambdaParam</ID>
-          <Default>f</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[.Where($_lambdaParam$ => $_lambdaParam$ != null)$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[.Where(f => f != null)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -1555,14 +1465,6 @@ private:
         </Import>
       </Imports>
       <Declarations>
-        <Literal Editable="false">
-          <ID>_lambdaParam</ID>
-          <Default>f</Default>
-        </Literal>
-        <Literal Editable="false">
-          <ID>_lambdaParam2</ID>
-          <Default>g</Default>
-        </Literal>
         <Literal>
           <ID>resultSelector</ID>
           <ToolTip>Result selector</ToolTip>
@@ -1574,7 +1476,7 @@ private:
           <Default>second</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[.Zip($second$, ($_lambdaParam$, $_lambdaParam2$) => $resultSelector$)$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[.Zip($second$, (f, g) => $resultSelector$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -1852,7 +1754,7 @@ private:
       </Declarations>
       <Code Language="CSharp"><![CDATA[using (var $identifier$ = new FileStream($path$, FileMode$fileMode$))
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2102,7 +2004,7 @@ private:
       <Code Language="CSharp"><![CDATA[$type$ $result$;
 if (Enum.TryParse($value$, out $result$))
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2145,7 +2047,7 @@ if (Enum.TryParse($value$, out $result$))
       <Code Language="CSharp"><![CDATA[$type$ $result$;
 if (!Enum.TryParse($value$, out $result$))
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2172,7 +2074,7 @@ if (!Enum.TryParse($value$, out $result$))
       </Declarations>
       <Code Language="CSharp"><![CDATA[if (!string.IsNullOrEmpty($expression$))
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2199,7 +2101,7 @@ if (!Enum.TryParse($value$, out $result$))
       </Declarations>
       <Code Language="CSharp"><![CDATA[if (!string.IsNullOrWhiteSpace($expression$))
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2226,7 +2128,7 @@ if (!Enum.TryParse($value$, out $result$))
       </Declarations>
       <Code Language="CSharp"><![CDATA[if (string.IsNullOrEmpty($expression$))
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2253,7 +2155,7 @@ if (!Enum.TryParse($value$, out $result$))
       </Declarations>
       <Code Language="CSharp"><![CDATA[if (string.IsNullOrWhiteSpace($expression$))
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2339,19 +2241,7 @@ if (!Enum.TryParse($value$, out $result$))
       </Keywords>
     </Header>
     <Snippet>
-      <Declarations>
-        <Literal Editable="false">
-          <ID>lambdaParam1</ID>
-          <ToolTip>First parameter name</ToolTip>
-          <Default>f</Default>
-        </Literal>
-        <Literal Editable="false">
-          <ID>lambdaParam2</ID>
-          <ToolTip>Second parameter name</ToolTip>
-          <Default>g</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[($lambdaParam1$, $lambdaParam2$) => $end$]]></Code>
+      <Code Language="CSharp"><![CDATA[(f, g) => $end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -2488,7 +2378,7 @@ if (!Enum.TryParse($value$, out $result$))
       </Declarations>
       <Code Language="CSharp"><![CDATA[using (var $identifier$ = new MemoryStream($parameters$))
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2515,7 +2405,7 @@ if (!Enum.TryParse($value$, out $result$))
       </Declarations>
       <Code Language="CSharp"><![CDATA[namespace $name$
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3176,31 +3066,6 @@ if (!Enum.TryParse($value$, out $result$))
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>return new containing type</Title>
-      <Shortcut>rnthis</Shortcut>
-      <Description>return new containing type</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ReturnNewThis</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal Editable="false">
-          <ID>className</ID>
-          <ToolTip>Containing type name</ToolTip>
-          <Default>ThisName</Default>
-          <Function>ClassName()</Function>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[return new $className$$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
       <Title>return statement</Title>
       <Shortcut>re</Shortcut>
       <Description>return statement</Description>
@@ -3318,7 +3183,7 @@ if (!Enum.TryParse($value$, out $result$))
       <Code Language="CSharp"><![CDATA[var $identifier$ = $expression$ as $_type$;
 if ($identifier$ != null)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3345,7 +3210,7 @@ if ($identifier$ != null)
       </Declarations>
       <Code Language="CSharp"><![CDATA[while ($expression$ != null)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3372,7 +3237,7 @@ if ($identifier$ != null)
       </Declarations>
       <Code Language="CSharp"><![CDATA[while ($expression$ == null)
 {
-    $end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3391,31 +3256,6 @@ if ($identifier$ != null)
     </Header>
     <Snippet>
       <Code Language="CSharp"><![CDATA[yield return new$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>yield return new containing type</Title>
-      <Shortcut>yrnthis</Shortcut>
-      <Description>yield return new containing type</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name YieldReturnNewThis</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal Editable="false">
-          <ID>className</ID>
-          <ToolTip>Containing type name</ToolTip>
-          <Default>ThisName</Default>
-          <Function>ClassName()</Function>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[yield return new $className$$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -3546,22 +3386,22 @@ if ($identifier$ != null)
     </Header>
     <Snippet>
       <Code Language="Html"><![CDATA[<table>
-    <caption>$end$</caption>
-    <thead>
-        <tr>
-            <th></th>
-        </tr>
-    </thead>
-    <tfoot>
-        <tr>
-            <td></td>
-        </tr>
-    </tfoot>
-    <tbody>
-        <tr>
-            <td></td>
-        </tr>
-    </tbody>
+	<caption>$end$</caption>
+	<thead>
+		<tr>
+			<th></th>
+		</tr>
+	</thead>
+	<tfoot>
+		<tr>
+			<td></td>
+		</tr>
+	</tfoot>
+	<tbody>
+		<tr>
+			<td></td>
+		</tr>
+	</tbody>
 </table>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3810,7 +3650,7 @@ if ($identifier$ != null)
       </Declarations>
       <Code Language="VB"><![CDATA[Dim $result$ As $type$
 If Enum.TryParse($value$, $result$)
-    $end$
+	$end$
 End If]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3852,7 +3692,7 @@ End If]]></Code>
       </Declarations>
       <Code Language="VB"><![CDATA[Dim $result$ As $type$
 If Not Enum.TryParse($value$, $result$)
-    $end$
+	$end$
 End If]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3870,19 +3710,7 @@ End If]]></Code>
       </Keywords>
     </Header>
     <Snippet>
-      <Declarations>
-        <Literal Editable="false">
-          <ID>lambdaParam1</ID>
-          <ToolTip>First parameter name</ToolTip>
-          <Default>f</Default>
-        </Literal>
-        <Literal Editable="false">
-          <ID>lambdaParam2</ID>
-          <ToolTip>Second parameter name</ToolTip>
-          <Default>g</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Function($lambdaParam1$, $lambdaParam2$) $end$]]></Code>
+      <Code Language="VB"><![CDATA[Function(f, g) $end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -4008,7 +3836,7 @@ End If]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Namespace $name$
-    $end$
+	$end$
 End Namespace]]></Code>
     </Snippet>
   </CodeSnippet>

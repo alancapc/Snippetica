@@ -19,10 +19,6 @@
         <ID>default</ID>
         <Default>default</Default>
       </Literal>
-      <Literal Editable="false">
-        <ID>editable</ID>
-        <Default>false</Default>
-      </Literal>
       <Literal>
         <ID>id</ID>
         <Default>id</Default>
@@ -32,10 +28,10 @@
         <Default>toolTip</Default>
       </Literal>
     </Declarations>
-    <Code Language="Xml"><![CDATA[<Literal Editable="$editable$">
-  <ID>$id$</ID>
-  <ToolTip>$toolTip$</ToolTip>
-  <Default>$default$</Default>
+    <Code Language="Xml"><![CDATA[<Literal Editable="false">
+	<ID>$id$</ID>
+	<ToolTip>$toolTip$</ToolTip>
+	<Default>$default$</Default>
 </Literal>$end$]]></Code>
   </Snippet>
 </CodeSnippet>
