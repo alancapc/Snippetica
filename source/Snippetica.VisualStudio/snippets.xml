@@ -9223,6 +9223,7 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name a</Keyword>
@@ -9235,7 +9236,7 @@ finally
           <Default>#</Default>
         </Literal>
       </Declarations>
-      <Code Language="Html"><![CDATA[<a href="$href$">$end$</a>]]></Code>
+      <Code Language="Html"><![CDATA[<a href="$href$">$selected$$end$</a>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -9273,6 +9274,7 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name abbr</Keyword>
@@ -9285,7 +9287,7 @@ finally
           <Default>title</Default>
         </Literal>
       </Declarations>
-      <Code Language="Html"><![CDATA[<abbr title="$title$">$end$</abbr>]]></Code>
+      <Code Language="Html"><![CDATA[<abbr title="$title$">$selected$$end$</abbr>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -9323,6 +9325,7 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name acronym</Keyword>
@@ -9335,7 +9338,7 @@ finally
           <Default>title</Default>
         </Literal>
       </Declarations>
-      <Code Language="Html"><![CDATA[<acronym title="$title$">$end$</acronym>]]></Code>
+      <Code Language="Html"><![CDATA[<acronym title="$title$">$selected$$end$</acronym>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -9373,13 +9376,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name address</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<address>$end$</address>]]></Code>
+      <Code Language="Html"><![CDATA[<address>$selected$$end$</address>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -9413,6 +9417,7 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name applet</Keyword>
@@ -9429,7 +9434,7 @@ finally
           <Default>name</Default>
         </Literal>
       </Declarations>
-      <Code Language="Html"><![CDATA[<applet code="$code$" object="$object$">$end$</applet>]]></Code>
+      <Code Language="Html"><![CDATA[<applet code="$code$" object="$object$">$selected$$end$</applet>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -9494,13 +9499,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name article</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<article>$end$</article>]]></Code>
+      <Code Language="Html"><![CDATA[<article>$selected$$end$</article>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -9534,13 +9540,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name aside</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<aside>$end$</aside>]]></Code>
+      <Code Language="Html"><![CDATA[<aside>$selected$$end$</aside>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -9605,13 +9612,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name b</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<b>$end$</b>]]></Code>
+      <Code Language="Html"><![CDATA[<b>$selected$$end$</b>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -9695,13 +9703,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name bdi</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<bdi>$end$</bdi>]]></Code>
+      <Code Language="Html"><![CDATA[<bdi>$selected$$end$</bdi>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -9735,6 +9744,7 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name bdo</Keyword>
@@ -9748,7 +9758,7 @@ finally
           <Default>rtl</Default>
         </Literal>
       </Declarations>
-      <Code Language="Html"><![CDATA[<bdo dir="$dir$">$end$</bdo>]]></Code>
+      <Code Language="Html"><![CDATA[<bdo dir="$dir$">$selected$$end$</bdo>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -9787,13 +9797,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name big</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<big>$end$</big>]]></Code>
+      <Code Language="Html"><![CDATA[<big>$selected$$end$</big>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -9827,6 +9838,7 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name blockquote</Keyword>
@@ -9839,7 +9851,7 @@ finally
           <Default>url</Default>
         </Literal>
       </Declarations>
-      <Code Language="Html"><![CDATA[<blockquote cite="$cite$">$end$</blockquote>]]></Code>
+      <Code Language="Html"><![CDATA[<blockquote cite="$cite$">$selected$$end$</blockquote>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -9877,13 +9889,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name body</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<body>$end$</body>]]></Code>
+      <Code Language="Html"><![CDATA[<body>$selected$$end$</body>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -9934,6 +9947,7 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name button</Keyword>
@@ -9946,7 +9960,7 @@ finally
           <Default>button</Default>
         </Literal>
       </Declarations>
-      <Code Language="Html"><![CDATA[<button type="$type$">$end$</button>]]></Code>
+      <Code Language="Html"><![CDATA[<button type="$type$">$selected$$end$</button>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -9984,13 +9998,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name canvas</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<canvas>$end$</canvas>]]></Code>
+      <Code Language="Html"><![CDATA[<canvas>$selected$$end$</canvas>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -10024,13 +10039,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name caption</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<caption>$end$</caption>]]></Code>
+      <Code Language="Html"><![CDATA[<caption>$selected$$end$</caption>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -10100,13 +10116,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name center</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<center>$end$</center>]]></Code>
+      <Code Language="Html"><![CDATA[<center>$selected$$end$</center>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -10140,13 +10157,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name cite</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<cite>$end$</cite>]]></Code>
+      <Code Language="Html"><![CDATA[<cite>$selected$$end$</cite>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -10289,13 +10307,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name dd</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<dd>$end$</dd>]]></Code>
+      <Code Language="Html"><![CDATA[<dd>$selected$$end$</dd>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -10329,13 +10348,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name del</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<del>$end$</del>]]></Code>
+      <Code Language="Html"><![CDATA[<del>$selected$$end$</del>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -10421,13 +10441,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name dfn</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<dfn>$end$</dfn>]]></Code>
+      <Code Language="Html"><![CDATA[<dfn>$selected$$end$</dfn>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -10461,13 +10482,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name dialog</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<dialog open>$end$</dialog>]]></Code>
+      <Code Language="Html"><![CDATA[<dialog open>$selected$$end$</dialog>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -10501,6 +10523,7 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name dir</Keyword>
@@ -10508,7 +10531,7 @@ finally
     </Header>
     <Snippet>
       <Code Language="Html"><![CDATA[<dir>
-	<li>$end$</li>
+	<li>$selected$$end$</li>
 </dir>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -10545,13 +10568,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name div</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<div>$end$</div>]]></Code>
+      <Code Language="Html"><![CDATA[<div>$selected$$end$</div>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -10605,13 +10629,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name dt</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<dt>$end$</dt>]]></Code>
+      <Code Language="Html"><![CDATA[<dt>$selected$$end$</dt>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -10641,6 +10666,7 @@ finally
     <Header>
       <Title>element</Title>
       <Shortcut>e</Shortcut>
+      <Description>element</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -10667,7 +10693,7 @@ finally
     <Header>
       <Title>element (with attribute)</Title>
       <Shortcut>ea</Shortcut>
-      <Description> (with attribute)</Description>
+      <Description>element (with attribute)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -10704,7 +10730,7 @@ finally
     <Header>
       <Title>element (with attribute, with content)</Title>
       <Shortcut>eax</Shortcut>
-      <Description> (with attribute, with content)</Description>
+      <Description>element (with attribute, with content)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -10743,7 +10769,7 @@ finally
     <Header>
       <Title>element (with content)</Title>
       <Shortcut>ex</Shortcut>
-      <Description> (with content)</Description>
+      <Description>element (with content)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -10776,13 +10802,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name em</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<em>$end$</em>]]></Code>
+      <Code Language="Html"><![CDATA[<em>$selected$$end$</em>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -10839,6 +10866,7 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name fieldset</Keyword>
@@ -10846,7 +10874,7 @@ finally
     </Header>
     <Snippet>
       <Code Language="Html"><![CDATA[<fieldset>
-	<legend>$end$</legend>
+	<legend>$selected$$end$</legend>
 </fieldset>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -10917,6 +10945,7 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name font</Keyword>
@@ -10929,7 +10958,7 @@ finally
           <Default>attribute=""</Default>
         </Literal>
       </Declarations>
-      <Code Language="Html"><![CDATA[<font $attribute$>$end$</font>]]></Code>
+      <Code Language="Html"><![CDATA[<font $attribute$>$selected$$end$</font>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -10967,13 +10996,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name footer</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<footer>$end$</footer>]]></Code>
+      <Code Language="Html"><![CDATA[<footer>$selected$$end$</footer>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -11007,6 +11037,7 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name form</Keyword>
@@ -11023,7 +11054,7 @@ finally
           <Default>post</Default>
         </Literal>
       </Declarations>
-      <Code Language="Html"><![CDATA[<form action="$action$" method="$method$">$end$</form>]]></Code>
+      <Code Language="Html"><![CDATA[<form action="$action$" method="$method$">$selected$$end$</form>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -11088,13 +11119,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name frameset</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<frameset>$end$</frameset>]]></Code>
+      <Code Language="Html"><![CDATA[<frameset>$selected$$end$</frameset>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -11128,13 +11160,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name h1</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<h1>$end$</h1>]]></Code>
+      <Code Language="Html"><![CDATA[<h1>$selected$$end$</h1>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -11168,13 +11201,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name h2</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<h2>$end$</h2>]]></Code>
+      <Code Language="Html"><![CDATA[<h2>$selected$$end$</h2>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -11208,13 +11242,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name h3</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<h3>$end$</h3>]]></Code>
+      <Code Language="Html"><![CDATA[<h3>$selected$$end$</h3>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -11248,13 +11283,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name h4</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<h4>$end$</h4>]]></Code>
+      <Code Language="Html"><![CDATA[<h4>$selected$$end$</h4>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -11288,13 +11324,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name h5</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<h5>$end$</h5>]]></Code>
+      <Code Language="Html"><![CDATA[<h5>$selected$$end$</h5>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -11328,13 +11365,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name h6</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<h6>$end$</h6>]]></Code>
+      <Code Language="Html"><![CDATA[<h6>$selected$$end$</h6>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -11368,13 +11406,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name head</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<head>$end$</head>]]></Code>
+      <Code Language="Html"><![CDATA[<head>$selected$$end$</head>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -11408,13 +11447,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name header</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<header>$end$</header>]]></Code>
+      <Code Language="Html"><![CDATA[<header>$selected$$end$</header>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -11495,13 +11535,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name i</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<i>$end$</i>]]></Code>
+      <Code Language="Html"><![CDATA[<i>$selected$$end$</i>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -11535,6 +11576,7 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name iframe</Keyword>
@@ -11547,7 +11589,7 @@ finally
           <Default>url</Default>
         </Literal>
       </Declarations>
-      <Code Language="Html"><![CDATA[<iframe scr="$src$">$end$</iframe>]]></Code>
+      <Code Language="Html"><![CDATA[<iframe scr="$src$">$selected$$end$</iframe>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -11643,13 +11685,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name ins</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<ins>$end$</ins>]]></Code>
+      <Code Language="Html"><![CDATA[<ins>$selected$$end$</ins>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -11683,13 +11726,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name kbd</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<kbd>$end$</kbd>]]></Code>
+      <Code Language="Html"><![CDATA[<kbd>$selected$$end$</kbd>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -11746,6 +11790,7 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name label</Keyword>
@@ -11758,7 +11803,7 @@ finally
           <Default>for</Default>
         </Literal>
       </Declarations>
-      <Code Language="Html"><![CDATA[<label for="$for$">$end$</label>]]></Code>
+      <Code Language="Html"><![CDATA[<label for="$for$">$selected$$end$</label>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -11796,13 +11841,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name legend</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<legend>$end$</legend>]]></Code>
+      <Code Language="Html"><![CDATA[<legend>$selected$$end$</legend>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -11836,13 +11882,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name li</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<li>$end$</li>]]></Code>
+      <Code Language="Html"><![CDATA[<li>$selected$$end$</li>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -11907,13 +11954,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name main</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<main>$end$</main>]]></Code>
+      <Code Language="Html"><![CDATA[<main>$selected$$end$</main>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -11972,13 +12020,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name mark</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<mark>$end$</mark>]]></Code>
+      <Code Language="Html"><![CDATA[<mark>$selected$$end$</mark>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -12012,13 +12061,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name menu</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<menu>$end$</menu>]]></Code>
+      <Code Language="Html"><![CDATA[<menu>$selected$$end$</menu>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -12098,6 +12148,7 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name meter</Keyword>
@@ -12110,7 +12161,7 @@ finally
           <Default>0</Default>
         </Literal>
       </Declarations>
-      <Code Language="Html"><![CDATA[<meter value="$value$">$end$</meter>]]></Code>
+      <Code Language="Html"><![CDATA[<meter value="$value$">$selected$$end$</meter>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -12148,13 +12199,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name nav</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<nav>$end$</nav>]]></Code>
+      <Code Language="Html"><![CDATA[<nav>$selected$$end$</nav>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -12188,13 +12240,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name noframes</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<noframes>$end$</noframes>]]></Code>
+      <Code Language="Html"><![CDATA[<noframes>$selected$$end$</noframes>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -12228,13 +12281,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name noscript</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<noscript>$end$</noscript>]]></Code>
+      <Code Language="Html"><![CDATA[<noscript>$selected$$end$</noscript>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -12268,6 +12322,7 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name object</Keyword>
@@ -12280,7 +12335,7 @@ finally
           <Default>data=""</Default>
         </Literal>
       </Declarations>
-      <Code Language="Html"><![CDATA[<object $attributes$>$end$</object>]]></Code>
+      <Code Language="Html"><![CDATA[<object $attributes$>$selected$$end$</object>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -12318,6 +12373,7 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name ol</Keyword>
@@ -12325,7 +12381,7 @@ finally
     </Header>
     <Snippet>
       <Code Language="Html"><![CDATA[<ol>
-	<li>$end$</li>
+	<li>$selected$$end$</li>
 </ol>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -12362,6 +12418,7 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name optgroup</Keyword>
@@ -12375,7 +12432,7 @@ finally
         </Literal>
       </Declarations>
       <Code Language="Html"><![CDATA[<optgroup>
-	<option value="$value$">$end$</option>
+	<option value="$value$">$selected$$end$</option>
 </optgroup>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -12416,6 +12473,7 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name option</Keyword>
@@ -12428,7 +12486,7 @@ finally
           <Default>value</Default>
         </Literal>
       </Declarations>
-      <Code Language="Html"><![CDATA[<option value="$value$">$end$</option>]]></Code>
+      <Code Language="Html"><![CDATA[<option value="$value$">$selected$$end$</option>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -12493,13 +12551,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name p</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<p>$end$</p>]]></Code>
+      <Code Language="Html"><![CDATA[<p>$selected$$end$</p>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -12560,13 +12619,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name pre</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<pre>$end$</pre>]]></Code>
+      <Code Language="Html"><![CDATA[<pre>$selected$$end$</pre>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -12600,6 +12660,7 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name progress</Keyword>
@@ -12616,7 +12677,7 @@ finally
           <Default>0</Default>
         </Literal>
       </Declarations>
-      <Code Language="Html"><![CDATA[<progress value="$value$" value="$max$">$end$</progress>]]></Code>
+      <Code Language="Html"><![CDATA[<progress value="$value$" value="$max$">$selected$$end$</progress>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -12658,13 +12719,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name q</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<q>$end$</q>]]></Code>
+      <Code Language="Html"><![CDATA[<q>$selected$$end$</q>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -12723,13 +12785,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name rp</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<rp>$end$</rp>]]></Code>
+      <Code Language="Html"><![CDATA[<rp>$selected$$end$</rp>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -12763,13 +12826,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name rt</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<rt>$end$</rt>]]></Code>
+      <Code Language="Html"><![CDATA[<rt>$selected$$end$</rt>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -12803,13 +12867,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name ruby</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<ruby>$end$</ruby>]]></Code>
+      <Code Language="Html"><![CDATA[<ruby>$selected$$end$</ruby>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -12843,13 +12908,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name s</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<s>$end$</s>]]></Code>
+      <Code Language="Html"><![CDATA[<s>$selected$$end$</s>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -12883,13 +12949,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name samp</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<samp>$end$</samp>]]></Code>
+      <Code Language="Html"><![CDATA[<samp>$selected$$end$</samp>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -12923,13 +12990,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name script</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<script>$end$</script>]]></Code>
+      <Code Language="Html"><![CDATA[<script>$selected$$end$</script>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -12963,13 +13031,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name section</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<section>$end$</section>]]></Code>
+      <Code Language="Html"><![CDATA[<section>$selected$$end$</section>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13003,6 +13072,7 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name select</Keyword>
@@ -13016,7 +13086,7 @@ finally
         </Literal>
       </Declarations>
       <Code Language="Html"><![CDATA[<select>
-	<option value="$value$">$end$</option>
+	<option value="$value$">$selected$$end$</option>
 </select>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -13115,13 +13185,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name small</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<small>$end$</small>]]></Code>
+      <Code Language="Html"><![CDATA[<small>$selected$$end$</small>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13182,13 +13253,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name span</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<span>$end$</span>]]></Code>
+      <Code Language="Html"><![CDATA[<span>$selected$$end$</span>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13222,13 +13294,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name strike</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<strike>$end$</strike>]]></Code>
+      <Code Language="Html"><![CDATA[<strike>$selected$$end$</strike>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13262,13 +13335,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name strong</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<strong>$end$</strong>]]></Code>
+      <Code Language="Html"><![CDATA[<strong>$selected$$end$</strong>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13302,13 +13376,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name style</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<style>$end$</style>]]></Code>
+      <Code Language="Html"><![CDATA[<style>$selected$$end$</style>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13342,13 +13417,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name sub</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<sub>$end$</sub>]]></Code>
+      <Code Language="Html"><![CDATA[<sub>$selected$$end$</sub>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13382,13 +13458,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name summary</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<summary>$end$</summary>]]></Code>
+      <Code Language="Html"><![CDATA[<summary>$selected$$end$</summary>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13422,13 +13499,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name sup</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<sup>$end$</sup>]]></Code>
+      <Code Language="Html"><![CDATA[<sup>$selected$$end$</sup>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13487,13 +13565,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name tbody</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<tbody>$end$</tbody>]]></Code>
+      <Code Language="Html"><![CDATA[<tbody>$selected$$end$</tbody>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13527,13 +13606,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name td</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<td>$end$</td>]]></Code>
+      <Code Language="Html"><![CDATA[<td>$selected$$end$</td>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13567,13 +13647,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name textarea</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<textarea>$end$</textarea>]]></Code>
+      <Code Language="Html"><![CDATA[<textarea>$selected$$end$</textarea>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13607,13 +13688,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name tfoot</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<tfoot>$end$</tfoot>]]></Code>
+      <Code Language="Html"><![CDATA[<tfoot>$selected$$end$</tfoot>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13647,13 +13729,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name th</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<th>$end$</th>]]></Code>
+      <Code Language="Html"><![CDATA[<th>$selected$$end$</th>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13687,13 +13770,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name thead</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<thead>$end$</thead>]]></Code>
+      <Code Language="Html"><![CDATA[<thead>$selected$$end$</thead>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13727,6 +13811,7 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name time</Keyword>
@@ -13740,7 +13825,7 @@ finally
           <Default>datetime</Default>
         </Literal>
       </Declarations>
-      <Code Language="Html"><![CDATA[<time datetime="$datetime$">$end$</time>]]></Code>
+      <Code Language="Html"><![CDATA[<time datetime="$datetime$">$selected$$end$</time>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13779,13 +13864,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name title</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<title>$end$</title>]]></Code>
+      <Code Language="Html"><![CDATA[<title>$selected$$end$</title>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13819,13 +13905,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name tr</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<tr>$end$</tr>]]></Code>
+      <Code Language="Html"><![CDATA[<tr>$selected$$end$</tr>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13882,13 +13969,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name tt</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<tt>$end$</tt>]]></Code>
+      <Code Language="Html"><![CDATA[<tt>$selected$$end$</tt>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13922,13 +14010,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name u</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<u>$end$</u>]]></Code>
+      <Code Language="Html"><![CDATA[<u>$selected$$end$</u>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13962,6 +14051,7 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name ul</Keyword>
@@ -13969,7 +14059,7 @@ finally
     </Header>
     <Snippet>
       <Code Language="Html"><![CDATA[<ul>
-	<li>$end$</li>
+	<li>$selected$$end$</li>
 </ul>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -14006,13 +14096,14 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name var</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<var>$end$</var>]]></Code>
+      <Code Language="Html"><![CDATA[<var>$selected$$end$</var>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -14065,6 +14156,7 @@ finally
         </Literal>
       </Declarations>
       <Code Language="Html"><![CDATA[<video controls="controls">
+	$selected$
 	<source src="$src$" type="$type$">$end$
 </video>]]></Code>
     </Snippet>
@@ -22274,13 +22366,14 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name Button</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<Button>$end$</Button>]]></Code>
+      <Code Language="Xaml"><![CDATA[<Button>$selected$$end$</Button>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -22291,13 +22384,14 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name Button_</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<Button>$end$</Button>]]></Code>
+      <Code Language="Xaml"><![CDATA[<Button>$selected$$end$</Button>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -22308,13 +22402,14 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name Canvas</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<Canvas>$end$</Canvas>]]></Code>
+      <Code Language="Xaml"><![CDATA[<Canvas>$selected$$end$</Canvas>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -22325,13 +22420,14 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name Canvas_</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<Canvas>$end$</Canvas>]]></Code>
+      <Code Language="Xaml"><![CDATA[<Canvas>$selected$$end$</Canvas>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -22426,6 +22522,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name ComboBox</Keyword>
@@ -22439,7 +22536,7 @@ End Using]]></Code>
           <Default>Binding</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<ComboBox ItemsSource="{Binding $binding$}">$end$</ComboBox>]]></Code>
+      <Code Language="Xaml"><![CDATA[<ComboBox ItemsSource="{Binding $binding$}">$selected$$end$</ComboBox>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -22450,6 +22547,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name ComboBox_</Keyword>
@@ -22463,7 +22561,7 @@ End Using]]></Code>
           <Default>Binding</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<ComboBox ItemsSource="{Binding $binding$}">$end$</ComboBox>]]></Code>
+      <Code Language="Xaml"><![CDATA[<ComboBox ItemsSource="{Binding $binding$}">$selected$$end$</ComboBox>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -22499,13 +22597,14 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name ContentControl</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<ContentControl>$end$</ContentControl>]]></Code>
+      <Code Language="Xaml"><![CDATA[<ContentControl>$selected$$end$</ContentControl>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -22516,13 +22615,14 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name ContentControl_</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<ContentControl>$end$</ContentControl>]]></Code>
+      <Code Language="Xaml"><![CDATA[<ContentControl>$selected$$end$</ContentControl>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -22533,6 +22633,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name ContextMenu</Keyword>
@@ -22547,6 +22648,7 @@ End Using]]></Code>
         </Literal>
       </Declarations>
       <Code Language="Xaml"><![CDATA[<ContextMenu>
+	$selected$
 	<MenuItem Header="$header$">
 	</MenuItem>
 	<Separator />
@@ -22561,6 +22663,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name ContextMenu_</Keyword>
@@ -22575,6 +22678,7 @@ End Using]]></Code>
         </Literal>
       </Declarations>
       <Code Language="Xaml"><![CDATA[<ContextMenu>
+	$selected$
 	<MenuItem Header="$header$">
 	</MenuItem>
 	<Separator />
@@ -22589,6 +22693,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name ControlTemplate</Keyword>
@@ -22602,7 +22707,7 @@ End Using]]></Code>
           <Default>TypeName</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<ControlTemplate TargetType="{x:Type $type$}">$end$</ControlTemplate>]]></Code>
+      <Code Language="Xaml"><![CDATA[<ControlTemplate TargetType="{x:Type $type$}">$selected$$end$</ControlTemplate>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -22613,6 +22718,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name ControlTemplate_</Keyword>
@@ -22626,7 +22732,7 @@ End Using]]></Code>
           <Default>TypeName</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<ControlTemplate TargetType="{x:Type $type$}">$end$</ControlTemplate>]]></Code>
+      <Code Language="Xaml"><![CDATA[<ControlTemplate TargetType="{x:Type $type$}">$selected$$end$</ControlTemplate>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -22637,6 +22743,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name DataGrid</Keyword>
@@ -22652,7 +22759,7 @@ End Using]]></Code>
       </Declarations>
       <Code Language="Xaml"><![CDATA[<DataGrid ItemsSource="{Binding $binding$}">
 	<DataGrid.Columns>
-	</DataGrid.Columns>$end$
+	</DataGrid.Columns>$selected$$end$
 </DataGrid>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -22664,6 +22771,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name DataGrid_</Keyword>
@@ -22679,7 +22787,7 @@ End Using]]></Code>
       </Declarations>
       <Code Language="Xaml"><![CDATA[<DataGrid ItemsSource="{Binding $binding$}">
 	<DataGrid.Columns>
-	</DataGrid.Columns>$end$
+	</DataGrid.Columns>$selected$$end$
 </DataGrid>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -22751,6 +22859,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name DataGridCheckBoxColumn</Keyword>
@@ -22770,7 +22879,7 @@ End Using]]></Code>
           <Default>HeaderText</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<DataGridCheckBoxColumn Header="$header$" Binding="{Binding $binding$}">$end$</DataGridCheckBoxColumn>]]></Code>
+      <Code Language="Xaml"><![CDATA[<DataGridCheckBoxColumn Header="$header$" Binding="{Binding $binding$}">$selected$$end$</DataGridCheckBoxColumn>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -22781,6 +22890,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name DataGridCheckBoxColumn_</Keyword>
@@ -22800,7 +22910,7 @@ End Using]]></Code>
           <Default>HeaderText</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<DataGridCheckBoxColumn Header="$header$" Binding="{Binding $binding$}">$end$</DataGridCheckBoxColumn>]]></Code>
+      <Code Language="Xaml"><![CDATA[<DataGridCheckBoxColumn Header="$header$" Binding="{Binding $binding$}">$selected$$end$</DataGridCheckBoxColumn>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -22811,6 +22921,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name DataGridTextColumn</Keyword>
@@ -22830,7 +22941,7 @@ End Using]]></Code>
           <Default>HeaderText</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<DataGridTextColumn Header="$header$" Binding="{Binding $binding$}">$end$</DataGridTextColumn>]]></Code>
+      <Code Language="Xaml"><![CDATA[<DataGridTextColumn Header="$header$" Binding="{Binding $binding$}">$selected$$end$</DataGridTextColumn>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -22841,6 +22952,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name DataGridTextColumn_</Keyword>
@@ -22860,7 +22972,7 @@ End Using]]></Code>
           <Default>HeaderText</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<DataGridTextColumn Header="$header$" Binding="{Binding $binding$}">$end$</DataGridTextColumn>]]></Code>
+      <Code Language="Xaml"><![CDATA[<DataGridTextColumn Header="$header$" Binding="{Binding $binding$}">$selected$$end$</DataGridTextColumn>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -22871,6 +22983,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name DataTemplate</Keyword>
@@ -22889,7 +23002,7 @@ End Using]]></Code>
           <Default>key</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<DataTemplate x:Key="$key$" $dataType$>$end$</DataTemplate>]]></Code>
+      <Code Language="Xaml"><![CDATA[<DataTemplate x:Key="$key$" $dataType$>$selected$$end$</DataTemplate>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -22900,6 +23013,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name DataTemplate_</Keyword>
@@ -22918,7 +23032,7 @@ End Using]]></Code>
           <Default>key</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<DataTemplate x:Key="$key$" $dataType$>$end$</DataTemplate>]]></Code>
+      <Code Language="Xaml"><![CDATA[<DataTemplate x:Key="$key$" $dataType$>$selected$$end$</DataTemplate>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -22929,6 +23043,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name DockPanel</Keyword>
@@ -22936,7 +23051,7 @@ End Using]]></Code>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<DockPanel>$end$</DockPanel>]]></Code>
+      <Code Language="Xaml"><![CDATA[<DockPanel>$selected$$end$</DockPanel>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -22947,6 +23062,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name DockPanel_</Keyword>
@@ -22954,7 +23070,7 @@ End Using]]></Code>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<DockPanel>$end$</DockPanel>]]></Code>
+      <Code Language="Xaml"><![CDATA[<DockPanel>$selected$$end$</DockPanel>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -23015,6 +23131,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name DockPanelLastChildFill</Keyword>
@@ -23022,7 +23139,7 @@ End Using]]></Code>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<DockPanel LastChildFill="False">$end$</DockPanel>]]></Code>
+      <Code Language="Xaml"><![CDATA[<DockPanel LastChildFill="False">$selected$$end$</DockPanel>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -23033,6 +23150,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name DockPanelLastChildFill_</Keyword>
@@ -23040,13 +23158,14 @@ End Using]]></Code>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<DockPanel LastChildFill="False">$end$</DockPanel>]]></Code>
+      <Code Language="Xaml"><![CDATA[<DockPanel LastChildFill="False">$selected$$end$</DockPanel>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>element</Title>
       <Shortcut>e</Shortcut>
+      <Description>element</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -23073,7 +23192,7 @@ End Using]]></Code>
     <Header>
       <Title>element (with attribute)</Title>
       <Shortcut>ea</Shortcut>
-      <Description> (with attribute)</Description>
+      <Description>element (with attribute)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -23110,7 +23229,7 @@ End Using]]></Code>
     <Header>
       <Title>element (with attribute, with content)</Title>
       <Shortcut>eax</Shortcut>
-      <Description> (with attribute, with content)</Description>
+      <Description>element (with attribute, with content)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -23149,7 +23268,7 @@ End Using]]></Code>
     <Header>
       <Title>element (with content)</Title>
       <Shortcut>ex</Shortcut>
-      <Description> (with content)</Description>
+      <Description>element (with content)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -23182,6 +23301,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name Grid</Keyword>
@@ -23194,7 +23314,7 @@ End Using]]></Code>
 	</Grid.RowDefinitions>
 	<Grid.ColumnDefinitions>
 		<ColumnDefinition Width="Auto" />
-	</Grid.ColumnDefinitions>$end$
+	</Grid.ColumnDefinitions>$selected$$end$
 </Grid>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -23206,6 +23326,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name Grid_</Keyword>
@@ -23218,7 +23339,7 @@ End Using]]></Code>
 	</Grid.RowDefinitions>
 	<Grid.ColumnDefinitions>
 		<ColumnDefinition Width="Auto" />
-	</Grid.ColumnDefinitions>$end$
+	</Grid.ColumnDefinitions>$selected$$end$
 </Grid>]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -23388,6 +23509,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name GroupBox</Keyword>
@@ -23401,7 +23523,7 @@ End Using]]></Code>
           <Default>HeaderText</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<GroupBox Header="$header$">$end$</GroupBox>]]></Code>
+      <Code Language="Xaml"><![CDATA[<GroupBox Header="$header$">$selected$$end$</GroupBox>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -23412,6 +23534,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name GroupBox_</Keyword>
@@ -23425,7 +23548,7 @@ End Using]]></Code>
           <Default>HeaderText</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<GroupBox Header="$header$">$end$</GroupBox>]]></Code>
+      <Code Language="Xaml"><![CDATA[<GroupBox Header="$header$">$selected$$end$</GroupBox>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -23436,6 +23559,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name HierarchicalDataTemplate</Keyword>
@@ -23454,7 +23578,7 @@ End Using]]></Code>
           <Default>Type</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<HierarchicalDataTemplate DataType="{x:Type $dataType$}" ItemsSource="{Binding $binding$}">$end$</HierarchicalDataTemplate>]]></Code>
+      <Code Language="Xaml"><![CDATA[<HierarchicalDataTemplate DataType="{x:Type $dataType$}" ItemsSource="{Binding $binding$}">$selected$$end$</HierarchicalDataTemplate>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -23465,6 +23589,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name HierarchicalDataTemplate_</Keyword>
@@ -23483,7 +23608,7 @@ End Using]]></Code>
           <Default>Type</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<HierarchicalDataTemplate DataType="{x:Type $dataType$}" ItemsSource="{Binding $binding$}">$end$</HierarchicalDataTemplate>]]></Code>
+      <Code Language="Xaml"><![CDATA[<HierarchicalDataTemplate DataType="{x:Type $dataType$}" ItemsSource="{Binding $binding$}">$selected$$end$</HierarchicalDataTemplate>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -23494,6 +23619,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name CheckBox</Keyword>
@@ -23512,7 +23638,7 @@ End Using]]></Code>
           <Default>Content</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<CheckBox IsChecked="{Binding $binding$}">$content$</CheckBox>$end$]]></Code>
+      <Code Language="Xaml"><![CDATA[<CheckBox IsChecked="{Binding $binding$}">$selected$$content$</CheckBox>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -23523,6 +23649,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name CheckBox_</Keyword>
@@ -23541,7 +23668,7 @@ End Using]]></Code>
           <Default>Content</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<CheckBox IsChecked="{Binding $binding$}">$content$</CheckBox>$end$]]></Code>
+      <Code Language="Xaml"><![CDATA[<CheckBox IsChecked="{Binding $binding$}">$selected$$content$</CheckBox>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -23668,6 +23795,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name Label</Keyword>
@@ -23681,7 +23809,7 @@ End Using]]></Code>
           <Default>Content</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<Label>$content$</Label>$end$]]></Code>
+      <Code Language="Xaml"><![CDATA[<Label>$selected$$content$</Label>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -23692,6 +23820,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name Label_</Keyword>
@@ -23705,7 +23834,7 @@ End Using]]></Code>
           <Default>Content</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<Label>$content$</Label>$end$]]></Code>
+      <Code Language="Xaml"><![CDATA[<Label>$selected$$content$</Label>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -23716,6 +23845,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name ListBox</Keyword>
@@ -23729,7 +23859,7 @@ End Using]]></Code>
           <Default>Binding</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<ListBox ItemsSource="{Binding $binding$}">$end$</ListBox>]]></Code>
+      <Code Language="Xaml"><![CDATA[<ListBox ItemsSource="{Binding $binding$}">$selected$$end$</ListBox>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -23740,6 +23870,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name ListBox_</Keyword>
@@ -23753,7 +23884,7 @@ End Using]]></Code>
           <Default>Binding</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<ListBox ItemsSource="{Binding $binding$}">$end$</ListBox>]]></Code>
+      <Code Language="Xaml"><![CDATA[<ListBox ItemsSource="{Binding $binding$}">$selected$$end$</ListBox>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -23764,6 +23895,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name ListView</Keyword>
@@ -23779,7 +23911,7 @@ End Using]]></Code>
       </Declarations>
       <Code Language="Xaml"><![CDATA[<ListView ItemsSource="{Binding $binding$}">
 	<ListView.View>
-		<GridView>$end$
+		<GridView>$selected$$end$
 		</GridView>
 	</ListView.View>
 </ListView>]]></Code>
@@ -23793,6 +23925,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name ListView_</Keyword>
@@ -23808,7 +23941,7 @@ End Using]]></Code>
       </Declarations>
       <Code Language="Xaml"><![CDATA[<ListView ItemsSource="{Binding $binding$}">
 	<ListView.View>
-		<GridView>$end$
+		<GridView>$selected$$end$
 		</GridView>
 	</ListView.View>
 </ListView>]]></Code>
@@ -23822,6 +23955,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name MenuItem</Keyword>
@@ -23835,7 +23969,7 @@ End Using]]></Code>
           <Default>HeaderText</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<MenuItem Header="$header$"></MenuItem>$end$]]></Code>
+      <Code Language="Xaml"><![CDATA[<MenuItem Header="$header$">$selected$$end$</MenuItem>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -23846,6 +23980,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name MenuItem_</Keyword>
@@ -23859,7 +23994,7 @@ End Using]]></Code>
           <Default>HeaderText</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<MenuItem Header="$header$"></MenuItem>$end$]]></Code>
+      <Code Language="Xaml"><![CDATA[<MenuItem Header="$header$">$selected$$end$</MenuItem>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -24034,6 +24169,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name StackPanel</Keyword>
@@ -24041,7 +24177,7 @@ End Using]]></Code>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<StackPanel>$end$</StackPanel>]]></Code>
+      <Code Language="Xaml"><![CDATA[<StackPanel>$selected$$end$</StackPanel>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -24052,6 +24188,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name StackPanel_</Keyword>
@@ -24059,7 +24196,7 @@ End Using]]></Code>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<StackPanel>$end$</StackPanel>]]></Code>
+      <Code Language="Xaml"><![CDATA[<StackPanel>$selected$$end$</StackPanel>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -24070,6 +24207,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name StackPanelHorizontal</Keyword>
@@ -24077,7 +24215,7 @@ End Using]]></Code>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<StackPanel Orientation="Horizontal">$end$</StackPanel>]]></Code>
+      <Code Language="Xaml"><![CDATA[<StackPanel Orientation="Horizontal">$selected$$end$</StackPanel>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -24088,6 +24226,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name StackPanelHorizontal_</Keyword>
@@ -24095,7 +24234,7 @@ End Using]]></Code>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<StackPanel Orientation="Horizontal">$end$</StackPanel>]]></Code>
+      <Code Language="Xaml"><![CDATA[<StackPanel Orientation="Horizontal">$selected$$end$</StackPanel>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -24106,6 +24245,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name StackPanelVertical</Keyword>
@@ -24113,7 +24253,7 @@ End Using]]></Code>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<StackPanel Orientation="Vertical">$end$</StackPanel>]]></Code>
+      <Code Language="Xaml"><![CDATA[<StackPanel Orientation="Vertical">$selected$$end$</StackPanel>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -24124,6 +24264,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name StackPanelVertical_</Keyword>
@@ -24131,7 +24272,7 @@ End Using]]></Code>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<StackPanel Orientation="Vertical">$end$</StackPanel>]]></Code>
+      <Code Language="Xaml"><![CDATA[<StackPanel Orientation="Vertical">$selected$$end$</StackPanel>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -24142,6 +24283,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name TabControl</Keyword>
@@ -24155,7 +24297,7 @@ End Using]]></Code>
           <Default>Binding</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<TabControl ItemsSource="{Binding $binding$}">$end$</TabControl>]]></Code>
+      <Code Language="Xaml"><![CDATA[<TabControl ItemsSource="{Binding $binding$}">$selected$$end$</TabControl>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -24166,6 +24308,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name TabControl_</Keyword>
@@ -24179,7 +24322,7 @@ End Using]]></Code>
           <Default>Binding</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<TabControl ItemsSource="{Binding $binding$}">$end$</TabControl>]]></Code>
+      <Code Language="Xaml"><![CDATA[<TabControl ItemsSource="{Binding $binding$}">$selected$$end$</TabControl>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -24190,6 +24333,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name TabItem</Keyword>
@@ -24203,7 +24347,7 @@ End Using]]></Code>
           <Default>HeaderText</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<TabItem Header="$header$">$end$</TabItem>]]></Code>
+      <Code Language="Xaml"><![CDATA[<TabItem Header="$header$">$selected$$end$</TabItem>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -24214,6 +24358,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name TabItem_</Keyword>
@@ -24227,7 +24372,7 @@ End Using]]></Code>
           <Default>HeaderText</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<TabItem Header="$header$">$end$</TabItem>]]></Code>
+      <Code Language="Xaml"><![CDATA[<TabItem Header="$header$">$selected$$end$</TabItem>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -24238,6 +24383,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name TextBlock</Keyword>
@@ -24251,7 +24397,7 @@ End Using]]></Code>
           <Default>Binding</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<TextBlock Text="{Binding $binding$}">$end$</TextBlock>]]></Code>
+      <Code Language="Xaml"><![CDATA[<TextBlock Text="{Binding $binding$}">$selected$$end$</TextBlock>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -24262,6 +24408,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name TextBlock_</Keyword>
@@ -24275,7 +24422,7 @@ End Using]]></Code>
           <Default>Binding</Default>
         </Literal>
       </Declarations>
-      <Code Language="Xaml"><![CDATA[<TextBlock Text="{Binding $binding$}">$end$</TextBlock>]]></Code>
+      <Code Language="Xaml"><![CDATA[<TextBlock Text="{Binding $binding$}">$selected$$end$</TextBlock>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -24286,13 +24433,14 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name TextBox</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<TextBox>$end$</TextBox>]]></Code>
+      <Code Language="Xaml"><![CDATA[<TextBox>$selected$$end$</TextBox>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -24303,13 +24451,14 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name TextBox_</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<TextBox>$end$</TextBox>]]></Code>
+      <Code Language="Xaml"><![CDATA[<TextBox>$selected$$end$</TextBox>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -24320,13 +24469,14 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name UniformGrid</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<UniformGrid>$end$</UniformGrid>]]></Code>
+      <Code Language="Xaml"><![CDATA[<UniformGrid>$selected$$end$</UniformGrid>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -24337,13 +24487,14 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name UniformGrid_</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<UniformGrid>$end$</UniformGrid>]]></Code>
+      <Code Language="Xaml"><![CDATA[<UniformGrid>$selected$$end$</UniformGrid>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -24354,6 +24505,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name WrapPanel</Keyword>
@@ -24361,7 +24513,7 @@ End Using]]></Code>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<WrapPanel>$end$</WrapPanel>]]></Code>
+      <Code Language="Xaml"><![CDATA[<WrapPanel>$selected$$end$</WrapPanel>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -24372,6 +24524,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name WrapPanel_</Keyword>
@@ -24379,7 +24532,7 @@ End Using]]></Code>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<WrapPanel>$end$</WrapPanel>]]></Code>
+      <Code Language="Xaml"><![CDATA[<WrapPanel>$selected$$end$</WrapPanel>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -24390,6 +24543,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name WrapPanelHorizontal</Keyword>
@@ -24397,7 +24551,7 @@ End Using]]></Code>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<WrapPanel Orientation="Horizontal">$end$</WrapPanel>]]></Code>
+      <Code Language="Xaml"><![CDATA[<WrapPanel Orientation="Horizontal">$selected$$end$</WrapPanel>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -24408,6 +24562,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name WrapPanelHorizontal_</Keyword>
@@ -24415,7 +24570,7 @@ End Using]]></Code>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<WrapPanel Orientation="Horizontal">$end$</WrapPanel>]]></Code>
+      <Code Language="Xaml"><![CDATA[<WrapPanel Orientation="Horizontal">$selected$$end$</WrapPanel>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -24426,6 +24581,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name WrapPanelVertical</Keyword>
@@ -24433,7 +24589,7 @@ End Using]]></Code>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<WrapPanel Orientation="Vertical">$end$</WrapPanel>]]></Code>
+      <Code Language="Xaml"><![CDATA[<WrapPanel Orientation="Vertical">$selected$$end$</WrapPanel>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -24444,6 +24600,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name WrapPanelVertical_</Keyword>
@@ -24451,7 +24608,7 @@ End Using]]></Code>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Xaml"><![CDATA[<WrapPanel Orientation="Vertical">$end$</WrapPanel>]]></Code>
+      <Code Language="Xaml"><![CDATA[<WrapPanel Orientation="Vertical">$selected$$end$</WrapPanel>]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -25164,6 +25321,7 @@ End Using]]></Code>
     <Header>
       <Title>element</Title>
       <Shortcut>e</Shortcut>
+      <Description>element</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -25190,7 +25348,7 @@ End Using]]></Code>
     <Header>
       <Title>element (with attribute)</Title>
       <Shortcut>ea</Shortcut>
-      <Description> (with attribute)</Description>
+      <Description>element (with attribute)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -25227,7 +25385,7 @@ End Using]]></Code>
     <Header>
       <Title>element (with attribute, with content)</Title>
       <Shortcut>eax</Shortcut>
-      <Description> (with attribute, with content)</Description>
+      <Description>element (with attribute, with content)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -25266,7 +25424,7 @@ End Using]]></Code>
     <Header>
       <Title>element (with content)</Title>
       <Shortcut>ex</Shortcut>
-      <Description> (with content)</Description>
+      <Description>element (with content)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>

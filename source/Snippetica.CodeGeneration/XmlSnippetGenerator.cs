@@ -110,6 +110,8 @@ namespace Snippetica.CodeGeneration
                 Shortcut = ElementShortcut
             };
 
+            s.Description = s.Title;
+
             s.AddLiteral(CreateElementNameLiteral());
 
             s.AddLiteral(CreateContentLiteral());

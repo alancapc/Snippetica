@@ -2,21 +2,21 @@
   "array": {
     "prefix": "a",
     "body": [
-      "\"${1:name}\": [ ${0} ]"
+      "\"${1:name}\": [ ${TM_SELECTED_TEXT}${0} ]"
     ],
     "description": "array"
   },
   "empty array": {
     "prefix": "ea",
     "body": [
-      "[ ${0}]"
+      "[ ${TM_SELECTED_TEXT}${0}]"
     ],
     "description": "empty array"
   },
   "empty object": {
     "prefix": "eo",
     "body": [
-      "{ ${0}}"
+      "{ ${TM_SELECTED_TEXT}${0}}"
     ],
     "description": "empty object"
   },
@@ -37,7 +37,7 @@
   "object": {
     "prefix": "o",
     "body": [
-      "\"${1:name}\": { ${0} }"
+      "\"${1:name}\": { ${TM_SELECTED_TEXT}${0} }"
     ],
     "description": "object"
   },

@@ -11,7 +11,7 @@ namespace Snippetica.CodeGeneration
         {
             var jobs = new JobCollection();
 
-            if (snippet.Literals.Find("content") != null)
+            if (snippet.Literals.Contains("content"))
             {
                 jobs.Add(new Job(new HtmlWithContentCommand()));
                 jobs.Add(new Job(new HtmlWithoutContentCommand()));

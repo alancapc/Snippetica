@@ -7,6 +7,7 @@
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
     </SnippetTypes>
     <Keywords>
       <Keyword>Meta-GenerateAlternativeShortcut</Keyword>
@@ -20,6 +21,6 @@
         <Default>HeaderText</Default>
       </Literal>
     </Declarations>
-    <Code Language="Xaml"><![CDATA[<MenuItem Header="$header$"></MenuItem>$end$]]></Code>
+    <Code Language="Xaml"><![CDATA[<MenuItem Header="$header$">$selected$$end$</MenuItem>]]></Code>
   </Snippet>
 </CodeSnippet>

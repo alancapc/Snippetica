@@ -2,21 +2,21 @@
   "bold": {
     "prefix": "b",
     "body": [
-      "**${1:x}**${0}"
+      "**${TM_SELECTED_TEXT}${1:x}**${0}"
     ],
     "description": "bold"
   },
   "bold italic": {
     "prefix": "bi",
     "body": [
-      "**_${1:x}_**${0}"
+      "**_${TM_SELECTED_TEXT}${1:x}_**${0}"
     ],
     "description": "bold italic"
   },
   "code": {
     "prefix": "c",
     "body": [
-      "`${1:x}`${0}"
+      "`${TM_SELECTED_TEXT}${1:x}`${0}"
     ],
     "description": "code"
   },
@@ -24,7 +24,7 @@
     "prefix": "cc",
     "body": [
       "```",
-      "${1:x}",
+      "${TM_SELECTED_TEXT}${1:x}",
       "```${0}"
     ],
     "description": "code block"
@@ -33,7 +33,7 @@
     "prefix": "cc_",
     "body": [
       "```${1:language}",
-      "${2:x}",
+      "${TM_SELECTED_TEXT}${2:x}",
       "```${0}"
     ],
     "description": "code block with language"
@@ -97,7 +97,7 @@
   "horizontal rule": {
     "prefix": "hr",
     "body": [
-      "___${0}"
+      "__________${0}"
     ],
     "description": "horizontal rule"
   },
@@ -111,14 +111,14 @@
   "italic": {
     "prefix": "i",
     "body": [
-      "*${1:x}*${0}"
+      "*${TM_SELECTED_TEXT}${1:x}*${0}"
     ],
     "description": "italic"
   },
   "italic bold": {
     "prefix": "ib",
     "body": [
-      "_**${1:x}**_${0}"
+      "_**${TM_SELECTED_TEXT}${1:x}**_${0}"
     ],
     "description": "italic bold"
   },

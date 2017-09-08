@@ -2,7 +2,7 @@
   "a": {
     "prefix": "a",
     "body": [
-      "<a href=\"${1:#}\">${0}</a>"
+      "<a href=\"${1:#}\">${TM_SELECTED_TEXT}${0}</a>"
     ],
     "description": "a"
   },
@@ -16,7 +16,7 @@
   "abbr": {
     "prefix": "abbr",
     "body": [
-      "<abbr title=\"${1:title}\">${0}</abbr>"
+      "<abbr title=\"${1:title}\">${TM_SELECTED_TEXT}${0}</abbr>"
     ],
     "description": "abbr"
   },
@@ -30,7 +30,7 @@
   "acronym": {
     "prefix": "acronym",
     "body": [
-      "<acronym title=\"${1:title}\">${0}</acronym>"
+      "<acronym title=\"${1:title}\">${TM_SELECTED_TEXT}${0}</acronym>"
     ],
     "description": "acronym"
   },
@@ -44,7 +44,7 @@
   "address": {
     "prefix": "address",
     "body": [
-      "<address>${0}</address>"
+      "<address>${TM_SELECTED_TEXT}${0}</address>"
     ],
     "description": "address"
   },
@@ -58,7 +58,7 @@
   "applet": {
     "prefix": "applet",
     "body": [
-      "<applet code=\"${1:url}\" object=\"${2:name}\">${0}</applet>"
+      "<applet code=\"${1:url}\" object=\"${2:name}\">${TM_SELECTED_TEXT}${0}</applet>"
     ],
     "description": "applet"
   },
@@ -79,7 +79,7 @@
   "article": {
     "prefix": "article",
     "body": [
-      "<article>${0}</article>"
+      "<article>${TM_SELECTED_TEXT}${0}</article>"
     ],
     "description": "article"
   },
@@ -93,7 +93,7 @@
   "aside": {
     "prefix": "aside",
     "body": [
-      "<aside>${0}</aside>"
+      "<aside>${TM_SELECTED_TEXT}${0}</aside>"
     ],
     "description": "aside"
   },
@@ -116,7 +116,7 @@
   "b": {
     "prefix": "b",
     "body": [
-      "<b>${0}</b>"
+      "<b>${TM_SELECTED_TEXT}${0}</b>"
     ],
     "description": "b"
   },
@@ -144,7 +144,7 @@
   "bdi": {
     "prefix": "bdi",
     "body": [
-      "<bdi>${0}</bdi>"
+      "<bdi>${TM_SELECTED_TEXT}${0}</bdi>"
     ],
     "description": "bdi"
   },
@@ -158,7 +158,7 @@
   "bdo": {
     "prefix": "bdo",
     "body": [
-      "<bdo dir=\"${1:rtl}\">${0}</bdo>"
+      "<bdo dir=\"${1:rtl}\">${TM_SELECTED_TEXT}${0}</bdo>"
     ],
     "description": "bdo"
   },
@@ -172,7 +172,7 @@
   "big": {
     "prefix": "big",
     "body": [
-      "<big>${0}</big>"
+      "<big>${TM_SELECTED_TEXT}${0}</big>"
     ],
     "description": "big"
   },
@@ -186,7 +186,7 @@
   "blockquote": {
     "prefix": "blockquote",
     "body": [
-      "<blockquote cite=\"${1:url}\">${0}</blockquote>"
+      "<blockquote cite=\"${1:url}\">${TM_SELECTED_TEXT}${0}</blockquote>"
     ],
     "description": "blockquote"
   },
@@ -200,7 +200,7 @@
   "body": {
     "prefix": "body",
     "body": [
-      "<body>${0}</body>"
+      "<body>${TM_SELECTED_TEXT}${0}</body>"
     ],
     "description": "body"
   },
@@ -221,7 +221,7 @@
   "button": {
     "prefix": "button",
     "body": [
-      "<button type=\"${1:button}\">${0}</button>"
+      "<button type=\"${1:button}\">${TM_SELECTED_TEXT}${0}</button>"
     ],
     "description": "button"
   },
@@ -235,7 +235,7 @@
   "canvas": {
     "prefix": "canvas",
     "body": [
-      "<canvas>${0}</canvas>"
+      "<canvas>${TM_SELECTED_TEXT}${0}</canvas>"
     ],
     "description": "canvas"
   },
@@ -249,7 +249,7 @@
   "caption": {
     "prefix": "caption",
     "body": [
-      "<caption>${0}</caption>"
+      "<caption>${TM_SELECTED_TEXT}${0}</caption>"
     ],
     "description": "caption"
   },
@@ -277,7 +277,7 @@
   "center": {
     "prefix": "center",
     "body": [
-      "<center>${0}</center>"
+      "<center>${TM_SELECTED_TEXT}${0}</center>"
     ],
     "description": "center"
   },
@@ -291,7 +291,7 @@
   "cite": {
     "prefix": "cite",
     "body": [
-      "<cite>${0}</cite>"
+      "<cite>${TM_SELECTED_TEXT}${0}</cite>"
     ],
     "description": "cite"
   },
@@ -344,7 +344,7 @@
   "dd": {
     "prefix": "dd",
     "body": [
-      "<dd>${0}</dd>"
+      "<dd>${TM_SELECTED_TEXT}${0}</dd>"
     ],
     "description": "dd"
   },
@@ -358,7 +358,7 @@
   "del": {
     "prefix": "del",
     "body": [
-      "<del>${0}</del>"
+      "<del>${TM_SELECTED_TEXT}${0}</del>"
     ],
     "description": "del"
   },
@@ -388,7 +388,7 @@
   "dfn": {
     "prefix": "dfn",
     "body": [
-      "<dfn>${0}</dfn>"
+      "<dfn>${TM_SELECTED_TEXT}${0}</dfn>"
     ],
     "description": "dfn"
   },
@@ -402,7 +402,7 @@
   "dialog": {
     "prefix": "dialog",
     "body": [
-      "<dialog open>${0}</dialog>"
+      "<dialog open>${TM_SELECTED_TEXT}${0}</dialog>"
     ],
     "description": "dialog"
   },
@@ -417,7 +417,7 @@
     "prefix": "dir",
     "body": [
       "<dir>",
-      "\t<li>${0}</li>",
+      "\t<li>${TM_SELECTED_TEXT}${0}</li>",
       "</dir>"
     ],
     "description": "dir"
@@ -434,7 +434,7 @@
   "div": {
     "prefix": "div",
     "body": [
-      "<div>${0}</div>"
+      "<div>${TM_SELECTED_TEXT}${0}</div>"
     ],
     "description": "div"
   },
@@ -458,7 +458,7 @@
   "dt": {
     "prefix": "dt",
     "body": [
-      "<dt>${0}</dt>"
+      "<dt>${TM_SELECTED_TEXT}${0}</dt>"
     ],
     "description": "dt"
   },
@@ -476,7 +476,7 @@
       "\t${TM_SELECTED_TEXT}${0}",
       "</${1}>"
     ],
-    "description": ""
+    "description": "element"
   },
   "element (with attribute)": {
     "prefix": "ea",
@@ -485,26 +485,26 @@
       "\t${TM_SELECTED_TEXT}${0}",
       "</${1}>"
     ],
-    "description": " (with attribute)"
+    "description": "element (with attribute)"
   },
   "element (with attribute, with content)": {
     "prefix": "eax",
     "body": [
       "<${1:x} ${2:Attribute}=\"${3:Value}\">${4:content}</${1}>${0}"
     ],
-    "description": " (with attribute, with content)"
+    "description": "element (with attribute, with content)"
   },
   "element (with content)": {
     "prefix": "ex",
     "body": [
       "<${1:x}>${2:content}</${1}>${0}"
     ],
-    "description": " (with content)"
+    "description": "element (with content)"
   },
   "em": {
     "prefix": "em",
     "body": [
-      "<em>${0}</em>"
+      "<em>${TM_SELECTED_TEXT}${0}</em>"
     ],
     "description": "em"
   },
@@ -526,7 +526,7 @@
     "prefix": "fieldset",
     "body": [
       "<fieldset>",
-      "\t<legend>${0}</legend>",
+      "\t<legend>${TM_SELECTED_TEXT}${0}</legend>",
       "</fieldset>"
     ],
     "description": "fieldset"
@@ -553,7 +553,7 @@
   "font": {
     "prefix": "font",
     "body": [
-      "<font ${1:attribute=\"\"}>${0}</font>"
+      "<font ${1:attribute=\"\"}>${TM_SELECTED_TEXT}${0}</font>"
     ],
     "description": "font"
   },
@@ -567,7 +567,7 @@
   "footer": {
     "prefix": "footer",
     "body": [
-      "<footer>${0}</footer>"
+      "<footer>${TM_SELECTED_TEXT}${0}</footer>"
     ],
     "description": "footer"
   },
@@ -581,7 +581,7 @@
   "form": {
     "prefix": "form",
     "body": [
-      "<form action=\"${1:/}\" method=\"${2:post}\">${0}</form>"
+      "<form action=\"${1:/}\" method=\"${2:post}\">${TM_SELECTED_TEXT}${0}</form>"
     ],
     "description": "form"
   },
@@ -602,7 +602,7 @@
   "frameset": {
     "prefix": "frameset",
     "body": [
-      "<frameset>${0}</frameset>"
+      "<frameset>${TM_SELECTED_TEXT}${0}</frameset>"
     ],
     "description": "frameset"
   },
@@ -616,7 +616,7 @@
   "h1": {
     "prefix": "h",
     "body": [
-      "<h1>${0}</h1>"
+      "<h1>${TM_SELECTED_TEXT}${0}</h1>"
     ],
     "description": "h"
   },
@@ -630,7 +630,7 @@
   "h2": {
     "prefix": "h2",
     "body": [
-      "<h2>${0}</h2>"
+      "<h2>${TM_SELECTED_TEXT}${0}</h2>"
     ],
     "description": "h2"
   },
@@ -644,7 +644,7 @@
   "h3": {
     "prefix": "h3",
     "body": [
-      "<h3>${0}</h3>"
+      "<h3>${TM_SELECTED_TEXT}${0}</h3>"
     ],
     "description": "h3"
   },
@@ -658,7 +658,7 @@
   "h4": {
     "prefix": "h4",
     "body": [
-      "<h4>${0}</h4>"
+      "<h4>${TM_SELECTED_TEXT}${0}</h4>"
     ],
     "description": "h4"
   },
@@ -672,7 +672,7 @@
   "h5": {
     "prefix": "h5",
     "body": [
-      "<h5>${0}</h5>"
+      "<h5>${TM_SELECTED_TEXT}${0}</h5>"
     ],
     "description": "h5"
   },
@@ -686,7 +686,7 @@
   "h6": {
     "prefix": "h6",
     "body": [
-      "<h6>${0}</h6>"
+      "<h6>${TM_SELECTED_TEXT}${0}</h6>"
     ],
     "description": "h6"
   },
@@ -700,7 +700,7 @@
   "head": {
     "prefix": "head",
     "body": [
-      "<head>${0}</head>"
+      "<head>${TM_SELECTED_TEXT}${0}</head>"
     ],
     "description": "head"
   },
@@ -714,7 +714,7 @@
   "header": {
     "prefix": "header",
     "body": [
-      "<header>${0}</header>"
+      "<header>${TM_SELECTED_TEXT}${0}</header>"
     ],
     "description": "header"
   },
@@ -748,7 +748,7 @@
   "i": {
     "prefix": "i",
     "body": [
-      "<i>${0}</i>"
+      "<i>${TM_SELECTED_TEXT}${0}</i>"
     ],
     "description": "i"
   },
@@ -762,7 +762,7 @@
   "iframe": {
     "prefix": "iframe",
     "body": [
-      "<iframe scr=\"${1:url}\">${0}</iframe>"
+      "<iframe scr=\"${1:url}\">${TM_SELECTED_TEXT}${0}</iframe>"
     ],
     "description": "iframe"
   },
@@ -790,7 +790,7 @@
   "ins": {
     "prefix": "ins",
     "body": [
-      "<ins>${0}</ins>"
+      "<ins>${TM_SELECTED_TEXT}${0}</ins>"
     ],
     "description": "ins"
   },
@@ -804,7 +804,7 @@
   "kbd": {
     "prefix": "kbd",
     "body": [
-      "<kbd>${0}</kbd>"
+      "<kbd>${TM_SELECTED_TEXT}${0}</kbd>"
     ],
     "description": "kbd"
   },
@@ -825,7 +825,7 @@
   "label": {
     "prefix": "label",
     "body": [
-      "<label for=\"${1:for}\">${0}</label>"
+      "<label for=\"${1:for}\">${TM_SELECTED_TEXT}${0}</label>"
     ],
     "description": "label"
   },
@@ -839,7 +839,7 @@
   "legend": {
     "prefix": "legend",
     "body": [
-      "<legend>${0}</legend>"
+      "<legend>${TM_SELECTED_TEXT}${0}</legend>"
     ],
     "description": "legend"
   },
@@ -853,7 +853,7 @@
   "li": {
     "prefix": "li",
     "body": [
-      "<li>${0}</li>"
+      "<li>${TM_SELECTED_TEXT}${0}</li>"
     ],
     "description": "li"
   },
@@ -874,7 +874,7 @@
   "main": {
     "prefix": "main",
     "body": [
-      "<main>${0}</main>"
+      "<main>${TM_SELECTED_TEXT}${0}</main>"
     ],
     "description": "main"
   },
@@ -897,7 +897,7 @@
   "mark": {
     "prefix": "mark",
     "body": [
-      "<mark>${0}</mark>"
+      "<mark>${TM_SELECTED_TEXT}${0}</mark>"
     ],
     "description": "mark"
   },
@@ -911,7 +911,7 @@
   "menu": {
     "prefix": "menu",
     "body": [
-      "<menu>${0}</menu>"
+      "<menu>${TM_SELECTED_TEXT}${0}</menu>"
     ],
     "description": "menu"
   },
@@ -939,7 +939,7 @@
   "meter": {
     "prefix": "meter",
     "body": [
-      "<meter value=\"${1:0}\">${0}</meter>"
+      "<meter value=\"${1:0}\">${TM_SELECTED_TEXT}${0}</meter>"
     ],
     "description": "meter"
   },
@@ -953,7 +953,7 @@
   "nav": {
     "prefix": "nav",
     "body": [
-      "<nav>${0}</nav>"
+      "<nav>${TM_SELECTED_TEXT}${0}</nav>"
     ],
     "description": "nav"
   },
@@ -967,7 +967,7 @@
   "noframes": {
     "prefix": "noframes",
     "body": [
-      "<noframes>${0}</noframes>"
+      "<noframes>${TM_SELECTED_TEXT}${0}</noframes>"
     ],
     "description": "noframes"
   },
@@ -981,7 +981,7 @@
   "noscript": {
     "prefix": "noscript",
     "body": [
-      "<noscript>${0}</noscript>"
+      "<noscript>${TM_SELECTED_TEXT}${0}</noscript>"
     ],
     "description": "noscript"
   },
@@ -995,7 +995,7 @@
   "object": {
     "prefix": "object",
     "body": [
-      "<object ${1:data=\"\"}>${0}</object>"
+      "<object ${1:data=\"\"}>${TM_SELECTED_TEXT}${0}</object>"
     ],
     "description": "object"
   },
@@ -1010,7 +1010,7 @@
     "prefix": "ol",
     "body": [
       "<ol>",
-      "\t<li>${0}</li>",
+      "\t<li>${TM_SELECTED_TEXT}${0}</li>",
       "</ol>"
     ],
     "description": "ol"
@@ -1028,7 +1028,7 @@
     "prefix": "optgroup",
     "body": [
       "<optgroup>",
-      "\t<option value=\"${1:value}\">${0}</option>",
+      "\t<option value=\"${1:value}\">${TM_SELECTED_TEXT}${0}</option>",
       "</optgroup>"
     ],
     "description": "optgroup"
@@ -1045,7 +1045,7 @@
   "option": {
     "prefix": "option",
     "body": [
-      "<option value=\"${1:value}\">${0}</option>"
+      "<option value=\"${1:value}\">${TM_SELECTED_TEXT}${0}</option>"
     ],
     "description": "option"
   },
@@ -1066,7 +1066,7 @@
   "p": {
     "prefix": "p",
     "body": [
-      "<p>${0}</p>"
+      "<p>${TM_SELECTED_TEXT}${0}</p>"
     ],
     "description": "p"
   },
@@ -1087,7 +1087,7 @@
   "pre": {
     "prefix": "pre",
     "body": [
-      "<pre>${0}</pre>"
+      "<pre>${TM_SELECTED_TEXT}${0}</pre>"
     ],
     "description": "pre"
   },
@@ -1101,7 +1101,7 @@
   "progress": {
     "prefix": "progress",
     "body": [
-      "<progress value=\"${1:0}\" value=\"${2:100}\">${0}</progress>"
+      "<progress value=\"${1:0}\" value=\"${2:100}\">${TM_SELECTED_TEXT}${0}</progress>"
     ],
     "description": "progress"
   },
@@ -1115,7 +1115,7 @@
   "q": {
     "prefix": "q",
     "body": [
-      "<q>${0}</q>"
+      "<q>${TM_SELECTED_TEXT}${0}</q>"
     ],
     "description": "q"
   },
@@ -1137,7 +1137,7 @@
   "rp": {
     "prefix": "rp",
     "body": [
-      "<rp>${0}</rp>"
+      "<rp>${TM_SELECTED_TEXT}${0}</rp>"
     ],
     "description": "rp"
   },
@@ -1151,7 +1151,7 @@
   "rt": {
     "prefix": "rt",
     "body": [
-      "<rt>${0}</rt>"
+      "<rt>${TM_SELECTED_TEXT}${0}</rt>"
     ],
     "description": "rt"
   },
@@ -1165,7 +1165,7 @@
   "ruby": {
     "prefix": "ruby",
     "body": [
-      "<ruby>${0}</ruby>"
+      "<ruby>${TM_SELECTED_TEXT}${0}</ruby>"
     ],
     "description": "ruby"
   },
@@ -1179,7 +1179,7 @@
   "s": {
     "prefix": "s",
     "body": [
-      "<s>${0}</s>"
+      "<s>${TM_SELECTED_TEXT}${0}</s>"
     ],
     "description": "s"
   },
@@ -1193,7 +1193,7 @@
   "samp": {
     "prefix": "samp",
     "body": [
-      "<samp>${0}</samp>"
+      "<samp>${TM_SELECTED_TEXT}${0}</samp>"
     ],
     "description": "samp"
   },
@@ -1207,7 +1207,7 @@
   "script": {
     "prefix": "script",
     "body": [
-      "<script>${0}</script>"
+      "<script>${TM_SELECTED_TEXT}${0}</script>"
     ],
     "description": "script"
   },
@@ -1221,7 +1221,7 @@
   "section": {
     "prefix": "section",
     "body": [
-      "<section>${0}</section>"
+      "<section>${TM_SELECTED_TEXT}${0}</section>"
     ],
     "description": "section"
   },
@@ -1236,7 +1236,7 @@
     "prefix": "select",
     "body": [
       "<select>",
-      "\t<option value=\"${1:value}\">${0}</option>",
+      "\t<option value=\"${1:value}\">${TM_SELECTED_TEXT}${0}</option>",
       "</select>"
     ],
     "description": "select"
@@ -1267,7 +1267,7 @@
   "small": {
     "prefix": "small",
     "body": [
-      "<small>${0}</small>"
+      "<small>${TM_SELECTED_TEXT}${0}</small>"
     ],
     "description": "small"
   },
@@ -1288,7 +1288,7 @@
   "span": {
     "prefix": "span",
     "body": [
-      "<span>${0}</span>"
+      "<span>${TM_SELECTED_TEXT}${0}</span>"
     ],
     "description": "span"
   },
@@ -1302,7 +1302,7 @@
   "strike": {
     "prefix": "strike",
     "body": [
-      "<strike>${0}</strike>"
+      "<strike>${TM_SELECTED_TEXT}${0}</strike>"
     ],
     "description": "strike"
   },
@@ -1316,7 +1316,7 @@
   "strong": {
     "prefix": "strong",
     "body": [
-      "<strong>${0}</strong>"
+      "<strong>${TM_SELECTED_TEXT}${0}</strong>"
     ],
     "description": "strong"
   },
@@ -1330,7 +1330,7 @@
   "style": {
     "prefix": "style",
     "body": [
-      "<style>${0}</style>"
+      "<style>${TM_SELECTED_TEXT}${0}</style>"
     ],
     "description": "style"
   },
@@ -1344,7 +1344,7 @@
   "sub": {
     "prefix": "sub",
     "body": [
-      "<sub>${0}</sub>"
+      "<sub>${TM_SELECTED_TEXT}${0}</sub>"
     ],
     "description": "sub"
   },
@@ -1358,7 +1358,7 @@
   "summary": {
     "prefix": "summary",
     "body": [
-      "<summary>${0}</summary>"
+      "<summary>${TM_SELECTED_TEXT}${0}</summary>"
     ],
     "description": "summary"
   },
@@ -1372,7 +1372,7 @@
   "sup": {
     "prefix": "sup",
     "body": [
-      "<sup>${0}</sup>"
+      "<sup>${TM_SELECTED_TEXT}${0}</sup>"
     ],
     "description": "sup"
   },
@@ -1401,7 +1401,7 @@
   "tbody": {
     "prefix": "tbody",
     "body": [
-      "<tbody>${0}</tbody>"
+      "<tbody>${TM_SELECTED_TEXT}${0}</tbody>"
     ],
     "description": "tbody"
   },
@@ -1415,7 +1415,7 @@
   "td": {
     "prefix": "td",
     "body": [
-      "<td>${0}</td>"
+      "<td>${TM_SELECTED_TEXT}${0}</td>"
     ],
     "description": "td"
   },
@@ -1429,7 +1429,7 @@
   "textarea": {
     "prefix": "textarea",
     "body": [
-      "<textarea>${0}</textarea>"
+      "<textarea>${TM_SELECTED_TEXT}${0}</textarea>"
     ],
     "description": "textarea"
   },
@@ -1443,7 +1443,7 @@
   "tfoot": {
     "prefix": "tfoot",
     "body": [
-      "<tfoot>${0}</tfoot>"
+      "<tfoot>${TM_SELECTED_TEXT}${0}</tfoot>"
     ],
     "description": "tfoot"
   },
@@ -1457,7 +1457,7 @@
   "th": {
     "prefix": "th",
     "body": [
-      "<th>${0}</th>"
+      "<th>${TM_SELECTED_TEXT}${0}</th>"
     ],
     "description": "th"
   },
@@ -1471,7 +1471,7 @@
   "thead": {
     "prefix": "thead",
     "body": [
-      "<thead>${0}</thead>"
+      "<thead>${TM_SELECTED_TEXT}${0}</thead>"
     ],
     "description": "thead"
   },
@@ -1485,7 +1485,7 @@
   "time": {
     "prefix": "time",
     "body": [
-      "<time datetime=\"${1:datetime}\">${0}</time>"
+      "<time datetime=\"${1:datetime}\">${TM_SELECTED_TEXT}${0}</time>"
     ],
     "description": "time"
   },
@@ -1499,7 +1499,7 @@
   "title": {
     "prefix": "title",
     "body": [
-      "<title>${0}</title>"
+      "<title>${TM_SELECTED_TEXT}${0}</title>"
     ],
     "description": "title"
   },
@@ -1513,7 +1513,7 @@
   "tr": {
     "prefix": "tr",
     "body": [
-      "<tr>${0}</tr>"
+      "<tr>${TM_SELECTED_TEXT}${0}</tr>"
     ],
     "description": "tr"
   },
@@ -1534,7 +1534,7 @@
   "tt": {
     "prefix": "tt",
     "body": [
-      "<tt>${0}</tt>"
+      "<tt>${TM_SELECTED_TEXT}${0}</tt>"
     ],
     "description": "tt"
   },
@@ -1548,7 +1548,7 @@
   "u": {
     "prefix": "u",
     "body": [
-      "<u>${0}</u>"
+      "<u>${TM_SELECTED_TEXT}${0}</u>"
     ],
     "description": "u"
   },
@@ -1563,7 +1563,7 @@
     "prefix": "ul",
     "body": [
       "<ul>",
-      "\t<li>${0}</li>",
+      "\t<li>${TM_SELECTED_TEXT}${0}</li>",
       "</ul>"
     ],
     "description": "ul"
@@ -1580,7 +1580,7 @@
   "var": {
     "prefix": "var",
     "body": [
-      "<var>${0}</var>"
+      "<var>${TM_SELECTED_TEXT}${0}</var>"
     ],
     "description": "var"
   },
@@ -1595,6 +1595,7 @@
     "prefix": "video",
     "body": [
       "<video controls=\"controls\">",
+      "\t${TM_SELECTED_TEXT}",
       "\t<source src=\"${1:url}\" type=\"${2:audio/mp4}\">${0}",
       "</video>"
     ],

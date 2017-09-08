@@ -7,6 +7,7 @@
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
     </SnippetTypes>
     <Keywords>
       <Keyword>Meta-GenerateAlternativeShortcut</Keyword>
@@ -27,6 +28,6 @@
         <Default>HeaderText</Default>
       </Literal>
     </Declarations>
-    <Code Language="Xaml"><![CDATA[<DataGridCheckBoxColumn Header="$header$" Binding="{Binding $binding$}">$end$</DataGridCheckBoxColumn>]]></Code>
+    <Code Language="Xaml"><![CDATA[<DataGridCheckBoxColumn Header="$header$" Binding="{Binding $binding$}">$selected$$end$</DataGridCheckBoxColumn>]]></Code>
   </Snippet>
 </CodeSnippet>

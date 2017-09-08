@@ -14,8 +14,8 @@ namespace Snippetica.CodeGeneration.Commands
         protected override void Execute(ExecutionContext context, Snippet snippet)
         {
             snippet.ReplacePlaceholders("end", "");
-            snippet.ReplacePlaceholders("content", "$end$");
-            snippet.RemoveLiteral("content");
+            snippet.RemoveLiteralAndReplacePlaceholders("content", "$selected$$end$");
+            snippet.SnippetTypes |= SnippetTypes.SurroundsWith;
         }
     }
 }

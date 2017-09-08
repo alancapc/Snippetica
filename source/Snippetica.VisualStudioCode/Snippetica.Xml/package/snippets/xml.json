@@ -27,7 +27,7 @@
       "\t${TM_SELECTED_TEXT}${0}",
       "</${1}>"
     ],
-    "description": ""
+    "description": "element"
   },
   "element (with attribute)": {
     "prefix": "ea",
@@ -36,21 +36,21 @@
       "\t${TM_SELECTED_TEXT}${0}",
       "</${1}>"
     ],
-    "description": " (with attribute)"
+    "description": "element (with attribute)"
   },
   "element (with attribute, with content)": {
     "prefix": "eax",
     "body": [
       "<${1:x} ${2:Attribute}=\"${3:Value}\">${4:content}</${1}>${0}"
     ],
-    "description": " (with attribute, with content)"
+    "description": "element (with attribute, with content)"
   },
   "element (with content)": {
     "prefix": "ex",
     "body": [
       "<${1:x}>${2:content}</${1}>${0}"
     ],
-    "description": " (with content)"
+    "description": "element (with content)"
   },
   "self-closing element": {
     "prefix": "es",
