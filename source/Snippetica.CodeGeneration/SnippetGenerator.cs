@@ -68,6 +68,7 @@ namespace Snippetica.CodeGeneration
 
                 snippet.Shortcut = shortcut;
                 snippet.SuffixTitle(" _");
+                snippet.AddTag(KnownTags.TitleEndsWithUnderscore);
                 snippet.SuffixFileName("_");
 
                 return snippet;

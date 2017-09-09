@@ -34,21 +34,25 @@ namespace Snippetica
 
         public static Snippet RemoveShortcutFromTitle(this Snippet snippet)
         {
-            snippet.Title = snippet.GetTitleWithoutShortcut();
+            snippet.Title = snippet.GetTitle(trimLeadingShortcut: true, trimTrailingUnderscore: false);
 
             return snippet;
         }
 
-        public static string GetTitleWithoutShortcut(this Snippet snippet)
+        public static string GetTitle(
+            this Snippet snippet,
+            bool trimLeadingShortcut = true,
+            bool trimTrailingUnderscore = true)
         {
-            if (snippet.HasTag(KnownTags.TitleStartsWithShortcut))
+            string s = snippet.Title;
+
+            int i = 0;
+
+            if (trimLeadingShortcut
+                && snippet.HasTag(KnownTags.TitleStartsWithShortcut))
             {
-                string s = snippet.Title;
-
-                int i = 0;
-
                 while (i < s.Length
-                    && s[i] != ' ')
+                   && s[i] != ' ')
                 {
                     i++;
                 }
@@ -58,11 +62,27 @@ namespace Snippetica
                 {
                     i++;
                 }
-
-                return s.Substring(i);
             }
 
-            return snippet.Title;
+            int j = s.Length - 1;
+
+            if (trimTrailingUnderscore
+                && snippet.HasTag(KnownTags.TitleEndsWithUnderscore))
+            {
+                while (j >= 0
+                   && s[j] == '_')
+                {
+                    j--;
+                }
+
+                while (j >= 0
+                    && s[j] == ' ')
+                {
+                    j--;
+                }
+            }
+
+            return s.Substring(i, j - i + 1);
         }
 
         public static void RemoveMetaKeywords(this Snippet snippet)

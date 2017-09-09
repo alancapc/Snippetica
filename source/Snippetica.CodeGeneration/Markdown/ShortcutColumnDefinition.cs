@@ -4,16 +4,16 @@ using Pihrtsoft.Snippets;
 
 namespace Snippetica.CodeGeneration.Markdown
 {
-    internal class SnippetLanguageColumnDefinition : ColumnDefinition
+    internal class ShortcutColumnDefinition : ColumnDefinition
     {
         public override string Title
         {
-            get { return "Language"; }
+            get { return "Shortcut"; }
         }
 
         public override string GetValue(object value)
         {
-            return MarkdownHelper.Escape(((Snippet)value).Language.GetTitle());
+            return MarkdownHelper.Escape(((Snippet)value).Shortcut);
         }
     }
 }

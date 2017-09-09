@@ -6,13 +6,6 @@
     ],
     "description": "bold"
   },
-  "bold italic": {
-    "prefix": "bi",
-    "body": [
-      "**_${TM_SELECTED_TEXT}${1:x}_**${0}"
-    ],
-    "description": "bold italic"
-  },
   "code": {
     "prefix": "c",
     "body": [
@@ -21,7 +14,7 @@
     "description": "code"
   },
   "code block": {
-    "prefix": "cc",
+    "prefix": "cb",
     "body": [
       "```",
       "${TM_SELECTED_TEXT}${1:x}",
@@ -30,7 +23,7 @@
     "description": "code block"
   },
   "code block with language": {
-    "prefix": "cc_",
+    "prefix": "cbl",
     "body": [
       "```${1:language}",
       "${TM_SELECTED_TEXT}${2:x}",
@@ -41,56 +34,56 @@
   "header 1": {
     "prefix": "h",
     "body": [
-      "# ${0}"
+      "# ${TM_SELECTED_TEXT}${0}"
     ],
     "description": "header 1"
   },
   "header 2": {
     "prefix": "h2",
     "body": [
-      "## ${0}"
+      "## ${TM_SELECTED_TEXT}${0}"
     ],
     "description": "header 2"
   },
   "header 2 _": {
     "prefix": "hh",
     "body": [
-      "## ${0}"
+      "## ${TM_SELECTED_TEXT}${0}"
     ],
     "description": "header 2"
   },
   "header 3": {
     "prefix": "h3",
     "body": [
-      "### ${0}"
+      "### ${TM_SELECTED_TEXT}${0}"
     ],
     "description": "header 3"
   },
   "header 3 _": {
     "prefix": "hhh",
     "body": [
-      "### ${0}"
+      "### ${TM_SELECTED_TEXT}${0}"
     ],
     "description": "header 3"
   },
   "header 4": {
     "prefix": "h4",
     "body": [
-      "#### ${0}"
+      "#### ${TM_SELECTED_TEXT}${0}"
     ],
     "description": "header 4"
   },
   "header 5": {
     "prefix": "h5",
     "body": [
-      "##### ${0}"
+      "##### ${TM_SELECTED_TEXT}${0}"
     ],
     "description": "header 5"
   },
   "header 6": {
     "prefix": "h6",
     "body": [
-      "###### ${0}"
+      "###### ${TM_SELECTED_TEXT}${0}"
     ],
     "description": "header 6"
   },
@@ -115,13 +108,6 @@
     ],
     "description": "italic"
   },
-  "italic bold": {
-    "prefix": "ib",
-    "body": [
-      "_**${TM_SELECTED_TEXT}${1:x}**_${0}"
-    ],
-    "description": "italic bold"
-  },
   "link": {
     "prefix": "l",
     "body": [
@@ -132,49 +118,62 @@
   "ordered list item": {
     "prefix": "ol",
     "body": [
-      "${1:1}. ${2:x}${0}"
+      "${1:1}. ${TM_SELECTED_TEXT}${0}"
     ],
     "description": "ordered list item"
   },
   "ordered list item (level 2)": {
     "prefix": "ol2",
     "body": [
-      "   ${1:1}. ${2:x}${0}"
-    ],
-    "description": "ordered list item (level 2)"
-  },
-  "ordered list item (level 2) _": {
-    "prefix": "oll",
-    "body": [
-      "   ${1:1}. ${2:x}${0}"
+      "\t${1:1}. ${TM_SELECTED_TEXT}${0}"
     ],
     "description": "ordered list item (level 2)"
   },
   "ordered list item (level 3)": {
     "prefix": "ol3",
     "body": [
-      "      ${1:1}. ${2:x}${0}"
+      "\t\t${1:1}. ${TM_SELECTED_TEXT}${0}"
     ],
     "description": "ordered list item (level 3)"
   },
-  "ordered list item (level 3) _": {
-    "prefix": "olll",
+  "ordered list items": {
+    "prefix": "oll",
     "body": [
-      "      ${1:1}. ${2:x}${0}"
+      "1. ${1:x}",
+      "2. ${2:x}",
+      "3. ${3:x}${0}"
     ],
-    "description": "ordered list item (level 3)"
+    "description": "ordered list items"
+  },
+  "ordered list items (level 2)": {
+    "prefix": "oll2",
+    "body": [
+      "\t1. ${1:x}",
+      "\t2. ${2:x}",
+      "\t3. ${3:x}${0}"
+    ],
+    "description": "ordered list items (level 2)"
+  },
+  "ordered list items (level 3)": {
+    "prefix": "oll3",
+    "body": [
+      "\t\t1. ${1:x}",
+      "\t\t2. ${2:x}",
+      "\t\t3. ${3:x}${0}"
+    ],
+    "description": "ordered list items (level 3)"
   },
   "quote": {
     "prefix": "q",
     "body": [
-      "> ${1:x}${0}"
+      "> ${TM_SELECTED_TEXT}${0}"
     ],
     "description": "quote"
   },
   "strikethrough": {
     "prefix": "st",
     "body": [
-      "~~${1:x}~~${0}"
+      "~~${TM_SELECTED_TEXT}${1:x}~~${0}"
     ],
     "description": "strikethrough"
   },
@@ -226,43 +225,56 @@
   "task list item": {
     "prefix": "tl",
     "body": [
-      "- [ ] ${1:x}${0}"
+      "- [ ] ${TM_SELECTED_TEXT}${0}"
     ],
     "description": "task list item"
   },
   "unordered list item": {
     "prefix": "ul",
     "body": [
-      "* ${1:x}${0}"
+      "* ${TM_SELECTED_TEXT}${0}"
     ],
     "description": "unordered list item"
   },
   "unordered list item (level 2)": {
     "prefix": "ul2",
     "body": [
-      "  * ${1:x}${0}"
-    ],
-    "description": "unordered list item (level 2)"
-  },
-  "unordered list item (level 2) _": {
-    "prefix": "ull",
-    "body": [
-      "  * ${1:x}${0}"
+      "\t* ${TM_SELECTED_TEXT}${0}"
     ],
     "description": "unordered list item (level 2)"
   },
   "unordered list item (level 3)": {
     "prefix": "ul3",
     "body": [
-      "\t* ${1:x}${0}"
+      "\t\t* ${TM_SELECTED_TEXT}${0}"
     ],
     "description": "unordered list item (level 3)"
   },
-  "unordered list item (level 3) _": {
-    "prefix": "ulll",
+  "unordered list items": {
+    "prefix": "ull",
     "body": [
-      "\t* ${1:x}${0}"
+      "* ${1:x}",
+      "* ${2:x}",
+      "* ${3:x}${0}"
     ],
-    "description": "unordered list item (level 3)"
+    "description": "unordered list items"
+  },
+  "unordered list items (level 2)": {
+    "prefix": "ull2",
+    "body": [
+      "\t* ${1:x}",
+      "\t* ${2:x}",
+      "\t* ${3:x}${0}"
+    ],
+    "description": "unordered list items (level 2)"
+  },
+  "unordered list items (level 3)": {
+    "prefix": "ull3",
+    "body": [
+      "\t\t* ${1:x}",
+      "\t\t* ${2:x}",
+      "\t\t* ${3:x}${0}"
+    ],
+    "description": "unordered list items (level 3)"
   }
 }

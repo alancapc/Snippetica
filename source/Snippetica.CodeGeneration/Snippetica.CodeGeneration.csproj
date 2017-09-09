@@ -81,12 +81,12 @@
     <Compile Include="Markdown\ShortcutDescriptionColumnDefinition.cs" />
     <Compile Include="Markdown\ShortcutInfoColumnDefinition.cs" />
     <Compile Include="Markdown\ShortcutInfoTableWriter.cs" />
-    <Compile Include="Markdown\SnippetLanguageColumnDefinition.cs" />
+    <Compile Include="Markdown\LanguageColumnDefinition.cs" />
     <Compile Include="Markdown\DirectoryReadmeSettings.cs" />
-    <Compile Include="Markdown\SnippetShortcutColumnDefinition.cs" />
+    <Compile Include="Markdown\ShortcutColumnDefinition.cs" />
     <Compile Include="Markdown\SnippetTableWriter.cs" />
-    <Compile Include="Markdown\SnippetTitleColumnDefinition.cs" />
-    <Compile Include="Markdown\SnippetTitleWithLinkColumnDefinition.cs" />
+    <Compile Include="Markdown\TitleColumnDefinition.cs" />
+    <Compile Include="Markdown\TitleWithLinkColumnDefinition.cs" />
     <Compile Include="ModifierKind.cs" />
     <Compile Include="Commands\AlternativeShortcutCommand.cs" />
     <Compile Include="Commands\CommandKind.cs" />

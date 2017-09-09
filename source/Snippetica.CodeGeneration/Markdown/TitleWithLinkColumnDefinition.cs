@@ -6,11 +6,11 @@ using Pihrtsoft.Snippets;
 
 namespace Snippetica.CodeGeneration.Markdown
 {
-    internal class SnippetTitleWithLinkColumnDefinition : SnippetTitleColumnDefinition
+    internal class TitleWithLinkColumnDefinition : TitleColumnDefinition
     {
         private readonly string _pattern;
 
-        public SnippetTitleWithLinkColumnDefinition(string directoryPath)
+        public TitleWithLinkColumnDefinition(string directoryPath)
         {
             DirectoryPath = directoryPath;
 
@@ -31,7 +31,7 @@ namespace Snippetica.CodeGeneration.Markdown
 
             path = path.Replace('\\', '/');
 
-            return $"[{MarkdownHelper.Escape(snippet.GetTitleWithoutShortcut())}]({path})";
+            return $"[{MarkdownHelper.Escape(snippet.GetTitle())}]({path})";
         }
     }
 }

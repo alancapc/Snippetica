@@ -6,38 +6,38 @@
 Shortcut | Title
 -------- | -----
 b|bold
-bi|bold italic
 c|code
-cc|code block
-cc\_|code block with language
+cb|code block
+cbl|code block with language
 h|header 1
 h2|header 2
 h3|header 3
 h4|header 4
 h5|header 5
 h6|header 6
-hh|header 2 \_
-hhh|header 3 \_
+hh|header 2
+hhh|header 3
 hr|horizontal rule
 i|italic
-ib|italic bold
 ie|image
 l|link
 ol|ordered list item
 ol2|ordered list item \(level 2\)
 ol3|ordered list item \(level 3\)
-oll|ordered list item \(level 2\) \_
-olll|ordered list item \(level 3\) \_
+oll|ordered list items
+oll2|ordered list items \(level 2\)
+oll3|ordered list items \(level 3\)
 q|quote
 st|strikethrough
 t|table with 1 column
 t2|table with 2 columns
 t3|table with 3 columns
 tl|task list item
-tt|table with 2 columns \_
-ttt|table with 3 columns \_
+tt|table with 2 columns
+ttt|table with 3 columns
 ul|unordered list item
 ul2|unordered list item \(level 2\)
 ul3|unordered list item \(level 3\)
-ull|unordered list item \(level 2\) \_
-ulll|unordered list item \(level 3\) \_
+ull|unordered list items
+ull2|unordered list items \(level 2\)
+ull3|unordered list items \(level 3\)

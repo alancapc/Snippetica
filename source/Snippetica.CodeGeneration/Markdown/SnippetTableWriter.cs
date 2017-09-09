@@ -13,8 +13,8 @@ namespace Snippetica.CodeGeneration.Markdown
         {
             return new SnippetTableWriter(new ColumnDefinition[]
             {
-                new SnippetTitleColumnDefinition(),
-                new SnippetShortcutColumnDefinition()
+                new TitleColumnDefinition(),
+                new ShortcutColumnDefinition()
             });
         }
 
@@ -22,8 +22,8 @@ namespace Snippetica.CodeGeneration.Markdown
         {
             return new SnippetTableWriter(new ColumnDefinition[]
             {
-                new SnippetTitleWithLinkColumnDefinition(directoryPath),
-                new SnippetShortcutColumnDefinition()
+                new TitleWithLinkColumnDefinition(directoryPath),
+                new ShortcutColumnDefinition()
             });
         }
 
@@ -31,8 +31,8 @@ namespace Snippetica.CodeGeneration.Markdown
         {
             return new SnippetTableWriter(new ColumnDefinition[]
             {
-                new SnippetShortcutColumnDefinition(),
-                new SnippetTitleColumnDefinition()
+                new ShortcutColumnDefinition(),
+                new TitleColumnDefinition()
             });
         }
 
@@ -40,8 +40,8 @@ namespace Snippetica.CodeGeneration.Markdown
         {
             return new SnippetTableWriter(new ColumnDefinition[]
             {
-                new SnippetShortcutColumnDefinition(),
-                new SnippetTitleWithLinkColumnDefinition(directoryPath)
+                new ShortcutColumnDefinition(),
+                new TitleWithLinkColumnDefinition(directoryPath)
             });
         }
 
@@ -49,9 +49,9 @@ namespace Snippetica.CodeGeneration.Markdown
         {
             return new SnippetTableWriter(new ColumnDefinition[]
             {
-                new SnippetLanguageColumnDefinition(),
-                new SnippetTitleWithLinkColumnDefinition(directoryPath),
-                new SnippetShortcutColumnDefinition()
+                new LanguageColumnDefinition(),
+                new TitleWithLinkColumnDefinition(directoryPath),
+                new ShortcutColumnDefinition()
             });
         }
 
@@ -59,9 +59,9 @@ namespace Snippetica.CodeGeneration.Markdown
         {
             return new SnippetTableWriter(new ColumnDefinition[]
             {
-                new SnippetLanguageColumnDefinition(),
-                new SnippetShortcutColumnDefinition(),
-                new SnippetTitleColumnDefinition()
+                new LanguageColumnDefinition(),
+                new ShortcutColumnDefinition(),
+                new TitleColumnDefinition()
             });
         }
 
@@ -69,9 +69,9 @@ namespace Snippetica.CodeGeneration.Markdown
         {
             return new SnippetTableWriter(new ColumnDefinition[]
             {
-                new SnippetLanguageColumnDefinition(),
-                new SnippetShortcutColumnDefinition(),
-                new SnippetTitleWithLinkColumnDefinition(directoryPath)
+                new LanguageColumnDefinition(),
+                new ShortcutColumnDefinition(),
+                new TitleWithLinkColumnDefinition(directoryPath)
             });
         }
     }

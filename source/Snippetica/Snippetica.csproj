@@ -483,7 +483,7 @@
     <None Include="Snippetica.Json\Value.snippet" />
     <None Include="Snippetica.Json\ZeroValue.snippet" />
     <None Include="Snippetica.Markdown\Bold.snippet" />
-    <None Include="Snippetica.Markdown\BoldItalic.snippet" />
+    <None Include="Snippetica.Markdown\Dev\BoldItalic.snippet" />
     <None Include="Snippetica.Markdown\Code.snippet" />
     <None Include="Snippetica.Markdown\CodeBlock.snippet" />
     <None Include="Snippetica.Markdown\CodeBlockWithLanguage.snippet" />
@@ -496,8 +496,14 @@
     <None Include="Snippetica.Markdown\HorizontalRule.snippet" />
     <None Include="Snippetica.Markdown\Image.snippet" />
     <None Include="Snippetica.Markdown\Italic.snippet" />
-    <None Include="Snippetica.Markdown\ItalicBold.snippet" />
+    <None Include="Snippetica.Markdown\Dev\ItalicBold.snippet" />
     <None Include="Snippetica.Markdown\Link.snippet" />
+    <None Include="Snippetica.Markdown\UnorderedListItemsLevel3.snippet" />
+    <None Include="Snippetica.Markdown\UnorderedListItemsLevel2.snippet" />
+    <None Include="Snippetica.Markdown\UnorderedListItems.snippet" />
+    <None Include="Snippetica.Markdown\OrderedListItemsLevel3.snippet" />
+    <None Include="Snippetica.Markdown\OrderedListItemsLevel2.snippet" />
+    <None Include="Snippetica.Markdown\OrderedListItems.snippet" />
     <None Include="Snippetica.Markdown\OrderedListItem.snippet" />
     <None Include="Snippetica.Markdown\OrderedListItemLevel2.snippet" />
     <None Include="Snippetica.Markdown\OrderedListItemLevel3.snippet" />

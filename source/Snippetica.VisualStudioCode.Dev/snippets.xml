@@ -3452,6 +3452,54 @@ if ($identifier$ != null)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>bold italic</Title>
+      <Shortcut>bi</Shortcut>
+      <Description>bold italic</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name BoldItalic</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[**_$selected$$content$_**$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>italic bold</Title>
+      <Shortcut>ib</Shortcut>
+      <Description>italic bold</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ItalicBold</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[_**$selected$$content$**_$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>array type</Title>
       <Shortcut>a</Shortcut>
       <Description>array type declaration</Description>

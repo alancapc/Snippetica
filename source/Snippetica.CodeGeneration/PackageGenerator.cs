@@ -103,6 +103,7 @@ namespace Snippetica.CodeGeneration
                 {
                     snippet.Title += " _";
                     snippet.RemoveTag(KnownTags.NonUniqueTitle);
+                    snippet.AddTag(KnownTags.TitleEndsWithUnderscore);
                 }
 
                 snippet.SortCollections();
