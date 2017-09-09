@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -58,17 +59,68 @@ namespace Snippetica.CodeGeneration.VisualStudio
             document.Save();
         }
 
-        protected override IEnumerable<Snippet> PostProcess(List<Snippet> snippets)
+        protected override IEnumerable<Snippet> PostProcess(IEnumerable<Snippet> snippets)
         {
-            foreach (Snippet snippet in base.PostProcess(snippets))
-            {
-                snippet.RemoveTag(KnownTags.ExcludeFromVisualStudioCode);
+            snippets = PostProcessCore(snippets);
+            snippets = base.PostProcess(snippets);
 
-                if (snippet.TryGetTag(KnownTags.Shortcut, out TagInfo info))
+            return snippets;
+        }
+
+        private IEnumerable<Snippet> PostProcessCore(IEnumerable<Snippet> snippets)
+        {
+            foreach (Snippet snippet in snippets)
+            {
+                if (snippet.TryGetTag(KnownTags.ShortcutSuffix, out TagInfo info))
                     snippet.Keywords.RemoveAt(info.KeywordIndex);
+
+                Snippet obsoleteSnippet = GetObsoleteSnippetOrDefault(snippet);
+
+                if (obsoleteSnippet != null)
+                    yield return obsoleteSnippet;
 
                 yield return snippet;
             }
+        }
+
+        private static Snippet GetObsoleteSnippetOrDefault(Snippet snippet)
+        {
+            if (!snippet.TryGetTag(KnownTags.ObsoleteShortcut, out TagInfo info))
+                return null;
+
+            snippet.Keywords.RemoveAt(info.KeywordIndex);
+
+            snippet = (Snippet)snippet.Clone();
+
+            string s = $"Shortcut '{info.Value}' is obsolete, use '{snippet.Shortcut}' instead.";
+
+            if (snippet.Language == Language.CSharp)
+            {
+                s = $"/* {s} */";
+            }
+            else if (snippet.Language == Language.VisualBasic)
+            {
+                s = $"' {s}\r\n";
+            }
+            else
+            {
+                throw new NotSupportedException(snippet.Language.ToString());
+            }
+
+            snippet.Title += " [Obsolete]";
+
+            snippet.Shortcut = info.Value;
+
+            snippet.CodeText = s + $"${Placeholder.EndIdentifier}$";
+
+            snippet.Literals.Clear();
+
+            snippet.AddTag(KnownTags.ExcludeFromSnippetBrowser);
+            snippet.AddTag(KnownTags.ExcludeFromReadme);
+
+            snippet.SuffixFileName("_Obsolete");
+
+            return snippet;
         }
     }
 }

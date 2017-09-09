@@ -1,18 +1,4 @@
 ﻿{
-  "?: operator (equal to null)": {
-    "prefix": "con",
-    "body": [
-      "(${1:expression} == null) ? ${2:null} : ${3:null}${0}"
-    ],
-    "description": "?: (conditional) operator with condition whether the expression is equal to null"
-  },
-  "?: operator (not equal to null)": {
-    "prefix": "coxn",
-    "body": [
-      "(${1:expression} != null) ? ${2:null} : ${3:null}${0}"
-    ],
-    "description": "?: (conditional) operator with condition whether the expression is not equal to null"
-  },
   "array type": {
     "prefix": "a",
     "body": [
@@ -40,6 +26,20 @@
       "[Conditional(${1:\"DEBUG\"})]${0}"
     ],
     "description": "Conditional attribute"
+  },
+  "conditional operator (equal to null)": {
+    "prefix": "con",
+    "body": [
+      "(${1:expression} == null) ? ${2:null} : ${3:null}${0}"
+    ],
+    "description": "conditional operator with condition whether the expression is equal to null"
+  },
+  "conditional operator (not equal to null)": {
+    "prefix": "coxn",
+    "body": [
+      "(${1:expression} != null) ? ${2:null} : ${3:null}${0}"
+    ],
+    "description": "conditional operator with condition whether the expression is not equal to null"
   },
   "continue statement": {
     "prefix": "ce",
@@ -468,6 +468,30 @@
     ],
     "description": "if statement with condition whether Enum.TryParse method returns true."
   },
+  "if equal to null return false": {
+    "prefix": "ifnref",
+    "body": [
+      "if (${1:x} == null)",
+      "\treturn false;${0}"
+    ],
+    "description": "if equal to null return false"
+  },
+  "if equal to null return null": {
+    "prefix": "ifnren",
+    "body": [
+      "if (${1:x} == null)",
+      "\treturn null;${0}"
+    ],
+    "description": "if equal to null return null"
+  },
+  "if equal to null return true": {
+    "prefix": "ifnret",
+    "body": [
+      "if (${1:x} == null)",
+      "\treturn true;${0}"
+    ],
+    "description": "if equal to null return true"
+  },
   "if not Enum.TryParse": {
     "prefix": "ifxemtp",
     "body": [
@@ -478,6 +502,78 @@
       "}"
     ],
     "description": "if statement with condition whether Enum.TryParse method returns false."
+  },
+  "if not equal to null return false": {
+    "prefix": "ifxnref",
+    "body": [
+      "if (${1:x} != null)",
+      "\treturn false;${0}"
+    ],
+    "description": "if not equal to null return false"
+  },
+  "if not equal to null return null": {
+    "prefix": "ifxnren",
+    "body": [
+      "if (${1:x} != null)",
+      "\treturn null;${0}"
+    ],
+    "description": "if not equal to null return null"
+  },
+  "if not equal to null return true": {
+    "prefix": "ifxnret",
+    "body": [
+      "if (${1:x} != null)",
+      "\treturn true;${0}"
+    ],
+    "description": "if not equal to null return true"
+  },
+  "if not return false": {
+    "prefix": "ifxref",
+    "body": [
+      "if (!${1:x})",
+      "\treturn false;${0}"
+    ],
+    "description": "if not return false"
+  },
+  "if not return null": {
+    "prefix": "ifxren",
+    "body": [
+      "if (!${1:x})",
+      "\treturn null;${0}"
+    ],
+    "description": "if not return null"
+  },
+  "if not return true": {
+    "prefix": "ifxret",
+    "body": [
+      "if (!${1:x})",
+      "\treturn true;${0}"
+    ],
+    "description": "if not return true"
+  },
+  "if return false": {
+    "prefix": "ifref",
+    "body": [
+      "if (${1:true})",
+      "\treturn false;${0}"
+    ],
+    "description": "if return false"
+  },
+  "if return null": {
+    "prefix": "ifren",
+    "body": [
+      "if (${1:true})",
+      "\treturn null;${0}"
+    ],
+    "description": "if return null"
+  },
+  "if return true": {
+    "prefix": "ifret",
+    "body": [
+      "if (${1:true})",
+      "\treturn true;${0}"
+    ],
+    "description": "if return true"
   },
   "if string.IsNullOrEmpty": {
     "prefix": "ifsne",
@@ -498,34 +594,6 @@
       "}"
     ],
     "description": "if string.IsNullOrWhiteSpace"
-  },
-  "internal abstract modifiers": {
-    "prefix": "x_ia",
-    "body": [
-      "internal abstract${0}"
-    ],
-    "description": "internal abstract modifiers"
-  },
-  "internal modifier": {
-    "prefix": "x_i",
-    "body": [
-      "internal${0}"
-    ],
-    "description": "internal modifier"
-  },
-  "internal static modifiers": {
-    "prefix": "x_is",
-    "body": [
-      "internal static${0}"
-    ],
-    "description": "internal static modifiers"
-  },
-  "internal virtual modifiers": {
-    "prefix": "x_iv",
-    "body": [
-      "internal virtual${0}"
-    ],
-    "description": "internal virtual modifiers"
   },
   "lambda expression with 2 parameters": {
     "prefix": "l2",
@@ -617,13 +685,6 @@
     ],
     "description": "Obsolete attribute"
   },
-  "override modifier": {
-    "prefix": "oe",
-    "body": [
-      "override${0}"
-    ],
-    "description": "override modifier"
-  },
   "Path.Combine": {
     "prefix": "iop_c",
     "body": [
@@ -679,76 +740,6 @@
       "Path.ChangeExtension(${1:path}, ${2:\"\"})${0}"
     ],
     "description": "Path.ChangeExtension method."
-  },
-  "private modifier": {
-    "prefix": "x_p",
-    "body": [
-      "private${0}"
-    ],
-    "description": "private modifier"
-  },
-  "private static modifiers": {
-    "prefix": "x_ps",
-    "body": [
-      "private static${0}"
-    ],
-    "description": "private static modifiers"
-  },
-  "protected abstract modifiers": {
-    "prefix": "x_da",
-    "body": [
-      "protected abstract${0}"
-    ],
-    "description": "protected abstract modifiers"
-  },
-  "protected modifier": {
-    "prefix": "x_d",
-    "body": [
-      "protected${0}"
-    ],
-    "description": "protected modifier"
-  },
-  "protected virtual modifiers": {
-    "prefix": "x_dv",
-    "body": [
-      "protected virtual${0}"
-    ],
-    "description": "protected virtual modifiers"
-  },
-  "public abstract modifiers": {
-    "prefix": "x_a",
-    "body": [
-      "public abstract${0}"
-    ],
-    "description": "public abstract modifiers"
-  },
-  "public modifier": {
-    "prefix": "x",
-    "body": [
-      "public${0}"
-    ],
-    "description": "public modifier"
-  },
-  "public static modifiers": {
-    "prefix": "x_s",
-    "body": [
-      "public static${0}"
-    ],
-    "description": "public static modifiers"
-  },
-  "public virtual modifiers": {
-    "prefix": "x_v",
-    "body": [
-      "public virtual${0}"
-    ],
-    "description": "public virtual modifiers"
-  },
-  "readonly modifier": {
-    "prefix": "ro",
-    "body": [
-      "readonly${0}"
-    ],
-    "description": "readonly modifier"
   },
   "Regex type": {
     "prefix": "rx",

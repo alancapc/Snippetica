@@ -56,20 +56,11 @@ we|while statement|\-
 Shortcut | Description | Comment
 -------- | ----------- | -------
 gt|GetType operator|\-
+n|new object creation|\-
 no|nameof operator|\-
 oo|operator overload|\-
 tc|TryCast operator|\-
 x|logical not operator|prefix
-
-#### Keyword
-
-Shortcut | Description | Comment
--------- | ----------- | -------
-d|default|\-
-f|false|\-
-r|return|\-
-t|true|\-
-y|yield|\-
 
 #### Type
 
@@ -82,6 +73,7 @@ d|Dictionary&lt;TKey,TValue&gt;|\-
 dt|DateTime|\-
 e|IEnumerable&lt;T&gt;|\-
 hs|HashSet&lt;T&gt;|\-
+i|Immutable|prefix
 i|Int32|\-
 l|Int64|\-
 l|List&lt;T&gt;|\-
@@ -99,19 +91,20 @@ Shortcut | Description | Comment
 \_|with initializer|suffix
 \_|with parameters|suffix
 c|catch clause|\-
+d|default keyword|\-
 e|else clause|\-
 f|finally clause|\-
 g|generic type|prefix
 g|type parameter|\-
-i|Immutable|prefix
 l|lambda expression|\-
 n|\(equals to\) null|\-
-n|new object creation|\-
 pa|parameter array|\-
 pp|preprocessor directive|prefix
 ps|private set|\-
+r|return keyword|\-
 this|containing type name|\-
 v|local variable declaration|\-
+y|yield|prefix
 
 ### List of Selected Snippets
 
@@ -156,10 +149,7 @@ gd|[Dictionary\(Of TKey, TValue\) type](DictionaryOfTKeyTValueType.snippet)
 ge|[IEnumerable\(Of T\) type](IEnumerableOfTType.snippet)
 gt|[GetType](GetTypeOperator.snippet)
 ie|[Public interface](PublicInterface.snippet)
-iff|[If Not \_](IfNot_Obsolete.snippet)
-ifftp|[if not TryParse \_](IfNotTryParse_Obsolete.snippet)
 ifn|[If Is Nothing](IfIsNothing.snippet)
-ifnn|[If IsNot Nothing \_](IfIsNotNothing_Obsolete.snippet)
 iftc|[If TryCast IsNot Nothing](IfTryCastIsNotNothing.snippet)
 iftp|[if TryParse](IfTryParse.snippet)
 ifx|[If Not](IfNot.snippet)
@@ -172,9 +162,8 @@ l|[Lambda expression](LambdaExpression.snippet)
 m|[Public method](PublicMethod.snippet)
 me|[Public module](PublicModule.snippet)
 n|[Is Nothing](IsNothing.snippet)
-nn|[IsNot Nothing \_](IsNotNothing_Obsolete.snippet)
 no|[NameOf operator](NameOfOperator.snippet)
-oo|[= operator overload](OperatorOverloadEquality.snippet)
+oo|[= operator overloading](OverloadedOperatorEquality.snippet)
 p|[Public auto property](PublicAutoProperty.snippet)
 pa|[parameter array ](ParameterArray.snippet)
 ppif|[\#If preprocessor directive](PreprocessorDirectiveIf.snippet)
@@ -191,8 +180,6 @@ scr|[static constructor](StaticConstructor.snippet)
 sf|[Public Shared field](PublicStaticField.snippet)
 sm|[Public Shared method](PublicStaticMethod.snippet)
 sne|[String\.IsNullOrEmpty](StringIsNullOrEmpty.snippet)
-snne|[String\.IsNullOrEmpty = False \_](NotStringIsNullOrEmpty_Obsolete.snippet)
-snnw|[String\.IsNullOrWhiteSpace = False \_](NotStringIsNullOrWhiteSpace_Obsolete.snippet)
 snw|[String\.IsNullOrWhiteSpace](StringIsNullOrWhiteSpace.snippet)
 srf|[Public Shared read\-only field](PublicStaticReadOnlyField.snippet)
 srp|[Public Shared read\-only auto property](PublicStaticReadOnlyAutoProperty.snippet)
@@ -213,7 +200,7 @@ u|[StringWriter Variable](StringWriterVariable.snippet)
 u|[Using statement](Using.snippet)
 u|[XmlReader Variable](XmlReaderVariable.snippet)
 u|[XmlWriter Variable](XmlWriterVariable.snippet)
-v|[variable declaration](Variable.snippet)
+v|[local variable declaration](Variable.snippet)
 va|[array variable](ArrayOfTVariable.snippet)
 vb|[Boolean variable](BooleanVariable.snippet)
 vi|[Int32 variable](Int32Variable.snippet)
@@ -223,7 +210,7 @@ vp|[Public Overridable auto property](PublicVirtualAutoProperty.snippet)
 vrp|[Public Overridable read\-only auto property](PublicVirtualReadOnlyAutoProperty.snippet)
 vrpp|[Public Overridable read\-only Property](PublicVirtualReadOnlyProperty.snippet)
 vs|[String variable](StringVariable.snippet)
-vt|[variable with DirectCast](VariableWithDirectCast.snippet)
+vt|[local variable with DirectCast](VariableWithDirectCast.snippet)
 we|[While statement](While.snippet)
 xn|[IsNot Nothing](IsNotNothing.snippet)
 xsne|[String\.IsNullOrEmpty = False](NotStringIsNullOrEmpty.snippet)

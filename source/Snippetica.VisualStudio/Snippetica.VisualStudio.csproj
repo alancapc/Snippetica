@@ -23,8 +23,8 @@
     <ProjectGuid>{C6E1B9F3-6AFA-4849-9CE1-E224EBB08AA4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Pihrtsoft.Snippets.Snippetica.VisualStudio</RootNamespace>
-    <AssemblyName>Pihrtsoft.Snippets.Snippetica.VisualStudio</AssemblyName>
+    <RootNamespace>Snippetica.VisualStudio</RootNamespace>
+    <AssemblyName>Snippetica.VisualStudio</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
     <IncludeAssemblyInVSIXContainer>false</IncludeAssemblyInVSIXContainer>
@@ -90,21 +90,6 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Snippetica.CSharp\IfNot_Obsolete.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\IfNotEqualToNull_Obsolete.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\NotEqualToNull_Obsolete.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\NotStringIsNullOrEmpty_Obsolete.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\NotStringIsNullOrWhiteSpace_Obsolete.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\AttributeClass.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -201,7 +186,13 @@
     <Content Include="Snippetica.CSharp\IfEqualToNull.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp\IfNot_Obsolete.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp\IfNot.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\IfNotEqualToNull_Obsolete.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\IfNotEqualToNull.snippet">
@@ -216,10 +207,19 @@
     <Content Include="Snippetica.CSharp\NameOfOperator.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp\NotEqualToNull_Obsolete.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp\NotEqualToNull.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp\NotStringIsNullOrEmpty_Obsolete.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp\NotStringIsNullOrEmpty.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\NotStringIsNullOrWhiteSpace_Obsolete.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\NotStringIsNullOrWhiteSpace.snippet">
@@ -231,70 +231,70 @@
     <Content Include="Snippetica.CSharp\ObservableCollectionOfTClass.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\OperatorOverloadAmpersand.snippet">
+    <Content Include="Snippetica.CSharp\OverloadedOperatorAmpersand.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\OperatorOverloadAsterisk.snippet">
+    <Content Include="Snippetica.CSharp\OverloadedOperatorAsterisk.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\OperatorOverloadCaret.snippet">
+    <Content Include="Snippetica.CSharp\OverloadedOperatorCaret.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\OperatorOverloadEquality.snippet">
+    <Content Include="Snippetica.CSharp\OverloadedOperatorEquality.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\OperatorOverloadExclamationMark.snippet">
+    <Content Include="Snippetica.CSharp\OverloadedOperatorExclamationMark.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\OperatorOverloadExplicit.snippet">
+    <Content Include="Snippetica.CSharp\OverloadedOperatorExplicit.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\OperatorOverloadGreaterThan.snippet">
+    <Content Include="Snippetica.CSharp\OverloadedOperatorGreaterThan.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\OperatorOverloadGreaterThanGreaterThan.snippet">
+    <Content Include="Snippetica.CSharp\OverloadedOperatorGreaterThanGreaterThan.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\OperatorOverloadGreaterThanOrEqual.snippet">
+    <Content Include="Snippetica.CSharp\OverloadedOperatorGreaterThanOrEqual.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\OperatorOverloadImplicit.snippet">
+    <Content Include="Snippetica.CSharp\OverloadedOperatorImplicit.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\OperatorOverloadLessThan.snippet">
+    <Content Include="Snippetica.CSharp\OverloadedOperatorLessThan.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\OperatorOverloadLessThanLessThan.snippet">
+    <Content Include="Snippetica.CSharp\OverloadedOperatorLessThanLessThan.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\OperatorOverloadLessThanOrEqual.snippet">
+    <Content Include="Snippetica.CSharp\OverloadedOperatorLessThanOrEqual.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\OperatorOverloadMinus.snippet">
+    <Content Include="Snippetica.CSharp\OverloadedOperatorMinus.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\OperatorOverloadMinusMinus.snippet">
+    <Content Include="Snippetica.CSharp\OverloadedOperatorMinusMinus.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\OperatorOverloadPercent.snippet">
+    <Content Include="Snippetica.CSharp\OverloadedOperatorPercent.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\OperatorOverloadPlus.snippet">
+    <Content Include="Snippetica.CSharp\OverloadedOperatorPlus.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\OperatorOverloadPlusPlus.snippet">
+    <Content Include="Snippetica.CSharp\OverloadedOperatorPlusPlus.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\OperatorOverloadSlash.snippet">
+    <Content Include="Snippetica.CSharp\OverloadedOperatorSlash.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\OperatorOverloadTilde.snippet">
+    <Content Include="Snippetica.CSharp\OverloadedOperatorTilde.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\OperatorOverloadTrueFalse.snippet">
+    <Content Include="Snippetica.CSharp\OverloadedOperatorTrueFalse.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\OperatorOverloadVerticalBar.snippet">
+    <Content Include="Snippetica.CSharp\OverloadedOperatorVerticalBar.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PreprocessorDirectiveIf.snippet">
@@ -1146,16 +1146,31 @@
     <Content Include="Snippetica.CSharp\IEnumerableOfDateTimeType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp\IfNotTryParse_Obsolete.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp\IfNotTryParse.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\IfNotTryParseBoolean_Obsolete.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\IfNotTryParseBoolean.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp\IfNotTryParseInt32_Obsolete.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp\IfNotTryParseInt32.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp\IfNotTryParseInt64_Obsolete.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp\IfNotTryParseInt64.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\IfNotTryParseDateTime_Obsolete.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\IfNotTryParseDateTime.snippet">
@@ -2451,36 +2466,6 @@
     <Content Include="Snippetica.CSharp\DateTimeTypeParameter.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\IfNotTryParse_Obsolete.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\IfNotTryParseBoolean_Obsolete.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\IfNotTryParseInt32_Obsolete.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\IfNotTryParseInt64_Obsolete.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\IfNotTryParseDateTime_Obsolete.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\IfIsNotNothing_Obsolete.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\IfNot_Obsolete.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\IsNotNothing_Obsolete.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\NotStringIsNullOrEmpty_Obsolete.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\NotStringIsNullOrWhiteSpace_Obsolete.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\AttributeClass.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -2565,7 +2550,13 @@
     <Content Include="Snippetica.VisualBasic\IfIsNothing.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.VisualBasic\IfIsNotNothing_Obsolete.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.VisualBasic\IfIsNotNothing.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic\IfNot_Obsolete.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\IfNot.snippet">
@@ -2583,6 +2574,9 @@
     <Content Include="Snippetica.VisualBasic\IsNothing.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.VisualBasic\IsNotNothing_Obsolete.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.VisualBasic\IsNotNothing.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -2592,7 +2586,13 @@
     <Content Include="Snippetica.VisualBasic\NameOfOperator.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.VisualBasic\NotStringIsNullOrEmpty_Obsolete.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.VisualBasic\NotStringIsNullOrEmpty.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic\NotStringIsNullOrWhiteSpace_Obsolete.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\NotStringIsNullOrWhiteSpace.snippet">
@@ -2601,73 +2601,73 @@
     <Content Include="Snippetica.VisualBasic\ObservableCollectionClass.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\OperatorOverloadAmpersand.snippet">
+    <Content Include="Snippetica.VisualBasic\OverloadedOperatorAmpersand.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\OperatorOverloadAnd.snippet">
+    <Content Include="Snippetica.VisualBasic\OverloadedOperatorAnd.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\OperatorOverloadAsterisk.snippet">
+    <Content Include="Snippetica.VisualBasic\OverloadedOperatorAsterisk.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\OperatorOverloadBackslash.snippet">
+    <Content Include="Snippetica.VisualBasic\OverloadedOperatorBackslash.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\OperatorOverloadCaret.snippet">
+    <Content Include="Snippetica.VisualBasic\OverloadedOperatorCaret.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\OperatorOverloadCType.snippet">
+    <Content Include="Snippetica.VisualBasic\OverloadedOperatorCType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\OperatorOverloadEquality.snippet">
+    <Content Include="Snippetica.VisualBasic\OverloadedOperatorEquality.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\OperatorOverloadGreaterThan.snippet">
+    <Content Include="Snippetica.VisualBasic\OverloadedOperatorGreaterThan.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\OperatorOverloadGreaterThanGreaterThan.snippet">
+    <Content Include="Snippetica.VisualBasic\OverloadedOperatorGreaterThanGreaterThan.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\OperatorOverloadGreaterThanOrEqual.snippet">
+    <Content Include="Snippetica.VisualBasic\OverloadedOperatorGreaterThanOrEqual.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\OperatorOverloadIsFalse.snippet">
+    <Content Include="Snippetica.VisualBasic\OverloadedOperatorIsFalse.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\OperatorOverloadIsTrue.snippet">
+    <Content Include="Snippetica.VisualBasic\OverloadedOperatorIsTrue.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\OperatorOverloadLessThan.snippet">
+    <Content Include="Snippetica.VisualBasic\OverloadedOperatorLessThan.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\OperatorOverloadLessThanLessThan.snippet">
+    <Content Include="Snippetica.VisualBasic\OverloadedOperatorLessThanLessThan.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\OperatorOverloadLessThanOrEqual.snippet">
+    <Content Include="Snippetica.VisualBasic\OverloadedOperatorLessThanOrEqual.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\OperatorOverloadLike.snippet">
+    <Content Include="Snippetica.VisualBasic\OverloadedOperatorLike.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\OperatorOverloadMinus.snippet">
+    <Content Include="Snippetica.VisualBasic\OverloadedOperatorMinus.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\OperatorOverloadMod.snippet">
+    <Content Include="Snippetica.VisualBasic\OverloadedOperatorMod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\OperatorOverloadNot.snippet">
+    <Content Include="Snippetica.VisualBasic\OverloadedOperatorNot.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\OperatorOverloadOr.snippet">
+    <Content Include="Snippetica.VisualBasic\OverloadedOperatorOr.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\OperatorOverloadPlus.snippet">
+    <Content Include="Snippetica.VisualBasic\OverloadedOperatorPlus.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\OperatorOverloadSlash.snippet">
+    <Content Include="Snippetica.VisualBasic\OverloadedOperatorSlash.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\OperatorOverloadXor.snippet">
+    <Content Include="Snippetica.VisualBasic\OverloadedOperatorXor.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PreprocessorDirectiveIf.snippet">
@@ -3417,16 +3417,31 @@
     <Content Include="Snippetica.VisualBasic\IEnumerableOfDateTimeType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.VisualBasic\IfNotTryParse_Obsolete.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.VisualBasic\IfNotTryParse.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic\IfNotTryParseBoolean_Obsolete.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\IfNotTryParseBoolean.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.VisualBasic\IfNotTryParseInt32_Obsolete.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.VisualBasic\IfNotTryParseInt32.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.VisualBasic\IfNotTryParseInt64_Obsolete.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.VisualBasic\IfNotTryParseInt64.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic\IfNotTryParseDateTime_Obsolete.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\IfNotTryParseDateTime.snippet">
@@ -4726,21 +4741,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\DateTimeTypeParameter.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\IfNotTryParse_Obsolete.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\IfNotTryParseBoolean_Obsolete.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\IfNotTryParseInt32_Obsolete.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\IfNotTryParseInt64_Obsolete.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\IfNotTryParseDateTime_Obsolete.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\Class.snippet">

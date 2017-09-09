@@ -87,7 +87,7 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
             return info;
         }
 
-        protected override IEnumerable<Snippet> PostProcess(List<Snippet> snippets)
+        protected override IEnumerable<Snippet> PostProcess(IEnumerable<Snippet> snippets)
         {
             foreach (Snippet snippet in base.PostProcess(snippets))
             {
@@ -129,7 +129,7 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
 
                 if (snippet.HasTag(KnownTags.NonUniqueShortcut))
                 {
-                    if (snippet.TryGetTag(KnownTags.Shortcut, out TagInfo info))
+                    if (snippet.TryGetTag(KnownTags.ShortcutSuffix, out TagInfo info))
                     {
                         if (snippet.Shortcut.Last() != '_')
                             snippet.Shortcut += "_";

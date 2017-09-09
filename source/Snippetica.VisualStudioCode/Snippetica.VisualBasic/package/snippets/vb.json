@@ -1,12 +1,12 @@
 ﻿{
-  "- operator overload": {
+  "- operator overloading": {
     "prefix": "oo_Minus",
     "body": [
       "Public Shared Operator -(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
       "\t${0}",
       "End Operator"
     ],
-    "description": "- operator overload"
+    "description": "- operator overloading"
   },
   " type parameter": {
     "prefix": "g",
@@ -44,61 +44,61 @@
     ],
     "description": "#Region preprocessor directive"
   },
-  "& operator overload": {
+  "& operator overloading": {
     "prefix": "oo_Ampersand",
     "body": [
       "Public Shared Operator &(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
       "\t${0}",
       "End Operator"
     ],
-    "description": "& operator overload"
+    "description": "& operator overloading"
   },
-  "* operator overload": {
+  "* operator overloading": {
     "prefix": "oo_Asterisk",
     "body": [
       "Public Shared Operator *(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
       "\t${0}",
       "End Operator"
     ],
-    "description": "* operator overload"
+    "description": "* operator overloading"
   },
-  "/ operator overload": {
+  "/ operator overloading": {
     "prefix": "oo_Slash",
     "body": [
       "Public Shared Operator /(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
       "\t${0}",
       "End Operator"
     ],
-    "description": "/ operator overload"
+    "description": "/ operator overloading"
   },
-  "\\ operator overload": {
+  "\\ operator overloading": {
     "prefix": "oo_Backslash",
     "body": [
       "Public Shared Operator \\(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
       "\t${0}",
       "End Operator"
     ],
-    "description": "\\ operator overload"
+    "description": "\\ operator overloading"
   },
-  "^ operator overload": {
+  "^ operator overloading": {
     "prefix": "oo_Caret",
     "body": [
       "Public Shared Operator ^(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
       "\t${0}",
       "End Operator"
     ],
-    "description": "^ operator overload"
+    "description": "^ operator overloading"
   },
-  "+ operator overload": {
+  "+ operator overloading": {
     "prefix": "oo_Plus",
     "body": [
       "Public Shared Operator +(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
       "\t${0}",
       "End Operator"
     ],
-    "description": "+ operator overload"
+    "description": "+ operator overloading"
   },
-  "< operator overload": {
+  "< operator overloading": {
     "prefix": "oo_LessThan",
     "body": [
       "Public Shared Operator <(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
@@ -108,18 +108,18 @@
       "Public Shared Operator >(${1} As ${2}, ${3} As ${2})",
       "End Operator"
     ],
-    "description": "< operator overload"
+    "description": "< operator overloading"
   },
-  "<< operator overload": {
+  "<< operator overloading": {
     "prefix": "oo_LessThanLessThan",
     "body": [
       "Public Shared Operator <<(${1:left} As ${2:ThisName}, ${3:count} As Integer)",
       "\t${0}",
       "End Operator"
     ],
-    "description": "<< operator overload"
+    "description": "<< operator overloading"
   },
-  "<= operator overload": {
+  "<= operator overloading": {
     "prefix": "oo_LessThanEquals",
     "body": [
       "Public Shared Operator <=(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
@@ -129,9 +129,9 @@
       "Public Shared Operator >=(${1} As ${2}, ${3} As ${2})",
       "End Operator"
     ],
-    "description": "<= operator overload"
+    "description": "<= operator overloading"
   },
-  "= operator overload": {
+  "= operator overloading": {
     "prefix": "oo_Equals",
     "body": [
       "Public Shared Operator =(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
@@ -142,9 +142,9 @@
       "\tReturn Not(${1} = ${3})",
       "End Operator"
     ],
-    "description": "= operator overload"
+    "description": "= operator overloading"
   },
-  "> operator overload": {
+  "> operator overloading": {
     "prefix": "oo_GreaterThan",
     "body": [
       "Public Shared Operator >(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
@@ -154,9 +154,9 @@
       "Public Shared Operator <(${1} As ${2}, ${3} As ${2})",
       "End Operator"
     ],
-    "description": "> operator overload"
+    "description": "> operator overloading"
   },
-  ">= operator overload": {
+  ">= operator overloading": {
     "prefix": "oo_GreaterThanEquals",
     "body": [
       "Public Shared Operator >=(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
@@ -166,25 +166,25 @@
       "Public Shared Operator <=(${1} As ${2}, ${3} As ${2})",
       "End Operator"
     ],
-    "description": ">= operator overload"
+    "description": ">= operator overloading"
   },
-  ">> operator overload": {
+  ">> operator overloading": {
     "prefix": "oo_GreaterThanGreaterThan",
     "body": [
       "Public Shared Operator >>(${1:left} As ${2:ThisName}, ${3:count} As Integer)",
       "\t${0}",
       "End Operator"
     ],
-    "description": ">> operator overload"
+    "description": ">> operator overloading"
   },
-  "And operator overload": {
+  "And operator overloading": {
     "prefix": "oo_And",
     "body": [
       "Public Shared Operator And(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
       "\t${0}",
       "End Operator"
     ],
-    "description": "And operator overload"
+    "description": "And operator overloading"
   },
   "array variable": {
     "prefix": "va",
@@ -251,7 +251,7 @@
     ],
     "description": "CType operator"
   },
-  "CType operator overload": {
+  "CType operator overloading": {
     "prefix": "oo_CType",
     "body": [
       "Public Shared Widening Operator CType(ByVal ${1:value} As ${2:ThisName}) As ${3:Object}",
@@ -261,7 +261,7 @@
       "Public Shared Narrowing Operator CType(ByVal ${1} As ${3}) As ${2}",
       "End Operator"
     ],
-    "description": "CType operator overload"
+    "description": "CType operator overloading"
   },
   "DateTime type": {
     "prefix": "dt",
@@ -550,6 +550,17 @@
       "End Enum"
     ],
     "description": "Friend enum declaration"
+  },
+  "Friend event": {
+    "prefix": "iet",
+    "body": [
+      "Friend Event ${1:EventName} As EventHandler",
+      "",
+      "Protected Overridable Sub On${1}(${2:e} As EventArgs)",
+      "\tRaiseEvent ${1}(Me, ${2})",
+      "End Sub${0}"
+    ],
+    "description": "Friend event declaration"
   },
   "Friend event with EventHandler<T>": {
     "prefix": "iet",
@@ -1006,7 +1017,7 @@
     ],
     "description": "A condition whether the expression is Nothing"
   },
-  "IsFalse operator overload": {
+  "IsFalse operator overloading": {
     "prefix": "oo_IsFalse",
     "body": [
       "Public Shared Operator IsTrue(${1:value} As ${2:ThisName}) As Boolean",
@@ -1016,7 +1027,7 @@
       "\t${0}",
       "End Operator"
     ],
-    "description": "IsFalse operator overload"
+    "description": "IsFalse operator overloading"
   },
   "IsNot Nothing": {
     "prefix": "xn",
@@ -1025,7 +1036,7 @@
     ],
     "description": "A condition whether the expression is not Nothing"
   },
-  "IsTrue operator overload": {
+  "IsTrue operator overloading": {
     "prefix": "oo_IsTrue",
     "body": [
       "Public Shared Operator IsTrue(${1:value} As ${2:ThisName}) As Boolean",
@@ -1035,7 +1046,7 @@
       "Public Shared Operator IsFalse(${1} As ${2}) As Boolean",
       "End Operator"
     ],
-    "description": "IsTrue operator overload"
+    "description": "IsTrue operator overloading"
   },
   "Lambda expression": {
     "prefix": "l",
@@ -1044,23 +1055,37 @@
     ],
     "description": "Lambda expression"
   },
-  "Like operator overload": {
+  "Like operator overloading": {
     "prefix": "oo_Like",
     "body": [
       "Public Shared Operator Like(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
       "\t${0}",
       "End Operator"
     ],
-    "description": "Like operator overload"
+    "description": "Like operator overloading"
   },
-  "Mod operator overload": {
+  "local variable declaration": {
+    "prefix": "v",
+    "body": [
+      "Dim ${1:x} = ${2:expression}${0}"
+    ],
+    "description": "local variable declaration"
+  },
+  "local variable with DirectCast": {
+    "prefix": "vt",
+    "body": [
+      "Dim ${1:x} = DirectCast(${2:expression}, ${3:T})${0}"
+    ],
+    "description": "local variable declaration with DirectCast"
+  },
+  "Mod operator overloading": {
     "prefix": "oo_Mod",
     "body": [
       "Public Shared Operator Mod(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
       "\t${0}",
       "End Operator"
     ],
-    "description": "Mod operator overload"
+    "description": "Mod operator overloading"
   },
   "NameOf operator": {
     "prefix": "no",
@@ -1083,14 +1108,14 @@
     ],
     "description": "variable declaration with new object creation (with arguments)"
   },
-  "Not operator overload": {
+  "Not operator overloading": {
     "prefix": "oo_Not",
     "body": [
       "Public Shared Operator Not(${1:value} As ${2:ThisName})",
       "\t${0}",
       "End Operator"
     ],
-    "description": "Not operator overload"
+    "description": "Not operator overloading"
   },
   "ObservableCollection(Of T) class": {
     "prefix": "c_ObservableCollectionOfT",
@@ -1114,14 +1139,14 @@
     ],
     "description": "class derived from ObservableCollection(Of T)"
   },
-  "Or operator overload": {
+  "Or operator overloading": {
     "prefix": "oo_Or",
     "body": [
       "Public Shared Operator Or(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
       "\t${0}",
       "End Operator"
     ],
-    "description": "Or operator overload"
+    "description": "Or operator overloading"
   },
   "parameter array ": {
     "prefix": "pa",
@@ -1193,6 +1218,17 @@
       "End Enum"
     ],
     "description": "Private enum declaration"
+  },
+  "Private event": {
+    "prefix": "pet",
+    "body": [
+      "Private Event ${1:EventName} As EventHandler",
+      "",
+      "Protected Overridable Sub On${1}(${2:e} As EventArgs)",
+      "\tRaiseEvent ${1}(Me, ${2})",
+      "End Sub${0}"
+    ],
+    "description": "Private event declaration"
   },
   "Private event with EventHandler<T>": {
     "prefix": "pet",
@@ -1390,6 +1426,17 @@
       "End Enum"
     ],
     "description": "Public enum declaration"
+  },
+  "Public event": {
+    "prefix": "et",
+    "body": [
+      "Public Event ${1:EventName} As EventHandler",
+      "",
+      "Protected Overridable Sub On${1}(${2:e} As EventArgs)",
+      "\tRaiseEvent ${1}(Me, ${2})",
+      "End Sub${0}"
+    ],
+    "description": "Public event declaration"
   },
   "Public event with EventHandler<T>": {
     "prefix": "et",
@@ -1829,20 +1876,6 @@
     ],
     "description": "Using statement"
   },
-  "variable declaration": {
-    "prefix": "v",
-    "body": [
-      "Dim ${1:x} = ${2:expression}${0}"
-    ],
-    "description": "variable declaration"
-  },
-  "variable with DirectCast": {
-    "prefix": "vt",
-    "body": [
-      "Dim ${1:x} = DirectCast(${2:expression}, ${3:T})${0}"
-    ],
-    "description": "variable declaration with DirectCast"
-  },
   "While statement": {
     "prefix": "we",
     "body": [
@@ -1870,13 +1903,13 @@
     ],
     "description": "XmlWriter variable declaration."
   },
-  "Xor operator overload": {
+  "Xor operator overloading": {
     "prefix": "oo_Xor",
     "body": [
       "Public Shared Operator Xor(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
       "\t${0}",
       "End Operator"
     ],
-    "description": "Xor operator overload"
+    "description": "Xor operator overloading"
   }
 }

@@ -137,9 +137,9 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>?: operator (equal to null)</Title>
+      <Title>conditional operator (equal to null)</Title>
       <Shortcut>con</Shortcut>
-      <Description>?: (conditional) operator with condition whether the expression is equal to null</Description>
+      <Description>conditional operator with condition whether the expression is equal to null</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -171,9 +171,9 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>?: operator (not equal to null)</Title>
+      <Title>conditional operator (not equal to null)</Title>
       <Shortcut>coxn</Shortcut>
-      <Description>?: (conditional) operator with condition whether the expression is not equal to null</Description>
+      <Description>conditional operator with condition whether the expression is not equal to null</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -2059,6 +2059,81 @@ if (Enum.TryParse($value$, out $result$))
 }]]></Code>
     </Snippet>
   </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>if equal to null return false</Title>
+      <Shortcut>ifnref</Shortcut>
+      <Description>if equal to null return false</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IfEqualToNullReturnFalse</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[if ($expression$ == null)
+	return false;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>if equal to null return null</Title>
+      <Shortcut>ifnren</Shortcut>
+      <Description>if equal to null return null</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IfEqualToNullReturnNull</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[if ($expression$ == null)
+	return null;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>if equal to null return true</Title>
+      <Shortcut>ifnret</Shortcut>
+      <Description>if equal to null return true</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IfEqualToNullReturnTrue</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[if ($expression$ == null)
+	return true;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>if not Enum.TryParse</Title>
@@ -2100,6 +2175,156 @@ if (!Enum.TryParse($value$, out $result$))
 {
 	$end$
 }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>if not equal to null return false</Title>
+      <Shortcut>ifxnref</Shortcut>
+      <Description>if not equal to null return false</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IfNotEqualToNullReturnFalse</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[if ($expression$ != null)
+	return false;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>if not equal to null return null</Title>
+      <Shortcut>ifxnren</Shortcut>
+      <Description>if not equal to null return null</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IfNotEqualToNullReturnNull</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[if ($expression$ != null)
+	return null;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>if not equal to null return true</Title>
+      <Shortcut>ifxnret</Shortcut>
+      <Description>if not equal to null return true</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IfNotEqualToNullReturnTrue</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[if ($expression$ != null)
+	return true;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>if not return false</Title>
+      <Shortcut>ifxref</Shortcut>
+      <Description>if not return false</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IfNotReturnFalse</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[if (!$expression$)
+	return false;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>if not return null</Title>
+      <Shortcut>ifxren</Shortcut>
+      <Description>if not return null</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IfNotReturnNull</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[if (!$expression$)
+	return null;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>if not return true</Title>
+      <Shortcut>ifxret</Shortcut>
+      <Description>if not return true</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IfNotReturnTrue</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[if (!$expression$)
+	return true;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -2158,6 +2383,81 @@ if (!Enum.TryParse($value$, out $result$))
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>if return false</Title>
+      <Shortcut>ifref</Shortcut>
+      <Description>if return false</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IfReturnFalse</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>true</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[if ($expression$)
+	return false;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>if return null</Title>
+      <Shortcut>ifren</Shortcut>
+      <Description>if return null</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IfReturnNull</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>true</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[if ($expression$)
+	return null;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>if return true</Title>
+      <Shortcut>ifret</Shortcut>
+      <Description>if return true</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IfReturnTrue</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>true</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[if ($expression$)
+	return true;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>if string.IsNullOrEmpty</Title>
       <Shortcut>ifsne</Shortcut>
       <Description>if string.IsNullOrEmpty</Description>
@@ -2208,78 +2508,6 @@ if (!Enum.TryParse($value$, out $result$))
 {
 	$end$
 }]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>internal abstract modifiers</Title>
-      <Shortcut>x</Shortcut>
-      <Description>internal abstract modifiers</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name InternalAbstractModifiers</Keyword>
-        <Keyword>Meta-SubmenuShortcut ia</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Code Language="CSharp"><![CDATA[internal abstract$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>internal modifier</Title>
-      <Shortcut>x</Shortcut>
-      <Description>internal modifier</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name InternalModifier</Keyword>
-        <Keyword>Meta-SubmenuShortcut i</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Code Language="CSharp"><![CDATA[internal$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>internal static modifiers</Title>
-      <Shortcut>x</Shortcut>
-      <Description>internal static modifiers</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name InternalStaticModifiers</Keyword>
-        <Keyword>Meta-SubmenuShortcut is</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Code Language="CSharp"><![CDATA[internal static$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>internal virtual modifiers</Title>
-      <Shortcut>x</Shortcut>
-      <Description>internal virtual modifiers</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name InternalVirtualModifiers</Keyword>
-        <Keyword>Meta-SubmenuShortcut iv</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Code Language="CSharp"><![CDATA[internal virtual$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -2661,23 +2889,6 @@ if (!Enum.TryParse($value$, out $result$))
       <Code Language="CSharp"><![CDATA[[Obsolete($message$)]$end$]]></Code>
     </Snippet>
   </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>override modifier</Title>
-      <Shortcut>oe</Shortcut>
-      <Description>override modifier</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name OverrideModifier</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Code Language="CSharp"><![CDATA[override$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>Path.Combine</Title>
@@ -2926,185 +3137,6 @@ if (!Enum.TryParse($value$, out $result$))
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[Path.ChangeExtension($path$, $extension$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>private modifier</Title>
-      <Shortcut>x</Shortcut>
-      <Description>private modifier</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PrivateModifier</Keyword>
-        <Keyword>Meta-SubmenuShortcut p</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Code Language="CSharp"><![CDATA[private$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>private static modifiers</Title>
-      <Shortcut>x</Shortcut>
-      <Description>private static modifiers</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PrivateStaticModifiers</Keyword>
-        <Keyword>Meta-SubmenuShortcut ps</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Code Language="CSharp"><![CDATA[private static$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>protected abstract modifiers</Title>
-      <Shortcut>x</Shortcut>
-      <Description>protected abstract modifiers</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ProtectedAbstractModifiers</Keyword>
-        <Keyword>Meta-SubmenuShortcut da</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Code Language="CSharp"><![CDATA[protected abstract$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>protected modifier</Title>
-      <Shortcut>x</Shortcut>
-      <Description>protected modifier</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ProtectedModifier</Keyword>
-        <Keyword>Meta-SubmenuShortcut d</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Code Language="CSharp"><![CDATA[protected$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>protected virtual modifiers</Title>
-      <Shortcut>x</Shortcut>
-      <Description>protected virtual modifiers</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ProtectedVirtualModifiers</Keyword>
-        <Keyword>Meta-SubmenuShortcut dv</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Code Language="CSharp"><![CDATA[protected virtual$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>public abstract modifiers</Title>
-      <Shortcut>x</Shortcut>
-      <Description>public abstract modifiers</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PublicAbstractModifiers</Keyword>
-        <Keyword>Meta-SubmenuShortcut a</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Code Language="CSharp"><![CDATA[public abstract$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>public modifier</Title>
-      <Shortcut>x</Shortcut>
-      <Description>public modifier</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PublicModifier</Keyword>
-        <Keyword>Meta-SubmenuShortcut -</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Code Language="CSharp"><![CDATA[public$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>public static modifiers</Title>
-      <Shortcut>x</Shortcut>
-      <Description>public static modifiers</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PublicStaticModifiers</Keyword>
-        <Keyword>Meta-SubmenuShortcut s</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Code Language="CSharp"><![CDATA[public static$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>public virtual modifiers</Title>
-      <Shortcut>x</Shortcut>
-      <Description>public virtual modifiers</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PublicVirtualModifiers</Keyword>
-        <Keyword>Meta-SubmenuShortcut v</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Code Language="CSharp"><![CDATA[public virtual$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>readonly modifier</Title>
-      <Shortcut>ro</Shortcut>
-      <Description>readonly modifier</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ReadOnlyModifier</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Code Language="CSharp"><![CDATA[readonly$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">

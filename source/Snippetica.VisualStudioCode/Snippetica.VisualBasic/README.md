@@ -56,20 +56,11 @@ we|while statement|\-
 Shortcut | Description | Comment
 -------- | ----------- | -------
 gt|GetType operator|\-
+n|new object creation|\-
 no|nameof operator|\-
 oo|operator overload|\-
 tc|TryCast operator|\-
 x|logical not operator|prefix
-
-#### Keyword
-
-Shortcut | Description | Comment
--------- | ----------- | -------
-d|default|\-
-f|false|\-
-r|return|\-
-t|true|\-
-y|yield|\-
 
 #### Type
 
@@ -82,6 +73,7 @@ d|Dictionary&lt;TKey,TValue&gt;|\-
 dt|DateTime|\-
 e|IEnumerable&lt;T&gt;|\-
 hs|HashSet&lt;T&gt;|\-
+i|Immutable|prefix
 i|Int32|\-
 l|Int64|\-
 l|List&lt;T&gt;|\-
@@ -99,18 +91,19 @@ Shortcut | Description | Comment
 \_|with initializer|suffix
 \_|with parameters|suffix
 c|catch clause|\-
+d|default keyword|\-
 e|else clause|\-
 f|finally clause|\-
 g|generic type|prefix
 g|type parameter|\-
-i|Immutable|prefix
 l|lambda expression|\-
 n|\(equals to\) null|\-
-n|new object creation|\-
 pa|parameter array|\-
 pp|preprocessor directive|prefix
 ps|private set|\-
+r|return keyword|\-
 v|local variable declaration|\-
+y|yield|prefix
 
 ### List of Selected Snippets
 
@@ -133,6 +126,7 @@ e|[Else clause](Else.snippet)
 eif|[ElseIf](ElseIf.snippet)
 em|[Public enum](PublicEnum.snippet)
 equals|[Equals and GetHashCode](EqualsAndGetHashCode.snippet)
+et|[Public event](PublicEvent.snippet)
 f|[Public field](PublicField.snippet)
 fe|[For Each statement](ForEach.snippet)
 fr|[For statement](For.snippet)
@@ -191,7 +185,7 @@ u\_srr|[StringReader Variable](StringReaderVariable.snippet)
 u\_swr|[StringWriter Variable](StringWriterVariable.snippet)
 u\_xmlrr|[XmlReader Variable](XmlReaderVariable.snippet)
 u\_xmlwr|[XmlWriter Variable](XmlWriterVariable.snippet)
-v|[variable declaration](Variable.snippet)
+v|[local variable declaration](Variable.snippet)
 va|[array variable](ArrayOfTVariable.snippet)
 vb|[Boolean variable](BooleanVariable.snippet)
 vi|[Int32 variable](Int32Variable.snippet)
@@ -201,7 +195,7 @@ vp|[Public Overridable auto property](PublicVirtualAutoProperty.snippet)
 vrp|[Public Overridable read\-only auto property](PublicVirtualReadOnlyAutoProperty.snippet)
 vrpp|[Public Overridable read\-only Property](PublicVirtualReadOnlyProperty.snippet)
 vs|[String variable](StringVariable.snippet)
-vt|[variable with DirectCast](VariableWithDirectCast.snippet)
+vt|[local variable with DirectCast](VariableWithDirectCast.snippet)
 we|[While statement](While.snippet)
 xn|[IsNot Nothing](IsNotNothing.snippet)
 xsne|[String\.IsNullOrEmpty = False](NotStringIsNullOrEmpty.snippet)

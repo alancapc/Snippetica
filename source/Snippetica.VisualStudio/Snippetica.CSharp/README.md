@@ -55,21 +55,12 @@ we|while statement|\-
 Shortcut | Description | Comment
 -------- | ----------- | -------
 co|conditional operator|\-
+n|new object creation|\-
 no|nameof operator|\-
 oo|operator overload|\-
 t|explict cast operator|\-
 to|typeof operator|\-
 x|logical not operator|prefix
-
-#### Keyword
-
-Shortcut | Description | Comment
--------- | ----------- | -------
-d|default|\-
-f|false|\-
-r|return|\-
-t|true|\-
-y|yield|\-
 
 #### Type
 
@@ -82,6 +73,7 @@ d|Dictionary&lt;TKey,TValue&gt;|\-
 dt|DateTime|\-
 e|IEnumerable&lt;T&gt;|\-
 hs|HashSet&lt;T&gt;|\-
+i|Immutable|prefix
 i|Int32|\-
 l|Int64|\-
 l|List&lt;T&gt;|\-
@@ -99,19 +91,20 @@ Shortcut | Description | Comment
 \_|with initializer|suffix
 \_|with parameters|suffix
 c|catch clause|\-
+d|default keyword|\-
 e|else clause|\-
 f|finally clause|\-
 g|generic type|prefix
 g|type parameter|\-
-i|Immutable|prefix
 l|lambda expression|\-
 n|\(equals to\) null|\-
-n|new object creation|\-
 pa|parameter array|\-
 pp|preprocessor directive|prefix
 ps|private set|\-
+r|return keyword|\-
 this|containing type name|\-
 v|local variable declaration|\-
+y|yield|prefix
 
 ### List of Selected Snippets
 
@@ -136,7 +129,7 @@ c\_|[ObservableCollection&lt;T&gt; class](ObservableCollectionOfTClass.snippet)
 c\_|[ReadOnlyCollection&lt;T&gt; class](ReadOnlyCollectionOfTClass.snippet)
 c\_|[Singleton class](SingletonClass.snippet)
 catch|[catch](Catch.snippet)
-co|[?: operator](ConditionalOperator.snippet)
+co|[conditional operator](ConditionalOperator.snippet)
 cr|[public constructor](PublicConstructor.snippet)
 d|[default keyword](DefaultKeyword.snippet)
 da|[Debug\.Assert](DebugAssert.snippet)
@@ -158,10 +151,7 @@ frr|[for \(reversed\)](ForReversed.snippet)
 g|[type parameter](TypeParameter.snippet)
 ge|[IEnumerable&lt;T&gt; type](IEnumerableOfTType.snippet)
 ie|[public interface](PublicInterface.snippet)
-iff|[if not \_](IfNot_Obsolete.snippet)
-ifftp|[if not TryParse \_](IfNotTryParse_Obsolete.snippet)
 ifn|[if equal to null](IfEqualToNull.snippet)
-ifnn|[if not equal to null \_](IfNotEqualToNull_Obsolete.snippet)
 iftp|[if TryParse](IfTryParse.snippet)
 ifx|[if not](IfNot.snippet)
 ifxn|[if not equal to null](IfNotEqualToNull.snippet)
@@ -171,10 +161,9 @@ k|[public const](PublicConst.snippet)
 l|[lambda expression](LambdaExpression.snippet)
 m|[public method](PublicMethod.snippet)
 n|[equal to null](EqualToNull.snippet)
-nn|[not equal to null \_](NotEqualToNull_Obsolete.snippet)
 no|[nameof operator](NameOfOperator.snippet)
 o|[object keyword](ObjectKeyword.snippet)
-oo|[== operator overload](OperatorOverloadEquality.snippet)
+oo|[== operator overloading](OverloadedOperatorEquality.snippet)
 p|[public auto property](PublicAutoProperty.snippet)
 pa|[parameter array ](ParameterArray.snippet)
 ppif|[\#if preprocessor directive](PreprocessorDirectiveIf.snippet)
@@ -195,8 +184,6 @@ sf|[public static field](PublicStaticField.snippet)
 sh|[switch](Switch.snippet)
 sm|[public static method](PublicStaticMethod.snippet)
 sne|[string\.IsNullOrEmpty](StringIsNullOrEmpty.snippet)
-snne|[\!string\.IsNullOrEmpty \_](NotStringIsNullOrEmpty_Obsolete.snippet)
-snnw|[\!string\.IsNullOrWhiteSpace \_](NotStringIsNullOrWhiteSpace_Obsolete.snippet)
 snw|[string\.IsNullOrWhiteSpace](StringIsNullOrWhiteSpace.snippet)
 srf|[public static read\-only field](PublicStaticReadOnlyField.snippet)
 srp|[public static read\-only auto property](PublicStaticReadOnlyAutoProperty.snippet)
@@ -212,7 +199,7 @@ to|[typeof operator](TypeOfOperator.snippet)
 twn|[throw new](ThrowNew.snippet)
 u|[using statement](Using.snippet)
 us|[using static](UsingStatic.snippet)
-v|[variable declaration](Variable.snippet)
+v|[local variable declaration](Variable.snippet)
 va|[array variable](ArrayOfTVariable.snippet)
 vb|[Boolean variable](BooleanVariable.snippet)
 vi|[Int32 variable](Int32Variable.snippet)
@@ -222,7 +209,7 @@ vp|[public virtual auto property](PublicVirtualAutoProperty.snippet)
 vrp|[public virtual read\-only auto property](PublicVirtualReadOnlyAutoProperty.snippet)
 vrpp|[public virtual read\-only property](PublicVirtualReadOnlyProperty.snippet)
 vs|[String variable](StringVariable.snippet)
-vt|[variable declaration with explicit cast operator](VariableWithExplicitCast.snippet)
+vt|[local variable declaration with explicit cast operator](VariableWithExplicitCast.snippet)
 we|[while](While.snippet)
 where|[generic type constraint](GenericTypeConstraint.snippet)
 xn|[not equal to null](NotEqualToNull.snippet)

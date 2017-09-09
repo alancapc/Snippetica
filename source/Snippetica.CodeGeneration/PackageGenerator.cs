@@ -58,7 +58,7 @@ namespace Snippetica.CodeGeneration
             Validator.ThrowOnDuplicateFileName(snippets);
         }
 
-        protected virtual IEnumerable<Snippet> PostProcess(List<Snippet> snippets)
+        protected virtual IEnumerable<Snippet> PostProcess(IEnumerable<Snippet> snippets)
         {
             foreach (Snippet snippet in snippets)
             {
@@ -96,13 +96,14 @@ namespace Snippetica.CodeGeneration
                     }
                 }
 
+                if (snippet.TryGetTag(KnownTags.ObsoleteShortcut, out info))
+                    snippet.Keywords.RemoveAt(info.KeywordIndex);
+
                 if (snippet.HasTag(KnownTags.NonUniqueTitle))
                 {
                     snippet.Title += " _";
                     snippet.RemoveTag(KnownTags.NonUniqueTitle);
                 }
-
-                CheckObsoleteSnippet(snippet);
 
                 snippet.SortCollections();
 
@@ -112,37 +113,6 @@ namespace Snippetica.CodeGeneration
                     snippet.SnippetTypes = SnippetTypes.Expansion;
 
                 yield return snippet;
-            }
-        }
-
-        private static void CheckObsoleteSnippet(Snippet snippet)
-        {
-            if (snippet.TryGetTag(KnownTags.Obsolete, out TagInfo info))
-            {
-                string s = $"Shortcut '{snippet.Shortcut}' is obsolete, use '{info.Value}' instead.";
-
-                if (snippet.Language == Language.CSharp)
-                {
-                    s = $"/* {s} */";
-                }
-                else if (snippet.Language == Language.VisualBasic)
-                {
-                    s = $"' {s}\r\n";
-                }
-                else
-                {
-                    throw new NotSupportedException(snippet.Language.ToString());
-                }
-
-                snippet.CodeText = s + $"${Placeholder.EndIdentifier}$";
-
-                snippet.Literals.Clear();
-
-                snippet.Keywords.RemoveAt(info.KeywordIndex);
-
-                snippet.AddTag(KnownTags.ExcludeFromSnippetBrowser);
-
-                snippet.SuffixFileName("_Obsolete");
             }
         }
     }

@@ -34,13 +34,6 @@
         </Add>
         <Add Languages="CSharp">
           <Add Languages="VisualBasic">
-            <Set Kind="Keyword">
-              <New Value="d" Description="default" />
-              <New Value="f" Description="false" />
-              <New Value="r" Description="return" />
-              <New Value="t" Description="true" />
-              <New Value="y" Description="yield" />
-            </Set>
             <Set Kind="MemberDeclaration">
               <New Value="_" Description="interface member declaration" Comment="prefix" />
               <New Value="c" Description="class declaration" />
@@ -65,6 +58,7 @@
               <New Value="v" Description="virtual (Overridable)" Comment="prefix (after access modifier)" />
             </Set>
             <Set Kind="Operator">
+              <New Value="n" Description="new object creation" />
               <New Value="no" Description="nameof operator" />
               <New Value="oo" Description="operator overload" />
               <New Value="x" Description="logical not operator" Comment="prefix" />
@@ -87,6 +81,7 @@
               <New Value="dt" Description="DateTime" />
               <New Value="e" Description="IEnumerable&lt;T&gt;" />
               <New Value="hs" Description="HashSet&lt;T&gt;" />
+              <New Value="i" Description="Immutable" Comment="prefix" />
               <New Value="i" Description="Int32" />
               <New Value="l" Description="Int64" />
               <New Value="l" Description="List&lt;T&gt;" />
@@ -101,19 +96,20 @@
               <New Value="_" Description="with parameters" Comment="suffix" />
               <New Value="_" Description="with initializer" Comment="suffix" />
               <New Value="c" Description="catch clause" />
+              <New Value="d" Description="default keyword" />
               <New Value="e" Description="else clause" />
               <New Value="f" Description="finally clause" />
               <New Value="g" Description="type parameter" />
               <New Value="g" Description="generic type" Comment="prefix" />
-              <New Value="i" Description="Immutable" Comment="prefix" />
               <New Value="l" Description="lambda expression" />
               <New Value="n" Description="(equals to) null" />
-              <New Value="n" Description="new object creation" />
               <New Value="pa" Description="parameter array" />
               <New Value="pp" Description="preprocessor directive" Comment="prefix" />
               <New Value="ps" Description="private set" />
+              <New Value="r" Description="return keyword" />
               <New Value="this" Description="containing type name" Tag="ExcludeFromVisualStudioCode" />
               <New Value="v" Description="local variable declaration" />
+              <New Value="y" Description="yield" Comment="prefix" />
             </Set>
           </Add>
         </Add>

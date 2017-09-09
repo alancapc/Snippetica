@@ -932,9 +932,9 @@ $modifier$ class $name$Attribute : $base$
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>?: operator</Title>
+      <Title>conditional operator</Title>
       <Shortcut>co</Shortcut>
-      <Description>?: (conditional) operator</Description>
+      <Description>conditional operator</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -2580,8 +2580,44 @@ if ($_type$.TryParse($value$, out $result$))
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>internal event</Title>
+      <Shortcut>iet_EventHandler</Shortcut>
+      <Description>internal event declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name InternalEvent</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Event name</ToolTip>
+          <Default>EventName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[internal event EventHandler $name$;
+
+protected virtual void On$name$(EventArgs e)
+{
+	EventHandler handler = $name$;
+	if (handler != null)
+		handler(this, e);
+}$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>internal event with EventHandler&lt;T&gt;</Title>
-      <Shortcut>iet</Shortcut>
+      <Shortcut>iet_EventHandlerOfT</Shortcut>
       <Description>internal event declaration with EventHandler&lt;T&gt;</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -3479,15 +3515,15 @@ protected virtual void On$name$($eventArgs$ e)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>&amp; operator overload</Title>
+      <Title>&amp; operator overloading</Title>
       <Shortcut>oo_Ampersand</Shortcut>
-      <Description>&amp; operator overload</Description>
+      <Description>&amp; operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadAmpersand</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorAmpersand</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3516,15 +3552,15 @@ protected virtual void On$name$($eventArgs$ e)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>* operator overload</Title>
+      <Title>* operator overloading</Title>
       <Shortcut>oo_Asterisk</Shortcut>
-      <Description>* operator overload</Description>
+      <Description>* operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadAsterisk</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorAsterisk</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3553,15 +3589,15 @@ protected virtual void On$name$($eventArgs$ e)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>^ operator overload</Title>
+      <Title>^ operator overloading</Title>
       <Shortcut>oo_Caret</Shortcut>
-      <Description>^ operator overload</Description>
+      <Description>^ operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadCaret</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorCaret</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3590,15 +3626,15 @@ protected virtual void On$name$($eventArgs$ e)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>== operator overload</Title>
+      <Title>== operator overloading</Title>
       <Shortcut>oo_EqualsEquals</Shortcut>
-      <Description>== operator overload</Description>
+      <Description>== operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadEquality</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorEquality</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3632,15 +3668,15 @@ public static bool operator !=($thisName$ $left$, $thisName$ $right$)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>! operator overload</Title>
+      <Title>! operator overloading</Title>
       <Shortcut>oo_ExclamationMark</Shortcut>
-      <Description>! operator overload</Description>
+      <Description>! operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadExclamationMark</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorExclamationMark</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3664,15 +3700,15 @@ public static bool operator !=($thisName$ $left$, $thisName$ $right$)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>explicit operator overload</Title>
+      <Title>explicit operator overloading</Title>
       <Shortcut>oo_Explicit</Shortcut>
-      <Description>explicit operator overload</Description>
+      <Description>explicit operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadExplicit</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorExplicit</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3705,15 +3741,15 @@ public static explicit operator $type$($thisName$ $operand$)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>&gt; operator overload</Title>
+      <Title>&gt; operator overloading</Title>
       <Shortcut>oo_GreaterThan</Shortcut>
-      <Description>&gt; operator overload</Description>
+      <Description>&gt; operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadGreaterThan</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorGreaterThan</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3746,15 +3782,15 @@ public static bool operator >($thisName$ $left$, $thisName$ $right$)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>&gt;&gt; operator overload</Title>
+      <Title>&gt;&gt; operator overloading</Title>
       <Shortcut>oo_GreaterThanGreaterThan</Shortcut>
-      <Description>&gt;&gt; operator overload</Description>
+      <Description>&gt;&gt; operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadGreaterThanGreaterThan</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorGreaterThanGreaterThan</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3783,15 +3819,15 @@ public static bool operator >($thisName$ $left$, $thisName$ $right$)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>&gt;= operator overload</Title>
+      <Title>&gt;= operator overloading</Title>
       <Shortcut>oo_GreaterThanEquals</Shortcut>
-      <Description>&gt;= operator overload</Description>
+      <Description>&gt;= operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadGreaterThanOrEqual</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorGreaterThanOrEqual</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3824,15 +3860,15 @@ public static bool operator >=($thisName$ $left$, $thisName$ $right$)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>implicit operator overload</Title>
+      <Title>implicit operator overloading</Title>
       <Shortcut>oo_Implicit</Shortcut>
-      <Description>implicit operator overload</Description>
+      <Description>implicit operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadImplicit</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorImplicit</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3865,15 +3901,15 @@ public static implicit operator $type$($thisName$ $operand$)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>&lt; operator overload</Title>
+      <Title>&lt; operator overloading</Title>
       <Shortcut>oo_LessThan</Shortcut>
-      <Description>&lt; operator overload</Description>
+      <Description>&lt; operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadLessThan</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorLessThan</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3906,15 +3942,15 @@ public static bool operator >($thisName$ $left$, $thisName$ $right$)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>&lt;&lt; operator overload</Title>
+      <Title>&lt;&lt; operator overloading</Title>
       <Shortcut>oo_LessThanLessThan</Shortcut>
-      <Description>&lt;&lt; operator overload</Description>
+      <Description>&lt;&lt; operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadLessThanLessThan</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorLessThanLessThan</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3943,15 +3979,15 @@ public static bool operator >($thisName$ $left$, $thisName$ $right$)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>&lt;= operator overload</Title>
+      <Title>&lt;= operator overloading</Title>
       <Shortcut>oo_LessThanEquals</Shortcut>
-      <Description>&lt;= operator overload</Description>
+      <Description>&lt;= operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadLessThanOrEqual</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorLessThanOrEqual</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3984,15 +4020,15 @@ public static bool operator >=($thisName$ $left$, $thisName$ $right$)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>- operator overload</Title>
+      <Title>- operator overloading</Title>
       <Shortcut>oo_Minus</Shortcut>
-      <Description>- operator overload</Description>
+      <Description>- operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadMinus</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorMinus</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4021,15 +4057,15 @@ public static bool operator >=($thisName$ $left$, $thisName$ $right$)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>-- operator overload</Title>
+      <Title>-- operator overloading</Title>
       <Shortcut>oo_MinusMinus</Shortcut>
-      <Description>-- operator overload</Description>
+      <Description>-- operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadMinusMinus</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorMinusMinus</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4053,15 +4089,15 @@ public static bool operator >=($thisName$ $left$, $thisName$ $right$)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>% operator overload</Title>
+      <Title>% operator overloading</Title>
       <Shortcut>oo_Percent</Shortcut>
-      <Description>% operator overload</Description>
+      <Description>% operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadPercent</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorPercent</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4090,15 +4126,15 @@ public static bool operator >=($thisName$ $left$, $thisName$ $right$)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>+ operator overload</Title>
+      <Title>+ operator overloading</Title>
       <Shortcut>oo_Plus</Shortcut>
-      <Description>+ operator overload</Description>
+      <Description>+ operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadPlus</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorPlus</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4127,15 +4163,15 @@ public static bool operator >=($thisName$ $left$, $thisName$ $right$)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>++ operator overload</Title>
+      <Title>++ operator overloading</Title>
       <Shortcut>oo_PlusPlus</Shortcut>
-      <Description>++ operator overload</Description>
+      <Description>++ operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadPlusPlus</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorPlusPlus</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4159,15 +4195,15 @@ public static bool operator >=($thisName$ $left$, $thisName$ $right$)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>/ operator overload</Title>
+      <Title>/ operator overloading</Title>
       <Shortcut>oo_Slash</Shortcut>
-      <Description>/ operator overload</Description>
+      <Description>/ operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadSlash</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorSlash</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4196,15 +4232,15 @@ public static bool operator >=($thisName$ $left$, $thisName$ $right$)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>~ operator overload</Title>
+      <Title>~ operator overloading</Title>
       <Shortcut>oo_Tilde</Shortcut>
-      <Description>~ operator overload</Description>
+      <Description>~ operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadTilde</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorTilde</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4228,15 +4264,15 @@ public static bool operator >=($thisName$ $left$, $thisName$ $right$)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>true-false operator overload</Title>
+      <Title>true-false operator overloading</Title>
       <Shortcut>oo_TrueFalse</Shortcut>
-      <Description>true-false operator overload</Description>
+      <Description>true-false operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadTrueFalse</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorTrueFalse</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4264,15 +4300,15 @@ public static bool operator false($thisName$ $operand$)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>| operator overload</Title>
+      <Title>| operator overloading</Title>
       <Shortcut>oo_VerticalBar</Shortcut>
-      <Description>| operator overload</Description>
+      <Description>| operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadVerticalBar</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorVerticalBar</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4673,8 +4709,44 @@ public static bool operator false($thisName$ $operand$)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>private event</Title>
+      <Shortcut>pet_EventHandler</Shortcut>
+      <Description>private event declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PrivateEvent</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Event name</ToolTip>
+          <Default>EventName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[private event EventHandler $name$;
+
+protected virtual void On$name$(EventArgs e)
+{
+	EventHandler handler = $name$;
+	if (handler != null)
+		handler(this, e);
+}$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>private event with EventHandler&lt;T&gt;</Title>
-      <Shortcut>pet</Shortcut>
+      <Shortcut>pet_EventHandlerOfT</Shortcut>
       <Description>private event declaration with EventHandler&lt;T&gt;</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -5455,8 +5527,44 @@ protected virtual void On$name$($eventArgs$ e)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>public event</Title>
+      <Shortcut>et_EventHandler</Shortcut>
+      <Description>public event declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PublicEvent</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Event name</ToolTip>
+          <Default>EventName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[public event EventHandler $name$;
+
+protected virtual void On$name$(EventArgs e)
+{
+	EventHandler handler = $name$;
+	if (handler != null)
+		handler(this, e);
+}$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>public event with EventHandler&lt;T&gt;</Title>
-      <Shortcut>et</Shortcut>
+      <Shortcut>et_EventHandlerOfT</Shortcut>
       <Description>public event declaration with EventHandler&lt;T&gt;</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -7102,9 +7210,9 @@ finally
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>variable declaration</Title>
+      <Title>local variable declaration</Title>
       <Shortcut>v</Shortcut>
-      <Description>variable declaration</Description>
+      <Description>local variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -7131,9 +7239,9 @@ finally
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>variable declaration with explicit cast operator</Title>
+      <Title>local variable declaration with explicit cast operator</Title>
       <Shortcut>vt</Shortcut>
-      <Description>variable declaration with explicit cast operator</Description>
+      <Description>local variable declaration with explicit cast operator</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -15197,6 +15305,44 @@ End Enum]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>Friend event</Title>
+      <Shortcut>iet</Shortcut>
+      <Description>Friend event declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name InternalEvent</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Event name</ToolTip>
+          <Default>EventName</Default>
+        </Literal>
+        <Literal>
+          <ID>parameterName</ID>
+          <ToolTip>Parameter name</ToolTip>
+          <Default>e</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[Friend Event $name$ As EventHandler
+
+Protected Overridable Sub On$name$($parameterName$ As EventArgs)
+	RaiseEvent $name$(Me, $parameterName$)
+End Sub$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>Friend event with EventHandler&lt;T&gt;</Title>
       <Shortcut>iet</Shortcut>
       <Description>Friend event declaration with EventHandler&lt;T&gt;</Description>
@@ -16109,15 +16255,15 @@ End Class]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>&amp; operator overload</Title>
+      <Title>&amp; operator overloading</Title>
       <Shortcut>oo_Ampersand</Shortcut>
-      <Description>&amp; operator overload</Description>
+      <Description>&amp; operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadAmpersand</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorAmpersand</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -16145,15 +16291,15 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>And operator overload</Title>
+      <Title>And operator overloading</Title>
       <Shortcut>oo_And</Shortcut>
-      <Description>And operator overload</Description>
+      <Description>And operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadAnd</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorAnd</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -16181,15 +16327,15 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>* operator overload</Title>
+      <Title>* operator overloading</Title>
       <Shortcut>oo_Asterisk</Shortcut>
-      <Description>* operator overload</Description>
+      <Description>* operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadAsterisk</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorAsterisk</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -16217,15 +16363,15 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>\ operator overload</Title>
+      <Title>\ operator overloading</Title>
       <Shortcut>oo_Backslash</Shortcut>
-      <Description>\ operator overload</Description>
+      <Description>\ operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadBackslash</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorBackslash</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -16253,15 +16399,15 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>^ operator overload</Title>
+      <Title>^ operator overloading</Title>
       <Shortcut>oo_Caret</Shortcut>
-      <Description>^ operator overload</Description>
+      <Description>^ operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadCaret</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorCaret</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -16289,15 +16435,15 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>CType operator overload</Title>
+      <Title>CType operator overloading</Title>
       <Shortcut>oo_CType</Shortcut>
-      <Description>CType operator overload</Description>
+      <Description>CType operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadCType</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorCType</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -16328,15 +16474,15 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>= operator overload</Title>
+      <Title>= operator overloading</Title>
       <Shortcut>oo_Equals</Shortcut>
-      <Description>= operator overload</Description>
+      <Description>= operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadEquality</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorEquality</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -16368,15 +16514,15 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>&gt; operator overload</Title>
+      <Title>&gt; operator overloading</Title>
       <Shortcut>oo_GreaterThan</Shortcut>
-      <Description>&gt; operator overload</Description>
+      <Description>&gt; operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadGreaterThan</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorGreaterThan</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -16407,15 +16553,15 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>&gt;&gt; operator overload</Title>
+      <Title>&gt;&gt; operator overloading</Title>
       <Shortcut>oo_GreaterThanGreaterThan</Shortcut>
-      <Description>&gt;&gt; operator overload</Description>
+      <Description>&gt;&gt; operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadGreaterThanGreaterThan</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorGreaterThanGreaterThan</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -16443,15 +16589,15 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>&gt;= operator overload</Title>
+      <Title>&gt;= operator overloading</Title>
       <Shortcut>oo_GreaterThanEquals</Shortcut>
-      <Description>&gt;= operator overload</Description>
+      <Description>&gt;= operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadGreaterThanOrEqual</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorGreaterThanOrEqual</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -16482,15 +16628,15 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>IsFalse operator overload</Title>
+      <Title>IsFalse operator overloading</Title>
       <Shortcut>oo_IsFalse</Shortcut>
-      <Description>IsFalse operator overload</Description>
+      <Description>IsFalse operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadIsFalse</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorIsFalse</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -16516,15 +16662,15 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>IsTrue operator overload</Title>
+      <Title>IsTrue operator overloading</Title>
       <Shortcut>oo_IsTrue</Shortcut>
-      <Description>IsTrue operator overload</Description>
+      <Description>IsTrue operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadIsTrue</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorIsTrue</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -16550,15 +16696,15 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>&lt; operator overload</Title>
+      <Title>&lt; operator overloading</Title>
       <Shortcut>oo_LessThan</Shortcut>
-      <Description>&lt; operator overload</Description>
+      <Description>&lt; operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadLessThan</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorLessThan</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -16589,15 +16735,15 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>&lt;&lt; operator overload</Title>
+      <Title>&lt;&lt; operator overloading</Title>
       <Shortcut>oo_LessThanLessThan</Shortcut>
-      <Description>&lt;&lt; operator overload</Description>
+      <Description>&lt;&lt; operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadLessThanLessThan</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorLessThanLessThan</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -16625,15 +16771,15 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>&lt;= operator overload</Title>
+      <Title>&lt;= operator overloading</Title>
       <Shortcut>oo_LessThanEquals</Shortcut>
-      <Description>&lt;= operator overload</Description>
+      <Description>&lt;= operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadLessThanOrEqual</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorLessThanOrEqual</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -16664,15 +16810,15 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>Like operator overload</Title>
+      <Title>Like operator overloading</Title>
       <Shortcut>oo_Like</Shortcut>
-      <Description>Like operator overload</Description>
+      <Description>Like operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadLike</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorLike</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -16700,15 +16846,15 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>- operator overload</Title>
+      <Title>- operator overloading</Title>
       <Shortcut>oo_Minus</Shortcut>
-      <Description>- operator overload</Description>
+      <Description>- operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadMinus</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorMinus</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -16736,15 +16882,15 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>Mod operator overload</Title>
+      <Title>Mod operator overloading</Title>
       <Shortcut>oo_Mod</Shortcut>
-      <Description>Mod operator overload</Description>
+      <Description>Mod operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadMod</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorMod</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -16772,15 +16918,15 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>Not operator overload</Title>
+      <Title>Not operator overloading</Title>
       <Shortcut>oo_Not</Shortcut>
-      <Description>Not operator overload</Description>
+      <Description>Not operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadNot</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorNot</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -16803,15 +16949,15 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>Or operator overload</Title>
+      <Title>Or operator overloading</Title>
       <Shortcut>oo_Or</Shortcut>
-      <Description>Or operator overload</Description>
+      <Description>Or operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadOr</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorOr</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -16839,15 +16985,15 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>+ operator overload</Title>
+      <Title>+ operator overloading</Title>
       <Shortcut>oo_Plus</Shortcut>
-      <Description>+ operator overload</Description>
+      <Description>+ operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadPlus</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorPlus</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -16875,15 +17021,15 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>/ operator overload</Title>
+      <Title>/ operator overloading</Title>
       <Shortcut>oo_Slash</Shortcut>
-      <Description>/ operator overload</Description>
+      <Description>/ operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadSlash</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorSlash</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -16911,15 +17057,15 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>Xor operator overload</Title>
+      <Title>Xor operator overloading</Title>
       <Shortcut>oo_Xor</Shortcut>
-      <Description>Xor operator overload</Description>
+      <Description>Xor operator overloading</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name OperatorOverloadXor</Keyword>
+        <Keyword>Meta-Name OverloadedOperatorXor</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -17275,6 +17421,44 @@ End Sub]]></Code>
       <Code Language="VB"><![CDATA[Private Enum $enum$
 	$end$
 End Enum]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>Private event</Title>
+      <Shortcut>pet</Shortcut>
+      <Description>Private event declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PrivateEvent</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Event name</ToolTip>
+          <Default>EventName</Default>
+        </Literal>
+        <Literal>
+          <ID>parameterName</ID>
+          <ToolTip>Parameter name</ToolTip>
+          <Default>e</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[Private Event $name$ As EventHandler
+
+Protected Overridable Sub On$name$($parameterName$ As EventArgs)
+	RaiseEvent $name$(Me, $parameterName$)
+End Sub$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -17986,6 +18170,44 @@ End Sub]]></Code>
       <Code Language="VB"><![CDATA[Public Enum $enum$
 	$end$
 End Enum]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>Public event</Title>
+      <Shortcut>et</Shortcut>
+      <Description>Public event declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PublicEvent</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Event name</ToolTip>
+          <Default>EventName</Default>
+        </Literal>
+        <Literal>
+          <ID>parameterName</ID>
+          <ToolTip>Parameter name</ToolTip>
+          <Default>e</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[Public Event $name$ As EventHandler
+
+Protected Overridable Sub On$name$($parameterName$ As EventArgs)
+	RaiseEvent $name$(Me, $parameterName$)
+End Sub$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -19508,9 +19730,9 @@ End Using]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>variable declaration</Title>
+      <Title>local variable declaration</Title>
       <Shortcut>v</Shortcut>
-      <Description>variable declaration</Description>
+      <Description>local variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -19537,9 +19759,9 @@ End Using]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>variable with DirectCast</Title>
+      <Title>local variable with DirectCast</Title>
       <Shortcut>vt</Shortcut>
-      <Description>variable declaration with DirectCast</Description>
+      <Description>local variable declaration with DirectCast</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>

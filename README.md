@@ -13,9 +13,9 @@
 Group|Count| |
 --- | --- | ---:
 [Snippetica.Cpp](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Cpp/README.md)|23|[Browse](http://pihrt.net/snippetica/snippets?engine=vs&language=cpp)
-[Snippetica.CSharp](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.CSharp/README.md)|792|[Browse](http://pihrt.net/snippetica/snippets?engine=vs&language=csharp)
+[Snippetica.CSharp](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.CSharp/README.md)|782|[Browse](http://pihrt.net/snippetica/snippets?engine=vs&language=csharp)
 [Snippetica.Html](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Html/README.md)|221|[Browse](http://pihrt.net/snippetica/snippets?engine=vs&language=html)
-[Snippetica.VisualBasic](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.VisualBasic/README.md)|759|[Browse](http://pihrt.net/snippetica/snippets?engine=vs&language=vb)
+[Snippetica.VisualBasic](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.VisualBasic/README.md)|749|[Browse](http://pihrt.net/snippetica/snippets?engine=vs&language=vb)
 [Snippetica.Xaml](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Xaml/README.md)|91|[Browse](http://pihrt.net/snippetica/snippets?engine=vs&language=xaml)
 [Snippetica.Xml](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Xml/README.md)|9|[Browse](http://pihrt.net/snippetica/snippets?engine=vs&language=xml)
 [Snippetica.Xml.CodeSnippet](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Xml.CodeSnippet/README.md)|22|[Browse](http://pihrt.net/snippetica/snippets?engine=vs&language=xml)
@@ -30,9 +30,9 @@ Group|Count| |
 Group|Count| |
 --- | --- | ---:
 [Snippetica.Cpp](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Cpp/README.md)|23|[Browse](http://pihrt.net/snippetica/snippets?engine=vscode&language=cpp)
-[Snippetica.CSharp](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.CSharp/README.md)|214|[Browse](http://pihrt.net/snippetica/snippets?engine=vscode&language=csharp)
+[Snippetica.CSharp](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.CSharp/README.md)|208|[Browse](http://pihrt.net/snippetica/snippets?engine=vscode&language=csharp)
 [Snippetica.Html](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Html/README.md)|221|[Browse](http://pihrt.net/snippetica/snippets?engine=vscode&language=html)
 [Snippetica.Json](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Json/README.md)|10|[Browse](http://pihrt.net/snippetica/snippets?engine=vscode&language=json)
 [Snippetica.Markdown](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Markdown/README.md)|36|[Browse](http://pihrt.net/snippetica/snippets?engine=vscode&language=markdown)
-[Snippetica.VisualBasic](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.VisualBasic/README.md)|202|[Browse](http://pihrt.net/snippetica/snippets?engine=vscode&language=vb)
+[Snippetica.VisualBasic](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.VisualBasic/README.md)|196|[Browse](http://pihrt.net/snippetica/snippets?engine=vscode&language=vb)
 [Snippetica.Xml](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Xml/README.md)|9|[Browse](http://pihrt.net/snippetica/snippets?engine=vscode&language=xml)

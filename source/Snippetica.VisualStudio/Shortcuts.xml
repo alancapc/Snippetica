@@ -80,41 +80,6 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="d" Description="default" Comment="-">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
-  <ShortcutInfo Value="f" Description="false" Comment="-">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
-  <ShortcutInfo Value="r" Description="return" Comment="-">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
-  <ShortcutInfo Value="t" Description="true" Comment="-">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
-  <ShortcutInfo Value="y" Description="yield" Comment="-">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
   <ShortcutInfo Value="_" Description="interface member declaration" Comment="prefix">
     <Languages>
       <Language>CSharp</Language>
@@ -248,6 +213,13 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
+  <ShortcutInfo Value="n" Description="new object creation" Comment="-">
+    <Languages>
+      <Language>CSharp</Language>
+      <Language>VisualBasic</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
   <ShortcutInfo Value="no" Description="nameof operator" Comment="-">
     <Languages>
       <Language>CSharp</Language>
@@ -374,6 +346,13 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
+  <ShortcutInfo Value="i" Description="Immutable" Comment="prefix">
+    <Languages>
+      <Language>CSharp</Language>
+      <Language>VisualBasic</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
   <ShortcutInfo Value="i" Description="Int32" Comment="-">
     <Languages>
       <Language>CSharp</Language>
@@ -458,6 +437,13 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
+  <ShortcutInfo Value="d" Description="default keyword" Comment="-">
+    <Languages>
+      <Language>CSharp</Language>
+      <Language>VisualBasic</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
   <ShortcutInfo Value="e" Description="else clause" Comment="-">
     <Languages>
       <Language>CSharp</Language>
@@ -486,13 +472,6 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="i" Description="Immutable" Comment="prefix">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
   <ShortcutInfo Value="l" Description="lambda expression" Comment="-">
     <Languages>
       <Language>CSharp</Language>
@@ -501,13 +480,6 @@
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="n" Description="(equals to) null" Comment="-">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
-  <ShortcutInfo Value="n" Description="new object creation" Comment="-">
     <Languages>
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>
@@ -535,6 +507,13 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
+  <ShortcutInfo Value="r" Description="return keyword" Comment="-">
+    <Languages>
+      <Language>CSharp</Language>
+      <Language>VisualBasic</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
   <ShortcutInfo Value="this" Description="containing type name" Comment="-">
     <Languages>
       <Language>CSharp</Language>
@@ -545,6 +524,13 @@
     </Tags>
   </ShortcutInfo>
   <ShortcutInfo Value="v" Description="local variable declaration" Comment="-">
+    <Languages>
+      <Language>CSharp</Language>
+      <Language>VisualBasic</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="y" Description="yield" Comment="prefix">
     <Languages>
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>

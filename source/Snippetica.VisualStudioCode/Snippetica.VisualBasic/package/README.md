@@ -54,20 +54,11 @@ we|while statement|\-
 Shortcut | Description | Comment
 -------- | ----------- | -------
 gt|GetType operator|\-
+n|new object creation|\-
 no|nameof operator|\-
 oo|operator overload|\-
 tc|TryCast operator|\-
 x|logical not operator|prefix
-
-#### Keyword
-
-Shortcut | Description | Comment
--------- | ----------- | -------
-d|default|\-
-f|false|\-
-r|return|\-
-t|true|\-
-y|yield|\-
 
 #### Type
 
@@ -80,6 +71,7 @@ d|Dictionary&lt;TKey,TValue&gt;|\-
 dt|DateTime|\-
 e|IEnumerable&lt;T&gt;|\-
 hs|HashSet&lt;T&gt;|\-
+i|Immutable|prefix
 i|Int32|\-
 l|Int64|\-
 l|List&lt;T&gt;|\-
@@ -97,18 +89,19 @@ Shortcut | Description | Comment
 \_|with initializer|suffix
 \_|with parameters|suffix
 c|catch clause|\-
+d|default keyword|\-
 e|else clause|\-
 f|finally clause|\-
 g|generic type|prefix
 g|type parameter|\-
-i|Immutable|prefix
 l|lambda expression|\-
 n|\(equals to\) null|\-
-n|new object creation|\-
 pa|parameter array|\-
 pp|preprocessor directive|prefix
 ps|private set|\-
+r|return keyword|\-
 v|local variable declaration|\-
+y|yield|prefix
 
 ### List of Selected Snippets
 
@@ -131,6 +124,7 @@ e|Else clause
 eif|ElseIf
 em|Public enum
 equals|Equals and GetHashCode
+et|Public event
 f|Public field
 fe|For Each statement
 fr|For statement
@@ -189,7 +183,7 @@ u\_srr|StringReader Variable
 u\_swr|StringWriter Variable
 u\_xmlrr|XmlReader Variable
 u\_xmlwr|XmlWriter Variable
-v|variable declaration
+v|local variable declaration
 va|array variable
 vb|Boolean variable
 vi|Int32 variable
@@ -199,7 +193,7 @@ vp|Public Overridable auto property
 vrp|Public Overridable read\-only auto property
 vrpp|Public Overridable read\-only Property
 vs|String variable
-vt|variable with DirectCast
+vt|local variable with DirectCast
 we|While statement
 xn|IsNot Nothing
 xsne|String\.IsNullOrEmpty = False

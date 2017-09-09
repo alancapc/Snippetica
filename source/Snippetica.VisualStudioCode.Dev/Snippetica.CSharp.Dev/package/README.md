@@ -11,8 +11,8 @@ ae\_fs|Flags attribute
 ae\_oe|Obsolete attribute
 bk|break statement
 ce|continue statement
-con|?: operator \(equal to null\)
-coxn|?: operator \(not equal to null\)
+con|conditional operator \(equal to null\)
+coxn|conditional operator \(not equal to null\)
 daxn|Debug\.Assert \!= null
 don|do while null
 doxn|do while not null
@@ -21,9 +21,21 @@ ghs|HashSet&lt;T&gt; type
 gl|List&lt;T&gt; type
 goc|ObservableCollection&lt;T&gt; type
 ifemtp|if Enum\.TryParse
+ifnref|if equal to null return false
+ifnren|if equal to null return null
+ifnret|if equal to null return true
+ifref|if return false
+ifren|if return null
+ifret|if return true
 ifsne|if string\.IsNullOrEmpty
 ifsnw|if string\.IsNullOrWhiteSpace
 ifxemtp|if not Enum\.TryParse
+ifxnref|if not equal to null return false
+ifxnren|if not equal to null return null
+ifxnret|if not equal to null return true
+ifxref|if not return false
+ifxren|if not return null
+ifxret|if not return true
 ifxsne|if \!string\.IsNullOrEmpty
 ifxsnw|if \!string\.IsNullOrWhiteSpace
 iod\_cd|Directory\.CreateDirectory
@@ -54,7 +66,6 @@ iop\_he|Path\.HasExtension
 l2|lambda expression with 2 parameters
 na|new array 
 ns|namespace
-oe|override modifier
 q\_c|Enumerable\.Cast
 q\_e|Enumerable\.Empty
 q\_f|Enumerable\.First
@@ -81,7 +92,6 @@ q\_wxn|Enumerable\.Where not equal to null
 q\_z|Enumerable\.Zip
 re|return statement
 rn|return new
-ro|readonly modifier
 rx|Regex type
 ts|TimeSpan type
 tw|throw statement
@@ -95,17 +105,4 @@ voc|ObservableCollection&lt;T&gt; variable
 vsb|StringBuilder variable
 wen|while null
 wexn|while not null
-x|public modifier
-x\_a|public abstract modifiers
-x\_d|protected modifier
-x\_da|protected abstract modifiers
-x\_dv|protected virtual modifiers
-x\_i|internal modifier
-x\_ia|internal abstract modifiers
-x\_is|internal static modifiers
-x\_iv|internal virtual modifiers
-x\_p|private modifier
-x\_ps|private static modifiers
-x\_s|public static modifiers
-x\_v|public virtual modifiers
 yrn|yield return new

@@ -53,21 +53,12 @@ we|while statement|\-
 Shortcut | Description | Comment
 -------- | ----------- | -------
 co|conditional operator|\-
+n|new object creation|\-
 no|nameof operator|\-
 oo|operator overload|\-
 t|explict cast operator|\-
 to|typeof operator|\-
 x|logical not operator|prefix
-
-#### Keyword
-
-Shortcut | Description | Comment
--------- | ----------- | -------
-d|default|\-
-f|false|\-
-r|return|\-
-t|true|\-
-y|yield|\-
 
 #### Type
 
@@ -80,6 +71,7 @@ d|Dictionary&lt;TKey,TValue&gt;|\-
 dt|DateTime|\-
 e|IEnumerable&lt;T&gt;|\-
 hs|HashSet&lt;T&gt;|\-
+i|Immutable|prefix
 i|Int32|\-
 l|Int64|\-
 l|List&lt;T&gt;|\-
@@ -97,18 +89,19 @@ Shortcut | Description | Comment
 \_|with initializer|suffix
 \_|with parameters|suffix
 c|catch clause|\-
+d|default keyword|\-
 e|else clause|\-
 f|finally clause|\-
 g|generic type|prefix
 g|type parameter|\-
-i|Immutable|prefix
 l|lambda expression|\-
 n|\(equals to\) null|\-
-n|new object creation|\-
 pa|parameter array|\-
 pp|preprocessor directive|prefix
 ps|private set|\-
+r|return keyword|\-
 v|local variable declaration|\-
+y|yield|prefix
 
 ### List of Selected Snippets
 
@@ -121,7 +114,7 @@ Shortcut | Title
 b|braces
 c|public class
 catch|catch
-co|?: operator
+co|conditional operator
 cr|public constructor
 d|default keyword
 da|Debug\.Assert
@@ -187,7 +180,7 @@ to|typeof operator
 twn|throw new
 u|using statement
 us|using static
-v|variable declaration
+v|local variable declaration
 va|array variable
 vb|Boolean variable
 vi|Int32 variable
@@ -197,7 +190,7 @@ vp|public virtual auto property
 vrp|public virtual read\-only auto property
 vrpp|public virtual read\-only property
 vs|String variable
-vt|variable declaration with explicit cast operator
+vt|local variable declaration with explicit cast operator
 we|while
 where|generic type constraint
 xn|not equal to null
