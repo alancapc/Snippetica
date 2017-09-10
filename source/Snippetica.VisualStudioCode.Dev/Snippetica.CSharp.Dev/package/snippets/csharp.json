@@ -1,4 +1,11 @@
 ﻿{
+  "! operator": {
+    "prefix": "x",
+    "body": [
+      "!(${1:x})${0}"
+    ],
+    "description": "! operator"
+  },
   "array type": {
     "prefix": "a",
     "body": [

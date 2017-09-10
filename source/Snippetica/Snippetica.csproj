@@ -162,6 +162,7 @@
     <None Include="Snippetica.CSharp\Dev\IfEqualToNullReturnNull.snippet" />
     <None Include="Snippetica.CSharp\Dev\IfEqualToNullReturnTrue.snippet" />
     <None Include="Snippetica.CSharp\Dev\IfNotReturnFalse.snippet" />
+    <None Include="Snippetica.CSharp\Dev\LogicalNotOperator.snippet" />
     <None Include="Snippetica.CSharp\Dev\IfNotReturnTrue.snippet" />
     <None Include="Snippetica.CSharp\Dev\IfNotReturnNull.snippet" />
     <None Include="Snippetica.CSharp\Dev\IfNotEnumTryParse.snippet" />
@@ -243,7 +244,7 @@
     <None Include="Snippetica.CSharp\DictionaryOfTKeyTValueClass.snippet" />
     <None Include="Snippetica.CSharp\DisposableClass.snippet" />
     <None Include="Snippetica.CSharp\Dispose.snippet" />
-    <None Include="Snippetica.CSharp\Do.snippet_" />
+    <None Include="Snippetica.CSharp\Do.snippet" />
     <None Include="Snippetica.CSharp\Else.snippet" />
     <None Include="Snippetica.CSharp\ElseIf.snippet" />
     <None Include="Snippetica.CSharp\EqualsAndGetHashCode.snippet" />
@@ -261,7 +262,7 @@
     <None Include="Snippetica.CSharp\IEnumeratorOfTVariable.snippet" />
     <None Include="Snippetica.CSharp\IEqualityComparerClass.snippet" />
     <None Include="Snippetica.CSharp\IEqualityComparerOfTClass.snippet" />
-    <None Include="Snippetica.CSharp\If.snippet_" />
+    <None Include="Snippetica.CSharp\If.snippet" />
     <None Include="Snippetica.CSharp\IfEqualToNull.snippet" />
     <None Include="Snippetica.CSharp\IfNot.snippet" />
     <None Include="Snippetica.CSharp\IfNotEqualToNull.snippet" />
@@ -606,7 +607,7 @@
     <None Include="Snippetica.VisualBasic\IEnumeratorOfTVariable.snippet" />
     <None Include="Snippetica.VisualBasic\IEqualityComparerClass.snippet" />
     <None Include="Snippetica.VisualBasic\IEqualityComparerOfTClass.snippet" />
-    <None Include="Snippetica.VisualBasic\If.snippet_" />
+    <None Include="Snippetica.VisualBasic\If.snippet" />
     <None Include="Snippetica.VisualBasic\IfIsNothing.snippet" />
     <None Include="Snippetica.VisualBasic\IfIsNotNothing.snippet" />
     <None Include="Snippetica.VisualBasic\IfNot.snippet" />

@@ -105,4 +105,5 @@ voc|ObservableCollection&lt;T&gt; variable
 vsb|StringBuilder variable
 wen|while null
 wexn|while not null
+x|\! operator
 yrn|yield return new

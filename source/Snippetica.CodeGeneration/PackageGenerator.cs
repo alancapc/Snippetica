@@ -31,6 +31,9 @@ namespace Snippetica.CodeGeneration
 
                 List<Snippet> snippets = PostProcess(result.Snippets).ToList();
 
+                result.Snippets.Clear();
+                result.Snippets.AddRange(snippets);
+
                 ValidateSnippets(snippets);
 
                 SaveSnippets(snippets, result);

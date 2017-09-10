@@ -2577,6 +2577,30 @@ if (!Enum.TryParse($value$, out $result$))
       <Code Language="CSharp"><![CDATA[var $_collectionIdentifier$ = new List<$_type$>() { $_value$ };$end$]]></Code>
     </Snippet>
   </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>! operator</Title>
+      <Shortcut>x</Shortcut>
+      <Description>! operator</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name LogicalNotOperator</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[!($expression$)$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>MemoryStream Variable</Title>

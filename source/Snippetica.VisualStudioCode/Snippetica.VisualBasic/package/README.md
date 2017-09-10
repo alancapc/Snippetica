@@ -69,7 +69,6 @@ b|Boolean|\-
 c|Collection&lt;T&gt;|\-
 d|Dictionary&lt;TKey,TValue&gt;|\-
 dt|DateTime|\-
-e|IEnumerable&lt;T&gt;|\-
 hs|HashSet&lt;T&gt;|\-
 i|Immutable|prefix
 i|Int32|\-

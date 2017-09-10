@@ -332,13 +332,6 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="e" Description="IEnumerable&lt;T&gt;" Comment="-">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
   <ShortcutInfo Value="hs" Description="HashSet&lt;T&gt;" Comment="-">
     <Languages>
       <Language>CSharp</Language>

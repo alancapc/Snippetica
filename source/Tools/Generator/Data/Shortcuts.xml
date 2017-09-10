@@ -79,7 +79,6 @@
               <New Value="c" Description="Collection&lt;T&gt;" />
               <New Value="d" Description="Dictionary&lt;TKey,TValue&gt;" />
               <New Value="dt" Description="DateTime" />
-              <New Value="e" Description="IEnumerable&lt;T&gt;" />
               <New Value="hs" Description="HashSet&lt;T&gt;" />
               <New Value="i" Description="Immutable" Comment="prefix" />
               <New Value="i" Description="Int32" />

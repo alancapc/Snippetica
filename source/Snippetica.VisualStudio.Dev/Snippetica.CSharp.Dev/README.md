@@ -108,5 +108,6 @@ voc|[ObservableCollection&lt;T&gt; variable](ObservableCollectionOfTVariable.sni
 vsb|[StringBuilder variable](StringBuilderVariable.snippet)
 wen|[while null](WhileNull.snippet)
 wexn|[while not null](WhileNotNull.snippet)
+x|[\! operator](LogicalNotOperator.snippet)
 yrn|[yield return new](YieldReturnNew.snippet)
 yrnthis|[yield return new containing type](YieldReturnNewThis.snippet)
