@@ -120,6 +120,7 @@ namespace Pihrtsoft.Records
                             bool isCollection = false;
                             bool isRequired = false;
                             string defaultValue = null;
+                            string description = null;
 
                             foreach (XAttribute attribute in element.Attributes())
                             {
@@ -145,6 +146,11 @@ namespace Pihrtsoft.Records
                                             defaultValue = attribute.Value;
                                             break;
                                         }
+                                    case AttributeNames.Description:
+                                        {
+                                            description = attribute.Value;
+                                            break;
+                                        }
                                     default:
                                         {
                                             Throw(ErrorMessages.UnknownAttribute(attribute), element);
@@ -156,11 +162,18 @@ namespace Pihrtsoft.Records
                             if (properties.Contains(name))
                                 Throw(ErrorMessages.ItemAlreadyDefined(ElementNames.Property, name), element);
 
+                            if (isCollection
+                                && defaultValue != null)
+                            {
+                                Throw(ErrorMessages.CollectionPropertyCannotDefineDefaultValue(), element);
+                            }
+
                             var property = new PropertyDefinition(
                                 name,
                                 isCollection,
                                 isRequired,
                                 defaultValue,
+                                description,
                                 element);
 
                             properties.Add(property);

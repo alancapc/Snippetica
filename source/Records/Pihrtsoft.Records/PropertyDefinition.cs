@@ -6,7 +6,7 @@ using Pihrtsoft.Records.Utilities;
 
 namespace Pihrtsoft.Records
 {
-    [DebuggerDisplay("Name = {Name,nq} DefaultValue = {DefaultValue} IsCollection = {IsCollection}, IsRequired = {IsRequired}")]
+    [DebuggerDisplay("Name = {Name,nq}, IsCollection = {IsCollection}, IsRequired = {IsRequired}, DefaultValue = {DefaultValue}")]
     public class PropertyDefinition : IKey<string>
     {
         internal PropertyDefinition(
@@ -14,6 +14,7 @@ namespace Pihrtsoft.Records
             bool isCollection = false,
             bool isRequired = false,
             object defaultValue = null,
+            string description = null,
             XElement element = null)
         {
             if (!object.ReferenceEquals(name, IdName)
@@ -30,6 +31,7 @@ namespace Pihrtsoft.Records
             IsCollection = isCollection;
             IsRequired = isRequired;
             DefaultValue = defaultValue;
+            Description = description;
         }
 
         internal static string IdName { get; } = "Id";
@@ -47,6 +49,8 @@ namespace Pihrtsoft.Records
         public bool IsRequired { get; }
 
         public object DefaultValue { get; }
+
+        public string Description { get; }
 
         string IKey<string>.GetKey()
         {

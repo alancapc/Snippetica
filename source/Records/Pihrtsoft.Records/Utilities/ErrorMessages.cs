@@ -82,19 +82,24 @@ namespace Pihrtsoft.Records.Utilities
             return $"Collection with element name '{elementName}' is not defined.";
         }
 
-        internal static string CannotUseOperationOnProperty(XElement element, string propertyName)
+        public static string CannotUseOperationOnProperty(XElement element, string propertyName)
         {
             return $"Cannot use {element.LocalName()} operation on property '{propertyName}'.";
         }
 
-        internal static string CannotUseOperationOnCollectionProperty(XElement element, string propertyName)
+        public static string CannotUseOperationOnCollectionProperty(XElement element, string propertyName)
         {
             return $"Cannot use {element.LocalName()} operation on collection property '{propertyName}'.";
         }
 
-        internal static string CannotUseOperationOnNonCollectionProperty(XElement element, string propertyName)
+        public static string CannotUseOperationOnNonCollectionProperty(XElement element, string propertyName)
         {
             return $"Cannot use {element.LocalName()} operation on non-collection property '{propertyName}'.";
+        }
+
+        public static string CollectionPropertyCannotDefineDefaultValue()
+        {
+            return "Collection property cannot define default value.";
         }
     }
 }
