@@ -8,10 +8,10 @@
 
 Shortcut | Description | Comment
 -------- | ----------- | -------
-a|\(element\) with attribute|\-
+a|\(element\) with attribute|suffix
 e|element|\-
-s|self\-closing \(element\)|\-
-x|\(element\) with content|\-
+s|self\-closing \(element\)|suffix
+x|\(element\) with content|suffix
 
 ### List of Selected Snippets
 

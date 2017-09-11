@@ -842,7 +842,7 @@ $modifier$ class $name$Attribute : $base$
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>catch</Title>
+      <Title>catch clause</Title>
       <Shortcut>catch</Shortcut>
       <Description>catch clause</Description>
       <Author>Josef Pihrt</Author>
@@ -1368,7 +1368,7 @@ protected virtual void Dispose(bool disposing)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>else</Title>
+      <Title>else clause</Title>
       <Shortcut>e</Shortcut>
       <Description>else clause</Description>
       <Author>Josef Pihrt</Author>
@@ -1621,7 +1621,7 @@ $modifier$ class $name$Exception : $base$
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>finally</Title>
+      <Title>finally clause</Title>
       <Shortcut>finally</Shortcut>
       <Description>finally clause</Description>
       <Author>Josef Pihrt</Author>
@@ -1641,7 +1641,7 @@ $modifier$ class $name$Exception : $base$
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>for</Title>
+      <Title>for statement</Title>
       <Shortcut>fr</Shortcut>
       <Description>for statement</Description>
       <Author>Josef Pihrt</Author>
@@ -1705,7 +1705,7 @@ $modifier$ class $name$Exception : $base$
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>for (reversed)</Title>
+      <Title>for statement (reversed)</Title>
       <Shortcut>frr</Shortcut>
       <Description>for statement (reversed)</Description>
       <Author>Josef Pihrt</Author>
@@ -4504,7 +4504,7 @@ public static bool operator false($thisName$ $operand$)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>#if preprocessor directive</Title>
+      <Title>#if directive</Title>
       <Shortcut>ppif</Shortcut>
       <Description>#if preprocessor directive</Description>
       <Author>Josef Pihrt</Author>
@@ -4531,7 +4531,7 @@ public static bool operator false($thisName$ $operand$)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>#if-#else preprocessor directive</Title>
+      <Title>#if-#else directive</Title>
       <Shortcut>ppife</Shortcut>
       <Description>#if-#else preprocessor directives</Description>
       <Author>Josef Pihrt</Author>
@@ -4560,7 +4560,7 @@ public static bool operator false($thisName$ $operand$)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>#region preprocessor directive</Title>
+      <Title>#region directive</Title>
       <Shortcut>ppr</Shortcut>
       <Description>#region preprocessor directive</Description>
       <Author>Josef Pihrt</Author>
@@ -6850,7 +6850,7 @@ protected virtual void On$name$($eventArgs$ e)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>switch</Title>
+      <Title>switch statement</Title>
       <Shortcut>sh</Shortcut>
       <Description>switch statement</Description>
       <Author>Josef Pihrt</Author>
@@ -7310,7 +7310,7 @@ finally
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>using static</Title>
+      <Title>using static directive</Title>
       <Shortcut>us</Shortcut>
       <Description>using static directive</Description>
       <Author>Josef Pihrt</Author>
@@ -7422,7 +7422,7 @@ finally
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>while</Title>
+      <Title>while statement</Title>
       <Shortcut>we</Shortcut>
       <Description>while statement</Description>
       <Author>Josef Pihrt</Author>
@@ -7577,7 +7577,7 @@ finally
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>yield break</Title>
+      <Title>yield break statement</Title>
       <Shortcut>yb</Shortcut>
       <Description>yield break statement</Description>
       <Author>Josef Pihrt</Author>
@@ -7594,7 +7594,7 @@ finally
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>yield return</Title>
+      <Title>yield return statement</Title>
       <Shortcut>yr</Shortcut>
       <Description>yield return statement</Description>
       <Author>Josef Pihrt</Author>
@@ -14525,7 +14525,7 @@ Next]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>For (reversed)</Title>
+      <Title>For statement (reversed)</Title>
       <Shortcut>frr</Shortcut>
       <Description>For statement (reversed)</Description>
       <Author>Josef Pihrt</Author>
@@ -17368,7 +17368,7 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>#If preprocessor directive</Title>
+      <Title>#If directive</Title>
       <Shortcut>ppif</Shortcut>
       <Description>#If preprocessor directive</Description>
       <Author>Josef Pihrt</Author>
@@ -17395,9 +17395,9 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>#If #Else preprocessor directive</Title>
+      <Title>#If-#Else directive</Title>
       <Shortcut>ppife</Shortcut>
-      <Description>#If #Else preprocessor directives</Description>
+      <Description>#If-#Else preprocessor directives</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -17424,7 +17424,7 @@ End Operator]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>#Region preprocessor directive</Title>
+      <Title>#Region directive</Title>
       <Shortcut>ppr</Shortcut>
       <Description>#Region preprocessor directive</Description>
       <Author>Josef Pihrt</Author>

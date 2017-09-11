@@ -120,7 +120,7 @@ et|Public event
 f|Public field
 fe|For Each statement
 fr|For statement
-frr|For \(reversed\)
+frr|For statement \(reversed\)
 g| type parameter
 gd|Dictionary\(Of TKey, TValue\) type
 ge|IEnumerable\(Of T\) type
@@ -143,9 +143,9 @@ n|Is Nothing
 no|NameOf operator
 p|Public auto property
 pa|parameter array 
-ppif|\#If preprocessor directive
-ppife|\#If \#Else preprocessor directive
-ppr|\#Region preprocessor directive
+ppif|\#If directive
+ppife|\#If\-\#Else directive
+ppr|\#Region directive
 ref|Return False
 ren|Return Nothing
 ret|Return True

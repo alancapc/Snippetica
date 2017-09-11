@@ -13,10 +13,10 @@
       <Records>
         <AddRange Environments="VisualStudio,VisualStudioCode">
           <AddRange Languages="Xml,Xaml,Html">
-            <New Value="a" Description="(element) with attribute" />
+            <New Value="a" Description="(element) with attribute" Comment="suffix" />
             <New Value="e" Description="element" />
-            <New Value="s" Description="self-closing (element)" />
-            <New Value="x" Description="(element) with content" />
+            <New Value="s" Description="self-closing (element)" Comment="suffix" />
+            <New Value="x" Description="(element) with content" Comment="suffix" />
           </AddRange>
           <AddRange Languages="CSharp,VisualBasic">
             <Set Kind="MemberDeclaration">

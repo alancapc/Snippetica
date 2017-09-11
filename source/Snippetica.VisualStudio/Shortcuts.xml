@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Shortcuts>
-  <ShortcutInfo Value="a" Description="(element) with attribute" Comment="-">
+  <ShortcutInfo Value="a" Description="(element) with attribute" Comment="suffix">
     <Languages>
       <Language>Xml</Language>
       <Language>Xaml</Language>
@@ -16,7 +16,7 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="s" Description="self-closing (element)" Comment="-">
+  <ShortcutInfo Value="s" Description="self-closing (element)" Comment="suffix">
     <Languages>
       <Language>Xml</Language>
       <Language>Xaml</Language>
@@ -24,7 +24,7 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="x" Description="(element) with content" Comment="-">
+  <ShortcutInfo Value="x" Description="(element) with content" Comment="suffix">
     <Languages>
       <Language>Xml</Language>
       <Language>Xaml</Language>

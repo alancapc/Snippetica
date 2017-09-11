@@ -105,7 +105,7 @@ Shortcut | Title
 \_rp|interface read\-only property
 b|braces
 c|public class
-catch|catch
+catch|catch clause
 co|conditional operator
 con|conditional operator \(equal to null\)
 coxn|conditional operator \(not equal to null\)
@@ -118,15 +118,15 @@ don|do while null
 doxn|do while not null
 dt|DateTime type
 dw|Debug\.WriteLine
-e|else
+e|else clause
 eif|else\-if
 em|public enum
 equals|Equals and GetHashCode
 f|public field
 fe|foreach statement
-finally|finally
-fr|for
-frr|for \(reversed\)
+finally|finally clause
+fr|for statement
+frr|for statement \(reversed\)
 g| type parameter
 ge|IEnumerable&lt;T&gt; type
 ie|public interface
@@ -145,9 +145,9 @@ no|nameof operator
 o|object keyword
 p|public auto property
 pa|parameter array 
-ppif|\#if preprocessor directive
-ppife|\#if\-\#else preprocessor directive
-ppr|\#region preprocessor directive
+ppif|\#if directive
+ppife|\#if\-\#else directive
+ppr|\#region directive
 pps|public auto property with private setter
 r|return keyword
 ref|return false
@@ -160,7 +160,7 @@ s|string keyword
 sc|public static class
 scr|static constructor
 sf|public static field
-sh|switch
+sh|switch statement
 sm|public static method
 sne|string\.IsNullOrEmpty
 snw|string\.IsNullOrWhiteSpace
@@ -176,7 +176,7 @@ tf|try\-finally
 to|typeof operator
 twn|throw new
 u|using statement
-us|using static
+us|using static directive
 v|local variable declaration
 va|array variable
 vb|Boolean variable
@@ -188,12 +188,12 @@ vrp|public virtual read\-only auto property
 vrpp|public virtual read\-only property
 vs|String variable
 vt|local variable declaration with explicit cast operator
-we|while
+we|while statement
 wen|while null
 wexn|while not null
 where|generic type constraint
 xn|not equal to null
 xsne|\!string\.IsNullOrEmpty
 xsnw|\!string\.IsNullOrWhiteSpace
-yb|yield break
-yr|yield return
+yb|yield break statement
+yr|yield return statement

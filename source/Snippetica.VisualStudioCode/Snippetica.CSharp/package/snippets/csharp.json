@@ -50,7 +50,7 @@
     ],
     "description": "!string.IsNullOrWhiteSpace method"
   },
-  "#if preprocessor directive": {
+  "#if directive": {
     "prefix": "ppif",
     "body": [
       "#if ${1:DEBUG}",
@@ -59,7 +59,7 @@
     ],
     "description": "#if preprocessor directive"
   },
-  "#if-#else preprocessor directive": {
+  "#if-#else directive": {
     "prefix": "ppife",
     "body": [
       "#if ${1:DEBUG}",
@@ -70,7 +70,7 @@
     ],
     "description": "#if-#else preprocessor directives"
   },
-  "#region preprocessor directive": {
+  "#region directive": {
     "prefix": "ppr",
     "body": [
       "#region ${1:RegionName}",
@@ -301,7 +301,7 @@
     ],
     "description": "braces"
   },
-  "catch": {
+  "catch clause": {
     "prefix": "catch",
     "body": [
       "catch (${1:Exception} ${2:ex})",
@@ -494,7 +494,7 @@
     ],
     "description": "do statement with condition whether an expression is equal to null"
   },
-  "else": {
+  "else clause": {
     "prefix": "e",
     "body": [
       "else",
@@ -615,7 +615,7 @@
     ],
     "description": "explicit operator overloading"
   },
-  "finally": {
+  "finally clause": {
     "prefix": "finally",
     "body": [
       "finally",
@@ -625,7 +625,7 @@
     ],
     "description": "finally clause"
   },
-  "for": {
+  "for statement": {
     "prefix": "fr",
     "body": [
       "for (int ${1:i} = 0; ${1} < ${2:length}; ${1}++)",
@@ -635,7 +635,7 @@
     ],
     "description": "for statement"
   },
-  "for (reversed)": {
+  "for statement (reversed)": {
     "prefix": "frr",
     "body": [
       "for (int ${1:i} = ${2:length} - 1; ${1} >= 0; ${1}--)",
@@ -1958,7 +1958,7 @@
     ],
     "description": "StringWriter variable declaration."
   },
-  "switch": {
+  "switch statement": {
     "prefix": "sh",
     "body": [
       "switch (${1:SwitchOn})",
@@ -2106,7 +2106,7 @@
     ],
     "description": "using statement"
   },
-  "using static": {
+  "using static directive": {
     "prefix": "us",
     "body": [
       "using static${0}"
@@ -2122,16 +2122,6 @@
       "}"
     ],
     "description": "using variable"
-  },
-  "while": {
-    "prefix": "we",
-    "body": [
-      "while (${1:true})",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "while statement"
   },
   "while not null": {
     "prefix": "wexn",
@@ -2153,6 +2143,16 @@
     ],
     "description": "while statement with condition whether an expression is equal to null"
   },
+  "while statement": {
+    "prefix": "we",
+    "body": [
+      "while (${1:true})",
+      "{",
+      "\t${0}",
+      "}"
+    ],
+    "description": "while statement"
+  },
   "XmlReader Variable": {
     "prefix": "u_xmlrr",
     "body": [
@@ -2173,14 +2173,14 @@
     ],
     "description": "XmlWriter variable declaration."
   },
-  "yield break": {
+  "yield break statement": {
     "prefix": "yb",
     "body": [
       "yield break;${0}"
     ],
     "description": "yield break statement"
   },
-  "yield return": {
+  "yield return statement": {
     "prefix": "yr",
     "body": [
       "yield return${0}"
