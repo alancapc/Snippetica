@@ -108,7 +108,7 @@ $name$::~$name$()
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name do_while</Keyword>
+        <Keyword>Meta-Name DoWhile</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -141,6 +141,34 @@ $name$::~$name$()
     </Header>
     <Snippet>
       <Code Language="Cpp"><![CDATA[else
+{
+	$selected$$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>else-if</Title>
+      <Shortcut>eif</Shortcut>
+      <Description>else-if</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ElseIf</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>true</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[else if ($expression$)
 {
 	$selected$$end$
 }]]></Code>
@@ -185,7 +213,7 @@ $name$::~$name$()
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name enum_class</Keyword>
+        <Keyword>Meta-Name EnumClass</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -242,6 +270,44 @@ $name$::~$name$()
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>for each</Title>
+      <Shortcut>fe</Shortcut>
+      <Description>for each statement</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ForEach</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_collectionIdentifier</ID>
+          <ToolTip>Name of collection or array</ToolTip>
+          <Default>items</Default>
+        </Literal>
+        <Literal>
+          <ID>identifier</ID>
+          <ToolTip>Element identifier</ToolTip>
+          <Default>var</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Element type</ToolTip>
+          <Default>object</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[for each ($type$ $identifier$ in $_collectionIdentifier$)
+{
+	$selected$$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>for (range-based)</Title>
       <Shortcut>frrb</Shortcut>
       <Description>range-based for statement</Description>
@@ -251,7 +317,7 @@ $name$::~$name$()
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name for_range_based</Keyword>
+        <Keyword>Meta-Name ForRangeBased</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -284,7 +350,7 @@ $name$::~$name$()
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name for_reversed</Keyword>
+        <Keyword>Meta-Name ForReversed</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -301,44 +367,6 @@ $name$::~$name$()
         </Literal>
       </Declarations>
       <Code Language="Cpp"><![CDATA[for (int $index$ = $max$ - 1; $index$ >= 0; $index$--)
-{
-	$selected$$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>for each</Title>
-      <Shortcut>fe</Shortcut>
-      <Description>for each statement</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-        <SnippetType>SurroundsWith</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ForEach</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_collectionIdentifier</ID>
-          <ToolTip>Name of collection or array</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>identifier</ID>
-          <ToolTip>Element identifier</ToolTip>
-          <Default>var</Default>
-        </Literal>
-        <Literal>
-          <ID>type</ID>
-          <ToolTip>Element type</ToolTip>
-          <Default>object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[for each ($type$ $identifier$ in $_collectionIdentifier$)
 {
 	$selected$$end$
 }]]></Code>
@@ -439,7 +467,7 @@ $name$::~$name$()
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name preprocessor_directive_if</Keyword>
+        <Keyword>Meta-Name PreprocessorDirectiveIf</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -466,7 +494,7 @@ $name$::~$name$()
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name preprocessor_directive_ifdef</Keyword>
+        <Keyword>Meta-Name PreprocessorDirectiveIfdef</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -493,7 +521,7 @@ $name$::~$name$()
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name preprocessor_directive_ifndef</Keyword>
+        <Keyword>Meta-Name PreprocessorDirectiveIfndef</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -520,7 +548,7 @@ $name$::~$name$()
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name preprocessor_directive_region</Keyword>
+        <Keyword>Meta-Name PreprocessorDirectiveRegion</Keyword>
       </Keywords>
     </Header>
     <Snippet>

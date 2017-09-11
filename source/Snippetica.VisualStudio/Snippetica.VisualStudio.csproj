@@ -4782,16 +4782,19 @@
     <Content Include="Snippetica.Cpp\Destructor.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\do_while.snippet">
+    <Content Include="Snippetica.Cpp\DoWhile.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\Else.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.Cpp\ElseIf.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.Cpp\Enum.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\enum_class.snippet">
+    <Content Include="Snippetica.Cpp\EnumClass.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\For.snippet">
@@ -4800,10 +4803,10 @@
     <Content Include="Snippetica.Cpp\ForEach.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\for_range_based.snippet">
+    <Content Include="Snippetica.Cpp\ForRangeBased.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\for_reversed.snippet">
+    <Content Include="Snippetica.Cpp\ForReversed.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\If.snippet">
@@ -4815,16 +4818,16 @@
     <Content Include="Snippetica.Cpp\Namespace.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\preprocessor_directive_if.snippet">
+    <Content Include="Snippetica.Cpp\PreprocessorDirectiveIf.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\preprocessor_directive_ifdef.snippet">
+    <Content Include="Snippetica.Cpp\PreprocessorDirectiveIfdef.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\preprocessor_directive_ifndef.snippet">
+    <Content Include="Snippetica.Cpp\PreprocessorDirectiveIfndef.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\preprocessor_directive_region.snippet">
+    <Content Include="Snippetica.Cpp\PreprocessorDirectiveRegion.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\Struct.snippet">

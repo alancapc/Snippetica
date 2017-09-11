@@ -1,7 +1,5 @@
-﻿AddRange StringSplitOptions
-<AddRange Separator="," Value="VisualStudio,VisualStudioCode">
-PropertyDefinition.Alias
-default valu for collection
+﻿PropertyDefinition.Alias
+default value for collection
 PropertyDefinition.Description
 Property type is Entity
 xsd

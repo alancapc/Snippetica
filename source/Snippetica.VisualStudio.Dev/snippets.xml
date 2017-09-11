@@ -11,7 +11,7 @@
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name class_with_inline_constructor_destructor</Keyword>
+        <Keyword>Meta-Name ClassWithInlineConstructorDestructor</Keyword>
       </Keywords>
     </Header>
     <Snippet>

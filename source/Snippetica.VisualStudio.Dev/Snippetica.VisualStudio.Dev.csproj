@@ -953,7 +953,7 @@
     <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfDateTimeVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp.Dev\class_with_inline_constructor_destructor.snippet">
+    <Content Include="Snippetica.Cpp.Dev\ClassWithInlineConstructorDestructor.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Html.Dev\div_class.snippet">
