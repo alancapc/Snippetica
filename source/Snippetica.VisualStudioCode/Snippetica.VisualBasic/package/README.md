@@ -66,20 +66,13 @@ Shortcut | Description | Comment
 -------- | ----------- | -------
 a|Array|\-
 b|Boolean|\-
-c|Collection&lt;T&gt;|\-
-d|Dictionary&lt;TKey,TValue&gt;|\-
 dt|DateTime|\-
-hs|HashSet&lt;T&gt;|\-
-i|Immutable|prefix
 i|Int32|\-
-l|Int64|\-
 l|List&lt;T&gt;|\-
-ll|LinkedList&lt;T&gt;|\-
 o|Object|\-
-oc|ObservableCollection&lt;T&gt;|\-
-q|Queue&lt;T&gt;|\-
-s|Stack&lt;T&gt;|\-
+rr|Reader|suffix
 s|String|\-
+wr|Writer|suffix
 
 #### Other
 
@@ -143,6 +136,7 @@ ifxtp|if not TryParse
 ir|Public indexer
 k|Public constant
 l|Lambda expression
+l2|Lambda expression with 2 parameters
 m|Public method
 me|Public module
 n|Is Nothing
@@ -194,6 +188,8 @@ vrpp|Public Overridable read\-only Property
 vs|String variable
 vt|local variable with DirectCast
 we|While statement
+wen|While Is Nothing
+wexn|While IsNot Nothing
 xn|IsNot Nothing
 xsne|String\.IsNullOrEmpty = False
 xsnw|String\.IsNullOrWhiteSpace = False

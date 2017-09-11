@@ -80,8 +80,10 @@ ll|LinkedList&lt;T&gt;|\-
 o|Object|\-
 oc|ObservableCollection&lt;T&gt;|\-
 q|Queue&lt;T&gt;|\-
+rr|Reader|suffix
 s|Stack&lt;T&gt;|\-
 s|String|\-
+wr|Writer|suffix
 
 #### Other
 
@@ -129,11 +131,15 @@ c\_|[ReadOnlyCollection&lt;T&gt; class](ReadOnlyCollectionOfTClass.snippet)
 c\_|[Singleton class](SingletonClass.snippet)
 catch|[catch](Catch.snippet)
 co|[conditional operator](ConditionalOperator.snippet)
+con|[conditional operator \(equal to null\)](ConditionalOperatorEqualToNull.snippet)
+coxn|[conditional operator \(not equal to null\)](ConditionalOperatorNotEqualToNull.snippet)
 cr|[public constructor](PublicConstructor.snippet)
 d|[default keyword](DefaultKeyword.snippet)
 da|[Debug\.Assert](DebugAssert.snippet)
 de|[public delegate](PublicDelegate.snippet)
 dispose|[dispose pattern](Dispose.snippet)
+don|[do while null](DoWhileNull.snippet)
+doxn|[do while not null](DoWhileNotNull.snippet)
 dt|[DateTime type](DateTimeType.snippet)
 dw|[Debug\.WriteLine](DebugWriteLine.snippet)
 e|[else](Else.snippet)
@@ -143,7 +149,7 @@ equals|[Equals and GetHashCode for value type](EqualsAndGetHashCodeForValueType.
 equals|[Equals and GetHashCode](EqualsAndGetHashCode.snippet)
 et|[public event](PublicEvent.snippet)
 f|[public field](PublicField.snippet)
-fe|[foreach statement](Foreach.snippet)
+fe|[foreach statement](ForEach.snippet)
 finally|[finally](Finally.snippet)
 fr|[for](For.snippet)
 frr|[for \(reversed\)](ForReversed.snippet)
@@ -158,6 +164,7 @@ ifxtp|[if not TryParse](IfNotTryParse.snippet)
 ir|[public indexer](PublicIndexer.snippet)
 k|[public const](PublicConst.snippet)
 l|[lambda expression](LambdaExpression.snippet)
+l2|[lambda expression with 2 parameters](LambdaExpressionWithTwoParameters.snippet)
 m|[public method](PublicMethod.snippet)
 n|[equal to null](EqualToNull.snippet)
 no|[nameof operator](NameOfOperator.snippet)
@@ -210,6 +217,8 @@ vrpp|[public virtual read\-only property](PublicVirtualReadOnlyProperty.snippet)
 vs|[String variable](StringVariable.snippet)
 vt|[local variable declaration with explicit cast operator](VariableWithExplicitCast.snippet)
 we|[while](While.snippet)
+wen|[while null](WhileNull.snippet)
+wexn|[while not null](WhileNotNull.snippet)
 where|[generic type constraint](GenericTypeConstraint.snippet)
 xn|[not equal to null](NotEqualToNull.snippet)
 xsne|[\!string\.IsNullOrEmpty](NotStringIsNullOrEmpty.snippet)

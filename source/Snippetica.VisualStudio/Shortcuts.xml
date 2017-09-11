@@ -32,54 +32,6 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="co" Description="conditional operator" Comment="-">
-    <Languages>
-      <Language>CSharp</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
-  <ShortcutInfo Value="sh" Description="switch statement" Comment="-">
-    <Languages>
-      <Language>CSharp</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
-  <ShortcutInfo Value="t" Description="explict cast operator" Comment="-">
-    <Languages>
-      <Language>CSharp</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
-  <ShortcutInfo Value="to" Description="typeof operator" Comment="-">
-    <Languages>
-      <Language>CSharp</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
-  <ShortcutInfo Value="gt" Description="GetType operator" Comment="-">
-    <Languages>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
-  <ShortcutInfo Value="me" Description="Module declaration" Comment="-">
-    <Languages>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
-  <ShortcutInfo Value="sc" Description="Select Case statement" Comment="-">
-    <Languages>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
-  <ShortcutInfo Value="tc" Description="TryCast operator" Comment="-">
-    <Languages>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
   <ShortcutInfo Value="_" Description="interface member declaration" Comment="prefix">
     <Languages>
       <Language>CSharp</Language>
@@ -178,6 +130,12 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
+  <ShortcutInfo Value="me" Description="Module declaration" Comment="-">
+    <Languages>
+      <Language>VisualBasic</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
   <ShortcutInfo Value="i" Description="internal (Friend)" Comment="prefix">
     <Languages>
       <Language>CSharp</Language>
@@ -241,6 +199,36 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
+  <ShortcutInfo Value="co" Description="conditional operator" Comment="-">
+    <Languages>
+      <Language>CSharp</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="t" Description="explict cast operator" Comment="-">
+    <Languages>
+      <Language>CSharp</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="to" Description="typeof operator" Comment="-">
+    <Languages>
+      <Language>CSharp</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="gt" Description="GetType operator" Comment="-">
+    <Languages>
+      <Language>VisualBasic</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="tc" Description="TryCast operator" Comment="-">
+    <Languages>
+      <Language>VisualBasic</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
   <ShortcutInfo Value="fe" Description="foreach statement" Comment="-">
     <Languages>
       <Language>CSharp</Language>
@@ -297,6 +285,18 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
+  <ShortcutInfo Value="sh" Description="switch statement" Comment="-">
+    <Languages>
+      <Language>CSharp</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="sc" Description="Select Case statement" Comment="-">
+    <Languages>
+      <Language>VisualBasic</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
   <ShortcutInfo Value="a" Description="Array" Comment="-">
     <Languages>
       <Language>CSharp</Language>
@@ -305,6 +305,55 @@
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="b" Description="Boolean" Comment="-">
+    <Languages>
+      <Language>CSharp</Language>
+      <Language>VisualBasic</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="dt" Description="DateTime" Comment="-">
+    <Languages>
+      <Language>CSharp</Language>
+      <Language>VisualBasic</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="i" Description="Int32" Comment="-">
+    <Languages>
+      <Language>CSharp</Language>
+      <Language>VisualBasic</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="l" Description="List&lt;T&gt;" Comment="-">
+    <Languages>
+      <Language>CSharp</Language>
+      <Language>VisualBasic</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="o" Description="Object" Comment="-">
+    <Languages>
+      <Language>CSharp</Language>
+      <Language>VisualBasic</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="s" Description="String" Comment="-">
+    <Languages>
+      <Language>CSharp</Language>
+      <Language>VisualBasic</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="rr" Description="Reader" Comment="suffix">
+    <Languages>
+      <Language>CSharp</Language>
+      <Language>VisualBasic</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="wr" Description="Writer" Comment="suffix">
     <Languages>
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>
@@ -325,13 +374,6 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="dt" Description="DateTime" Comment="-">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
   <ShortcutInfo Value="hs" Description="HashSet&lt;T&gt;" Comment="-">
     <Languages>
       <Language>CSharp</Language>
@@ -346,13 +388,6 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="i" Description="Int32" Comment="-">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
   <ShortcutInfo Value="l" Description="Int64" Comment="-">
     <Languages>
       <Language>CSharp</Language>
@@ -360,21 +395,7 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="l" Description="List&lt;T&gt;" Comment="-">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
   <ShortcutInfo Value="ll" Description="LinkedList&lt;T&gt;" Comment="-">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
-  <ShortcutInfo Value="o" Description="Object" Comment="-">
     <Languages>
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>
@@ -396,13 +417,6 @@
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="s" Description="Stack&lt;T&gt;" Comment="-">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
-  <ShortcutInfo Value="s" Description="String" Comment="-">
     <Languages>
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>
@@ -507,15 +521,6 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="this" Description="containing type name" Comment="-">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags>
-      <Tag>ExcludeFromVisualStudioCode</Tag>
-    </Tags>
-  </ShortcutInfo>
   <ShortcutInfo Value="v" Description="local variable declaration" Comment="-">
     <Languages>
       <Language>CSharp</Language>
@@ -524,6 +529,13 @@
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="y" Description="yield" Comment="prefix">
+    <Languages>
+      <Language>CSharp</Language>
+      <Language>VisualBasic</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="this" Description="containing type name" Comment="-">
     <Languages>
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>

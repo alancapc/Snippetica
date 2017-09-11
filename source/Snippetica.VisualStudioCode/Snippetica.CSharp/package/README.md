@@ -66,20 +66,13 @@ Shortcut | Description | Comment
 -------- | ----------- | -------
 a|Array|\-
 b|Boolean|\-
-c|Collection&lt;T&gt;|\-
-d|Dictionary&lt;TKey,TValue&gt;|\-
 dt|DateTime|\-
-hs|HashSet&lt;T&gt;|\-
-i|Immutable|prefix
 i|Int32|\-
-l|Int64|\-
 l|List&lt;T&gt;|\-
-ll|LinkedList&lt;T&gt;|\-
 o|Object|\-
-oc|ObservableCollection&lt;T&gt;|\-
-q|Queue&lt;T&gt;|\-
-s|Stack&lt;T&gt;|\-
+rr|Reader|suffix
 s|String|\-
+wr|Writer|suffix
 
 #### Other
 
@@ -114,11 +107,15 @@ b|braces
 c|public class
 catch|catch
 co|conditional operator
+con|conditional operator \(equal to null\)
+coxn|conditional operator \(not equal to null\)
 cr|public constructor
 d|default keyword
 da|Debug\.Assert
 de|public delegate
 dispose|dispose pattern
+don|do while null
+doxn|do while not null
 dt|DateTime type
 dw|Debug\.WriteLine
 e|else
@@ -141,6 +138,7 @@ ifxtp|if not TryParse
 ir|public indexer
 k|public const
 l|lambda expression
+l2|lambda expression with 2 parameters
 m|public method
 n|equal to null
 no|nameof operator
@@ -191,6 +189,8 @@ vrpp|public virtual read\-only property
 vs|String variable
 vt|local variable declaration with explicit cast operator
 we|while
+wen|while null
+wexn|while not null
 where|generic type constraint
 xn|not equal to null
 xsne|\!string\.IsNullOrEmpty

@@ -8,7 +8,6 @@ gl|List\(Of T\) type
 goc|ObservableCollection\(Of T\) type
 ifemtp|if Enum\.TryParse
 ifxemtp|if not Enum\.TryParse
-l2|Lambda expression with 2 parameters
 na|new array 
 ns|namespace
 o|Object keyword

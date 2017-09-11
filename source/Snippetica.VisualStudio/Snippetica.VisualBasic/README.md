@@ -80,8 +80,10 @@ ll|LinkedList&lt;T&gt;|\-
 o|Object|\-
 oc|ObservableCollection&lt;T&gt;|\-
 q|Queue&lt;T&gt;|\-
+rr|Reader|suffix
 s|Stack&lt;T&gt;|\-
 s|String|\-
+wr|Writer|suffix
 
 #### Other
 
@@ -158,6 +160,7 @@ ifxtp|[if not TryParse](IfNotTryParse.snippet)
 ir|[Public indexer](PublicIndexer.snippet)
 k|[Public constant](PublicConstant.snippet)
 l|[Lambda expression](LambdaExpression.snippet)
+l2|[Lambda expression with 2 parameters](LambdaExpressionWithTwoParameters.snippet)
 m|[Public method](PublicMethod.snippet)
 me|[Public module](PublicModule.snippet)
 n|[Is Nothing](IsNothing.snippet)
@@ -211,6 +214,8 @@ vrpp|[Public Overridable read\-only Property](PublicVirtualReadOnlyProperty.snip
 vs|[String variable](StringVariable.snippet)
 vt|[local variable with DirectCast](VariableWithDirectCast.snippet)
 we|[While statement](While.snippet)
+wen|[While Is Nothing](WhileIsNothing.snippet)
+wexn|[While IsNot Nothing](WhileIsNotNothing.snippet)
 xn|[IsNot Nothing](IsNotNothing.snippet)
 xsne|[String\.IsNullOrEmpty = False](NotStringIsNullOrEmpty.snippet)
 xsnw|[String\.IsNullOrWhiteSpace = False](NotStringIsNullOrWhiteSpace.snippet)

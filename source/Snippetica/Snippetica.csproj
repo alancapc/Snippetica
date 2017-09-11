@@ -115,7 +115,6 @@
     <None Include="Snippetica.CSharp\AutoGeneration\InterfaceReadOnlyProperty.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\Method.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\NewVariable.snippet" />
-    <None Include="Snippetica.CSharp\AutoGeneration\Obsolete\IfNotTryParse.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\ParameterArray.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\ReadOnlyAutoProperty.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\ReadOnlyField.snippet" />
@@ -150,13 +149,13 @@
     <None Include="Snippetica.CSharp\Dev\AutoGeneration\ObservableCollectionOfTType.snippet" />
     <None Include="Snippetica.CSharp\Dev\AutoGeneration\ObservableCollectionOfTVariable.snippet" />
     <None Include="Snippetica.CSharp\Dev\BreakStatement.snippet" />
-    <None Include="Snippetica.CSharp\Dev\ConditionalOperatorEqualToNull.snippet" />
-    <None Include="Snippetica.CSharp\Dev\ConditionalOperatorNotEqualToNull.snippet" />
+    <None Include="Snippetica.CSharp\ConditionalOperatorEqualToNull.snippet" />
+    <None Include="Snippetica.CSharp\ConditionalOperatorNotEqualToNull.snippet" />
     <None Include="Snippetica.CSharp\Dev\ContinueStatement.snippet" />
     <None Include="Snippetica.CSharp\Dev\DebugAssertNotNull.snippet" />
     <None Include="Snippetica.CSharp\Dev\DictionaryOfTKeyTValueType.snippet" />
-    <None Include="Snippetica.CSharp\Dev\DoNotNull.snippet" />
-    <None Include="Snippetica.CSharp\Dev\DoNull.snippet" />
+    <None Include="Snippetica.CSharp\DoWhileNotNull.snippet" />
+    <None Include="Snippetica.CSharp\DoWhileNull.snippet" />
     <None Include="Snippetica.CSharp\Dev\IfEnumTryParse.snippet" />
     <None Include="Snippetica.CSharp\Dev\IfEqualToNullReturnFalse.snippet" />
     <None Include="Snippetica.CSharp\Dev\IfEqualToNullReturnNull.snippet" />
@@ -203,7 +202,7 @@
     <None Include="Snippetica.CSharp\Dev\IO\PathGetFileNameWithoutExtension.snippet" />
     <None Include="Snippetica.CSharp\Dev\IO\PathGetFullPath.snippet" />
     <None Include="Snippetica.CSharp\Dev\IO\PathHasExtension.snippet" />
-    <None Include="Snippetica.CSharp\Dev\LambdaExpressionWithTwoParameters.snippet" />
+    <None Include="Snippetica.CSharp\LambdaExpressionWithTwoParameters.snippet" />
     <None Include="Snippetica.CSharp\Dev\Linq\EnumerableCast.snippet" />
     <None Include="Snippetica.CSharp\Dev\Linq\EnumerableEmpty.snippet" />
     <None Include="Snippetica.CSharp\Dev\Linq\EnumerableFirst.snippet" />
@@ -237,8 +236,8 @@
     <None Include="Snippetica.CSharp\Dev\ThrowStatement.snippet" />
     <None Include="Snippetica.CSharp\Dev\TimeSpanType.snippet" />
     <None Include="Snippetica.CSharp\Dev\VariableAsTIfNotNull.snippet" />
-    <None Include="Snippetica.CSharp\Dev\WhileNotNull.snippet" />
-    <None Include="Snippetica.CSharp\Dev\WhileNull.snippet" />
+    <None Include="Snippetica.CSharp\WhileNotNull.snippet" />
+    <None Include="Snippetica.CSharp\WhileNull.snippet" />
     <None Include="Snippetica.CSharp\Dev\YieldReturnNew.snippet" />
     <None Include="Snippetica.CSharp\Dev\YieldReturnNewThis.snippet" />
     <None Include="Snippetica.CSharp\DictionaryOfTKeyTValueClass.snippet" />
@@ -254,7 +253,7 @@
     <None Include="Snippetica.CSharp\ExplicitCastOperator.snippet" />
     <None Include="Snippetica.CSharp\Finally.snippet" />
     <None Include="Snippetica.CSharp\For.snippet" />
-    <None Include="Snippetica.CSharp\Foreach.snippet" />
+    <None Include="Snippetica.CSharp\ForEach.snippet" />
     <None Include="Snippetica.CSharp\ForReversed.snippet" />
     <None Include="Snippetica.CSharp\GenericTypeConstraint.snippet" />
     <None Include="Snippetica.CSharp\IComparerClass.snippet" />
@@ -274,11 +273,6 @@
     <None Include="Snippetica.CSharp\NotStringIsNullOrWhiteSpace.snippet" />
     <None Include="Snippetica.CSharp\ObjectKeyword.snippet" />
     <None Include="Snippetica.CSharp\ObservableCollectionOfTClass.snippet" />
-    <None Include="Snippetica.CSharp\Obsolete\IfNot.snippet" />
-    <None Include="Snippetica.CSharp\Obsolete\IfNotEqualToNull.snippet" />
-    <None Include="Snippetica.CSharp\Obsolete\NotEqualToNull.snippet" />
-    <None Include="Snippetica.CSharp\Obsolete\NotStringIsNullOrEmpty.snippet" />
-    <None Include="Snippetica.CSharp\Obsolete\NotStringIsNullOrWhiteSpace.snippet" />
     <None Include="Snippetica.CSharp\OverloadedOperatorAmpersand.snippet" />
     <None Include="Snippetica.CSharp\OverloadedOperatorAsterisk.snippet" />
     <None Include="Snippetica.CSharp\OverloadedOperatorCaret.snippet" />
@@ -547,7 +541,6 @@
     <None Include="Snippetica.VisualBasic\AutoGeneration\Method.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\Module.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\NewVariable.snippet" />
-    <None Include="Snippetica.VisualBasic\AutoGeneration\Obsolete\IfNotTryParse.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\ParameterArray.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\ReadOnlyAutoProperty.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\ReadOnlyField.snippet" />
@@ -579,7 +572,7 @@
     </None>
     <None Include="Snippetica.VisualBasic\Dev\IfEnumTryParse.snippet" />
     <None Include="Snippetica.VisualBasic\Dev\IfNotEnumTryParse.snippet" />
-    <None Include="Snippetica.VisualBasic\Dev\LambdaExpressionWithTwoParameters.snippet" />
+    <None Include="Snippetica.VisualBasic\LambdaExpressionWithTwoParameters.snippet" />
     <None Include="Snippetica.VisualBasic\Dev\Namespace.snippet" />
     <None Include="Snippetica.VisualBasic\Dev\ObjectKeyword.snippet" />
     <None Include="Snippetica.VisualBasic\Dev\Regex.snippet" />
@@ -588,6 +581,8 @@
     <None Include="Snippetica.VisualBasic\Dev\StringKeyword.snippet" />
     <None Include="Snippetica.VisualBasic\Dev\ThrowStatement.snippet" />
     <None Include="Snippetica.VisualBasic\Dev\TimeSpanType.snippet" />
+    <None Include="Snippetica.VisualBasic\WhileIsNotNothing.snippet" />
+    <None Include="Snippetica.VisualBasic\WhileIsNothing.snippet" />
     <None Include="Snippetica.VisualBasic\Dev\YieldKeyword.snippet" />
     <None Include="Snippetica.VisualBasic\DictionaryOfTKeyTValueClass.snippet" />
     <None Include="Snippetica.VisualBasic\DictionaryOfTKeyTValueType.snippet" />
@@ -621,11 +616,6 @@
     <None Include="Snippetica.VisualBasic\NotStringIsNullOrEmpty.snippet" />
     <None Include="Snippetica.VisualBasic\NotStringIsNullOrWhiteSpace.snippet" />
     <None Include="Snippetica.VisualBasic\ObservableCollectionClass.snippet" />
-    <None Include="Snippetica.VisualBasic\Obsolete\IfIsNotNothing.snippet" />
-    <None Include="Snippetica.VisualBasic\Obsolete\IfNot.snippet" />
-    <None Include="Snippetica.VisualBasic\Obsolete\IsNotNothing.snippet" />
-    <None Include="Snippetica.VisualBasic\Obsolete\NotStringIsNullOrEmpty.snippet" />
-    <None Include="Snippetica.VisualBasic\Obsolete\NotStringIsNullOrWhiteSpace.snippet" />
     <None Include="Snippetica.VisualBasic\OverloadedOperatorAmpersand.snippet" />
     <None Include="Snippetica.VisualBasic\OverloadedOperatorAnd.snippet" />
     <None Include="Snippetica.VisualBasic\OverloadedOperatorAsterisk.snippet" />
@@ -767,7 +757,6 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Snippetica.CSharp\Dev\Xml\" />
     <Folder Include="Snippetica.Xml\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

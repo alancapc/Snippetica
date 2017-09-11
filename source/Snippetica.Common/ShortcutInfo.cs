@@ -20,12 +20,14 @@ namespace Snippetica.CodeGeneration
             string comment,
             ShortcutKind kind,
             IEnumerable<Language> languages,
+            IEnumerable<EnvironmentKind> environments,
             IEnumerable<string> tags)
         {
             Value = value;
             Description = description;
             Comment = comment;
             Kind = kind;
+            Environments = new ReadOnlyCollection<EnvironmentKind>(environments.ToArray());
             Languages = new ReadOnlyCollection<Language>(languages.ToArray());
             Tags = new ReadOnlyCollection<string>(tags.ToArray());
         }
@@ -39,6 +41,8 @@ namespace Snippetica.CodeGeneration
         public ShortcutKind Kind { get; }
 
         public ReadOnlyCollection<Language> Languages { get; }
+
+        public ReadOnlyCollection<EnvironmentKind> Environments { get; }
 
         public ReadOnlyCollection<string> Tags { get; }
 
@@ -59,6 +63,7 @@ namespace Snippetica.CodeGeneration
                         record.GetStringOrDefault("Comment", "-"),
                         record.GetEnumOrDefault("Kind", ShortcutKind.None),
                         record.GetItems("Languages").Select(f => (Language)Enum.Parse(typeof(Language), f)),
+                        record.GetItems("Environments").Select(f => (EnvironmentKind)Enum.Parse(typeof(EnvironmentKind), f)),
                         record.GetTags());
                 });
         }

@@ -26,16 +26,6 @@ namespace Snippetica.Validations
                     ResultImportance.Information);
             }
 
-            //TODO: 
-            //if (context.Snippet.CodeText.Contains("\t"))
-            //{
-            //    yield return new SnippetValidationResult(
-            //        context.Snippet,
-            //        "",
-            //        "Snippet code contains tab.",
-            //        ResultImportance.Information);
-            //}
-
             if (context.Snippet.Shortcut.Any(f => char.IsWhiteSpace(f)))
             {
                 yield return new SnippetValidationResult(

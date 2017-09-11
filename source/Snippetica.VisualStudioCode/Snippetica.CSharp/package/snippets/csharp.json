@@ -54,7 +54,7 @@
     "prefix": "ppif",
     "body": [
       "#if ${1:DEBUG}",
-      "\t${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "#endif"
     ],
     "description": "#if preprocessor directive"
@@ -63,7 +63,7 @@
     "prefix": "ppife",
     "body": [
       "#if ${1:DEBUG}",
-      "\t${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "#else",
       "",
       "#endif"
@@ -74,7 +74,7 @@
     "prefix": "ppr",
     "body": [
       "#region ${1:RegionName}",
-      "\t${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "#endregion"
     ],
     "description": "#region preprocessor directive"
@@ -296,7 +296,7 @@
     "prefix": "b",
     "body": [
       "{",
-      "\t${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "}"
     ],
     "description": "braces"
@@ -336,6 +336,20 @@
       "(${1:expression}) ? ${2:null} : ${3:null}${0}"
     ],
     "description": "conditional operator"
+  },
+  "conditional operator (equal to null)": {
+    "prefix": "con",
+    "body": [
+      "(${1:expression} == null) ? ${2:null} : ${3:null}${0}"
+    ],
+    "description": "conditional operator with condition whether the expression is equal to null"
+  },
+  "conditional operator (not equal to null)": {
+    "prefix": "coxn",
+    "body": [
+      "(${1:expression} != null) ? ${2:null} : ${3:null}${0}"
+    ],
+    "description": "conditional operator with condition whether the expression is not equal to null"
   },
   "DateTime type": {
     "prefix": "dt",
@@ -458,12 +472,34 @@
     ],
     "description": "dispose pattern"
   },
+  "do while not null": {
+    "prefix": "doxn",
+    "body": [
+      "do",
+      "{",
+      "\t${0}",
+      "",
+      "} while (${1:x} != null);"
+    ],
+    "description": "do statement with condition whether an expression is not equal to null"
+  },
+  "do while null": {
+    "prefix": "don",
+    "body": [
+      "do",
+      "{",
+      "\t${0}",
+      "",
+      "} while (${1:x} == null);"
+    ],
+    "description": "do statement with condition whether an expression is equal to null"
+  },
   "else": {
     "prefix": "e",
     "body": [
       "else",
       "{",
-      "\t${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "}"
     ],
     "description": "else clause"
@@ -1168,6 +1204,13 @@
       "f => ${0}"
     ],
     "description": "lambda expression"
+  },
+  "lambda expression with 2 parameters": {
+    "prefix": "l2",
+    "body": [
+      "(f, g) => ${0}"
+    ],
+    "description": "lambda expression with 2 parameters"
   },
   "local variable declaration": {
     "prefix": "v",
@@ -2007,7 +2050,7 @@
     "body": [
       "try",
       "{",
-      "\t${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "}",
       "catch (${1:Exception} ${2:ex})",
       "{",
@@ -2021,7 +2064,7 @@
     "body": [
       "try",
       "{",
-      "\t${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "}",
       "catch (${1:Exception} ${2:ex})",
       "{",
@@ -2038,7 +2081,7 @@
     "body": [
       "try",
       "{",
-      "\t${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "}",
       "finally",
       "{",
@@ -2089,6 +2132,26 @@
       "}"
     ],
     "description": "while statement"
+  },
+  "while not null": {
+    "prefix": "wexn",
+    "body": [
+      "while (${1:x} != null)",
+      "{",
+      "\t${0}",
+      "}"
+    ],
+    "description": "while statement with condition whether an expression is not equal to null"
+  },
+  "while null": {
+    "prefix": "wen",
+    "body": [
+      "while (${1:x} == null)",
+      "{",
+      "\t${0}",
+      "}"
+    ],
+    "description": "while statement with condition whether an expression is equal to null"
   },
   "XmlReader Variable": {
     "prefix": "u_xmlrr",

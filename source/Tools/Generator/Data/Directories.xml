@@ -18,29 +18,29 @@
             <New Path=".Cpp" />
           </Set>
           <Set Language="Html">
-            <New Path=".Html" Tag="GenerateXmlSnippets" />
+            <New Path=".Html" Tags="GenerateXmlSnippets" />
           </Set>
           <Set Language="Xaml">
             <New Path=".Xaml">
-              <Tag Value="GenerateXmlSnippets" />
-              <Tag Value="ExcludeFromVisualStudioCode" />
+              <Add Tags="GenerateXmlSnippets" />
+              <Add Tags="ExcludeFromVisualStudioCode" />
             </New>
           </Set>
           <Set Language="Xml">
-            <New Path=".Xml" Tag="GenerateXmlSnippets" />
+            <New Path=".Xml" Tags="GenerateXmlSnippets" />
             <New Path=".Xml.CodeSnippet">
-              <Tag Value="ExcludeFromVisualStudioCode" />
-              <Tag Value="NoQuickReference" />
+              <Add Tags="ExcludeFromVisualStudioCode" />
+              <Add Tags="NoQuickReference" />
             </New>
           </Set>
-          <Tag Value="ExcludeFromVisualStudio">
+          <Add Tags="ExcludeFromVisualStudio">
             <Set Language="Markdown">
               <New Path=".Markdown" />
             </Set>
             <Set Language="Json">
               <New Path=".Json" />
             </Set>
-          </Tag>
+          </Add>
         </PrefixMany>
       </Records>
     </Entity>

@@ -11,11 +11,7 @@ ae\_fs|Flags attribute
 ae\_oe|Obsolete attribute
 bk|break statement
 ce|continue statement
-con|conditional operator \(equal to null\)
-coxn|conditional operator \(not equal to null\)
 daxn|Debug\.Assert \!= null
-don|do while null
-doxn|do while not null
 gd|Dictionary&lt;TKey, TValue&gt; type
 ghs|HashSet&lt;T&gt; type
 gl|List&lt;T&gt; type
@@ -63,7 +59,6 @@ iop\_gfn|Path\.GetFileName
 iop\_gfnwe|Path\.GetFileNameWithoutExtension
 iop\_gfp|Path\.GetFullPath
 iop\_he|Path\.HasExtension
-l2|lambda expression with 2 parameters
 na|new array 
 ns|namespace
 q\_c|Enumerable\.Cast
@@ -103,7 +98,5 @@ vhs|HashSet&lt;T&gt; variable
 vl|List&lt;T&gt; variable
 voc|ObservableCollection&lt;T&gt; variable
 vsb|StringBuilder variable
-wen|while null
-wexn|while not null
 x|\! operator
 yrn|yield return new

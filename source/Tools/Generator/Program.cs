@@ -2,7 +2,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -22,12 +21,14 @@ namespace Snippetica.CodeGeneration
     {
         private static readonly SnippetDeepEqualityComparer _snippetEqualityComparer = new SnippetDeepEqualityComparer();
 
-        private static readonly ShortcutInfo[] _shortcuts = ShortcutInfo.LoadFromFile(@"..\..\Data\Shortcuts.xml").ToArray();
+        private static ShortcutInfo[] _shortcuts;
 
         private static readonly Regex _regexReplaceSpacesWithTabs = new Regex(@"(?<=^(\ {4})*)(?<x>\ {4})(?=(\ {4})*\S)", RegexOptions.Multiline);
 
         private static void Main(string[] args)
         {
+            _shortcuts = ShortcutInfo.LoadFromFile(@"..\..\Data\Shortcuts.xml").ToArray();
+
             SnippetDirectory[] directories = LoadDirectories(@"..\..\Data\Directories.xml");
 
             ShortcutInfo.SerializeToXml(Path.Combine(VisualStudioExtensionProjectPath, "Shortcuts.xml"), _shortcuts);
@@ -41,16 +42,14 @@ namespace Snippetica.CodeGeneration
             List<SnippetGeneratorResult> visualStudioResults = GenerateSnippets(
                 visualStudio,
                 directories,
-                VisualStudioExtensionProjectPath,
-                KnownTags.ExcludeFromVisualStudio);
+                VisualStudioExtensionProjectPath);
 
             var visualStudioCode = new VisualStudioCodeEnvironment();
 
             List<SnippetGeneratorResult> visualStudioCodeResults = GenerateSnippets(
                 visualStudioCode,
                 directories,
-                VisualStudioCodeExtensionProjectPath,
-                KnownTags.ExcludeFromVisualStudioCode);
+                VisualStudioCodeExtensionProjectPath);
 
             using (var sw = new StringWriter())
             {
@@ -81,10 +80,9 @@ namespace Snippetica.CodeGeneration
         private static List<SnippetGeneratorResult> GenerateSnippets(
             SnippetEnvironment environment,
             SnippetDirectory[] directories,
-            string projectPath,
-            string excludeTag)
+            string projectPath)
         {
-            environment.Shortcuts.AddRange(_shortcuts.Where(f => !f.HasTag(excludeTag)));
+            environment.Shortcuts.AddRange(_shortcuts.Where(f => f.Environments.Contains(environment.Kind)));
 
             PackageGenerator generator = environment.CreatePackageGenerator();
 

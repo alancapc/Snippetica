@@ -34,20 +34,6 @@
     ],
     "description": "Conditional attribute"
   },
-  "conditional operator (equal to null)": {
-    "prefix": "con",
-    "body": [
-      "(${1:expression} == null) ? ${2:null} : ${3:null}${0}"
-    ],
-    "description": "conditional operator with condition whether the expression is equal to null"
-  },
-  "conditional operator (not equal to null)": {
-    "prefix": "coxn",
-    "body": [
-      "(${1:expression} != null) ? ${2:null} : ${3:null}${0}"
-    ],
-    "description": "conditional operator with condition whether the expression is not equal to null"
-  },
   "continue statement": {
     "prefix": "ce",
     "body": [
@@ -152,28 +138,6 @@
       "Directory.Move(${1:sourceDirName}, ${2:destinationDirName})${0}"
     ],
     "description": "Directory.Move method."
-  },
-  "do while not null": {
-    "prefix": "doxn",
-    "body": [
-      "do",
-      "{",
-      "\t${0}",
-      "",
-      "} while (${1:x} != null);"
-    ],
-    "description": "do statement with condition whether an expression is not equal to null"
-  },
-  "do while null": {
-    "prefix": "don",
-    "body": [
-      "do",
-      "{",
-      "\t${0}",
-      "",
-      "} while (${1:x} == null);"
-    ],
-    "description": "do statement with condition whether an expression is equal to null"
   },
   "Enumerable.Cast": {
     "prefix": "q_c",
@@ -602,13 +566,6 @@
     ],
     "description": "if string.IsNullOrWhiteSpace"
   },
-  "lambda expression with 2 parameters": {
-    "prefix": "l2",
-    "body": [
-      "(f, g) => ${0}"
-    ],
-    "description": "lambda expression with 2 parameters"
-  },
   "List<T> type": {
     "prefix": "gl",
     "body": [
@@ -645,7 +602,7 @@
     "body": [
       "namespace ${1:NamespaceName}",
       "{",
-      "\t${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "}"
     ],
     "description": "namespace declaration"
@@ -800,26 +757,6 @@
       "}"
     ],
     "description": "variable declaration with as operator + condition whether the variable is not equal to null"
-  },
-  "while not null": {
-    "prefix": "wexn",
-    "body": [
-      "while (${1:x} != null)",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "while statement with condition whether an expression is not equal to null"
-  },
-  "while null": {
-    "prefix": "wen",
-    "body": [
-      "while (${1:x} == null)",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "while statement with condition whether an expression is equal to null"
   },
   "yield return new": {
     "prefix": "yrn",

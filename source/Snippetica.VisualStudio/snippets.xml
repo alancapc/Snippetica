@@ -833,6 +833,7 @@ $modifier$ class $name$Attribute : $base$
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name Braces</Keyword>
@@ -840,7 +841,7 @@ $modifier$ class $name$Attribute : $base$
     </Header>
     <Snippet>
       <Code Language="CSharp"><![CDATA[{
-	$end$
+	$selected$$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1071,6 +1072,74 @@ $modifier$ class $name$Attribute : $base$
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[($expression$) ? $true$ : $false$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>conditional operator (equal to null)</Title>
+      <Shortcut>con</Shortcut>
+      <Description>conditional operator with condition whether the expression is equal to null</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ConditionalOperatorEqualToNull</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>expression</Default>
+        </Literal>
+        <Literal>
+          <ID>false</ID>
+          <ToolTip>False expression</ToolTip>
+          <Default>null</Default>
+        </Literal>
+        <Literal>
+          <ID>true</ID>
+          <ToolTip>True expression</ToolTip>
+          <Default>null</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[($expression$ == null) ? $true$ : $false$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>conditional operator (not equal to null)</Title>
+      <Shortcut>coxn</Shortcut>
+      <Description>conditional operator with condition whether the expression is not equal to null</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ConditionalOperatorNotEqualToNull</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>expression</Default>
+        </Literal>
+        <Literal>
+          <ID>false</ID>
+          <ToolTip>False expression</ToolTip>
+          <Default>null</Default>
+        </Literal>
+        <Literal>
+          <ID>true</ID>
+          <ToolTip>True expression</ToolTip>
+          <Default>null</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[($expression$ != null) ? $true$ : $false$$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -1490,12 +1559,69 @@ protected virtual void Dispose(bool disposing)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>do while not null</Title>
+      <Shortcut>doxn</Shortcut>
+      <Description>do statement with condition whether an expression is not equal to null</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name DoWhileNotNull</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[do
+{
+	$end$
+
+} while ($expression$ != null);]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>do while null</Title>
+      <Shortcut>don</Shortcut>
+      <Description>do statement with condition whether an expression is equal to null</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name DoWhileNull</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[do
+{
+	$end$
+
+} while ($expression$ == null);]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>else</Title>
       <Shortcut>e</Shortcut>
       <Description>else clause</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name Else</Keyword>
@@ -1504,7 +1630,7 @@ protected virtual void Dispose(bool disposing)
     <Snippet>
       <Code Language="CSharp"><![CDATA[else
 {
-	$end$
+	$selected$$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1804,7 +1930,7 @@ $modifier$ class $name$Exception : $base$
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name Foreach</Keyword>
+        <Keyword>Meta-Name ForEach</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4237,6 +4363,23 @@ protected virtual void On$name$($eventArgs$ e)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>lambda expression with 2 parameters</Title>
+      <Shortcut>l2</Shortcut>
+      <Description>lambda expression with 2 parameters</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name LambdaExpressionWithTwoParameters</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp"><![CDATA[(f, g) => $end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>LinkedList&lt;T&gt; type</Title>
       <Shortcut>gc</Shortcut>
       <Description>LinkedList&lt;T&gt; type declaration</Description>
@@ -5620,6 +5763,7 @@ public static bool operator false($thisName$ $operand$)
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name PreprocessorDirectiveIf</Keyword>
@@ -5634,7 +5778,7 @@ public static bool operator false($thisName$ $operand$)
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[#if $symbol$
-	$end$
+	$selected$$end$
 #endif]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -5646,6 +5790,7 @@ public static bool operator false($thisName$ $operand$)
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name PreprocessorDirectiveIfElse</Keyword>
@@ -5660,7 +5805,7 @@ public static bool operator false($thisName$ $operand$)
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[#if $symbol$
-	$end$
+	$selected$$end$
 #else
 
 #endif]]></Code>
@@ -5674,6 +5819,7 @@ public static bool operator false($thisName$ $operand$)
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name PreprocessorDirectiveRegion</Keyword>
@@ -5688,7 +5834,7 @@ public static bool operator false($thisName$ $operand$)
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[#region $name$
-	$end$
+	$selected$$end$
 #endregion]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -8788,6 +8934,7 @@ protected virtual void On$name$($eventArgs$ e)
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name TryCatch</Keyword>
@@ -8813,7 +8960,7 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[try
 {
-	$end$
+	$selected$$end$
 }
 catch ($exceptionType$ $identifier$)
 {
@@ -8829,6 +8976,7 @@ catch ($exceptionType$ $identifier$)
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name TryCatchFinally</Keyword>
@@ -8854,7 +9002,7 @@ catch ($exceptionType$ $identifier$)
       </Declarations>
       <Code Language="CSharp"><![CDATA[try
 {
-	$end$
+	$selected$$end$
 }
 catch ($exceptionType$ $identifier$)
 {
@@ -8873,6 +9021,7 @@ finally
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name TryFinally</Keyword>
@@ -8881,7 +9030,7 @@ finally
     <Snippet>
       <Code Language="CSharp"><![CDATA[try
 {
-	$end$
+	$selected$$end$
 }
 finally
 {
@@ -9100,6 +9249,60 @@ finally
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[while ($expression$)
+{
+	$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>while not null</Title>
+      <Shortcut>wexn</Shortcut>
+      <Description>while statement with condition whether an expression is not equal to null</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name WhileNotNull</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[while ($expression$ != null)
+{
+	$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>while null</Title>
+      <Shortcut>wen</Shortcut>
+      <Description>while statement with condition whether an expression is equal to null</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name WhileNull</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[while ($expression$ == null)
 {
 	$end$
 }]]></Code>
@@ -15011,6 +15214,7 @@ Loop]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name Else</Keyword>
@@ -15018,7 +15222,7 @@ Loop]]></Code>
     </Header>
     <Snippet>
       <Code Language="VB"><![CDATA[Else
-	$end$]]></Code>
+	$selected$$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -17677,6 +17881,23 @@ End Property$end$]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>Lambda expression with 2 parameters</Title>
+      <Shortcut>l2</Shortcut>
+      <Description>Lambda expression with 2 parameters</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name LambdaExpressionWithTwoParameters</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="VB"><![CDATA[Function(f, g) $end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>LinkedList(Of T) type</Title>
       <Shortcut>gc</Shortcut>
       <Description>LinkedList(Of T) type declaration</Description>
@@ -19049,6 +19270,7 @@ End Operator]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name PreprocessorDirectiveIf</Keyword>
@@ -19063,7 +19285,7 @@ End Operator]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[#If $symbol$ Then
-	$end$
+	$selected$$end$
 #End If]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -19075,6 +19297,7 @@ End Operator]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name PreprocessorDirectiveIfElse</Keyword>
@@ -19089,7 +19312,7 @@ End Operator]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[#If $symbol$ Then
-	$end$
+	$selected$$end$
 #Else
 
 #End If]]></Code>
@@ -19103,6 +19326,7 @@ End Operator]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name PreprocessorDirectiveRegion</Keyword>
@@ -19117,7 +19341,7 @@ End Operator]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[#Region "$name$"
-	$end$
+	$selected$$end$
 #End Region]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -22054,6 +22278,7 @@ End Using]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name TryCatch</Keyword>
@@ -22078,7 +22303,7 @@ End Using]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Try
-	$end$
+	$selected$$end$
 Catch $identifier$ as $exceptionType$
 	Throw
 End Try]]></Code>
@@ -22092,6 +22317,7 @@ End Try]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name TryCatchFinally</Keyword>
@@ -22116,7 +22342,7 @@ End Try]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Try
-	$end$
+	$selected$$end$
 Catch $identifier$ as $exceptionType$
 	Throw
 Finally
@@ -22131,6 +22357,7 @@ End Try]]></Code>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name TryFinally</Keyword>
@@ -22138,7 +22365,7 @@ End Try]]></Code>
     </Header>
     <Snippet>
       <Code Language="VB"><![CDATA[Try
-	$end$
+	$selected$$end$
 Finally
 End Try]]></Code>
     </Snippet>
@@ -22280,6 +22507,58 @@ End Using]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[While $expression$
+	$end$
+End While]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>While Is Nothing</Title>
+      <Shortcut>wen</Shortcut>
+      <Description>While statement with condition whether an expression is nothing</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name WhileIsNothing</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[While $expression$ Is Nothing
+	$end$
+End While]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>While IsNot Nothing</Title>
+      <Shortcut>wexn</Shortcut>
+      <Description>While statement with condition whether an expression is not nothing</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name WhileIsNotNothing</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[While $expression$ IsNot Nothing
 	$end$
 End While]]></Code>
     </Snippet>

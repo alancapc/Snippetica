@@ -6,12 +6,13 @@ using System.Diagnostics;
 namespace Pihrtsoft.Records.Operations
 {
     [DebuggerDisplay("{Kind} {PropertyName,nq} = {Value,nq}")]
-    internal struct AddItemOperation : IPropertyOperation
+    internal struct RemoveRangeOperation : IPropertyOperation
     {
-        public AddItemOperation(PropertyDefinition propertyDefinition, string value, int depth)
+        public RemoveRangeOperation(PropertyDefinition propertyDefinition, string value, char separator, int depth)
         {
             PropertyDefinition = propertyDefinition;
             Value = value;
+            Separator = separator;
             Depth = depth;
         }
 
@@ -19,11 +20,13 @@ namespace Pihrtsoft.Records.Operations
 
         public string Value { get; }
 
+        public char Separator { get; }
+
         public int Depth { get; }
 
         public OperationKind Kind
         {
-            get { return OperationKind.AddItem; }
+            get { return OperationKind.RemoveRange; }
         }
 
         public string PropertyName
@@ -38,19 +41,23 @@ namespace Pihrtsoft.Records.Operations
 
         public void Execute(Record record)
         {
+            if (PropertyDefinition == PropertyDefinition.Tags)
+            {
+                foreach (string tag in Value.Split(Separator))
+                    record.Tags.Remove(tag);
+
+                return;
+            }
+
             List<object> items = null;
 
             if (record.TryGetValue(PropertyName, out object value))
             {
                 items = (List<object>)value;
-            }
-            else
-            {
-                items = new List<object>();
-                record[PropertyName] = items;
-            }
 
-            items.Add(Value);
+                foreach (string item in Value.Split(Separator))
+                    items.Remove(item);
+            }
         }
 
         string IKey<string>.GetKey()

@@ -19,7 +19,7 @@
     "prefix": "ppife",
     "body": [
       "#If ${1:DEBUG} Then",
-      "\t${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "#Else",
       "",
       "#End If"
@@ -30,7 +30,7 @@
     "prefix": "ppif",
     "body": [
       "#If ${1:DEBUG} Then",
-      "\t${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "#End If"
     ],
     "description": "#If preprocessor directive"
@@ -39,7 +39,7 @@
     "prefix": "ppr",
     "body": [
       "#Region \"${1:RegionName}\"",
-      "\t${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "#End Region"
     ],
     "description": "#Region preprocessor directive"
@@ -401,7 +401,7 @@
     "prefix": "e",
     "body": [
       "Else",
-      "\t${0}"
+      "\t${TM_SELECTED_TEXT}${0}"
     ],
     "description": "Else clause"
   },
@@ -1054,6 +1054,13 @@
       "Function(f) ${0}"
     ],
     "description": "Lambda expression"
+  },
+  "Lambda expression with 2 parameters": {
+    "prefix": "l2",
+    "body": [
+      "Function(f, g) ${0}"
+    ],
+    "description": "Lambda expression with 2 parameters"
   },
   "Like operator overloading": {
     "prefix": "oo_Like",
@@ -1838,7 +1845,7 @@
     "prefix": "tc",
     "body": [
       "Try",
-      "\t${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "Catch ${1:ex} as ${2:Exception}",
       "\tThrow",
       "End Try"
@@ -1849,7 +1856,7 @@
     "prefix": "tcf",
     "body": [
       "Try",
-      "\t${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "Catch ${1:ex} as ${2:Exception}",
       "\tThrow",
       "Finally",
@@ -1861,7 +1868,7 @@
     "prefix": "tf",
     "body": [
       "Try",
-      "\t${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "Finally",
       "End Try"
     ],
@@ -1875,6 +1882,24 @@
       "End Using"
     ],
     "description": "Using statement"
+  },
+  "While Is Nothing": {
+    "prefix": "wen",
+    "body": [
+      "While ${1:x} Is Nothing",
+      "\t${0}",
+      "End While"
+    ],
+    "description": "While statement with condition whether an expression is nothing"
+  },
+  "While IsNot Nothing": {
+    "prefix": "wexn",
+    "body": [
+      "While ${1:x} IsNot Nothing",
+      "\t${0}",
+      "End While"
+    ],
+    "description": "While statement with condition whether an expression is not nothing"
   },
   "While statement": {
     "prefix": "we",
