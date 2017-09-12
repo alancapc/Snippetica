@@ -4,7 +4,7 @@ using Pihrtsoft.Snippets;
 
 namespace Snippetica.CodeGeneration.Commands
 {
-    public class ArgumentsCommand : BaseCommand
+    public class ArgumentsCommand : SnippetCommand
     {
         public override CommandKind Kind
         {
@@ -16,14 +16,12 @@ namespace Snippetica.CodeGeneration.Commands
             snippet.SuffixTitle(" (with arguments)");
             snippet.SuffixShortcut(ShortcutChars.WithArguments);
             snippet.SuffixDescription(" (with arguments)");
+            snippet.SuffixFileName("WithArguments");
 
             snippet.RemoveLiteralAndReplacePlaceholders(LiteralIdentifiers.ArgumentList, "($arguments$)");
-
             snippet.AddLiteral("arguments", "Arguments", "arguments");
 
             snippet.AddTag(KnownTags.ExcludeFromReadme);
-
-            snippet.SuffixFileName("WithArguments");
         }
     }
 }

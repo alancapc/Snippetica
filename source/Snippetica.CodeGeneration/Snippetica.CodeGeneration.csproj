@@ -53,6 +53,9 @@
   <ItemGroup>
     <Compile Include="CodeGenerationUtility.cs" />
     <Compile Include="Commands\CommandUtility.cs" />
+    <Compile Include="Commands\ModifierCommand.cs" />
+    <Compile Include="Commands\ShortcutToLowercaseCommand.cs" />
+    <Compile Include="Commands\SuffixFileNameCommand.cs" />
     <Compile Include="Markdown\ProjectReadmeSettings.cs" />
     <Compile Include="PackageGenerator.cs" />
     <Compile Include="SnippetEnvironment.cs" />
@@ -88,9 +91,9 @@
     <Compile Include="Markdown\TitleColumnDefinition.cs" />
     <Compile Include="Markdown\TitleWithLinkColumnDefinition.cs" />
     <Compile Include="ModifierKind.cs" />
-    <Compile Include="Commands\AlternativeShortcutCommand.cs" />
+    <Compile Include="Commands\GenerateAlternativeShortcutCommand.cs" />
     <Compile Include="Commands\CommandKind.cs" />
-    <Compile Include="Commands\BaseCommand.cs" />
+    <Compile Include="Commands\SnippetCommand.cs" />
     <Compile Include="Commands\ImmutableCollectionTypeCommand.cs" />
     <Compile Include="Commands\ArgumentsCommand.cs" />
     <Compile Include="Commands\ParametersCommand.cs" />
@@ -99,13 +102,12 @@
     <Compile Include="Commands\StaticCommand.cs" />
     <Compile Include="Commands\InitializerCommand.cs" />
     <Compile Include="Commands\CollectionTypeCommand.cs" />
-    <Compile Include="Commands\SimpleCommand.cs" />
     <Compile Include="Commands\VirtualCommand.cs" />
     <Compile Include="Commands\XamlPropertyCommand.cs" />
     <Compile Include="CSharpDefinition.cs" />
-    <Compile Include="Job.cs" />
+    <Compile Include="Commands\MultiCommand.cs" />
     <Compile Include="Commands\Command.cs" />
-    <Compile Include="JobCollection.cs" />
+    <Compile Include="Commands\MultiCommandCollection.cs" />
     <Compile Include="LanguageDefinition.cs" />
     <Compile Include="LanguageDefinitionMapper.cs" />
     <Compile Include="LanguageExecutionContext.cs" />

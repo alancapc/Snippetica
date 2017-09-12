@@ -4,7 +4,7 @@ using Pihrtsoft.Snippets;
 
 namespace Snippetica.CodeGeneration.Commands
 {
-    public class ParametersCommand : BaseCommand
+    public class ParametersCommand : SnippetCommand
     {
         public override CommandKind Kind
         {
@@ -18,14 +18,12 @@ namespace Snippetica.CodeGeneration.Commands
             snippet.SuffixTitle(" (with parameters)");
             snippet.SuffixShortcut(ShortcutChars.WithParameters);
             snippet.SuffixDescription(" (with parameters)");
+            snippet.SuffixFileName("WithParameters");
 
             snippet.RemoveLiteralAndReplacePlaceholders(LiteralIdentifiers.ParameterList, "($parameters$)");
-
             snippet.AddLiteral("parameters", "Parameters", language.GetDefaultParameter());
 
             snippet.AddTag(KnownTags.ExcludeFromReadme);
-
-            snippet.SuffixFileName("WithParameters");
         }
     }
 }

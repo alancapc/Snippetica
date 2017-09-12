@@ -6,15 +6,19 @@ namespace Snippetica.CodeGeneration
 {
     public static class StringExtensions
     {
-        internal static string ReplacePlaceholder(this string value, string placeholder, string replacement, bool includeWhitespace = false)
+        internal static string Replace(
+            this string value,
+            string placeholder,
+            string replacement,
+            bool includeWhitespace)
         {
             if (includeWhitespace)
             {
-                return Regex.Replace(value, $@"\s*{Regex.Escape(Placeholders.Delimiter + placeholder + Placeholders.Delimiter) }\s*", replacement);
+                return Regex.Replace(value, $@"\s*{placeholder}\s*", replacement);
             }
             else
             {
-                return value.Replace(Placeholders.Delimiter + placeholder + Placeholders.Delimiter, replacement);
+                return value.Replace(placeholder, replacement);
             }
         }
     }

@@ -149,6 +149,7 @@
     <None Include="Snippetica.CSharp\Dev\AutoGeneration\NewArrayOfT.snippet" />
     <None Include="Snippetica.CSharp\Dev\AutoGeneration\ObservableCollectionOfTType.snippet" />
     <None Include="Snippetica.CSharp\Dev\AutoGeneration\ObservableCollectionOfTVariable.snippet" />
+    <None Include="Snippetica.CSharp\Dev\OverrideModifier.snippet" />
     <None Include="Snippetica.CSharp\Dev\BreakStatement.snippet" />
     <None Include="Snippetica.CSharp\ConditionalOperatorEqualToNull.snippet" />
     <None Include="Snippetica.CSharp\ConditionalOperatorNotEqualToNull.snippet" />

@@ -8,7 +8,7 @@ using Pihrtsoft.Snippets;
 
 namespace Snippetica.CodeGeneration.Commands
 {
-    public class TypeCommand : BaseCommand
+    public class TypeCommand : SnippetCommand
     {
         public TypeCommand(TypeDefinition type)
         {
@@ -29,7 +29,7 @@ namespace Snippetica.CodeGeneration.Commands
 
         public override Command ChildCommand
         {
-            get { return new PrefixTitleCommand(Type); }
+            get { return (Type != null) ? new PrefixTitleCommand(Type) : null; }
         }
 
         protected override void Execute(ExecutionContext context, Snippet snippet)
@@ -65,14 +65,14 @@ namespace Snippetica.CodeGeneration.Commands
             }
 
             snippet.Title = snippet.Title
-                .ReplacePlaceholder(Placeholders.Type, Type.Keyword)
-                .ReplacePlaceholder(Placeholders.OfType, $"of {Type.Keyword}")
-                .ReplacePlaceholder(Placeholders.GenericType, language.GetTypeParameterList(Type.Keyword));
+                .Replace(Placeholders.Type, Type.Keyword)
+                .Replace(Placeholders.OfType, $"of {Type.Keyword}")
+                .Replace(Placeholders.GenericType, language.GetTypeParameterList(Type.Keyword));
 
             snippet.Description = snippet.Description
-                .ReplacePlaceholder(Placeholders.Type, Type.Keyword)
-                .ReplacePlaceholder(Placeholders.OfType, $"of {Type.Keyword}")
-                .ReplacePlaceholder(Placeholders.GenericType, language.GetTypeParameterList(Type.Keyword));
+                .Replace(Placeholders.Type, Type.Keyword)
+                .Replace(Placeholders.OfType, $"of {Type.Keyword}")
+                .Replace(Placeholders.GenericType, language.GetTypeParameterList(Type.Keyword));
 
             snippet.AddNamespace(Type.Namespace);
 

@@ -4,11 +4,11 @@ namespace Snippetica.CodeGeneration
 {
     public static class Placeholders
     {
-        public const string Delimiter = "@";
+        private const string Delimiter = "@";
 
-        public const string Type = "type";
-        public const string OfType = "ofType";
-        public const string GenericType = "genericType";
-        public const string Collection = "collection";
+        public const string Type = Delimiter + "type" + Delimiter;
+        public const string OfType = Delimiter + "ofType" + Delimiter;
+        public const string GenericType = Delimiter + "genericType" + Delimiter;
+        public const string Collection = Delimiter + "collection" + Delimiter;
     }
 }

@@ -4,7 +4,7 @@ using Pihrtsoft.Snippets;
 
 namespace Snippetica.CodeGeneration.Commands
 {
-    public class HtmlWithContentCommand : BaseCommand
+    public class HtmlWithContentCommand : SnippetCommand
     {
         public override CommandKind Kind
         {
@@ -17,6 +17,7 @@ namespace Snippetica.CodeGeneration.Commands
             snippet.SuffixDescription(" (with content)");
             snippet.SuffixShortcut(XmlSnippetGenerator.ContentShortcut);
             snippet.SuffixFileName("_with_content");
+
             snippet.AddTag(KnownTags.ExcludeFromReadme);
         }
     }

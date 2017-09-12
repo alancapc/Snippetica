@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using Pihrtsoft.Snippets;
+using Snippetica.CodeGeneration.Commands;
 
 namespace Snippetica.CodeGeneration
 {
@@ -18,19 +19,19 @@ namespace Snippetica.CodeGeneration
 
         public IEnumerable<Snippet> GenerateSnippets(Snippet snippet)
         {
-            foreach (Job job in CreateJobs(snippet))
+            foreach (Command command in CreateCommands(snippet))
             {
                 ExecutionContext context = CreateExecutionContext(snippet);
 
-                job.Execute(context);
+                command.Execute(context);
 
-                if (!context.IsCanceled)
-                {
-                    Collection<Snippet> snippets = context.Snippets;
+                if (context.IsCanceled)
+                    continue;
 
-                    for (int i = 0; i < snippets.Count; i++)
-                        yield return PostProcess(snippets[i]);
-                }
+                Collection<Snippet> snippets = context.Snippets;
+
+                for (int i = 0; i < snippets.Count; i++)
+                    yield return PostProcess(snippets[i]);
             }
         }
 
@@ -39,7 +40,7 @@ namespace Snippetica.CodeGeneration
             return new ExecutionContext((Snippet)snippet.Clone());
         }
 
-        protected abstract JobCollection CreateJobs(Snippet snippet);
+        protected abstract MultiCommandCollection CreateCommands(Snippet snippet);
 
         protected virtual Snippet PostProcess(Snippet snippet)
         {
@@ -48,6 +49,7 @@ namespace Snippetica.CodeGeneration
             return snippet;
         }
 
+        //TODO: přesunout?
         public static IEnumerable<Snippet> GenerateAlternativeShortcuts(List<Snippet> snippets)
         {
             int count = snippets.Count;

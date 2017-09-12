@@ -1,25 +1,19 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
-using System;
 using Pihrtsoft.Snippets;
 
 namespace Snippetica.CodeGeneration.Commands
 {
-    public class SimpleCommand : BaseCommand
+    public class ShortcutToLowercaseCommand : SnippetCommand
     {
-        private readonly Action<Snippet> _action;
-
-        public SimpleCommand(Action<Snippet> action, CommandKind kind)
+        public override CommandKind Kind
         {
-            _action = action;
-            Kind = kind;
+            get { return CommandKind.ShortcutToLowercase; }
         }
-
-        public override CommandKind Kind { get; }
 
         protected override void Execute(ExecutionContext context, Snippet snippet)
         {
-            _action?.Invoke(snippet);
+            snippet.Shortcut = snippet.Shortcut.ToLowerInvariant();
         }
     }
 }

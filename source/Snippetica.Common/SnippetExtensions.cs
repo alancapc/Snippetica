@@ -224,7 +224,8 @@ namespace Snippetica
 
         public static void AddNamespace(this Snippet snippet, string @namespace)
         {
-            if (@namespace != null && !snippet.Namespaces.Contains(@namespace))
+            if (@namespace != null
+                && !snippet.Namespaces.Contains(@namespace))
             {
                 snippet.Namespaces.Add(@namespace);
             }

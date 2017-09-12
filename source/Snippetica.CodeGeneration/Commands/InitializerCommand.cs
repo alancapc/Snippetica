@@ -5,7 +5,7 @@ using Pihrtsoft.Snippets;
 
 namespace Snippetica.CodeGeneration.Commands
 {
-    public class InitializerCommand : BaseCommand
+    public class InitializerCommand : SnippetCommand
     {
         public override CommandKind Kind
         {

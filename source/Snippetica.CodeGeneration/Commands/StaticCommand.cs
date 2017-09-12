@@ -1,31 +1,17 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
-using Pihrtsoft.Snippets;
-
 namespace Snippetica.CodeGeneration.Commands
 {
-    public class StaticCommand : BaseCommand
+    public class StaticCommand : ModifierCommand
     {
         public override CommandKind Kind
         {
             get { return CommandKind.StaticModifier; }
         }
 
-        protected override void Execute(ExecutionContext context, Snippet snippet)
+        protected override ModifierDefinition GetModifier(LanguageDefinition language)
         {
-            LanguageDefinition language = ((LanguageExecutionContext)context).Language;
-
-            ModifierDefinition @static = language.StaticModifier;
-
-            snippet.PrefixTitle($"{@static.Keyword} ");
-
-            snippet.PrefixShortcut(@static.Shortcut);
-
-            snippet.PrefixDescription($"{@static.Keyword} ");
-
-            snippet.ReplacePlaceholders(LiteralIdentifiers.Modifiers, $"${LiteralIdentifiers.Modifiers}$ {@static.Keyword}");
-
-            snippet.PrefixFileName(@static.Name);
+            return language.StaticModifier;
         }
     }
 }

@@ -326,6 +326,9 @@
     <Content Include="Snippetica.CSharp.Dev\Namespace.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp.Dev\OverrideModifier.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp.Dev\Regex.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>

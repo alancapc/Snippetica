@@ -21,39 +21,39 @@ namespace Snippetica.CodeGeneration
 
         public LanguageDefinition LanguageDefinition { get; }
 
-        protected override JobCollection CreateJobs(Snippet snippet)
+        protected override MultiCommandCollection CreateCommands(Snippet snippet)
         {
-            var jobs = new JobCollection();
+            var commands = new MultiCommandCollection();
 
-            jobs.AddCommands(GetTypeCommands(snippet));
+            commands.AddMultiCommands(GetTypeCommands(snippet));
 
             if (snippet.HasTag(KnownTags.GenerateCollection))
-                jobs.AddCommands(GetNonImmutableCollectionCommands(snippet));
+                commands.AddMultiCommands(GetNonImmutableCollectionCommands(snippet));
 
             if (snippet.HasTag(KnownTags.GenerateImmutableCollection))
-                jobs.AddCommands(GetImmutableCollectionCommands(snippet));
+                commands.AddMultiCommands(GetImmutableCollectionCommands(snippet));
 
-            jobs.AddCommands(GetAccessModifierCommands(snippet));
+            commands.AddMultiCommands(GetAccessModifierCommands(snippet));
 
             if (snippet.HasTag(KnownTags.GenerateStaticModifier))
-                jobs.AddCommand(CommandUtility.StaticCommand);
+                commands.AddMultiCommand(CommandUtility.StaticCommand);
 
             if (snippet.HasTag(KnownTags.GenerateVirtualModifier))
-                jobs.AddCommand(CommandUtility.VirtualCommand);
+                commands.AddMultiCommand(CommandUtility.VirtualCommand);
 
             if (snippet.HasTag(KnownTags.GenerateInitializer))
-                jobs.AddCommand(CommandUtility.InitializerCommand);
+                commands.AddMultiCommand(CommandUtility.InitializerCommand);
 
             if (snippet.HasTag(KnownTags.GenerateParameters))
-                jobs.AddCommand(CommandUtility.ParametersCommand);
+                commands.AddMultiCommand(CommandUtility.ParametersCommand);
 
             if (snippet.HasTag(KnownTags.GenerateArguments))
-                jobs.AddCommand(CommandUtility.ArgumentsCommand);
+                commands.AddMultiCommand(CommandUtility.ArgumentsCommand);
 
             if (snippet.HasTag(KnownTags.GenerateUnchanged))
-                jobs.Add(new Job());
+                commands.Add(new MultiCommand());
 
-            return jobs;
+            return commands;
         }
 
         protected override ExecutionContext CreateExecutionContext(Snippet snippet)
@@ -89,32 +89,31 @@ namespace Snippetica.CodeGeneration
                 snippet.ReplaceSubOrFunctionLiteral("Function");
 
             snippet.Title = snippet.Title
-                .ReplacePlaceholder(Placeholders.Type, " ", true)
-                .ReplacePlaceholder(Placeholders.OfType, " ", true)
-                .ReplacePlaceholder(Placeholders.GenericType, LanguageDefinition.GetTypeParameterList("T"));
+                .Replace(Placeholders.Type, " ", true)
+                .Replace(Placeholders.OfType, " ", true)
+                .Replace(Placeholders.GenericType, LanguageDefinition.GetTypeParameterList("T"));
 
             snippet.Description = snippet.Description
-                .ReplacePlaceholder(Placeholders.Type, " ", true)
-                .ReplacePlaceholder(Placeholders.OfType, " ", true)
-                .ReplacePlaceholder(Placeholders.GenericType, LanguageDefinition.GetTypeParameterList("T"));
+                .Replace(Placeholders.Type, " ", true)
+                .Replace(Placeholders.OfType, " ", true)
+                .Replace(Placeholders.GenericType, LanguageDefinition.GetTypeParameterList("T"));
 
             snippet.RemoveTags(_generateTypeTags);
             snippet.RemoveTags(_generateModifierTags);
 
-            snippet.RemoveTags(
-                KnownTags.GenerateType,
-                KnownTags.GenerateAccessModifier,
-                KnownTags.GenerateInitializer,
-                KnownTags.GenerateUnchanged,
-                KnownTags.GenerateParameters,
-                KnownTags.GenerateArguments,
-                KnownTags.GenerateCollection,
-                KnownTags.GenerateImmutableCollection,
-                KnownTags.Array,
-                KnownTags.Collection,
-                KnownTags.Dictionary,
-                KnownTags.TryParse,
-                KnownTags.Initializer);
+            snippet.RemoveTag(KnownTags.GenerateType);
+            snippet.RemoveTag(KnownTags.GenerateAccessModifier);
+            snippet.RemoveTag(KnownTags.GenerateInitializer);
+            snippet.RemoveTag(KnownTags.GenerateUnchanged);
+            snippet.RemoveTag(KnownTags.GenerateParameters);
+            snippet.RemoveTag(KnownTags.GenerateArguments);
+            snippet.RemoveTag(KnownTags.GenerateCollection);
+            snippet.RemoveTag(KnownTags.GenerateImmutableCollection);
+            snippet.RemoveTag(KnownTags.Array);
+            snippet.RemoveTag(KnownTags.Collection);
+            snippet.RemoveTag(KnownTags.Dictionary);
+            snippet.RemoveTag(KnownTags.TryParse);
+            snippet.RemoveTag(KnownTags.Initializer);
 
             return snippet;
         }

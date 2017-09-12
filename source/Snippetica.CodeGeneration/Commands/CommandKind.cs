@@ -5,6 +5,7 @@ namespace Snippetica.CodeGeneration.Commands
     public enum CommandKind
     {
         None,
+        Multi,
         Initializer,
         Type,
         Collection,

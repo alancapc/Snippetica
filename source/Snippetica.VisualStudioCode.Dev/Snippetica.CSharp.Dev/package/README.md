@@ -61,6 +61,7 @@ iop\_gfp|Path\.GetFullPath
 iop\_he|Path\.HasExtension
 na|new array 
 ns|namespace
+oe|override modifier
 q\_c|Enumerable\.Cast
 q\_e|Enumerable\.Empty
 q\_f|Enumerable\.First

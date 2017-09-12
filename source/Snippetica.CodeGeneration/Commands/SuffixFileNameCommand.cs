@@ -4,18 +4,23 @@ using Pihrtsoft.Snippets;
 
 namespace Snippetica.CodeGeneration.Commands
 {
-    public class HtmlWithoutContentCommand : SnippetCommand
+    public class SuffixFileNameCommand : SnippetCommand
     {
+        public SuffixFileNameCommand(string suffix)
+        {
+            Suffix = suffix;
+        }
+
+        public string Suffix { get; }
+
         public override CommandKind Kind
         {
-            get { return CommandKind.None; }
+            get { return CommandKind.SuffixFileName; }
         }
 
         protected override void Execute(ExecutionContext context, Snippet snippet)
         {
-            snippet.ReplacePlaceholders("end", "");
-            snippet.RemoveLiteralAndReplacePlaceholders("content", "$selected$$end$");
-            snippet.SnippetTypes |= SnippetTypes.SurroundsWith;
+            snippet.SuffixFileName(Suffix);
         }
     }
 }

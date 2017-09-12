@@ -7,21 +7,21 @@ namespace Snippetica.CodeGeneration
 {
     public class HtmlSnippetGenerator : SnippetGenerator
     {
-        protected override JobCollection CreateJobs(Snippet snippet)
+        protected override MultiCommandCollection CreateCommands(Snippet snippet)
         {
-            var jobs = new JobCollection();
+            var commands = new MultiCommandCollection();
 
             if (snippet.Literals.Contains("content"))
             {
-                jobs.Add(new Job(new HtmlWithContentCommand()));
-                jobs.Add(new Job(new HtmlWithoutContentCommand()));
+                commands.Add(new MultiCommand(new HtmlWithContentCommand()));
+                commands.Add(new MultiCommand(new HtmlWithoutContentCommand()));
             }
             else
             {
-                jobs.Add(new Job());
+                commands.Add(new MultiCommand());
             }
 
-            return jobs;
+            return commands;
         }
     }
 }

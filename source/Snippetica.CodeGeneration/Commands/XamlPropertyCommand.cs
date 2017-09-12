@@ -5,7 +5,7 @@ using Pihrtsoft.Snippets;
 
 namespace Snippetica.CodeGeneration.Commands
 {
-    public class XamlPropertyCommand : BaseCommand
+    public class XamlPropertyCommand : SnippetCommand
     {
         public override CommandKind Kind
         {

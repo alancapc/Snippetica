@@ -3,33 +3,37 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using Snippetica.CodeGeneration.Commands;
 
-namespace Snippetica.CodeGeneration
+namespace Snippetica.CodeGeneration.Commands
 {
-    public class Job
+    public class MultiCommand : Command
     {
-        public Job()
+        public MultiCommand()
         {
             Commands = new Collection<Command>();
         }
 
-        public Job(Command command)
+        public MultiCommand(Command command)
             : this()
         {
             Commands.Add(command);
         }
 
-        public Job(IEnumerable<Command> commands)
+        public MultiCommand(IEnumerable<Command> commands)
             : this()
         {
             foreach (Command command in commands)
                 Commands.Add(command);
         }
 
+        public override CommandKind Kind
+        {
+            get { return CommandKind.Multi; }
+        }
+
         public Collection<Command> Commands { get; }
 
-        public void Execute(ExecutionContext context)
+        public override void Execute(ExecutionContext context)
         {
             var commands = new List<Command>(Commands);
 

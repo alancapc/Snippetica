@@ -649,6 +649,13 @@
     ],
     "description": "Obsolete attribute"
   },
+  "override modifier": {
+    "prefix": "oe",
+    "body": [
+      "override${0}"
+    ],
+    "description": "override modifier"
+  },
   "Path.Combine": {
     "prefix": "iop_c",
     "body": [

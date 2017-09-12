@@ -4,7 +4,7 @@ using Pihrtsoft.Snippets;
 
 namespace Snippetica.CodeGeneration.Commands
 {
-    public class PrefixTitleCommand : BaseCommand
+    public class PrefixTitleCommand : SnippetCommand
     {
         public PrefixTitleCommand(TypeDefinition type)
         {
@@ -20,9 +20,6 @@ namespace Snippetica.CodeGeneration.Commands
 
         protected override void Execute(ExecutionContext context, Snippet snippet)
         {
-            if (Type == null)
-                return;
-
             snippet.PrefixTitle($"{Type.Shortcut} ");
             snippet.AddTag(KnownTags.TitleStartsWithShortcut);
         }

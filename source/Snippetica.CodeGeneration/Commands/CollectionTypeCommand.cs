@@ -22,8 +22,8 @@ namespace Snippetica.CodeGeneration.Commands
         {
             LanguageDefinition language = ((LanguageExecutionContext)context).Language;
 
-            snippet.Title = snippet.Title.ReplacePlaceholder(Placeholders.Collection, Type.Name);
-            snippet.Description = snippet.Description.ReplacePlaceholder(Placeholders.Collection, Type.Name);
+            snippet.Title = snippet.Title.Replace(Placeholders.Collection, Type.Name);
+            snippet.Description = snippet.Description.Replace(Placeholders.Collection, Type.Name);
 
             snippet.AddNamespace(Type.Namespace);
 
