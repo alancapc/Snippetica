@@ -1937,6 +1937,31 @@ if (Enum.TryParse($value$, out $result$))
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>if equal to null return</Title>
+      <Shortcut>ifnre</Shortcut>
+      <Description>if equal to null return</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IfEqualToNullReturn</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[if ($expression$ == null)
+	return;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>if equal to null return false</Title>
       <Shortcut>ifnref</Shortcut>
       <Description>if equal to null return false</Description>
@@ -2055,6 +2080,31 @@ if (!Enum.TryParse($value$, out $result$))
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>if not equal to null return</Title>
+      <Shortcut>ifxnre</Shortcut>
+      <Description>if not equal to null return</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IfNotEqualToNullReturn</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[if ($expression$ != null)
+	return;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>if not equal to null return false</Title>
       <Shortcut>ifxnref</Shortcut>
       <Description>if not equal to null return false</Description>
@@ -2126,6 +2176,31 @@ if (!Enum.TryParse($value$, out $result$))
       </Declarations>
       <Code Language="CSharp"><![CDATA[if ($expression$ != null)
 	return true;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>if not return</Title>
+      <Shortcut>ifxre</Shortcut>
+      <Description>if not return</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IfNotReturn</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[if (!$expression$)
+	return;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -2255,6 +2330,31 @@ if (!Enum.TryParse($value$, out $result$))
 {
 	$end$
 }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>if return</Title>
+      <Shortcut>ifre</Shortcut>
+      <Description>if return</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IfReturn</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>true</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[if ($expression$)
+	return;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">

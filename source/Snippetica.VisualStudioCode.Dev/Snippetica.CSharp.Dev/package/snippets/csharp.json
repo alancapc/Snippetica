@@ -439,6 +439,14 @@
     ],
     "description": "if statement with condition whether Enum.TryParse method returns true."
   },
+  "if equal to null return": {
+    "prefix": "ifnre",
+    "body": [
+      "if (${1:x} == null)",
+      "\treturn;${0}"
+    ],
+    "description": "if equal to null return"
+  },
   "if equal to null return false": {
     "prefix": "ifnref",
     "body": [
@@ -474,6 +482,14 @@
     ],
     "description": "if statement with condition whether Enum.TryParse method returns false."
   },
+  "if not equal to null return": {
+    "prefix": "ifxnre",
+    "body": [
+      "if (${1:x} != null)",
+      "\treturn;${0}"
+    ],
+    "description": "if not equal to null return"
+  },
   "if not equal to null return false": {
     "prefix": "ifxnref",
     "body": [
@@ -498,6 +514,14 @@
     ],
     "description": "if not equal to null return true"
   },
+  "if not return": {
+    "prefix": "ifxre",
+    "body": [
+      "if (!${1:x})",
+      "\treturn;${0}"
+    ],
+    "description": "if not return"
+  },
   "if not return false": {
     "prefix": "ifxref",
     "body": [
@@ -521,6 +545,14 @@
       "\treturn true;${0}"
     ],
     "description": "if not return true"
+  },
+  "if return": {
+    "prefix": "ifre",
+    "body": [
+      "if (${1:true})",
+      "\treturn;${0}"
+    ],
+    "description": "if return"
   },
   "if return false": {
     "prefix": "ifref",

@@ -269,6 +269,9 @@
     <Content Include="Snippetica.CSharp.Dev\IfEnumTryParse.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp.Dev\IfEqualToNullReturn.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp.Dev\IfEqualToNullReturnFalse.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -281,6 +284,9 @@
     <Content Include="Snippetica.CSharp.Dev\IfNotEnumTryParse.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp.Dev\IfNotEqualToNullReturn.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp.Dev\IfNotEqualToNullReturnFalse.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -288,6 +294,9 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\IfNotEqualToNullReturnTrue.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\IfNotReturn.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\IfNotReturnFalse.snippet">
@@ -303,6 +312,9 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\IfNotStringIsNullOrWhiteSpace.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\IfReturn.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\IfReturnFalse.snippet">

@@ -17,18 +17,22 @@ ghs|HashSet&lt;T&gt; type
 gl|List&lt;T&gt; type
 goc|ObservableCollection&lt;T&gt; type
 ifemtp|if Enum\.TryParse
+ifnre|if equal to null return
 ifnref|if equal to null return false
 ifnren|if equal to null return null
 ifnret|if equal to null return true
+ifre|if return
 ifref|if return false
 ifren|if return null
 ifret|if return true
 ifsne|if string\.IsNullOrEmpty
 ifsnw|if string\.IsNullOrWhiteSpace
 ifxemtp|if not Enum\.TryParse
+ifxnre|if not equal to null return
 ifxnref|if not equal to null return false
 ifxnren|if not equal to null return null
 ifxnret|if not equal to null return true
+ifxre|if not return
 ifxref|if not return false
 ifxren|if not return null
 ifxret|if not return true
