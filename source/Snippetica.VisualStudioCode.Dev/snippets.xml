@@ -2538,6 +2538,75 @@ if (!Enum.TryParse($value$, out $result$))
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title> local function</Title>
+      <Shortcut>lf</Shortcut>
+      <Description> local function declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name LocalFunction</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_type</ID>
+          <ToolTip>Return type</ToolTip>
+          <Default>void</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Method name</ToolTip>
+          <Default>MethodName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[$_type$ $name$()
+{
+	$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title> local function (with parameters)</Title>
+      <Shortcut>lf_</Shortcut>
+      <Description> local function declaration (with parameters)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name LocalFunctionWithParameters</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_type</ID>
+          <ToolTip>Return type</ToolTip>
+          <Default>void</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Method name</ToolTip>
+          <Default>MethodName</Default>
+        </Literal>
+        <Literal>
+          <ID>parameters</ID>
+          <ToolTip>Parameters</ToolTip>
+          <Default>object parameter</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[$_type$ $name$($parameters$)
+{
+	$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>! operator</Title>
       <Shortcut>x</Shortcut>
       <Description>! operator</Description>

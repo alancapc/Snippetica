@@ -63,6 +63,7 @@ iop\_gfn|Path\.GetFileName
 iop\_gfnwe|Path\.GetFileNameWithoutExtension
 iop\_gfp|Path\.GetFullPath
 iop\_he|Path\.HasExtension
+lf| local function
 na|new array 
 ns|namespace
 oe|override modifier

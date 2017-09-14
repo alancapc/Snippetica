@@ -114,6 +114,7 @@
     <None Include="Snippetica.CSharp\AutoGeneration\InterfaceMethod.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\InterfaceProperty.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\InterfaceReadOnlyProperty.snippet" />
+    <None Include="Snippetica.CSharp\Dev\AutoGeneration\LocalFunction.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\Method.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\NewVariable.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\ParameterArray.snippet" />

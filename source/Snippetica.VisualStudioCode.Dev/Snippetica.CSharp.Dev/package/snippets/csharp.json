@@ -1,4 +1,24 @@
 ﻿{
+  " local function": {
+    "prefix": "lf",
+    "body": [
+      "${1:void} ${2:MethodName}()",
+      "{",
+      "\t${0}",
+      "}"
+    ],
+    "description": " local function declaration"
+  },
+  " local function (with parameters)": {
+    "prefix": "lf_",
+    "body": [
+      "${1:void} ${2:MethodName}(${3:object parameter})",
+      "{",
+      "\t${0}",
+      "}"
+    ],
+    "description": " local function declaration (with parameters)"
+  },
   "! operator": {
     "prefix": "x",
     "body": [
