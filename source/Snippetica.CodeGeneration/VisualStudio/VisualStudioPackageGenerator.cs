@@ -18,9 +18,9 @@ namespace Snippetica.CodeGeneration.VisualStudio
         {
         }
 
-        public override void GeneratePackageFiles(string directoryPath, IEnumerable<SnippetGeneratorResult> results)
+        public override List<Snippet> GeneratePackageFiles(string directoryPath, IEnumerable<SnippetGeneratorResult> results)
         {
-            base.GeneratePackageFiles(directoryPath, results);
+            List<Snippet> snippets = base.GeneratePackageFiles(directoryPath, results);
 
             IOUtility.WriteAllText(
                 Path.Combine(directoryPath, "description.html"),
@@ -29,6 +29,8 @@ namespace Snippetica.CodeGeneration.VisualStudio
             IOUtility.WriteAllText(
                 Path.Combine(directoryPath, "regedit.pkgdef"),
                 PkgDefGenerator.GeneratePkgDefFile(results));
+
+            return snippets;
         }
 
         protected override void SaveSnippets(List<Snippet> snippets, SnippetGeneratorResult result)

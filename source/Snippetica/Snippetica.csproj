@@ -489,6 +489,7 @@
     <None Include="Snippetica.Markdown\Code.snippet" />
     <None Include="Snippetica.Markdown\CodeBlock.snippet" />
     <None Include="Snippetica.Markdown\CodeBlockWithLanguage.snippet" />
+    <None Include="Snippetica.Markdown\Dev\TableWithoutHeader.snippet" />
     <None Include="Snippetica.Markdown\Header1.snippet" />
     <None Include="Snippetica.Markdown\Header2.snippet" />
     <None Include="Snippetica.Markdown\Header3.snippet" />

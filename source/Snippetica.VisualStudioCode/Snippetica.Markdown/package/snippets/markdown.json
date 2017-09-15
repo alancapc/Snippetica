@@ -6,6 +6,20 @@
     ],
     "description": "bold"
   },
+  "CDATA section": {
+    "prefix": "cdata",
+    "body": [
+      "<![CDATA[${TM_SELECTED_TEXT}${0}__cdataEnd"
+    ],
+    "description": "CDATA section"
+  },
+  "CDATA section (with content)": {
+    "prefix": "cdatax",
+    "body": [
+      "<![CDATA[${TM_SELECTED_TEXT}${0}__cdataEnd"
+    ],
+    "description": "CDATA section (with content)"
+  },
   "code": {
     "prefix": "c",
     "body": [
@@ -30,6 +44,45 @@
       "```${0}"
     ],
     "description": "code block with language"
+  },
+  "comment": {
+    "prefix": "c",
+    "body": [
+      "<!-- ${TM_SELECTED_TEXT}${1:comment} -->${0}"
+    ],
+    "description": "comment"
+  },
+  "element": {
+    "prefix": "e",
+    "body": [
+      "<${1:x}>",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "</${1}>"
+    ],
+    "description": "element"
+  },
+  "element (with attribute)": {
+    "prefix": "ea",
+    "body": [
+      "<${1:x} ${2:Attribute}=\"${3:Value}\">",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "</${1}>"
+    ],
+    "description": "element (with attribute)"
+  },
+  "element (with attribute, with content)": {
+    "prefix": "eax",
+    "body": [
+      "<${1:x} ${2:Attribute}=\"${3:Value}\">${4:content}</${1}>${0}"
+    ],
+    "description": "element (with attribute, with content)"
+  },
+  "element (with content)": {
+    "prefix": "ex",
+    "body": [
+      "<${1:x}>${2:content}</${1}>${0}"
+    ],
+    "description": "element (with content)"
   },
   "header 1": {
     "prefix": "h",
@@ -101,6 +154,13 @@
     ],
     "description": "image"
   },
+  "image _": {
+    "prefix": "img",
+    "body": [
+      "![${1:text}](${2:url})${0}"
+    ],
+    "description": "image"
+  },
   "italic": {
     "prefix": "i",
     "body": [
@@ -110,6 +170,13 @@
   },
   "link": {
     "prefix": "l",
+    "body": [
+      "[${1:text}](${2:http://www.url.com})${0}"
+    ],
+    "description": "link"
+  },
+  "link _": {
+    "prefix": "a",
     "body": [
       "[${1:text}](${2:http://www.url.com})${0}"
     ],
@@ -170,6 +237,20 @@
     ],
     "description": "quote"
   },
+  "self-closing element": {
+    "prefix": "es",
+    "body": [
+      "<${1:x} />${0}"
+    ],
+    "description": "self-closing element"
+  },
+  "self-closing element (with attribute)": {
+    "prefix": "eas",
+    "body": [
+      "<${1:x} ${2:Attribute}=\"${3:Value}\" />${0}"
+    ],
+    "description": "self-closing element (with attribute)"
+  },
   "strikethrough": {
     "prefix": "st",
     "body": [
@@ -180,7 +261,7 @@
   "table with 1 column": {
     "prefix": "t",
     "body": [
-      "${1:header1} |",
+      "${1:header} |",
       "--- |",
       "${2:x} |${0}"
     ],

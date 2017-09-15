@@ -5,10 +5,20 @@
 
 Shortcut | Title
 -------- | -----
+a|link
 b|bold
 c|code
+c|comment
 cb|code block
 cbl|code block with language
+cdata|CDATA section
+cdatax|CDATA section \(with content\)
+e|element
+ea|element \(with attribute\)
+eas|self\-closing element \(with attribute\)
+eax|element \(with attribute, with content\)
+es|self\-closing element
+ex|element \(with content\)
 h|header 1
 h2|header 2
 h3|header 3
@@ -20,6 +30,7 @@ hhh|header 3
 hr|horizontal rule
 i|italic
 ie|image
+img|image
 l|link
 ol|ordered list item
 ol2|ordered list item \(level 2\)

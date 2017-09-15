@@ -35,7 +35,7 @@
           </Set>
           <Add Tags="ExcludeFromVisualStudio">
             <Set Language="Markdown">
-              <New Path=".Markdown" />
+              <New Path=".Markdown" Tags="GenerateXmlSnippets" />
             </Set>
             <Set Language="Json">
               <New Path=".Json" />

@@ -67,6 +67,7 @@ namespace Snippetica.CodeGeneration
                     case Language.Xml:
                     case Language.Xaml:
                     case Language.Html:
+                    case Language.Markdown:
                         {
                             snippets.AddRange(XmlSnippetGenerator.GenerateSnippets(directory.Language));
                             break;

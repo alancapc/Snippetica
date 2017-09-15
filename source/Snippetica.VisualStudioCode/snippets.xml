@@ -12866,6 +12866,42 @@ finally
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>CDATA section</Title>
+      <Shortcut>cdata</Shortcut>
+      <Description>CDATA section</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name CDataSection</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Markdown"><![CDATA[<![CDATA[$selected$$end$__cdataEnd]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>CDATA section (with content)</Title>
+      <Shortcut>cdatax</Shortcut>
+      <Description>CDATA section (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name CDataSectionWithContent</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Markdown"><![CDATA[<![CDATA[$selected$$end$__cdataEnd]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>code</Title>
       <Shortcut>c</Shortcut>
       <Description>code</Description>
@@ -12942,6 +12978,163 @@ $selected$$content$
       <Code Language="Markdown"><![CDATA[```$language$
 $selected$$content$
 ```$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>comment</Title>
+      <Shortcut>c</Shortcut>
+      <Description>comment</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Comment</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>comment</ID>
+          <ToolTip>Comment</ToolTip>
+          <Default>comment</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[<!-- $selected$$comment$ -->$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>element</Title>
+      <Shortcut>e</Shortcut>
+      <Description>element</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Element</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>elementName</ID>
+          <ToolTip>Element name</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[<$elementName$>
+	$selected$$end$
+</$elementName$>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>element (with attribute)</Title>
+      <Shortcut>ea</Shortcut>
+      <Description>element (with attribute)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ElementWithAttribute</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>attributeName</ID>
+          <ToolTip>Attribute name</ToolTip>
+          <Default>Attribute</Default>
+        </Literal>
+        <Literal>
+          <ID>attributeValue</ID>
+          <ToolTip>Attribute value</ToolTip>
+          <Default>Value</Default>
+        </Literal>
+        <Literal>
+          <ID>elementName</ID>
+          <ToolTip>Element name</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[<$elementName$ $attributeName$="$attributeValue$">
+	$selected$$end$
+</$elementName$>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>element (with attribute, with content)</Title>
+      <Shortcut>eax</Shortcut>
+      <Description>element (with attribute, with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ElementWithAttributeWithContent</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>attributeName</ID>
+          <ToolTip>Attribute name</ToolTip>
+          <Default>Attribute</Default>
+        </Literal>
+        <Literal>
+          <ID>attributeValue</ID>
+          <ToolTip>Attribute value</ToolTip>
+          <Default>Value</Default>
+        </Literal>
+        <Literal>
+          <ID>content</ID>
+          <ToolTip>Content</ToolTip>
+          <Default>content</Default>
+        </Literal>
+        <Literal>
+          <ID>elementName</ID>
+          <ToolTip>Element name</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[<$elementName$ $attributeName$="$attributeValue$">$content$</$elementName$>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>element (with content)</Title>
+      <Shortcut>ex</Shortcut>
+      <Description>element (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ElementWithContent</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <ToolTip>Content</ToolTip>
+          <Default>content</Default>
+        </Literal>
+        <Literal>
+          <ID>elementName</ID>
+          <ToolTip>Element name</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[<$elementName$>$content$</$elementName$>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -13134,6 +13327,33 @@ $selected$$content$
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>image _</Title>
+      <Shortcut>img</Shortcut>
+      <Description>image</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Image_</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>text</ID>
+          <Default>text</Default>
+        </Literal>
+        <Literal>
+          <ID>url</ID>
+          <Default>url</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[![$text$]($url$)$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>italic</Title>
       <Shortcut>i</Shortcut>
       <Description>italic</Description>
@@ -13167,6 +13387,33 @@ $selected$$content$
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name Link</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>text</ID>
+          <Default>text</Default>
+        </Literal>
+        <Literal>
+          <ID>url</ID>
+          <Default>http://www.url.com</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[[$text$]($url$)$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>link _</Title>
+      <Shortcut>a</Shortcut>
+      <Description>link</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Link_</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -13374,6 +13621,64 @@ $selected$$content$
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>self-closing element</Title>
+      <Shortcut>es</Shortcut>
+      <Description>self-closing element</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name SelfClosingElement</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>elementName</ID>
+          <ToolTip>Element name</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[<$elementName$ />$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>self-closing element (with attribute)</Title>
+      <Shortcut>eas</Shortcut>
+      <Description>self-closing element (with attribute)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name SelfClosingElementWithAttribute</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>attributeName</ID>
+          <ToolTip>Attribute name</ToolTip>
+          <Default>Attribute</Default>
+        </Literal>
+        <Literal>
+          <ID>attributeValue</ID>
+          <ToolTip>Attribute value</ToolTip>
+          <Default>Value</Default>
+        </Literal>
+        <Literal>
+          <ID>elementName</ID>
+          <ToolTip>Element name</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[<$elementName$ $attributeName$="$attributeValue$" />$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>strikethrough</Title>
       <Shortcut>st</Shortcut>
       <Description>strikethrough</Description>
@@ -13412,17 +13717,17 @@ $selected$$content$
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>content1</ID>
+          <ID>content</ID>
           <Default>x</Default>
         </Literal>
         <Literal>
-          <ID>header1</ID>
-          <Default>header1</Default>
+          <ID>header</ID>
+          <Default>header</Default>
         </Literal>
       </Declarations>
-      <Code Language="Markdown"><![CDATA[$header1$ |
+      <Code Language="Markdown"><![CDATA[$header$ |
 --- |
-$content1$ |$end$]]></Code>
+$content$ |$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">

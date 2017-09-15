@@ -19,7 +19,7 @@ namespace Snippetica.CodeGeneration
 
         public SnippetEnvironment Environment { get; }
 
-        public virtual void GeneratePackageFiles(
+        public virtual List<Snippet> GeneratePackageFiles(
             string directoryPath,
             IEnumerable<SnippetGeneratorResult> results)
         {
@@ -42,6 +42,8 @@ namespace Snippetica.CodeGeneration
             }
 
             SaveAllSnippets(directoryPath, allSnippets);
+
+            return allSnippets;
         }
 
         protected virtual void SaveSnippets(List<Snippet> snippets, SnippetGeneratorResult result)

@@ -3516,6 +3516,33 @@ if ($identifier$ != null)
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>table with 1 column (without header)</Title>
+      <Shortcut>twoh</Shortcut>
+      <Description>table with 1 column (without header)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name TableWithoutHeader</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[<table>
+<tr>
+	<td>$content$</td>
+</tr>
+</table>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>array type</Title>
       <Shortcut>a</Shortcut>
       <Description>array type declaration</Description>

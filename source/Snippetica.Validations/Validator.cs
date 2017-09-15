@@ -11,49 +11,6 @@ namespace Snippetica.Validations
 {
     public static class Validator
     {
-        public static void ValidateSnippets(SnippetDirectory snippetDirectory)
-        {
-            Console.WriteLine($"validating snippets in '{snippetDirectory.Path}' ...");
-
-            CheckDuplicateShortcuts(snippetDirectory);
-
-            ValidateSnippetsCore(snippetDirectory);
-        }
-
-        public static void ValidateSnippets(IEnumerable<SnippetDirectory> snippetDirectories)
-        {
-            foreach (IGrouping<Language, SnippetDirectory> grouping in snippetDirectories
-                .GroupBy(f => f.Language))
-            {
-                Console.WriteLine($"validating snippets with language '{grouping.Key}' ...");
-
-                SnippetDirectory[] directories = grouping.ToArray();
-
-                CheckDuplicateShortcuts(directories);
-
-                directories = directories
-                    .Where(f => !f.HasTag(KnownTags.VisualStudio))
-                    .ToArray();
-
-                ValidateSnippetsCore(directories);
-            }
-        }
-
-        private static void ValidateSnippetsCore(SnippetDirectory snippetDirectory)
-        {
-            ValidateSnippets(snippetDirectory.EnumerateSnippets());
-        }
-
-        private static void ValidateSnippetsCore(SnippetDirectory[] snippetDirectories)
-        {
-            ValidateSnippets(snippetDirectories.SelectMany(f => f.EnumerateSnippets()));
-        }
-
-        public static void ValidateSnippets(IEnumerable<Snippet> snippets)
-        {
-            ValidateSnippets(snippets.ToList());
-        }
-
         public static void ValidateSnippets(List<Snippet> snippets)
         {
             Console.WriteLine($"number of snippets: {snippets.Count}");
@@ -71,48 +28,6 @@ namespace Snippetica.Validations
             {
                 Console.WriteLine();
                 Console.WriteLine($"UNUSED TAG {KnownTags.NonUniqueShortcut} in \"{snippet.First().FilePath}\"");
-            }
-        }
-
-        public static void CheckDuplicateShortcuts(SnippetDirectory snippetDirectory)
-        {
-            CheckDuplicateShortcuts(snippetDirectory.EnumerateSnippets());
-        }
-
-        public static void CheckDuplicateShortcuts(SnippetDirectory[] snippetDirectories)
-        {
-            CheckDuplicateShortcuts(snippetDirectories.SelectMany(f => f.EnumerateSnippets()));
-        }
-
-        public static void CheckDuplicateShortcuts(IEnumerable<Snippet> snippets)
-        {
-            CheckDuplicateShortcuts(snippets.ToList());
-        }
-
-        public static void CheckDuplicateShortcuts(List<Snippet> snippets)
-        {
-            foreach (DuplicateShortcutInfo info in FindDuplicateShortcuts(snippets, KnownTags.NonUniqueShortcut))
-            {
-                Console.WriteLine();
-                Console.WriteLine($"DUPLICATE SHORTCUT: {info.Shortcut}");
-
-                foreach (Snippet item in info.Snippets)
-                    Console.WriteLine($"  {item.FilePath}");
-            }
-        }
-
-        public static IEnumerable<DuplicateShortcutInfo> FindDuplicateShortcuts(IEnumerable<Snippet> snippets, string allowDuplicateKeyword)
-        {
-            foreach (DuplicateShortcutInfo info in SnippetUtility.FindDuplicateShortcuts(snippets))
-            {
-                if (!string.IsNullOrEmpty(info.Shortcut))
-                {
-                    if (allowDuplicateKeyword == null
-                        || info.Snippets.Any(f => !f.HasTag(allowDuplicateKeyword)))
-                    {
-                        yield return info;
-                    }
-                }
             }
         }
 

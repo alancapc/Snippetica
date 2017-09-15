@@ -12,6 +12,7 @@ using Snippetica.CodeGeneration.Markdown;
 using Snippetica.CodeGeneration.VisualStudio;
 using Snippetica.CodeGeneration.VisualStudioCode;
 using Snippetica.IO;
+using Snippetica.Validations;
 using static Snippetica.KnownNames;
 using static Snippetica.KnownPaths;
 
@@ -39,17 +40,20 @@ namespace Snippetica.CodeGeneration
 
             var visualStudio = new VisualStudioEnvironment();
 
-            List<SnippetGeneratorResult> visualStudioResults = GenerateSnippets(
+            (List<SnippetGeneratorResult> visualStudioResults, List<Snippet> visualStudioSnippets) = GenerateSnippets(
                 visualStudio,
                 directories,
                 VisualStudioExtensionProjectPath);
 
             var visualStudioCode = new VisualStudioCodeEnvironment();
 
-            List<SnippetGeneratorResult> visualStudioCodeResults = GenerateSnippets(
+            (List<SnippetGeneratorResult> visualStudioCodeResults, List<Snippet> visualStudioCodeSnippets) = GenerateSnippets(
                 visualStudioCode,
                 directories,
                 VisualStudioCodeExtensionProjectPath);
+
+            CheckDuplicateShortcuts(visualStudioSnippets, visualStudio);
+            CheckDuplicateShortcuts(visualStudioCodeSnippets, visualStudioCode);
 
             using (var sw = new StringWriter())
             {
@@ -77,7 +81,7 @@ namespace Snippetica.CodeGeneration
             Console.ReadKey();
         }
 
-        private static List<SnippetGeneratorResult> GenerateSnippets(
+        private static (List<SnippetGeneratorResult> results, List<Snippet> snippets) GenerateSnippets(
             SnippetEnvironment environment,
             SnippetDirectory[] directories,
             string projectPath)
@@ -101,13 +105,36 @@ namespace Snippetica.CodeGeneration
                 }
             }
 
-            generator.GeneratePackageFiles(projectPath, results);
+            var snippets = new List<Snippet>();
 
-            generator.GeneratePackageFiles(projectPath + DevSuffix, devResults);
+            snippets.AddRange(generator.GeneratePackageFiles(projectPath, results));
+
+            snippets.AddRange(generator.GeneratePackageFiles(projectPath + DevSuffix, devResults));
 
             MarkdownWriter.WriteProjectReadme(projectPath, results, environment.CreateProjectReadmeSettings());
 
-            return results;
+            return (results, snippets);
+        }
+
+        private static void CheckDuplicateShortcuts(IEnumerable<Snippet> snippets, SnippetEnvironment environment)
+        {
+            foreach (IGrouping<Language, Snippet> grouping in snippets
+                .GroupBy(f => f.Language)
+                .OrderBy(f => f.Key.GetIdentifier()))
+            {
+                Console.WriteLine($"checking duplicate shortcuts for '{environment.Kind.GetIdentifier()}.{grouping.Key.GetIdentifier()}'");
+
+                foreach (DuplicateShortcutInfo info in SnippetUtility.FindDuplicateShortcuts(grouping))
+                {
+                    if (info.Snippets.Any(f => !f.HasTag(KnownTags.NonUniqueShortcut)))
+                    {
+                        Console.WriteLine($"DUPLICATE SHORTCUT: {info.Shortcut}");
+
+                        foreach (Snippet item in info.Snippets)
+                            Console.WriteLine($"  {item.FileNameWithoutExtension()}");
+                    }
+                }
+            }
         }
 
         private static void SaveChangedSnippets(SnippetDirectory[] directories)
